@@ -11,27 +11,32 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 4/21/2020
+ms.date: 6/29/2020
 ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e00c043f7de1142e4d2e08e41ff0d91123d4a98b
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
-ms.translationtype: MT
+ms.openlocfilehash: cd2b055679f5e1a9a529ad4947773e412211f9c4
+ms.sourcegitcommit: 2b1518675b9962518e08b13c12b43b6d9827fe17
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827541"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10858005"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
 Bem-vindo às versões mais recentes do insider Preview para HoloLens!  É fácil começar e fornecer comentários importantes para a nossa próxima atualização de sistema operacional para o HoloLens.
 
+O Windows Insider agora está migrando para canais. O anel **rápido** se tornará o **canal de desenvolvimento**, o anel **lento** se tornará o **canal beta**, e o anel de **versão de pré-lançamento** se tornará o canal de visualização de **lançamento**. Veja como é a aparência do mapeamento:
+
+![Canais do Windows Insider explination](images/WindowsInsiderChannels.png)
+
+Para obter mais informações: [entrada de blog do Windows](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels)
+
 ## Comece a receber Builds do insider
 
 Em um dispositivo HoloLens 2, vá para **configurações**  ->  **Update &**  ->  programa de segurança do**Windows Insider** e selecione **introdução**. Vincule a conta que você usou para se registrar como um Windows Insider.
 
-Em seguida, selecione **desenvolvimento ativo do Windows**, escolha se deseja receber compilações **rápidas** ou **lentas** e revise os termos do programa.
+Em seguida, selecione **desenvolvimento ativo do Windows**, escolha se deseja receber o **canal de dev** ou versões de **canal beta** e examine os termos do programa.
 
 Selecione **confirmar-> reiniciar agora** para concluir. Após a reinicialização do seu dispositivo, vá para **configurações-> atualização & segurança-> verificar** se há atualizações para obter a compilação mais recente.
 
@@ -68,11 +73,31 @@ Você é bem-vindo e incentivado a tentar desenvolver seus aplicativos usando as
 
 ## Notas da versão do Windows Insider
 
-A partir de nossa holográfico do Windows, a [atualização do 2020 pode ser](hololens-release-notes.md) lançada em todos os nossos Feautres de versão preview agora são avalible! Certifique-se de [atualizar seu HoloLens](hololens-update-hololens.md) para obter todos os recursos mais recentes.  
+Se você estiver procurando por um recurso anteriormente listado aqui que não está vendo, ele tornou o caminho para as compilações não Insider, não deixe de ler as [notas de versão](hololens-release-notes.md) para ver todos os recursos geralmente disponíveis. Certifique-se de [atualizar seu HoloLens](hololens-update-hololens.md) para obter todos os recursos mais recentes.  
 
-Atualizaremos esta página novamente com novos recursos novamente, pois liberamos essas páginas para as compilações do Windows Insider. 
+Atualizaremos esta página novamente com novos recursos ao liberá-los para as compilações do Windows Insider. 
 
-### FFU de download e trajetos do flash
+### Suporte à posição de olho automático
+
+No HoloLens 2, as posições de olho permitem o posicionamento preciso do holograma, a experiência de exibição confortável e a qualidade de exibição aprimorada. As posições de olho são calculadas como parte do resultado do controle de olho. No entanto, isso exige que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência não requer entrada olhar olho.
+
+A **posição de olho automático (AEP)** habilita esses cenários com uma maneira sem interação de calcular posições de olho para o usuário.  A posição de olho automático começa a trabalhar em segundo plano automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento de olho anterior, a posição de olho automático começará a fornecer as posições de olho do usuário para o sistema de exibição após um pequeno período de processamento. Esse tempo de processamento geralmente está entre 20-60 segundos. Os dados do usuário não são mantidos no dispositivo e, portanto, esse processo é repetido se o usuário retomar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou ativado do modo de suspensão.  
+
+Há algumas mudanças de comportamento do sistema com o recurso de posição de olho automático quando um usuário não calibrado coloca no dispositivo. Um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
+
+|     Aplicativo ativo                           |     Comportamento atual                                   |     Comportamento da compilação do Windows Insider 19041.1339 +                                                      |
+|--------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+|     Aplicativo não compatível com olhar ou shell holográfico    |     Solicitação de calibragem de rastreamento ocular será exibida.    |     Nenhum aviso é exibido.                                                                                |
+|     Aplicativo habilitado para olhar                             |     Solicitação de calibragem de rastreamento ocular será exibida.    |     O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo de olhar de olho.     |
+
+ Se o usuário mudar de um aplicativo não olhar habilitado para um que acesse os dados do olhar, o prompt de calibragem será exibido. Não haverá nenhuma alteração para o fluxo de experiência inicial na caixa. 
+ 
+Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular no prompt de calibragem de rastreamento ocular ou iniciem o aplicativo configurações no menu iniciar e, em seguida, selecione **sistema > Calibragem > Calibragem > executar calibragem de olho**.
+
+**Problemas conhecidos**
+1.  Estamos investigando um problema em que o processo de host do driver do rastreador ocular pode falhar ao executar em carga de memória pesada. O processo de host do driver de controle ocular deve ser recuperado automaticamente.
+
+## FFU de download e trajetos do flash
 Para testar com um FFU assinado no Flight, primeiro é preciso desbloquear o dispositivo antes de atualizar o FFU assinado no.
 1. No PC
     1. Baixe o FFU para o seu PC em:[https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload)

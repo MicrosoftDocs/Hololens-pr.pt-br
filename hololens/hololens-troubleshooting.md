@@ -1,29 +1,25 @@
 ---
-title: Solucionar problemas do HoloLens
+title: Solução de problemas
 description: Soluções para problemas comuns do HoloLens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 12/02/2019
 ms.prod: hololens
 ms.topic: article
-ms.custom:
-- CI 111456
-- CSSTroubleshooting
-audience: ITPro
+audience: HoloLens
 ms.localizationpriority: medium
 keywords: problemas, erro, solução de problemas, correção, ajuda, suporte, HoloLens
 manager: jarrettr
-appliesto:
-- HoloLens (1st gen)
-- HoloLens 2
-ms.openlocfilehash: 4897d02f4b789c77204d57c0a7750e3c3803d7bb
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
-ms.translationtype: MT
+ms.custom:
+- CI 111456
+- CSSTroubleshooting
+ms.openlocfilehash: 15998fe11de1e7be4f12087a2724bec7e22337b0
+ms.sourcegitcommit: 29755f5af0086a43c532fb5a9a4ae65c36bc82de
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827623"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10857739"
 ---
-# Solucionar problemas do HoloLens
+# Solução de problemas
 
 Este artigo descreve como resolver vários problemas comuns do HoloLens.
 

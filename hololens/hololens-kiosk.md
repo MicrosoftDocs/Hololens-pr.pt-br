@@ -17,12 +17,11 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 0163e028756743922302b46f04309f3d7f738233
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
-ms.translationtype: MT
+ms.openlocfilehash: 7409865f63199dead1779fa183128b30445053aa
+ms.sourcegitcommit: 2b1518675b9962518e08b13c12b43b6d9827fe17
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827729"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10857995"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -99,7 +98,8 @@ Se você usa um sistema de gerenciamento de dispositivos móveis (MDM) ou um pac
 |Calendário |Microsoft. windowscommunicationsapps \ _8wekyb3d8bbwe \! Microsoft. windowslive. Calendar |
 |Câmera <sup> 1, 2</sup> |HoloCamera \ _cw5n1h2txyewy \! HoloCamera |
 |Cortana <sup> 3</sup> |Microsoft. 549981C3F5F10 \ _8wekyb3d8bbwe \! AppV |
-|Seletor de dispositivo |HoloDevicesFlow \ _cw5n1h2txyewy \! HoloDevicesFlow |
+|Seletor de dispositivo no HoloLens (1ª gen) |HoloDevicesFlow \ _cw5n1h2txyewy \! HoloDevicesFlow |
+|Seletor de dispositivo no HoloLens 2 |Microsoft. Windows. DevicesFlowHost \ _cw5n1h2txyewy \! Microsoft. Windows. DevicesFlowHost |
 |Guias do Dynamics 365 |Microsoft. Dynamics365. guias \ _8wekyb3d8bbwe \! MicrosoftGuides |
 |Assistência Remota do Dynamics 365 |Microsoft. MicrosoftRemoteAssist \ _8wekyb3d8bbwe \! Microsoft. RemoteAssist |
 |Hub de feedback &nbsp; |Microsoft. WindowsFeedbackHub \ _8wekyb3d8bbwe \! AppV |
@@ -358,7 +358,7 @@ Para habilitar a conta de **convidado** , adicione o seguinte snippet ao seu XML
 
 #### <a id="start-layout-for-hololens"></a>Layout inicial do espaço reservado para HoloLens
 
-Se você usar um [pacote de provisionamento](##use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk) para configurar um quiosque de vários aplicativos, o procedimento exigirá um layout de início. A personalização do layout de início não é compatível com o Windows holográfico para empresas. Portanto, você precisará usar um layout de início de espaço reservado.
+Se você usar um [pacote de provisionamento](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk) para configurar um quiosque de vários aplicativos, o procedimento exigirá um layout de início. A personalização do layout de início não é compatível com o Windows holográfico para empresas. Portanto, você precisará usar um layout de início de espaço reservado.
 
 > [!NOTE]  
 > Como um quiosque de aplicativo único inicia o aplicativo quiosque quando um usuário entra, ele não usa um menu iniciar e não precisa ter um layout de início.
