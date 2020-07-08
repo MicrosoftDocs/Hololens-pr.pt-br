@@ -1,5 +1,5 @@
 ---
-title: Considerações de ambiente para o HoloLens
+title: Considerações de ambiente HoloLens
 description: Tenha a melhor experiência possível com o HoloLens ao otimizar o dispositivo para os seus olhos e o ambiente. Muitos fatores ambientais diferentes são mesclados para permitir o rastreamento, mas como um desenvolvedor de Realidade Misturada, há vários fatores que você pode ter em mente para ajustar um espaço para melhores hologramas.
 keywords: quadro holográfico, campo de visão, fov, calibragem, espaços, ambiente, instruções
 author: dorreneb
@@ -10,17 +10,14 @@ ms.prod: hololens
 ms.topic: article
 audience: ITPro
 ms.localizationpriority: high
-appliesto:
-- HoloLens (1st gen)
-- HoloLens 2
-ms.openlocfilehash: d2bec32e118ee1c9307b56fad99b7e8859e2a94d
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 0fa147eb2b1194dacdcabff4995f5141a1b25bde
+ms.sourcegitcommit: 29755f5af0086a43c532fb5a9a4ae65c36bc82de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827555"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10857848"
 ---
-# Considerações de ambiente para o HoloLens
+# Considerações de ambiente HoloLens
 
 O HoloLens combina o holográfico com o mundo "real", posicionando hologramas em seus arredores. Uma janela de aplicativo holográfica está "pendurada" na parede, uma bailarina holográfica gira sobre a mesa, orelhas de coelhinho repousam sobre a cabeça do seu amigo sem que ele perceba. Quando você estiver usando um jogo ou aplicativo imersivo, o mundo holográfico se espalhará para preencher seus arredores, mas você ainda conseguirá ver e se mover no espaço.
 

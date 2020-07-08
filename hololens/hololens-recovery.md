@@ -14,17 +14,14 @@ ms.custom:
 ms.topic: article
 ms.localizationpriority: high
 manager: jarrettr
-appliesto:
-- HoloLens (1st gen)
-- HoloLens 2
-ms.openlocfilehash: 5da7f954454b5713823c5aa94742f9c9c0033ca2
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 2c7fa9b8c86900c89bbced1a10f3e9e2bc69bcd0
+ms.sourcegitcommit: 29755f5af0086a43c532fb5a9a4ae65c36bc82de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827538"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "10857759"
 ---
-# Redefinição e recuperação do HoloLens 2
+# Reiniciar, redefinir ou recuperar o HoloLens
 
 ## Carregando o dispositivo
 
@@ -60,7 +57,7 @@ Em determinadas circunstâncias, o cliente pode ser solicitado a redefinir manua
 
 4. Conecte o dispositivo ao PC host, abra o Gerenciador de dispositivos (para Windows 10 pressione a **tecla "Windows"** e, em seguida, a **tecla “x”** e clique em "Gerenciador de dispositivos") e verifique se o dispositivo enumera corretamente como Microsoft HoloLens, conforme mostrado nas imagens a seguir:
 
-![HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLensRecovery.png)
+![HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLens_DeviceManager.png)
 
 ### Procedimento de redefinição de disco
 
