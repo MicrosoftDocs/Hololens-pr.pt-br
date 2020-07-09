@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 36192315e234db16c7747457e69d6d6281c31bfe
-ms.sourcegitcommit: 29755f5af0086a43c532fb5a9a4ae65c36bc82de
+ms.openlocfilehash: a52e8e5bae49973d92efa6ea75391dc44d8b8ddb
+ms.sourcegitcommit: 357094acfd39f7c59a0a62f1dd7918b58c209ef7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "10857729"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "10861156"
 ---
 # Reiniciar, redefinir ou recuperar o HoloLens de 1ª geração
 
