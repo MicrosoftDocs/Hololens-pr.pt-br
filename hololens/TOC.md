@@ -70,8 +70,8 @@
 ### [Pacote de provisionamento](app-deploy-provisioning-package.md)
 
 # Manter
-## [Gerenciar Atualizações do HoloLens](hololens-updates.md)
-## Corrigir problemas do HoloLens
+## [Gerenciar atualizações do HoloLens](hololens-updates.md)
+## Consertar problemas do HoloLens
 ### [Solução de problemas](hololens-troubleshooting.md)
 ### [Reiniciar, redefinir ou recuperar o HoloLens 2](hololens-recovery.md)
 ### [Reiniciar, redefinir ou recuperar o HoloLens (1ª geração) ](hololens1-recovery.md)
