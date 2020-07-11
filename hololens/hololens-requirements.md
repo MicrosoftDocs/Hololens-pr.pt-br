@@ -10,18 +10,21 @@ audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 07/15/2019
-ms.openlocfilehash: 8aa8e0f679ad18a2e47f34c5f1233435a502dc0c
-ms.sourcegitcommit: f3cda6c6b3bfb7ba4be5f4da66d8ed5b03ca807d
+ms.openlocfilehash: e53e6575ef688e01ce2d1f6124f3214b18b05c95
+ms.sourcegitcommit: 896bdfccf4612a692a25a6bfaecfa2146860407e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "10830125"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "10865560"
 ---
 # Implantar o HoloLens em um ambiente comercial
 
 Você pode implantar e configurar o HoloLens em escala em uma configuração comercial. Este artigo fornece instruções para a implantação de dispositivos HoloLens em um ambiente comercial. Este guia pressupõe familiaridade básica com o HoloLens. Siga o [Guia de introdução](hololens1-setup.md) para configurar o HoloLens pela primeira vez.
 
-Este documento também pressupõe que o HoloLens foi avaliado por equipes de segurança como seguras para uso na rede da empresa. Perguntas frequentes de segurança podem ser encontradas [aqui](hololens-faq-security.md)
+Este documento também pressupõe que o HoloLens foi avaliado por equipes de segurança como seguras para uso na rede da empresa.  
+> [!Tip]
+> Saiba mais sobre a [segurança do HoloLens](security-overview.md).
+> Para a segurança do HoloLens (1ª gen), consulte [estas perguntas frequentes](hololens1-faq-security.md).
 
 ## Visão geral das etapas de implantação
 
@@ -32,11 +35,11 @@ Este documento também pressupõe que o HoloLens foi avaliado por equipes de seg
 1. Adicionais [Configurar o HoloLens usando um pacote de provisionamento](hololens-provisioning.md)
 1. [Registrar dispositivo](hololens-enroll-mdm.md)
 1. [Configurar atualizações com base em anel para HoloLens](hololens-updates.md)
-1. [Habilitar criptografia de dispositivo do Bitlocker para HoloLens](hololens-encryption.md)
+1. [Habilitar criptografia de dispositivo do Bitlocker para HoloLens](security-encryption-data-protection.md)
 
 ## Etapa 1. Determinar o que você precisa
 
-Antes de implantar o HoloLens em seu ambiente, é importante determinar quais recursos, aplicativos e tipos de identidade são necessários primeiro. Também é importante garantir que sua equipe de segurança tenha aprovado pelo uso do HoloLens na rede da empresa. Consulte perguntas [frequentes](hololens-faq-security.md) sobre segurança para obter informações adicionais sobre segurança.
+Antes de implantar o HoloLens em seu ambiente, é importante determinar quais recursos, aplicativos e tipos de identidade são necessários primeiro. Também é importante garantir que sua equipe de segurança tenha aprovado pelo uso do HoloLens na rede da empresa. Consulte o [HoloLens2 Security](security-overview.md) para obter informações de segurança adicionais.
 
 ### Tipo de identidade
 
