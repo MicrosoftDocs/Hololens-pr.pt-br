@@ -25,16 +25,16 @@ A separação e o isolamento de estado protegem partes críticas do sistema oper
 
 ## Separação de estado
 
-A separação de estado no HoloLens 2 melhora imensamente a segurança e a operacionalidade (atualização), e ajuda a proteger seus dados de aplicativo.  Separação de estado funciona da seguinte maneira:
+A separação de estado no HoloLens 2 melhora imensamente a segurança e a operacionalidade (atualização) e ajuda a proteger seus dados de aplicativo.  Separação de estado funciona da seguinte maneira:
   * O sistema operacional principal é armazenado no volume do sistema operacional principal (um SO da Microsoft confiável ou verificado atualizando o sistema operacional).
   * As partes do sistema operacional que podem ser alteradas no tempo de execução (como configurações e drivers para baixar), usam separação de estado adicional para particionar os dados e armazená-los em locais de armazenamento seguros e separados.
   * Cada local de armazenamento seguro tem políticas de segurança distintas associadas a eles, oferecendo diversas vantagens de segurança, conforme detalhado na seção a seguir.
 
 ## Benefícios da separação de estado
 
-  * Segurança: A separação de estado em destaque no HoloLens 2 melhora significativamente a integridade da plataforma, a resistência contra malware e a proteção de dados do usuário. Ao separar a parte inalterável do sistema operacional e torná-la somente para leitura ou com integridade protegida, a separação de estado torna extremamente difícil para o malware persistir na reinicialização a frio. 
-  * Atualizações: Com o HoloLens 2, uma vez que o sistema operacional principal não é modificável e foi corretamente separado do restante dos dados no dispositivo, as atualizações são simples e confiáveis.  Além disso, a separação de estado cria os alicerces vitais para atualizações muito mais rápidas, o que permite que o sistema operacional seja substituído em uma única etapa (unidade atômica).
-  * Redefinição do dispositivo: A redefinição no HoloLens 2 limpa os dados gerados pelo usuário e os dados do aplicativo do usuário no dispositivo, incluindo locais de armazenamento internos e externos. Preserva os aplicativos do sistema operacional atual e os aplicativos essenciais de segurança, além dos aplicativos personalizados da Microsoft e do OEM (pré-instalado). Esses aplicativos pré-instalados podem ser reintegrados no dispositivo após a conclusão da redefinição.
+  * Segurança: a separação de estado em destaque no HoloLens 2 melhora significativamente a integridade da plataforma, a resistência contra malware e a proteção de dados do usuário. Ao separar a parte inalterável do sistema operacional e torná-la somente para leitura ou com integridade protegida, a separação de estado torna extremamente difícil para o malware persistir na reinicialização a frio. 
+  * Atualizações: com o HoloLens 2, uma vez que o sistema operacional principal não é modificável e foi corretamente separado do restante dos dados no dispositivo, as atualizações são simples e confiáveis.  Além disso, a separação de estado cria os alicerces vitais para atualizações muito mais rápidas, o que permite que o sistema operacional seja substituído em uma única etapa (unidade atômica).
+  * Redefinição do dispositivo: a redefinição no HoloLens 2 limpa os dados gerados pelo usuário e os dados do aplicativo do usuário no dispositivo, incluindo locais de armazenamento internos e externos. Preserva os aplicativos do sistema operacional atual e os aplicativos essenciais de segurança, além dos aplicativos personalizados da Microsoft e do OEM (pré-instalado). Esses aplicativos pré-instalados podem ser reintegrados no dispositivo após a conclusão da redefinição.
 
 ### Etapas da separação de estado
 
@@ -56,13 +56,13 @@ O estado inalterável é marcado como somente leitura (ou é, caso contrário, c
     * Exemplo: HKLM armazena as informações de configuração para os aplicativos instalados em um computador. Ele também armazena informações para detectar um hardware e os drivers correspondentes.
 Ao protegê-los no estado imutável (integridade e proteção de somente leitura), garantimos que o sistema operacional principal sempre Inicializa num estado confiável. Além disso, quando um dispositivo é redefinido, podemos garantir que o dispositivo inicializará apenas nos componentes que estão nesta seção imutável. 
 
-#### Dados do Sistema Operacional 
+#### Dados do sistema operacional 
 
-É importante observar que os arquivos e os dados executáveis que são alteráveis no tempo de execução (e que não são críticos para a função do sistema operacional), podem ser descartados e recriados quando os dados estiverem corrompidos ou comprometidos. O estado alterável de alto valor é necessário para persistir pelo sistema operacional ou é esperado que persista no desligamento do sistema operacional, e/ou entre reinicializações por cenários de dispositivos e de sistema operacional Windows com suporte. Exemplos de estado mutável de alto valor são:
+É importante observar que os arquivos e os dados executáveis que são alteráveis no tempo de execução (e que não são críticos para a função do sistema operacional) poderão ser descartados e recriados quando os dados estiverem corrompidos ou comprometidos. O estado alterável de alto valor é necessário para persistir pelo sistema operacional ou é esperado que persista no desligamento do sistema operacional, e/ou entre reinicializações por cenários de dispositivos e de sistema operacional Windows com suporte. Exemplos de estado mutável de alto valor são:
   * O administrador de TI configurou as configurações do dispositivo global, como exemplo: desabilitar o local para todos os usuários.
-  * Conexão de rede Wi-Fi e acesso a dispositivos de dados-lembrar de redes e senhas de conexão associadas.
+  * Conexão de rede Wi-Fi e acesso a senhas lembradas nos dispositivos de dados e senhas de conexão associadas.
   * Despejos de memória incluindo configurações e logs.
-  * Drivers baixados por demanda para dispositivos recém descobertos.
+  * Drivers baixados por demanda para dispositivos recém-descobertos.
 Um estado alterável de alto valor no HoloLens 2 fica no local de segurança de dados do sistema operacional como um arquivo salvo no disco ou em um registro hive persistente.
 
 #### Dados de usuários
@@ -71,7 +71,7 @@ A última categoria de estado representa os dados do usuário produzidos ou pers
 
 ##  Isolamento
 
-Para alcançar esse equilíbrio, o HoloLens 2 tem um sistema operacional principal que é usado para as principais funções, como a inicialização, controle de hardware, fazer logon, etc. Há apenas dois conjuntos de aplicativos em execução no sistema operacional principal- aplicativos pré-instalados e aplicativos UWP.
+Para alcançar esse equilíbrio, o HoloLens 2 tem um sistema operacional principal que é usado para as principais funções, como inicialização, controle de hardware, logon, etc. Há apenas dois conjuntos de aplicativos em execução no sistema operacional principal — aplicativos pré-instalados e aplicativos UWP.
 
 ## Assinatura de código
 
