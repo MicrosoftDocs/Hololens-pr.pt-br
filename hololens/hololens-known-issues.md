@@ -15,12 +15,12 @@ ms.prod: hololens
 appliesto:
 - HoloLens (1st Gen)
 - HoloLens 2
-ms.openlocfilehash: 330a7fd549a2b847f77715ca90d69f1d4df1fb1d
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: db95edfbadb271b7fc47cf5798e80d9b2cad3c90
+ms.sourcegitcommit: 708da7b390fed1fd3aea1a2b2e50461851052683
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827725"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "10881324"
 ---
 # Problemas conhecidos do HoloLens
 
@@ -47,6 +47,14 @@ Esta é a lista atual de problemas conhecidos para dispositivos do HoloLens. Mar
 - O recurso Visualização dinâmica em captura de realidade mista pode apresentar vários segundos de latência.
 - Na página de entrada virtual, os controles de rolagem e de rolagem na seção gestos virtuais não são funcionais. Usá-los não terão nenhum efeito. O teclado virtual na mesma página funciona corretamente.
 - Depois de habilitar o modo de desenvolvedor nas configurações, pode demorar alguns segundos até que a opção de ativar o Device portal esteja habilitada.
+
+### Carregamento da câmera do OneDrive
+
+O aplicativo OneDrive para HoloLens não é compatível com o carregamento automático da câmera para contas corporativas ou de estudante.
+
+Soluções alternativas
+- Se viável para a sua empresa, o carregamento automático da câmera tem suporte em contas da Microsoft para consumidores. Você pode entrar em sua conta da Microsoft, além da sua conta corporativa ou de estudante (o aplicativo OneDrive dá suporte à entrada dupla). Em seu perfil de conta da Microsoft no OneDrive, você pode habilitar o carregamento automático da câmera em segundo plano.
+- Se não for possível usar uma conta da Microsoft para o cliente com segurança para carregar suas fotos automaticamente, você pode carregar manualmente as fotos em sua conta corporativa ou de estudante do aplicativo OneDrive. Para fazer isso, verifique se você está conectado à sua conta corporativa ou de estudante no aplicativo OneDrive. Selecione o **+** botão e escolha **carregar**. Encontre as fotos ou vídeos que você deseja carregar navegando para **imagens > imagem da câmera**. Selecione as fotos ou vídeos que você deseja carregar e, em seguida, selecione o botão **abrir** .
 
 ## Problemas conhecidos de dispositivos do HoloLens 2
 
