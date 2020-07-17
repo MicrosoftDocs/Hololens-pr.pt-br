@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 28898c5c0cbc2a4f66cea13665e5ef63447db382
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 254c1048d2a1c7b63dfe87ead4585c21153fa8bb
+ms.sourcegitcommit: fc2ce4d843229bcc9ae6c7a42da559c0f6f558b7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827570"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "10882981"
 ---
 # Recursos comerciais
 
@@ -75,11 +75,11 @@ O HoloLens (1ª geração) veio com duas opções de licenciamento: a licença d
 
 ## Habilitar recursos comerciais
 
-O administrador de TI da sua organização pode configurar recursos comerciais, como Microsoft Store para Empresas, modo de quiosque e acesso Wi-Fi corporativo. A documentação do [Microsoft HoloLens](index.md) fornece instruções passo a passo para registrar dispositivos e instalar aplicativos da Microsoft Store para Empresas.
+O administrador de TI da sua organização pode configurar recursos comerciais, como Microsoft Store para Empresas, modo de quiosque e acesso Wi-Fi corporativo. A documentação do [Microsoft HoloLens](index.yml) fornece instruções passo a passo para registrar dispositivos e instalar aplicativos da Microsoft Store para Empresas.
 
 ## Ver também
 
-- [Microsoft HoloLens](index.md)
+- [Microsoft HoloLens](index.yml)
 - [Modo de quiosque](hololens-kiosk.md)
 - [CSPs com suporte em dispositivos HoloLens](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices)
 - [Microsoft Store para Empresas e aplicativos de linha de negócios](https://blogs.technet.microsoft.com/sbucci/2016/04/13/windows-store-for-business-and-line-of-business-applications/)
