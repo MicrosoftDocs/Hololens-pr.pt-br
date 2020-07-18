@@ -11,17 +11,17 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 6/29/2020
+ms.date: 7/17/2020
 ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5cdb7302aec5b37a5071f2192f7c8bc5df760ac7
-ms.sourcegitcommit: 3db43bc4a007b10901d8edb045f66e1e299c57a9
+ms.openlocfilehash: 879ff13b30fdce77d823b66035cd59fa0e217c5f
+ms.sourcegitcommit: 209247c83eff5cbabbbdecb8cf6e974eabcb36ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "10882423"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "10883363"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -82,8 +82,10 @@ Atualizaremos esta página com novos recursos novamente, pois liberamos essas p�
 | Recurso                               | Descrição                                                                                   | Disponível em builds do insider |
 |---------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | Suporte à posição de olho automático             | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                       | 19041.1339 +                 |
-| Acesso global atribuído                | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema.  | 19041.1346 +                 |
+| Acesso Global Atribuído                | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema.  | 19041.1346 +                 |
 | Iniciar automaticamente um aplicativo no quiosque de vários aplicativos | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos. | 19041.1346 +                 |
+| Novas políticas de energia para Hololens 2     | Políticas recém aceitas para configurações de tempo limite de energia.                                          | 19041.1349 +                 |
+| Visualizador de certificados                    | Exiba certificados de usuário e de dispositivo no aplicativo configurações.                                        | 19041.1346 +                 |
 
 ### Suporte à posição de olho automático
 
@@ -117,6 +119,33 @@ O aplicativo é iniciado automaticamente quando o usuário entra.
 <AllowedApps>                     
     <!—TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
 ```
+
+### Novas políticas de energia para Hololens 2
+Essas políticas adicionadas recentemente permitem que os administradores controlem os Estados de energia, como tempo limite ocioso. Para ler mais sobre cada política individual, clique no link para essa política.
+
+|     Link de documentação da política                |     Observações                                                                                                                                       |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+|     [DisplayOffTimeoutOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
+|     [DisplayOffTimeoutPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)               |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterVideoACPowerDownTimeOut" value="100"/>`     |
+|     [EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)     |  Valor de exemplo a ser usado no designer de configuração do Windows, ou seja, 100                                                                             |
+|     [EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)     |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja, 100                                                                          |
+|     [StandbyTimeoutOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)                  |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,   `<enabled/><data   id="EnterDCStandbyTimeOut" value="100"/>`          |
+|     [StandbyTimeoutPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)                  |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterACStandbyTimeOut" value="100"/>`           |
+
+### Visualizador de certificados
+
+No Windows Insider Build 19041.1346 + estamos adicionando um visualizador de certificados no aplicativo Configurações do HoloLens 2. Esse recurso oferece uma maneira simples e fácil de verificar certificados em seu dispositivo. Para localizar um certificado específico rapidamente, há opções para classificar por nome, loja ou data de expiração. Os usuários também podem procurar um certificado diretamente. Com o novo Visualizador de certificados, administradores e usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e compatíveis.  Para ver mais sobre um certificado individual, selecione o certificado e clique em informações.
+
+> [!NOTE]
+> Há uma limitação conhecida na localização de idioma diferente dos EUA na qual estamos trabalhando para resolver em versões subsequentes do Windows Insider.
+
+-   **Auditoria:** Capacidade de validar se um certificado está implantado corretamente ou para confirmar se foi removido apropriadamente. 
+-   **Diagnóstico:** Quando surgem problemas, é possível validar se os certificados apropriados existem no dispositivo poupa tempo e ajuda na solução de problemas. 
+-   **Validação:** Verificar se o certificado atende à finalidade e é funcional, pode economizar tempo significativo, especialmente em ambientes comerciais antes de implantar certificados em uma escala maior.
+
+Para exibir certificados, vá para **configurações > atualizar & segurança > certificados**.
+
+![Visualizador de certificados no aplicativo configurações](images/hololens-certificate-viewer.png)
 
 ## FFU de download e trajetos do flash
 Para testar com um FFU assinado no Flight, primeiro é preciso desbloquear o dispositivo antes de atualizar o FFU assinado no.
