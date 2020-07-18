@@ -1,0 +1,78 @@
+### YamlMime:Landing
+title: Microsoft HoloLens
+summary: Microsoft HoloLens é o primeiro computador holográfico totalmente autônomo a executar o Windows 10. Agora, com a introdução da HoloLens 2, cada dispositivo HoloLens fornece capacidades de gestão comercial prontas que são melhoradas pela confiabilidade, segurança e escalabilidade dos serviços de nuvem e de IA da Microsoft.
+metadata:
+  title: Microsoft HoloLens
+  description: Página inicial do Microsoft HoloLens.
+  ms.prod: hololens
+  ms.subservice: subservice
+  ms.topic: landing-page
+  author: todmccoy
+  ms.author: v-todmc
+  ms.date: 5/22/2020
+  ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
+  ms.openlocfilehash: 9f2dd2fc798fb66de080e54718aaebb131b3e145
+  ms.sourcegitcommit: fc2ce4d843229bcc9ae6c7a42da559c0f6f558b7
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 07/17/2020
+  ms.locfileid: "10883001"
+landingContent:
+- title: Implementar e gerenciar
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Implantar o HoloLens em um ambiente comercial
+      url: hololens-requirements.md
+    - text: 'Gerenciamento de aplicativos: Visão Geral'
+      url: app-deploy-overview.md
+    - text: Configure o HoloLens como um quiosque
+      url: hololens-kiosk.md
+    - text: Gerenciar atualizações do HoloLens
+      url: hololens-updates.md
+- title: Dynamics 365
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Documentação do Microsoft Dynamics 365 Realidade Misturada
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+    - text: Utilização de Assistência Remota no HoloLens
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/overview-hololens
+    - text: Manuais de utilização do HoloLens
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
+    - text: Módulos de aprendizagem de Assistência Remota
+      url: https://docs.microsoft.com/en-us/learn/browse/?products=dynamics-remote-assist
+- title: Recursos relacionados
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Documentação do desenvolvedor de Realidade Mista
+      url: https://developer.microsoft.com/windows/mixed-reality/development
+    - text: Preços e opções do HoloLens
+      url: https://www.microsoft.com/hololens/buy
+- title: Solução de problemas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Reiniciar, redefinir ou recuperar o HoloLens 2
+      url: hololens-recovery.md
+    - text: Solucionar problemas do HoloLens
+      url: hololens-troubleshooting.md
+- title: Suporte
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Notas de versão do HoloLens 2
+      url: https://docs.microsoft.com/hololens/hololens-release-notes
+    - text: Contate o Suporte
+      url: https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f
+- title: Realidade Misturada
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Comece com Realidade Mista
+      url: https://docs.microsoft.com/windows/mixed-reality/
+    - text: Comece projetando e criando protótipos
+      url: https://docs.microsoft.com/windows/mixed-reality/design
+    - text: Aprender sobre as ferramentas e a arquitetura
+      url: https://docs.microsoft.com/windows/mixed-reality/development
