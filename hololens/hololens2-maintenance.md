@@ -15,12 +15,12 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8e6ce55630c6ec20b83ca24006acedbe5f949997
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 4574f62e42678ada15e8263e03ca95d388dc8e57
+ms.sourcegitcommit: 223df264cdc812beba88582377002ea3e49d55fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827617"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "10888550"
 ---
 # Perguntas frequentes sobre a limpeza do HoloLens 2
 
@@ -74,7 +74,7 @@ Para limpar o bloco de brow, limpe-o usando um tecido moistened usando água e u
 
 ## Posso usar a luz Ultraviolet (UV) para corrigir o dispositivo?
 
-A UV-C germicidal irradiation não foi testada no HoloLens 2.
+UVC Irradiance usando UVC LED, que opera em 265nm no nível de intensidade de 0,5-0,6 mW/cm <sup> 2 </sup> e não emite Ozone, pode ser usado para corrigir HoloLens2. Siga as especificações do fabricante sobre o tempo de manuseio e exposição.
 
 > [!CAUTION]  
 > Os altos níveis de exposição UV-B e UV-B podem diminuir a qualidade de vídeo do dispositivo e danificar o revestimento do visor. Exposição à UV-A e à UV-B radiação tem os seguintes efeitos, em ordem de duração e intensidade de exposição:
@@ -82,7 +82,7 @@ A UV-C germicidal irradiation não foi testada no HoloLens 2.
 > 1. O bloco de brow e os fechamentos de dispositivos ficam descoloridos.
 > 1. Os defeitos são exibidos no revestimento anti-reflexivo (AR) do visor e nas janelas do sensor.
 > 1. Os defeitos aparecem nos materiais base do visor e nas janelas do sensor.
-> 1. Degradação do desempenho do SRG.
+> 1. Exiba a degradação do desempenho.
 
 ## O painel traseiro é substituível?
 
