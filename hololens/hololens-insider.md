@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 4f09a383f20c5c4f2d21ee9367a1b3c5afd62f9f
-ms.sourcegitcommit: c0c8b57bb03a2fc724c051ad42ea5a3fb911ba71
+ms.openlocfilehash: 7eaa08b7d88cac1841573b08d492f6b66b599c37
+ms.sourcegitcommit: bde0c2035638ba48f64ac05ed18595a907a05c6a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "10894057"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "10894600"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -39,8 +39,8 @@ Se você estiver procurando um recurso que não está mais listado aqui, agora e
 
 Atualizaremos esta página com novos recursos novamente, pois liberamos essas páginas para as compilações do Windows Insider.
 
-| Recurso                                         | Descrição                                                                                   | Disponível em builds do insider |
-|-------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|
+|                     Recurso                     |                                          Descrição                                          | Disponível em builds do insider |
+|:-----------------------------------------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
 | Suporte à posição de olho automático                       | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                       | 19041.1339 +                 |
 | Acesso Global Atribuído                          | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema.  | 19041.1346 +                 |
 | Iniciar automaticamente um aplicativo no quiosque de vários aplicativos           | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos. | 19041.1346 +                 |
@@ -49,6 +49,7 @@ Atualizaremos esta página com novos recursos novamente, pois liberamos essas p�
 | Novas políticas de restrição de dispositivo para HoloLens 2  | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                              | 19041.1349 +                 |
 | Visibilidade da página Configurações habilitada para o HoloLens 2 | Política para escolher quais páginas são vistas no aplicativo configurações.                                          | 19041.1349 +                 |
 | Políticas do HoloLens                               | Novas políticas para dispositivos de realidade misturados.                                                       | 19041.1349 +                 |
+| Atualizar políticas                                 | Políticas habilitadas recentemente, permitindo o controle de atualizações.                                           | 19041.1352 +                 |
 
 ### Suporte à posição de olho automático
 
@@ -133,6 +134,12 @@ Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 
 |     MixedReality\MicrophoneDisabled       |     Desabilita o microfone para que a gravação de áudio seja possível no HoloLens 2.                   |     1 Sim, 0 não (padrão)                                                |
 |     MixedReality\FallbackDiagnostics      |     Controla o comportamento de quando os logs de diagnóstico podem ser coletados.                            |     0 desativado, 1 habilitado para proprietários de dispositivo, 2 habilitado para todos (padrão) |
 |     MixedReality\HeadTrackingMode         |     Reservado para uso futuro.                                                               |                                                                          |
+### Políticas de atualização habilitadas recentemente para HoloLens
+Essas políticas de atualização agora estão habilitadas em dispositivos HoloLens 2:
+-   [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)
+-   [Update/ActiveHoursMaxRange](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
+-   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
+-   [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)
 
 ## Comece a receber Builds do insider
 
