@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: piloto automático
 manager: jarrettr
-ms.openlocfilehash: 8f62c09fd569e6c5dbeb961ae023c6f3cefff879
-ms.sourcegitcommit: 72be5b64e90dde339323012997440dfaca182027
+ms.openlocfilehash: 33463685818c3e864c698160776c76ec7d8cbefd
+ms.sourcegitcommit: 9197b9d507d8b9b195bdf512d1b832888b53162d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "10895785"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "10899103"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -68,7 +68,7 @@ Siga as etapas abaixo para configurar a Visualização Privada do seu ambiente:
 
 - Você deve instalar manualmente o Sistema Operacional mais recente (Windows Holographic versão 2004 (compilação 19041.1103 ou posterior) usando o [Complemento de Recuperação Avançada (ARC)](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?rtc=1&activetab=pivot:overviewtab). Você pode encontrar as instruções [aqui](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device). 
 - Seus dispositivos devem estar registrados no Windows Autopilot. Para obter informações sobre como registrar os dispositivos, consulte [4. Registre os dispositivos no Windows Autopilot](#4-register-devices-in-windows-autopilot). 
-- Nesta versão atual, os dispositivos precisam estar conectados à Internet antes de ligar o HoloLens e iniciar o processo de provisionamento do Autopilot. Conecte o seu dispositivo à Ethernet usando os adaptadores "USB C para Ethernet" para uma conexão com fio à Internet, ou usando os adaptadores "USB C para Wifi" para uma conexão sem fio à Internet. 
+- Nesta versão atual, os dispositivos precisam estar conectados à Internet antes de ligar o HoloLens e iniciar o processo de provisionamento do Autopilot. Conecte o seu dispositivo à Ethernet usando um adaptador "USB C para Ethernet" para conectividade à Internet com fio. 
 - Os dispositivos ainda não são membros do Azure AD e não estão registrados no Intune (ou outro sistema MDM). O processo de autoimplantação do Piloto automático conclui essas etapas. Para garantir que todas as informações relacionadas ao dispositivo estejam limpas, verifique as páginas dos **Dispositivos** nos portais do Azure AD e do Intune.
 - Para configurar e gerenciar os perfis do modo Autoimplantação do Piloto automático, certifique-se de que você possui acesso ao [Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com).
 

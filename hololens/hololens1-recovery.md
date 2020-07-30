@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: a52e8e5bae49973d92efa6ea75391dc44d8b8ddb
-ms.sourcegitcommit: 357094acfd39f7c59a0a62f1dd7918b58c209ef7
+ms.openlocfilehash: de53f8f2cccfe3ece8900c88c5379adf2fb55a7b
+ms.sourcegitcommit: 5d38af8d17dfcc028e7e0b2bb888c6c9d1e40524
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "10861156"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "10899174"
 ---
 # Reiniciar, redefinir ou recuperar o HoloLens de 1ª geração
 
@@ -91,7 +91,7 @@ Se o seu HoloLens ainda estiver enfrentando problemas após reiniciar, tente red
 
 Se você reiniciar seu dispositivo, todos os seus dados pessoais, aplicativos e configurações serão apagados, incluindo a redefinição do TPM. A redefinição instalará apenas a versão mais recente do Windows Holographic e será preciso refazer todas as etapas de inicialização (calibragem, conectar ao Wi-Fi, criar uma conta de usuário, baixar aplicativos e assim por diante).
 
-1. Inicie o aplicativo de Configurações e, em seguida, selecione **Atualizar** > **Redefinir**.
+1. Inicie o aplicativo de Configurações e selecione **Atualizar** > **Recuperação**.
 1. Selecione a opção **Redefinir dispositivo** e leia a mensagem de confirmação.
 1. Se você concordar em reiniciar seu dispositivo, ele será reiniciado e exibirá um conjunto de engrenagens giradas com uma barra de progresso.
 1. Aguarde cerca de trinta minutos para a conclusão desse processo.
