@@ -13,11 +13,12 @@ manager: jarrettr
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 15998fe11de1e7be4f12087a2724bec7e22337b0
-ms.sourcegitcommit: 29755f5af0086a43c532fb5a9a4ae65c36bc82de
+ms.openlocfilehash: e00226852f92cf5b3137d8d41cfde0f01394f5bc
+ms.sourcegitcommit: 7c16570839893f4a4432286b13ae6d84c665d376
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "10857739"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "10902286"
 ---
 # Solução de problemas
 
@@ -45,13 +46,15 @@ Se seus hologramas estiverem instável, com salto ou não parecerem corretos, te
 - Percorrendo e examine seus arredores para que o HoloLens possa examiná-los de forma mais completa.
 - Calibrando seu HoloLens para seus olhos. Vá para **configurações**  >  **System**  >  **utilitários**do sistema. Em **Calibragem**, selecione **Abrir Calibragem**.
 
-## O HoloLens não responde a gestos
+## O HoloLens não responde à entrada à mão
 
-Para garantir que o HoloLens possa ver seus gestos.  Mantenha sua mão no quadro do gesto-quando o HoloLens puder ver sua mão, o cursor mudará de um ponto para um anel.
+Para garantir que o HoloLens possa ver suas mãos, você precisa mantê-las no quadro do gesto.  A página inicial da realidade misturada fornece comentários que permitem que você saiba quando suas mãos são rastreadas.  Os comentários são diferentes em diferentes versões do HoloLens:
+- No HoloLens (1ª gen), o cursor olhar muda de um ponto para um anel
+- No HoloLens 2, um cursor de ponta aparece quando a mão está perto de um Tablet, e um raio de mão é exibido quando os slates estão ainda ausentes
 
-Saiba mais sobre como usar gestos no [hololens (1ª gen)](hololens1-basic-usage.md#use-hololens-with-your-hands) ou no [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
+Muitos aplicativos imersivas seguem os padrões de entrada semelhantes à página inicial de realidade misturada.  Saiba mais sobre como usar a entrada hand no [HoloLens (1ª gen)](hololens1-basic-usage.md#use-hololens-with-your-hands) e no [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
 
-Se o seu ambiente estiver muito escuro, o HoloLens pode não ver sua mão, portanto certifique-se de que haja luz suficiente.
+Se você estiver realçando luvas, observe que alguns tipos de luvas não funcionam com o rastreamento de mão.  Um exemplo comum é luvas de borracha pretos, que tendem a absorver luz infravermelha e não são captados pela câmera de profundidade.  Se o seu trabalho envolver luvas de borracha, recomendamos experimentar uma cor mais clara, como azul ou cinza.  Outro exemplo é grande Baggy luvas, que tendem a obscurecer a forma de sua mão. Recomendamos o uso de luvas que são mais adequados ao ajuste de forma possível para obter os melhores resultados.
 
 Se o seu visor tiver impressões digitais ou manchas, use o pano de limpeza microfiber que veio com o HoloLens para limpar seu visor com cuidado.
 
