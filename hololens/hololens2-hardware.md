@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 477693dd0d4a3ce63bfe29df166e171b9292aea4
-ms.sourcegitcommit: c0c8b57bb03a2fc724c051ad42ea5a3fb911ba71
+ms.openlocfilehash: 5b1df54ea5112109a175f6d7172635042262ca14
+ms.sourcegitcommit: e85a55c110e729a4836b8a59aa29d786c74ed6bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "10894047"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "10903326"
 ---
 # Hardware do HoloLens 2
 
@@ -144,6 +144,23 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 
 ### Informações normativas
 [Normas do HoloLens](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): inclui informações sobre temperatura, alienação, interferência de rádio e TV, e muito mais.
+
+## Dimensões do Pacote
+
+|      Medida               |      Medidas das unidades     |      Unidades imperiais     |
+|--------------------------------|-----------------------|-------------------------|
+|     Comprimento da Unidade                |     378,97 mm          |     14,920 polegadas       |
+|     Largura da Unidade                 |     247, 90 mm          |     9,760 polegadas        |
+|     Profundidade da Unidade                 |     163,07 mm          |     6,420 polegadas        |
+|     Peso da Unidade                |     2,878 kg           |     6,344 lbs           |
+|     Comprimento do Transportador Externo     |     446,00 mm          |     17,559 polegadas       |
+|     Largura do Transportador Externo      |     257,99 mm          |     10,157 polegadas       |
+|     Profundidade do Transportador Externo      |     172,01 mm          |     6,772 polegadas        |
+|     Peso do Transportador Externo    |     3,284 kg           |     7,240 lbs           |
+
+Observações:
+- Unidade: a caixa preta, no estilo de varejo, do HoloLens 2 está vencida.
+- Transportador Externo: a embalagem protetora de envio da Unidade.
 
 ## Próximas etapas
 
