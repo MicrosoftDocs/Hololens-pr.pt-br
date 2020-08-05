@@ -13,12 +13,12 @@ manager: jarrettr
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: e00226852f92cf5b3137d8d41cfde0f01394f5bc
-ms.sourcegitcommit: 7c16570839893f4a4432286b13ae6d84c665d376
+ms.openlocfilehash: 469848cf306675fcfb99247b5c91b159c204a5fe
+ms.sourcegitcommit: 2122490074adb7f63edfc3576441980caa22695f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "10902286"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "10915935"
 ---
 # Solução de problemas
 
@@ -28,7 +28,7 @@ Este artigo descreve como resolver vários problemas comuns do HoloLens.
 
 Se o seu HoloLens não iniciar:
 
-- Se os LEDs ao lado do botão ligar não acenderem ou apenas um LED piscar, talvez seja necessário [cobrar o seu HoloLens.](hololens-recovery.md#charging-the-device)
+- Se os LEDs ao lado do botão ligar não acenderem ou apenas um LED piscar, talvez seja necessário [cobrar o seu HoloLens.](hololens-recovery.md#charge-the-device)
 - Se os LEDs acenderem quando você pressionar o botão de energia, mas não conseguir ver nada nos vídeos, [preform uma reinicialização forçada do dispositivo](hololens-recovery.md#hard-reset-procedure).
 
 Se o seu HoloLens ficar congelado ou não responder:
