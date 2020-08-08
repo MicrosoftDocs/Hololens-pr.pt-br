@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 4c17ac2bf68076978c233db2f2b7156fee447f01
-ms.sourcegitcommit: 5d38af8d17dfcc028e7e0b2bb888c6c9d1e40524
+ms.openlocfilehash: d14c397c4783acd88dcd922a92b0ffe6437a6473
+ms.sourcegitcommit: c2040b967f2f884a22f4b93a173224163e37da1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "10899164"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "10918592"
 ---
 # Coletar e usar informações de diagnóstico de dispositivos HoloLens
 
@@ -130,7 +130,7 @@ Siga estas etapas para coletar o diagnóstico:
 2.  No explorador de arquivos do computador, navegue até **"este PC \<hololens-device> \Internal Storage"**.
 3.  Se a pasta de **armazenamento interno** não aparecer, o dispositivo estará aguardando que um usuário entre. Conecte-se ou desligue o dispositivo mantendo o botão de energia pressionado por 10 segundos.
 4.  Pressione e solte imediatamente os botões **Power + volume down** juntos.
-5.  Aguarde um minuto para que o dispositivo prepare os arquivos zip.
+5.  Aguarde um minuto para que o dispositivo prepare os arquivos zip. (Um arquivo temporário chamado HololensDiagnostics. Temp pode ficar visível enquanto o dispositivo gera os arquivos zip. Não acesse ou salve esse arquivo. Quando o processo for concluído, ele será substituído pelos arquivos zip.
 6.  Atualize o explorador de arquivos e navegue até a pasta **' \Documents '** .
 7.  Copie os arquivos ZIP do diagnóstico e compartilhe-os com a equipe de suporte da Microsoft.
 
