@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 11915bd6b2293be4491af2a7231b258b12d7b314
-ms.sourcegitcommit: 7c16570839893f4a4432286b13ae6d84c665d376
+ms.openlocfilehash: 5394e56882c0847333186cbbe25670231293ba4f
+ms.sourcegitcommit: 8b56f4b9b5f9c928fc361f18efcbea729055a0b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "10902306"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "10919142"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -104,7 +104,7 @@ Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 
 
 Esta política controla o número de dias, o cache de associações do grupo AAD pode ser usado para configurações de acesso atribuídas direcionando grupos do AAD para o usuário conectado. Quando esse valor de política é definido como valor maior que 0 somente, o cache é usado de outra forma não.  
 
-AADGroupMembershipCacheValidityInDays 
+Nome: AADGroupMembershipCacheValidityInDays URI value:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
 
 Mín-0 dias  
 Máx-60 dias 
@@ -112,6 +112,8 @@ Máx-60 dias
 Etapas para usar esta política corretamente: 
 1. Crie um perfil de configuração de dispositivo para grupos do AAD de direcionamento de quiosque e atribua-o a dispositivo (s) HoloLens (s). 
 1. Crie uma configuração de dispositivo baseada em OMA URI, que define esse valor de política como o número desejado de dias (> 0) e atribua-o a dispositivo (s) do HoloLens. 
+    1. O valor de URI deve ser inserido na caixa de texto OMA-URI como./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+    1. O valor pode estar entre min/max permitido.
 1. Registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
 1. Deixe que o usuário do AAD 1 entre quando a Internet estiver disponível, quando o usuário entrar e a associação do grupo AAD for confirmada com êxito, o cache será criado. 
 1. Agora o usuário do AAD 1 pode pegar o HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
