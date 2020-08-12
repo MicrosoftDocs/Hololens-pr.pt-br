@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5394e56882c0847333186cbbe25670231293ba4f
-ms.sourcegitcommit: 8b56f4b9b5f9c928fc361f18efcbea729055a0b2
+ms.openlocfilehash: 3a9f44c6210dd6a60b0ee60cf42ab068bac7ebc8
+ms.sourcegitcommit: 763896af822b247ee8ee981c2dec3b1abf61bf6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "10919142"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "10924243"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -43,6 +43,7 @@ Atualizaremos esta página com novos recursos novamente, pois liberamos essas p�
 |------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | Suporte à posição de olho automático                            | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                       | 19041.1339 +                 |
 | Visualizador de certificados                                   | Exiba certificados de usuário e de dispositivo no aplicativo configurações.                                        | 19041.1346 +                 |
+| Conexão Wi-Fi e usando o AutoPilot                 | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                            | 19041.1364 +                 |
 | Políticas do HoloLens                                    | Novas políticas para dispositivos de realidade misturados.                                                       | 19041.1349 +                 |
 | Armazenar Associação de grupo no AAD para quiosque offline         | Política de quantos dias o cache de associação do grupo AAD pode ser usado para o modo de quiosque.     | 19041.1356 +                 |
 | Novas políticas de restrição de dispositivo para HoloLens 2       | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                              | 19041.1349 +                 |
@@ -87,6 +88,9 @@ No Windows Insider Build 19041.1346 + estamos adicionando um visualizador de cer
 Para exibir certificados, vá para **configurações > atualizar & segurança > certificados**.
 
 ![Visualizador de certificados no aplicativo configurações](images/hololens-certificate-viewer.png)
+
+### Conexão Wi-Fi e usando o AutoPilot
+Agora, durante o OOBE, quando você conectar o HoloLens 2 com WiFi, o OOBE verificará se há um perfil do AutoPilot para o dispositivo. Se um for encontrado, ele será usado para concluir o restante do fluxo do AAD e do fluxo de registro. Em outras palavras, usar Ethernet para USB C ou WiFi para adaptador USB C não é mais necessário, mas continuará a funcionar se fornecido no início do OOBE. Saiba mais sobre o [AutoPilot para dispositivos HoloLens 2](hololens2-autopilot.md).
 
 ### Políticas do HoloLens
 Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 2 nos Builds 19041.1349 +. As novas configurações controláveis incluem: configuração do brilho, configuração do volume, desativação da gravação de áudio em capturas de realidade mista, configuração quando o diagnóstico pode ser coletado e o cache de associação do grupo AAD.  
