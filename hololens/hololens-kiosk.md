@@ -17,11 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 7409865f63199dead1779fa183128b30445053aa
-ms.sourcegitcommit: 2b1518675b9962518e08b13c12b43b6d9827fe17
+ms.openlocfilehash: f5c45477ab33064afe30e275f8b0003bc6022eac
+ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "10857995"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "10929847"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -251,7 +252,7 @@ As próximas etapas são diferentes dependendo do tipo de quiosque que você des
 
 Para obter mais informações sobre como criar um perfil de configuração de quiosque, consulte [configurações de dispositivos Windows 10 e Windows holográfico para empresas para executar como quiosque dedicado usando o Intune](https://docs.microsoft.com/intune/configuration/kiosk-settings).
 
-### <a id="mdmconfigsingle"></a>MDM, etapa 3 (aplicativo único) &ndash; configurar as definições para um quiosque de aplicativo único
+### <a id="mdmconfigsingle"></a>MDM, etapa 3 (aplicativo único) &ndash;  configurar as definições para um quiosque de aplicativo único
 
 Esta seção resume as configurações necessárias para um quiosque de aplicativo único. Para obter mais detalhes, consulte os seguintes artigos:
 
@@ -445,7 +446,7 @@ O artigo "configurar o HoloLens usando um pacote de provisionamento" fornece ins
 
 - Inicialmente, você pode [aplicar um pacote de provisionamento ao HoloLens durante a instalação](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup).
 
-- Você também pode [aplicar um pacote de provisionamento ao HoloLens após a configuração](hololens-provisioning.md#4-apply-a-provisioning-package-to-hololens-after-setup).
+- Você também pode [aplicar um pacote de provisionamento ao HoloLens após a configuração](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-after-setup).
 
 ## Usar o Windows Device portal para configurar um quiosque de aplicativo único
 
