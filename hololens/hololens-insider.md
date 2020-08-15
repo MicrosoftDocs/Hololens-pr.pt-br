@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: cb7c60ed8a381c0ce8c7f6a28bc8274d5ea20f30
-ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
+ms.openlocfilehash: 728e0d33863a3d8b70c471c97c97a75569b7ba95
+ms.sourcegitcommit: 1221a9b33c4fcd0eb6dd9e544e85a7c58efd47df
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/14/2020
-ms.locfileid: "10929867"
+ms.locfileid: "10930858"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -33,25 +33,25 @@ Se você estiver procurando um recurso que não está mais listado aqui, agora e
 
 Atualizaremos esta página com novos recursos novamente, pois liberamos essas páginas para as compilações do Windows Insider.
 
-| Recurso                                              | Descrição                                                                                   | Disponível em builds do insider |
-|------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| Suporte à posição de olho automático                            | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                       | 19041.1339 +                 |
-| Visualizador de certificados                                   | Exiba certificados de usuário e de dispositivo no aplicativo configurações.                                        | 19041.1346 +                 |
-| Instalar e remover certificados                      | Os usuários podem instalar e remover certificados usando o Visualizador de certificado.                       | 19041.1361 +                 |
-| Fornecimento automático de inicialização de USB                    | OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                 | 19041.1361 +                 |
-| Confirmar automaticamente os pacotes de provisionamento em OOBE           | Aplicar automaticamente pacotes de provisionamento em OOBE.                                            | 19041.1361 +                 |
-| Conexão Wi-Fi e usando o AutoPilot                 | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                            | 19041.1364 +                 |
-| Políticas do HoloLens                                    | Novas políticas para dispositivos de realidade misturados.                                                       | 19041.1349 +                 |
-| Armazenar Associação de grupo no AAD para quiosque offline         | Política de quantos dias o cache de associação do grupo AAD pode ser usado para o modo de quiosque.     | 19041.1356 +                 |
-| Novas políticas de restrição de dispositivo para HoloLens 2       | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                              | 19041.1349 +                 |
-| Novas políticas de energia para HoloLens 2                    | Políticas recém aceitas para configurações de tempo limite de energia.                                          | 19041.1349 +                 |
-| Atualizar políticas                                      | Políticas habilitadas recentemente, permitindo o controle de atualizações.                                           | 19041.1352 +                 |
-| Visibilidade da página Configurações habilitada para o HoloLens 2      | Política para escolher quais páginas são vistas no aplicativo configurações.                                          | 19041.1349 +                 |
-| Acesso Global Atribuído                               | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema.  | 19041.1356 +                 |
-| Iniciar automaticamente um aplicativo no quiosque de vários aplicativos                | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos. | 19041.1346 +                 |
-| Logon automático do visitante para quiosques                        | Permite que o logon automático em contas de visitantes seja usado para modos de quiosque.                        | 19041.1361 +                 |
-| Alterações de comportamento do modo de quiosque para manipulação de falhas | Alterações de como a falha do modo de quiosque agora é manipulada.                                             | 19041.1356 +                 |
-| Melhorias e correções na atualização                 | Correções adicionais na atualização.                                                               | 19041.1361 +                 |
+| Recurso                                                | Descrição                                                                                    | Disponível em builds do insider |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------|
+| [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
+| [Visualizador de certificados](hololens-insider.md#certificate-viewer)                                     | Exiba certificados de usuário e de dispositivo no aplicativo configurações.                                         | 19041.1346 +                 |
+| [Instalar e remover certificados](hololens-insider.md#install-and-remove-certificates)                        | Os usuários podem instalar e remover certificados usando o Visualizador de certificado.                        | 19041.1361 +                 |
+| [Fornecimento automático de inicialização de USB](hololens-insider.md#auto-launch-provisioning-from-usb)                      | O OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                | 19041.1361 +                 |
+| [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-insider.md#auto-confirm-provisioning-packages-in-oobe)             | Aplicar automaticamente pacotes de provisionamento em OOBE.                                             | 19041.1361 +                 |
+| [Usar o AutoPilot com conexão Wi-Fi](hololens-insider.md#using-autopilot-with-wi-fi-connection)                  | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                             | 19041.1364 +                 |
+| [Acesso Global Atribuído](hololens-insider.md#global-assigned-access--kiosk-mode)                                 | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema. | 19041.1356 +                 |
+| [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-insider.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                  | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.     | 19041.1346 +                 |
+| [Logon automático do visitante para quiosques](hololens-insider.md#visitor-auto-logon-for-kiosks)                          | Permite que o logon automático em contas de visitantes seja usado para modos de quiosque.                         | 19041.1361 +                 |
+| [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-insider.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Alterações de como a falha do modo de quiosque agora é manipulada.                                              | 19041.1356 +                 |
+| [Políticas do HoloLens](hololens-insider.md#hololens-policies)                                      | Novas políticas para dispositivos de realidade misturados.                                                        | 19041.1349 +                 |
+| [Armazenar Associação de grupo no AAD para quiosque offline](hololens-insider.md#cache-aad-group-membership-for-offline-kiosk)           | Política de quantos dias o cache de associação do grupo AAD pode ser usado para o modo de quiosque.    | 19041.1356 +                 |
+| [Novas políticas de restrição de dispositivo para HoloLens 2](hololens-insider.md#new-device-restriction-policies-for-hololens-2)         | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                               | 19041.1349 +                 |
+| [Novas políticas de energia para HoloLens 2](hololens-insider.md#new-power-policies-for-hololens-2)                      | Políticas recém aceitas para configurações de tempo limite de energia.                                           | 19041.1349 +                 |
+| [Atualizar políticas](hololens-insider.md#newly-enabled-update-policies-for-hololens)                                        | Políticas habilitadas recentemente, permitindo o controle de atualizações.                                            | 19041.1352 +                 |
+| [Visibilidade da página Configurações habilitada para o HoloLens 2](hololens-insider.md#enabled-settings-page-visibility-for-hololens-2)        | Política para escolher quais páginas são vistas no aplicativo configurações.                                           | 19041.1349 +                 |
+| [Melhorias e correções na atualização](hololens-insider.md#improvements-and-fixes-in-the-update)                   | Correções adicionais na atualização.                                                                | 19041.1361 +                 |
 
 ### Suporte à posição de olho automático
 
@@ -135,8 +135,39 @@ Ao combinar o lançamento automático do provisionamento de dispositivos USB e a
 
 Agora, seu dispositivo está configurado e exibirá a tela de provisionamento bem-sucedido.
 
-### Conexão Wi-Fi e usando o AutoPilot
+### Usar o AutoPilot com conexão Wi-Fi
 Agora, durante o OOBE, quando você conectar o HoloLens 2 com WiFi, o OOBE verificará se há um perfil do AutoPilot para o dispositivo. Se um for encontrado, ele será usado para concluir o restante do fluxo do AAD e do fluxo de registro. Em outras palavras, usar Ethernet para USB C ou WiFi para adaptador USB C não é mais necessário, mas continuará a funcionar se fornecido no início do OOBE. Saiba mais sobre o [AutoPilot para dispositivos HoloLens 2](hololens2-autopilot.md).
+
+### Acesso global atribuído – modo de quiosque
+Este novo recurso permite que um administrador de ti configure um dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com qualquer identidade no sistema e se aplica a todos os participantes do dispositivo. Leia sobre esse novo recurso em detalhes [aqui](hololens-global-assigned-access-kiosk.md).
+
+### Inicialização automática de um aplicativo no modo de quiosque de vários aplicativos 
+Aplica-se somente ao modo de quiosque de vários aplicativos e somente um aplicativo pode ser designado para inicialização automática usando o atributo realçado abaixo na configuração de acesso atribuído. 
+
+O aplicativo é iniciado automaticamente quando o usuário entra. 
+
+```xml
+<AllowedApps>                     
+    <!—TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
+```
+
+### Logon automático do visitante para quiosques
+Este novo recurso permite que o logon automático nas contas do visitante seja usado para modos de quiosque. 
+
+Para uma configuração não AAD, para configurar um dispositivo para o visitante AutoLogon:
+1.  Crie um pacote de provisionamento que:
+    1.  Configura **as configurações de tempo de execução/AssignedAccess** para permitir contas de visitante.
+    1.  Opcionalmente registra o dispositivo no MDM **(configurações de tempo de execução/áreas de trabalho/registradores)** para que possa ser gerenciado mais tarde.
+    1.  Não criar uma conta local
+1.  [Aplicar o pacote de provisionamento](hololens-provisioning.md).
+
+Para uma configuração do AAD, os usuários podem obter algo semelhante a este momento sem esta alteração. Dispositivos ingressados no AAD configurados para o modo de quiosque podem entrar em uma conta de visitante com um único toque de botão na tela de conexão. Depois de conectar-se à conta do visitante, o dispositivo não solicitará que você entre novamente até que o visitante seja explicitamente desconectado do menu iniciar ou o dispositivo seja reiniciado.
+
+### Alterações de comportamento do modo de quiosque para manipulação de falhas
+
+Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. A partir desta compilação do Windows Insider, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, conforme mostrado abaixo: 
+
+![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
 
 ### Políticas do HoloLens
 Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 2 nos Builds 19041.1349 +. As novas configurações controláveis incluem: configuração do brilho, configuração do volume, desativação da gravação de áudio em capturas de realidade mista, configuração quando o diagnóstico pode ser coletado e o cache de associação do grupo AAD.  
@@ -204,37 +235,6 @@ Agora habilitamos uma política que permite que os administradores de ti impeça
 - [PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
  
 ![Captura de tela de horas ativas sendo modificadas no aplicativo configurações](images/hololens-page-visibility-list.jpg)
-
-### Acesso global atribuído – modo de quiosque
-Este novo recurso permite que um administrador de ti configure um dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com qualquer identidade no sistema e se aplica a todos os participantes do dispositivo. Leia sobre esse novo recurso em detalhes [aqui](hololens-global-assigned-access-kiosk.md).
-
-### Inicialização automática de um aplicativo no modo de quiosque de vários aplicativos 
-Aplica-se somente ao modo de quiosque de vários aplicativos e somente um aplicativo pode ser designado para inicialização automática usando o atributo realçado abaixo na configuração de acesso atribuído. 
-
-O aplicativo é iniciado automaticamente quando o usuário entra. 
-
-```xml
-<AllowedApps>                     
-    <!—TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
-```
-
-### Logon automático do visitante para quiosques
-Este novo recurso permite que o logon automático nas contas do visitante seja usado para modos de quiosque. 
-
-Para uma configuração não AAD, para configurar um dispositivo para o visitante AutoLogon:
-1.  Crie um pacote de provisionamento que:
-    1.  Configura **as configurações de tempo de execução/AssignedAccess** para permitir contas de visitante.
-    1.  Opcionalmente registra o dispositivo no MDM **(configurações de tempo de execução/áreas de trabalho/registradores)** para que possa ser gerenciado mais tarde.
-    1.  Não criar uma conta local
-1.  [Aplicar o pacote de provisionamento](hololens-provisioning.md).
-
-Para uma configuração do AAD, os usuários podem obter algo semelhante a este momento sem esta alteração. Dispositivos ingressados no AAD configurados para o modo de quiosque podem entrar em uma conta de visitante com um único toque de botão na tela de conexão. Depois de conectar-se à conta do visitante, o dispositivo não solicitará que você entre novamente até que o visitante seja explicitamente desconectado do menu iniciar ou o dispositivo seja reiniciado.
-
-### Alterações de comportamento do modo de quiosque para manipulação de falhas
-
-Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. A partir desta compilação do Windows Insider, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, conforme mostrado abaixo: 
-
-![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
 
 ### Melhorias e correções na atualização:
 - Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.
