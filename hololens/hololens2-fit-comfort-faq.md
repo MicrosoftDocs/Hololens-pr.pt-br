@@ -13,12 +13,12 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 594f51897502847251adcbe8c32beb0c55d71098
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 17b55ef165cbb9df47f822f742141f4460cd9c6b
+ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827750"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "10929837"
 ---
 # Perguntas frequentes sobre ajuste e conforto do HoloLens 2
 
@@ -50,14 +50,9 @@ Tente ajustar a posição do visor do dispositivo para que o quadro holográfico
 
 ## A cor ou o brilho da imagem do holograma não fica bem
 
-Para o HoloLens 2, siga as etapas abaixo para garantir a melhor qualidade visual de hologramas apresentados em visores:
+Confira as etapas de solução de problemas do [visor do HoloLens 2](hololens2-display.md).
 
-- **Aumente o brilho do visor.** Os hologramas têm melhor aparência quando o visor está em seu nível mais brilhante.
-- **Traga o visor para mais perto de seus olhos.** Gire o visor para baixo até a posição mais próxima aos seus olhos.
-- **Desloque o visor para baixo.** Tente mover o suporte da testa para baixo, o que fará com que o visor fique mais perto do seu nariz.
-- **Execute a calibragem dos olhos.** O visor usa seu IPD e o olhar para otimizar as imagens na tela. Se você não executar a calibragem dos olhos, a qualidade da imagem poderá ficar pior.
-
-## O dispositivo desliza para baixo quando estou usando ou eu preciso apertar muito a headband para mantê-lo seguro
+## O dispositivo desliza para baixo durante o uso ou eu preciso apertar muito a headband para mantê-lo seguro
 
 A faixa sobre a cabeça pode ajudar a manter o HoloLens seguro na sua cabeça, principalmente se você estiver se movendo muito. Ela também pode permitir que você afrouxe um pouco a headband. [Saiba como usá-lo](hololens2-setup.md#adjust-fit).
 
