@@ -15,12 +15,12 @@ ms.prod: hololens
 appliesto:
 - HoloLens (1st Gen)
 - HoloLens 2
-ms.openlocfilehash: db95edfbadb271b7fc47cf5798e80d9b2cad3c90
-ms.sourcegitcommit: 708da7b390fed1fd3aea1a2b2e50461851052683
+ms.openlocfilehash: 6947fe2232701fb9451291bd07e1c896979861d5
+ms.sourcegitcommit: 77eb85608066d9a4ed01b3862afe356f7e54d583
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "10881324"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "10940191"
 ---
 # Problemas conhecidos do HoloLens
 
@@ -28,7 +28,7 @@ Esta é a lista atual de problemas conhecidos para dispositivos do HoloLens. Mar
 
 >[!NOTE]
 > - Se você descobrir um problema que não está bloqueando você, informe-o no seu dispositivo HoloLens por meio do [Hub de feedback](hololens-feedback.md).
-> - Se o problema que você está enfrentando estiver bloqueando você, em uma lista de comentários para o arquivamento, envie [uma solicitação de suporte](https://aka.ms/hlsupport).
+> - Se o problema que você está enfrentando estiver bloqueando você, em uma lista de comentários para o arquivamento, envie  [uma solicitação de suporte](https://aka.ms/hlsupport).
 
 - [Problemas conhecidos para todas as gerações do HoloLens](#known-issues-for-all-hololens-generations)
 - [Problemas conhecidos de dispositivos do HoloLens 2](#known-issues-for-hololens-2-devices)
@@ -57,6 +57,20 @@ Soluções alternativas
 - Se não for possível usar uma conta da Microsoft para o cliente com segurança para carregar suas fotos automaticamente, você pode carregar manualmente as fotos em sua conta corporativa ou de estudante do aplicativo OneDrive. Para fazer isso, verifique se você está conectado à sua conta corporativa ou de estudante no aplicativo OneDrive. Selecione o **+** botão e escolha **carregar**. Encontre as fotos ou vídeos que você deseja carregar navegando para **imagens > imagem da câmera**. Selecione as fotos ou vídeos que você deseja carregar e, em seguida, selecione o botão **abrir** .
 
 ## Problemas conhecidos de dispositivos do HoloLens 2
+
+### O teclado não muda para caracteres especiais
+
+Há um problema durante OOBE, no qual depois que o usuário tiver escolhido uma conta corporativa ou de estudante e estiver inserindo a senha, tentando alternar para os caracteres especiais no teclado tocando no botão &123 não muda para caracteres especiais. 
+
+Soluções de trabalho:
+-   Feche o teclado e reabra-o tocando no campo de texto.
+-   Digite sua senha incorretamente. Quando o teclado for reiniciado na próxima vez, ele funcionará conforme o esperado.
+- Autenticação na Web, feche o teclado e selecione **entrar em outro dispositivo**. 
+-   Se inserir apenas números, um usuário pode pressionar e manter determinadas teclas para abrir um menu expandido.
+-   Usando um teclado USB.
+
+Isso não afeta:
+- Usuários que optam por usar uma conta pessoal.
 
 ### A tela azul é mostrada após a cancelamento da compilação do insider preview em um dispositivo reatualizado com uma compilação do insider
 
@@ -98,7 +112,7 @@ Nossa equipe está trabalhando com uma correção no momento. Enquanto isso, voc
 1. Dê um nome ao projeto (como "HoloLensDeploymentFix") e certifique-se de que a estrutura esteja definida como pelo menos .NET Framework 4,5 e selecione **OK**.
 1. Clique com o botão direito do mouse no nó **referências** no Gerenciador de soluções e adicione as seguintes referências (selecione para a seção **procurar** e selecione **procurar**):
 
-    ```CMD
+    ```console
     C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Deploy.dll
     C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Connectivity.dll
     C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\SirepInterop.dll
@@ -113,7 +127,7 @@ Nossa equipe está trabalhando com uma correção no momento. Enquanto isso, voc
 1. Localize e selecione ambos os arquivos no Gerenciador de soluções (eles devem estar na parte inferior da lista de arquivos) e altere **copiar para diretório de saída** na janela **Propriedades** para **copiar sempre**.
 1. Na parte superior do arquivo, adicione o seguinte à lista de `using` instruções existente:
 
-    ```CMD
+    ```console
     using Microsoft.Tools.Deploy;
     using System.Net;
     ```
