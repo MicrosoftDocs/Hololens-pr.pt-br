@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: bf0f293fac531045e50bee9a9dd153eb9dd2b377
-ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
+ms.openlocfilehash: 80ac6348dd2cba932316b690cafc4c5dc0331353
+ms.sourcegitcommit: 77eb85608066d9a4ed01b3862afe356f7e54d583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "10929889"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "10940201"
 ---
 # Visor do HoloLens 2
 
@@ -30,7 +30,7 @@ Para o HoloLens 2, siga as etapas abaixo para garantir a melhor qualidade visual
 * **Aumente o brilho do visor.** Os hologramas têm melhor aparência quando o visor está em seu nível mais brilhante.
 * **Traga o visor para mais perto de seus olhos.** Gire o visor para baixo até a posição mais próxima aos seus olhos.
 * **Desloque o visor para baixo.** Tente mover o suporte da testa para baixo, o que fará com que o visor fique mais perto do seu nariz.
-* **Execute a calibragem dos olhos.** O visor usa a sua IPD (distância interpupilar) e o olhar para otimizar as imagens no visor. Se você não executar a calibragem dos olhos, a qualidade da imagem poderá ficar pior. Para executar a calibragem dos olhos, vá para **Configurações** ➔ **Sistema** ➔ **Calibragem** ➔ **Executar calibragem dos olhos**.
+* **Execute a calibragem dos olhos.** O visor usa a sua IPD (distância interpupilar) e o olhar para otimizar as imagens no visor. Se você não executar a calibragem dos olhos, a qualidade da imagem poderá ficar pior. Para executar a calibragem dos olhos, vá para **Configurações** > **Sistema** > **Calibragem** > **Executar calibragem dos olhos**.
 
 ## Perguntas frequentes
 
@@ -77,11 +77,14 @@ As atualizações do sistema operacional são entregues automaticamente. Você t
 
 ### Quais diretrizes estão disponíveis para os desenvolvedores aplicarem os princípios de design do modo escuro?
 
-A Microsoft está preparando as diretrizes para desenvolvedores sobre os princípios de design do modo escuro. As diretrizes estarão disponíveis em breve na [documentação do desenvolvedor](https://docs.microsoft.com/windows/mixed-reality/). Um resumo dos avisos:
+Os usuários terão uma melhor experiência se evitarem planos de fundo brancos. O modo escuro é um princípio de design usado por aplicativos para usar planos de fundo pretos ou de cores escuras. As configurações do sistema têm por padrão o modo escuro e podem ser ajustadas acessando **Configurações** > **Sistema** > **Cores**.
 
-* Usar cores escuras para o fundo da interface do usuário
-* Usar espessuras de fonte em negrito ou seminegrito
-* Usar o material HolographicBackplate do Kit de Ferramentas de Realidade Misturada
+Os desenvolvedores são aconselhados a seguir as diretrizes de design do modo escuro:
+
+* [Diretrizes de design do desenvolvedor para visores do HoloLens](https://docs.microsoft.com/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
+* [Tamanhos de fonte recomendados](https://docs.microsoft.com/windows/mixed-reality/typography#recommended-font-size)
+
+Quando um holograma exigir um plano de fundo branco, mantenha o tamanho do holograma menor do que o campo de visão total do visor. Esse tamanho permite aos usuários colocar o holograma no centro do visor.
 
 ### Como limpar o visor do HoloLens 2?
 

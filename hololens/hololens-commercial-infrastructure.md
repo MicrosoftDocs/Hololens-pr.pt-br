@@ -14,12 +14,12 @@ manager: bradke
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 65403589fa3d612290fdd59a4843da27c12a956c
-ms.sourcegitcommit: f3cda6c6b3bfb7ba4be5f4da66d8ed5b03ca807d
+ms.openlocfilehash: 1031eaeaf2767f8aa982d74bb282bc1fb086051b
+ms.sourcegitcommit: 77eb85608066d9a4ed01b3862afe356f7e54d583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "10830145"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "10940211"
 ---
 # Configurar Sua Rede para o HoloLens
 
@@ -62,6 +62,9 @@ Certifique-se de que [essa lista](hololens-offline.md)de pontos de extremidade s
 1. A largura de banda recomendada para o desempenho ideal da Assistência Remota é de 1.5 Mbps. Os requisitos de rede detalhados e informações adicionais podem ser encontrados [aqui](https://docs.microsoft.com/MicrosoftTeams/prepare-network).
 **(Observe que, caso não haja velocidades de rede de pelo menos 1.5 Mbps, a Assistência Remota continuará funcionando. No entanto, a qualidade pode ser afetada).**
 1. Verifique se essas portas e URLs são permitidas no firewall da sua rede. Isso permitirá que o Microsoft Teams funcione. A lista mais recente pode ser encontrada [aqui](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
+
+- Saiba mais, especificamente, sobre os [Requisitos de Rede para Assistência Remota](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/requirements#network-requirements). 
+- Saiba mais sobre como [preparar a rede da sua organização para o Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/prepare-network)
 
 ### Guias dos Requisitos de Rede Específicos
 
