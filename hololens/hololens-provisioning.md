@@ -16,12 +16,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 0a2edd0c516234a433a93c0cff806153726678fd
-ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
+ms.openlocfilehash: 917e9fd0e8bf69eb0b7c53165029cb8e42904582
+ms.sourcegitcommit: ab9e70e68d546cc6965e1569e5d914995fa508da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "10929857"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "10955453"
 ---
 # Configurar o HoloLens usando um pacote de provisionamento
 
@@ -173,7 +173,7 @@ Dispositivos do HoloLens 2 na compilação [19041,1103](hololens-release-notes.m
 > [!NOTE]
 > Se o dispositivo foi comprado antes de agosto de 2016, você precisará entrar no dispositivo usando uma conta da Microsoft, obter a atualização do sistema operacional mais recente e, em seguida, redefinir o sistema operacional para aplicar o pacote de provisionamento.
 
-### Aplicar um pacote de provisionamento ao HoloLens após a instalação
+## Aplicar um pacote de provisionamento ao HoloLens após a instalação
 
 > [!NOTE]
 > Estas etapas se aplicam somente ao Windows 10, versão 1809.
