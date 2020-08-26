@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d51616f23a63c1f45fe5ed7da88be4b5429c36eb
-ms.sourcegitcommit: 238d41844116ab94d347a2ffd0fbfa18b8a81947
+ms.openlocfilehash: e819dfb95a6735d0eae6287d97f5856856a33526
+ms.sourcegitcommit: 7f48e7103f869a22a0d20a54dc8f9b708b22484c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "10956767"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "10963684"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -261,8 +261,10 @@ Essas políticas de atualização agora estão habilitadas em dispositivos HoloL
 
 ### Visibilidade da página Configurações habilitada para o HoloLens 2
 Agora habilitamos uma política que permite que os administradores de ti impeçam que páginas específicas no aplicativo Configurações do sistema sejam visíveis ou acessíveis, ou que façam isso para todas as páginas, exceto aquelas especificadas. Para saber como personalizar completamente este recurso, clique no link abaixo.
- 
+
 - [PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
+
+Para saber quais configurações de página você pode personalizar no HoloLens 2, acesse nossa [página URIs de configurações](settings-uri-list.md). 
  
 ![Captura de tela de horas ativas sendo modificadas no aplicativo configurações](images/hololens-page-visibility-list.jpg)
 
@@ -270,7 +272,8 @@ Agora habilitamos uma política que permite que os administradores de ti impeça
 - Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.
 - No momento, há mais telas em OOBE no modo escuro.
 - Saiba mais o conteúdo deve apontar para a declaração de privacidade online mais recente.
-- Corrigido e problema em que os usuários não puderam configurar perfis de VPN por meio de pacotes de provisionamento.
+- Corrigido um problema em que os usuários não puderam configurar perfis VPN por meio de pacotes de provisionamento.
+- Foi corrigido um problema que impedia a exibição de um dispositivo HoloLens no File Explorer over Media Transfer Protocol (MTP) quando o dispositivo é configurado como um [quiosque de aplicativo único](hololens-kiosk.md). Observe que a MTP (e a conexão USB em geral) ainda pode ser desabilitada usando a política [AllowUSBConnection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) .
 
 ## Comece a receber Builds do insider
 
