@@ -3,7 +3,7 @@ title: Localizar, instalar e desinstalar aplicativos
 description: A Microsoft Store é a sua fonte de aplicativos e jogos que funcionam com o HoloLens.  Saiba mais sobre como localizar, instalar e desinstalar aplicativos para holografia.
 ms.assetid: cbe9aa3a-884f-4a92-bf54-8d4917bc3435
 ms.reviewer: v-miegge
-ms.date: 08/30/2019
+ms.date: 08/31/2020
 manager: jarrettr
 keywords: hololens, loja, UWP, aplicativo, instalar
 ms.prod: hololens
@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 58ed8c3d024708f74896dd48100e41f403a20ae3
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: fd818054fbe692363d411373a6a12ad1057d1be7
+ms.sourcegitcommit: 2b1de9c8f8a212a797fb0cb6056856dd4ff716a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827587"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "10985827"
 ---
 # Localizar, instalar e desinstalar aplicativos da Microsoft Store
 
@@ -34,22 +34,44 @@ Para saber mais sobre como instalar e executar aplicativos personalizados, leia 
 
 ## Localizar aplicativos
 
-Abra a Microsoft Store no menu **Iniciar**. Em seguida, procure aplicativos e jogos. Você pode usar a Cortana para pesquisar falando "Ei, Cortana" e dizer os termos da pesquisa.
+Abra a Microsoft Store no menu **Iniciar**. Em seguida, procure aplicativos e jogos. Você pode usar os [comandos de voz](hololens-cortana.md) para pesquisar dizendo "Pesquisar". Depois que a janela de pesquisa abrir, diga "Start dictating" e, quando solicitado, comece a dizer os termos da pesquisa.
 
 ## Instale aplicativos
 
 Para baixar aplicativos, você precisará entrar com uma conta Microsoft. Alguns aplicativos são gratuitos e podem ser baixados imediatamente. Os aplicativos que exigem uma compra exigem que você esteja conectado à Store com sua conta Microsoft e que tenha uma forma de pagamento válida.
 > [!NOTE]
-> A conta que você usa na Microsoft Store não precisa ser igual à conta com a qual você está conectado. Se você estiver usando uma conta corporativa ou de estudante em seu HoloLens, será necessário entrar com sua conta pessoal no aplicativo da Store para fazer uma compra.
+> A conta que você usa na Microsoft Store não precisa ser igual à conta com a qual você está conectado. Se você estiver usando uma conta corporativa ou de estudante em seu HoloLens, é necessário entrar com sua conta pessoal no aplicativo da Microsoft Store para fazer uma compra.
 
 Para configurar um método de pagamento, vá para [account.microsoft.com](https://account.microsoft.com/) e selecione **Pagamento & cobrança** > **Opções de pagamento** > **Adicionar uma opção de pagamento**.
 
-1. Para abrir o menu [**Iniciar**](holographic-home.md), realize um [Gesto de início](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) ou gesto de [abrir a mão](hololens1-basic-usage.md) no HoloLens 1.
-1. Selecione o aplicativo da Store. Depois de abrir o aplicativo da Store:
-  1. Use a barra de pesquisa para procurar os aplicativos desejados. 
-  1. Selecione aplicativos essenciais ou aplicativos feitos especificamente para o HoloLens a partir de uma das categorias organizadas.
-  1. No canto superior direito do aplicativo da Store, selecione o botão **...** e, em seguida, selecione **Minha Biblioteca** para exibir os aplicativos comprados anteriormente.
+1. Para abrir o menu [**Iniciar**](holographic-home.md), faça um [gesto de início](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) ou um gesto de [abrir a mão](hololens1-basic-usage.md) no HoloLens (primeira geração).
+1. Selecionar o aplicativo Microsoft Store. Depois de abrir o aplicativo da Store:
+   1. Use a barra de pesquisa para procurar os aplicativos desejados. 
+   1. Selecione aplicativos essenciais ou aplicativos feitos especificamente para o HoloLens a partir de uma das categorias organizadas.
+   1. No canto superior direito do aplicativo da Store, selecione o botão **“...”** e, em seguida, selecione **Minha biblioteca** para exibir os aplicativos comprados anteriormente.
 1. Selecione **Obter** ou **Instalar** na página do aplicativo (pode ser necessária uma compra).
+
+## Atualizar aplicativos
+Para atualizar um aplicativo instalado a partir do aplicativo da Microsoft Store, você também pode atualizar o mesmo aplicativo a partir do aplicativo da Microsoft Store. Isso também se aplica aos aplicativos instalados para o Microsoft Store para Empresas. 
+1. Para abrir o menu [**Iniciar**](holographic-home.md), faça um [gesto de início](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) ou um gesto de [abrir a mão](hololens1-basic-usage.md) no HoloLens (primeira geração).
+1. Selecione o aplicativo da Store.
+1. Olhe para o canto superior direito do aplicativo Store. 
+1. Selecione o botão **"..."** ou "Ver mais".
+
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot do aplicativo da Microsoft Store.](images/store-update-1.png)
+
+1. Selecione **Downloads e atualizações**.
+    1. Se seu dispositivo tiver identificado anteriormente as atualizações, você poderá ver uma seta para baixo e um número, que representa as atualizações pendentes.
+1. Selecione **Obter atualizações**. Agora, seu dispositivo pesquisará se há atualizações e as define para download e instalação. 
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot do aplicativo da Microsoft Store obtendo atualizações](images/store-update-2.png.jpg)
+
+> [!NOTE]
+> Se os aplicativos do seu dispositivo foram distribuídos pela sua organização, eles podem ser atualizados por meio dos mesmos métodos de gerenciamento de aplicativos comerciais. Se isso se aplica à sua situação, saiba mais por meio da [visão geral da implantação de aplicativos comerciais.](app-deploy-overview.md)
+>
+> Se você deseja atualizar um aplicativo personalizado que foi sideloaded ou implantado, será necessário usar o mesmo método com a versão atualizada do seu aplicativo. Para saber mais sobre como instalar e executar aplicativos personalizados, leia [aplicativos holográficos personalizados](holographic-custom-apps.md).
 
 ## Desinstalar aplicativos
 
@@ -57,7 +79,7 @@ Há duas maneiras de desinstalar aplicativos.  Você pode desinstalar aplicativo
 
 ### Desinstalar no menu Iniciar
 
-No menu **Iniciar** ou na lista **Todos os Aplicativos**, navegue até o aplicativo. Feche e abra os dedos indicador e polegar até que o menu seja exibido e, em seguida, selecione **Desinstalar**.
+No menu **Iniciar** ou na lista **Todos os Aplicativos**, navegue até o aplicativo. Selecione e mantenha pressionado até que o menu seja exibido e, em seguida, selecione **Desinstalar**.
 
 ### Baixar da Microsoft Store
 
