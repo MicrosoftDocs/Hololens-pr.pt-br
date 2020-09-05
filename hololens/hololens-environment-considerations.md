@@ -10,12 +10,12 @@ ms.prod: hololens
 ms.topic: article
 audience: ITPro
 ms.localizationpriority: high
-ms.openlocfilehash: 2632c5bfd82feab4e21ee9c393f8c22efda28c42
-ms.sourcegitcommit: 458e07c0dcad66616fa98cfef125eb217713d89c
+ms.openlocfilehash: dc8182d04a8cdc8a8ec3775a8e453a41d29486d3
+ms.sourcegitcommit: 0abe53295191e22299d5be49f2cef4e85744d0fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "10927835"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993641"
 ---
 # Considerações de ambiente HoloLens
 
@@ -117,8 +117,17 @@ Para acessar o aplicativo Calibragem, acesse **Configurações** > **Sistema** >
 
 Se outra pessoa for usar seu HoloLens, deverá executar o aplicativo Calibragem primeiro para que o dispositivo seja configurado corretamente para ela.
 
-### Informações sobre temperatura e regulamentação
-[Normas do HoloLens](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): inclui informações sobre temperatura, alienação, interferência de rádio e TV, e muito mais.
+## Informações sobre temperatura e regulamentação
+
+[Informações regulatórias do HoloLens](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): inclui informações sobre faixa de temperatura, alienação, interferência de rádio e TV, e muito mais.
+
+Estas são algumas diretrizes a seguir ao usar o seu dispositivo:
+
+1. Armazene o dispositivo em um ambiente dentro da faixa de temperatura (em Espera ou Desligado) por uma hora antes de usar o dispositivo.
+1. Use o dispositivo em um ambiente dentro da faixa de temperatura.
+1. Use o dispositivo internamente.
+1. Use o dispositivo à sombra. mesmo quando em ambiente fechado, evite a luz solar direta pelas janelas ou claraboias.
+1. Se você seguir as diretrizes acima, mas tiver problemas de superaquecimento inesperados, certifique-se de que a Telemetria total esteja habilitada antes de enviar [Comentários](hololens-feedback.md).
 
 ## Consulte também
 
