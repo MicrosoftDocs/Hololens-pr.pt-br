@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 943cc5af8f5be337a9cfcc0d3e4a4640aa307e72
-ms.sourcegitcommit: 14c30f412cd17058d0316444215f878ba1ee422f
+ms.openlocfilehash: b2d95839ff394d61eec8f5c76baf9a151855794a
+ms.sourcegitcommit: e3056a433aeebb8bc45dc3f6db9a75f212fdf53b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "10905618"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "10996399"
 ---
 # Preparar seu HoloLens 2
 
@@ -33,6 +33,8 @@ A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o d
 - Quando seu HoloLens está ligado, o indicador de bateria exibe o nível da bateria em incrementos.
 - Quando somente uma das cinco luzes estiver acesa, o nível da bateria estará abaixo de 20%.
 - Se o nível da bateria estiver muito baixo e você tentar ligar o dispositivo, uma luz piscará rapidamente e apagará.
+
+Os detalhes completos do [carregamento de dispositivos poderão ser lidos aqui](hololens-recovery.md#charge-the-device) se mais informações forem necessárias. 
 
 ## Ajustar
 
@@ -108,7 +110,7 @@ Não tem certeza sobre o significado das luzes indicadoras do HoloLens? Quer sab
 | - | - | - |
 | Você pressiona o botão de energia. | Uma luz pisca cinco vezes e depois apaga. | A bateria do HoloLens está criticamente baixa. Carregue seu HoloLens. |
 | Você pressiona o botão de energia. | Todas as cinco luzes piscam cinco vezes e, em seguida, desligam. |  O HoloLens não consegue iniciar corretamente e está em estado de erro. [Reinstale o sistema operacional](hololens-recovery.md) para recuperar seu dispositivo. |
-| Você pressiona o botão Ligar/Desligar. | As luzes 1, 3 e 5 piscam juntas continuamente. |  O HoloLens pode ter uma falha de hardware. Para garantir, [reinstale o SO](hololens-recovery.md) e tente novamente. Depois de reinstalar o SO, se as luzes continuarem piscando com o mesmo padrão, entre em contato com o [suporte](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
+| Você pressiona o botão Ligar/Desligar. | As luzes 1, 3 e 5 piscam juntas continuamente. |  O HoloLens pode ter uma falha de hardware. Contatar [suporte](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
 
 ## Segurança e conforto
 
