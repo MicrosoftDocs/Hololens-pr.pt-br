@@ -1,23 +1,24 @@
 ---
 title: Atestado de integridade e de tempo de execução com suporte para hardware
-description: limitando o uso de senha para o holoLens
-author: jbennett
+description: Atestado de integridade e de tempo de execução com suporte para hardware
+author: evmill
+ms.author: v-evmill
+ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
 keywords: segurança, hololens, integridade com suporte para hardware, atestado de tempo de execução, UEFI, inicialização segura de UEFI, inicialização segura, TPM, proteção contra ameaças, garantia de antipersistência do Windows, integridade do código, proteção de código,
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
-ms.reviewer: ''
-manager: yannisl
+manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d1a3fe02b64ce1566806119e5309fd262667b181
-ms.sourcegitcommit: 896bdfccf4612a692a25a6bfaecfa2146860407e
+ms.openlocfilehash: b3986d7310650c2fac20204488ae5f882754deab
+ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "10865647"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11009469"
 ---
 # Atestado de integridade e de tempo de execução com suporte para hardware
 
