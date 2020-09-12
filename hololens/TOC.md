@@ -72,6 +72,7 @@
 
 ## Políticas
 ### [Configurar HoloLens usando pacotes de provisionamento](hololens-provisioning.md)
+### [Usando o MDM para gerenciar dispositivos do HoloLens](hololens-mdm-configure.md)
 ### [Configure o HoloLens como um quiosque](hololens-kiosk.md)
 # Implantar
 ## Inscrição
