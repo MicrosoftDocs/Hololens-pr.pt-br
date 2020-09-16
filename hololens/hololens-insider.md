@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1f7e2be19f525863a64ec7652e2418029a98cdca
-ms.sourcegitcommit: f79d8a6e863cebf18270d33a26548ba4ffdcf6b5
+ms.openlocfilehash: ef292e72eaf476a63df58a70865369790f88197a
+ms.sourcegitcommit: 1b19b0eb552189d7c50617bbdf3a102d3c85ee0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10994424"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016292"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -49,7 +49,9 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 | [Novas políticas de energia para HoloLens 2](hololens-insider.md#new-power-policies-for-hololens-2)                      | Políticas recém aceitas para configurações de tempo limite de energia.                                           | 19041.1349 +                 |
 | [Atualizar políticas](hololens-insider.md#newly-enabled-update-policies-for-hololens)                                        | Políticas habilitadas recentemente, permitindo o controle de atualizações.                                            | 19041.1352 +                 |
 | [Visibilidade da página Configurações habilitada para o HoloLens 2](hololens-insider.md#enabled-settings-page-visibility-for-hololens-2)        | Política para escolher quais páginas são vistas no aplicativo configurações.                                           | 19041.1349 +                 |
+|  [Modo de pesquisa](hololens-insider.md#research-mode) | Usar o modo de pesquisa no HoloLens 2 | 19041.1375 + |
 | [Melhorias e correções na atualização](hololens-insider.md#improvements-and-fixes-in-the-update)                   | Correções adicionais na atualização.                                                                | 19041.1361 +                 |
+
 
 ### Suporte à posição de olho automático
 
@@ -278,6 +280,15 @@ Agora habilitamos uma política que permite que os administradores de ti impeça
 Para saber quais configurações de página você pode personalizar no HoloLens 2, acesse nossa [página URIs de configurações](settings-uri-list.md). 
  
 ![Captura de tela de horas ativas sendo modificadas no aplicativo configurações](images/hololens-page-visibility-list.jpg)
+
+### Modo de pesquisa
+Enquanto estiver no modo de pesquisa, o HoloLens 2 torna-se uma ferramenta potent para pesquisa de visão do computador. Em comparação com as edições anteriores, o modo de pesquisa para o HoloLens 2 tem as seguintes vantagens:
+-   Além dos sensores expostos no modo de pesquisa do HoloLens (1ª gen), agora oferecemos acesso IMU sensor, incluindo acelerômetro, Gyroscope e magnetômetro.
+-   O HoloLens 2 oferece novos recursos que podem ser usados em conjunto com o modo de pesquisa. Especificamente, o acesso a APIs articuladas de acompanhamento à mão e acompanhamento de olhos pode oferecer um conjunto mais rico de experimentos.
+
+Os pesquisadores agora têm a opção de habilitar o modo de pesquisa em seus dispositivos HoloLens para acessar todos esses fluxos de sensores de imagens brutas externos. O modo de pesquisa para o HoloLens 2 também fornece acesso às leituras do acelerômetro, do Gyroscope e do magnetômetro. Para proteger a privacidade dos usuários, as imagens da câmera de controle de olhos brutos não estão disponíveis no modo de pesquisa, mas a direção olhar está disponível por meio de APIs existentes.
+
+Confira a [documentação do modo de pesquisa](https://docs.microsoft.com/windows/mixed-reality/research-mode) para obter mais detalhes técnicos.
 
 ### Melhorias e correções na atualização:
 - Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.
