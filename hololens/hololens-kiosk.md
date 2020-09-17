@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f5c45477ab33064afe30e275f8b0003bc6022eac
-ms.sourcegitcommit: bdbaed42dd9ecbd0ed9517de2e98a0465f584c1d
+ms.openlocfilehash: c6b2bf3d48da642e91b8709cfdf35d03a7913ac4
+ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "10929847"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11016685"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -31,7 +31,9 @@ Você pode configurar um dispositivo HoloLens para funcionar como um dispositivo
 Este artigo fornece informações sobre os aspectos da configuração do quiosque que são específicos para dispositivos HoloLens. Para obter informações gerais sobre os diferentes tipos de quiosques baseados no Windows e como configurá-los, consulte [Configurar quiosques e sinais digitais em edições do Windows Desktop](https://docs.microsoft.com/windows/configuration/kiosk-methods).  
 
 > [!IMPORTANT]  
-> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário entra no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não interrompe um aplicativo "permitido" de abrir outro aplicativo que não é permitido. Para impedir a abertura de aplicativos ou processos, use o [CSP WDAC (controle de aplicativos do Windows Defender)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para criar políticas apropriadas.  
+> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário entra no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não interrompe um aplicativo "permitido" de abrir outro aplicativo que não é permitido. Para impedir a abertura de aplicativos ou processos, use o [CSP WDAC (controle de aplicativos do Windows Defender)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para criar políticas apropriadas.
+>
+> Saiba mais sobre os serviços da Microsoft para dar aos usuários um nível avançado de segurança que o HoloLens 2 usa, leia mais sobre a [separação de estado e proteções de isolamento e isolamento](security-state-separation-isolation.md#defender-protections). Ou aprenda a [usar o WDAC e o Windows PowerShell para permitir ou bloquear aplicativos em dispositivos do HoloLens 2 com o Microsoft Intune](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens).
 
 Você pode usar o modo de quiosque em uma configuração de aplicativo único ou de vários aplicativos, e você pode usar um dos três processos para configurar e implantar a configuração do quiosque.
 
