@@ -1,11 +1,11 @@
 ---
 title: segurança do sistema operacional
 description: Sistema operacional sem administrador e segurança hololens
+ms.prod: hololens
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
-ms.prod: hololens
 ms.topic: article
 keywords: segurança, hololens, sem administrador, menos administrador, sistema operacional, sistema operacional sem administrador, os administrador, so sem administrador, hololens 2, segurança do hololens2,
 ms.localizationpriority: high
@@ -13,12 +13,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e8a10a32d30206877eb79d53c90e59307b3990ab
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: ea35012e63f4c0d8868f9604809c1552c3212e72
+ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009559"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11016635"
 ---
 # <span data-ttu-id="16de2-104">Sistema Operacional sem Administrador</span><span class="sxs-lookup"><span data-stu-id="16de2-104">Admin-less operating system</span></span>
 

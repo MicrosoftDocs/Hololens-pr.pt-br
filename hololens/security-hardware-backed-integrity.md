@@ -5,20 +5,20 @@ author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
+ms.prod: hololens
 ms.topic: article
 keywords: segurança, hololens, integridade com suporte para hardware, atestado de tempo de execução, UEFI, inicialização segura de UEFI, inicialização segura, TPM, proteção contra ameaças, garantia de antipersistência do Windows, integridade do código, proteção de código,
-ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b3986d7310650c2fac20204488ae5f882754deab
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: befd2d892403b7b6c7050f48ba9beffb45b241fe
+ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009469"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11016675"
 ---
 # <span data-ttu-id="ff808-104">Atestado de integridade e de tempo de execução com suporte para hardware</span><span class="sxs-lookup"><span data-stu-id="ff808-104">Hardware-backed integrity and runtime attestation</span></span>
 
