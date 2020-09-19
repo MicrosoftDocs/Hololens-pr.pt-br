@@ -1,6 +1,6 @@
 ---
-title: URIs de configurações
-description: Lista de URIs de HoloLens suportados pela PageVisibilityList
+title: Visibilidade das Configurações da Página
+description: Lista de URIs com suporte do HoloLens para PageVisibilityList e Guia
 author: evmill
 ms.author: v-evmill
 ms.date: 09/16/2020
@@ -13,14 +13,14 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 17959fa25763d2c6b89d0956f29b9999b3012e60
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: 7a24d64b0b60be9f922260b7145d04c2c13951ed
+ms.sourcegitcommit: 8b5e349990ba5566bcc6a2a72ff83d1a21b099b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016695"
+ms.locfileid: "11026934"
 ---
-# URIs de configurações
+# Visibilidade das Configurações da Página
 
 Um dos recursos gerenciáveis para dispositivos do HoloLens está usando as [políticas de configurações/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) para restringir as páginas vistas nas configurações do aplicativo. PageVisibilityList é uma política que permite que os administradores de TI impeçam a visibilidade ou o acesso a páginas específicas do aplicativo de configurações do sistema, ou para isso, para todas as páginas, exceto aquelas especificadas. 
 
@@ -122,8 +122,7 @@ Os dispositivos do HoloLens e com Windows 10 possuem uma seleção diferente de 
 | Windows Update – verifica atualizações | ms-settings:windowsupdate-action          |
 | Opções Avançadas                    | ms-settings:windowsupdate-options         |
 
-> [!NOTE]
->  1 Os dois URIS a seguir, na verdade, não levam você para a página Opções avançadas ou Opções, só bloqueiam/mostram a página principal do Windows Update. 
+>  <sup>1 </sup> Os dois URIS a seguir, na verdade, não levam você para as páginas **Opções avançadas** ou **Opções**, só bloqueiam/mostram a página principal do Windows Update. 
 > - ms-settings:windowsupdate-options
 > - ms-settings:windowsupdate-restartoptions 
 
