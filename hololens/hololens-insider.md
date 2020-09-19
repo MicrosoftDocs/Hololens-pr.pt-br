@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ef292e72eaf476a63df58a70865369790f88197a
-ms.sourcegitcommit: 1b19b0eb552189d7c50617bbdf3a102d3c85ee0e
+ms.openlocfilehash: 604e1e54999f7fb76a3a6a31223c3d59b7e4161f
+ms.sourcegitcommit: 4ad9b6c73913808175b1a448d2be9e33592f65af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016292"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "11027433"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -35,6 +35,8 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------|
 | [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
 | [Gerenciador de certificados](hololens-insider.md#certificate-manager)                                     | Os usuários podem exibir, instalar e remover certificados do usuário atual e certificados do computador local no aplicativo configurações.                                         | 19041.1361 +                 |
+| [Instalador de Aplicativo](hololens-insider.md#install-apps-on-hololens-2-via-app-installer) | Na interface do usuário do dispositivo para instalar aplicativos de arquivos Appx. | 19041.1377 + |
+| [Instalando aplicativos de uma página da Web](hololens-insider.md#installing-apps-from-a-web-page) | Configurar aplicativos para serem baixados e instalados a partir do navegador. | 19041.1366 + | 
 | [Fornecimento automático de inicialização de USB](hololens-insider.md#auto-launch-provisioning-from-usb)                      | O OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                | 19041.1361 +                 |
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-insider.md#auto-confirm-provisioning-packages-in-oobe)             | Aplicar automaticamente pacotes de provisionamento em OOBE.                                             | 19041.1361 +                 |
 | [Usar o AutoPilot com conexão Wi-Fi](hololens-insider.md#using-autopilot-with-wi-fi-connection)                  | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                             | 19041.1364 +                 |
@@ -108,13 +110,30 @@ Agora o certificado deve estar instalado no dispositivo.
 
 ![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado](images/certificate-device-install.jpg)
 
+### Instalar aplicativos no HoloLens 2 via instalador de aplicativos
+Agora os usuários podem instalar aplicativos por meio de pacotes Appx sem a necessidade de habilitar o modo de desenvolvedor ou usar o Device Portal. Essa experiência é simples para a instalação de aplicativos em dispositivos locais ou o compartilhamento de um aplicativo com outra pessoa que não esteja familiarizado com outros métodos de instalação de aplicativo no HoloLens.
+
+Trata-se de um método simples de distribuir um aplicativo completamente compilado. Independentemente de se você simplesmente quiser demonstrar seu aplicativo para outro usuário com um HoloLens ou quiser implantar seu aplicativo em escala, esse método funcionará para ambos.
+
+Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 com o instalador do aplicativo](app-deploy-app-installer.md).  
+
+![Instalando exemplos de MRTK via instalador de aplicativos](images/hololens-app-installer-picture.jpg)
+
+### Instalando aplicativos de uma página da Web
+Agora, no Windows Inside compilações 19041.1366 + os usuários podem instalar um aplicativo diretamente de um servidor Web. 
+
+Os pacotes Appx agora em criação podem ser hospedados em uma página da Web. Quando combinada com a implantação de certificados, esse método de distribuição de aplicativos pode ser muito útil para a implantação de aplicativos.
+
+Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 a partir de uma página da Web](app-deploy-web-installer.md)
+
 ### Fornecimento automático de inicialização de USB
 Antes disso, os usuários da compilação precisavam iniciar a tela de aprovisionamento manualmente durante o OOBE para provisionar usando uma combinação de botões. Agora os usuários podem ignorar a combinação de botões usando um pacote de provisionamento em uma unidade de armazenamento USB. 
 
 1. Conecte a unidade USB com o pacote de provisionamento durante o primeiro momento interagindo do OOBE
 1. Quando o dispositivo estiver pronto para ser provisionado, ele abrirá automaticamente o prompt com a página de provisionamento. 
 
-Observação: se uma unidade USB estiver conectada enquanto o dispositivo estiver sendo inicializado, o OOBE enumerará o dispositivo de armazenamento USB existente, bem como o relógio para a conexão de outros itens.
+> [!NOTE]
+> Se uma unidade USB estiver conectada enquanto o dispositivo estiver sendo inicializado, o OOBE enumerará o dispositivo de armazenamento USB existente, bem como observará que outros estão conectados.
 
 Para obter mais informações sobre como aplicar pacotes de provisionamento durante a OOBE, continue lendo [aqui](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup).
 
@@ -211,6 +230,9 @@ Para uma configuração do AAD, os usuários podem obter algo semelhante a este 
 Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. A partir desta compilação do Windows Insider, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, conforme mostrado abaixo: 
 
 ![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
+
+#### Atualizações
+As atualizações também podem ser configuradas para esse método, portanto, apesar de o usuário não estar instalando pela Microsoft Store, ele ainda pode receber atualizações. As atualizações podem ser configuradas para serem baseadas em aplicativos Yammer ou agendados. Para ler mais sobre como configurar isso, acesse [esta página](https://docs.microsoft.com/windows/msix/app-installer/update-settings). 
 
 ### Políticas do HoloLens
 Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 2 nos Builds 19041.1349 +. As novas configurações controláveis incluem: configuração do brilho, configuração do volume, desativação da gravação de áudio em capturas de realidade mista, configuração quando o diagnóstico pode ser coletado e o cache de associação do grupo AAD.  
