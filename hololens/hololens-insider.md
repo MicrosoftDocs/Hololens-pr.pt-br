@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 604e1e54999f7fb76a3a6a31223c3d59b7e4161f
-ms.sourcegitcommit: 4ad9b6c73913808175b1a448d2be9e33592f65af
+ms.openlocfilehash: 64e31a03eb3c8cf1c0e6112fd0605aaebb26ba64
+ms.sourcegitcommit: 89ce6cdc0fc6d70a88217791c5f6d613778af614
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "11027433"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11052630"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -43,7 +43,6 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 |[CSP Tenantlockdown e AutoPilot](hololens-insider.md#tenantlockdown-csp-and-autopilot) | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. | 19041.1366 +|
 | [Acesso Global Atribuído](hololens-insider.md#global-assigned-access--kiosk-mode)                                 | Configure o dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que se aplica ao nível do sistema. | 19041.1356 +                 |
 | [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-insider.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                  | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.     | 19041.1346 +                 |
-| [Logon automático do visitante para quiosques](hololens-insider.md#visitor-auto-logon-for-kiosks)                          | Permite que o logon automático em contas de visitantes seja usado para modos de quiosque.                         | 19041.1361 +                 |
 | [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-insider.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Alterações de como a falha do modo de quiosque agora é manipulada.                                              | 19041.1356 +                 |
 | [Políticas do HoloLens](hololens-insider.md#hololens-policies)                                      | Novas políticas para dispositivos de realidade misturados.                                                        | 19041.1349 +                 |
 | [Armazenar Associação de grupo no AAD para quiosque offline](hololens-insider.md#cache-aad-group-membership-for-offline-kiosk)           | Política de quantos dias o cache de associação do grupo AAD pode ser usado para o modo de quiosque.    | 19041.1356 +                 |
@@ -213,18 +212,6 @@ O aplicativo é iniciado automaticamente quando o usuário entra.
     <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
 ```
 
-### Logon automático do visitante para quiosques
-Este novo recurso permite que o logon automático nas contas do visitante seja usado para modos de quiosque. 
-
-Para uma configuração não AAD, para configurar um dispositivo para o visitante AutoLogon:
-1.  Crie um pacote de provisionamento que:
-    1.  Configura **as configurações de tempo de execução/AssignedAccess** para permitir contas de visitante.
-    1.  Opcionalmente registra o dispositivo no MDM **(configurações de tempo de execução/áreas de trabalho/registradores)** para que possa ser gerenciado mais tarde.
-    1.  Não criar uma conta local
-1.  [Aplicar o pacote de provisionamento](hololens-provisioning.md).
-
-Para uma configuração do AAD, os usuários podem obter algo semelhante a este momento sem esta alteração. Dispositivos ingressados no AAD configurados para o modo de quiosque podem entrar em uma conta de visitante com um único toque de botão na tela de conexão. Depois de conectar-se à conta do visitante, o dispositivo não solicitará que você entre novamente até que o visitante seja explicitamente desconectado do menu iniciar ou o dispositivo seja reiniciado.
-
 ### Alterações de comportamento do modo de quiosque para manipulação de falhas
 
 Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. A partir desta compilação do Windows Insider, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, conforme mostrado abaixo: 
@@ -301,7 +288,7 @@ Agora habilitamos uma política que permite que os administradores de ti impeça
 
 Para saber quais configurações de página você pode personalizar no HoloLens 2, acesse nossa [página URIs de configurações](settings-uri-list.md). 
  
-![Captura de tela de horas ativas sendo modificadas no aplicativo configurações](images/hololens-page-visibility-list.jpg)
+![Captura de tela da modificação das horas ativas no aplicativo Configurações](images/hololens-page-visibility-list.jpg)
 
 ### Modo de pesquisa
 Enquanto estiver no modo de pesquisa, o HoloLens 2 torna-se uma ferramenta potent para pesquisa de visão do computador. Em comparação com as edições anteriores, o modo de pesquisa para o HoloLens 2 tem as seguintes vantagens:
