@@ -3,7 +3,7 @@ title: Acesso Global Atribuído
 description: Guia de como usar o OMA-URI para quiosques de Acesso Global Atribuído
 author: evmill
 ms.author: v-evmill
-ms.date: 7/13/2020
+ms.date: 9/21/2020
 ms.topic: article
 keywords: hololens, hololens 2, acesso atribuído, quiosque
 ms.prod: hololens
@@ -13,12 +13,12 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1a0a3eb8ef3d21b34e13711bcc890af57e5ae2c2
-ms.sourcegitcommit: 7c16570839893f4a4432286b13ae6d84c665d376
+ms.openlocfilehash: c2be1123d0e8a09d6955fb6e5da782daebc96bcf
+ms.sourcegitcommit: 89ce6cdc0fc6d70a88217791c5f6d613778af614
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "10902296"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11052620"
 ---
 # Acesso Global Atribuído – Quiosque
 
@@ -44,7 +44,7 @@ Esse recurso configura o dispositivo Hololens 2 para o modo de quiosque para vá
 
 2.  Siga as etapas em [Usar um pacote de provisionamento para configurar um quiosque de aplicativo único ou vários aplicativos](https://docs.microsoft.com/hololens/hololens-kiosk#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk), especificamente a seção “pacote de provisionamento, etapa 2 – Adicionar o arquivo XML de configuração do Kiosk a um pacote de provisionamento” e consultar o arquivo XML que foi salvo na etapa anterior. 
 
-## Posso criar uma configuração em que o acesso global se aplica a todos, exceto uma conta do AAD ou grupo AAD? 
+## Posso criar uma configuração em que o acesso global se aplica a todos, e configurações separadas se apliquem a 1 conta AAD ou grupo AAD? 
 
 Sim, consulte o exemplo de blob XML abaixo. Os perfis de Acesso Global Atribuídos são aplicados no Hololens quando um perfil determinado para o usuário conectado não é encontrado, portanto, é a configuração padrão de modo de quiosque para o usuário conectado. Aqui está um exemplo de blob XML a ser usado: 
 
