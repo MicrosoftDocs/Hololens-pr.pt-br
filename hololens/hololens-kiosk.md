@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: c6b2bf3d48da642e91b8709cfdf35d03a7913ac4
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: 8844f691ec5395f9c69bce7df44125da9c838f14
+ms.sourcegitcommit: 7bf0f92aaf1683c7c39ed6b17ac47231c5088365
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016685"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072788"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -477,6 +477,9 @@ Para configurar o modo de quiosque usando o Windows Device portal, siga estas et
 
     ![Modo de quiosque](images/kiosk.png)
 1. Reinicie o HoloLens. Se a página do Device portal ainda estiver aberta, você poderá selecionar **reiniciar** na parte superior da página.
+
+> [!NOTE]
+> O modo de quiosque pode ser definido via API REST do Device portal fazendo uma POSTAgem para/API/Holographic/KioskMode/Settings com um parâmetro de cadeia de consulta obrigatório ("kioskModeEnabled" com um valor de "true" ou "false") e um parâmetro opcional ("startupApp" com um valor de um nome de pacote). Lembre-se de que o Device portal destina-se apenas aos desenvolvedores e não deve ser habilitado em dispositivos que não sejam desenvolvedores. A API REST está sujeita a alterações em atualizações/versões futuras.
 
 ## Mais informações
 
