@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d5d875b17e69705591c6730349c8e23bc9692db1
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: 74afa9c39b66437e94aaf8f777ddc0347144b974
+ms.sourcegitcommit: 7bf0f92aaf1683c7c39ed6b17ac47231c5088365
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009429"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072768"
 ---
 # Hardware do HoloLens 2
 
@@ -149,6 +149,7 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 * [Segurança do produto](https://support.microsoft.com/en-us/help/4023454/safety-information)
 * [Avisos e instruções de segurança do produto](https://support.microsoft.com/en-us/help/4558037/product-safety-warnings-and-instructions)
 * Segurança ocular: HoloLens 2 foi testado e está em conformidade com os requisitos básicos de proteção de impacto da ANSI Z87.1, CSA Z94.3 e EN 166.
+* [Informações SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ### Informações normativas
 [Normas do HoloLens](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): inclui informações sobre temperatura, alienação, interferência de rádio e TV, e muito mais.
