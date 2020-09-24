@@ -11,17 +11,17 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 8/21/2020
+ms.date: 9/23/2020
 ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 64e31a03eb3c8cf1c0e6112fd0605aaebb26ba64
-ms.sourcegitcommit: 89ce6cdc0fc6d70a88217791c5f6d613778af614
+ms.openlocfilehash: c5e050fefc9a6a0717dea2258ada39df302f2e45
+ms.sourcegitcommit: 8c036f12a341a063eb7827ee7b70784402dad57f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11052630"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "11077688"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -35,8 +35,6 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------|
 | [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
 | [Gerenciador de certificados](hololens-insider.md#certificate-manager)                                     | Os usuários podem exibir, instalar e remover certificados do usuário atual e certificados do computador local no aplicativo configurações.                                         | 19041.1361 +                 |
-| [Instalador de Aplicativo](hololens-insider.md#install-apps-on-hololens-2-via-app-installer) | Na interface do usuário do dispositivo para instalar aplicativos de arquivos Appx. | 19041.1377 + |
-| [Instalando aplicativos de uma página da Web](hololens-insider.md#installing-apps-from-a-web-page) | Configurar aplicativos para serem baixados e instalados a partir do navegador. | 19041.1366 + | 
 | [Fornecimento automático de inicialização de USB](hololens-insider.md#auto-launch-provisioning-from-usb)                      | O OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                | 19041.1361 +                 |
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-insider.md#auto-confirm-provisioning-packages-in-oobe)             | Aplicar automaticamente pacotes de provisionamento em OOBE.                                             | 19041.1361 +                 |
 | [Usar o AutoPilot com conexão Wi-Fi](hololens-insider.md#using-autopilot-with-wi-fi-connection)                  | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                             | 19041.1364 +                 |
@@ -108,22 +106,6 @@ Agora o certificado deve estar instalado no dispositivo.
 ![Visualizador de certificados no aplicativo configurações](images/certificate-viewer-device.jpg)
 
 ![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado](images/certificate-device-install.jpg)
-
-### Instalar aplicativos no HoloLens 2 via instalador de aplicativos
-Agora os usuários podem instalar aplicativos por meio de pacotes Appx sem a necessidade de habilitar o modo de desenvolvedor ou usar o Device Portal. Essa experiência é simples para a instalação de aplicativos em dispositivos locais ou o compartilhamento de um aplicativo com outra pessoa que não esteja familiarizado com outros métodos de instalação de aplicativo no HoloLens.
-
-Trata-se de um método simples de distribuir um aplicativo completamente compilado. Independentemente de se você simplesmente quiser demonstrar seu aplicativo para outro usuário com um HoloLens ou quiser implantar seu aplicativo em escala, esse método funcionará para ambos.
-
-Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 com o instalador do aplicativo](app-deploy-app-installer.md).  
-
-![Instalando exemplos de MRTK via instalador de aplicativos](images/hololens-app-installer-picture.jpg)
-
-### Instalando aplicativos de uma página da Web
-Agora, no Windows Inside compilações 19041.1366 + os usuários podem instalar um aplicativo diretamente de um servidor Web. 
-
-Os pacotes Appx agora em criação podem ser hospedados em uma página da Web. Quando combinada com a implantação de certificados, esse método de distribuição de aplicativos pode ser muito útil para a implantação de aplicativos.
-
-Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 a partir de uma página da Web](app-deploy-web-installer.md)
 
 ### Fornecimento automático de inicialização de USB
 Antes disso, os usuários da compilação precisavam iniciar a tela de aprovisionamento manualmente durante o OOBE para provisionar usando uma combinação de botões. Agora os usuários podem ignorar a combinação de botões usando um pacote de provisionamento em uma unidade de armazenamento USB. 
@@ -260,7 +242,10 @@ Políticas habilitadas recentemente que permitem mais opções de gerenciamento 
 - [AllowAddProvisioningPackage](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
 - [AllowRemoveProvisioningPackage](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) 
 - [ConfigureTimeZone](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-timelanguagesettings#timelanguagesettings-configuretimezone)
-- [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp)
+- [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp) *
+
+>[!NOTE]
+> Em relação ao [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp), o HoloLens só dará suporte para a configuração./Vendor/MSFT/RemoteLock/Lock. Não há suporte para as configurações que lidam com o PIN, como redefinição e recuperação.
 
 ### Novas políticas de energia para Hololens 2
 Essas políticas adicionadas recentemente permitem que os administradores controlem os Estados de energia, como tempo limite ocioso. Para ler mais sobre cada política individual, clique no link para essa política.
