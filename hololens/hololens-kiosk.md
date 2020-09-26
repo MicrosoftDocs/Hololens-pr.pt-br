@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 8844f691ec5395f9c69bce7df44125da9c838f14
-ms.sourcegitcommit: 7bf0f92aaf1683c7c39ed6b17ac47231c5088365
+ms.openlocfilehash: 920ba7e84b1bb4818aef4efdee60be004d8a3300
+ms.sourcegitcommit: e6885d03c980b33dd0bab5c418cbd1892d5ff123
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072788"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "11080440"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -90,8 +90,10 @@ Se você usar o Windows Device portal para configurar um quiosque de aplicativo 
 
 Se você usa um sistema de gerenciamento de dispositivos móveis (MDM) ou um pacote de provisionamento para configurar o modo de quiosque, use o [provedor de serviços de configuração (CSP) do AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp) para especificar aplicativos. O CSP usa [IDs do modelo de usuário do aplicativo (AUMIDs)](https://docs.microsoft.com/windows/configuration/find-the-application-user-model-id-of-an-installed-app) para identificar aplicativos. A tabela a seguir lista os AUMIDs de alguns aplicativos in-box que você pode usar em um quiosque de vários aplicativos.
 
-> [!CAUTION]
-> Você não pode selecionar o aplicativo shell como um aplicativo quiosque. Adição, recomendamos que você **não** selecione Microsoft Edge, Microsoft Store ou explorador de arquivos como um aplicativo quiosque.  
+> [!IMPORTANT]
+> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário entra no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não interrompe um aplicativo "permitido" de abrir outro aplicativo que não é permitido. Como não restringem esse comportamento, os aplicativos ainda podem ser iniciados a partir do Edge, do explorador de arquivos e dos aplicativos da Microsoft Store. Se houver aplicativos específicos que você não deseja que sejam iniciados em um quiosque, use o [CSP WDAC (controle de aplicativos do Windows Defender)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para criar políticas apropriadas. 
+> 
+> Além disso, a página inicial da realidade misturada não pode ser definida como um aplicativo quiosque.
 
 <a id="aumids"></a>
 
