@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: caf860ad5926c03d1e87e829f04838531510df51
-ms.sourcegitcommit: 44de31c6d3534b6e0b73ddc2a9336147daf7a41d
+ms.openlocfilehash: 439ae9ddfbc6e7a83807e85c445f3d9f4cd2e182
+ms.sourcegitcommit: fa2e551e3294ee49677035f5461b28861b20170f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078379"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "11088605"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -33,7 +33,7 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 
 | Recurso                                                | Descrição                                                                                    | Disponível em builds do insider |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------|
-| [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Localiza ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
+| [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Computa ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
 | [Gerenciador de certificados](hololens-insider.md#certificate-manager)                                     | Os usuários podem exibir, instalar e remover certificados do usuário atual e certificados do computador local no aplicativo configurações.                                         | 19041.1361 +                 |
 | [Fornecimento automático de inicialização de USB](hololens-insider.md#auto-launch-provisioning-from-usb)                      | O OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                | 19041.1361 +                 |
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-insider.md#auto-confirm-provisioning-packages-in-oobe)             | Aplicar automaticamente pacotes de provisionamento em OOBE.                                             | 19041.1361 +                 |
@@ -68,9 +68,6 @@ Há algumas mudanças de comportamento do sistema com o recurso de posição de 
  Se o usuário mudar de um aplicativo não olhar habilitado para um que acesse os dados do olhar, o prompt de calibragem será exibido. Não haverá nenhuma alteração para o fluxo de experiência inicial na caixa. 
  
 Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular no prompt de calibragem de rastreamento ocular ou iniciem o aplicativo configurações no menu iniciar e, em seguida, selecione **sistema > Calibragem > Calibragem > executar calibragem de olho**.
-
-**Problemas conhecidos**
- - Estamos investigando um problema em que o processo de host do driver do rastreador ocular pode falhar ao executar em carga de memória pesada. O processo de host do driver de controle ocular deve ser recuperado automaticamente.
 
 ### Gerenciador de certificados
 
