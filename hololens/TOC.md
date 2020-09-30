@@ -39,6 +39,8 @@
 ## Planejar a implantação empresarial do HoloLens 2
 ### [Implantar o HoloLens em um ambiente comercial](hololens-requirements.md)
 ### [Cenários comuns de implantação da infraestrutura](common-scenarios.md)
+## Cenários comuns
+### [Segurança off-line](hololens-common-scenarios-offline-secure.md)
 ## Segurança
 ### [Visão geral da segurança](security-overview.md)
 ### [Arquitetura](security-architecture.md)
