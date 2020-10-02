@@ -13,12 +13,12 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: c2be1123d0e8a09d6955fb6e5da782daebc96bcf
-ms.sourcegitcommit: 89ce6cdc0fc6d70a88217791c5f6d613778af614
+ms.openlocfilehash: 9c7e4e37b54e6dd81341a64165e1e742a2242d00
+ms.sourcegitcommit: a0f6ff5c36aab0ed94e16e136728e4b8753203db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11052620"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "11093931"
 ---
 # Acesso Global Atribuído – Quiosque
 
@@ -32,7 +32,12 @@ Esse recurso configura o dispositivo Hololens 2 para o modo de quiosque para vá
 > [!NOTE]
 > Lembre-se das áreas marcadas com "<!-". Essas áreas exigem que você faça modificações baseadas nas suas preferências. 
 
-1.  Crie um perfil de configuração de dispositivo OMA URI personalizado da seguinte maneira e aplique-o ao grupo de dispositivos do HoloLens: ![Acesso Global Atribuído ao OMA-URI no Intune](images/global-assigned-access-omauri.png)
+1.  Crie um perfil de configuração de dispositivo OMA URI personalizado da seguinte maneira e aplique-o ao grupo de dispositivos do HoloLens: 
+
+    Valor do URI:. Device/Vendor/MSFT/AssignedAccess/Configuration
+   
+    > [!div class="mx-imgBorder"]
+    > ![Acesso global atribuído a OMA-URI no Intune](images/global-assigned-access-omauri.png)
 
 2.  Para obter o valor, atualize e cole o seguinte conteúdo: 
 
@@ -49,7 +54,7 @@ Esse recurso configura o dispositivo Hololens 2 para o modo de quiosque para vá
 Sim, consulte o exemplo de blob XML abaixo. Os perfis de Acesso Global Atribuídos são aplicados no Hololens quando um perfil determinado para o usuário conectado não é encontrado, portanto, é a configuração padrão de modo de quiosque para o usuário conectado. Aqui está um exemplo de blob XML a ser usado: 
 
 > [!NOTE]
-> Lembre-se das áreas destacadas marcadas com <!- pois essas áreas exigem que você faça modificações com base nas suas preferências. 
+> Lembre-se das áreas realçadas marcadas com `<!-`. Essas áreas exigem que você faça modificações baseadas nas suas preferências. 
 
  :::code language="xml" source="samples/exclude-one-aad-user-or-group.xml" highlight="8,11,17":::
 
