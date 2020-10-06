@@ -62,6 +62,13 @@
 ## [Desbloquear os recursos do Windows Holographic for Business](hololens1-upgrade-enterprise.md)
 
 # Configurar
+## Gerenciamento de Dispositivo
+### [Visão geral de Gerenciamento de Dispositivo e Configuração de CSPs](hololens-csp-policy-overview.md)
+### [Configurar HoloLens usando pacotes de provisionamento](hololens-provisioning.md)
+### [Usando o MDM para gerenciar dispositivos do HoloLens](hololens-mdm-configure.md)
+### [Restrições Comuns de Dispositivo](hololens-common-device-restrictions.md)
+### [Configure o HoloLens como um quiosque](hololens-kiosk.md)
+### [Controle de Aplicativos do Windows Defender - WDAC](windows-defender-application-control-wdac.md)
 ## Identidade
 ### [Gerenciar a identidade do usuário e entrar no HoloLens](hololens-identity.md)
 ### [Compartilhar o HoloLens com várias pessoas](hololens-multiple-users.md)
@@ -71,16 +78,6 @@
 ### [Preparar os certificados e os perfis de rede para o HoloLens 2](hololens-certificates-network.md)
 ### [Gerenciar pontos de extremidade de conexão para o HoloLens](hololens-offline.md)
 ### [Conectar-se a dispositivos Bluetooth e USB-C](hololens-connect-devices.md)
-
-
-## Gerenciamento de Dispositivo
-### [Visão geral de Gerenciamento de Dispositivo e Configuração de CSPs](hololens-csp-policy-overview.md)
-### [Configurar HoloLens usando pacotes de provisionamento](hololens-provisioning.md)
-### [Usando o MDM para gerenciar dispositivos do HoloLens](hololens-mdm-configure.md)
-### [Restrições Comuns de Dispositivo](hololens-common-device-restrictions.md)
-### [Configure o HoloLens como um quiosque](hololens-kiosk.md)
-### [Controle de Aplicativos do Windows Defender - WDAC](windows-defender-application-control-wdac.md)
-
 
 
 # Implantar
