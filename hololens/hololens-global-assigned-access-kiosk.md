@@ -13,12 +13,12 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9c7e4e37b54e6dd81341a64165e1e742a2242d00
-ms.sourcegitcommit: a0f6ff5c36aab0ed94e16e136728e4b8753203db
+ms.openlocfilehash: 9c411811376d34b4399db76c76364cd1254910c4
+ms.sourcegitcommit: a59ce1cf68785c8e08c5ea94046ba04291ee1a55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "11093931"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094969"
 ---
 # Acesso Global Atribuído – Quiosque
 
