@@ -13,12 +13,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ea35012e63f4c0d8868f9604809c1552c3212e72
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: c7c54c624fe2e1c48eee468e2d30fe3460f7e786
+ms.sourcegitcommit: 5877c3e51de49f949b35ab840a3312a009a4487a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016635"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "11102310"
 ---
 # Sistema Operacional sem Administrador
 
@@ -29,6 +29,8 @@ Esses recursos de aplicativos continuam a ter o modelo de classificação de tr�
   * Windows
 
 Os componentes do Windows também podem aproveitar a área restrita do AppContainer por meio do UWPs do sistema. Saiba mais sobre os aplicativos da Plataforma Universal do Windows (UWP), veja [documentação UWP](https://docs.microsoft.com/windows/uwp/). Além disso, os componentes do Windows com mais necessidades de redução de privilégios (por exemplo, páginas de conteúdo do navegador, analisadores) usam a área restrita do Less Privileged AppContainer (LPAC), o que reduz o acesso ao conjunto de recursos acessíveis para todos os AppContainers.
+
+## Proprietário do dispositivo
 
 Por fim, a execução de operações específicas de todo o dispositivo, como ingressar no dispositivo em um locatário ou gerenciamento de usuário, só é permitida para "proprietários de dispositivo". Esse grupo é preenchido por usuários no dispositivo por meio de uma das seguintes etapas:
   * O primeiro usuário no dispositivo sempre é designado como um proprietário. 

@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: piloto automático
 manager: jarrettr
-ms.openlocfilehash: 33463685818c3e864c698160776c76ec7d8cbefd
-ms.sourcegitcommit: 9197b9d507d8b9b195bdf512d1b832888b53162d
+ms.openlocfilehash: 68e7b86259d4837be5bfa634c6ada4aa5b8006a1
+ms.sourcegitcommit: 5877c3e51de49f949b35ab840a3312a009a4487a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "10899103"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "11102340"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -199,6 +199,9 @@ A Página de status da inscrição (ESP) exibe o status do processo completo de 
 ## Piloto automático do Windows para a experiência do usuário do HoloLens 2
 
 Depois que as instruções acima forem concluídas, os usuários do HoloLens 2 passarão pela seguinte experiência para provisionar seus dispositivos HoloLens:  
+
+> [!NOTE]
+> Usar o piloto automático terá um efeito no [proprietário do dispositivo](security-adminless-os.md#device-owner).
 
 1. Como mencionado, na versão atual, os dispositivos precisam estar conectados à internet antes de ligar o HoloLens e iniciar o processo de provisionamento do Autopilot. Conecte o seu dispositivo à Ethernet usando os adaptadores "USB C para Ethernet" para uma conexão com fio à Internet, ou usando os adaptadores "USB C para Wifi" para uma conexão sem fio à Internet.
    
