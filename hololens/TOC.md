@@ -3,6 +3,7 @@
 # Visão geral
 
 ## Introdução ao HoloLens 2.
+### [Visão geral do HoloLens 2](hololens2-options.md)
 ### [Hardware do HoloLens 2](hololens2-hardware.md)
 ### [Preparar seu HoloLens 2 para uso](hololens2-setup.md)
 ### [Configurar seu HoloLens 2](hololens2-start.md)
