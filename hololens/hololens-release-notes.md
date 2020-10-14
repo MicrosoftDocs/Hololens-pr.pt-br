@@ -15,12 +15,12 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0fe78d4b668523de4faa66a64f54c14760a81b12
-ms.sourcegitcommit: bddd470ac475dd8fc7b69e8904d18082a83f39e0
+ms.openlocfilehash: 23ec5478c35977d1fd1fa20a33827e441d4b5c12
+ms.sourcegitcommit: 264c8ff6726f702c3770525d774e0c1d263a2705
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "10997212"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "11117766"
 ---
 # Notas de versão do HoloLens 2
 
@@ -28,6 +28,18 @@ Para garantir que você tenha uma experiência produtiva com seus dispositivos d
 
 >[!NOTE]
 > Para ler as notas de versão do emulador do HoloLens, [acesse o arquivo morto](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive).
+
+## Windows holográfico, versão 2004 – atualização de outubro de 2020
+- Build 19041,1124
+ 
+Melhorias e correções na atualização:
+
+- Foi removida uma verificação desnecessária que causou a falha do sistema do tempo de execução.
+
+## Windows holográfico, versão 1903 – atualização de outubro de 2020
+- Build 18362,1081
+
+Esta atualização de qualidade mensal não contém alterações notáveis, incentivamos você a experimentar nossas versões mais recentes para Windows holográfico, versão 2004.
 
 ## Windows holográfico, versão 2004 – atualização de setembro de 2020
 - Build 19041,1117
@@ -208,7 +220,7 @@ O provedor de serviços de configuração do NetworkQoSPolicy cria políticas de
 
 ### Suporte a Ethernet USB expandido para dispositivos 5G/LTE para compartilhamento de
 
-O suporte foi adicionado para habilitar certos dispositivos de banda larga móvel, como telefones 5G/LTE e Wi-Fi hotpots, quando eles estiverem no compartilhamento de Internet para o HoloLens 2 via USB. Esses dispositivos agora são exibidos em **configurações de rede** como outra conexão Ethernet. (Não há suporte para dispositivos de banda larga móvel que exijam um driver externo). Essa funcionalidade permite conexões de alta largura de banda quando o Wi-Fi não está disponível e o compartilhamento de compartilhamento de Wi-Fi não é o suficiente. Para saber mais sobre os dispositivos USB com suporte, consulte [conectar a dispositivos Bluetooth e USB-C](https://docs.microsoft.com/hololens/hololens-connect-devices).  
+O suporte foi adicionado para habilitar certos dispositivos de banda larga móvel, como telefones 5G/LTE e Wi-Fi hotpots, quando eles estiverem em compartilhamento de Internet para o HoloLens 2 via USB. Esses dispositivos agora são exibidos em **configurações de rede** como outra conexão Ethernet. (Não há suporte para dispositivos de banda larga móvel que exijam um driver externo). Essa funcionalidade permite conexões de alta largura de banda quando o Wi-Fi não está disponível e Wi-Fi o compartilhamento não é suficiente. Para saber mais sobre os dispositivos USB com suporte, consulte [conectar a dispositivos Bluetooth e USB-C](https://docs.microsoft.com/hololens/hololens-connect-devices).  
 
 ### Melhorias no controle de mão
 
@@ -245,13 +257,13 @@ Agora você pode usar comandos de voz com qualquer aplicativo no dispositivo. Pa
 
 ### Atualizações da Cortana
 
-O aplicativo atualizado integra-se com o Microsoft 365 para ajudá-lo a realizar mais em seus dispositivos (atualmente em inglês dos EUA – somente em inglês). No HoloLens 2, a Cortana não dá mais suporte a determinados comandos específicos do dispositivo, como o ajuste de volume ou a reinicialização. Essas opções agora são suportadas pelos novos comandos de voz do sistema. Saiba mais sobre o novo aplicativo da Cortana em nosso [blog](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/).
+O aplicativo atualizado integra-se com o Microsoft 365 para ajudá-lo a realizar mais em seus dispositivos (atualmente somente em US-English). No HoloLens 2, a Cortana não dá mais suporte a determinados comandos específicos do dispositivo, como o ajuste de volume ou a reinicialização. Essas opções agora são suportadas pelos novos comandos de voz do sistema. Saiba mais sobre o novo aplicativo da Cortana em nosso [blog](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/).
 
 ### Melhorias e correções de qualidade
 
 Melhorias e correções também na atualização:  
 - Introduziu um sistema de calibragem de vídeo ativo. Esse recurso melhora a estabilidade e o alinhamento de hologramas. Agora, eles permanecem no lugar quando você move sua cabeça de um lado para outro.
-- Correção de um bug em que o streaming de Wi-Fi para HoloLens foi interrompido periodicamente. Se um aplicativo indicar que precisa de transmissão de baixa latência, implemente a correção chamando a [função SetSocketMediaStreamingMode](https://docs.microsoft.com/windows/win32/api/socketapi/nf-socketapi-setsocketmediastreamingmode).
+- Correção de um bug em que Wi-Fi streaming para HoloLens foi interrompido periodicamente. Se um aplicativo indicar que precisa de transmissão de baixa latência, implemente a correção chamando a [função SetSocketMediaStreamingMode](https://docs.microsoft.com/windows/win32/api/socketapi/nf-socketapi-setsocketmediastreamingmode).
 - Foi corrigido um dispositivo que ocorreu durante o streaming no modo de pesquisa.
 - Correção de um bug em alguns casos em que o usuário certo não será exibido na tela de entrada ao retomar uma sessão.
 - Correção de um problema em que os usuários não puderam exportar logs do MDM por meio **das configurações**.
