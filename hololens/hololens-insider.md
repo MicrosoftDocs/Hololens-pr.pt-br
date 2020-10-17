@@ -11,17 +11,17 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 9/23/2020
+ms.date: 10/15/2020
 ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 439ae9ddfbc6e7a83807e85c445f3d9f4cd2e182
-ms.sourcegitcommit: fa2e551e3294ee49677035f5461b28861b20170f
+ms.openlocfilehash: 408bf94b4cec49b91198917c16f83012fa9ab644
+ms.sourcegitcommit: a81d48d362f8511960e74d38c7c8f0cff19b67c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088605"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "11119294"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -49,6 +49,7 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 | [Atualizar políticas](hololens-insider.md#newly-enabled-update-policies-for-hololens)                                        | Políticas habilitadas recentemente, permitindo o controle de atualizações.                                            | 19041.1352 +                 |
 | [Visibilidade da página Configurações habilitada para o HoloLens 2](hololens-insider.md#enabled-settings-page-visibility-for-hololens-2)        | Política para escolher quais páginas são vistas no aplicativo configurações.                                           | 19041.1349 +                 |
 |  [Modo de pesquisa](hololens-insider.md#research-mode) | Usar o modo de pesquisa no HoloLens 2 | 19041.1375 + |
+| [Tamanho da gravação aumentado](hololens-insider.md#recording-length-increased) | As gravações da MRC não estão mais limitadas a 5 minutos. | 19041.1387 + |
 | [Melhorias e correções na atualização](hololens-insider.md#improvements-and-fixes-in-the-update)                   | Correções adicionais na atualização.                                                                | 19041.1361 +                 |
 
 
@@ -283,6 +284,15 @@ Enquanto estiver no modo de pesquisa, o HoloLens 2 torna-se uma ferramenta poten
 Os pesquisadores agora têm a opção de habilitar o modo de pesquisa em seus dispositivos HoloLens para acessar todos esses fluxos de sensores de imagens brutas externos. O modo de pesquisa para o HoloLens 2 também fornece acesso às leituras do acelerômetro, do Gyroscope e do magnetômetro. Para proteger a privacidade dos usuários, as imagens da câmera de controle de olhos brutos não estão disponíveis no modo de pesquisa, mas a direção olhar está disponível por meio de APIs existentes.
 
 Confira a [documentação do modo de pesquisa](https://docs.microsoft.com/windows/mixed-reality/research-mode) para obter mais detalhes técnicos.
+
+### Tamanho da gravação aumentado
+Devido aos comentários dos clientes, aumentamos o tamanho da gravação de [capturas de realidade misturadas](holographic-photos-and-videos.md). As capturas de realidade misturadas não ficarão mais limitadas a 5 minutos por padrão, mas, em vez disso, calcularão o tamanho máximo de gravação com base no espaço disponível em disco. O dispositivo estimará a duração máxima da gravação de vídeo com base no espaço em disco disponível até 80% do espaço total em disco.
+
+> [!NOTE]
+> O HoloLens usará o comprimento padrão de gravação de vídeo (5 minutos) se ocorrer um dos seguintes procedimentos:
+> - A duração máxima de gravação estimada é menor do que o padrão de 5 minutos.
+> - O espaço disponível em disco é inferior a 20% do espaço total em disco.
+
 
 ### Melhorias e correções na atualização:
 - Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.

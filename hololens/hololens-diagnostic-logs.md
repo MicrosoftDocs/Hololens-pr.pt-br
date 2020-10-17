@@ -1,9 +1,9 @@
 ---
 title: Coletar e usar informações de diagnóstico de dispositivos HoloLens
-description: ''
+description: Coletar e usar informações de diagnóstico de dispositivos HoloLens
 author: Teresa-Motiv
 ms.author: v-tea
-ms.date: 03/23/2020
+ms.date: 10/15/2020
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b3071c2c66bf1e9c07ba2481b3e22a0d5125bc6d
-ms.sourcegitcommit: 8b56f4b9b5f9c928fc361f18efcbea729055a0b2
+ms.openlocfilehash: 8e72bef1ad82faeb734123828050de5273bc6505
+ms.sourcegitcommit: fba9bdbb9b9326f522d5078e776b68ac6c94b6a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "10919132"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "11119941"
 ---
 # Coletar e usar informações de diagnóstico de dispositivos HoloLens
 
@@ -122,6 +122,12 @@ Em situações em que o dispositivo não consegue coletar diagnósticos por meio
 
 Isso funciona quando o dispositivo é exibido no explorador de arquivos após conectá-lo a um PC por meio de um cabo USB. 
 
+> [!NOTE]
+> O diagnóstico offline só é habilitado quando o usuário está indo pelo OOBE ou o valor da política [System\AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) está definido como Full (Basic é o valor padrão no Hololens). 
+>
+> Para desabilitar o diagnóstico offline, vá para **configurações aplicativo > página privacidade** e selecione **básico** em dados de **diagnóstico**.
+
+Assista a este vídeo para saber mais. 
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Gathering-Diagnostic-Files-on-HoloLens2/player]
 
@@ -134,5 +140,8 @@ Siga estas etapas para coletar o diagnóstico:
 6.  Atualize o explorador de arquivos e navegue até a pasta **' \Documents '** .
 7.  Copie os arquivos ZIP do diagnóstico e compartilhe-os com a equipe de suporte da Microsoft.
 
-Observe que alguns dos arquivos ZIP do diagnóstico podem conter informações que podem identificá-lo pessoalmente.
+> [!NOTE]
+> Alguns dos arquivos ZIP do diagnóstico podem conter informações que podem identificá-lo pessoalmente.
+
+
 
