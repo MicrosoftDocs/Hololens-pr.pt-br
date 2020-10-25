@@ -13,12 +13,12 @@ manager: jarrettr
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 6183a478a9eee8a5ab6212443ea2955605754a21
-ms.sourcegitcommit: 7bf0f92aaf1683c7c39ed6b17ac47231c5088365
+ms.openlocfilehash: 8eef05c3d9f47fbbc86647ccf22c7de88bacc687
+ms.sourcegitcommit: b33dd8accef641578142e5234b9ad2d0222694ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072778"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "11134668"
 ---
 # Hardware do HoloLens (1ª gen)
 
@@ -94,7 +94,7 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 - Brilho para cima/para baixo
 - Botão Ligar/Desligar
 - LEDs de status da bateria
-- AC Wi-Fi 802.11
+- Wi-Fi 802.11 AC
 - Micro USB 2,0
 - Bluetooth 4,1 LE
 
@@ -154,7 +154,7 @@ Usando o seguinte para compreender o ambiente:
 ### Segurança
 
 O HoloLens foi testado e está em conformidade com os requisitos de proteção de impacto básico do ANSI Z 87.1, CSA Z 94.3 e EN 166.
-- [Informações do SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+- [Informações SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ## Cuidado e limpeza
 
@@ -167,6 +167,22 @@ Para limpar o visor, remova qualquer poeira usando um pincel de lente de cabelo 
 Para limpar o restante do dispositivo, incluindo o tiara e os braços do dispositivo, use um pano sem fiapos de moistened com leve sabão e água. Deixe que seu HoloLens seque completamente antes de usá-lo novamente.
 
 ![Imagem que mostra como limpar o visor](images/hololens-cleaning-visor.png)
+
+## Como encontrar o número de série
+
+O número de série de dispositivos HoloLens (1ª gen) é impresso abaixo da lente direita.
+1. Mantenha o dispositivo na frente de você, como se estivesse pregotando-o.
+1. Com a lente ainda voltada para a frente, vire a deivce de cabeça para baixo para ver a parte inferior.
+1. A lente direita estará no lado esquerdo, impressa sob a lente na faixa é o número de série. 
+
+O número de série também pode ser encontrado por meio de um PC conectado:
+
+1. Conecte o dispositivo
+1. Navegar para **este PC** no explorador de arquivos
+1. Clique com o botão direito do mouse e selecione **Propriedades** do dispositivo HoloLens
+1. Isso mostrará o número da série do dispositivo. Curtir esta captura de tela abaixo.
+
+<img src="images/hl1-serial-number.png" width="400" height="600" />
 
 > [!div class="nextstepaction"]
 > [Configurar e iniciar seu HoloLens (1ª gen)](hololens1-setup.md)
