@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 408bf94b4cec49b91198917c16f83012fa9ab644
-ms.sourcegitcommit: a81d48d362f8511960e74d38c7c8f0cff19b67c3
+ms.openlocfilehash: 63350230a680bc5a6185a3f3f334180962602442
+ms.sourcegitcommit: 72ae5a270f869393872eac160e43076eaa35fe4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "11119294"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11135552"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -35,6 +35,7 @@ Aqui está a lista dos recursos futuros que você pode experimentar hoje em noss
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------|
 | [Suporte à posição de olho automático](hololens-insider.md#auto-eye-position-support)                              | Computa ativamente posições de olho e habilita o posicionamento preciso do holograma.                        | 19041.1339 +                 |
 | [Gerenciador de certificados](hololens-insider.md#certificate-manager)                                     | Os usuários podem exibir, instalar e remover certificados do usuário atual e certificados do computador local no aplicativo configurações.                                         | 19041.1361 +                 |
+| [Instalador de Aplicativo](hololens-insider.md#install-apps-on-hololens-2-via-app-installer) | Na interface do usuário do dispositivo para instalar aplicativos de arquivos Appx. | 19041.1377 + |
 | [Fornecimento automático de inicialização de USB](hololens-insider.md#auto-launch-provisioning-from-usb)                      | O OOBE detecta automaticamente pacotes de provisionamento em unidades USB.                                | 19041.1361 +                 |
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-insider.md#auto-confirm-provisioning-packages-in-oobe)             | Aplicar automaticamente pacotes de provisionamento em OOBE.                                             | 19041.1361 +                 |
 | [Usar o AutoPilot com conexão Wi-Fi](hololens-insider.md#using-autopilot-with-wi-fi-connection)                  | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet.                             | 19041.1364 +                 |
@@ -104,6 +105,26 @@ Agora o certificado deve estar instalado no dispositivo.
 ![Visualizador de certificados no aplicativo configurações](images/certificate-viewer-device.jpg)
 
 ![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado](images/certificate-device-install.jpg)
+
+### Instalar aplicativos no HoloLens 2 via instalador de aplicativos
+No lançamento do Windows Insider, estamos **adicionando um novo recurso (instalador do aplicativo) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2.  Agora você pode instalar aplicativos sem precisar habilitar o modo de desenvolvedor ou usar o Device Portal.  Basta baixar (via USB ou pelo Edge) o pacote Appx para o seu dispositivo e navegar até o pacote Appx no explorador de arquivos para ser solicitado a iniciar a instalação.  Você também pode [iniciar uma instalação a partir de uma página da Web](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web).  Assim como os aplicativos que você instala na Microsoft Store ou Sideload usando a funcionalidade de implantação do aplicativo LOB do MDM, os aplicativos precisam ser assinados digitalmente com a [ferramenta de assinatura](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) e o [certificado usado para assinar deve ser confiado](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) pelo dispositivo HoloLens antes de ser implantado. Observação: você tem controle total para desabilitar esse novo caminho de instalação do aplicativo desabilitando o instalador do aplicativo usando o [controle de aplicativos do Windows Defender – CSP WDAC](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens), bloqueando Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+
+**Instruções de instalação do aplicativo.**
+
+1.  Verifique se o seu dispositivo do HoloLens 2 está ligado e conectado ao computador
+2.  Certifique-se de estar conectado ao dispositivo HoloLens 2
+3.  No seu computador, navegue até seu aplicativo personalizado e copie yourapp. appxbundle para yourdevicename\Internal Storage\Downloads.   Depois de terminar de copiar seu arquivo, você pode desconectar seu dispositivo
+4.  Em seu dispositivo do HoloLens 2, abra o menu Iniciar, selecione todos os aplicativos e inicie o aplicativo explorador de arquivos.
+5.  Navegue até a pasta downloads. Talvez seja necessário no painel esquerdo do aplicativo Selecione este dispositivo primeiro e, em seguida, navegue até downloads.
+6.  Selecione o arquivo yourapp. appxbundle.
+7.  O instalador do aplicativo será iniciado. Selecione o botão instalar para instalar o aplicativo.
+O aplicativo instalado será iniciado automaticamente após a conclusão da instalação.
+
+Você pode encontrar aplicativos de exemplo no [GitHub de exemplos universais do Windows](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples) para testar esse fluxo.
+
+Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 com o instalador do aplicativo](app-deploy-app-installer.md).  
+
+![Instalando exemplos de MRTK via instalador de aplicativos](images/hololens-app-installer-picture.jpg)
 
 ### Fornecimento automático de inicialização de USB
 Antes disso, os usuários da compilação precisavam iniciar a tela de aprovisionamento manualmente durante o OOBE para provisionar usando uma combinação de botões. Agora os usuários podem ignorar a combinação de botões usando um pacote de provisionamento em uma unidade de armazenamento USB. 

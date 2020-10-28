@@ -1,5 +1,5 @@
 ---
-title: Controle de aplicativo do Windows Defender-WDAC
+title: Controle de Aplicativos do Windows Defender - WDAC
 description: Visão geral do que o WDAC é e como usar para gerenciar dispositivos HoloLens.
 ms.prod: hololens
 ms.sitesec: library
@@ -7,19 +7,19 @@ author: evmill
 ms.author: v-evmill
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d1147b202d3b575fa1f2dd20f620005c786ea9fc
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: dc1deb2b159d3d41b1a1f73c33f1cd44731f8e4d
+ms.sourcegitcommit: 72ae5a270f869393872eac160e43076eaa35fe4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016754"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11135562"
 ---
-# Controle de aplicativo do Windows Defender-WDAC
+# Controle de Aplicativos do Windows Defender - WDAC
 
 O WDAC permite que um administrador de ti Configure seus dispositivos para bloquear a inicialização de aplicativos em dispositivos. Isso é diferente dos métodos de restrição de dispositivo, como o modo de quiosque, em que o usuário recebe uma interface do usuário que oculta os aplicativos no dispositivo, mas ainda pode ser iniciado. Embora o WDAC seja implementado, os aplicativos ainda ficam visíveis na lista todos os aplicativos, mas o WDAC interrompe esses aplicativos e processos da capacidade de inicialização pelo usuário do dispositivo.
 
@@ -34,7 +34,7 @@ Quando os usuários pesquisam aplicativos instalados em seu PC com Windows 10 us
 $package1 = Get-AppxPackage -name *<applicationname>*
 ``` 
 
-Se você não souber o nome completo do pacote, talvez seja necessário executar ' Get-AppxPackage-Name \ * YourBestGuess \ * ' algumas vezes para encontrá-lo. Depois disso, você terá o nome "$package 1 = Get-AppxPackage-Name real. PackageName '
+Se você não souber o nome completo do pacote, talvez seja necessário executar ' Get-AppxPackage-Name \ * YourBestGuess \ * ' algumas vezes para encontrá-lo. Depois que você tiver o nome executar ' $package 1 = Get-AppxPackage-Name real. PackageName '
 
 Por exemplo, ao executar o seguinte para Edge retornará mais de um resultado, mas nessa lista, você pode identificar que o nome completo de que você precisa é o Microsoft. MicrosoftEdge. 
 
@@ -46,25 +46,30 @@ Get-AppxPackage -name *edge*
 
 No guia vinculado acima, você pode editar manualmente newPolicy.xml e adicionar regras para aplicativos que são instalados somente no HoloLens com os nomes da família de pacotes. Às vezes, há aplicativos que você pode usar para usar que não estão no seu computador desktop que você deseja adicionar à política. 
 
-Aqui está uma lista de aplicativos comumente usados e na caixa para dispositivos do HoloLens 2.
+Aqui está uma lista dos aplicativos comumente usados e In-Box para dispositivos do HoloLens 2.
 
 | Nome do aplicativo                   | Nome da família de pacotes                                |
 |----------------------------|----------------------------------------------------|
-| Visualizador 3D                  | Microsoft. Microsoft3DViewer_8wekyb3d8bbwe          |
-| Calendário                   | Microsoft. windowscommunicationsapps_8wekyb3d8bbwe  |
+| Visualizador 3D                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
+| Instalador de Aplicativo              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup> 1</sup>         |
+| Calendário                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Câmera                     | HoloCamera_cw5n1h2txyewy                           |
-| Cortana                    | Microsoft. 549981C3F5F10_8wekyb3d8bbwe              |
-| Guias do Dynamics 365        | Microsoft. Dynamics365. Guides_8wekyb3d8bbwe         |
-| Assistência Remota do Dynamics 365 | Microsoft. MicrosoftRemoteAssist_8wekyb3d8bbwe      |
-| Hub de Feedback               | Microsoft. WindowsFeedbackHub_8wekyb3d8bbwe         |
+| Cortana                    | Microsoft.549981C3F5F10_8wekyb3d8bbwe              |
+| Guias do Dynamics 365        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
+| Assistência Remota do Dynamics 365 | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
+| Hub de Feedback               | Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe         |
 | Explorador de Arquivos              | c5e2524a-EA46-4f67-841f-6a9465d9d515_cw5n1h2txyewy |
-| Mail                       | Microsoft. windowscommunicationsapps_8wekyb3d8bbwe  |
-| Microsoft Store            | Microsoft. WindowsStore_8wekyb3d8bbwe               |
-| Filmes e TV                | Microsoft. ZuneVideo_8wekyb3d8bbwe                  |
-| OneDrive                   | Microsoft. microsoftskydrive_8wekyb3d8bbwe          |
-| Fotos                     | Microsoft. Windows. Photos_8wekyb3d8bbwe             |
+| Mail                       | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
+| Microsoft Store            | Microsoft.WindowsStore_8wekyb3d8bbwe               |
+| Filmes e TV                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
+| OneDrive                   | microsoft.microsoftskydrive_8wekyb3d8bbwe          |
+| Fotos                     | Microsoft.Windows.Photos_8wekyb3d8bbwe             |
 | Configurações                   | HolographicSystemSettings_cw5n1h2txyewy            |
-| Dicas                       | Microsoft. HoloLensTips_8wekyb3d8bbwe               |
+| Dicas                       | Microsoft.HoloLensTips_8wekyb3d8bbwe               |
+
+- 1 – o instalador do aplicativo de bloqueio só bloqueará o app Installer app e não os aplicativos instalados de outras fontes, como a Microsoft Store ou da solução MDM.
+
+### Como encontrar o nome da família de pacotes
 
 Se um aplicativo não estiver nesta lista, um usuário poderá usar o Device portal, conectado a um HoloLens 2 que tenha instalado o aplicativo para ser bloqueado, para determinar o PackageRelativeID e de lá, acesse o PackageFamilyName.
 
@@ -76,3 +81,22 @@ Se um aplicativo não estiver nesta lista, um usuário poderá usar o Device por
 1. Localize o PackageRelativeID. 
 1. Copiar caracteres do aplicativo antes de!, este será o seu PackageFamilyName.
 
+## Exemplo – instalador do aplicativo de bloqueio de exemplo
+
+Como exemplo, talvez você queira bloquear o app [Installer](app-deploy-app-installer.md) app. Incluímos um exemplo de código para este exemplo. Baixe esses [exemplos de código para este exemplo](https://aka.ms/HoloLensDocs-Sample-WDAC-App-Installer). No arquivo zip, você encontrará:
+
+| Arquivo | Usar |
+|-|-|
+| compiledPolicy. bin | [Criado na etapa 9, usado na etapa 10 final.](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens) |
+| mergedPolicy.xml | [Criado na etapa 6.](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens) |
+| WDAC_Set. SyncML | Não usado em WDAC, mas pode ser usado para o [CSP EnterpriseModernAppManagement](https://docs.microsoft.com/windows/client-management/mdm/enterprisemodernappmanagement-csp) |
+
+Se quiser bloquear um aplicativo imediatamente, nesse caso, use o aplicativo instalador do aplicativo e, em seguida, use o arquivo compiledPolicy. bin e pule para a etapa 10 no link acima. Isso permitirá que você teste a política personalizada e certifique-se de que as atribuições de grupo e configuração de política estejam corretas. 
+
+Se você quiser combinar a política WDAC para bloquear o instalador do aplicativo com outros aplicativos da lista acima, ou qualquer outro aplicativo, poderá usar o arquivo mergedPolicy.xml e continuar a Mesclar novas políticas. Conforme declarado acima, as políticas WDAC são aditivas, portanto, isso não é necessário. 
+
+Como o app instalador do aplicativo é iniciado por meio da tentativa de abrir um arquivo será apresentado uma solicitação. Conforme declarado acima os aplicativos bloqueados pelo WDAC não apresentam um prompt, eles são bloqueados, no entanto, como o usuário está tentando abrir um arquivo em seu dispositivo, eles são apresentados com um erro para abrir o arquivo. 
+
+![Instalação do aplicativo bloqueada do WDAC](images\wdac-app-installer-no-launch.jpg)
+
+Se você não quiser usar o WDAC, talvez seja uma alternativa usar o [CSP EnterpriseModernAppManagement](https://docs.microsoft.com/windows/client-management/mdm/enterprisemodernappmanagement-csp) para remover o app Installer UX, que é um aplicativo, afinal. O resultado disso é que o app Installer app será desinstalado do dispositivo. . Appx,. msix,. msixbundle, e outras extensões de arquivo, bem como protocolo para inicialização Web para aplicativo não serão mais manipuladas pelo app Installer app. O usuário receberá um prompt para pesquisar um manipulador para a extensão de arquivo/protocolo na loja e ele não localizará o aplicativo porque ele não está listado.
