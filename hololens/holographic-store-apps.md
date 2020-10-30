@@ -3,7 +3,7 @@ title: Localizar, instalar e desinstalar aplicativos
 description: A Microsoft Store é a sua fonte de aplicativos e jogos que funcionam com o HoloLens.  Saiba mais sobre como localizar, instalar e desinstalar aplicativos para holografia.
 ms.assetid: cbe9aa3a-884f-4a92-bf54-8d4917bc3435
 ms.reviewer: v-miegge
-ms.date: 08/31/2020
+ms.date: 10/27/2020
 manager: jarrettr
 keywords: hololens, loja, UWP, aplicativo, instalar
 ms.prod: hololens
@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: fd818054fbe692363d411373a6a12ad1057d1be7
-ms.sourcegitcommit: 2b1de9c8f8a212a797fb0cb6056856dd4ff716a1
+ms.openlocfilehash: d64d0a18fbbf6570173c4bd80bc4f036f4408e08
+ms.sourcegitcommit: a51f2e409f0207fc7457e97403b5298f1e0ad7dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "10985827"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145632"
 ---
 # Localizar, instalar e desinstalar aplicativos da Microsoft Store
 
@@ -35,6 +35,15 @@ Para saber mais sobre como instalar e executar aplicativos personalizados, leia 
 ## Localizar aplicativos
 
 Abra a Microsoft Store no menu **Iniciar**. Em seguida, procure aplicativos e jogos. Você pode usar os [comandos de voz](hololens-cortana.md) para pesquisar dizendo "Pesquisar". Depois que a janela de pesquisa abrir, diga "Start dictating" e, quando solicitado, comece a dizer os termos da pesquisa.
+
+> [!NOTE]
+> Em 12 de janeiro de 2021, os seguintes aplicativos chegarão ao fim do Suporte em dispositivos HoloLens. Nós encorajamos você a usar o seguinte link em seu dispositivo para usar a versão web do aplicativo.
+
+| Aplicativo        | Link                                          |
+|------------|-----------------------------------------------|
+| Excel Mobile      | https://office.live.com/start/Excel.aspx      |
+| Word Mobile       | https://office.live.com/start/Word.aspx       |
+| PowerPoint Mobile | https://office.live.com/start/PowerPoint.aspx |
 
 ## Instale aplicativos
 

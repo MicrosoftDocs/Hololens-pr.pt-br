@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: piloto automático
 manager: jarrettr
-ms.openlocfilehash: 68e7b86259d4837be5bfa634c6ada4aa5b8006a1
-ms.sourcegitcommit: 5877c3e51de49f949b35ab840a3312a009a4487a
+ms.openlocfilehash: 6851249ab9ed79e7dcdea6afc853fee66fdddf19
+ms.sourcegitcommit: a51f2e409f0207fc7457e97403b5298f1e0ad7dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "11102340"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145652"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -62,12 +62,12 @@ Siga as etapas abaixo para configurar a Visualização Privada do seu ambiente:
 **Examine a seção ["Requisitos”](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying#requirements) do artigo do Artigo do modo Autoimplantação do piloto automático do Windows.** Seu ambiente precisa atender a esses requisitos, bem como aos requisitos padrão do Piloto automático do Windows. Você não precisa revisar as seções "Passo a passo" e "Validação" do artigo. Os procedimentos posteriores neste artigo fornecem as etapas correspondentes específicas do HoloLens. Para obter mais informações sobre como registrar dispositivos e configurar perfis, consulte [4. Registrar dispositivos no Piloto automático do Windows](#4-register-devices-in-windows-autopilot) e [6. Crie um perfil de implantação](#6-create-a-deployment-profile) neste artigo. Estas seções fornecem as etapas específicas para o HoloLens.
 
 > [!IMPORTANT]  
-> Ao contrário de outros programas piloto automático do Windows, o Piloto automático do Windows para o HoloLens 2 possui requisitos específicos do sistema operacional. O Autopilot depende da versão 2004 do Windows Holographic (versão 19041.1103 ou posterior) pré-instalada nos dispositivos do HoloLens. Os dispositivos entregues até o final de agosto de 2020 já têm, pré-instalado, o Windows Holographic versão 1903. Entre em contato com o seu distribuidor para saber quando os dispositivos prontos para o Autopilot podem ser enviados a você. Se você deseja participar da visualização privada, consulte as instruções e os requisitos abaixo.
+> O Windows Autopilot para HoloLens 2 possui requisitos específicos de sistema operacional. O Autopilot conta com o Windows Holographic, versão 2004 (build 19041.1103 ou posterior) sendo pré-instalado em dispositivos HoloLens. Os dispositivos entregues até o final de setembro de 2020 têm o Windows Holographic, versão 1903 pré-instalado. Entre em contato com o seu distribuidor para saber quando os dispositivos prontos para o Autopilot podem ser enviados a você. Se você deseja participar da visualização privada, consulte as instruções e os requisitos abaixo.
 
 **Se você deseja experimentar a visualização do Autopilot, antes de iniciar o processo OOBE e provisionamento, verifique se os dispositivos do HoloLens atendem aos seguintes requisitos:**
 
-- Você deve instalar manualmente o Sistema Operacional mais recente (Windows Holographic versão 2004 (compilação 19041.1103 ou posterior) usando o [Complemento de Recuperação Avançada (ARC)](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?rtc=1&activetab=pivot:overviewtab). Você pode encontrar as instruções [aqui](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device). 
-- Seus dispositivos devem estar registrados no Windows Autopilot. Para obter informações sobre como registrar os dispositivos, consulte [4. Registre os dispositivos no Windows Autopilot](#4-register-devices-in-windows-autopilot). 
+- Certifique-se de que o dispositivo esteja no Windows Holográfico, versão 2004 (compilação 19041.1103 ou posterior). Se o Sistema Operacional mais recente não estiver pré-instalado, você deve atualizar manualmente usando o [Complemento de Recuperação Avançado (ARC)](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?rtc=1&activetab=pivot:overviewtab). Você pode encontrar as instruções [aqui](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device). 
+- Seus dispositivos devem estar registrados no Windows Autopilot. Para obter informações sobre como registrar os dispositivos, consulte [4. Registre os dispositivos no Windows Autopilot](#4-register-devices-in-windows-autopilot). O caminho recomendado é para o revendedor ou distribuidor registrar os dispositivos para você.     
 - Nesta versão atual, os dispositivos precisam estar conectados à Internet antes de ligar o HoloLens e iniciar o processo de provisionamento do Autopilot. Conecte o seu dispositivo à Ethernet usando um adaptador "USB C para Ethernet" para conectividade à Internet com fio. 
 - Os dispositivos ainda não são membros do Azure AD e não estão registrados no Intune (ou outro sistema MDM). O processo de autoimplantação do Piloto automático conclui essas etapas. Para garantir que todas as informações relacionadas ao dispositivo estejam limpas, verifique as páginas dos **Dispositivos** nos portais do Azure AD e do Intune.
 - Para configurar e gerenciar os perfis do modo Autoimplantação do Piloto automático, certifique-se de que você possui acesso ao [Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com).
@@ -75,9 +75,11 @@ Siga as etapas abaixo para configurar a Visualização Privada do seu ambiente:
 
 ### 2. Inscreva-se no programa Piloto Automático do Windows para o HoloLens 2.
 
-**Para participar do programa, é necessário que seu locatário esteja inscrito no programa de Visualização Privada para obter os controles específicos da interface do Intune do HoloLens para o Autopilot.** Para fazer isso, vá para a [Solicitação de Piloto automático do Windows para a Visualização privada do HoloLens](https://aka.ms/APHoloLensTAP) ou use o seguinte código QR para enviar uma solicitação.  
+**Para participar do programa, você deve ter seu locatário inscrito no Programa de Visualização Privada. Isso habilita os controles da interface do usuário específicos do HoloLens Intune (também conhecido como MEM) para o Autopilot.** Para fazer isso, vá para a [Solicitação de Piloto automático do Windows para a Visualização privada do HoloLens](https://aka.ms/APHoloLensTAP) ou use o seguinte código QR para enviar uma solicitação.  
 
 ![Código QR do piloto automático](./images/hololens-ap-qrcode.png)  
+
+A Microsoft faz voos com os locatários uma vez por semana. Você receberá uma notificação por e-mail assim que o período de veiculação for concluído. 
 
 Na solicitação, forneça as seguintes informações:
 
