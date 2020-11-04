@@ -14,14 +14,14 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 327e2411f497ff01723b42e9c2d00d26f8c89c7a
-ms.sourcegitcommit: d4eee928a39492b2d2d37e3ebf3a65e7b6f7cb63
+ms.openlocfilehash: 7d9568e6498c9b73fdee7110248a51253540a7eb
+ms.sourcegitcommit: ef25b0470ad789fbf41591be64d737ff7ea43d1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "11146165"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151113"
 ---
-# Perguntas frequentes da edição de desenvolvimento do HoloLens
+# Perguntas Frequentes sobre a Edição de Desenvolvimento do HoloLens
 
 ## Geral
 
@@ -40,6 +40,10 @@ Sim. Qualquer edição do HoloLens 2 pode ser usada para desenvolver aplicativos
 ### Como e receberei meu $500 em créditos do Azure, avaliação de 3 meses do Unity pro e avaliação de plugin de Pixyz de 3 meses?
 
 Seus créditos de desconto ou acesso de avaliação serão enviados ao e-mail usado na compra dentro de 2 dias úteis de entrega de produtos.
+
+### Posso "atualizar" meu dispositivo HoloLens 2 (dispositivo apenas) para a edição de desenvolvimento do HoloLens 2 para obter os créditos de avaliação?
+
+Não, não oferecemos planos de transferência de dispositivo. Não é possível transferir de qualquer edição para qualquer outra edição. 
 
 ### O que é o Unity pro? 
 
@@ -61,13 +65,17 @@ Com qualquer dúvida relacionada a direitos, entre em contato com o especialista
 
 Este dispositivo destina-se a desenvolvedores que criam soluções mistas de realidade. Limitamos uma compra por transação do cliente. Se a sua empresa quer comprar vários dispositivos de edição de desenvolvimento, será necessária transações separadas para comprar dispositivos da edição de desenvolvimento do HoloLens 2 em nome da empresa. 
 
+### Posso mostrar meu dispositivo de edição de desenvolvimento do HoloLens 2 para meus clientes? 
+
+Sim, este dispositivo destina-se a ser usado para protótipos e testes de soluções mistas de realidade.
+
 ### Onde eu posso comprar a edição de desenvolvimento do HoloLens 2? 
 
 A edição de desenvolvimento do HoloLens 2 é vendida exclusivamente na Microsoft Store.  
 
 ### Posso devolver minha edição de desenvolvimento do HoloLens 2?  
 
-Não.
+Todas as vendas são finais e não há reembolsos disponíveis na edição de desenvolvimento do HoloLens 2.
 
 ### A edição do desenvolvedor tem requisitos de hardware diferentes que diferem do HoloLens 2?
 
