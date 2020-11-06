@@ -13,12 +13,12 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9c411811376d34b4399db76c76364cd1254910c4
-ms.sourcegitcommit: a59ce1cf68785c8e08c5ea94046ba04291ee1a55
+ms.openlocfilehash: 8777c64b4d4ca08bf3b103d7d92bbb99d6978bdc
+ms.sourcegitcommit: 4e168380c23e8463438aa8a1388baf8d5ac1a1ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "11094969"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154192"
 ---
 # Acesso Global Atribuído – Quiosque
 
@@ -64,3 +64,14 @@ Esse recurso permite a um usuário que é considerado "[Proprietário do disposi
 
  :::code language="xml" source="samples/exclude-device-owners-from-global.xml" highlight="6,16-18":::
  
+## Exemplos Adicionais de Acesso Global Atribuído
+
+Esse é um quiosque de Acesso Global Atribuído, quando um usuário entra, terá um quiosque de vários aplicativos com o Aplicativo Configurações, o Hub de Feedback e o Microsoft Edge.
+
+:::code language="xml" source="samples/kiosk-sample-global-assigned-access.xml":::
+
+Esse é um quiosque de Acesso Global Atribuído, que exclui o proprietário do dispositivo, quando qualquer outro usuário AAD entrar, eles terão um quiosque de vários aplicativos com o Aplicativo Configurações, o Hub de Feedback e o Microsoft Edge. Esse quiosque também inclui uma configuração de quiosque secundária para uma conta de visitante, que pode ser conectada por qualquer pessoa na tela de bloqueio. Quando um usuário entra na conta de Visitante, eles terão um quiosque de vários aplicativos que tem apenas o aplicativo de Hub de Feedback.
+
+:::code language="xml" source="samples/kiosk-sample-global-assigned-access-visitor-exclude.xml":::
+
+
