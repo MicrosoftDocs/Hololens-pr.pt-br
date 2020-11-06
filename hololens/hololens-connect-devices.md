@@ -13,12 +13,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 0a2bda0c0beb1d8dd42281ecb016f21c08cfdc1f
-ms.sourcegitcommit: 17d55772e03a870a9db2fb792d429817626b9579
+ms.openlocfilehash: 2f2de4d776a0fdb99555687a96719d111ffb6460
+ms.sourcegitcommit: 8bf8e9196c4ea89297f210b5c1d41b31f9edd407
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155387"
+ms.locfileid: "11156288"
 ---
 # Conectar-se a dispositivos Bluetooth e USB-C
 
@@ -66,6 +66,14 @@ O HoloLens 2 (1° gen) tem suporte para as seguintes classes de dispositivos Blu
    
 1. Na tela emparelhamento, marque **Emparelhamento** > **do Clicador**.
 
+## Bluetooth desabilitado
+
+Esse procedimento desativa os componentes RF do rádio Bluetooth e desabilita toda a funcionalidade Bluetooth no Microsoft HoloLens.
+
+1. Use o gesto de abrir a mão (HoloLens (1º gen)) ou o gesto de início (HoloLens 2) para ir até **Iniciar**e, em seguida slecione **Configurações** > **de dispositivos**.
+
+1. Mova o controle deslizante para **Bluetooth** para a posição **Desativada**.
+
 ## HoloLens 2: conectar dispositivos USB-C
 
 O HoloLens 2 tem suporte para as seguintes classes de dispositivos USB-C:
@@ -95,11 +103,3 @@ Para usar o Miracast, siga estas etapas:
 1. Na lista de dispositivos exibida, selecione um dispositivo disponível.
 
 1. Concluir o emparelhamento para começar a projetar.
-
-## Bluetooth desabilitado
-
-Esse procedimento desativa os componentes RF do rádio Bluetooth e desabilita toda a funcionalidade Bluetooth no Microsoft HoloLens.
-
-1. Use o gesto de abrir a mão (HoloLens (1º gen)) ou o gesto de início (HoloLens 2) para ir até **Iniciar**e, em seguida slecione **Configurações** > **de dispositivos**.
-
-1. Mova o controle deslizante para **Bluetooth** para a posição **Desativada**.
