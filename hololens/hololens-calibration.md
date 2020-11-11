@@ -14,12 +14,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 627631ee7070af6cb6c60e91890f05472ce0f6be
-ms.sourcegitcommit: 8b56f4b9b5f9c928fc361f18efcbea729055a0b2
+ms.openlocfilehash: f466d64da8ef122ce2917117a74ab904a573b4e3
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "10919152"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163054"
 ---
 # Melhorar o conforto e a qualidade visual
 
@@ -40,19 +40,19 @@ O HoloLens 2 solicita que o usuário calibre o dispositivo nas seguintes circuns
 - O dispositivo foi retirado e recolocado e qualquer uma das circunstâncias acima se aplica 
 
 
-![Solicitação de calibragem](./images/07-et-adjust-for-your-eyes.png)
+![Sistema de gerenciamento de calibragem para ajustar ocular.](./images/07-et-adjust-for-your-eyes.png)
 
 Durante esse processo, você verá um conjunto de alvos (gems). Tudo bem se você piscar durante a calibragem, mas tente se concentrar nas joias, ao invés de outros objetos da sala.  Isso permite que o HoloLens saiba mais sobre a posição de seus olhos para renderizar o mundo holográfico.
 
-![Solicitação de calibragem](./images/07-et-hold-head-still.png)
+![Sistema de gerenciamento de calibragem informa ao usuário para manter a cabeça imóvel e seguir os pontos com os olhos.](./images/07-et-hold-head-still.png)
 
-![Solicitação de calibragem](./images/08-et-gems.png)
+![Sistema de gerenciamento de calibragem com exemplo de joia.](./images/08-et-gems.png)
 
-![Solicitação de calibragem](./images/09-et-adjusting.png)
+![Ajuste do sistema de gerenciamento de calibragem.](./images/09-et-adjusting.png)
 
 Se a calibragem for bem-sucedida, você verá uma tela de êxito.  Caso contrário, leia mais sobre como diagnosticar falhas de calibragem [aqui](#troubleshooting-hololens-2-calibration).
 
-![Solicitação de calibragem](./images/10-et-success.png)
+![Sucesso do sistema de gerenciamento de calibragem.](./images/10-et-success.png)
 
 ### Calibragem ao compartilhar um dispositivo ou uma sessão
 
@@ -66,7 +66,29 @@ Vários usuários podem compartilhar um dispositivo HoloLens 2, sem a necessidad
 
    ![O aplicativo Configurações, mostrando a opção Executar calibragem dos olhos](./images/C-Settings.Calibration.png)
 
-### Solução de problemas da calibragem do HoloLens 2
+### Suporte Automático de Posição Ocular
+- Agora oferecemos maior precisão para o posicionamento do holograma por meio do Suporte Automático de Posição do Ocular para maior conforto de visualização e melhor qualidade de exibição. 
+
+No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições dos olhos são calculadas como parte do resultado do rastreamento ocular. No entanto, isso requer que cada usuário passe pela calibragem do rastreamento ocular, mesmo quando a experiência não exigir a entrada do olhar fixo.
+
+A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário.  A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento ocular anterior, a posição Auto Ocular começará a fornecer as posições oculares do usuário ao sistema de exibição após um pequeno tempo de processamento. Esse tempo de processamento normalmente é de 20 a 60 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.  
+
+Existem algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Um usuário não calibrado refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
+
+|     Aplicativo Ativo                           |     Comportamento Antigo                                   |     Comportamento para Windows HWindows Holographic, versão 20H2 em diante                                                     |
+|--------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+|     Aplicativo não habilitado para o olhar ou o Shell Holográfico    |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido.    |     Nenhum sistema de gerenciamento é exibido.                                                                                |
+|     Aplicativo habilitado para olhar                             |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido.    |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo do olhar fixo.     |
+
+ Se o usuário fizer a transição de um aplicativo não habilitado para olhar para um que acesse os dados do olhar, o sistema de gerenciamento de calibragem será exibido. Não haverá alterações no fluxo Experiência Imediata. 
+ 
+Para experiências que exigem dados do olhar fixo ou posicionamento de holograma muito preciso, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular a partir do sistema de gerenciamento de calibragem de rastreamento ocular ou abrindo as Configurações do aplicativo no menu iniciar e, em seguida, selecionando ** Sistema> Calibragem> Calibragem Ocular> Execute a calibragem ocular**.
+
+**Problemas conhecidos**
+ - Estamos investigando um problema em que o processo de host do driver do rastreador ocular pode travar ao ser executado sob carga de memória pesada. O processo de host do driver de rastreamento ocular deve se recuperar automaticamente.
+
+
+### Solução de problemas de calibragem do HoloLens 2
 
 A calibragem deve funcionar para a maioria das pessoas, mas há casos em que há falha na calibragem.
   
