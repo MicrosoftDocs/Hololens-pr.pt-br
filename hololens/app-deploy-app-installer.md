@@ -5,7 +5,7 @@ keywords: gerenciamento de aplicativos, app, hololens, instalador de aplicativos
 author: evmill
 ms.author: v-evmill
 ms.reviewer: qizho
-ms.date: 10/26/2020
+ms.date: 11/10/2020
 ms.prod: hololens
 ms.topic: article
 ms.sitesec: library
@@ -14,17 +14,20 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 415733bb2809b7ae2808edc097423f8928910c57
-ms.sourcegitcommit: c4fd9a87bb7c728c73418f95a1b15dd93b0af7c6
+ms.openlocfilehash: eba1fd00215ef197f9e32949e958bdbded089d6d
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11150912"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162891"
 ---
 # Instalar aplicativos no HoloLens 2 via instalador de aplicativos
 
+
+Enviaremos a funcionalidade do instalador do aplicativo logo após a atualização do Windows holográfico, versão 20H2. Estamos **adicionando uma nova funcionalidade (instalador de aplicativos) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
+
 > [!IMPORTANT]
-> No momento, esse recurso só avalible no Windows Insider compilações do 19041.1377 +. [Saiba mais sobre como registrar-se nas compilações do Windows Insider](hololens-insider.md).
+> No momento, esse recurso só é disponível na compilação do Windows Insider. [Saiba mais sobre como registrar-se nas compilações do Windows Insider](hololens-insider.md).
 
 No lançamento do Windows Insider, estamos **adicionando um novo recurso (instalador do aplicativo) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
 
@@ -38,8 +41,7 @@ Agora você pode instalar aplicativos sem precisar habilitar o modo de desenvolv
 ## Requisitos
 
 ### Para seus dispositivos: 
-> [!NOTE]
-> No momento, esse recurso só avalible no Windows Insider compilações do 19041.1377 +. [Saiba mais sobre como registrar-se nas compilações do Windows Insider](hololens-insider.md).
+No momento, isso é avalible em [compilações do Windows Insider](hololens-insider.md) para dispositivos do HoloLens 2. Certifique-se de que todos os dispositivos que usam esse método são [atualizados](hololens-update-hololens.md). 
 
 ### Para seus aplicativos: 
 A configuração da solução de seu aplicativo deve ser **Master** ou **Release** , uma vez que o instalador do aplicativo usará dependências da loja. Veja mais sobre a [criação de pacotes de aplicativos](https://docs.microsoft.com/windows/msix/app-installer/create-appinstallerfile-vs).
@@ -53,7 +55,7 @@ Os aplicativos instalados por meio desse método devem ser assinados digitalment
 **Escolha um método de implantação de certificado.** 
 - Os [pacotes de provisionamento](hololens-provisioning.md) podem ser aplicados a dispositivos locais.
 - O MDM pode ser usado para [aplicar certificados com configurações de dispositivo](https://docs.microsoft.com/mem/intune/protect/certificates-configure).
-- Use o Gerenciador de [certificados](hololens-insider.md#certificate-manager)no dispositivo. 
+- Use o Gerenciador de [certificados](certificate-manager.md)no dispositivo. 
 
 ## Método de instalação
 

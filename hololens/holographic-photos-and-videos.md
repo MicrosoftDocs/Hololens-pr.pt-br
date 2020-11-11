@@ -15,12 +15,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 4da70e73cd5949c77bc77a73f57f788ed51eff90
-ms.sourcegitcommit: 973b0e71ebceeb2c614aea3dd3a1fbb90d7daed9
+ms.openlocfilehash: 452164caaad09f2caecf7c4a51cda6242d805d7f
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11100266"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163117"
 ---
 # Criar fotos e vídeos de realidade misturada
 
@@ -155,8 +155,18 @@ Você também pode compartilhar fotos e vídeos de realidade misturados do OneDr
 ## Limitações de captura de realidade mista
 
 - Ao usar a captura de realidade misturada, a taxa de quadros do HoloLens será dividida em 30 Hz.
-- Os vídeos têm um tamanho máximo de cinco minutos.
 - A resolução de fotos e vídeos pode ser reduzida se a câmera de foto/vídeo já estiver em uso por outro aplicativo, enquanto o fluxo contínuo está ativo ou quando os recursos do sistema estão baixos.
+
+### Tamanho máximo de gravação
+
+Em dispositivos HoloLens 2 antes do Windows holográfico, os vídeos de versão 20H2 gravados no dispositivo estavam limitados a um tamanho máximo de cinco minutos.
+
+Devido aos comentários dos clientes, aumentamos o tamanho da gravação de [capturas de realidade misturadas](holographic-photos-and-videos.md). As capturas de realidade misturadas não ficarão mais limitadas a 5 minutos por padrão, mas, em vez disso, calcularão o tamanho máximo de gravação com base no espaço disponível em disco. O dispositivo estimará a duração máxima da gravação de vídeo com base no espaço em disco disponível até 80% do espaço total em disco.
+
+> [!NOTE]
+> O HoloLens usará o comprimento padrão de gravação de vídeo (5 minutos) se ocorrer um dos seguintes procedimentos:
+> - A duração máxima de gravação estimada é menor do que o padrão de 5 minutos.
+> - O espaço disponível em disco é inferior a 20% do espaço total em disco.
 
 ## Resolução e formato de arquivo padrão
 

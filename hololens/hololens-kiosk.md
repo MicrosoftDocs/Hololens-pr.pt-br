@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: c4c4b533538ab7998f8438d7cc0c2f3d88143ec6
-ms.sourcegitcommit: 4e168380c23e8463438aa8a1388baf8d5ac1a1ab
+ms.openlocfilehash: b4730029755c71cab5dc00b37ac69cd6ed54be58
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "11154190"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162971"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -445,8 +445,59 @@ Para configurar o modo de quiosque usando o Windows Device portal, siga estas et
 
 ## Mais informações
 
-Veja como configurar um quiosque usando um pacote de provisionamento.  
+### Veja como configurar um quiosque usando um pacote de provisionamento.  
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/fa125d0f-77e4-4f64-b03e-d634a4926884?autoplay=false]
+
+### Acesso global atribuído – modo de quiosque
+- Gerenciamento de identidades reduzido para o quiosque, habilitando o novo método quiosque que aplica o modo de quiosque no nível do sistema.
+
+Este novo recurso permite que um administrador de ti configure um dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com qualquer identidade no sistema e se aplica a todos os participantes do dispositivo. Leia sobre esse novo recurso em detalhes [aqui](hololens-global-assigned-access-kiosk.md).
+
+### Inicialização automática de um aplicativo no modo de quiosque de vários aplicativos 
+- Experiência destaques com o lançamento automático do aplicativo, melhorando ainda mais a interface do usuário e as seleções de aplicativos escolhidas para experiências do modo de quiosque.
+
+Aplica-se somente ao modo de quiosque de vários aplicativos e somente um aplicativo pode ser designado para inicialização automática usando o atributo realçado abaixo na configuração de acesso atribuído. 
+
+O aplicativo é iniciado automaticamente quando o usuário entra. 
+
+```xml
+<AllowedApps>                     
+      <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
+</AllowedApps>
+```
+
+
+### Alterações de comportamento do modo de quiosque para manipulação de falhas
+- Modo de quiosque mais seguro eliminando aplicativos disponíveis em falhas do modo de quiosque. 
+
+Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. Agora, no Windows holográfico Version 20H2, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, como a seguir: 
+
+![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
+
+### Armazenar Associação de grupo no AAD para quiosque offline
+- Foram habilitados quiosques offline para serem usados com grupos AAD por até 60 dias.
+
+Esta política controla o número de dias, o cache de associações do grupo AAD pode ser usado para configurações de acesso atribuídas direcionando grupos do AAD para o usuário conectado. Quando esse valor de política é definido como valor maior que 0 somente, o cache é usado de outra forma não.  
+
+Nome: AADGroupMembershipCacheValidityInDays URI value:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+
+Mín-0 dias  
+Máx-60 dias 
+
+Etapas para usar esta política corretamente: 
+1. Crie um perfil de configuração de dispositivo para grupos do AAD de direcionamento de quiosque e atribua-o a dispositivo (s) HoloLens (s). 
+1. Crie uma configuração de dispositivo baseada em OMA URI, que define esse valor de política como o número desejado de dias (> 0) e atribua-o a dispositivo (s) do HoloLens. 
+    1. O valor de URI deve ser inserido na caixa de texto OMA-URI como./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+    1. O valor pode estar entre min/max permitido.
+1. Registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
+1. Deixe que o usuário do AAD 1 entre quando a Internet estiver disponível, quando o usuário entrar e a associação do grupo AAD for confirmada com êxito, o cache será criado. 
+1. Agora o usuário do AAD 1 pode pegar o HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
+1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do AAD. o ponto da chave aqui é que qualquer usuário do AAD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que ele é membro do grupo AAD para o qual a configuração do quiosque está direcionada. 
+ 
+> [!NOTE]
+> Até que a etapa 4 seja realizada para um usuário do AAD experimentará um comportamento de falha mencionado em ambientes "desconectados". 
+
 
 ## Exemplos de códigos de quiosque XML para HoloLens
 

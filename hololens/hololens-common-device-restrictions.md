@@ -1,5 +1,5 @@
 ---
-title: Restrições comuns de dispositivo
+title: Restrições Comuns de Dispositivo
 description: O dispositivo restrctions comumente definido no HoloLens.
 ms.prod: hololens
 ms.sitesec: library
@@ -7,20 +7,20 @@ author: evmill
 ms.author: v-evmill
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ace1e071b3d73855daacc8a11ac87770fb7f5f99
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: 744d54a344867c5c38681781580f5357e0a0da70
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016755"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162966"
 ---
-# Restrições comuns de dispositivo 
+# Restrições Comuns de Dispositivo 
 
 Este guia ajuda os profissionais de ti a entenderem as opções de gerenciamento mais comuns disponíveis para o Windows 10 holográfico o sistema operacional da empresa. Consulte a documentação de seu sistema MDM para entender como essas políticas são habilitadas por seu fornecedor de MDM. Nem todos os sistemas MDM dão suporte a todas as configurações descritas neste guia. Alguns dão suporte a políticas personalizadas por meio de arquivos XML OMA-URI. Consulte [Suporte do Microsoft Intune para políticas personalizadas](https://docs.microsoft.com/mem/intune/configuration/custom-settings-windows-10). As convenções de nomenclatura também podem variar entre os fornecedores de MDM.
 
@@ -29,6 +29,10 @@ Geralmente, os funcionários têm permissão para alterar determinadas configura
 -   [Permitir VPN:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn) Permite que o usuário altere as configurações de VPN
 -   [Permitir configuração manual WiFi:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration) Permite que os usuários façam conexões Wi-Fi fora das redes provisionadas pelo MDM
 -   [Permitir cancelamento de registro do MDM manual](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment) Se os usuários podem excluir a conta do local de trabalho (ou seja, cancelar o registro do dispositivo do sistema MDM)
+
+Adicionado no [Windows holográfico, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) para dispositivos do HoloLens 2:
+- [Permitir adicionar pacote de provisionamento:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage) Alternar se os usuários podem adicionar novos pacotes de provisionamento, substituindo por novos valores.
+- [Permitir remover pacote de provisionamento:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) Alternar se os usuários puderem remover os pacotes de provisionamento, permitindo que eles ativem as configurações bloqueadas anteriormente.
 
 Encontre mais detalhes sobre as opções de política nos [CSPs de política](https://docs.microsoft.com/windows/client-management/mdm/policy-csps-supported-by-hololens2) com suporte do HoloLens
 
@@ -44,3 +48,7 @@ A seguir lista as configurações de MDM comumente usadas que o Windows 10 holog
 -   [Permitir Bluetooth:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth) Se os usuários podem habilitar e usar o rádio Bluetooth em seus dispositivos.
 -   [Restringe câmera:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesscamera) Especifica se os aplicativos do Windows podem acessar a câmera.
 -   [Restringir microfones:](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccessmicrophone) Especifica se os aplicativos do Windows podem acessar o microfone.
+
+Adicionado no [Windows holográfico, verison 20H2](hololens-release-notes.md#windows-holographic-version-20h2) para dispositivos do HoloLens 2. 
+- [DisplayOffTimeoutOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery) Defina a quantidade de tempo até que a exibição seja desativada e desative a tela, bloqueia o dispositivo. 
+- [DisplayOffTimeoutPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin) Defina a quantidade de tempo até que a exibição seja desativada e desative a tela, bloqueia o dispositivo. 

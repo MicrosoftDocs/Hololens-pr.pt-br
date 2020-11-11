@@ -8,19 +8,19 @@ ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/9/2020
+ms.date: 10/13/2020
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 85bba3c955c26bcfdb7e80a24be0befa1e06289e
-ms.sourcegitcommit: 8fb914cf6512c67444e0ead2050cf1c82bd5decc
+ms.openlocfilehash: 0825e3fd2d0a4e6328eaa617e4233639f481e8cb
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134420"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163149"
 ---
 # Notas de versão do HoloLens 2
 
@@ -28,6 +28,337 @@ Para garantir que você tenha uma experiência produtiva com seus dispositivos d
 
 >[!NOTE]
 > Para ler as notas de versão do emulador do HoloLens, [acesse o arquivo morto](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive).
+
+## Windows holográfico, versão 20H2
+- Build 19041,1128
+
+O Windows holográfico, versão 20H2 agora está disponível e traz um ótimo conjunto de novos recursos para usuários do HoloLens 2 e profissionais de ti. Do posicionamento de olho automático, para o Gerenciador de certificados em configurações, para melhorar a funcionalidade do modo de quiosque e os novos recursos de configuração do AutoPilot. Esta nova atualização permite que as equipes de ti tomem controle mais granular para configurar e gerenciar dispositivos HoloLens e oferece aos usuários experiências ainda mais holográficos. 
+
+Esta versão mais recente é uma atualização mensal para a versão 2004, mas desta vez estamos incluindo novos recursos. O número da versão principal permanecerá igual e o Windows Update indicará uma versão mensal da versão 2004 (Build 19041). Você pode ver o seu número de Build em suas configurações > a tela para confirmar que está nas versões mais recentes do Build 19041.1128 +. Para atualizar para a versão mais recente, abra o aplicativo configurações, vá para atualizar & segurança e toque em verificar se há atualizações. Para obter mais informações sobre como gerenciar as atualizações do HoloLens, visite [esta página](https://docs.microsoft.com/hololens/hololens-updates).
+
+### O que há de novo no Windows holográfico, versão 20H2  
+
+| Recurso                                              | Descrição                                                                                                                                     |
+|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Suporte à posição de olho automático](hololens-release-notes.md#auto-eye-position-support) | Calcula ativamente as posições de olho sem que os usuários passem pela calibragem ativa.   |
+| [Gerenciador de certificados](hololens-release-notes.md#certificate-manager)   | Permite que novos métodos mais simples instalem e removam certificados do aplicativo configurações.     |
+| [Fornecimento automático de inicialização de USB](hololens-release-notes.md#auto-launch-provisioning-from-usb)                    | Os pacotes de provisionamento em unidades USB solicitam automaticamente a página de aprovisionamento em OOBE.                                                         |
+| [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Os pacotes de provisionamento são aplicados automaticamente durante o OOBE na página de provisionamento.                                                         |
+| [Provisionamento automático sem usar a interface do usuário](hololens-release-notes.md#automatic-provisioning-without-using-ui) | Como combinar a inicialização automática do provisionamento e a confirmação automática juntas. |
+| [Usar o AutoPilot com conexão Wi-Fi](hololens-release-notes.md#using-autopilot-with-wi-fi-connection) | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet. |
+| [CSP Tenantlockdown e AutoPilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. |
+| [Acesso Global Atribuído](hololens-release-notes.md#global-assigned-access--kiosk-mode)                               | Novo método de configuração para o modo de quiosque de vários aplicativos que aplica o quiosque no nível do sistema, tornando-o aplicável a todos.                  |
+| [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.                                                        |
+| [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Agora, a falha do modo de quiosque tem fallback restritivo.                                                                                                |
+| [Políticas do HoloLens](hololens-release-notes.md#hololens-policies)                                    | Novas políticas para o HoloLens.     |
+| [Armazenar Associação de grupo no AAD para quiosque offline](hololens-release-notes.md#cache-aad-group-membership-for-offline-kiosk)         | A nova política permite que os usuários usem o cache de associação do grupo para usar o modo de quiosque offline para o número definido de dias.                                        |
+| [Novas políticas de restrição de dispositivo para HoloLens 2](hololens-release-notes.md#new-device-restriction-policies-for-hololens-2)       | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                                                                                |
+| [Novas políticas de energia para HoloLens 2](hololens-release-notes.md#new-power-policies-for-hololens-2)       | Políticas recém aceitas para configurações de tempo limite de energia.  |
+| [Atualizar políticas](hololens-release-notes.md#newly-enabled-update-policies-for-hololens)        | Políticas habilitadas recentemente, permitindo o controle de atualizações.           |
+| [Visibilidade da página Configurações habilitada para o HoloLens 2](hololens-release-notes.md#enabled-settings-page-visibility-for-hololens-2)      | Política para escolher quais páginas são vistas no aplicativo configurações.             |
+| [Modo de pesquisa](hololens-release-notes.md#research-mode) | Usar o modo de pesquisa no HoloLens 2. |
+| [Tamanho da gravação aumentado](hololens-release-notes.md#recording-length-increased) | As gravações da MRC não estão mais limitadas a 5 minutos. |
+| [Melhorias e correções na atualização](hololens-release-notes.md#improvements-and-fixes-in-the-update)                 | Correções adicionais na atualização.   |
+
+### Suporte à posição de olho automático
+
+- Agora oferecemos maior precisão para o posicionamento do holograma por meio do suporte à posição de olho automático para ver a qualidade de exibição aprimorada e a qualidade de exibição aprimorada. 
+
+No HoloLens 2, as posições de olho permitem o posicionamento preciso do holograma, a experiência de exibição confortável e a qualidade de exibição aprimorada. As posições de olho são calculadas como parte do resultado do controle de olho. No entanto, isso exige que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência não requer entrada olhar olho.
+
+A **posição de olho automático (AEP)** habilita esses cenários com uma maneira sem interação de calcular posições de olho para o usuário.  A posição de olho automático começa a trabalhar em segundo plano automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento de olho anterior, a posição de olho automático começará a fornecer as posições de olho do usuário para o sistema de exibição após um pequeno período de processamento. Esse tempo de processamento geralmente está entre 20-60 segundos. Os dados do usuário não são mantidos no dispositivo e, portanto, esse processo é repetido se o usuário retomar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou ativado do modo de suspensão.  
+
+Há algumas mudanças de comportamento do sistema com o recurso de posição de olho automático quando um usuário não calibrado coloca no dispositivo. Um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
+
+|     Aplicativo ativo                           |     Comportamento antigo                                   |     Comportamento para Windows holográfico versão 20H2 em diante                                                     |
+|--------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+|     Aplicativo não compatível com olhar ou shell holográfico    |     Solicitação de calibragem de rastreamento ocular será exibida.    |     Nenhum aviso é exibido.                                                                                |
+|     Aplicativo habilitado para olhar                             |     Solicitação de calibragem de rastreamento ocular será exibida.    |     O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo de olhar de olho.     |
+
+ Se o usuário mudar de um aplicativo não olhar habilitado para um que acesse os dados do olhar, o prompt de calibragem será exibido. Não haverá nenhuma alteração para o fluxo de experiência inicial na caixa. 
+ 
+Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular no prompt de calibragem de rastreamento ocular ou iniciem o aplicativo configurações no menu iniciar e, em seguida, selecione **sistema > Calibragem > Calibragem > executar calibragem de olho**.
+
+Essas informações podem ser encontradas mais tarde com [outras informações de calibragem](hololens-calibration.md#auto-eye-position-support). 
+
+### Gerenciador de certificados
+
+- Ferramentas aprimoradas de auditoria, diagnóstico e validação para segurança e conformidade de dispositivos por meio do novo Gerenciador de certificados. Esse recurso permitirá que você implante, solucione problemas e valide seus certificados em escala em ambientes comerciais.
+
+No Windows holográfico versão 20H2, adicionamos um Gerenciador de certificados no aplicativo Configurações do HoloLens 2. Vá para **configurações > atualizar certificados & segurança >**. Esse recurso oferece uma maneira simples e fácil de exibir, instalar e remover certificados em seu dispositivo. Com o novo Gerenciador de certificados, administradores e usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e compatíveis. 
+
+-   **Auditoria:** Capacidade de validar se um certificado está implantado corretamente ou para confirmar se foi removido apropriadamente. 
+-   **Diagnóstico:** Quando surgem problemas, é possível validar se os certificados apropriados existem no dispositivo poupa tempo e ajuda na solução de problemas. 
+-   **Validação:** Verificar se um certificado atende à finalidade e é funcional, pode economizar tempo significativo, especialmente em ambientes comerciais antes de implantar certificados em uma escala maior.
+
+Para localizar um certificado específico na lista rapidamente, há opções para classificar por nome, loja ou data de expiração. Os usuários também podem procurar um certificado diretamente. Para exibir as propriedades de certificado individuais, selecione o certificado e clique em **informações**. 
+
+A instalação do certificado atualmente oferece suporte a arquivos. cer e. CRT. Os proprietários de dispositivo podem instalar certificados na máquina local e no usuário atual;  todos os outros usuários podem instalar somente no usuário atual. Os usuários só podem remover certificados instalados diretamente da interface do usuário de configurações. Se um certificado tiver sido instalado por outros meios, ele também deverá ser removido pelo mesmo mecanismo.
+
+#### Para instalar um certificado: 
+
+1.  Conecte seu HoloLens 2 a um PC.
+1.  Coloque o arquivo de certificado que você deseja instalar em um local no seu HoloLens 2.
+1.  Navegue até **configurações aplicativo > atualização & segurança > certificados**e selecione instalar um certificado.
+1.  Clique em **Importar arquivo** e navegue até o local onde você salvou o certificado.
+1.  Selecione **local da loja**.
+1.  Selecione **repositório de certificados**.
+1.  Clique em **Instalar**.
+
+Agora o certificado deve estar instalado no dispositivo.
+
+#### Para remover um certificado: 
+1. Navegue até **configurações aplicativo > atualização e segurança > certificados**.
+1. Procure o certificado por nome na caixa de pesquisa.
+1. Selecione o certificado.
+1. Clique em **remover**
+1. Selecione **Sim** quando for solicitada a confirmação.
+
+![Visualizador de certificados no aplicativo configurações](images/certificate-viewer-device.jpg)
+
+![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado](images/certificate-device-install.jpg)
+
+Essas informações podem ser encontradas posteriormente [em uma nova página do Gerenciador de certificados](certificate-manager.md).
+
+### Fornecimento automático de inicialização de USB
+
+- Processos automatizados que permitem menos interação do usuário, quando unidades USB com pacotes de provisionamento são usadas durante o OOBE.
+
+Antes desta versão, os usuários precisavam iniciar a tela de aprovisionamento manualmente durante o OOBE para provisionar usando uma combinação de botões. Agora os usuários podem ignorar a combinação de botões usando um pacote de provisionamento em uma unidade de armazenamento USB. 
+
+1. Conecte a unidade USB com o pacote de provisionamento durante o primeiro momento interagindo do OOBE
+1. Quando o dispositivo estiver pronto para ser provisionado, ele abrirá automaticamente o prompt com a página de provisionamento. 
+
+Observação: se uma unidade USB estiver conectada enquanto o dispositivo estiver sendo inicializado, o OOBE enumerará o dispositivo de armazenamento USB existente, bem como o relógio para a conexão de outros itens.
+
+Para obter mais informações sobre como aplicar pacotes de provisionamento durante a OOBE, continue lendo [aqui](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup).
+
+Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#auto-launch-provisioning-from-usb)
+
+### Confirmar automaticamente os pacotes de provisionamento em OOBE
+- Processo automatizado que permite menos interação do usuário, quando a página do pacote de provisionamento é exibida, ele aplica automaticamente todos os pacotes listados.
+
+Quando a tela principal do provisionamento surgir, o OOBE contará 10 segundos antes de iniciar automaticamente a aplicação de todos os pacotes de provisionamento. Os usuários ainda podem confirmar ou cancelar nestas 10 segundos após verificar os pacotes esperados.
+
+Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe)
+
+### Provisionamento automático sem usar a interface do usuário
+- Processos automáticos combinados para as interações reduzidas de dispositivos para provisionamento. 
+
+Ao combinar o lançamento automático do provisionamento de dispositivos USB e a confirmação automática dos pacotes de provisionamento, um usuário pode provisionar dispositivos do HoloLens 2 automaticamente sem usar a interface do usuário do dispositivo ou mesmo usar o dispositivo. Você pode continuar a usar a mesma unidade USB e o pacote de provisionamento para vários dispositivos. Isso é útil para implantar vários dispositivos ao mesmo tempo na mesma área. 
+
+1. [Crie um pacote de provisionamento](hololens-provisioning.md) usando o [Designer de configuração do Windows](https://www.microsoft.com/store/productId/9NBLGGH4TX22). 
+1. Copie o pacote para uma unidade de armazenamento USB.
+1. [Atualize seu HoloLens 2 para o](hololens-insider.md#ffu-download-and-flash-directions) [19041,1361 ou versão mais recente](https://aka.ms/hololens2previewdownload). 
+1. Quando o [complemento de recuperação avançada](https://www.microsoft.com/store/productId/9P74Z35SFRS8) concluir a atualização do seu dispositivo, desconecte o cabo USB-C. 
+1. Conecte sua unidade USB ao dispositivo.
+1. Quando o dispositivo HoloLens 2 for inicializado no OOBE, ele detectará automaticamente o pacote de provisionamento na unidade USB e iniciará a página de provisionamento.
+1. Após 10 segundos, o dispositivo aplicará automaticamente o pacote de provisionamento. 
+
+Agora, seu dispositivo está configurado e exibirá a tela de provisionamento bem-sucedido.
+
+Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#automatic-provisioning-without-using-ui)
+
+### Usar o AutoPilot com conexão Wi-Fi
+- Removida a necessidade de adaptadores USB-C para a Ethernet reduzindo as necessidades de hardware, habilitando o AutoPilot para funcionar em Wi-Fi dispositivos conectados.
+
+Agora, durante o OOBE, quando você conectar o HoloLens 2 com WiFi, o OOBE verificará se há um perfil do AutoPilot para o dispositivo. Se um for encontrado, ele será usado para concluir o restante do fluxo do AAD e do fluxo de registro. Em outras palavras, usar Ethernet para USB-C ou Wi-Fi para o adaptador USB-C não é mais necessário, mas continuará a funcionar, se fornecido no início do OOBE. Saiba mais sobre o [AutoPilot para dispositivos HoloLens 2](hololens2-autopilot.md).
+
+### CSP Tenantlockdown e AutoPilot
+- Mantém os dispositivos no locatário da organização bloqueando-os para o locatário, mesmo através da reinicialização do dispositivo ou do reflash. Com mais segurança, desautorizando a criação da conta por meio do provisionamento. 
+
+Os dispositivos do HoloLens 2 agora dão suporte ao CSP TenantLockdown da [versão 20H2 do Windows holográfico](hololens-release-notes.md#windows-holographic-version-20h2). 
+
+[TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) O CSP permite que o HoloLens 2 seja vinculado ao registro de MDM usando somente o AutoPilot. Depois que o TenantLockdown do CSP do RequireNetworkInOOBE for definido como verdadeiro ou falso (inicialmente definido) no HoloLens 2, esse valor permanecerá no dispositivo, independentemente da atualização, das atualizações do sistema operacional, etc. 
+
+Depois que o nó RequireNetworkInOOBE ' CSPs ' TenantLockdown estiver definido como true no HoloLens 2, o OOBE esperará indefinidamente que o perfil do AutoPilot seja baixado e aplicado com êxito, após a conectividade de rede. 
+
+Uma vez que o nó RequireNetworkInOOBE de CSPs TenantLockdown está definido como true no HoloLens 2, as operações a seguir não são permitidas no OOBE: 
+- Criando usuário local usando o provisionamento de tempo de execução 
+- Executando a operação de junção do AAD por meio do provisionamento de tempo de execução 
+- Selecionando quem é o proprietário do dispositivo em uma experiência de OOBE 
+
+#### Como definir isso usando o Intune? 
+1. Crie um perfil de configuração de dispositivo OMA URI personalizado e especifique true para o nó RequireNetworkInOOBE, conforme mostrado a seguir.
+O valor OMA-URI deve ser./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+
+   > [!div class="mx-imgBorder"]
+   > ![Configurando o bloqueio do locatário via OMA-URI](images/hololens-tenant-lockdown.png)
+
+1. Crie um grupo e atribua o perfil de configuração do dispositivo a esse grupo de dispositivos. 
+
+1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.  
+
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo Hololens 2, os efeitos de TenantLockdown ficarão ativos.
+
+#### Como desproteger o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
+1. Remova o HoloLens 2 do grupo de dispositivos ao qual a configuração de dispositivo criada acima foi anteriormente atribuída. 
+
+1. Crie um perfil de configuração de dispositivo baseado em OMA URI e especifique false para RequireNetworkInOOBE, conforme mostrado abaixo. O valor OMA-URI deve ser./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+
+   > [!div class="mx-imgBorder"]
+   > ![Captura de tela da configuração de RequireNetworkInOOBE para falsa via URI OMA no Intune](images/hololens-tenant-lockdown-false.png)
+
+1. Crie um grupo e atribua o perfil de configuração do dispositivo a esse grupo de dispositivos. 
+
+1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.
+
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo Hololens 2, os efeitos de TenantLockdown ficarão inativos. 
+
+#### O que aconteceria durante o OOBE, se o perfil do AutoPilot não for atribuído em um HoloLens após o TenantLockdown ser definido como true? 
+O OOBE aguardará indefinidamente o perfil do AutoPilot para baixar e a caixa de diálogo a seguir será apresentada. Para remover efeitos de TenantLockdown, o dispositivo deve ser registrado com seu locatário original primeiro usando o AutoPilot e RequireNetworkInOOBE deve ser indefinida, conforme descrito na etapa anterior, antes que as restrições introduzidas pelo CSP do TenantLockdown sejam removidas. 
+
+![Modo de exibição no dispositivo quando a política é imposta no dispositivo.](images/hololens-autopilot-lockdown.png)
+
+Essas informações agora podem ser encontradas juntamente com o restante do piloto automático sob o [CSP Tenantlockdown e o AutoPilot](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot).
+
+### Acesso global atribuído – modo de quiosque
+- Gerenciamento de identidades reduzido para o quiosque, habilitando o novo método quiosque que aplica o modo de quiosque no nível do sistema.
+
+Este novo recurso permite que um administrador de ti configure um dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com qualquer identidade no sistema e se aplica a todos os participantes do dispositivo. Leia sobre esse novo recurso em detalhes [aqui](hololens-global-assigned-access-kiosk.md).
+
+### Inicialização automática de um aplicativo no modo de quiosque de vários aplicativos 
+- Experiência destaques com o lançamento automático do aplicativo, melhorando ainda mais a interface do usuário e as seleções de aplicativos escolhidas para experiências do modo de quiosque.
+
+Aplica-se somente ao modo de quiosque de vários aplicativos e somente um aplicativo pode ser designado para inicialização automática usando o atributo realçado abaixo na configuração de acesso atribuído. 
+
+O aplicativo é iniciado automaticamente quando o usuário entra. 
+
+```xml
+<AllowedApps>                     
+    <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
+```
+
+### Alterações de comportamento do modo de quiosque para manipulação de falhas
+- Modo de quiosque mais seguro eliminando aplicativos disponíveis em falhas do modo de quiosque. 
+
+Antes de encontrar falhas na aplicação do modo de quiosque, o HoloLens é usado para exibir todos os aplicativos no menu iniciar. Agora, no Windows holográfico Version 20H2, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, como a seguir: 
+
+![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
+
+### Políticas do HoloLens
+- Opções de gerenciamento de dispositivo especificamente para o HoloLens criado para o gerenciamento do dispositivo. 
+
+Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 2 na versão 20H2 do Windows holográfico. As novas configurações controláveis incluem: configuração do brilho, configuração do volume, desativação da gravação de áudio em capturas de realidade mista, configuração quando o diagnóstico pode ser coletado e o cache de associação do grupo AAD.  
+
+| Nova política do HoloLens                                | Descrição                                                                               | Observações                                                                |
+|----------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| MixedReality\BrightnessButtonDisabled              | Permite que os botões de brilho sejam desabilitados para que o pressionamento não altere o brilho.       | 1 Sim, 0 não (padrão)                                                |
+| MixedReality\VolumeButtonDisabled                  | Permite que os botões de volume sejam desabilitados, portanto, ao pressioná-lo, não muda o volume.               | 1 Sim, 0 não (padrão)                                                |
+| MixedReality\MicrophoneDisabled                    | Desabilita o microfone para que a gravação de áudio seja possível no HoloLens 2.                      | 1 Sim, 0 não (padrão)                                                |
+| MixedReality\FallbackDiagnostics                   | Controla o comportamento de quando os logs de diagnóstico podem ser coletados.                               | 0 desativado, 1 habilitado para proprietários de dispositivo, 2 habilitado para todos (padrão) |
+| MixedReality\HeadTrackingMode                      | Reservado para uso futuro.                                                                  |                                                                      |
+| MixedReality\AADGroupMembershipCacheValidityInDays | Controla quantos dias o cache de associação do grupo AAD é usado para grupos do AAD de direcionamento do quiosque. | Veja abaixo.                                                           |
+
+### Armazenar Associação de grupo no AAD para quiosque offline
+- Foram habilitados quiosques offline para serem usados com grupos AAD por até 60 dias.
+
+Esta política controla o número de dias, o cache de associações do grupo AAD pode ser usado para configurações de acesso atribuídas direcionando grupos do AAD para o usuário conectado. Quando esse valor de política é definido como valor maior que 0 somente, o cache é usado de outra forma não.  
+
+Nome: AADGroupMembershipCacheValidityInDays URI value:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+
+Mín-0 dias  
+Máx-60 dias 
+
+Etapas para usar esta política corretamente: 
+1. Crie um perfil de configuração de dispositivo para grupos do AAD de direcionamento de quiosque e atribua-o a dispositivo (s) HoloLens (s). 
+1. Crie uma configuração de dispositivo baseada em OMA URI, que define esse valor de política como o número desejado de dias (> 0) e atribua-o a dispositivo (s) do HoloLens. 
+    1. O valor de URI deve ser inserido na caixa de texto OMA-URI como./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+    1. O valor pode estar entre min/max permitido.
+1. Registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
+1. Deixe que o usuário do AAD 1 entre quando a Internet estiver disponível, quando o usuário entrar e a associação do grupo AAD for confirmada com êxito, o cache será criado. 
+1. Agora o usuário do AAD 1 pode pegar o HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
+1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do AAD. o ponto da chave aqui é que qualquer usuário do AAD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que ele é membro do grupo AAD para o qual a configuração do quiosque está direcionada. 
+ 
+> [!NOTE]
+> Até que a etapa 4 seja realizada para um usuário do AAD experimentará um comportamento de falha mencionado em ambientes "desconectados". 
+
+### Novas políticas de restrição de dispositivo para HoloLens 2
+- Permite que os usuários gerenciem políticas específicas de gerenciamento de dispositivos, como o bloqueio da adição ou da remoção de pacotes de provisionamento.
+
+Políticas habilitadas recentemente que permitem mais opções de gerenciamento de dispositivos do HoloLens 2. 
+- [AllowAddProvisioningPackage](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
+- [AllowRemoveProvisioningPackage](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) 
+- [ConfigureTimeZone](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-timelanguagesettings#timelanguagesettings-configuretimezone)
+- [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp)
+
+Essas duas novas diretivas para AllowAddProvisioningPackage e AllowRemoveProvisioningPackage estão sendo adicionadas às nossas [restrições comuns de dispositivo](hololens-common-device-restrictions.md).
+
+### Novas políticas de energia para Hololens 2
+- Mais opções para quando o HoloLens dorme ou trava via políticas de energia. 
+
+Essas políticas adicionadas recentemente permitem que os administradores controlem os Estados de energia, como tempo limite ocioso. Para ler mais sobre cada política individual, clique no link para essa política.
+
+|     Link de documentação da política                |     Observações                                                                                                                                       |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+|     [DisplayOffTimeoutOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
+|     [DisplayOffTimeoutPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)               |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterVideoACPowerDownTimeOut" value="100"/>`     |
+|     [EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)     |  Valor de exemplo a ser usado no designer de configuração do Windows, ou seja, 100                                                                             |
+|     [EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)     |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja, 100                                                                          |
+|     [StandbyTimeoutOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)                  |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,   `<enabled/><data   id="EnterDCStandbyTimeOut" value="100"/>`          |
+|     [StandbyTimeoutPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)                  |     Valor de exemplo a ser usado no designer de configuração do Windows, ou seja,  `<enabled/><data   id="EnterACStandbyTimeOut" value="100"/>`           |
+
+Essas duas novas diretivas para DisplayOffTimeoutOnBattery e DisplayOffTimeoutPluggedIn estão sendo adicionadas às nossas [restrições comuns de dispositivo](hololens-common-device-restrictions.md).
+
+> [!NOTE]
+> Para uma experiência consistente com o HoloLens 2, certifique-se de que os valores de DisplayOffTimeoutOnBattery e StandbyTimeoutOnBattery sejam definidos como o mesmo valor. O mesmo se aplica a DisplayOffTimeoutPluggedIn e StandbyTimeoutPluggedIn. Confira os [temporizadores de exibição, suspensão e hibernação ociosa](https://docs.microsoft.com/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers) para obter mais detalhes sobre o modo de espera moderno.
+
+### Políticas de atualização habilitadas recentemente para HoloLens
+- Mais opções de quando as atualizações são instaladas ou a desativação do botão Pausar atualizações para garantir as atualizações.
+
+Essas políticas de atualização agora estão habilitadas em dispositivos HoloLens 2:
+-   [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)
+-   [Update/ActiveHoursMaxRange](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
+-   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
+-   [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)
+
+Detalhes completos sobre essas políticas de atualização e sobre como usá-las para dispositivos HoloLens podem ser lidos aqui em [gerenciar atualizações do hololens](hololens-updates.md).
+
+### Visibilidade da página Configurações habilitada para o HoloLens 2
+- Controle de interface do usuário aumentado no aplicativo configurações, que pode ser confuso para mostrar uma seleção limitada de páginas.
+
+Agora habilitamos uma política que permite que os administradores de ti impeçam que páginas específicas no aplicativo Configurações do sistema sejam visíveis ou acessíveis, ou que façam isso para todas as páginas, exceto aquelas especificadas. Para saber como personalizar completamente este recurso, clique no link abaixo.
+
+- [PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
+
+Para saber quais configurações de página você pode personalizar no HoloLens 2, acesse nossa [página URIs de configurações](settings-uri-list.md). 
+ 
+![Captura de tela da modificação das horas ativas no aplicativo Configurações](images/hololens-page-visibility-list.jpg)
+
+### Modo de pesquisa
+Enquanto estiver no modo de pesquisa, o HoloLens 2 torna-se uma ferramenta potent para pesquisa de visão do computador. Em comparação com as edições anteriores, o modo de pesquisa para o HoloLens 2 tem as seguintes vantagens:
+-   Além dos sensores expostos no modo de pesquisa do HoloLens (1ª gen), agora oferecemos acesso IMU sensor, incluindo acelerômetro, Gyroscope e magnetômetro.
+-   O HoloLens 2 oferece novos recursos que podem ser usados em conjunto com o modo de pesquisa. Especificamente, o acesso a APIs articuladas de acompanhamento à mão e acompanhamento de olhos pode oferecer um conjunto mais rico de experimentos.
+
+Os pesquisadores agora têm a opção de habilitar o modo de pesquisa em seus dispositivos HoloLens para acessar todos esses fluxos de sensores de imagens brutas externos. O modo de pesquisa para o HoloLens 2 também fornece acesso às leituras do acelerômetro, do Gyroscope e do magnetômetro. Para proteger a privacidade dos usuários, as imagens da câmera de controle de olhos brutos não estão disponíveis no modo de pesquisa, mas a direção olhar está disponível por meio de APIs existentes.
+
+Confira a [documentação do modo de pesquisa](https://docs.microsoft.com/windows/mixed-reality/research-mode) para obter mais detalhes técnicos.
+
+### Tamanho da gravação aumentado
+Devido aos comentários dos clientes, aumentamos o tamanho da gravação de [capturas de realidade misturadas](holographic-photos-and-videos.md). As capturas de realidade misturadas não ficarão mais limitadas a 5 minutos por padrão, mas, em vez disso, calcularão o tamanho máximo de gravação com base no espaço disponível em disco. O dispositivo estimará a duração máxima da gravação de vídeo com base no espaço em disco disponível até 80% do espaço total em disco.
+
+> [!NOTE]
+> O HoloLens usará o comprimento padrão de gravação de vídeo (5 minutos) se ocorrer um dos seguintes procedimentos:
+> - A duração máxima de gravação estimada é menor do que o padrão de 5 minutos.
+> - O espaço disponível em disco é inferior a 20% do espaço total em disco.
+
+Essas informações podem ser encontradas novamente [aqui](holographic-photos-and-videos.md#maximum-recording-length). 
+
+### Melhorias e correções na atualização:
+- No momento, há mais telas em OOBE no modo escuro.
+- Saiba mais o conteúdo deve apontar para a declaração de privacidade online mais recente.
+- Corrigido um problema em que os usuários não puderam configurar perfis VPN por meio de pacotes de provisionamento.
+- Problema de configuração de proxy fixo para conexão VPN.
+- Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.
+- Foi corrigido um problema que impedia a exibição de um dispositivo HoloLens no File Explorer over Media Transfer Protocol (MTP) quando o dispositivo é configurado como um [quiosque de aplicativo único](hololens-kiosk.md). Observe que a MTP (e a conexão USB em geral) ainda pode ser desabilitada usando a política [AllowUSBConnection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) .
+- Correção de um problema em que os ícones no menu iniciar foram dimensionados corretamente no modo de quiosque.
+- Correção de um problema devido ao cache HTTP interferindo com o modo de quiosque direcionado para grupos do AAD.
+- Correção de um problema em que os usuários não conseguiram usar o botão emparelhar após habilitar o modo de desenvolvedor com pacotes de provisionamento, a menos que eles sejam desabilitados e habilitados novamente para o modo de desenvolvedor.
+
+## Windows holográfico, versão 1903 – atualização de novembro de 2020
+- Build 18362,1085
+
+Esta atualização de qualidade mensal não contém alterações notáveis, recomendamos que você experimente a versão mais recente do Build Windows holográfico, versão 20H2.
 
 ## Windows holográfico, versão 2004 – atualização de outubro de 2020
 - Build 19041,1124

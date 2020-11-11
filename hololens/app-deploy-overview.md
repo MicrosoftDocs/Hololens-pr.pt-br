@@ -14,12 +14,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b0b7609f1caac20ff0c47251b1f85a26d7fe1de8
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: 36d86e24cc10d6b8457cfb415528398a8d43aa27
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016645"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11162862"
 ---
 # Gerenciamento de aplicativos: Visão Geral
 
@@ -65,7 +65,18 @@ Para obter mais informações, visite [holográfico Store apps](https://docs.mic
 Os [pacotes de provisionamento](app-deploy-provisioning-package.md) permitem que você instale aplicativos personalizados ou de linha de negócios, permitindo que os profissionais de ti e administradores instalem rapidamente aplicativos em um ou mais dispositivos (s) locais via USB. Isso pode ser feito sem uma conexão à Internet e para qualquer tipo de identidade.
     
 A instalação por meio de pacotes de provisionamento é aplicável para: 
-* Linha de aplicativos Business (não públicos)
+* Linha de aplicativos Business/auto desenvolvidos (não públicos)
 * Aplicativos públicos (se o instalador offline estiver disponível)
 * Somente o carregamento do lado USB
 * Sem atualização automática (exige atualizações manuais por meio do pacote de provisionamento)
+
+## Instalar aplicativos no HoloLens 2 via instalador de aplicativos
+Usar os usuários do [instalador de aplicativos](app-deploy-app-installer.md) pode ter uma experiência simples para instalar aplicativos em dispositivos locais ou compartilhar um aplicativo com outra pessoa que não esteja familiarizado com outros métodos de instalação do aplicativo no HoloLens. Isso pode ser feito sem a necessidade de habilitar o modo de desenvolvedor ou usar o Device Portal. Trata-se de um método simples de distribuir um aplicativo completamente compilado. Independentemente de se você simplesmente quer fazer uma demonstração do aplicativo para outro usuário com um HoloLens ou quiser implantar seu aplicativo, esse método funciona facilmente.
+
+A instalação por meio do instalador do aplicativo é aplicável para: 
+* Linha de aplicativos Business/auto desenvolvidos (não públicos)
+* Somente carregar lado a lado
+* Não requer modo de desenvolvedor ou Device Portal
+* É fácil instalar o usuário final
+
+
