@@ -8,23 +8,23 @@ ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/13/2020
+ms.date: 11/10/2020
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0825e3fd2d0a4e6328eaa617e4233639f481e8cb
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: df8d6e2c00bd8ff8507be4a2fd58c773d8833c11
+ms.sourcegitcommit: 20ff249e3570c74f62cdf6339c8be76c401d9f4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163149"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165976"
 ---
 # Notas de versão do HoloLens 2
 
-Para garantir que você tenha uma experiência produtiva com seus dispositivos de HoloLens, continuamos a liberar recursos, erros e atualizações de segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização do flash completo do HoloLens 2 (FFU) para fazer o [flash do seu dispositivo via complemento avançado de recuperação](hololens-recovery.md#clean-reflash-the-device), [Baixe-o aqui](https://aka.ms/hololens2download). O download é mantido atualizado e fornece a versão mais recente disponível no momento.
+Para garantir que você tenha uma experiência produtiva com seus dispositivos de HoloLens, continuamos a liberar recursos, erros e atualizações de segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização mais recente do HoloLens 2, você pode [verificar se há atualizações e atualizar manualmente](hololens-update-hololens.md#check-for-updates-and-manually-update) ou obter a atualização Flash completa (FFU) para fazer o [flash do seu dispositivo por meio do complemento avançado de recuperação](hololens-recovery.md#clean-reflash-the-device), [Baixe-o aqui](https://aka.ms/hololens2download). O download é mantido atualizado e fornece a versão mais recente disponível no momento.
 
 >[!NOTE]
 > Para ler as notas de versão do emulador do HoloLens, [acesse o arquivo morto](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive).
@@ -40,7 +40,7 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 
 | Recurso                                              | Descrição                                                                                                                                     |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Suporte à posição de olho automático](hololens-release-notes.md#auto-eye-position-support) | Calcula ativamente as posições de olho sem que os usuários passem pela calibragem ativa.   |
+| [Suporte Automático de Posição Ocular](hololens-release-notes.md#auto-eye-position-support) | Calcula ativamente as posições de olho sem que os usuários passem pela calibragem de rastreamento ocular.   |
 | [Gerenciador de certificados](hololens-release-notes.md#certificate-manager)   | Permite que novos métodos mais simples instalem e removam certificados do aplicativo configurações.     |
 | [Fornecimento automático de inicialização de USB](hololens-release-notes.md#auto-launch-provisioning-from-usb)                    | Os pacotes de provisionamento em unidades USB solicitam automaticamente a página de aprovisionamento em OOBE.                                                         |
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Os pacotes de provisionamento são aplicados automaticamente durante o OOBE na página de provisionamento.                                                         |
@@ -60,24 +60,24 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 | [Tamanho da gravação aumentado](hololens-release-notes.md#recording-length-increased) | As gravações da MRC não estão mais limitadas a 5 minutos. |
 | [Melhorias e correções na atualização](hololens-release-notes.md#improvements-and-fixes-in-the-update)                 | Correções adicionais na atualização.   |
 
-### Suporte à posição de olho automático
+### Suporte Automático de Posição Ocular
 
-- Agora oferecemos maior precisão para o posicionamento do holograma por meio do suporte à posição de olho automático para ver a qualidade de exibição aprimorada e a qualidade de exibição aprimorada. 
+No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições de olho são calculadas internamente como parte da computação de rastreamento ocular. No entanto, isso exige que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência não exigir a entrada olhar olho.
 
-No HoloLens 2, as posições de olho permitem o posicionamento preciso do holograma, a experiência de exibição confortável e a qualidade de exibição aprimorada. As posições de olho são calculadas como parte do resultado do controle de olho. No entanto, isso exige que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência não requer entrada olhar olho.
+A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário. A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento de olho anterior, a posição de olho automático começará a fornecer as posições de olho do usuário para o sistema de exibição após um tempo de processamento de 20-30 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.
 
-A **posição de olho automático (AEP)** habilita esses cenários com uma maneira sem interação de calcular posições de olho para o usuário.  A posição de olho automático começa a trabalhar em segundo plano automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento de olho anterior, a posição de olho automático começará a fornecer as posições de olho do usuário para o sistema de exibição após um pequeno período de processamento. Esse tempo de processamento geralmente está entre 20-60 segundos. Os dados do usuário não são mantidos no dispositivo e, portanto, esse processo é repetido se o usuário retomar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou ativado do modo de suspensão.  
+Existem algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Nesse contexto, um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento de olho no dispositivo anteriormente.
 
-Há algumas mudanças de comportamento do sistema com o recurso de posição de olho automático quando um usuário não calibrado coloca no dispositivo. Um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
+| Aplicativo Ativo | Comportamento anterior | Comportamento do Windows holográfico, versão 20H2 Update |
+|:-------------------|:-----------------|:-----------------------------------|
+| Aplicativo não habilitado para o olhar ou o Shell Holográfico |A caixa de diálogo aviso de calibragem de rastreamento ocular será exibida. | Nenhum sistema de gerenciamento é exibido. |
+| Aplicativo habilitado para olhar | A caixa de diálogo aviso de calibragem de rastreamento ocular será exibida. | O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo de olhar de olho. |
 
-|     Aplicativo ativo                           |     Comportamento antigo                                   |     Comportamento para Windows holográfico versão 20H2 em diante                                                     |
-|--------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-|     Aplicativo não compatível com olhar ou shell holográfico    |     Solicitação de calibragem de rastreamento ocular será exibida.    |     Nenhum aviso é exibido.                                                                                |
-|     Aplicativo habilitado para olhar                             |     Solicitação de calibragem de rastreamento ocular será exibida.    |     O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo de olhar de olho.     |
+Se o usuário fizer a transição de um aplicativo não habilitado para olhar para um que acesse os dados do olhar, o sistema de gerenciamento de calibragem será exibido. 
 
- Se o usuário mudar de um aplicativo não olhar habilitado para um que acesse os dados do olhar, o prompt de calibragem será exibido. Não haverá nenhuma alteração para o fluxo de experiência inicial na caixa. 
- 
-Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular no prompt de calibragem de rastreamento ocular ou iniciem o aplicativo configurações no menu iniciar e, em seguida, selecione **sistema > Calibragem > Calibragem > executar calibragem de olho**.
+Todos os outros comportamentos do sistema serão semelhantes quando o usuário atual não tiver uma calibragem ativa de rastreamento ocular. Por exemplo, o gesto de início de uma mão não será habilitado. Não haverá nenhuma alteração na experiência inicial do programa de instalação inicial.
+
+Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular. Ele pode ser acessado do prompt de calibragem de controle ocular ou iniciando o aplicativo configurações no menu iniciar e, em seguida, selecionando **sistema > Calibragem > calibragem de olho > executar a calibragem**
 
 Essas informações podem ser encontradas mais tarde com [outras informações de calibragem](hololens-calibration.md#auto-eye-position-support). 
 
@@ -189,7 +189,7 @@ O valor OMA-URI deve ser./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
 1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.  
 
-Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo Hololens 2, os efeitos de TenantLockdown ficarão ativos.
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo HoloLens 2, os efeitos de TenantLockdown ficarão ativos.
 
 #### Como desproteger o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
 1. Remova o HoloLens 2 do grupo de dispositivos ao qual a configuração de dispositivo criada acima foi anteriormente atribuída. 
@@ -203,7 +203,7 @@ Verifique no portal do Intune se a configuração do dispositivo foi aplicada co
 
 1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.
 
-Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo Hololens 2, os efeitos de TenantLockdown ficarão inativos. 
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo HoloLens 2, os efeitos de TenantLockdown ficarão inativos. 
 
 #### O que aconteceria durante o OOBE, se o perfil do AutoPilot não for atribuído em um HoloLens após o TenantLockdown ser definido como true? 
 O OOBE aguardará indefinidamente o perfil do AutoPilot para baixar e a caixa de diálogo a seguir será apresentada. Para remover efeitos de TenantLockdown, o dispositivo deve ser registrado com seu locatário original primeiro usando o AutoPilot e RequireNetworkInOOBE deve ser indefinida, conforme descrito na etapa anterior, antes que as restrições introduzidas pelo CSP do TenantLockdown sejam removidas. 
@@ -284,7 +284,7 @@ Políticas habilitadas recentemente que permitem mais opções de gerenciamento 
 
 Essas duas novas diretivas para AllowAddProvisioningPackage e AllowRemoveProvisioningPackage estão sendo adicionadas às nossas [restrições comuns de dispositivo](hololens-common-device-restrictions.md).
 
-### Novas políticas de energia para Hololens 2
+### Novas políticas de energia para HoloLens 2
 - Mais opções para quando o HoloLens dorme ou trava via políticas de energia. 
 
 Essas políticas adicionadas recentemente permitem que os administradores controlem os Estados de energia, como tempo limite ocioso. Para ler mais sobre cada política individual, clique no link para essa política.

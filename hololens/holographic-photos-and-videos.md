@@ -15,12 +15,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 452164caaad09f2caecf7c4a51cda6242d805d7f
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: df67fe8c5b29eea317a0d00a1ebdcf7331fb0936
+ms.sourcegitcommit: 681e8e03e1a0250368f1f50cef6fbc3c99bac3af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163117"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165009"
 ---
 # Criar fotos e vídeos de realidade misturada
 
@@ -140,7 +140,7 @@ Semelhante a outros dispositivos móveis, conecte o seu HoloLens ao seu computad
 Dicas:
 - Se você não vir nenhum arquivo, certifique-se de que se conecte ao seu HoloLens para permitir o acesso aos seus dados.
 - Você pode obter outros arquivos em outras pastas, como [arquivos de diagnóstico](hololens-diagnostic-logs.md#offline-diagnostics) da pasta documentos.
-- No explorador de arquivos do computador, você pode selecionar propriedades do dispositivo para ver o número de versão do Windows holográfico do sistema operacional (versão do firmware) e o número de série do dispositivo e a porcentagem da bateria.
+- No explorador de arquivos do computador, você pode selecionar propriedades do dispositivo para ver o número de versão do Windows holográfico do sistema operacional (versão do firmware), o número de série do dispositivo e a porcentagem da bateria.
 - Se a sua organização tiver usado o MDM para desabilitar a [conectividade/AllowUSBConnection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) , você não poderá se conectar ao seu dispositivo.
 
 ## Compartilhar fotos e vídeos de realidade misturada
