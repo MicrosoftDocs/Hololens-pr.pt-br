@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 80ac6348dd2cba932316b690cafc4c5dc0331353
-ms.sourcegitcommit: 77eb85608066d9a4ed01b3862afe356f7e54d583
+ms.openlocfilehash: 0001ff627b150a9ba79e76f8d995231186c46917
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "10940201"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163009"
 ---
 # Visor do HoloLens 2
 
@@ -59,9 +59,9 @@ Dito isso, ainda é possível para câmeras industriais especializadas capturare
 
 O visor do HoloLens 2 corrige ativamente as cores das imagens com base na posição dos olhos do usuário. A [calibragem dos olhos](hololens-calibration.md) fornece duas entradas importantes: (1) a IPD (distância interpupilar) do usuário e (2) a direção que cada olho está olhando. Sem a calibração dos olhos, o sistema usa como padrão uma posição nominal dos olhos sem movimento ocular. A diferença entre correção de cor ativa e nenhuma correção, dependerá da própria fisiologia do usuário. Por exemplo, os usuários que têm a mesma IPD do padrão do sistema verão menos melhorias na correção de cores. Enquanto os usuários que têm uma IPD muito mais estreita ou mais ampla do que o padrão do sistema, verão mais alterações na imagem do visor.
 
-Observação: um novo recurso em uma atualização futura do sistema operacional começará a [detectar automaticamente a posição dos olhos](hololens-insider.md#auto-eye-position-support). Os usuários podem se inscrever no [Insider Preview](hololens-insider.md) para experimentar esse recurso agora.
+Observe, um novo recurso no [Windows Holographic versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) começará [ detectando automaticamente a posição do olho](hololens-calibration.md#auto-eye-position-support). 
 
-### Quais são as diferenças entre os visores do HoloLens (1ª geração) e do HoloLens 2?
+### Quais são as diferenças de exibição entre o HoloLens (1ª geração) e o HoloLens 2?
 
 Entre as principais solicitações que os clientes fizeram à Microsoft após experimentarem o HoloLens 1 foram (1) aumentar o campo de visão e (2) aumentar o brilho. Os desenvolvimentos tecnológicos permitiram que a Microsoft produzisse guias de ondas que dobrassem a área do campo de visão e produzisse projetores de luz com um visor até três vezes mais brilhante. O hardware define a linha de base para um trio de compensações para a qualidade da imagem do visor: (1) campo de visão, (2) brilho e (3) uniformidade das cores. O avanço contínuo da tecnologia permite aperfeiçoamentos em todas as áreas sem sacrificar outra área. Provisoriamente, a tecnologia existente define os limites disponíveis para essas compensações.
 

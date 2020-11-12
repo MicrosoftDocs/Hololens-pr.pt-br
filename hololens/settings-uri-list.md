@@ -3,7 +3,7 @@ title: Visibilidade das Configurações da Página
 description: Lista de URIs com suporte do HoloLens para PageVisibilityList e Guia
 author: evmill
 ms.author: v-evmill
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: article
 keywords: hololens, hololens 2, acesso atribuído, quiosque, página de configurações
 ms.prod: hololens
@@ -13,19 +13,19 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7a24d64b0b60be9f922260b7145d04c2c13951ed
-ms.sourcegitcommit: 8b5e349990ba5566bcc6a2a72ff83d1a21b099b8
+ms.openlocfilehash: 8cd336ce64cf7d4549b031a7977f592ca82dd6e4
+ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11026934"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "11163142"
 ---
 # Visibilidade das Configurações da Página
 
 Um dos recursos gerenciáveis para dispositivos do HoloLens está usando as [políticas de configurações/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) para restringir as páginas vistas nas configurações do aplicativo. PageVisibilityList é uma política que permite que os administradores de TI impeçam a visibilidade ou o acesso a páginas específicas do aplicativo de configurações do sistema, ou para isso, para todas as páginas, exceto aquelas especificadas. 
 
-> [!IMPORTANT]
-> No momento, esse recurso só está disponível na [Windows Insider builds](hololens-insider.md). Certifique-se de que os dispositivos em que você pretenda usar, sejam no Build 19041.1349+.
+> [!NOTE]
+> Este recurso só está disponível no [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) para dispositivos do HoloLens 2. Certificar-se de que os dispositivos para os quais você pretende usar são atualizados.
 
 O exemplo a seguir ilustra uma política que permitiria o acesso apenas às páginas sobre e Bluetooth, que têm URI "ms-settings:network-wifi" e "ms-settings:bluetooth" respectivamente:
 - showonly:network-wifi;network-proxy;bluetooth
