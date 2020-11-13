@@ -14,12 +14,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f466d64da8ef122ce2917117a74ab904a573b4e3
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: d14d33ea01a3fe649f7125e050dd1b0a16426e6c
+ms.sourcegitcommit: 681e8e03e1a0250368f1f50cef6fbc3c99bac3af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163054"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165037"
 ---
 # Melhorar o conforto e a qualidade visual
 
@@ -67,26 +67,32 @@ Vários usuários podem compartilhar um dispositivo HoloLens 2, sem a necessidad
    ![O aplicativo Configurações, mostrando a opção Executar calibragem dos olhos](./images/C-Settings.Calibration.png)
 
 ### Suporte Automático de Posição Ocular
-- Agora oferecemos maior precisão para o posicionamento do holograma por meio do Suporte Automático de Posição do Ocular para maior conforto de visualização e melhor qualidade de exibição. 
 
-No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições dos olhos são calculadas como parte do resultado do rastreamento ocular. No entanto, isso requer que cada usuário passe pela calibragem do rastreamento ocular, mesmo quando a experiência não exigir a entrada do olhar fixo.
+No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições do olho são calculadas internamente como parte da computação de rastreamento ocular. Entretanto, isso requer que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência possa não requerer a entrada do olhar fixo.
 
-A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário.  A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento ocular anterior, a posição Auto Ocular começará a fornecer as posições oculares do usuário ao sistema de exibição após um pequeno tempo de processamento. Esse tempo de processamento normalmente é de 20 a 60 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.  
+A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário. A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento ocular anterior, a Posição Automática Ocular começará a fornecer as posições dos olhos do usuário para o sistema de exibição após um tempo de processamento de 20 a 30 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.
 
-Existem algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Um usuário não calibrado refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
+Há algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Nesse contexto, um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
 
-|     Aplicativo Ativo                           |     Comportamento Antigo                                   |     Comportamento para Windows HWindows Holographic, versão 20H2 em diante                                                     |
-|--------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-|     Aplicativo não habilitado para o olhar ou o Shell Holográfico    |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido.    |     Nenhum sistema de gerenciamento é exibido.                                                                                |
-|     Aplicativo habilitado para olhar                             |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido.    |     O sistema de gerenciamento de calibragem do rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo do olhar fixo.     |
+| Aplicativo Ativo | Comportamento Anterior | Comportamento do Windows Holográfico, versão 20H2 Update |
+|:-------------------|:-----------------|:-----------------------------------|
+| Aplicativo não habilitado para olhar ou o Shell Holográfico |A caixa de diálogo do sistema de gerenciamento de calibragem do rastreamento ocular é exibida. | Nenhum sistema de gerenciamento é exibido. |
+| Aplicativo habilitado para olhar | A caixa de diálogo do sistema de gerenciamento de calibragem do rastreamento ocular é exibida. | O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo do olhar fixo. |
 
- Se o usuário fizer a transição de um aplicativo não habilitado para olhar para um que acesse os dados do olhar, o sistema de gerenciamento de calibragem será exibido. Não haverá alterações no fluxo Experiência Imediata. 
- 
-Para experiências que exigem dados do olhar fixo ou posicionamento de holograma muito preciso, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular a partir do sistema de gerenciamento de calibragem de rastreamento ocular ou abrindo as Configurações do aplicativo no menu iniciar e, em seguida, selecionando ** Sistema> Calibragem> Calibragem Ocular> Execute a calibragem ocular**.
+Se o usuário fizer a transição de um aplicativo não habilitado para olhar para um que acesse os dados do olhar, o sistema de gerenciamento de calibragem será exibido. 
 
-**Problemas conhecidos**
- - Estamos investigando um problema em que o processo de host do driver do rastreador ocular pode travar ao ser executado sob carga de memória pesada. O processo de host do driver de rastreamento ocular deve se recuperar automaticamente.
+Todos os outros comportamentos do sistema serão semelhantes quando o usuário atual não tiver uma calibragem de rastreamento ocular ativa. Por exemplo, o gesto de Partida com Uma mão não será habilitado. Não haverá nenhuma alteração na Experiência Inicial do programa de instalação inicial.
 
+Para experiências que exigem dados do olhar do olho ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular. Ele pode ser acessado do sistema de gerenciamento de calibragem de controle ocular ou iniciando o aplicativo Configurações no menu iniciar e, em seguida, selecionando **Sistema > Calibragem > Calibragem Ocular > Executar a calibragem ocular**.
+
+#### Aviso de Calibragem Adiado
+
+Com a Posição Ocular Automática, a caixa de diálogo de aviso de Calibragem de Rastreamento Ocular é adiada até que um aplicativo solicite dados Olhar. Isso garante que não haja nenhum aviso para o usuário quando o aplicativo ativo não exigir olhar. Se o aplicativo exigir dados do olhar e o usuário atual não for calibrado, o usuário será apresentado com um aviso de calibragem. Esse comportamento pode ser usado para exibir o aviso de calibragem de rastreamento ocular em um momento adequado para a experiência. Esse método é recomendado pelos seguintes motivos
+
+1.  A caixa de diálogo de Aviso de Calibragem de Rastreamento Ocular fornece ao usuário detalhes sobre por que o rastreamento de olho é necessário.
+2.  Apresenta ao usuário uma maneira de recusar que seus olhos sejam calibrados.
+
+Se o usuário escolher iniciar a Calibragem de Rastreamento Ocular, o foco deve retornar ao aplicativo original após a calibragem ser concluída. 
 
 ### Solução de problemas de calibragem do HoloLens 2
 
