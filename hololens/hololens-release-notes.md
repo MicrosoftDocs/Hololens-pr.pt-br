@@ -15,12 +15,12 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df8d6e2c00bd8ff8507be4a2fd58c773d8833c11
-ms.sourcegitcommit: 20ff249e3570c74f62cdf6339c8be76c401d9f4a
+ms.openlocfilehash: 3cf2797d4c01f66b6433aaf327e31061a8dd2f3e
+ms.sourcegitcommit: 307e313f05243b6d94f9bfc0cb4e316a00a8005c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11165976"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176903"
 ---
 # Notas de versão do HoloLens 2
 
@@ -46,7 +46,7 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Os pacotes de provisionamento são aplicados automaticamente durante o OOBE na página de provisionamento.                                                         |
 | [Provisionamento automático sem usar a interface do usuário](hololens-release-notes.md#automatic-provisioning-without-using-ui) | Como combinar a inicialização automática do provisionamento e a confirmação automática juntas. |
 | [Usar o AutoPilot com conexão Wi-Fi](hololens-release-notes.md#using-autopilot-with-wi-fi-connection) | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet. |
-| [CSP Tenantlockdown e AutoPilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. |
+| [CSP do Tenantlockdown e AutoPilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. |
 | [Acesso Global Atribuído](hololens-release-notes.md#global-assigned-access--kiosk-mode)                               | Novo método de configuração para o modo de quiosque de vários aplicativos que aplica o quiosque no nível do sistema, tornando-o aplicável a todos.                  |
 | [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.                                                        |
 | [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Agora, a falha do modo de quiosque tem fallback restritivo.                                                                                                |
@@ -62,22 +62,22 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 
 ### Suporte Automático de Posição Ocular
 
-No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições de olho são calculadas internamente como parte da computação de rastreamento ocular. No entanto, isso exige que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência não exigir a entrada olhar olho.
+No HoloLens 2, as posições dos olhos habilitam o posicionamento preciso do holograma, experiência de visualização confortável e qualidade de exibição aprimorada. As posições do olho são calculadas internamente como parte da computação de rastreamento ocular. Entretanto, isso requer que cada usuário passe pela calibragem de rastreamento ocular, mesmo quando a experiência possa não requerer a entrada do olhar fixo.
 
-A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário. A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento de olho anterior, a posição de olho automático começará a fornecer as posições de olho do usuário para o sistema de exibição após um tempo de processamento de 20-30 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.
+A ** Posição Automática Ocular (AEP)** habilita esses cenários com uma forma livre de interação de calcular as posições dos olhos para o usuário. A Posição Automática Ocular começa a funcionar em tela de fundo automaticamente a partir do momento em que o usuário coloca o dispositivo. Se o usuário não tiver uma calibragem de rastreamento ocular anterior, a Posição Automática Ocular começará a fornecer as posições dos olhos do usuário para o sistema de exibição após um tempo de processamento de 20 a 30 segundos. Os dados do usuário não são persistentes no dispositivo e consequentemente esse processo é repetido se o usuário tirar e colocar o dispositivo novamente ou se o dispositivo for reinicializado ou acordar da suspensão.
 
-Existem algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Nesse contexto, um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento de olho no dispositivo anteriormente.
+Há algumas alterações de comportamento do sistema com o recurso Posição Automática Ocular quando um usuário não calibrado coloca o dispositivo. Nesse contexto, um usuário sem calibragem refere-se a alguém que não passou pelo processo de calibragem de rastreamento ocular no dispositivo anteriormente.
 
-| Aplicativo Ativo | Comportamento anterior | Comportamento do Windows holográfico, versão 20H2 Update |
+| Aplicativo Ativo | Comportamento Anterior | Comportamento do Windows Holográfico, versão 20H2 Update |
 |:-------------------|:-----------------|:-----------------------------------|
-| Aplicativo não habilitado para o olhar ou o Shell Holográfico |A caixa de diálogo aviso de calibragem de rastreamento ocular será exibida. | Nenhum sistema de gerenciamento é exibido. |
-| Aplicativo habilitado para olhar | A caixa de diálogo aviso de calibragem de rastreamento ocular será exibida. | O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo de olhar de olho. |
+| Aplicativo não habilitado para olhar ou o Shell Holográfico |A caixa de diálogo do sistema de gerenciamento de calibragem do rastreamento ocular é exibida. | Nenhum sistema de gerenciamento é exibido. |
+| Aplicativo habilitado para olhar | A caixa de diálogo do sistema de gerenciamento de calibragem do rastreamento ocular é exibida. | O aviso de calibragem de rastreamento ocular é exibido apenas quando o aplicativo acessa o fluxo do olhar fixo. |
 
 Se o usuário fizer a transição de um aplicativo não habilitado para olhar para um que acesse os dados do olhar, o sistema de gerenciamento de calibragem será exibido. 
 
-Todos os outros comportamentos do sistema serão semelhantes quando o usuário atual não tiver uma calibragem ativa de rastreamento ocular. Por exemplo, o gesto de início de uma mão não será habilitado. Não haverá nenhuma alteração na experiência inicial do programa de instalação inicial.
+Todos os outros comportamentos do sistema serão semelhantes quando o usuário atual não tiver uma calibragem de rastreamento ocular ativa. Por exemplo, o gesto de Partida com Uma mão não será habilitado. Não haverá nenhuma alteração na Experiência Inicial do programa de instalação inicial.
 
-Para experiências que exigem dados de olho olhar ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular. Ele pode ser acessado do prompt de calibragem de controle ocular ou iniciando o aplicativo configurações no menu iniciar e, em seguida, selecionando **sistema > Calibragem > calibragem de olho > executar a calibragem**
+Para experiências que exigem dados do olhar do olho ou posicionamento muito preciso do holograma, recomendamos que os usuários não calibrados executem a calibragem de rastreamento ocular. Ele pode ser acessado do sistema de gerenciamento de calibragem de controle ocular ou iniciando o aplicativo Configurações no menu iniciar e, em seguida, selecionando **Sistema > Calibragem > Calibragem Ocular > Executar a calibragem ocular**.
 
 Essas informações podem ser encontradas mais tarde com [outras informações de calibragem](hololens-calibration.md#auto-eye-position-support). 
 
@@ -164,51 +164,51 @@ Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioni
 
 Agora, durante o OOBE, quando você conectar o HoloLens 2 com WiFi, o OOBE verificará se há um perfil do AutoPilot para o dispositivo. Se um for encontrado, ele será usado para concluir o restante do fluxo do AAD e do fluxo de registro. Em outras palavras, usar Ethernet para USB-C ou Wi-Fi para o adaptador USB-C não é mais necessário, mas continuará a funcionar, se fornecido no início do OOBE. Saiba mais sobre o [AutoPilot para dispositivos HoloLens 2](hololens2-autopilot.md).
 
-### CSP Tenantlockdown e AutoPilot
+### CSP do Tenantlockdown e AutoPilot
 - Mantém os dispositivos no locatário da organização bloqueando-os para o locatário, mesmo através da reinicialização do dispositivo ou do reflash. Com mais segurança, desautorizando a criação da conta por meio do provisionamento. 
 
 Os dispositivos do HoloLens 2 agora dão suporte ao CSP TenantLockdown da [versão 20H2 do Windows holográfico](hololens-release-notes.md#windows-holographic-version-20h2). 
 
-[TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) O CSP permite que o HoloLens 2 seja vinculado ao registro de MDM usando somente o AutoPilot. Depois que o TenantLockdown do CSP do RequireNetworkInOOBE for definido como verdadeiro ou falso (inicialmente definido) no HoloLens 2, esse valor permanecerá no dispositivo, independentemente da atualização, das atualizações do sistema operacional, etc. 
+O CSP do [TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) permite que o HoloLens 2 seja vinculado ao registro do MDM usando apenas o Autopilot. Depois que o nó RequireNetworkInOOBE do CSP do TenantLockdown for definido com valor verdadeiro ou falso (definido inicialmente) no HoloLens 2, esse valor permanece no dispositivo, apesar de atualizar novamente, atualizações do sistema operacional, etc. 
 
-Depois que o nó RequireNetworkInOOBE ' CSPs ' TenantLockdown estiver definido como true no HoloLens 2, o OOBE esperará indefinidamente que o perfil do AutoPilot seja baixado e aplicado com êxito, após a conectividade de rede. 
+Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, o OOBE aguarda indefinidamente que o perfil do Autopilot seja baixado e aplicado com sucesso, após a conectividade de rede. 
 
-Uma vez que o nó RequireNetworkInOOBE de CSPs TenantLockdown está definido como true no HoloLens 2, as operações a seguir não são permitidas no OOBE: 
-- Criando usuário local usando o provisionamento de tempo de execução 
-- Executando a operação de junção do AAD por meio do provisionamento de tempo de execução 
-- Selecionando quem é o proprietário do dispositivo em uma experiência de OOBE 
+Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, as seguintes operações não serão permitidas no OOBE: 
+- Criação de usuário local usando provisionamento do tempo de execução 
+- Execução da operação de ingresso no AAD através de provisionamento do tempo de execução 
+- Seleção de proprietários do dispositivo na experiência do OOBE 
 
 #### Como definir isso usando o Intune? 
 1. Crie um perfil de configuração de dispositivo OMA URI personalizado e especifique true para o nó RequireNetworkInOOBE, conforme mostrado a seguir.
-O valor OMA-URI deve ser./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+O valor OMA-URI deve ser ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
    > [!div class="mx-imgBorder"]
-   > ![Configurando o bloqueio do locatário via OMA-URI](images/hololens-tenant-lockdown.png)
+   > ![Configurar o bloqueio de locatário via OMA-URI](images/hololens-tenant-lockdown.png)
 
-1. Crie um grupo e atribua o perfil de configuração do dispositivo a esse grupo de dispositivos. 
+1. Crie um grupo e atribua o perfil de configuração de dispositivo a esse grupo de dispositivos. 
 
-1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.  
+1. Torne o dispositivo HoloLens 2 um membro do grupo criado na etapa anterior e acione a sincronização.  
 
-Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo HoloLens 2, os efeitos de TenantLockdown ficarão ativos.
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com sucesso. Depois que esta configuração de dispositivo for aplicada com sucesso no dispositivo Hololens 2, os efeitos do TenantLockdown estarão ativos.
 
-#### Como desproteger o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
-1. Remova o HoloLens 2 do grupo de dispositivos ao qual a configuração de dispositivo criada acima foi anteriormente atribuída. 
+#### Como desmarcar o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
+1. Remova o HoloLens 2 do grupo de dispositivos ao qual a configuração de dispositivos criada acima foi atribuída anteriormente. 
 
-1. Crie um perfil de configuração de dispositivo baseado em OMA URI e especifique false para RequireNetworkInOOBE, conforme mostrado abaixo. O valor OMA-URI deve ser./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+1. Crie um perfil de configuração de dispositivo baseado em OMA-URI personalizado e especifique falso para RequireNetworkInOOBE como mostrado a seguir. O valor OMA-URI deve ser ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
    > [!div class="mx-imgBorder"]
-   > ![Captura de tela da configuração de RequireNetworkInOOBE para falsa via URI OMA no Intune](images/hololens-tenant-lockdown-false.png)
+   > ![Captura de tela da configuração de RequireNetworkInOOBE definida como falso via OMA-URI no Intune](images/hololens-tenant-lockdown-false.png)
 
-1. Crie um grupo e atribua o perfil de configuração do dispositivo a esse grupo de dispositivos. 
+1. Crie um grupo e atribua o perfil de configuração de dispositivo a esse grupo de dispositivos. 
 
-1. Torne o membro do dispositivo do HoloLens 2 do grupo criado na etapa anterior e acione a sincronização.
+1. Torne o dispositivo HoloLens 2 um membro do grupo criado na etapa anterior e acione a sincronização.
 
-Verifique no portal do Intune se a configuração do dispositivo foi aplicada com êxito. Depois que a configuração do dispositivo se aplicar com êxito no dispositivo HoloLens 2, os efeitos de TenantLockdown ficarão inativos. 
+Verifique no portal do Intune se a configuração do dispositivo foi aplicada com sucesso. Assim que esta configuração de dispositivo for aplicada com sucesso no dispositivo Hololens 2, os efeitos do TenantLockdown ficarão inativos. 
 
-#### O que aconteceria durante o OOBE, se o perfil do AutoPilot não for atribuído em um HoloLens após o TenantLockdown ser definido como true? 
-O OOBE aguardará indefinidamente o perfil do AutoPilot para baixar e a caixa de diálogo a seguir será apresentada. Para remover efeitos de TenantLockdown, o dispositivo deve ser registrado com seu locatário original primeiro usando o AutoPilot e RequireNetworkInOOBE deve ser indefinida, conforme descrito na etapa anterior, antes que as restrições introduzidas pelo CSP do TenantLockdown sejam removidas. 
+#### O que aconteceria durante o OOBE, se o perfil do Autopilot não fosse atribuído em um HoloLens depois que TenantLockdown fosse definido como verdadeiro? 
+O OOBE aguardará indefinidamente o download do perfil do Autopilot e a caixa de diálogo a seguir será apresentada. Para remover os efeitos do TenantLockdown, o dispositivo deve ser registrado com seu locatário original primeiro usando apenas o Autopilot e o RequireNetworkInOOBE desmarcado, conforme descrito na etapa anterior antes que as restrições introduzidas pelo CSP do TenantLockdown sejam removidas. 
 
-![Modo de exibição no dispositivo quando a política é imposta no dispositivo.](images/hololens-autopilot-lockdown.png)
+![Modo de exibição no dispositivo quando a política for imposta no dispositivo.](images/hololens-autopilot-lockdown.png)
 
 Essas informações agora podem ser encontradas juntamente com o restante do piloto automático sob o [CSP Tenantlockdown e o AutoPilot](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot).
 
@@ -283,6 +283,9 @@ Políticas habilitadas recentemente que permitem mais opções de gerenciamento 
 - [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp)
 
 Essas duas novas diretivas para AllowAddProvisioningPackage e AllowRemoveProvisioningPackage estão sendo adicionadas às nossas [restrições comuns de dispositivo](hololens-common-device-restrictions.md).
+
+> [!NOTE]
+> Em relação ao [RemoteLock](https://docs.microsoft.com/windows/client-management/mdm/remotelock-csp), o HoloLens só dará suporte para a configuração./Vendor/MSFT/RemoteLock/Lock. Não há suporte para as configurações que lidam com o PIN, como redefinição e recuperação.
 
 ### Novas políticas de energia para HoloLens 2
 - Mais opções para quando o HoloLens dorme ou trava via políticas de energia. 
