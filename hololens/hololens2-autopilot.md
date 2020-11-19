@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: be9da0ec2f301705a0691bcfc9dcf9d75eac8922
-ms.sourcegitcommit: cfbcdf562f949eef9cd797bbb08dfdf9f29e8fcd
+ms.openlocfilehash: 429f955777eae5cbe94c710ca4c17e03091fb99e
+ms.sourcegitcommit: 307e313f05243b6d94f9bfc0cb4e316a00a8005c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168510"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176893"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -325,8 +325,8 @@ O OOBE aguardará indefinidamente o download do perfil do Autopilot e a caixa de
 
 ## Problemas conhecidos
 
-- A instalação do aplicativo baseada no contexto do dispositivo configurada no Intune ainda não funciona.
-- Ao configurar o Autopilot via Wi-Fi, pode haver uma instância em que o perfil do Autopilot não é baixado quando a conexão com a Internet é estabelecida pela primeira vez e o Contrato de Licença do Usuário Final (EULA) é apresentado e o usuário tem a opção de prosseguir com as experiências de configuração que não são do Autopilot. Para tentar configurar novamente com o Autopilot, coloque o dispositivo em suspensão e ligue-o novamente, ou reinicie o dispositivo e deixe-o tentar novamente.
+- A instalação do aplicativo baseada no contexto do dispositivo configurada no Intune ainda não funciona. [Saiba mais sobre as instalações de contexto de dispositivo e contexto de usuário.](https://docs.microsoft.com/mem/intune/apps/apps-windows-10-app-deploy#install-apps-on-windows-10-devices)
+-   Durante a configuração do AutoPilot pelo Wi-Fi, pode haver uma instância em que o perfil do AutoPilot não seja baixado quando a conexão com a Internet for estabelecida pela primeira vez. Nesse caso, o Contrato de Licença de Usuário Final (EULA) é apresentado e o usuário tem a opção de continuar com a experiência de configuração não-Autopilot. Para tentar configurar novamente com o Autopilot, coloque o dispositivo em suspensão e ligue-o novamente, ou reinicie o dispositivo e deixe-o tentar novamente.
 
 ### Solução de problemas
 
