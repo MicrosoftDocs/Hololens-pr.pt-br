@@ -12,7 +12,7 @@
 ### [Perguntas frequentes sobre a limpeza do HoloLens 2](hololens2-maintenance.md)
 ### [Idiomas com suporte para HoloLens 2](hololens2-language-support.md)
 ### [Noções básicas sobre o HoloLens 2](hololens2-basic-usage.md)
-### [Perguntas Frequentes sobre a Edição de Desenvolvimento do HoloLens](hololens2-development-edition-faq.md)
+### [Perguntas Frequentes da Edição de Desenvolvimento do HoloLens 2](hololens2-development-edition-faq.md)
 
 
 ## Introdução ao HoloLens (1ª geração)
