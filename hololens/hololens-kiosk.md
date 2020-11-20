@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b4730029755c71cab5dc00b37ac69cd6ed54be58
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: f560dae725cbce8658bdf2a135c5061b5332f797
+ms.sourcegitcommit: 456a88907d606f4c4532b153d5a848e214b6b8e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11162971"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11182002"
 ---
 # Configure o HoloLens como um quiosque
 
@@ -53,7 +53,10 @@ Ao planejar seu quiosque, você precisará ser capaz de atender às seguintes pe
 
 Você pode configurar qualquer dispositivo HoloLens 2 para usar o modo de quiosque.
 
-Para configurar um dispositivo HoloLens (1ª gen) para usar o modo de quiosque, primeiro você deve ter certeza de que o dispositivo executa o Windows 10, versão 1803 ou uma versão posterior. Se você tiver usado a ferramenta de recuperação de dispositivos do Windows para recuperar seu dispositivo HoloLens (1ª gen) para a compilação padrão ou se tiver instalado as atualizações mais recentes, o dispositivo estará pronto para ser configurado.
+> [!IMPORTANT]
+> O modo de quiosque estará disponível somente se o dispositivo tiver o Windows holográfico for Business. Todos os dispositivos do HoloLens 2 são fornecidos com o Windows holográfico para empresas e não há outras versões. Todos os dispositivos HoloLens 2 podem executar o modo de quiosque.
+>
+> Dispositivos HoloLens (1ª gen) precisam ser atualizados tanto em termos de compilação do sistema operacional quanto na edição do sistema operacional. Veja mais informações sobre como atualizar um HoloLens (1ª gen) para o [Windows holográfico for Business](hololens1-upgrade-enterprise.md) Edition. Para atualizar um dispositivo HoloLens (1ª gen) para usar o modo de quiosque, primeiro você deve ter certeza de que o dispositivo executa o Windows 10, versão 1803 ou uma versão posterior. Se você tiver usado a ferramenta de recuperação de dispositivos do Windows para recuperar seu dispositivo HoloLens (1ª gen) para a compilação padrão ou se tiver instalado as atualizações mais recentes, o dispositivo estará pronto para ser configurado.
 
 > [!IMPORTANT]  
 > Para ajudar a proteger dispositivos executados no modo de quiosque, considere adicionar políticas de gerenciamento de dispositivos que desativem recursos como a conectividade USB. Além disso, verifique as configurações de toques de atualização para garantir que as atualizações automáticas não ocorram durante o horário comercial.
@@ -415,9 +418,6 @@ O artigo "configurar o HoloLens usando um pacote de provisionamento" fornece ins
 ## Usar o Windows Device portal para configurar um quiosque de aplicativo único
 
 Para configurar o modo de quiosque usando o Windows Device portal, siga estas etapas.
-
-> [!IMPORTANT]
-> O modo de quiosque estará disponível somente se o dispositivo tiver o [Windows holográfico for Business](hololens1-upgrade-enterprise.md) instalado.
 
 1. [Configure o dispositivo HoloLens para usar o Windows Device portal](https://developer.microsoft.com/windows/mixed-reality/using_the_windows_device_portal#setting_up_hololens_to_use_windows_device_portal). O Device Portal é um servidor Web no HoloLens ao qual você pode se conectar usando um navegador da Web em seu computador.
 
