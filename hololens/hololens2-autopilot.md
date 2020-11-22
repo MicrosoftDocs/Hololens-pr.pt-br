@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot para o HoloLens 2 (Visualização Privada)
+title: Windows Autopilot para HoloLens 2
 description: Como configurar o AutoPilot em dispositivos do HoloLens 2.
 author: Teresa-Motiv
 ms.author: v-tea
@@ -13,140 +13,101 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: 429f955777eae5cbe94c710ca4c17e03091fb99e
-ms.sourcegitcommit: 307e313f05243b6d94f9bfc0cb4e316a00a8005c
+ms.openlocfilehash: 5090a433b3d06e92cd36bdadbfbae3758432bb41
+ms.sourcegitcommit: 8656379a4871e118b9e06e72eab1dbcc8eb3cd42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176893"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "11182442"
 ---
 # Piloto automático do Windows para HoloLens 2
 
-Quando você configura dispositivos do HoloLens 2 para o programa piloto automático do Windows, seus usuários podem seguir um processo simples para provisionar os dispositivos na nuvem.
+A partir da versão 2004 do Windows Holographic, o HoloLens 2 é compatível com o [Modo de Autoimplantação](https://docs.microsoft.com/mem/autopilot/self-deploying) do Windows Autopilot Deployment. Os administradores podem configurar aplicativo de configuração inicial pelo usuário (OOBE) no Microsoft Endpoint Manager e permite aos usuários finais preparem os dispositivos para uso comercial com pouca ou nenhuma interação. Isso reduz a sobrecarga de gerenciamento de estoque, o custo da preparação do dispositivo e das chamadas de suporte de funcionários durante a experiência de configuração. Para saber mais sobre o Windows Autopilot, clique [aqui](https://docs.microsoft.com/mem/autopilot/windows-autopilot).
 
-Esse programa de piloto automático suporta o modo de autoimplantação do piloto automático para provisionar dispositivos HoloLens 2 como dispositivos compartilhados no seu locatário. O modo de autoimplantação aproveita a imagem e os drivers OEM pré-instalados do dispositivo durante o processo de provisionamento. Um usuário pode provisionar o dispositivo sem colocá-lo e passar pela experiência pronta para uso (OOBE). Para saber mais sobre o Windows Autopilot para Windows 10 clique [aqui](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Assim como os dispositivos Surface, é recomendável que os clientes trabalhem com o [Provedor de Soluções de Nuvem](https://partner.microsoft.com/cloud-solution-provider) da Microsoft Corporation (revendedor ou distribuidor) para obter dispositivos registrados com o serviço de piloto automático por meio do Partner Center. Outros métodos para o registro de dispositivos são descritos [aqui](https://docs.microsoft.com/mem/autopilot/add-devices), embora aproveitar os parceiros de canal da Microsoft garanta o caminho mais efetivo de ponta a ponta. 
 
-Quando um usuário iniciar o processo de autoimplantação do piloto automático, o processo concluirá as etapas a seguir:
+> [!NOTE]
+> A partir de 20/11/2020 a configuração do Autopilot para HoloLens no Microsoft Endpoint Manager está em transição para a **Visualização Pública**. Os clientes não precisam mais se registrar na visualização particular e todos os locatários poderão configurar o AutoPilot no centro de administração do MEM.
 
-1. Ingresso do dispositivo no Azure Active Directory (Azure AD)
+Quando um usuário iniciar o processo de autoimplantação do AutoPilot, o AutoPilot concluirá as seguintes etapas:
 
-   > [!NOTE]  
-   > O piloto automático do HoloLens não é compatível com o ingresso no Active Directory ou o Azure AD join.
+1. Ingresso do dispositivo no Azure Active Directory (Azure AD) Observe que o AutoPilot para HoloLens não é compatível com o ingresso no Active Directory ou o ingresso do Azure AD Híbrido.
    
-1. Use o Azure AD para registrar o dispositivo no Microsoft Intune (ou outro serviço MDM).
+1. Use o Azure AD para registrar o dispositivo no Microsoft Endpoint Manager (ou em outro serviço de MDM).
 
-1. Baixe perfis de rede, certificados e aplicativos e políticas direcionados aos dispositivos.
+1. Baixar e aplicar políticas direcionadas a dispositivos, certificados, perfis e aplicativos de rede.
 
 1. Provisione este dispositivo.
 
 1. Apresente a tela de entrada ao usuário.
 
-## Windows Autopilot para o HoloLens 2 Visualização Privada
 
-Siga as etapas abaixo para configurar a Visualização Privada do seu ambiente:
+## Configurando o AutoPilot para HoloLens 2
 
-1. Certifique-se de atender aos requisitos do Windows Autopilot para o HoloLens 2.
+Siga as etapas abaixo para configurar o ambiente:
 
-1. Inscreva-se no programa de visualização privada do Windows Autopilot para o HoloLens 2.
+1. [Análise os requisitos do Windows Autopilot Deployment para o HoloLens 2.](#1-review-requirements-for-windows-autopilot-for-hololens-2)
 
-1. Verifique se o seu locatário está habilitado (inscrito para participar do programa).
+1. [Registre os dispositivos no Windows Autopilot.](#2-register-devices-in-windows-autopilot)
 
-1. Registre seus dispositivos no Windows Autopilot.
+1. [Crie um grupo de dispositivos.](#3-create-a-device-group)
 
-1. Crie um grupo de dispositivos.
+1. [Crie um perfil de implantação.](#4-create-a-deployment-profile)
 
-1. Crie um perfil de implantação.
+1. [Verifique a configuração da Página de Status de Inscrição (ESP).](#5-verify-the-esp-configuration)
 
-1. Verifique a configuração ESP.
-
-1. Configure um perfil de configuração personalizado dos dispositivos HoloLens (problema conhecido).
-
-1. Verifique o status de perfil dos dispositivos do HoloLens.
+1. [Verifique o status de perfil dos dispositivos do HoloLens.](#6-verify-the-profile-status-of-the-hololens-devices)
 
 
-### 1. Verifique se você atende aos requisitos do Windows Autopilot para o HoloLens 2
+#### 1. analisar os requisitos do Windows Autopilot Deployment para o HoloLens 2
 
 **Revise as seguintes seções do artigo de requisitos do Piloto automático do Windows:**
 
-- [Requisitos de rede](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)  
-- [Requisitos de licenciamento](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#licensing-requirements)  
-- [Requisitos de configuração](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#configuration-requirements)
+- [Requisitos de rede](https://docs.microsoft.com/mem/autopilot/networking-requirements)  
+- [Requisitos de licenciamento](https://docs.microsoft.com/mem/autopilot/licensing-requirements)  
+- [Requisitos de configuração](https://docs.microsoft.com/mem/autopilot/configuration-requirements)
 
-**Examine a seção ["Requisitos”](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying#requirements) do artigo do Artigo do modo Autoimplantação do piloto automático do Windows.** Seu ambiente precisa atender a esses requisitos, bem como aos requisitos padrão do Piloto automático do Windows. Você não precisa revisar as seções "Passo a passo" e "Validação" do artigo. Os procedimentos posteriores neste artigo fornecem as etapas correspondentes específicas do HoloLens. Para obter mais informações sobre como registrar dispositivos e configurar perfis, consulte [4. Registrar dispositivos no Piloto automático do Windows](#4-register-devices-in-windows-autopilot) e [6. Crie um perfil de implantação](#6-create-a-deployment-profile) neste artigo. Estas seções fornecem as etapas específicas para o HoloLens.
+**Examine a seção ["Requisitos”](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying#requirements) do artigo do Artigo do modo Autoimplantação do piloto automático do Windows.** Seu ambiente precisa atender a esses requisitos, bem como aos requisitos padrão do Piloto automático do Windows. Você não precisa revisar as seções "Passo a passo" e "Validação" do artigo. Os procedimentos posteriores neste artigo fornecem as etapas correspondentes específicas do HoloLens. Para obter informações sobre como registrar dispositivos e configurar perfis, confira [2. Registre os dispositivos no Windows AutoPilot e no](#2-register-devices-in-windows-autopilot) [4. Crie um perfil de implantação](#4-create-a-deployment-profile) neste artigo. Para configurar e gerenciar os perfis do modo Autoimplantação do Autopilot, certifique-se de que você possui acesso ao [Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com).
 
-> [!IMPORTANT]  
-> O Windows Autopilot para HoloLens 2 possui requisitos específicos de sistema operacional. O Autopilot conta com o Windows Holographic, versão 2004 (build 19041.1103 ou posterior) sendo pré-instalado em dispositivos HoloLens. Os dispositivos entregues até o final de setembro de 2020 têm o Windows Holographic, versão 1903 pré-instalado. Entre em contato com o seu distribuidor para saber quando os dispositivos prontos para o Autopilot podem ser enviados a você. Se você deseja participar da versão prévia privada, confira as instruções e requisitos abaixo.
+**Análise os requisitos do sistema operacional do HoloLens:**
 
-Informações específicas do Autopilot por versões do sistema operacional do HoloLens.
-- Para usar o AutoPilot, um dispositivo deve ter o [Windows Holographic, versão 2004](hololens-release-notes.md#windows-holographic-version-2004) ou mais recente.
+- Os dispositivos devem estar no [Windows Holographic, versão 2004](hololens-release-notes.md#windows-holographic-version-2004) (Build 19041,1103) ou posterior. Para confirmar a versão de compilação em seu dispositivo ou atualizar para o sistema operacional mais recente, é possível usar o [Complemento Avançado de Recuperação (ARC)](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?rtc=1&activetab=pivot:overviewtab). É possível localizar as instruções [aqui](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device). Observe que os dispositivos entregues até o final de setembro de 2020 têm a versão 1903 do Windows Holographic pré-instalada. Contato o revendedor para garantir que os dispositivos prontos para o AutoPilot sejam enviados para você.
 
-- Para usar o AutoPilot usando Wi-Fi, um dispositivo deve ter o [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) ou mais recente. No entanto, essas compilações ainda podem usar adaptadores Ethernet. 
+- A versão 2004 do Windows Holographic, só é compatível com o Autopilot na conexão ethernet. Verifique se o HoloLens está conectado à ethernet usando um adaptador de "USB-C para Ethernet" **antes de ligá-lo**. Na inicialização do dispositivo, nenhuma interação do usuário é necessária. Se você estiver planejando uma implantação do AutoPilot para muitos dispositivos HoloLens, recomendamos que você planeje a infraestrutura do adaptador. Não recomendamos hubs USB, pois eles geralmente exigem que outros drivers de terceiros sejam instalados, os quais não são suportados no HoloLens. 
 
-- Em compilações do [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2), foi habilitada uma nova opção de gerenciamento de dispositivo de [CSP do Tenantlockdown e Autopilot](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot).  
+- A [versão 20H2 do Windows Holographic](hololens-release-notes.md#windows-holographic-version-20h2) (Build 19041,1128) ou posterior suporta o AutoPilot pelo Wi-Fi, embora você ainda possa usar adaptadores ethernet. Para dispositivos conectados via Wi-Fi, o usuário só deve:
 
-Se quiser confirmar a versão de compilação do dispositivo ou atualizá-la, conecte-o ao um computador com Windows 10 e inicie o [Advanced Recovery Companion](https://www.microsoft.com/store/productId/9P74Z35SFRS8). 
-
-**Se você deseja experimentar a visualização do Autopilot, antes de iniciar o processo OOBE e provisionamento, verifique se os dispositivos do HoloLens atendem aos seguintes requisitos:**
-
-- Certifique-se de que o dispositivo esteja no Windows Holográfico, versão 2004 (compilação 19041.1103 ou posterior). Se o Sistema Operacional mais recente não estiver pré-instalado, você deve atualizar manualmente usando o [Complemento de Recuperação Avançado (ARC)](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?rtc=1&activetab=pivot:overviewtab). Você pode encontrar as instruções [aqui](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device). 
-
-- Seus dispositivos devem estar registrados no Windows Autopilot. Para obter informações sobre como registrar os dispositivos, consulte [4. Registre os dispositivos no Windows Autopilot](#4-register-devices-in-windows-autopilot). É recomendável que o revendedor ou distribuidor registre os dispositivos para você.  
-
-- No [Windows Holographic, versão 2004](hololens-release-notes.md#windows-holographic-version-2004), os dispositivos precisam estar conectados à Internet antes de ativar o HoloLens e iniciar o processo de provisionamento do AutoPilot. Conecte o dispositivo à Ethernet usando um adaptador "USB-C para Ethernet" para conectividade com a Internet com fio.
-
-- No [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2), os dispositivos podem se conectar a Wi-Fi no OOBE para detectar o AutoPilot. 
-
-- Os dispositivos ainda não são membros do Azure AD e não estão registrados no Intune (ou em outro sistema MDM). O processo de autoimplantação do Piloto automático conclui essas etapas. Para garantir que todas as informações relacionadas ao dispositivo estejam limpas, verifique as páginas dos **Dispositivos** nos portais do Azure AD e do Intune.
-
-- Para configurar e gerenciar os perfis do modo Autoimplantação do Piloto automático, certifique-se de que você possui acesso ao [Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com).
+     - Percorrer a cena da hummingbird
+     - Escolher o idioma e a localidade
+     - Executar a calibragem do olho
+     - Estabelecer a conexão de rede
 
 
-### 2. Inscreva-se no programa Piloto Automático do Windows para o HoloLens 2.
+- A versão 20H2 do Windows Holographic suporta o [Provedor de Soluções na Nuvem da Microsoft Tenantlockdown e o AutoPilot](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot), que bloqueia um dispositivo para um locatário e garante que o dispositivo permaneça associado a esse locatário em caso de reinicialização acidental ou intencional de reinicialização ou apagamento.  
 
-**Para participar do programa, você deve ter seu locatário inscrito no Programa de Visualização Privada. Isso habilita os controles da interface do usuário específicos do HoloLens Intune (também conhecido como MEM) para o Autopilot.** Para fazer isso, vá para a [Solicitação de Piloto automático do Windows para a Visualização privada do HoloLens](https://aka.ms/APHoloLensTAP) ou use o seguinte código QR para enviar uma solicitação.  
+- Certifique-se de que os dispositivos ainda não sejam membros do Microsoft Azure Active Directory e não estejam registrados no Intune (ou outro sistema MDM). O processo de autoimplantação do Autopilot conclui essas etapas. Para garantir que todas as informações relacionadas ao dispositivo estejam limpas, verifique as páginas dos **Dispositivos** nos portais tanto do Azure AD quanto do Intune. Observe que o recurso "Converter todos os dispositivos de destino para AutoPilot" não é compatível com o HoloLens no momento.  
 
-![Código QR do piloto automático](./images/hololens-ap-qrcode.png)  
+### 2. Registre os dispositivos no Windows AutoPilot Deployment
 
-A Microsoft faz voos com os locatários uma vez por semana. Você receberá uma notificação por e-mail assim que o período de veiculação for concluído. 
+Os dispositivos devem ser registrados no Windows Autopilot Deployment antes da primeira configuração. Para obter a documentação do MEM no registro do dispositivo, confira [Adicionando os dispositivos ao AutoPilot](https://docs.microsoft.com/mem/autopilot/add-devices).  
 
-Na solicitação, forneça as seguintes informações:
+Há duas maneiras principais de registrar dispositivos HoloLens: 
 
-- Domínio do locatário
-- ID do locatário
-- Número de dispositivos HoloLens 2 que estão participando desta avaliação
-- Número de dispositivos HoloLens 2 que você planeja implantar usando o modo autoimplantação do piloto automático
-
-### 3. verifique se o locatário foi comprovado
-
-Para verificar se seu locatário é transportado ao programa Piloto automático depois de enviar sua solicitação, siga estas etapas:
-
-1. Entre no [Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com).
-
-1. Clique em DispositivosWindowsRegistro do Windows**Perfis de implantação do Piloto automático do Windows** > **Criar perfil**.  
-   
-   ![Criar lista suspensa de perfis inclui um item do HoloLens.](./images/hololens-ap-enrollment-profiles.png)
-   
-   Você deverá visualizar uma lista que inclui **HoloLens**. Se essa opção não estiver presente, use uma das opções de [Comentários](hololens2-autopilot.md#feedback-for-autopilot) para entrar em contato conosco.
-
-### 4. Registre dispositivos no Piloto automático do Windows.
-
-Na fase de preparação, existem duas maneiras principais de registrar os dispositivos no Windows Autopilot: 
-
-1. **Entre em contato com seu distribuidor ou revendedor quando você fizer um pedido para que seus dispositivos sejam registrados**.
+1. **O revendedor pode registrar os dispositivos no Partner Center quando você fizer um pedido.** 
+ > [!NOTE]  
+   > Esse é o caminho recomendado para adicionar os dispositivos ao serviço de Autopilot. [Saiba mais](https://docs.microsoft.com/mem/autopilot/add-devices#reseller-distributor-or-partner-registration).  
 
    ou
    
-2. **Recupere o hash de hardware (também conhecido como ID de hardware) e registre o dispositivo manualmente**. 
+2. **Recupere o código hash de hardware (também conhecido como ID de hardware) e registre o dispositivo manualmente no centro de administração do MEM**. 
 
-Para mais informações sobre o registro de dispositivos, consulte a documentação [Adicionando dispositivos ao Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/add-devices).  
+**Recuperar o código hash de hardware**
 
-**Recupere um hash de hardware de dispositivo**
-
-O dispositivo pode registrar seu hash de hardware em um arquivo CSV durante o processo OOBE, ou mais tarde, quando o proprietário do dispositivo iniciar o processo de coleta de logs de diagnóstico (descrito no procedimento a seguir). Geralmente, o proprietário do dispositivo é o primeiro usuário a entrar no dispositivo.
+O dispositivo registra o código hash de hardware em um arquivo CSV durante o processo OOBE, ou mais tarde, quando um proprietário do dispositivo inicia o processo de coleta do log de diagnóstico (descrito no procedimento a seguir). Geralmente, o proprietário do dispositivo é o primeiro usuário a entrar no dispositivo.
 
 1. Inicie o dispositivo do HoloLens 2.
 
-1. No dispositivo, pressione os botões Ligar e Baixar volume e solte-os solte-os. O dispositivo coleta os logs de diagnóstico e o hash do hardware, e os armazena em um conjunto de arquivos. zip. 
+1. No dispositivo, pressione os botões **Ligar/Desligar** e **Volume para Baixo** ao mesmo tempo e, em seguida, libere-os. O dispositivo coleta os logs de diagnóstico e o código hash do hardware, e os armazena em um conjunto de arquivos .zip. 
 
    1. Para obter detalhes completos e um vídeo de instrução sobre como realizar isso, leia sobre os [Diagnósticos Offline](hololens-diagnostic-logs.md#offline-diagnostics). 
    
@@ -167,11 +128,11 @@ O dispositivo pode registrar seu hash de hardware em um arquivo CSV durante o pr
    > Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User <serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>
    >```
 
-**Registre os dispositivos no Piloto automático do Windows.**
+**Registrar dispositivo por meio do MEM**
 
-1. No Centro de administração do Microsoft Endpoint Manager, clique em DispositivosWindowsRegistro do Windows e clique em dispositivos > **Importar** em **Programa de implantação do piloto automático do Windows**.
+1. No [centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com), selecione **Dispositivos** > ** Windows** > **Inscrição do Windows** e, em seguida, selecione **Importar** > **Dispositivos** em **Programa Windows Autopilot Deployment**.
 
-1. Em **Adicionar dispositivos do piloto automático do Windows**, clique no arquivo CSV DeviceHash, clique em **Abrir**e em **Importar**.  
+1. Em **Adicionar dispositivos do Windows Autopilot**, clique no arquivo CSV DeviceHash, clique em **Abrir**e em**Importar**.  
    
    ![Use o comando Importar para importar o hash do hardware.](./images/hololens-ap-hash-import.png)
    
@@ -179,11 +140,11 @@ O dispositivo pode registrar seu hash de hardware em um arquivo CSV durante o pr
    
    ![Use os comandos Sincronizar e Atualizar para exibir a lista de dispositivos.](./images/hololens-ap-devices-sync.png)  
 
-### 5. Crie um grupo de dispositivos
+### 3. Criar um grupo de dispositivos
 
-1. No Centro de administração do Microsoft Endpoint Manager, clique em **Grupos** > **Grupo novo**.
+1. No [centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com), selecione **Grupos**  >  **Novo grupo**.
 
-1. Para **Tipo de grupo**, clique em **Segurança** e insira um nome e uma descrição do grupo.
+1. Para **Tipo de grupo**, selecione **Segurança** e insira um nome e uma descrição do grupo.
 
 1. Para Tipo de associação, clique em Atribuídos ou **Dispositivo dinâmico**.
 
@@ -197,13 +158,16 @@ O dispositivo pode registrar seu hash de hardware em um arquivo CSV durante o pr
 
      > [!NOTE]  
      > Esses atributos de destino de regras são exclusivos dos dispositivos do Piloto automático.
-1. Clique em **OK** e em **Criar**.
+1. Clique em **Salvar** e em **Criar**.
 
-### 6. Crie um perfil de implantação
+### 4. criar um perfil de implantação
 
-1. No Centro de administração do Microsoft Endpoint Manager, clique em **Dispositivos** > **Windows** > **Registro do Windows** > **Perfis de implantação do Piloto automático do Windows** > **Criar perfil** > **HoloLens**.
+1. No [centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com), selecione **Dispositivos** > ** Windows** > ** Inscrições do Windows** > ** Perfis de implantação do Windows Autopilot** > ** Criar perfil** > ** HoloLens**.
+   ![Criar lista suspensa de perfis inclui um item do HoloLens.](./images/hololens-ap-enrollment-profiles.png)
+
 1. Insira um nome e uma descrição para o perfil e clique em **Próximo**.  
-   
+   Você deverá visualizar uma lista que inclui **HoloLens**. Se essa opção não estiver presente, use uma das opções de [Comentários](hololens2-autopilot.md#feedback-and-support-for-autopilot) para nos contatar.
+
    ![Adicione um nome e descrição de perfil](./images/hololens-ap-profile-name.png)
 1. Na página **Experiência pronta para uso (OOBE)**, a maioria das configurações são pré-configuradas para simplificar o OOBE para essa avaliação. Opcionalmente, você pode definir as seguintes configurações:  
 
@@ -226,18 +190,18 @@ O dispositivo pode registrar seu hash de hardware em um arquivo CSV durante o pr
    
 1. Na página **Revisar + Criar**, examine as configurações e clique em **Criar** para criar o perfil.  
    
-   ![Revisar + Criar](./images/hololens-ap-profile-summ.png)
+   ![Analisar + criar](./images/hololens-ap-profile-summ.png)
 
-### 7. Verifique a configuração ESP
+### 5. Verificar a configuração de ESP
 
 A Página de status da inscrição (ESP) exibe o status do processo completo de configuração do dispositivo que é executado quando um usuário gerenciado pelo MDM entra em um dispositivo pela primeira vez. Verifique se a configuração do ESP é semelhante à seguinte e verifique se as atribuições estão corretas.  
 
 > [!div class="mx-imgBorder"]
 > ![Configuração ESP](./images/hololens-ap-profile-settings.png)
 
-### 8. Verifique o status do perfil dos dispositivos HoloLens
+### 6. Verificar o status do perfil dos dispositivos HoloLens
 
-1. No Centro de administração do Microsoft Endpoint manager, clique em DispositivosWindows > **Registro do Windows** > **Dispositivos**.
+1. No Centro de administração do Microsoft Endpoint Manager, selecione **Dispositivos** > **Windows** > **Inscrição do Windows** > **Dispositivos**.
 
 1. Verifique se os dispositivos do HoloLens estão listados e se o status do perfil é **Atribuído**.  
 
@@ -275,14 +239,13 @@ Depois que as instruções acima forem concluídas, os usuários do HoloLens 2 p
 
 1. No final do OOBE, é possível entrar no dispositivo usando seu nome de usuário e senha.
 
-   <br/><img src="./images/other-user.jpg" width="450" height="700" />
+   <br/><img src="./images/other-user.jpg" alt="Other user" width="450" height="700" />
 
-## CSP do Tenantlockdown e AutoPilot
-- Mantém os dispositivos no locatário da organização bloqueando-os para o locatário, mesmo através da reinicialização do dispositivo ou do reflash. Com mais segurança, desautorizando a criação da conta por meio do provisionamento. 
+## O Provedor de Soluções na Nuvem da Microsoft do Tenantlockdown e AutoPilot
 
-Os dispositivos HoloLens 2 agora são compatíveis com o CSP do TenantLockdown a partir da versão 20H2 do Windows Holographic. 
+Os dispositivos do HoloLens 2 dão suporte ao Provedor de Soluções na Nuvem da Microsoft TenantLockdown para a versão 20H2 do Windows Holographic. O Provedor de Soluções na Nuvem da Microsoft mantém os dispositivos no locatário da organização bloqueando-os para esse locatário, mesmo através da reinicialização ou atualização do dispositivo. 
 
-O CSP do [TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) permite que o HoloLens 2 seja vinculado ao registro do MDM usando apenas o Autopilot. Depois que o nó RequireNetworkInOOBE do CSP do TenantLockdown for definido com valor verdadeiro ou falso (definido inicialmente) no HoloLens 2, esse valor permanece no dispositivo, apesar de atualizar novamente, atualizações do sistema operacional, etc. 
+O Provedor de Soluções na Nuvem da Microsoft [TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) permite que o HoloLens 2 seja vinculado a inscrição do MDM usando apenas o Autopilot. Depois que o nó RequireNetworkInOOBE do CSP do TenantLockdown for definido com valor verdadeiro ou falso (definido inicialmente) no HoloLens 2, esse valor permanece no dispositivo, apesar de atualizar novamente, atualizações do sistema operacional, etc. 
 
 Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, o OOBE aguarda indefinidamente que o perfil do Autopilot seja baixado e aplicado com sucesso, após a conectividade de rede. 
 
@@ -291,7 +254,7 @@ Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido co
 - Execução da operação de ingresso no AAD através de provisionamento do tempo de execução 
 - Seleção de proprietários do dispositivo na experiência do OOBE 
 
-### Como definir isso usando o Intune? 
+#### Como definir isso usando o Intune? 
 1. Crie um perfil de configuração de dispositivo OMA URI personalizado e especifique true para o nó RequireNetworkInOOBE, conforme mostrado a seguir.
 O valor OMA-URI deve ser ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
@@ -304,7 +267,7 @@ O valor OMA-URI deve ser ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
 Verifique no portal do Intune se a configuração do dispositivo foi aplicada com sucesso. Depois que esta configuração de dispositivo for aplicada com sucesso no dispositivo Hololens 2, os efeitos do TenantLockdown estarão ativos.
 
-### Como desmarcar o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
+#### Como desmarcar o RequireNetworkInOOBE do TenantLockdown no HoloLens 2 usando o Intune? 
 1. Remova o HoloLens 2 do grupo de dispositivos ao qual a configuração de dispositivos criada acima foi atribuída anteriormente. 
 
 1. Crie um perfil de configuração de dispositivo baseado em OMA-URI personalizado e especifique falso para RequireNetworkInOOBE como mostrado a seguir. O valor OMA-URI deve ser ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
@@ -318,15 +281,16 @@ Verifique no portal do Intune se a configuração do dispositivo foi aplicada co
 
 Verifique no portal do Intune se a configuração do dispositivo foi aplicada com sucesso. Assim que esta configuração de dispositivo for aplicada com sucesso no dispositivo Hololens 2, os efeitos do TenantLockdown ficarão inativos. 
 
-### O que aconteceria durante o OOBE, se o perfil do Autopilot não fosse atribuído em um HoloLens depois que TenantLockdown fosse definido como verdadeiro? 
+#### O que aconteceria durante o OOBE, se o perfil do Autopilot não fosse atribuído em um HoloLens depois que TenantLockdown fosse definido como verdadeiro? 
 O OOBE aguardará indefinidamente o download do perfil do Autopilot e a caixa de diálogo a seguir será apresentada. Para remover os efeitos do TenantLockdown, o dispositivo deve ser registrado com seu locatário original primeiro usando apenas o Autopilot e o RequireNetworkInOOBE desmarcado, conforme descrito na etapa anterior antes que as restrições introduzidas pelo CSP do TenantLockdown sejam removidas. 
 
 ![Modo de exibição no dispositivo quando a política for imposta no dispositivo.](images/hololens-autopilot-lockdown.png)
 
-## Problemas conhecidos
+## Problemas Conhecidos e limitações
 
-- A instalação do aplicativo baseada no contexto do dispositivo configurada no Intune ainda não funciona. [Saiba mais sobre as instalações de contexto de dispositivo e contexto de usuário.](https://docs.microsoft.com/mem/intune/apps/apps-windows-10-app-deploy#install-apps-on-windows-10-devices)
--   Durante a configuração do AutoPilot pelo Wi-Fi, pode haver uma instância em que o perfil do AutoPilot não seja baixado quando a conexão com a Internet for estabelecida pela primeira vez. Nesse caso, o Contrato de Licença de Usuário Final (EULA) é apresentado e o usuário tem a opção de continuar com a experiência de configuração não-Autopilot. Para tentar configurar novamente com o Autopilot, coloque o dispositivo em suspensão e ligue-o novamente, ou reinicie o dispositivo e deixe-o tentar novamente.
+- Estamos investigando um problema em que a instalação do aplicativo baseado em contexto de dispositivo configurada no MEM não se aplica ao HoloLens. [Saiba mais sobre as instalações de contexto de dispositivo e contexto de usuário.](https://docs.microsoft.com/mem/intune/apps/apps-windows-10-app-deploy#install-apps-on-windows-10-devices)
+- Durante a configuração do AutoPilot pelo Wi-Fi, pode haver uma instância em que o perfil do AutoPilot não seja baixado quando a conexão com a Internet for estabelecida pela primeira vez. Nesse caso, o Contrato de Licença de Usuário Final (EULA) é apresentado e o usuário tem a opção de continuar com a experiência de configuração não-Autopilot. Para tentar configurar novamente com o Autopilot, coloque o dispositivo em suspensão e ligue-o novamente, ou reinicie o dispositivo e deixe-o tentar novamente.
+- O recurso "converter todos os dispositivos de destino para AutoPilot" não é compatível com o HoloLens no momento.  
 
 ### Solução de problemas
 
@@ -335,12 +299,14 @@ Os artigos a seguir podem ser um recurso útil para obter mais informações e s
 - [Solução de problemas de registro de dispositivos Windows no Microsoft Intune](https://docs.microsoft.com/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
 - [Windows Autopilot: Conflitos de Política](https://docs.microsoft.com/mem/autopilot/policy-conflicts)
 
-## Comentários sobre o Autopilot
+## Comentários e suporte para o AutoPilot
 
 Para fornecer comentários ou relatar problemas, use um dos seguintes métodos:
 
-- Use o aplicativo Feedback Hub. Você pode encontrar esse aplicativo em um computador conectado ao HoloLens. No Feedback Hub, clique em **Gerenciamento de empresa**  > **Dispositivo**. Ao enviar comentários ou relatar um problema, forneça uma descrição detalhada. Se aplicável, inclua capturas de tela e logs.
-- Se você encontrar problemas no Intune durante o registro do dispositivo ou do perfil do Autopilot que não está sendo atribuído, abra um tíquete de suporte em [https://aka.ms/apsupport](https://aka.ms/apsupport) .
-- Se você encontrar problemas no dispositivo HoloLens durante a experiência do Autopilot, abra um tíquete de suporte em [https://aka.ms/hlsupport](https://aka.ms/hlsupport) com [logs de diagnóstico offline](hololens-diagnostic-logs.md#offline-diagnostics).
+- Para obter suporte ao registro de dispositivos, entre em contato com seu revendedor ou distribuidor.
+- Para obter consultas de suporte gerais sobre o Windows Autopilot, ou para problemas como atribuições de perfil, criação de grupo ou controles do portal MEM, [contate o suporte do Microsoft Endpoint Manager.](https://docs.microsoft.com/mem/get-support)  
+- Se o seu dispositivo estiver registrado no serviço de Autopilot e o perfil estiver atribuído no portal MEM, contate o [suporte](https://docs.microsoft.com/hololens/) do Microsoft HoloLens (confira o cartão "Suporte"). Abra um tíquete de suporte e, se aplicável, inclua capturas de tela e registros capturando [logs de diagnóstico offline](hololens-diagnostic-logs.md#offline-diagnostics) durante a experiência (OOBE).
+- Para relatar um problema do dispositivo, use o aplicativo Hub de Comentários no HoloLens. No Hub de Comentários, clique na categoria **Gerenciamento de Empresa**  > **Dispositivo**. 
+- Para fornecer comentários gerais sobre o AutoPilot para HoloLens, você pode enviar esta [pesquisa](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7vUmjNI0XhCp1T72ODD84xUMEM3TVJPOURBRkNVWkYwM0RWWEhJNVdJSi4u&wdLOR=cEF1F57F6-AD9B-4CCE-B919-AB5AE320A993) 
 
-  Forneça uma descrição detalhada na mensagem. No entanto, a menos que a Equipe de suporte solicite especificamente, não inclua dados como capturas de tela ou logs. Esses dados podem incluir informações privadas ou de identificação pessoal (PII).
+
