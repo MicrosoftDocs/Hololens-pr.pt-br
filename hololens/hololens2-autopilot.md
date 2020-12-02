@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: 5090a433b3d06e92cd36bdadbfbae3758432bb41
-ms.sourcegitcommit: 8656379a4871e118b9e06e72eab1dbcc8eb3cd42
+ms.openlocfilehash: f5405e0ae5096d23b791f18f04b842b2a577a9d5
+ms.sourcegitcommit: c77b2704e87f13b8513d198ce7df7dc0da6075b5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "11182442"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192441"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -223,10 +223,7 @@ Depois que as instruções acima forem concluídas, os usuários do HoloLens 2 p
     
     - Conecte o dispositivo com adaptadores "USB-C para Wi-Fi" para conectividade com a Internet sem fio e deixe o HoloLens 2 concluir a experiência do Autopilot automaticamente.
 
-       > [!NOTE]
-       > O uso do Autopilot terá um efeito no [proprietário do dispositivo](security-adminless-os.md#device-owner).
-   
-       > [!IMPORTANT]  
+        > [!IMPORTANT]  
        > Os dispositivos que querem usar redes Wi-Fi no OOBE para Autopilot devem ser [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2).
        >
        > Para dispositivos que usam adaptadores Ethernet, conecte o dispositivo à rede antes de iniciar o OOBE (Out-of-the-Box-Experience). O dispositivo determina se está sendo provisionado como um dispositivo Autopilot na primeira tela do OOBE. Se o dispositivo não puder se conectar à rede ou se você optar por não provisionar o dispositivo como um dispositivo de piloto automático, não poderá mudar para o provisionamento de piloto automático posteriormente. Em vez disso, você teria que iniciar esse procedimento novamente para provisionar o dispositivo como um dispositivo de piloto automático.
