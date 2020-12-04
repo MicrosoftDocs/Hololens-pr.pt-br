@@ -13,12 +13,12 @@ manager: jarrettr
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 469848cf306675fcfb99247b5c91b159c204a5fe
-ms.sourcegitcommit: 2122490074adb7f63edfc3576441980caa22695f
+ms.openlocfilehash: 4f077a8bb2592ab9b650e2e8021c97d3d8524dcc
+ms.sourcegitcommit: d20f610edd7db452ccc2ac554fc8d21bd89b0b99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "10915935"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195277"
 ---
 # Solução de problemas
 
@@ -45,6 +45,17 @@ Se seus hologramas estiverem instável, com salto ou não parecerem corretos, te
 - Aumentar a luz na sua sala.
 - Percorrendo e examine seus arredores para que o HoloLens possa examiná-los de forma mais completa.
 - Calibrando seu HoloLens para seus olhos. Vá para **configurações**  >  **System**  >  **utilitários**do sistema. Em **Calibragem**, selecione **Abrir Calibragem**.
+ 
+### Relatar problemas nos quais os hologramas estão instáveis ou não parecem certos
+ 
+1. Registre-se e uma [realidade mista Capture o vídeo](holographic-photos-and-videos.md#capture-a-mixed-reality-video) do problema. Este vídeo pode ser carregado posteriormente por meio do hub de feedback como um arquivo anexado.  
+1. Habilitar telemetria completa por meio do aplicativo **configurações** -> diagnóstico de **privacidade**  ->  **& comentários** e em **dados de diagnóstico opcionais** Verifique se a opção está definida como **ativado**
+1. Obtenha a escala de holograma e correções de estabilidade mais recentes ao atualizar para o [Windows holográfico os mais recente, (20H2 ou superior)](hololens-release-notes.md#windows-holographic-version-20h2). Após a atualização, execute o seguinte:
+    1. Remover todos os hologramas via **configurações** aplicativo- **System**>  ->  **hologramas** do sistema-> em seguida, selecione **remover todos os hologramas** e comece com um mapa atualizado.
+    1. Crie um novo mapa de espaço demarcando o HoloLens e percorrendo sua sala e olhando todas as áreas e superfícies no espaço. Faça isso por 2-3 minutos.
+    1. Executar a calibração do IPD. Vá para **configurações**  >  **System**  >  **utilitários**do sistema. Em **Calibragem**, selecione **Abrir Calibragem**.
+    1. Teste novamente o cenário e veja se ele ainda persiste.
+1. Se a atualização não corrigir o problema, registre um [problema no Hub de feedback](hololens-feedback.md). Depois de preencher o comentário, você pode usar o botão **compartilhar** para criar um link fácil de compartilhar que pode ser enviado ao entrar em contato com o suporte.
 
 ## O HoloLens não responde à entrada à mão
 
@@ -67,7 +78,7 @@ Se a Cortana não estiver respondendo aos comandos de voz, verifique se a Cortan
 Se o HoloLens não conseguir mapear ou carregar seu espaço, ele entrará em modo limitado e você não poderá colocar hologramas ou Ver os hologramas que você colocou. Algumas opções para tentar:
 
 - Certifique-se de que haja luz suficiente em seu ambiente para que o HoloLens possa ver e mapear o espaço.
-- Verifique se você está conectado a uma rede Wi-Fi. Se você não estiver conectado ao Wi-Fi, o HoloLens não poderá identificar e carregar um espaço conhecido.
+- Verifique se você está conectado a uma rede do Wi-Fi. Se você não estiver conectado ao Wi-Fi, o HoloLens não poderá identificar e carregar um espaço conhecido.
 - Se você precisar criar um novo espaço, conecte-se a uma rede Wi-Fi e reinicie o HoloLens.
 - Para ver se o espaço correto está ativo ou para carregar manualmente um espaço, vá para **configurações**espaço do  >  **sistema**  >  **Spaces**.
 - Se o espaço correto estiver carregado e você ainda tiver problemas, o espaço pode estar corrompido. Para corrigir esse problema, selecione o espaço e, em seguida, selecione **remover**. Depois de remover o espaço, o HoloLens começa a mapear seus arredores e criar um novo espaço.
@@ -76,7 +87,7 @@ Se o HoloLens não conseguir mapear ou carregar seu espaço, ele entrará em mod
 
 Se o seu HoloLens não conseguir identificar e carregar o espaço que você está fazendo automaticamente, verifique os seguintes fatores:
 
-- Verifique se você está conectado à rede Wi-Fi
+- Verifique se você está conectado ao Wi-Fi
 - Verifique se há muita luz na sala
 - Certifique-se de que não houve nenhuma alteração importante nos arredores.
 
