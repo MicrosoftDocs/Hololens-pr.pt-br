@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: d64d0a18fbbf6570173c4bd80bc4f036f4408e08
-ms.sourcegitcommit: a51f2e409f0207fc7457e97403b5298f1e0ad7dc
+ms.openlocfilehash: 06768203459827a83d8b6e891dfc8c46e33c3da2
+ms.sourcegitcommit: 1f37a06cde037f3acdc4ef3767a9384953d97c33
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145632"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11194861"
 ---
 # Localizar, instalar e desinstalar aplicativos da Microsoft Store
 
@@ -35,6 +35,11 @@ Para saber mais sobre como instalar e executar aplicativos personalizados, leia 
 ## Localizar aplicativos
 
 Abra a Microsoft Store no menu **Iniciar**. Em seguida, procure aplicativos e jogos. Você pode usar os [comandos de voz](hololens-cortana.md) para pesquisar dizendo "Pesquisar". Depois que a janela de pesquisa abrir, diga "Start dictating" e, quando solicitado, comece a dizer os termos da pesquisa.
+
+> [!NOTE]
+> Os Requisitos do Sistema para dispositivos HoloLens são baseados na arquitetura da compilação do aplicativo. Se uma compilação do aplicativo para HoloLens (1ª gen) não tiver sido atualizada com uma nova UWP na loja para incluir o pacote de arquitetura ARM, ele não estará disponível para dispositivos do HoloLens 2. Da mesma forma, se um aplicativo HoloLens 2 não incluir o pacote de arquitetura x86, ele não estará disponível para os dispositivos HoloLens (1ª geração). Arquiteturas de dispositivos HoloLens:
+> - x86 = HoloLens (1ª gen)
+> - ARM = HoloLens 2
 
 > [!NOTE]
 > Em 12 de janeiro de 2021, os seguintes aplicativos chegarão ao fim do Suporte em dispositivos HoloLens. Nós encorajamos você a usar o seguinte link em seu dispositivo para usar a versão web do aplicativo.
