@@ -1,0 +1,68 @@
+---
+title: Guia de implantação – implantação do HoloLens 2 conectado à nuvem em escala com assistência remota-manter
+description: Dicas para manter dispositivos HoloLens em uma rede conectada na nuvem
+keywords: HoloLens, gerenciamento, nuvem conectada, assistência remota, AAD, Azure AD, MDM, gerenciamento de dispositivo móvel
+author: evmill
+ms.author: v-evmill
+ms.reviewer: aboeger
+ms.date: 12/04/2020
+ms.prod: hololens
+ms.topic: article
+ms.sitesec: library
+ms.localizationpriority: medium
+audience: HoloLens
+manager: yannisle
+appliesto:
+- HoloLens 2
+ms.openlocfilehash: beee64159415c0635812463f81c0b5565e44e4a8
+ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "11196252"
+---
+# <span data-ttu-id="f3229-104">Maintain-guia conectado à nuvem</span><span class="sxs-lookup"><span data-stu-id="f3229-104">Maintain - Cloud connected Guide</span></span>
+
+## <span data-ttu-id="f3229-105">Atualizações</span><span class="sxs-lookup"><span data-stu-id="f3229-105">Updates</span></span>
+
+<span data-ttu-id="f3229-106">A Microsoft projetou o Windows Update para Empresas para fornecer aos administradores de TI recursos de gerenciamento adicionais centrados no Windows Update, como a habilidade de implantar atualizações em grupos de dispositivos e de definir janelas de manutenção para a instalação de atualizações.</span><span class="sxs-lookup"><span data-stu-id="f3229-106">Microsoft designed Windows Update for Business to provide IT administrators with additional Windows Update-centric management capabilities, such as the ability to deploy updates to groups of devices and to define maintenance windows for installing updates.</span></span>
+
+<span data-ttu-id="f3229-107">Saiba como [gerenciar as atualizações do HoloLens](https://docs.microsoft.com/hololens/hololens-updates) , incluindo os dias agendados, o horário programado e a configuração de horas ativas no dispositivo para que ele seja atualizado fora do horário de trabalho.</span><span class="sxs-lookup"><span data-stu-id="f3229-107">Learn how to [manage HoloLens updates](https://docs.microsoft.com/hololens/hololens-updates) including scheduled days, scheduled time, and setting active hours on the device so it will update outside of working hours.</span></span>
+
+<span data-ttu-id="f3229-108">O auxílio remoto é um aplicativo In-Box e pode ser atualizado por meio do aplicativo da Microsoft Store.</span><span class="sxs-lookup"><span data-stu-id="f3229-108">Remote Assist is a In-Box app, and can be update through the Microsoft Store app.</span></span> <span data-ttu-id="f3229-109">Para todos os aplicativos que são baixados por meio da Microsoft Store, eles podem ser [atualizados manualmente por meio do aplicativo da Microsoft Store](https://docs.microsoft.com/hololens/holographic-store-apps#update-apps) .</span><span class="sxs-lookup"><span data-stu-id="f3229-109">For all apps that are downloaded through the Microsoft Store they can be [updated through the Microsoft Store](https://docs.microsoft.com/hololens/holographic-store-apps#update-apps) app itself manually.</span></span>
+
+## <span data-ttu-id="f3229-110">Plano de Suporte</span><span class="sxs-lookup"><span data-stu-id="f3229-110">Support Plan</span></span>
+
+<span data-ttu-id="f3229-111">Um plano de suporte é uma coisa excelente para se ter em vigor.</span><span class="sxs-lookup"><span data-stu-id="f3229-111">A support plan is an excellent thing to have in place.</span></span> <span data-ttu-id="f3229-112">Ter alguém ou um grupo treinado para solucionar o problema do processo de inscrição em dispositivos HoloLens e também o uso geral do dispositivo HoloLens em sua organização é útil.</span><span class="sxs-lookup"><span data-stu-id="f3229-112">Having someone, or a group trained up on troubleshooting the enrollment process on HoloLens devices and also general use of the HoloLens device within your organization is useful.</span></span> <span data-ttu-id="f3229-113">Para permitir que os usuários tenham a solução mais rápida de seus problemas, sugerimos que o processo de escalonamento seja manipulado de maneira semelhante a isto:</span><span class="sxs-lookup"><span data-stu-id="f3229-113">In order to allow your users to have the faster resolution of their issues we suggest that your escalation process is handled in a similar manner to this:</span></span>
+
+1. <span data-ttu-id="f3229-114">O suporte técnico.</span><span class="sxs-lookup"><span data-stu-id="f3229-114">Your Support desk.</span></span>
+2. <span data-ttu-id="f3229-115">Sua equipe de especialistas do HoloLens</span><span class="sxs-lookup"><span data-stu-id="f3229-115">Your HoloLens Expert team</span></span>
+3. <span data-ttu-id="f3229-116">[Documentos](https://docs.microsoft.com/hololens/)  /  do HoloLens [Documentos de solução de problemas do HoloLens](https://docs.microsoft.com/hololens/hololens-troubleshooting)</span><span class="sxs-lookup"><span data-stu-id="f3229-116">[HoloLens Docs](https://docs.microsoft.com/hololens/) / [HoloLens Troubleshooting Docs](https://docs.microsoft.com/hololens/hololens-troubleshooting)</span></span>
+4. [<span data-ttu-id="f3229-117">Contate o Suporte</span><span class="sxs-lookup"><span data-stu-id="f3229-117">Contact Support</span></span>](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
+
+## <span data-ttu-id="f3229-118">Plano de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="f3229-118">Development Plan</span></span>
+
+<span data-ttu-id="f3229-119">Com o seu dispositivo registrado com êxito, você agora está preparado para implantar aplicativos de linha de negócios (aplicativos LOB) em seus dispositivos.</span><span class="sxs-lookup"><span data-stu-id="f3229-119">With your device successfully enrolled you are now prepared to deploy Line of Business apps (LOB apps) to your devices.</span></span> <span data-ttu-id="f3229-120">Estes são aplicativos personalizados criados para sua organização&#39;s necessidades.</span><span class="sxs-lookup"><span data-stu-id="f3229-120">These are custom apps built for your organization&#39;s needs.</span></span>
+
+<span data-ttu-id="f3229-121">Se você já tiver um aplicativo de linha de negócios,&#39;pronto para [implantar o aplicativo por meio do MDM](https://docs.microsoft.com/hololens/app-deploy-intune).</span><span class="sxs-lookup"><span data-stu-id="f3229-121">If you already have a line of business app then you&#39;re ready to [deploy your app through MDM](https://docs.microsoft.com/hololens/app-deploy-intune).</span></span> <span data-ttu-id="f3229-122">Se você&#39;d prefere um método diferente, examine a [visão geral de implantação do aplicativo para o HoloLens 2](https://docs.microsoft.com/hololens/app-deploy-overview) para saber mais métodos de implantação do seu aplicativo LOB em seus dispositivos.</span><span class="sxs-lookup"><span data-stu-id="f3229-122">If you&#39;d prefer a different method then review the [application deployment overview for HoloLens 2](https://docs.microsoft.com/hololens/app-deploy-overview) to learn more methods of deploying your LOB app to your devices.</span></span>
+
+<span data-ttu-id="f3229-123">Se você&#39;ainda criar seu próprio aplicativo LOB ou ainda estiver em processo de criação, analise nossos documentos de desenvolvimento de realidade misturados para [começar a projetar e criar protótipos](https://docs.microsoft.com/windows/mixed-reality/design/design) ou aprender os conceitos básicos para começar a criar um [desenvolvimento de realidade misturada.](https://docs.microsoft.com/windows/mixed-reality/discover/get-started-with-mr)</span><span class="sxs-lookup"><span data-stu-id="f3229-123">If you&#39;ve yet to create your own LOB app or are still in the process of creation then review our mixed reality development docs to [start designing and prototyping](https://docs.microsoft.com/windows/mixed-reality/design/design) or learn the core concepts to [get started with mixed reality development.](https://docs.microsoft.com/windows/mixed-reality/discover/get-started-with-mr)</span></span>
+
+## <span data-ttu-id="f3229-124">Gerenciamento de Dispositivo</span><span class="sxs-lookup"><span data-stu-id="f3229-124">Device Management</span></span> 
+
+<span data-ttu-id="f3229-125">Neste guia, falamos sobre a configuração do MDM (gerenciamento de dispositivo móvel) que não foi empregado para aplicar restrições de dispositivo ou políticas foram aplicadas a dispositivos.</span><span class="sxs-lookup"><span data-stu-id="f3229-125">While this guide talked about setting up Mobile Device Management (MDM) it wasn't employed to apply device restrictions or policies were applied to devices.</span></span> <span data-ttu-id="f3229-126">O gerenciamento de dispositivos pode ser usado para permitir o acesso por push de certificados ou restringir o acesso a várias restrições de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="f3229-126">Device management can be used to both to allow access by pushing certificates, or restrict access with a variety of device restrictions.</span></span> 
+
+<span data-ttu-id="f3229-127">Em muitos casos, os dispositivos podem ter restrições de conectividade como Bluetooth, VPN, USB ou até mesmo desativar o acesso à câmera ou ao microfone.</span><span class="sxs-lookup"><span data-stu-id="f3229-127">In many cases devices can have connectivity restrictions such as Bluetooth, VPN, USB or even turning off access to the camera or microphone.</span></span> <span data-ttu-id="f3229-128">Se qualquer um desses juros, recomendamos que você leia nossa [página de restrições de dispositivo comum](hololens-common-device-restrictions.md).</span><span class="sxs-lookup"><span data-stu-id="f3229-128">If any of these interest you then we encourage you to read our [common device restrictions page](hololens-common-device-restrictions.md).</span></span>
+
+<span data-ttu-id="f3229-129">Há outras restrições de dispositivo mais complexas que você pode usar.</span><span class="sxs-lookup"><span data-stu-id="f3229-129">There are other more complex device restrictions you can use.</span></span> <span data-ttu-id="f3229-130">Como:</span><span class="sxs-lookup"><span data-stu-id="f3229-130">Such as:</span></span>
+
+- <span data-ttu-id="f3229-131">Limitar as páginas que podem ser visualizadas no aplicativo configurações usando o [SettingsPageVisibility](settings-uri-list.md), permitindo que os usuários acessem somente as configurações necessárias para ajustar tais como alterar a conexão do Wi-Fi.</span><span class="sxs-lookup"><span data-stu-id="f3229-131">Limiting the pages that can be viewed in the Settings app by using [SettingsPageVisibility](settings-uri-list.md), allowing users to only access the settings they need to adjust such as changing their Wi-Fi connection.</span></span>
+- <span data-ttu-id="f3229-132">Use o [modo de quiosque](hololens-kiosk.md) para limitar a interface do usuário apresentada aos usuários em um dispositivo.</span><span class="sxs-lookup"><span data-stu-id="f3229-132">Use [Kiosk mode](hololens-kiosk.md) to limit the UI presented to users on a device.</span></span> <span data-ttu-id="f3229-133">Você pode definir quiosques para mostrar um único aplicativo ou vários aplicativos com uma página inicial personalizada.</span><span class="sxs-lookup"><span data-stu-id="f3229-133">You can set Kiosks to show a single app, or multiple apps with a custom start page.</span></span> <span data-ttu-id="f3229-134">Os quiosques também podem apresentar experiências diferentes para usuários diferentes.</span><span class="sxs-lookup"><span data-stu-id="f3229-134">Kiosks can also present different experiences to different users.</span></span>  
+- <span data-ttu-id="f3229-135">[Controle de aplicativos do Windows (WDAC)](windows-defender-application-control-wdac.md) para impedir que aplicativos ou processos específicos sejam iniciados completamente.</span><span class="sxs-lookup"><span data-stu-id="f3229-135">[Windows Application Control (WDAC)](windows-defender-application-control-wdac.md) to keep specific apps or processes from launching entirely.</span></span>
+
+<span data-ttu-id="f3229-136">Se quiser saber mais sobre os métodos mais diferentes de gerenciamento de dispositivos ou restrições de dispositivo, siga a próxima etapa e leia a visão geral do gerenciamento de dispositivos.</span><span class="sxs-lookup"><span data-stu-id="f3229-136">If you'd like to learn about more different methods of device management or device restrictions then take the next step and read our Device Management Overview.</span></span>
+
+## <span data-ttu-id="f3229-137">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="f3229-137">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="f3229-138">Leia a visão geral de gerenciamento de dispositivos e CSPs</span><span class="sxs-lookup"><span data-stu-id="f3229-138">Read the CSPs and Device Management Overview</span></span>](hololens-csp-policy-overview.md)
