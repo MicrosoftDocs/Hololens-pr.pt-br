@@ -14,12 +14,12 @@ ms.custom:
 ms.topic: article
 ms.localizationpriority: high
 manager: jarrettr
-ms.openlocfilehash: 8c028ed39cf0925ebff18ca69889de2d87f1e7eb
-ms.sourcegitcommit: e3056a433aeebb8bc45dc3f6db9a75f212fdf53b
+ms.openlocfilehash: 872e9d3445df2601579ae81f4190458289fa2eea
+ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "10996409"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "11195594"
 ---
 # Reiniciar, redefinir ou recuperar o HoloLens 2
 
@@ -57,7 +57,7 @@ Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositi
 
 4. Conecte o dispositivo ao computador host e, em seguida, abra o Gerenciador de Dispositivos. (Para o Windows 10, pressione a tecla **Windows** e, em seguida, a tecla **X** e selecione **Device Manager**.) Verifique se o dispositivo é identificado corretamente como  *Microsoft HoloLens* conforme mostrado na imagem a seguir:
 
-   ![HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLens_DeviceManager.png)
+   ![Gerenciador de devive do HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLens_DeviceManager.png)
 
 ### Procedimento de redefinição de disco
 
@@ -70,7 +70,7 @@ Se o procedimento padrão de redefinição não funcionar, use o procedimento de
 4. Conecte o dispositivo ao computador host.
 5. Abra o Gerenciador de Dispositivos (para Windows 10 pressione a tecla **Windows** e, em seguida, a tecla **X** e selecione **Gerenciador de Dispositivos**). Verifique se o dispositivo está identificado corretamente conforme *Microsoft HoloLens* conforme mostrado na imagem a seguir:
 
-   ![HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLens_DeviceManager.png)
+   ![HoloLens 2 MicrosoftHoloLensRecovery device maanger 2](images/MicrosoftHoloLens_DeviceManager.png)
 
 ## Limpar a flash do dispositivo
 
@@ -81,12 +81,12 @@ Em situações extraordinárias, talvez seja necessário "limpar a flash" no Hol
 - [Superaquecimento](hololens-environment-considerations.md#temperature-and-regulatory-information) 
 - Ocorre um erro no OS (que é diferente do travamento do aplicativo)
 
-Há duas maneiras de limpar a flash do dispositivo. Para ambos, você deve primeiro instalar o [Advanced Recovery Companion na Windows Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8).
+Há duas maneiras de limpar a flash do dispositivo. Para ambos, você deve primeiro [instalar o Complemento Avançado de Recuperação na Windows Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8).
 
 >[!WARNING]
 >Se você limpar a flash do seu dispositivo, todos os seus dados pessoais, aplicativos e configurações serão apagados, incluindo informações de redefinição de TPM.
 
-Por padrão, o Advanced Recovery Companion está definido atualmente para baixar a versão de lançamento do recurso para [Windows Holographic 2004](hololens-release-notes.md#windows-holographic-version-2004). Para obter o pacote mais recente da imagem no formato UFF (Full Flash Update) do HoloLens 2 para limpar a flash do seu dispositivo por meio da Advanced Recovery Companion, [baixe aqui](https://aka.ms/hololens2download). Esta versão é geralmente a versão mais recente disponível.
+Por padrão, o Complemento Avançado de Recuperação está configurado para baixar a compilação do recurso mais recente, confira aqui para ler nossas [Notas de lançamento](hololens-release-notes.md#) para saber mais sobre a versão mais recente do recurso. Para obter o pacote mais recente do HoloLens 2 Ferramenta de Atualização de Imagens (FFU) para atualizar seu dispositivo por meio do Complemento Avançado de Recuperação, [clique aqui para baixar a última imagem mensal do HoloLens 2](https://aka.ms/hololens2download). Esta versão é geralmente a versão mais recente disponível.
 
 Antes de iniciar o procedimento de limpeza da flash, certifique-se de que o aplicativo está instalado e em execução no PC com Windows 10 e está pronto para detectar o dispositivo.
 
@@ -134,8 +134,8 @@ Siga estas etapas para habilitar o caminho da implantação:
 1. Acesse a [Microsoft Store para Empresas](https://businessstore.microsoft.com) e entre usando uma identidade do Azure Active Directory.
 
 1. Vá para **Gerenciar – Configurações**. Ative **Mostrar aplicativos offline** em **Experiência de compra**. 
-1. Vá para **comprar para o meu grupo** e procure por [***Advanced Recovery Companion***](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
-1. Altere o **Tipo de Licença** para ***offline*** e clique em **Gerenciar**.
+1. Vá para **comprar meu grupo**e procure por [ * *_Complemento Avançado de Recuperação_*_](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
+1. Altere o _ *Tipo de Licença** para **_offline_*_ e selecione _ *Manage**.
 1. Em **Baixe o pacote para uso offline**, selecione o segundo botão azul **Baixar**. Verifique se a extensão de arquivo é *.appxbundle*.
 
     - Nessa etapa, se o PC tiver acesso à Internet, basta clicar duas vezes para instalar o aplicativo.

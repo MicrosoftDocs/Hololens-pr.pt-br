@@ -11,12 +11,12 @@ metadata:
   ms.author: v-todmc
   ms.date: 5/22/2020
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 23cac991786c5540d7dadfcaae7ba2fe1d84dc64
-  ms.sourcegitcommit: 58812149a9795b46799845e89f98d4cfd72ded42
+  ms.openlocfilehash: d985c89a3352f1fcd8967970a1211315403dca15
+  ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/08/2020
-  ms.locfileid: "11105392"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "11195604"
 landingContent:
 - title: Visão geral do HoloLens
   linkLists:
@@ -34,8 +34,18 @@ landingContent:
       url: holographic-store-apps.md
     - text: Melhorar o conforto e a qualidade visual
       url: hololens-calibration.md
-    - text: Como atualizar o HoloLens
+    - text: Como Atualizar o HoloLens
       url: hololens-update-hololens.md
+- title: Guias de Implantação
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Cenários de implantação comuns
+      url: common-scenarios.md
+    - text: Implantação do HoloLens 2 conectada à nuvem em escala com Assistência Remota
+      url: hololens2-cloud-connected-overview.md
+    - text: Implantação segura offline
+      url: hololens-common-scenarios-offline-secure.md
 - title: Preparar
   linkLists:
   - linkListType: get-started
