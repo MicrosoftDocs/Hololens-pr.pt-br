@@ -14,22 +14,22 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: eba1fd00215ef197f9e32949e958bdbded089d6d
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: 53937881d6569e6aaa17d7e60083381b13502b87
+ms.sourcegitcommit: 74e9989240dc0c324df35e8651b2f307f9d42148
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11162891"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201365"
 ---
 # Instalar aplicativos no HoloLens 2 via instalador de aplicativos
 
 
-Enviaremos a funcionalidade do instalador do aplicativo logo após a atualização do Windows holográfico, versão 20H2. Estamos **adicionando uma nova funcionalidade (instalador de aplicativos) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
+Estamos **adicionando uma nova funcionalidade (instalador de aplicativos) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
 
-> [!IMPORTANT]
-> No momento, esse recurso só é disponível na compilação do Windows Insider. [Saiba mais sobre como registrar-se nas compilações do Windows Insider](hololens-insider.md).
+> [!NOTE]
+> Esse recurso foi disponibilizado no [Windows holográfico, versão 20H2 – atualização de dezembro de 2020](hololens-release-notes.md). Verifique se o seu dispositivo está [atualizado](hololens-update-hololens.md) para usar este recurso.
 
-No lançamento do Windows Insider, estamos **adicionando um novo recurso (instalador do aplicativo) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
+**Adicionamos um novo recurso (instalador de aplicativos) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
 
 Um dispositivo será considerado "gerenciado" se **qualquer** uma das seguintes opções for verdadeira:
 - MDM [registrado](hololens-enroll-mdm.md)

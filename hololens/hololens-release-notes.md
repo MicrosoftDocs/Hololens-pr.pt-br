@@ -15,12 +15,12 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 3cf2797d4c01f66b6433aaf327e31061a8dd2f3e
-ms.sourcegitcommit: 307e313f05243b6d94f9bfc0cb4e316a00a8005c
+ms.openlocfilehash: fcc13150df796290cac3f9397a9ec6bda120037b
+ms.sourcegitcommit: 74e9989240dc0c324df35e8651b2f307f9d42148
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176903"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201375"
 ---
 # Notas de versão do HoloLens 2
 
@@ -28,6 +28,52 @@ Para garantir que você tenha uma experiência produtiva com seus dispositivos d
 
 >[!NOTE]
 > Para ler as notas de versão do emulador do HoloLens, [acesse o arquivo morto](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive).
+
+
+## Windows holográfico, versão 20H2 – atualização de dezembro de 2020
+- Build 19041,1131
+
+### Instalar aplicativos no HoloLens 2 via instalador de aplicativos
+
+Estamos **adicionando uma nova funcionalidade (instalador de aplicativos) para permitir que você instale aplicativos com mais facilidade** em seus dispositivos do HoloLens 2. O recurso estará **ativado por padrão para dispositivos não gerenciados**. Para evitar interrupções em empresas, o instalador do aplicativo **não estará disponível para dispositivos gerenciados** no momento.  
+
+Um dispositivo será considerado "gerenciado" se **qualquer** uma das seguintes opções for verdadeira:
+- MDM [registrado](hololens-enroll-mdm.md)
+- Configurado com o [pacote de provisionamento](hololens-provisioning.md)
+- A [identidade](hololens-identity.md) do usuário é o Azure AD
+
+Agora você pode instalar aplicativos sem precisar habilitar o modo de desenvolvedor ou usar o Device Portal.  Basta baixar (via USB ou pelo Edge) o pacote Appx para o seu dispositivo e navegar até o pacote Appx no explorador de arquivos para ser solicitado a iniciar a instalação.  Você também pode [iniciar uma instalação a partir de uma página da Web](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web).  Assim como os aplicativos que você instala na Microsoft Store ou Sideload usando a funcionalidade de implantação do aplicativo LOB do MDM, os aplicativos precisam ser assinados digitalmente com a [ferramenta de assinatura](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) e o [certificado usado para assinar deve ser confiado](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) pelo dispositivo HoloLens antes de ser implantado.
+
+**Instruções de instalação do aplicativo.**
+
+1.  Certifique-se de que seu dispositivo não seja considerado gerenciado
+1.  Verifique se o seu dispositivo do HoloLens 2 está ligado e conectado ao computador
+1.  Certifique-se de estar conectado ao dispositivo HoloLens 2
+1.  No seu computador, navegue até seu aplicativo personalizado e copie yourapp. appxbundle para yourdevicename\Internal Storage\Downloads.   Depois de terminar de copiar seu arquivo, você pode desconectar seu dispositivo
+1.  Em seu dispositivo do HoloLens 2, abra o menu Iniciar, selecione todos os aplicativos e inicie o aplicativo explorador de arquivos.
+1.  Navegue até a pasta downloads. Talvez seja necessário no painel esquerdo do aplicativo Selecione este dispositivo primeiro e, em seguida, navegue até downloads.
+1.  Selecione o arquivo yourapp. appxbundle.
+1.  O instalador do aplicativo será iniciado. Selecione o botão instalar para instalar o aplicativo.
+O aplicativo instalado será iniciado automaticamente após a conclusão da instalação.
+
+Você pode encontrar aplicativos de exemplo no [GitHub de exemplos universais do Windows](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples) para testar esse fluxo.
+
+Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 com o instalador do aplicativo](app-deploy-app-installer.md).  
+
+![Instalando exemplos de MRTK via instalador de aplicativos](images/hololens-app-installer-picture.jpg)
+
+### Melhorias e correções na atualização:
+
+- Agora, o rastreamento de mão mantém o rastreamento em muitos casos novos em que a mão anteriormente teria sido perdida.  Em alguns desses novos casos, somente a posição de Palm continua a atualizar com base na disponibilidade do usuário, enquanto as outras juntas são inferidas com base em uma pose anterior.  Essa alteração ajuda a melhorar a consistência de rastreamento em movimentos, como Slapping, lançamento, scooping e aplausos.  Também ajuda nos casos em que a mão está perto de uma superfície ou que está segurando um objeto.  Quando as junções à mão estiverem sendo inferidas, o valor de [precisão](https://docs.microsoft.com/uwp/api/windows.perception.people.jointposeaccuracy?view=winrt-19041&preserve-view=true) definido será definido como "aproximado" em vez de "alto".
+- Correção de um problema em que o PIN reset para contas do Azure AD mostraria um erro "algo deu errado.
+- Os usuários devem ver bem menos a postagem post-boot do OOBE falha ao iniciar ET, íris do aplicativo configurações, novo usuário ou notificação notificação do sistema.
+- Os usuários devem ter o fuso horário correto que está saindo do OOBE.
+
+## Windows holográfico, versão 1903 – atualização de dezembro de 2020
+- Build 18362,1088
+
+Esta atualização de qualidade mensal não contém alterações notáveis, recomendamos que você experimente a atualização mais recente do Windows holográfico, versão 20H2 – dezembro de 2020 e o novo recurso instalador do aplicativo adicionado na compilação.
+
 
 ## Windows holográfico, versão 20H2
 - Build 19041,1128
@@ -46,7 +92,7 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 | [Confirmar automaticamente os pacotes de provisionamento em OOBE](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Os pacotes de provisionamento são aplicados automaticamente durante o OOBE na página de provisionamento.                                                         |
 | [Provisionamento automático sem usar a interface do usuário](hololens-release-notes.md#automatic-provisioning-without-using-ui) | Como combinar a inicialização automática do provisionamento e a confirmação automática juntas. |
 | [Usar o AutoPilot com conexão Wi-Fi](hololens-release-notes.md#using-autopilot-with-wi-fi-connection) | Use o AutoPilot do dispositivo Wi-Fi sem necessidade de adaptador Ethernet. |
-| [CSP do Tenantlockdown e AutoPilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. |
+| [O Provedor de Soluções na Nuvem da Microsoft do Tenantlockdown e AutoPilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Após o registro do locatário e a política ser aplicada, o dispositivo só poderá ser registrado nesse locatário sempre que o dispositivo for redefinido ou atualizado novamente. |
 | [Acesso Global Atribuído](hololens-release-notes.md#global-assigned-access--kiosk-mode)                               | Novo método de configuração para o modo de quiosque de vários aplicativos que aplica o quiosque no nível do sistema, tornando-o aplicável a todos.                  |
 | [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.                                                        |
 | [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Agora, a falha do modo de quiosque tem fallback restritivo.                                                                                                |
@@ -169,7 +215,7 @@ Agora, durante o OOBE, quando você conectar o HoloLens 2 com WiFi, o OOBE verif
 
 Os dispositivos do HoloLens 2 agora dão suporte ao CSP TenantLockdown da [versão 20H2 do Windows holográfico](hololens-release-notes.md#windows-holographic-version-20h2). 
 
-O CSP do [TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) permite que o HoloLens 2 seja vinculado ao registro do MDM usando apenas o Autopilot. Depois que o nó RequireNetworkInOOBE do CSP do TenantLockdown for definido com valor verdadeiro ou falso (definido inicialmente) no HoloLens 2, esse valor permanece no dispositivo, apesar de atualizar novamente, atualizações do sistema operacional, etc. 
+O Provedor de Soluções na Nuvem da Microsoft [TenantLockdown](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp) permite que o HoloLens 2 seja vinculado a inscrição do MDM usando apenas o Autopilot. Depois que o nó RequireNetworkInOOBE do CSP do TenantLockdown for definido com valor verdadeiro ou falso (definido inicialmente) no HoloLens 2, esse valor permanece no dispositivo, apesar de atualizar novamente, atualizações do sistema operacional, etc. 
 
 Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, o OOBE aguarda indefinidamente que o perfil do Autopilot seja baixado e aplicado com sucesso, após a conectividade de rede. 
 
