@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: f5405e0ae5096d23b791f18f04b842b2a577a9d5
-ms.sourcegitcommit: c77b2704e87f13b8513d198ce7df7dc0da6075b5
+ms.openlocfilehash: 95f187b2a4b6a86b59e05f3b12414c84ca0f6460
+ms.sourcegitcommit: fac3e62c1fd4dd531c2c8620870213cd570980dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11192441"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205763"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -93,13 +93,12 @@ Os dispositivos devem ser registrados no Windows Autopilot Deployment antes da p
 
 Há duas maneiras principais de registrar dispositivos HoloLens: 
 
-1. **O revendedor pode registrar os dispositivos no Partner Center quando você fizer um pedido.** 
- > [!NOTE]  
-   > Esse é o caminho recomendado para adicionar os dispositivos ao serviço de Autopilot. [Saiba mais](https://docs.microsoft.com/mem/autopilot/add-devices#reseller-distributor-or-partner-registration).  
+ - **O revendedor pode registrar os dispositivos no Partner Center quando você fizer um pedido.** 
 
-   ou
+   > [!NOTE]  
+   > Esse é o caminho recomendado para adicionar os dispositivos ao serviço de Autopilot. [Saiba mais](https://docs.microsoft.com/mem/autopilot/add-devices#reseller-distributor-or-partner-registration).  
    
-2. **Recupere o código hash de hardware (também conhecido como ID de hardware) e registre o dispositivo manualmente no centro de administração do MEM**. 
+ - **Recupere o hash de hardware (também conhecido como ID de hardware) e registre o dispositivo manualmente no centro de administração MEM**. 
 
 **Recuperar o código hash de hardware**
 
@@ -134,11 +133,13 @@ O dispositivo registra o código hash de hardware em um arquivo CSV durante o pr
 
 1. Em **Adicionar dispositivos do Windows Autopilot**, clique no arquivo CSV DeviceHash, clique em **Abrir**e em**Importar**.  
    
-   ![Use o comando Importar para importar o hash do hardware.](./images/hololens-ap-hash-import.png)
+   > [!div class="mx-imgBorder"]
+   > ![Use o comando Importar para importar o hash do hardware.](./images/hololens-ap-hash-import.png)
    
 1. Assim que a importação estiver concluída, clique em DispositivosWindowsRegistro do WindowsDispositivos**Sincronização**. O processo pode levar alguns minutos para ser concluído, dependendo de quantos dispositivos estão sendo sincronizados. Para ver o dispositivo registrado, clique em **Atualização**.  
    
-   ![Use os comandos Sincronizar e Atualizar para exibir a lista de dispositivos.](./images/hololens-ap-devices-sync.png)  
+   > [!div class="mx-imgBorder"]
+   > ![Use os comandos Sincronizar e Atualizar para exibir a lista de dispositivos.](./images/hololens-ap-devices-sync.png)  
 
 ### 3. Criar um grupo de dispositivos
 
@@ -168,7 +169,9 @@ O dispositivo registra o código hash de hardware em um arquivo CSV durante o pr
 1. Insira um nome e uma descrição para o perfil e clique em **Próximo**.  
    Você deverá visualizar uma lista que inclui **HoloLens**. Se essa opção não estiver presente, use uma das opções de [Comentários](hololens2-autopilot.md#feedback-and-support-for-autopilot) para nos contatar.
 
-   ![Adicione um nome e descrição de perfil](./images/hololens-ap-profile-name.png)
+   > [!div class="mx-imgBorder"]
+   > ![Adicione um nome e descrição de perfil](./images/hololens-ap-profile-name.png)
+   
 1. Na página **Experiência pronta para uso (OOBE)**, a maioria das configurações são pré-configuradas para simplificar o OOBE para essa avaliação. Opcionalmente, você pode definir as seguintes configurações:  
 
    - **idioma (Região)**: selecione o idioma do OOBE. Recomendamos que você selecione um idioma na lista de [idiomas com suporte do HoloLens 2](hololens2-language-support.md).
@@ -177,7 +180,9 @@ O dispositivo registra o código hash de hardware em um arquivo CSV durante o pr
      > [!NOTE]  
      > Se você usar um modelo de nome de dispositivo, o processo OOBE reiniciará o dispositivo mais uma vez depois de aplicar o nome do dispositivo e antes de ingressar no Azure AD. Essa reinicialização permite que o novo nome tenha efeito.  
 
-   ![Defina as configurações do OOBE.](./images/hololens-ap-profile-oobe.png)
+   > [!div class="mx-imgBorder"]
+   > ![Defina as configurações do OOBE.](./images/hololens-ap-profile-oobe.png)
+   
 1. Depois de definir as configurações, clique em **Próximo**.
 1. Na página **Rótulos do escopo**, opcionalmente, adicione os rótulos de escopo que você quer aplicar a esse perfil. Para obter mais informações sobre os rótulos de escopo, consulte [Usar o controle de acesso com base na função e nos rótulos de escopo da TI distribuída](https://docs.microsoft.com/mem/intune/fundamentals/scope-tags.md). Quando terminar, clique em **Próximo**.
 1. Na página **Atribuições**, clique em **Grupos selecionados** para **Atribuir a**.
@@ -186,11 +191,13 @@ O dispositivo registra o código hash de hardware em um arquivo CSV durante o pr
   
    Se você quiser excluir todos os grupos, clique em **Selecionar grupos para excluir**e clique nos grupos que você quer excluir.
 
-   ![Atribuir um grupo de dispositivos ao perfil.](./images/hololens-ap-profile-assign-devicegroup.png)
+   > [!div class="mx-imgBorder"]
+   > ![Atribuir um grupo de dispositivos ao perfil.](./images/hololens-ap-profile-assign-devicegroup.png)
    
 1. Na página **Revisar + Criar**, examine as configurações e clique em **Criar** para criar o perfil.  
    
-   ![Analisar + criar](./images/hololens-ap-profile-summ.png)
+   > [!div class="mx-imgBorder"]
+   > ![Analisar + criar](./images/hololens-ap-profile-summ.png)
 
 ### 5. Verificar a configuração de ESP
 
