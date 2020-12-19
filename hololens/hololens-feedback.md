@@ -4,7 +4,7 @@ description: Crie comentários acionáveis para os desenvolvedores do HoloLens e
 ms.assetid: b9b24c72-ff86-44a9-b30d-dd76c49479a9
 author: mattzmsft
 ms.author: mazeller
-ms.date: 05/14/2020
+ms.date: 12/17/2020
 ms.custom:
 - CI 116157
 - CSSTroubleshooting
@@ -17,24 +17,24 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f922104658378239c6f94a20d22913f11a56c347
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: f8704b7e1b75cd08bc282eb0c2df22b8266cb9fd
+ms.sourcegitcommit: e44f1f1ab708e5bd6c4c5b85ec449db2bc798be2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827532"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11237271"
 ---
 # Comentários sobre o HoloLens
 
 Use o Hub de feedback para nos informar quais são os recursos que você adora, quais recursos você pode fazer sem e como algo pode ser melhor. A equipe de engenharia usa o mesmo mecanismo internamente para acompanhar e corrigir bugs, portanto, use o Hub de feedback para informar os erros que você vê. Estamos ouvindo!
 
-O Hub de feedback é uma maneira excelente de alertar a equipe de engenharia a erros e garantir que as atualizações futuras sejam healthierdas e mais consistentemente de erros. No entanto, o Hub de feedback não fornece uma resposta. Se precisar de ajuda imediata, envie comentários, anote o resumo que você forneceu para seus comentários e siga para [dar suporte ao suporte do HoloLens](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f).
+O Hub de feedback é uma maneira excelente de alertar a equipe de engenharia a erros e garantir que as atualizações futuras sejam healthierdas e mais consistentemente de erros. No entanto, o Hub de feedback não fornece uma resposta. Se precisar de ajuda imediata, envie comentários, anote o resumo que você forneceu para seus comentários e siga para [dar suporte ao suporte do HoloLens](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) -use o recurso **compartilhar** no Hub de feedback para compartilhar um link direto para a URL. Hub de feedback Obtém muitos dados diariamente – a URL nos ajuda a identificar seus comentários rapidamente.
 
 > [!NOTE]  
 >  
 > - Verifique se você tem a versão atual do hub de feedback. Para fazer isso, selecione **Iniciar**  >  **Microsoft Store**e, em seguida, selecione as reticências (**...**). Em seguida, selecione **downloads e atualizações**  >  **obter atualizações**.  
 >  
-> - Para fornecer os melhores dados possíveis para corrigir problemas, é altamente recomendável que você defina a telemetria do dispositivo como **completa**. Você pode definir esse valor durante a sua experiência (OOBE) ou usando o aplicativo de configurações. Para fazer isso usando configurações, selecione **Iniciar**  >  **configurações**  >  **Privacy**  >  **diagnóstico**  >  **do aplicativo de**privacidade.
+> - Para fornecer os melhores dados possíveis para corrigir problemas, é altamente recomendável que você defina a telemetria do dispositivo como **opcional**. Você pode definir esse valor durante a sua experiência (OOBE) ou usando o aplicativo de configurações. Para fazer isso usando configurações, selecione **Iniciar**  >  **configurações**  >  ****  >  **diagnóstico**  >  **do aplicativo de**privacidade.
 
 ## Usar o Hub de feedback
 
@@ -87,3 +87,5 @@ O Hub de feedback é uma maneira excelente de alertar a equipe de engenharia a e
      1. Selecione **parar gravação**. Após a gravação parar, você pode ver os dados que estão anexados ao seu feedback para a equipe de engenharia.
 
 1. Verifique se você tem uma conexão ativa com a Internet para que possamos receber seus comentários. Selecione **Enviar**e pronto.
+
+1. Use o botão **compartilhar** para compartilhar a URL reduzida com o suporte da Microsoft ou seus colegas.
