@@ -17,16 +17,16 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 55e2b15808e52bb80e8114e215bc0cef52358842
-ms.sourcegitcommit: 785ac6f05aecffc0f3980960891617d161711a70
+ms.openlocfilehash: 7fcd65d5e49fa9cdd771828401749a0a41e50238
+ms.sourcegitcommit: d319ac257b9ace484acf5dcfb16c9d4e19ea50a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11016656"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "11247213"
 ---
 # Portal do Intune e da empresa
 
-Com o gerenciamento de dispositivos móveis (MDM), você pode usar seus próprios aplicativos personalizados por meio do [Microsoft Endpoint Manager (Intune)](https://docs.microsoft.com/intune/windows-holographic-for-business) para implantá-lo diretamente em seus dispositivos HoloLens. O Microsoft Intune é um serviço baseado em nuvem que enfoca o gerenciamento de dispositivos móveis (MDM) e o gerenciamento de aplicativo móvel (MAM). O Intune está incluído no[pacote Microsoft Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)e permite que os usuários sejam produtivos enquanto mantêm seus dados de organização protegidos. Para saber mais sobre o Intune, consulte [o que é o Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune).
+Com o gerenciamento de dispositivos móveis (MDM), você pode usar seus próprios aplicativos personalizados por meio do [Microsoft Endpoint Manager (Intune)](https://docs.microsoft.com/intune/windows-holographic-for-business) para implantá-lo diretamente em seus dispositivos HoloLens. O Microsoft Intune é um serviço baseado em nuvem que enfoca o gerenciamento de dispositivos móveis (MDM) e o gerenciamento de aplicativo móvel (MAM). O Intune está incluído no [pacote Microsoft Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)e permite que os usuários sejam produtivos enquanto mantêm seus dados de organização protegidos. Para saber mais sobre o Intune, leia [o que é o Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune).
 
 ## Configuração
 
