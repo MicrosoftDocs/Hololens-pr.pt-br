@@ -14,12 +14,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: d14d33ea01a3fe649f7125e050dd1b0a16426e6c
-ms.sourcegitcommit: 681e8e03e1a0250368f1f50cef6fbc3c99bac3af
+ms.openlocfilehash: 748475cb3e3c51e36904109ecfe03e65bdad6c1e
+ms.sourcegitcommit: 6446a80bece77d67077f36a390f13b8ce59af26e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11165037"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "11252523"
 ---
 # Melhorar o conforto e a qualidade visual
 
@@ -42,7 +42,7 @@ O HoloLens 2 solicita que o usuário calibre o dispositivo nas seguintes circuns
 
 ![Sistema de gerenciamento de calibragem para ajustar ocular.](./images/07-et-adjust-for-your-eyes.png)
 
-Durante esse processo, você verá um conjunto de alvos (gems). Tudo bem se você piscar durante a calibragem, mas tente se concentrar nas joias, ao invés de outros objetos da sala.  Isso permite que o HoloLens saiba mais sobre a posição de seus olhos para renderizar o mundo holográfico.
+Durante esse processo, você verá um conjunto de alvos (gems). Tudo bem se você piscar durante a calibragem, mas tente se concentrar nas joias, ao invés de outros objetos da sala.  Focar nas joias permite que o HoloLens aprenda sobre a posição de seus olhos para renderizar seu mundo holográfico.
 
 ![Sistema de gerenciamento de calibragem informa ao usuário para manter a cabeça imóvel e seguir os pontos com os olhos.](./images/07-et-hold-head-still.png)
 
