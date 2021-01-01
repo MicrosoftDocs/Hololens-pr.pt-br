@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: 95f187b2a4b6a86b59e05f3b12414c84ca0f6460
-ms.sourcegitcommit: fac3e62c1fd4dd531c2c8620870213cd570980dc
+ms.openlocfilehash: 23a850022a686389669e96e987274cc6481b936e
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "11205763"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253238"
 ---
 # Piloto automático do Windows para HoloLens 2
 
@@ -255,7 +255,7 @@ Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido co
 
 Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, as seguintes operações não serão permitidas no OOBE: 
 - Criação de usuário local usando provisionamento do tempo de execução 
-- Execução da operação de ingresso no AAD através de provisionamento do tempo de execução 
+- Executando a operação de ingresso no Microsoft Azure Active Directory por meio de provisionamento em tempo de execução 
 - Seleção de proprietários do dispositivo na experiência do OOBE 
 
 #### Como definir isso usando o Intune? 
