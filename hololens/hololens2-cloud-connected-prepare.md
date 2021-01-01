@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0e9222df2c387fab8f61a585d3a7f3966b9ecd31
-ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
+ms.openlocfilehash: a4e99740d985a709683595cd5afef76094faaf76
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "11196256"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253048"
 ---
 # Preparar-guia conectado à nuvem
 
-No final deste artigo, você terá configurado AAD, MDM e entenderá mais sobre como usar contas do AAD e requisitos de rede. Esta seção do guia ajudará você e sua organização a se preparar para implantar o HoloLens 2 na nuvem e usar a assistência remota do Dynamics 365. Ele passará pela importância de cada parte da sua infraestrutura, além de fornecer links para guias para ajudá-lo a configurar esses pedaços conforme necessário.
+No final deste artigo, você terá configurado o Azure AD, o MDM e compreender mais sobre o uso de contas e requisitos de rede do Azure AD. Esta seção do guia ajudará você e sua organização a se preparar para implantar o HoloLens 2 na nuvem e usar a assistência remota do Dynamics 365. Ele passará pela importância de cada parte da sua infraestrutura, além de fornecer links para guias para ajudá-lo a configurar esses pedaços conforme necessário.
 
 ## Fundamentos da infraestrutura
 
@@ -40,11 +40,11 @@ O Azure AD é um serviço de diretório baseado na nuvem que fornece gerenciamen
 
 Os funcionários podem usar apenas uma conta para inicializar um dispositivo para que&#39;s obrigações de que a sua organização controla qual conta está ativada primeiro. A conta escolhida determinará quem controla o dispositivo e influencia seus recursos de gerenciamento.
 
-Neste guia, escolhemos isso para a [identidade](https://docs.microsoft.com/hololens/hololens-identity) usada, usaremos contas do AAD ou contas do Azure Active Directory. Há vários benefícios nas contas do AAD que gostaríamos de usar, como:
+Neste guia, escolhemos isso para a [identidade](https://docs.microsoft.com/hololens/hololens-identity) usada, usaremos contas do Azure ad ou contas do Azure Active Directory. Há vários benefícios nas contas do Azure AD que gostaríamos de usar, como:
 
-- Os funcionários usam a conta do Azure AD para registrar o dispositivo no Azure AD e registrá-lo automaticamente com a organização&#39;s MDM solução (AAD + MDM – requer o Azure AD Premium).
-- As contas do AAD dão suporte ao [logon único](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on). Quando um usuário entra na assistência remota, a identidade do usuário conectado no AAD será reconhecida e o usuário será conectado ao aplicativo para obter uma experiência simplificada.
-- As contas do AAD têm [Opções de autenticação](https://docs.microsoft.com/hololens/hololens-identity) adicionais por meio [do Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). Além disso, os usuários de login da íris podem entrar em outro dispositivo ou usar chaves de segurança FIDO.
+- Os funcionários usam a conta do Azure AD para registrar o dispositivo no Azure AD e registrá-lo automaticamente com a organização&#39;s MDM solução (Azure AD + MDM – requer o Azure AD Premium).
+- As contas do Azure AD dão suporte ao [logon único](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on). Quando um usuário entra na assistência remota, sua identidade do usuário assinado do Azure AD será reconhecida e o usuário será conectado ao aplicativo para obter uma experiência simplificada.
+- As contas do Azure AD têm [Opções de autenticação](https://docs.microsoft.com/hololens/hololens-identity) adicionais por meio [do Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). Além disso, os usuários de login da íris podem entrar em outro dispositivo ou usar chaves de segurança FIDO.
 
 ### Gerenciamento de Dispositivo Móvel
 

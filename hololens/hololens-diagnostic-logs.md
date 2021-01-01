@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b0a068bb50d033544b4bf44100d005dfedc1d94d
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: 24f9fc142581de5017e498b2c4591cdb8f79d533
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11162945"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253148"
 ---
 # Coletar e usar informações de diagnóstico de dispositivos HoloLens
 
@@ -34,7 +34,7 @@ Usuários e administradores do HoloLens podem escolher entre quatro métodos dif
 - Aplicativo Configurações
 
 > [!IMPORTANT]  
-> Os logs de diagnóstico de dispositivo contêm informações de identificação pessoal (PII), como, por exemplo, quais processos ou aplicativos são iniciados pelo usuário durante operações típicas. Quando vários usuários compartilham um dispositivo HoloLens (por exemplo, usuários entram no mesmo dispositivo usando contas do Microsoft Azure Active Directory (AAD) diferentes), os logs de diagnóstico podem conter informações PII que se aplicam a vários usuários. Para obter mais informações, consulte [declaração de privacidade da Microsoft](https://privacy.microsoft.com/privacystatement).
+> Os logs de diagnóstico de dispositivo contêm informações de identificação pessoal (PII), como, por exemplo, quais processos ou aplicativos são iniciados pelo usuário durante operações típicas. Quando vários usuários compartilham um dispositivo HoloLens (por exemplo, usuários entram no mesmo dispositivo usando contas do Microsoft Azure Active Directory (Azure AD) diferentes), os logs de diagnóstico podem conter informações PII que se aplicam a vários usuários. Para obter mais informações, consulte [declaração de privacidade da Microsoft](https://privacy.microsoft.com/privacystatement).
 
 A tabela a seguir compara os três métodos de coleção. O link nome do método para obter informações mais detalhadas nas seções que seguem a tabela.
 
@@ -53,7 +53,7 @@ A tabela a seguir compara os três métodos de coleção. O link nome do método
 Um usuário do HoloLens pode usar o aplicativo de área de trabalho do hub de feedback da Microsoft para enviar informações de diagnóstico para o suporte da Microsoft. Para obter detalhes e instruções completas, consulte [nos fornecer comentários](hololens-feedback.md).  
 
 > [!NOTE]  
-> **Usuários comerciais ou empresariais:** Se você usar o aplicativo de Hub de comentários para relatar um problema relacionado ao MDM, ao provisionamento ou a qualquer outro aspecto de gerenciamento de dispositivos, altere a categoria do aplicativo para a categoria de dispositivo de **gerenciamento corporativo**  >  **Device category**.
+> **Usuários comerciais ou empresariais:** Se você usar o aplicativo de Hub de comentários para relatar um problema relacionado ao MDM, ao provisionamento ou a qualquer outro aspecto de gerenciamento de dispositivos, altere a categoria do aplicativo para a categoria de dispositivo de **gerenciamento corporativo**  >  ****.
 
 ### Pré-requisitos
 

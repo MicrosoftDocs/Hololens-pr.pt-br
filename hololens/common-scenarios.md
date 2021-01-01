@@ -14,16 +14,16 @@ audience: ITPro
 ms.localizationpriority: medium
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e9e91535bb49b5076547e8b9934bdc86808d41fc
-ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
+ms.openlocfilehash: a7d847e2d2d335f2e2388535a5cf9d5246bb330b
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "11195564"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253068"
 ---
 # Visão geral dos cenários comuns de implantação de infraestrutura
 
-Essas informações a seguir fornecem uma visão geral de arquitetura de alto nível para três cenários comuns ao implantar e gerenciar dispositivos Microsoft HoloLens 2 na empresa. Muitas vezes, como você gerencia seus dispositivos e como o acesso aos recursos da sua organização é determinado por fatores que já estão em vigor. Com base na infraestrutura existente, convidamos você a revisar o estilo de gerenciamento de dispositivos comuns nos seguintes cenários e experimentar nossos guias para a implantação no cenário que atenda às suas necessidades.
+Essas informações a seguir fornecem uma visão geral de arquitetura de alto nível para três cenários comuns ao implantar e gerenciar dispositivos Microsoft HoloLens 2 na empresa. Muitas vezes, você gerencia seus dispositivos e como acessar os recursos da sua organização é amplamente determinado pelos fatores que já estão no lugar. Com base na infraestrutura existente, convidamos você a revisar o estilo de gerenciamento de dispositivos comuns nos seguintes cenários e experimentar nossos guias para a implantação no cenário que atenda às suas necessidades.
 
 ## Cenários
 
@@ -32,11 +32,11 @@ O diagrama abaixo representa três cenários típicos para implantações do Hol
 
 ### Cenário A: implantar em dispositivos de conexão em nuvem
 
-O HoloLens 2 é implantado para uso principalmente em ambientes externos a uma rede corporativa. Os recursos corporativos não são acessados ou podem ser limitados pela VPN. Isso é uma implantação muito semelhante a dispositivos móveis gerenciados dentro de uma empresa.
+O HoloLens 2 é implantado para uso principalmente em ambientes externos a uma rede corporativa. Os recursos corporativos não são acessados ou podem ser limitados pela VPN. Essa implantação é semelhante aos dispositivos móveis gerenciados dentro de uma empresa.
  * Configurações básicas básicas
    * Geralmente, as redes Wi-Fi são totalmente abertas para a Internet e os serviços de nuvem.
    * Ingressar no Azure AD com o registro automático do MDM--gerenciamento de MDM (Intune)
-   * Os usuários entram com sua própria conta corporativa (AAD)
+   * Os usuários entram com sua própria conta corporativa (Azure AD)
      * Suporte para um ou vários usuários por dispositivo
    * Os níveis variáveis das configurações de bloqueio de dispositivo são aplicados com base em casos de uso específicos, de totalmente abertos para o quiosque de aplicativo único.
    * Um ou mais aplicativos são implantados via MDM
@@ -44,19 +44,20 @@ O HoloLens 2 é implantado para uso principalmente em ambientes externos a uma r
 * Desafios comuns
    * Determinar quais configurações do MDM aplicar ao HoloLens 2 com base nos requisitos do cenário.
 
-Para um guia de implantação semelhante a este cenário, consulte o nosso guia para o [HoloLens conectado à nuvem 2 com assistência remota](hololens2-cloud-connected-overview.md).
+Para obter um guia de implantação semelhante ao cenário, consulte o nosso guia para o [HoloLens conectado à nuvem 2 com assistência remota](hololens2-cloud-connected-overview.md).
 
 > [!div class="nextstepaction"]
 > [Guia de implantação – HoloLens conectado à nuvem 2 com assistência remota](hololens2-cloud-connected-overview.md)
 
 ### Cenário B: implantar dentro da rede da sua organização
 
-O HoloLens 2 é implantado para uso principalmente na rede corporativa com acesso a recursos corporativos internos. Os serviços de nuvem e Internet podem ser limitados. Esta é uma implantação típica para a maioria dos computadores com Windows 10.
+O HoloLens 2 é implantado para uso principalmente na rede corporativa com acesso a recursos corporativos internos. Os serviços de nuvem e Internet podem ser limitados. Esta implantação é uma implantação típica para a maioria dos computadores com Windows 10.
+
  * Configurações básicas básicas
    * Wi-Fi rede é uma rede corporativa interna com acesso a recursos internos e acesso limitado à Internet ou aos serviços de nuvem.
    * Ingressar no Azure AD com o registro automático do MDM
    * Gerenciamento de MDM (Intune)
-   * Os usuários entram com sua própria conta corporativa (AAD)
+   * Os usuários entram com sua própria conta corporativa (Azure AD)
      * Suporte para um ou vários usuários por dispositivo
    * Os níveis variáveis das configurações de bloqueio de dispositivo são aplicados com base em casos de uso específicos, de totalmente abertos para o quiosque de aplicativo único.
    * Um ou mais aplicativos são implantados via MDM
@@ -73,7 +74,7 @@ O HoloLens 2 é implantado para ser usado principalmente offline sem acesso à I
    * Wi-Fi conectividade está desabilitada. A Ethernet via USB pode estar ativada para conectividade de LAN, se necessário.
    * Não gerenciado.
    * Conta de usuário local para entrada de dispositivo.
-     * O HoloLens 2 oferece suporte a apenas 1 conta local.
+     * O HoloLens 2 oferece suporte a apenas uma conta local.
    * Os níveis variáveis de configurações de bloqueio de dispositivo são aplicados por meio de pacotes de provisionamento com base em casos de uso específicos. Essas configurações geralmente são muito restritas devido a requisitos de ambiente seguro.
    * Um ou mais aplicativos são implantados por meio do pacote de provisionamento
 
@@ -82,7 +83,7 @@ O HoloLens 2 é implantado para ser usado principalmente offline sem acesso à I
    * Os serviços de nuvem não podem ser aproveitados, portanto limitando os recursos do HoloLens 2.
    * Maior sobrecarga administrativa, pois esses dispositivos devem ser configurados, configurados e atualizados manualmente.
 
-Para obter um guia de implantação semelhante a este cenário, consulte o nosso [Guia de implantação seguro offline](hololens-common-scenarios-offline-secure.md).
+Para obter um guia de implantação semelhante a este cenário, confira o nosso [Guia de implantação segura offline](hololens-common-scenarios-offline-secure.md).
 
 > [!div class="nextstepaction"]
 > [Guia de implantação – HoloLens offline seguro 2](hololens-common-scenarios-offline-secure.md)

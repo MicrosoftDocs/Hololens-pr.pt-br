@@ -12,12 +12,12 @@ ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b12079142049cce28ec00803ad0a1f8dc92333e1
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: d337f9856eaeac433524d7bb8b60e9a24e264b80
+ms.sourcegitcommit: fc268335e5df529a1cedc2c6b88fa86245fe1b9b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163122"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "11252642"
 ---
 # Controle de Aplicativos do Windows Defender - WDAC
 
@@ -30,7 +30,7 @@ Um dispositivo pode ter sido atribuído a mais de uma política WDAC. Se várias
 
 Veja a seguir um guia para que os usuários aprendam a [usar o WDAC e o Windows PowerShell para permitir ou bloquear aplicativos em dispositivos do HoloLens 2 com o Microsoft Intune](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens).
 
-Quando os usuários pesquisam aplicativos instalados em seu PC com Windows 10 usando o primeiro exemplo de etapa, talvez precisem fazer algumas tentativas para restringir os resultados.
+Quando os usuários pesquisam aplicativos instalados no computador com Windows 10 usando o primeiro exemplo de etapa, talvez precisem fazer algumas tentativas para restringir os resultados.
 
 ```powershell
 $package1 = Get-AppxPackage -name *<applicationname>*
@@ -38,7 +38,7 @@ $package1 = Get-AppxPackage -name *<applicationname>*
 
 Se você não souber o nome completo do pacote, talvez seja necessário executar ' Get-AppxPackage-Name \ * YourBestGuess \ * ' algumas vezes para encontrá-lo. Depois que você tiver o nome executar ' $package 1 = Get-AppxPackage-Name real. PackageName '
 
-Por exemplo, ao executar o seguinte para Edge retornará mais de um resultado, mas nessa lista, você pode identificar que o nome completo de que você precisa é o Microsoft. MicrosoftEdge. 
+Por exemplo, ao executar o seguinte para o Microsoft Edge retornar mais de um resultado, mas a partir dessa lista, você pode identificar que o nome completo de que você precisa é Microsoft. MicrosoftEdge.
 
 ```powershell
 Get-AppxPackage -name *edge*
@@ -46,7 +46,7 @@ Get-AppxPackage -name *edge*
 
 ## Pacote de nomes de família para aplicativos no HoloLens
 
-No guia vinculado acima, você pode editar manualmente newPolicy.xml e adicionar regras para aplicativos que são instalados somente no HoloLens com os nomes da família de pacotes. Às vezes, há aplicativos que você pode usar para usar que não estão no seu computador desktop que você deseja adicionar à política. 
+No guia vinculado acima, você pode editar manualmente newPolicy.xml e adicionar regras para aplicativos que são instalados somente no HoloLens com os nomes da família de pacotes. Às vezes, há aplicativos que você pode usar para usar que não estão no seu computador desktop que você deseja adicionar à política.
 
 Aqui está uma lista dos aplicativos comumente usados e In-Box para dispositivos do HoloLens 2.
 
@@ -73,7 +73,7 @@ Aqui está uma lista dos aplicativos comumente usados e In-Box para dispositivos
 
 ### Como encontrar o nome da família de pacotes
 
-Se um aplicativo não estiver nesta lista, um usuário poderá usar o Device portal, conectado a um HoloLens 2 que tenha instalado o aplicativo para ser bloqueado, para determinar o PackageRelativeID e de lá, acesse o PackageFamilyName.
+Se um aplicativo não estiver nesta lista, um usuário poderá usar o Device portal, conectado a um HoloLens 2 que instalou o aplicativo que está prestes a ser bloqueado, para determinar o PackageRelativeID e de lá, acesse o PackageFamilyName.
 
 1. Instale o aplicativo em seu dispositivo do HoloLens 2. 
 1. Abra configurações-> atualizações & segurança-> para desenvolvedores e habilite o **modo de desenvolvedor** e o **Device portal**. 
@@ -81,6 +81,6 @@ Se um aplicativo não estiver nesta lista, um usuário poderá usar o Device por
 1. Após a conexão do Device portal, navegue até **modos de exibição** e **aplicativos**. 
 1. No painel aplicativos instalados, use a lista suspensa para selecionar o aplicativo instalado. 
 1. Localize o PackageRelativeID. 
-1. Copiar caracteres do aplicativo antes de!, este será o seu PackageFamilyName.
+1. Copiar caracteres do aplicativo antes de!, esses caracteres serão seus PackageFamilyName.
 
 

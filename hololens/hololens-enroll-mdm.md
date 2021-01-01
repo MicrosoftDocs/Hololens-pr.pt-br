@@ -14,12 +14,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 5adc1b48c4603f3a9d3145bef4f1d8aa1867a9d1
-ms.sourcegitcommit: 5877c3e51de49f949b35ab840a3312a009a4487a
+ms.openlocfilehash: 7c17cbf88fc2e7a6dcd9aa600ad6e6910edb29a8
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "11102320"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253228"
 ---
 # Registrar HoloLens em MDM
 
@@ -36,11 +36,11 @@ Você pode gerenciar vários dispositivos Microsoft HoloLens simultaneamente usa
 
 Dependendo do tipo de identidade escolhido durante o OOBE ou o logon de postagem, há métodos diferentes de inscrição. Para saber mais sobre cada tipo de identidade no HoloLens, [acesse esta página](hololens-identity.md).
 
-- Se identidade for AAD, em seguida, durante o controle de acesso do aplicativo oobe ou **Settings**,  ->  **acesse o trabalho ou o botão de**  ->  **conexão** escolar.
-    - Para o AAD, o registro automático do MDM ocorre apenas se o AAD tiver sido configurado com URLs de registro.
-- Se a identidade for AAD e o dispositivo tiver sido registrado previamente com o servidor de MDM do Intune com um perfil de configuração específico atribuído a ele, o AAD-Join e o registro ocorrerão automaticamente durante o OOBE.
+- Se identidade for o Azure AD, em seguida, durante o trabalho do OOBE ou configurações do Access **app**  ->  **Access ou no botão de**  ->  **conexão** escolar.
+    - Para o Azure AD, o registro automático do MDM ocorre apenas se o Azure AD tiver sido configurado com URLs de registro.
+- Se identidade for o Azure AD e o dispositivo tiverem sido registrados previamente no servidor MDM do Intune com perfil de configuração específico atribuído a ele, o Azure AD-Join e o registro ocorrerão automaticamente durante OOBE.
     - Também chamado de [fluxo de piloto automático](hololens2-autopilot.md) disponível em [19041.1103 + Builds](hololens-release-notes.md#windows-holographic-version-2004).
-- Se identidade for MSA, use o **Settings App**  ->  botão**de acesso do aplicativo de configurações trabalho ou escola**de  ->  **conexão** .
+- Se identidade for MSA, use o ****  ->  botão**de acesso do aplicativo de configurações trabalho ou escola**de  ->  **conexão** .
     - Também chamado de fluxo adicionar conta de trabalho (AWA).
 - Se identidade for usuário local, usar o **aplicativo Configurações**  ->  **Access trabalho ou escola**  ->  **registrar somente no link gerenciamento de dispositivo** .
     - Também chamado de fluxo de registro MDM puro.
@@ -49,11 +49,11 @@ Depois que o dispositivo for registrado com seu servidor de MDM, o aplicativo Co
 
 ## Registro automático no MDM
 
-Se a organização usar o Azure AD (Azure Active Directory) e uma solução MDM que aceita um token AAD para autenticação (atualmente, compatível apenas no Microsoft Intune e no AirWatch), o administrador de TI poderá configurar o Azure AD para permitir automaticamente o registro no MDM depois que o usuário entrar usando a conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Se a sua organização usa o Azure Active Directory (Azure AD) e uma solução MDM que aceita um token do Azure AD para autenticação (atualmente, só é compatível com o Microsoft Intune e o Microsoft Assist), seu administrador de ti pode configurar o Azure AD para permitir automaticamente o registro de MDM após o usuário entrar com sua conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
 Quando o registro automático está habilitado, nenhum registro manual adicional é necessário. Quando o usuário entra usando uma conta do Azure AD, o dispositivo é registrado no MDM depois de concluir a experiência de primeira execução.
 
-Quando um dispositivo é associado ao AAD, ele pode afetar quem considerou o [proprietário do dispositivo](security-adminless-os.md#device-owner).
+Quando um dispositivo é o Azure AD associado, ele pode afetar quem considerou o [proprietário do dispositivo](security-adminless-os.md#device-owner).
 
 ## Cancelar inscrição do HoloLens do Intune
 

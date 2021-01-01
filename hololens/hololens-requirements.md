@@ -11,12 +11,12 @@ audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/04/2020
-ms.openlocfilehash: 5f24d62193f083f96144b7e8c3518dc97c14be68
-ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
+ms.openlocfilehash: 082064acd075451e7a8d55352249a0776cd19d76
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "11195584"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253208"
 ---
 # Implantação e gerenciamento corporativos do HoloLens 2
 
@@ -140,7 +140,7 @@ Para obter mais detalhes sobre como configurar um HoloLens 2 no modo de quiosque
 
 ### Registro de dispositivo MDM
 
-Para implantações empresariais, é recomendável [registrar dispositivos](https://docs.microsoft.com/hololens/hololens-enroll-mdm) em MDM como dispositivos corporativos somente com o Azure ad Join e o registro automático de MDM (AAD + MDM). Isso requer o Azure AD Premium e dá suporte à inscrição automática para vários provedores de MDM, incluindo o Intune.
+Para implantações empresariais, é recomendável [registrar dispositivos](https://docs.microsoft.com/hololens/hololens-enroll-mdm) em MDM como dispositivos corporativos somente com o Azure ad Join e o registro automático de MDM (Azure ad + MDM). Isso requer o Azure AD Premium e dá suporte à inscrição automática para vários provedores de MDM, incluindo o Intune.
 
 Saiba mais sobre o auto-Deploying do método de inscrição [AutoPilot](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
@@ -190,4 +190,4 @@ O HoloLens 2 tem suporte para três métodos de limpar o dispositivo
 **Complemento avançado de recuperação (ARC):** Em um PC com a ferramenta ARC, um usuário ou administrador pode fazer flash de um HoloLens 2 conectado ao PC via cabo USB. Apaga todos os dados armazenados no dispositivo.
 
 > [!div class="nextstepaction"]
-> [Cenários comuns de implantação](common-scenarios.md)
+> [Cenários de Implantação Comuns](common-scenarios.md)

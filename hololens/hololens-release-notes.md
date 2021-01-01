@@ -15,12 +15,12 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: fcc13150df796290cac3f9397a9ec6bda120037b
-ms.sourcegitcommit: 74e9989240dc0c324df35e8651b2f307f9d42148
+ms.openlocfilehash: e1bdc6292dc016dde78c781db79505e2b64b0d6d
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201375"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11253058"
 ---
 # Notas de versão do HoloLens 2
 
@@ -97,7 +97,7 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 | [Iniciar automaticamente um aplicativo no quiosque de vários aplicativos](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Define um aplicativo para ser iniciado automaticamente ao entrar em um modo de quiosque de vários aplicativos.                                                        |
 | [Alterações de comportamento do modo de quiosque para manipulação de falhas](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Agora, a falha do modo de quiosque tem fallback restritivo.                                                                                                |
 | [Políticas do HoloLens](hololens-release-notes.md#hololens-policies)                                    | Novas políticas para o HoloLens.     |
-| [Armazenar Associação de grupo no AAD para quiosque offline](hololens-release-notes.md#cache-aad-group-membership-for-offline-kiosk)         | A nova política permite que os usuários usem o cache de associação do grupo para usar o modo de quiosque offline para o número definido de dias.                                        |
+| [Armazenar membros do grupo do Azure AD para quiosque offline](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk)         | A nova política permite que os usuários usem o cache de associação do grupo para usar o modo de quiosque offline para o número definido de dias.                                        |
 | [Novas políticas de restrição de dispositivo para HoloLens 2](hololens-release-notes.md#new-device-restriction-policies-for-hololens-2)       | Políticas de gerenciamento de dispositivos habilitadas recentemente para o HoloLens 2.                                                                                |
 | [Novas políticas de energia para HoloLens 2](hololens-release-notes.md#new-power-policies-for-hololens-2)       | Políticas recém aceitas para configurações de tempo limite de energia.  |
 | [Atualizar políticas](hololens-release-notes.md#newly-enabled-update-policies-for-hololens)        | Políticas habilitadas recentemente, permitindo o controle de atualizações.           |
@@ -221,7 +221,7 @@ Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido co
 
 Depois que o nó RequireNetworkInOOBE dos CSPs do TenantLockdown for definido como verdadeiro no HoloLens 2, as seguintes operações não serão permitidas no OOBE: 
 - Criação de usuário local usando provisionamento do tempo de execução 
-- Execução da operação de ingresso no AAD através de provisionamento do tempo de execução 
+- Executando a operação de junção do Azure AD por meio do provisionamento de tempo de execução 
 - Seleção de proprietários do dispositivo na experiência do OOBE 
 
 #### Como definir isso usando o Intune? 
@@ -294,12 +294,12 @@ Novas políticas de realidade mista foram criadas para dispositivos do HoloLens 
 | MixedReality\MicrophoneDisabled                    | Desabilita o microfone para que a gravação de áudio seja possível no HoloLens 2.                      | 1 Sim, 0 não (padrão)                                                |
 | MixedReality\FallbackDiagnostics                   | Controla o comportamento de quando os logs de diagnóstico podem ser coletados.                               | 0 desativado, 1 habilitado para proprietários de dispositivo, 2 habilitado para todos (padrão) |
 | MixedReality\HeadTrackingMode                      | Reservado para uso futuro.                                                                  |                                                                      |
-| MixedReality\AADGroupMembershipCacheValidityInDays | Controla quantos dias o cache de associação do grupo AAD é usado para grupos do AAD de direcionamento do quiosque. | Veja abaixo.                                                           |
+| MixedReality\AADGroupMembershipCacheValidityInDays | Controla quantos dias o cache de membros do grupo do Azure AD é usado para os grupos de direcionamento do Azure AD. | Veja abaixo.                                                           |
 
-### Armazenar Associação de grupo no AAD para quiosque offline
+### Armazenar membros do grupo do Azure AD para quiosque offline
 - Foram habilitados quiosques offline para serem usados com grupos AAD por até 60 dias.
 
-Esta política controla o número de dias, o cache de associações do grupo AAD pode ser usado para configurações de acesso atribuídas direcionando grupos do AAD para o usuário conectado. Quando esse valor de política é definido como valor maior que 0 somente, o cache é usado de outra forma não.  
+Essa política controla o número de dias, que o cache de associações do grupo do Azure AD pode ser usado para configurações de acesso atribuídas direcionadas a grupos do Azure AD para o usuário conectado. Quando esse valor de política é definido como valor maior que 0 somente, o cache é usado de outra forma não.  
 
 Nome: AADGroupMembershipCacheValidityInDays URI value:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
 
@@ -307,17 +307,17 @@ Mín-0 dias
 Máx-60 dias 
 
 Etapas para usar esta política corretamente: 
-1. Crie um perfil de configuração de dispositivo para grupos do AAD de direcionamento de quiosque e atribua-o a dispositivo (s) HoloLens (s). 
+1. Crie um perfil de configuração de dispositivo para o quiosque que direciona os grupos do Azure AD e atribua-o a dispositivo (s) do HoloLens. 
 1. Crie uma configuração de dispositivo baseada em OMA URI, que define esse valor de política como o número desejado de dias (> 0) e atribua-o a dispositivo (s) do HoloLens. 
     1. O valor de URI deve ser inserido na caixa de texto OMA-URI como./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
     1. O valor pode estar entre min/max permitido.
 1. Registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
-1. Deixe que o usuário do AAD 1 entre quando a Internet estiver disponível, quando o usuário entrar e a associação do grupo AAD for confirmada com êxito, o cache será criado. 
-1. Agora o usuário do AAD 1 pode pegar o HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
-1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do AAD. o ponto da chave aqui é que qualquer usuário do AAD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que ele é membro do grupo AAD para o qual a configuração do quiosque está direcionada. 
+1. Deixe que o usuário do Azure AD 1 entre quando a Internet estiver disponível, quando o usuário entrar e a assinatura do grupo do Azure AD for confirmada com êxito, o cache será criado. 
+1. Agora, o usuário do Azure AD 1 pode colocar o HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
+1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do Azure AD. o ponto da chave aqui é que qualquer usuário do Azure AD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que ele é membro do grupo do Azure AD para o qual a configuração do quiosque está direcionada. 
  
 > [!NOTE]
-> Até que a etapa 4 seja realizada para um usuário do AAD experimentará um comportamento de falha mencionado em ambientes "desconectados". 
+> Até que a etapa 4 seja realizada para um usuário do Azure AD ter um comportamento de falha mencionado em ambientes "desconectados". 
 
 ### Novas políticas de restrição de dispositivo para HoloLens 2
 - Permite que os usuários gerenciem políticas específicas de gerenciamento de dispositivos, como o bloqueio da adição ou da remoção de pacotes de provisionamento.
@@ -401,7 +401,7 @@ Essas informações podem ser encontradas novamente [aqui](holographic-photos-an
 - Política atualizada para desabilitar a enumeração de funções de USB por meio do MDM para NCM para AllowUsbConnection.
 - Foi corrigido um problema que impedia a exibição de um dispositivo HoloLens no File Explorer over Media Transfer Protocol (MTP) quando o dispositivo é configurado como um [quiosque de aplicativo único](hololens-kiosk.md). Observe que a MTP (e a conexão USB em geral) ainda pode ser desabilitada usando a política [AllowUSBConnection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) .
 - Correção de um problema em que os ícones no menu iniciar foram dimensionados corretamente no modo de quiosque.
-- Correção de um problema devido ao cache HTTP interferindo com o modo de quiosque direcionado para grupos do AAD.
+- Correção de um problema devido ao cache HTTP interferindo no modo de quiosque direcionado para grupos do Azure AD.
 - Correção de um problema em que os usuários não conseguiram usar o botão emparelhar após habilitar o modo de desenvolvedor com pacotes de provisionamento, a menos que eles sejam desabilitados e habilitados novamente para o modo de desenvolvedor.
 
 ## Windows holográfico, versão 1903 – atualização de novembro de 2020
@@ -491,7 +491,7 @@ Melhorias e correções na atualização:
 - A API HolographicSpace. userpresence geralmente está desabilitada para aplicativos Unity. Esse comportamento evita um problema que fez com que alguns aplicativos pausem quando o visor foi invertido, mesmo se a configuração "executar em segundo plano" estivesse habilitada. A API agora está habilitada para versões do Unity 2018.4.18 e posteriores e 2019.3.4 e posteriores.
 - Quando você acessa o Device portal em uma conexão Wi-Fi, um navegador da Web pode impedir o acesso devido a um certificado inválido. O navegador pode relatar um erro como "ERR_SSL_PROTOCOL_ERROR", mesmo se o certificado do dispositivo era confiável anteriormente. Nesse caso, você não pode progredir para o Device portal, pois não há a opção de ignorar avisos de segurança. Esta atualização resolveu o problema. Se o certificado do dispositivo foi baixado anteriormente e confiável em um computador para remover avisos de segurança do navegador e o erro SSL ocorrer, o novo certificado precisará ser baixado e confiável para corrigir os avisos de segurança do navegador.
 - Habilitou a capacidade de criar um pacote de provisionamento de tempo de execução que pode instalar um aplicativo usando pacotes MSIX.
-- Foi adicionada uma configuração em **configurações**de  >  **System**  >  **hologramas** do sistema que permite aos usuários remover automaticamente todos os hologramas de casa misturada da realidade quando o dispositivo é desligado.
+- Foi adicionada uma configuração em **configurações**de  >  ****  >  **hologramas** do sistema que permite aos usuários remover automaticamente todos os hologramas de casa misturada da realidade quando o dispositivo é desligado.
 - Correção de um problema que causava aplicativos HoloLens que alteravam o formato de pixel para renderização em preto no emulador do HoloLens.
 - Correção de um bug que causou uma falha durante o logon íris.
 - Correção de um problema sobre downloads de lojas repetidos para aplicativos já existentes.
@@ -566,11 +566,11 @@ Para experimentar:
 1. Baixe a versão mais recente do designer de configuração do Windows na Windows Store em seu computador.
 1. Selecione **provisionar dispositivos hololens**para  >  **configurar dispositivos hololens 2**.
 2. Crie seu perfil de configuração. Em seguida, copie todos os arquivos que foram criados para um dispositivo de armazenamento USB-C.
-3. Conecte o dispositivo USB-C em qualquer HoloLens atualizado. Em seguida, pressione os botões de energia para **baixo volume**  +  **power** para aplicar seu pacote de provisionamento.
+3. Conecte o dispositivo USB-C em qualquer HoloLens atualizado. Em seguida, pressione os botões de energia para **baixo volume**  +  **** para aplicar seu pacote de provisionamento.
 
 ### Status de instalação do aplicativo de linha de negócios
 
-A implantação e o gerenciamento de aplicativos MDM para aplicativos de linha de negócios são essenciais para o HoloLens. Administradores e usuários precisam exibir o status de instalação do aplicativo para auditoria e diagnóstico. Nesta versão, adicionamos mais detalhes em **configurações**  >  **contas**  >  **acessar trabalho ou escola**  >  **clique nas informações da sua conta**  >  **Info**.
+A implantação e o gerenciamento de aplicativos MDM para aplicativos de linha de negócios são essenciais para o HoloLens. Administradores e usuários precisam exibir o status de instalação do aplicativo para auditoria e diagnóstico. Nesta versão, adicionamos mais detalhes em **configurações**  >  **contas**  >  **acessar trabalho ou escola**  >  **clique nas informações da sua conta**  >  ****.
 
 ### Provedores e políticas adicionais
 
@@ -614,7 +614,7 @@ Esta versão inclui vários aprimoramentos de controle de mão:
 
 ### Modo escuro
 
-Muitos aplicativos do Windows agora dão suporte a modos escuros e leves. Usuários do HoloLens 2 podem escolher o modo padrão para aplicativos que dão suporte a ambos. Após a atualização, o modo de aplicativo padrão é "escuro", mas você pode facilmente alterar essa configuração: Navegue até **configurações**  >  cores do**sistema**  >  **Colors**  >  **escolha o modo de aplicativo padrão**. 
+Muitos aplicativos do Windows agora dão suporte a modos escuros e leves. Usuários do HoloLens 2 podem escolher o modo padrão para aplicativos que dão suporte a ambos. Após a atualização, o modo de aplicativo padrão é "escuro", mas você pode facilmente alterar essa configuração: Navegue até **configurações**  >  cores do**sistema**  >  ****  >  **escolha o modo de aplicativo padrão**. 
 
 Estes aplicativos "in-box" dão suporte ao modo escuro: 
 
