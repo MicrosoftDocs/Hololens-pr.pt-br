@@ -14,12 +14,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: d577bc23089650e47159a8a77004a984059b095e
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: 417412e6b7854d9d985faa13bcf072b98e17f264
+ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009509"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "11252968"
 ---
 # Limitando o uso de senha
 
@@ -52,7 +52,7 @@ Quando uma credencial do Windows Hello é criada, ela estabelece uma relação d
 
 Para mais informações, veja os seguintes infográficos:
 
-  ![Entrar no Windows Hello](images/security-hello-sign-in.png)
+  ![Entrada do Windows Hello](images/security-hello-sign-in.png)
   
 No gráfico apresentado acima, observe que nonce significa "número uma vez" e é uma chave numérica gerada aleatoriamente ou semi-aleatoriamente. Uma vez que a credencial biométrica do Windows Hello ou do PIN é configurada, ela nunca deixará o dispositivo para qual está provisionada. Mesmo que o PIN do usuário do Windows Hello seja roubado, como por meio de um ataque de phishing, ele fica [inútil sem o dispositivo físico do usuário](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password). 
 
@@ -62,17 +62,17 @@ A autenticação através da íris regressa ao PIN. Para configurar um novo PIN 
 
 ## Logon único com o Gerenciador de Contas da Web 
 
-O logon único (SSO) permite que usuários sem senha entrem ao dispositivo, utilizando a conta de usuário pessoal ou a conta corporativa ou a conta de estudante. O usuário é automaticamente autorizado com o SSO em todos os aplicativos e serviços integrados através dos [APIs do Gerenciador de Contas da Web](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041).
+O logon único (SSO) permite que usuários sem senha entrem ao dispositivo, utilizando a conta de usuário pessoal ou a conta corporativa ou a conta de estudante. O usuário é automaticamente autorizado com o SSO em todos os aplicativos e serviços integrados através dos [APIs do Gerenciador de Contas da Web](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true).
 
 Uma vez que uma identidade foi acrescentada por meio de um aplicativo, com consentimento do usuário, ela se torna disponível para todos os aplicativos e serviços que usam a integração a nível do sistema. Isso reduz a carga na entrada do aplicativo significativamente e oferece aos usuários uma experiência com identificação contínua.
 
 Para mais informações sobre como implementar APIs do Gerenciador de Contas da Web, acesse [APIs do Gerenciador de contas da Web](https://docs.microsoft.com/windows/uwp/security/web-account-manager).
 
-  ![Entrar no Windows Hello](images/security-api-img.png)
+  ![API de segurança](images/security-api-img.png)
   
 Para pacotes de aplicativos com requisitos de autenticação especializados, a estrutura do Gerenciador de Contas da Web (WAM) é expansível para provedores de identidade personalizada. Os usuários podem baixar o provedor de identidade personalizada, empacotado como um aplicativo de Plataforma Universal do Windows (UWP) no Microsoft Store, para habilitar o SSO em outros aplicativos integrados a esse provedor de identidade. 
 
-Para mais informações sobre como implementar provedores de identidade do WAM personalizados, veja [referência sobre API do Provedor de Identidade Personalizada do WAM](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041).
+Para mais informações sobre como implementar provedores de identidade do WAM personalizados, veja [referência sobre API do Provedor de Identidade Personalizada do WAM](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true).
 
 ## Entrada do Windows Hello e FIDO2 com WebAuthn
 
@@ -83,7 +83,7 @@ O HoloLens 2 pode utilizar credenciais de usuário sem senha (como as chaves de 
 
 Assim como no Windows Hello, quando o usuário cria e registra uma credencial FIDO2, o dispositivo (HoloLens 2 ou a chave de segurança do FIDO2), gera uma chave privada e pública no dispositivo. A chave privada é armazenada com segurança no dispositivo e só pode ser usada depois de ser desbloqueada usando um gesto local como uma biometria ou um PIN. Quando a chave privada é armazenada, a chave pública é enviada para o sistema de conta Microsoft na nuvem e registrada com a conta de usuário associada.
 
-Depois de entrar com uma conta MSA e AAD, o sistema envia um número gerado ou uma variável de dados para o dispositivo do HoloLens 2 ou do FIDO2. O HoloLens 2 ou dispositivo usa a chave privada para assinar a identificação. A identificação assinada e os metadados são enviados de volta para o sistema de conta Microsoft e verificados usando a chave pública.
+Depois de entrar com uma conta do MSA e do Microsoft Azure Active Directory, o sistema envia um número gerado ou uma variável de dados para o dispositivo HoloLens 2 ou FIDO2. O HoloLens 2 ou dispositivo usa a chave privada para assinar a identificação. A identificação assinada e os metadados são enviados de volta para o sistema de conta Microsoft e verificados usando a chave pública.
 
 Os dispositivos Windows Hello e FIDO2 implementam credenciais baseadas no dispositivo HoloLens, especificamente no enclave seguro interno do Trusted Platform Module. O enclave do TPM armazena a chave privada e requer uma biometria ou um PIN para desbloqueá-lo. Da mesma forma, uma chave de segurança FIDO2 é um pequeno dispositivo externo com uma enclave de segurança interna que armazena a chave privada e requer uma biometria ou um PIN para desbloqueá-lo.
 
@@ -91,7 +91,7 @@ As duas opções oferecem autenticação de dois fatores em uma etapa, exigindo 
 
   ![FIDO img](images/security-fido2-whfb.png)
 
-O MSA e o AAD estão entre os primeiros participantes confiáveis a dar suporte à autenticação sem senha ao implementar o WebAuthn. 
+O MSA e o Microsoft Azure Active Directory estão entre as primeiras partes confiantes para dar suporte à autenticação sem senha implementando WebAuthn. 
 
 Para mais informações sobre como usar o WebAuthn com aplicativos e/ou SDKs, acesse [WebAuthn APIs para autenticação sem senha no Windows 10](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/webauthnapis).
 
