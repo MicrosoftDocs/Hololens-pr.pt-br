@@ -1,5 +1,5 @@
 ---
-title: Configurando sua edição do HoloLens 2
+title: Edições do HoloLens 2
 description: Como cada opção do HoloLens 2 é a mesma ou diferente e o que fazer depois de obter uma.
 keywords: Opções de compra do hololens 2, opções do HoloLens, edição para desenvolvedores
 author: evmill
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 796fee002bd9ca4a67c3ce938aaf01295f406249
-ms.sourcegitcommit: d4eee928a39492b2d2d37e3ebf3a65e7b6f7cb63
+ms.openlocfilehash: d15dddc36a733adb3af2a0c2ae1fc8859c7a0d1e
+ms.sourcegitcommit: 3827d244426ffecb517f6cfa714eeef9363c062d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "11146135"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "11253559"
 ---
 # Visão geral do HoloLens 2
 
@@ -39,16 +39,15 @@ Não importa se você é um [profissional de ti que](https://www.microsoft.com/h
 
 ## Visão geral de opções
 
-**Hololens 2 (somente dispositivo)** : o HoloLens 2 oferece a experiência de realidade mista mais confortável e de imersão disponível — aprimorada pela confiabilidade, segurança e escalabilidade dos serviços de nuvem e ai da Microsoft.
+**Hololens 2 (somente dispositivo)**: o HoloLens 2 oferece a experiência de realidade mista mais confortável e de imersão disponível — aprimorada pela confiabilidade, segurança e escalabilidade dos serviços de nuvem e ai da Microsoft.
 
-**HoloLens 2 com o recurso assistência remota do Dynamics 365** : Comece no dia um com o HoloLens 2 e o melhor aplicativo de comunicação de realidade misturada da Microsoft, disponível em conjunto. Ajude toda a sua empresa a ser mais produtiva e inovação com mais finalidade. Experimente a realidade mista agora com o Dynamics 365 e soluções de parceiros do setor.
+**HoloLens 2 com o recurso assistência remota do Dynamics 365**: Comece no dia um com o HoloLens 2 e o melhor aplicativo de comunicação de realidade misturada da Microsoft, disponível em conjunto. Ajude toda a sua empresa a ser mais produtiva e inovação com mais finalidade. Experimente a realidade mista agora com o Dynamics 365 e soluções de parceiros do setor.
 
-**HoloLens 2 Development Edition** : comece a criar uma realidade misturada com esta oferta que combina o HoloLens 2 com avaliações grátis do software Unity e dos créditos do Azure para serviços de nuvem. Saiba como ir além das noções básicas e começar a desenvolver para a realidade misturada.
+**HoloLens 2 Development Edition**: comece a criar uma realidade misturada com esta oferta que combina o HoloLens 2 com avaliações grátis do software Unity e dos créditos do Azure para serviços de nuvem. Saiba como ir além das noções básicas e começar a desenvolver para a realidade misturada.
 
 Saiba mais sobre as diferentes [edições do HoloLens 2](https://www.microsoft.com/hololens/buy)
 
 ## Introdução às opções do HoloLens 2
-Selecione uma guia para saber mais sobre a jornada do HoloLens. 
+Selecione uma guia para saber mais sobre a jornada do HoloLens.
 
 [!INCLUDE[](includes/options-overview.md)]
-
