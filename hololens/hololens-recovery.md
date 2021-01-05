@@ -14,18 +14,18 @@ ms.custom:
 ms.topic: article
 ms.localizationpriority: high
 manager: jarrettr
-ms.openlocfilehash: 872e9d3445df2601579ae81f4190458289fa2eea
-ms.sourcegitcommit: 8e2c268733adce2662bf320cf96ccfea5919425e
+ms.openlocfilehash: ad162d1f415430e22e683280089cacf2e1cef02a
+ms.sourcegitcommit: 3827d244426ffecb517f6cfa714eeef9363c062d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "11195594"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "11253577"
 ---
 # Reiniciar, redefinir ou recuperar o HoloLens 2
 
 ## Carregar o dispositivo
 
-Antes de começar qualquer procedimento de solução de problemas, certifique-se de que seu dispositivo tenha de 20 a 40% da capacidade da bateria, se possível. Use o carregador e os cabos USB tipo C que vêm com o dispositivo HoloLens 2. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A). Se esses acessórios não estiverem disponíveis, certifique-se de que o carregador que está disponível possa suportar pelo menos 15W de energia.
+Antes de começar qualquer procedimento de solução de problemas, certifique-se de que seu dispositivo tenha de 20 a 40% da capacidade da bateria, se possível. Use o carregador e os cabos USB tipo C que vêm com o dispositivo HoloLens 2. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A). Usando o carregador de parede fornecido, os dispositivos HoloLens 2 podem carregar a bateria completamente em menos de 65 minutos quando o dispositivo está em espera. Se esses acessórios não estiverem disponíveis, certifique-se de que o carregador que está disponível possa suportar pelo menos 15W de energia.
 
 > [!NOTE]
 > Se possível, evite usar um computador para carregar o dispositivo por USB, pois é lento.
@@ -138,7 +138,7 @@ Siga estas etapas para habilitar o caminho da implantação:
 1. Altere o _ *Tipo de Licença** para **_offline_*_ e selecione _ *Manage**.
 1. Em **Baixe o pacote para uso offline**, selecione o segundo botão azul **Baixar**. Verifique se a extensão de arquivo é *.appxbundle*.
 
-    - Nessa etapa, se o PC tiver acesso à Internet, basta clicar duas vezes para instalar o aplicativo.
+    - Nesse estágio, se o computador Desktop tiver acesso à Internet, clique duas vezes no pacote para instalar o aplicativo.
 
 
     - Se o computador de destino não tiver conexão à Internet, siga estas etapas: 

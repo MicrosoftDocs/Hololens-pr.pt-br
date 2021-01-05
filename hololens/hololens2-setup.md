@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b2d95839ff394d61eec8f5c76baf9a151855794a
-ms.sourcegitcommit: e3056a433aeebb8bc45dc3f6db9a75f212fdf53b
+ms.openlocfilehash: 44b66d001e7a6f4bcd5fde9261a225f6aa21b666
+ms.sourcegitcommit: 3827d244426ffecb517f6cfa714eeef9363c062d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "10996399"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "11253548"
 ---
 # Preparar seu HoloLens 2
 
@@ -25,7 +25,7 @@ Os procedimentos a seguir o ajudarão a configurar um HoloLens 2 pela primeira v
 
 ## Carregar seu HoloLens
 
-Conecte a fonte de alimentação à porta de carregamento usando o cabo USB-C (incluído). Conecte a fonte de alimentação a uma tomada elétrica. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A).
+Conecte a fonte de alimentação à porta de carregamento usando o cabo USB-C (incluído). Conecte a fonte de alimentação a uma tomada elétrica. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A). Usando o carregador de parede fornecido, os dispositivos HoloLens 2 podem carregar a bateria completamente em menos de 65 minutos quando o dispositivo está em espera.
 
 A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o dispositivo está sendo executado.
 
