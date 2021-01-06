@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5995c0a1eaa7dad4e22791e9be5bf7d97b04a7ad
-ms.sourcegitcommit: d4eee928a39492b2d2d37e3ebf3a65e7b6f7cb63
+ms.openlocfilehash: 3af593ead9a6a3a18013852ac64d9991834b1250
+ms.sourcegitcommit: 8cea4c04c6d2e22225f4de43e10c05dab840736a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "11146136"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "11253931"
 ---
 # [HoloLens 2](#tab/device)
 
@@ -27,14 +27,14 @@ Esta seção o levará e sua organização estará pronta para implantar disposi
 | Checkpoint     | Resultado  |
 |---|---|
 | Configurar sua [rede para o HoloLens](../hololens-commercial-infrastructure.md).  | Você configurou sua rede.  |
-| Preparar a [rede CERITIFCATES](../hololens-certificates-network.md).  | Você preparou certificados.   |
+| Preparar [certificados de rede](../hololens-certificates-network.md).  | Você preparou certificados.   |
 | Escolha uma [solução de gerenciamento de dispositivos](https://docs.microsoft.com/hololens/hololens-csp-policy-overview) e considere as [restrições de dispositivo](https://docs.microsoft.com/hololens/hololens-csp-policy-overview) que você usará.  | Escolha uma solução de gerenciamento de dispositivos.   |
 
 ### Implantar
 | Checkpoint  | Resultado  |
 |---|---|
 | [Registre](../hololens-enroll-mdm.md) seus dispositivos.   | Você compreende como registrar seus dispositivos.   |
-| Implantar seus [aplicativos](../app-deploy-overview.md).  | Você compreende todos os métodos de implantação do aplicativo avalible e selecionou um.  |
+| Implantar seus [aplicativos](../app-deploy-overview.md).  | Você compreende todos os métodos de implantação de aplicativos disponíveis e selecionou um.  |
 
 ### Manter
 | Checkpoint  |  Resultado  |
@@ -77,15 +77,17 @@ Cada edição do HoloLens 2 tem o mesmo hardware, o mesmo [conteúdo na caixa]
 
 ## 2. Veja o que fazer a seguir com o HoloLens 2 com o Dynamics 365 Remote Assist Edition
 
+Criamos um guia especificamente para ajudar a implantar dispositivos do HoloLens em escala, com a configuração completa para configurar o Azure Active Directory para validar uma chamada de assistência remota. Confira este ** [Guia de implantação – HoloLens conectado a nuvem 2 com assistência remota](https://docs.microsoft.com/hololens/hololens2-cloud-connected-overview).**
+
 | Checkpoint  | Resultado                                |
 |-------------|----------------------------------------|
 | [Introdução](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/overview-hololens) | Comece a usar o Remote ASSIST.        |
-| [Liscene](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Resgatar licença para assistência remota.      |
+| [Licença](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Resgatar licença para assistência remota.      |
 | [Conectar](https://docs.microsoft.com/hololens/hololens-network)     | Conecte seu (s) dispositivo (s) a Wi-Fi.       |
 | [Registre-se](https://docs.microsoft.com/hololens/hololens-enroll-mdm)      | Registrar dispositivos em sua organização. |
 
 ## 3. implantar dispositivos do HoloLens para sua organização
-Esta seção o levará e sua organização estará pronta para implantar dispositivos HoloLens. 
+Esta seção o levará e sua organização estará pronta para implantar dispositivos HoloLens.
 
 ### Preparar
 | Checkpoint  | Resultado  |
@@ -127,7 +129,7 @@ Esta seção o levará e sua organização estará pronta para implantar disposi
 
 ## 1. saiba mais sobre a edição de desenvolvimento
 
-> [!NOTE] 
+> [!NOTE]
 > A edição de desenvolvimento não tem permissão para ser implantada com uma solução distribuída comercialmente. A edição de desenvolvimento tem permissão para ser implantada no Aiding do desenvolvimento e/ou teste de aplicativos em uma configuração comercial.  
 
 A edição de desenvolvimento do HoloLens 2 inclui um HoloLens 2, $500 em créditos do Azure, uma avaliação do Unity pro de 3 meses e uma avaliação de plugin de 3 meses PiXYZ:
@@ -143,21 +145,21 @@ Cada edição do HoloLens 2 tem o mesmo hardware, o mesmo [conteúdo na caixa]
 ## 2. resgate seus créditos
 
 ### Unity
-Você terá recebido um código exclusivo. Instruções para resgatar a avaliação do Unity pro: 
-1. Acesse [ID.Unity.com](http://id.unity.com/) 
+Você terá recebido um código exclusivo. Instruções para resgatar a avaliação do Unity pro:
+1. Acesse [ID.Unity.com](http://id.unity.com/)
 1. Entre com sua ID do Unity ou crie uma
-1. Clique em **resgatar um código de produto** 
+1. Clique em **resgatar um código de produto**
 1. Insira o código do produto e clique em **resgatar um código de produto**
 
 Mais detalhes sobre [como ativar uma licença do Unity](https://support.unity3d.com/hc/articles/211438683-How-do-I-activate-my-license-). Entre em contato com o [suporte da Unity](https://support.unity3d.com/hc) para obter ajuda conforme necessário.  
 
 ### Pixyz
-Você terá recebido um código exclusivo. Instruções para resgatar a avaliação do plugin Pixyz: 
+Você terá recebido um código exclusivo. Instruções para resgatar a avaliação do plugin Pixyz:
 1. Acesse [ID.Unity.com](http://id.unity.com/)
 1. Clique em **resgatar um código de produto**
 1. Insira o código do produto de plugin do Pixyz e clique em **resgatar um código de produto**
 
-Mais detalhes sobre como [resgatar a sua licença do Pixyz.](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) Entre em contato com o [suporte Pixyz](https://www.pixyz-software.com/support/) para obter ajuda conforme necessário. 
+Mais detalhes sobre como [resgatar a sua licença do Pixyz.](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) Entre em contato com o [suporte Pixyz](https://www.pixyz-software.com/support/) para obter ajuda conforme necessário.
 
 ### Azure
 Estes são alguns [produtos comuns do Azure para a realidade mista](https://azure.microsoft.com/topic/mixed-reality/) você pode querer resgatar seu crédito do Azure.
@@ -170,20 +172,18 @@ Como resgatar créditos do Azure: para resgatar seus créditos do $500 do Azure,
 
 Escolha seu mecanismo, baixe suas ferramentas e tire o seu teclado. Bem-vindo ao ecossistema de realidade misturada-é hora de criar.
 
-|     Checkpoint                              |     Resultado                                                                                                                    | 
+|     Checkpoint                              |     Resultado                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 |     [Comece a criar e criar protótipos](https://docs.microsoft.com/windows/mixed-reality/design/design)         |     Inicie sua Adventure na criação de aplicativos de realidade misturada em conceitos centrais, modelos de interação e elementos de UX.     |
 |     [Comece a desenvolver para a realidade misturada](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)    |     Escolha seu mecanismo, baixe suas ferramentas, adicione os principais blocos de construção e comece a criar hoje mesmo.                                  |
 |     [Explorar os serviços de nuvem do Azure](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Crie experiências imersivas atraentes com a renderização remota do Azure e âncoras espaciais do Azure.                                 |
 
 ## Recursos adicionais
-- [Certifique-se de instalar as ferramentas para o desenvolvimento do HoloLens.](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity) 
+
+- [Certifique-se de instalar as ferramentas para o desenvolvimento do HoloLens.](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
 - [Saiba mais sobre o desenvolvimento para o HoloLens 2 com Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2).
 - [Saiba mais sobre como combinar o MRTK com o Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/mrtk-getting-started).
-- [Saiba como implantar seus aplicativos internos](https://docs.microsoft.com/hololens/app-deploy-overview). 
+- [Saiba como implantar seus aplicativos internos](https://docs.microsoft.com/hololens/app-deploy-overview).
 - [Explore todas as possibilidades para a realidade misturada](https://docs.microsoft.com/windows/mixed-reality/).
 - [Saiba mais sobre como desenvolver para o HoloLens 2 com inreal.](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
 - Fale [com seus colegas de HoloDevelopers de margem de atraso do nosso canal](https://holodevelopersslack.azurewebsites.net/).
-
-
-
