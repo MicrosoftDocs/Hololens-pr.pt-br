@@ -14,12 +14,12 @@ ms.custom:
 ms.topic: article
 ms.localizationpriority: high
 manager: jarrettr
-ms.openlocfilehash: ad162d1f415430e22e683280089cacf2e1cef02a
-ms.sourcegitcommit: 3827d244426ffecb517f6cfa714eeef9363c062d
+ms.openlocfilehash: 7845a00d1141fb721683c4e3f2a884ed0c37c735
+ms.sourcegitcommit: 33911e3b405732d0d31a27039c8f590d52b647c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "11253577"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254828"
 ---
 # Reiniciar, redefinir ou recuperar o HoloLens 2
 
@@ -49,6 +49,7 @@ Se o dispositivo não conseguir reiniciar até o menu Iniciar, observe a aparên
 Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositivo sem usar o software UI.
 
 ### Procedimento padrão
+
 1. Desconecte o cabo tipo-C para desconectar o dispositivo da fonte de alimentação ou do computador host.
 
 2. Pressione e mantenha pressionado o botão de **energia** por 15 segundos. Todos os LEDs devem estar desativados.
@@ -88,7 +89,7 @@ Há duas maneiras de limpar a flash do dispositivo. Para ambos, você deve prime
 
 Por padrão, o Complemento Avançado de Recuperação está configurado para baixar a compilação do recurso mais recente, confira aqui para ler nossas [Notas de lançamento](hololens-release-notes.md#) para saber mais sobre a versão mais recente do recurso. Para obter o pacote mais recente do HoloLens 2 Ferramenta de Atualização de Imagens (FFU) para atualizar seu dispositivo por meio do Complemento Avançado de Recuperação, [clique aqui para baixar a última imagem mensal do HoloLens 2](https://aka.ms/hololens2download). Esta versão é geralmente a versão mais recente disponível.
 
-Antes de iniciar o procedimento de limpeza da flash, certifique-se de que o aplicativo está instalado e em execução no PC com Windows 10 e está pronto para detectar o dispositivo.
+Antes de iniciar o procedimento de limpeza da flash, certifique-se de que o aplicativo está instalado e em execução no PC com Windows 10 e está pronto para detectar o dispositivo. Certifique-se também de que seu HoloLens seja carregado em um mínimo de 40%.
 
 ![Captura de tela de reflash limpa do HoloLens 2](images/ARC1.png)
 
@@ -126,22 +127,21 @@ Se o HoloLens 2 não iniciar corretamente, talvez seja necessário colocar o dis
 
 Se um ambiente de TI impede o uso do aplicativo da Windows Store ou limita o acesso à loja, os administradores de TI podem disponibilizá-lo por meio de outros caminhos de implantação "offline".
 
- >[!NOTE] 
+ >[!NOTE]
  > - O administrador de TI também pode distribuir esse aplicativo por meio do SCCM (System Center Configuration Manager) ou do Intune.
  > - Este guia se concentrará no Advanced Recovery Companion, mas ele será modificado para outros aplicativos offline.
 
 Siga estas etapas para habilitar o caminho da implantação:
 1. Acesse a [Microsoft Store para Empresas](https://businessstore.microsoft.com) e entre usando uma identidade do Azure Active Directory.
 
-1. Vá para **Gerenciar – Configurações**. Ative **Mostrar aplicativos offline** em **Experiência de compra**. 
+1. Vá para **Gerenciar – Configurações**. Ative **Mostrar aplicativos offline** em **Experiência de compra**.
 1. Vá para **comprar meu grupo**e procure por [ * *_Complemento Avançado de Recuperação_*_](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
 1. Altere o _ *Tipo de Licença** para **_offline_*_ e selecione _ *Manage**.
 1. Em **Baixe o pacote para uso offline**, selecione o segundo botão azul **Baixar**. Verifique se a extensão de arquivo é *.appxbundle*.
 
     - Nesse estágio, se o computador Desktop tiver acesso à Internet, clique duas vezes no pacote para instalar o aplicativo.
 
-
-    - Se o computador de destino não tiver conexão à Internet, siga estas etapas: 
+    - Se o computador de destino não tiver conexão à Internet, siga estas etapas:
        1. Selecione a licença não codificada e, em seguida, selecione **Gerar licença**.
        2. Em **Estruturas Necessárias**, marque **Baixar**.
        3. Use o DISM para aplicar o pacote com a dependência e a licença. Em um prompt de comando de administrador e execute o seguinte comando:
@@ -153,7 +153,7 @@ Siga estas etapas para habilitar o caminho da implantação:
             > O número de versão neste exemplo de código pode não corresponder à versão disponível no momento. Você também pode escolher um local de download diferente do especificado no exemplo. Faça todas as alterações no comando conforme necessário.
 
 > [!TIP]
-> Quando você planeja usar o Advanced Recovery Companion para instalar um FFU offline, pode ser útil baixar a imagem flash. [**Baixar a imagem atual para o HoloLens 2**](https://aka.ms/hololens2download). 
+> Quando você planeja usar o Advanced Recovery Companion para instalar um FFU offline, pode ser útil baixar a imagem flash. [**Baixar a imagem atual para o HoloLens 2**](https://aka.ms/hololens2download).
 
 Outros recursos:
 - [Distribuir aplicativos offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps) 
