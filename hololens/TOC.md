@@ -48,6 +48,7 @@
 #### [Conectado à nuvem - Configurar](hololens2-cloud-connected-configure.md)
 #### [Conectado à nuvem-Implantar](hololens2-cloud-connected-deploy.md)
 #### [Conectado à nuvem-Manter](hololens2-cloud-connected-maintain.md)
+### [Implantando o HoloLens 2 para clientes externos com Assistência Remota](hololens2-deployment-guide.md)
 ### [Segurança Offline](hololens-common-scenarios-offline-secure.md)
 ## Segurança
 ### [Visão geral da segurança](security-overview.md)
