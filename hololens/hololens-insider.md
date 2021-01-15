@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 06c3faf573adabe158a72a66fc4b8a45afec48fb
-ms.sourcegitcommit: e26aa9059a7d8e73914205e80a89ea9637926e74
+ms.openlocfilehash: 5da96d2838cbe1a02956a3e567c6ecf6da9d6b10
+ms.sourcegitcommit: c93f23fe7c27dfa45fef300a4fc91aa811bc8126
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/14/2021
-ms.locfileid: "11269392"
+ms.locfileid: "11269476"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -103,7 +103,7 @@ Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de 
 
 ### Novo aplicativo Configurações
 
-Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O novo aplicativo Configurações inclui novos recursos e configurações expandidas para o HoloLens 2 nas seguintes áreas: dispositivos de áudio de entrada/saída, volume de aplicativo individual, energia e sleep, adaptador Ethernet, Facilidade de Acesso, modo avião e aplicativos padrão.
+Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O novo aplicativo Configurações inclui novos recursos e configurações expandidas para o HoloLens 2 nas seguintes áreas: Som, avaliação do Power &, Rede & Internet, Aplicativos, Contas, Facilidade de Acesso e muito mais.
 
 > [!NOTE]
 > Como o novo aplicativo Configurações é diferente do aplicativo Configurações herdado, todas as janelas de configurações que você colocou anteriormente em seu ambiente serão removidas após a atualização.
@@ -112,17 +112,18 @@ Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O 
 
 **Novos recursos e configurações**
 - Pesquisa de configurações: pesquise configurações da home page Configurações usando palavras-chave ou o nome da configuração
-- Som:
+- Som > sistema:
   - Dispositivos de áudio de entrada e saída: escolha independentemente seus dispositivos de áudio de entrada e saída (por exemplo, ouça áudio via fones de ouvido Bluetooth ou use um microfone USB-C para entrada de áudio). Observação: não há suporte para microfones Bluetooth no HoloLens 2.
   - Volume do aplicativo: ajustar independentemente o volume de cada aplicativo
-- Economia de bateria: habilitar manualmente o modo de economia de bateria ou definir um limite de bateria no ponto em que o modo de economia de bateria é ativado automaticamente
-- Atividade & energia: escolha quando o dispositivo deve entrar em atividade após um período de inatividade
-- USB: você pode desabilitar conexões USB por padrão
+- Sistema > energia & atividade: escolha quando o dispositivo deve entrar em atividade após um período de inatividade
+- Sistema > bateria: habilitar manualmente o modo de economia de bateria ou definir um limite de bateria no ponto em que o modo de economia de bateria é ativado automaticamente
+- Dispositivos > USB: você pode desabilitar conexões USB por padrão
 - Rede & Internet:
   - Os adaptadores Ethernet USB-C agora aparecerão na Rede & Internet
   - As configurações do adaptador Ethernet USB-C agora estão disponíveis, incluindo seu endereço IP
   - Agora você pode habilitar o modo avião no HoloLens 2
 - Aplicativos: você pode redefinir os aplicativos padrão usados para tipos de arquivo e link. Consulte [o selador de aplicativo padrão](#default-app-picker) para obter mais informações.
+- Contas > outros usuários: os proprietários de dispositivos podem adicionar usuários, atualizar usuários padrão para proprietários de dispositivos, fazer downgrade de proprietários de dispositivos para usuários padrão e remover usuários.
 - Facilidade de Acesso: alterar o tamanho do texto e alguns efeitos visuais
 
 **Problemas conhecidos**
