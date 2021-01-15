@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5299f56429adb6212074c16b67d2f10d418129f4
-ms.sourcegitcommit: b33dd8accef641578142e5234b9ad2d0222694ec
+ms.openlocfilehash: 8678e238ca17ad66873d4e4ea72ebef161ee6315
+ms.sourcegitcommit: d261604bf9e7ef04c2a947611715d0bec78b4f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "11134639"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270715"
 ---
 # Hardware do HoloLens 2
 
@@ -68,6 +68,11 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 | Profundidade | Sensor de profundidade Time-of-Flight de 1 MP |
 | Unidade de medida inercial (IMU) | Acelerômetro, giroscópio, magnetômetro |
 | Câmera | Imagens estáticas de 8 MP, vídeo de 1080p30 |
+
+![Sensores do HoloLens 2](images/hl2-sensors.png)
+
+> [!NOTE]
+> Não cubra nenhum dos sensores destacados na imagem. As câmeras de rastreamento de Head têm um FOV muito amplo, nada deve estar ao redor delas além de não cobri-las.
 
 ### Áudio e fala
 
