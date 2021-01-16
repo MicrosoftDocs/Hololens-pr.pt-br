@@ -12,16 +12,16 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8678e238ca17ad66873d4e4ea72ebef161ee6315
-ms.sourcegitcommit: d261604bf9e7ef04c2a947611715d0bec78b4f92
+ms.openlocfilehash: 41508b8cdc2e8e34545c1e07136b69eea2e3aa48
+ms.sourcegitcommit: e97b2b8f47ac5ec2e3be3e5d69d8e026b6f21111
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270715"
+ms.locfileid: "11271158"
 ---
 # Hardware do HoloLens 2
 
-![Vista lateral do HoloLens 2](images/hololens2-exploded-medium.png)
+![Vista lateral do HoloLens 2](images/hololens2-breakdown.png)
 
 O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jornada de computação holográfica iniciada pelo HoloLens (1ª geração) para fornecer uma experiência mais confortável e envolvente com mais opções para colaboração na realidade misturada.
 
@@ -69,7 +69,7 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 | Unidade de medida inercial (IMU) | Acelerômetro, giroscópio, magnetômetro |
 | Câmera | Imagens estáticas de 8 MP, vídeo de 1080p30 |
 
-![Sensores do HoloLens 2](images/hl2-sensors.png)
+![Sensores do HoloLens 2](images/hololens2-front-view.png)
 
 > [!NOTE]
 > Não cubra nenhum dos sensores destacados na imagem. As câmeras de rastreamento de Head têm um FOV muito amplo, nada deve estar ao redor delas além de não cobri-las.
