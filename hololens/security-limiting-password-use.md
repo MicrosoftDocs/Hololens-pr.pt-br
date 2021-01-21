@@ -1,6 +1,6 @@
 ---
 title: Limitando o uso de senha
-description: limitando o uso de senha para o holoLens
+description: limitando o uso de senha para o HoloLens
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
@@ -14,12 +14,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 417412e6b7854d9d985faa13bcf072b98e17f264
-ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
+ms.openlocfilehash: 2d9527c9fee2818dfe8aa1f88a2f193415323bb1
+ms.sourcegitcommit: 37910c10f0f98aa9cbdc29124cd8f14ee0af3fbd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "11252968"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "11280660"
 ---
 # Limitando o uso de senha
 
@@ -97,7 +97,7 @@ Para mais informações sobre como usar o WebAuthn com aplicativos e/ou SDKs, ac
 
 ## Contas locais
 
-Uma única conta local pode ser configurada para implantações do modo offline. As contas locais não são ativadas por padrão e devem ser configuradas durante o provisionamento do dispositivo. Elas têm que entrar usando uma senha e não dar suporte a métodos de autenticação alternativos (como [Windows Hello para Empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview) ou [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)). 
+Uma única conta local pode ser configurada para implantações do modo offline. As contas locais não são ativadas por padrão e devem ser configuradas durante o provisionamento do dispositivo. Elas devem entrar usando uma senha e elas não suportam a métodos de autenticação alternativos (como [Windows Hello para Empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-overview) ou [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)). 
 
 Mais detalhes sobre as contas de usuário do HoloLens podem ser encontrados em [Identidade do HoloLens](https://docs.microsoft.com/hololens/hololens-identity). 
 
