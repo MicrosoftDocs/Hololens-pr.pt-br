@@ -1,6 +1,6 @@
 ---
 title: Diretrizes de Infraestrutura para o HoloLens
-description: Diretrizes de Infraestrutura para dispositivos HoloLens
+description: Saiba mais sobre as diretrizes de infraestrutura para dispositivos HoloLens, incluindo suporte de rede sem fio, assistência remota e gerenciamento de dispositivo móvel.
 ms.prod: hololens
 ms.sitesec: library
 author: pawinfie
@@ -14,12 +14,12 @@ manager: bradke
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: a67aaa5df4c74531b5bed88abaa266b00de5c406
-ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
+ms.openlocfilehash: 4eb55bec56e53de9195ac87e0491eefd91992f3d
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "11253158"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283382"
 ---
 # Configurar Sua Rede para o HoloLens
 
@@ -59,9 +59,9 @@ Certifique-se de que [essa lista](hololens-offline.md)de pontos de extremidade s
 
 ### Requisitos de Rede Específicos da Assistência Remota
 
-1. A largura de banda recomendada para o desempenho ideal da Assistência Remota é de 1.5 Mbps. Os requisitos de rede detalhados e informações adicionais podem ser encontrados [aqui](https://docs.microsoft.com/MicrosoftTeams/prepare-network).
+1. A largura de banda recomendada para o desempenho ideal da Assistência Remota é de 1.5 Mbps. Consulte os [Requisitos detalhados da rede](https://docs.microsoft.com/MicrosoftTeams/prepare-network) para obter informações adicionais.
 **(Observe que, caso não haja velocidades de rede de pelo menos 1.5 Mbps, a Assistência Remota continuará funcionando. No entanto, a qualidade pode ser afetada).**
-1. Verifique se essas portas e URLs são permitidas no firewall da sua rede. Isso permitirá que o Microsoft Teams funcione. A lista mais recente pode ser encontrada [aqui](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
+1. Certifique-se de que essas portas e URLs sejam liberadas no firewall da rede para permitir que o Microsoft Teams funcione. Mantenha-se atualizado com a [lista de portas mais recente.](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)
 
 - Saiba mais, especificamente, sobre os [Requisitos de Rede para Assistência Remota](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/requirements#network-requirements). 
 - Saiba mais sobre como [preparar a rede da sua organização para o Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/prepare-network)
@@ -81,14 +81,14 @@ Confira [Requisitos de Licenças do HoloLens](hololens-licenses-requirements.md)
 1. Se planeja usar o Registro Automático, será necessário [Configurar o registro do Azure AD](https://docs.microsoft.com/intune/deploy-use/.set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
 
 1. Verifique se os usuários da sua empresa estão no Azure Active Directory (Azure AD).
-Instruções para adicionar usuários podem ser encontradas [aqui](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory).
+Consulte as seguintes [instruções](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory) para adicionar usuários.
 
 1. Sugerimos que os usuários que precisarem de licenças similares sejam adicionados a um mesmo grupo.
     1. [Criar um grupo](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
     1. [Adicionar usuários a grupos](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal)
 
 1. Verifique se os usuários da sua empresa (ou grupo de usuários) têm as licenças necessárias.
-As instruções para atribuir licenças podem ser encontradas [aqui](https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups).
+Se você precisar atribuir licenças, siga estas [instruções](https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups).
 
 1. Execute esta etapa apenas se espera que os usuários registrem seus dispositivos HoloLens/Dispositivo móvel (existem três opções). Estas etapas garantem que os usuários da empresa (ou um grupo de usuários) possam adicionar dispositivos.
     1. **Opção 1:** Conceda a todos os usuários permissão para adicionar dispositivos ao Azure AD.
@@ -109,7 +109,7 @@ Entrar no portal do Azure como um administradorAzure Active DirectoryDispositivo
 
 O gerenciamento contínuo de dispositivos dependerá da infraestrutura de gerenciamento de dispositivo móvel.  A maioria tem a mesma funcionalidade geral, mas a interface do usuário pode variar muito.
 
-1. Os [CSPs (Provedores de Serviços de Configuração)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) permitem criar e implantar as configurações de gerenciamento para os dispositivos em sua rede. É possível encontrar uma lista de CSPs para o HoloLens [here](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices).
+1. [CSPs (Provedores de serviço de configuração)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) permitem que você crie e implante configurações de gerenciamento para os dispositivos em sua rede. Consulte a [lista de CSPs do HoloLens](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) para referência.
 
 1. [Políticas de conformidade](https://docs.microsoft.com/intune/device-compliance-get-started) são regras e configurações que os dispositivos devem atender para serem compatíveis com a sua infraestrutura corporativa. Use essas políticas com Acesso Condicional para bloquear o acesso a recursos da empresa por dispositivos que não são compatíveis. Por exemplo, você pode criar uma política que requer que o Bitlocker esteja ativado.
 
@@ -150,20 +150,20 @@ Leia mais sobre [instalação de aplicativos no HoloLens](https://docs.microsoft
 
 ### Certificados
 
-Você pode distribuir certificados através do provedor de MDM. O Intune dá suporte a PKCS, PFX e SCEP, caso sua empresa exija certificados. É importante entender qual certificado é adequado para sua empresa. Visite [aqui](https://docs.microsoft.com/intune/protect/certificates-configure) para determinar o certificado ideal para você. Se você planeja usar certificados para Autenticação do HoloLens, o PFX ou SCEP talvez sejam adequados para você.
+Você pode distribuir certificados através do provedor de MDM. O Intune dá suporte a PKCS, PFX e SCEP, caso sua empresa exija certificados. É importante entender qual certificado é adequado para sua empresa. Visite a documentação de [configurações de certificado](https://docs.microsoft.com/intune/protect/certificates-configure) para determinar qual é o melhor certificado para você. Se você planeja usar certificados para Autenticação do HoloLens, o PFX ou SCEP talvez sejam adequados para você.
 
-As etapas para o SCEP podem ser encontradas [aqui](https://docs.microsoft.com/intune/protect/certificates-profile-scep).
+Veja as etapas a seguir para usar o [SCEP](https://docs.microsoft.com/intune/protect/certificates-profile-scep).
 
 ### Como Atualizar para o Pacote Comercial do Holographics for Business
 
 > [!NOTE]
 > O Holographics for Business (pacote comercial) do Windows destina-se apenas a dispositivos da 1ª geração do HoloLens. O perfil não será aplicado a dispositivos do HoloLens 2.
 
-As instruções de como atualizar para o pacote comercial podem ser encontradas [aqui](https://docs.microsoft.com/intune/configuration/holographic-upgrade).
+Você pode encontrar instruções de atualização para o pacote comercial na documentação de [atualização holográfica](https://docs.microsoft.com/intune/configuration/holographic-upgrade).
 
 ### Como Configurar o Modo de Quiosque usando o Microsoft Intune.
 
-1. Sincronizar a Microsoft Store com o Intune ([Aqui](https://docs.microsoft.com/intune/apps/windows-store-for-business)).
+1. Sincronize a Microsoft Store com o Intune (consulte as seguintes [instruções](https://docs.microsoft.com/intune/apps/windows-store-for-business)).
 
 1. Verificar as configurações do aplicativo
     1. Entrar na sua conta da Microsoft Store para Empresas
@@ -179,7 +179,7 @@ As instruções de como atualizar para o pacote comercial podem ser encontradas 
 
 ![Imagem que mostra a Configuração do Modo de Quiosque no Intune](images/aad-kioskmode.png)
 
-Para outros serviços MDM, verifique a documentação do seu provedor para obter instruções. Caso precise usar uma configuração personalizada e uma configuração XML completa para instalar um quiosque no seu serviço MDM, instruções adicionais podem ser encontradas [aqui](hololens-kiosk.md#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk)
+Para outros serviços MDM, verifique a documentação do seu provedor para obter instruções. Consulte as instruções do [Quiosque do HoloLens](hololens-kiosk.md#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) se precisar usar uma configuração personalizada e uma configuração XML completa para definir um quiosque em seu serviço MDM.
 
 ## Certificados e Autenticação
 

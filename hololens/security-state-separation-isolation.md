@@ -1,6 +1,6 @@
 ---
 title: Separação e isolamento de estado
-description: Separação e isolamento de estado
+description: Saiba mais sobre separação de estado, isolamento, assinatura de código e aplicativos de proteção no dispositivo de realidade misturada do HoloLens 2.
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 702b713b7a930a2e4909dffaa895856d918d11c9
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: 60d6d7c0e281395957ce9158144a5f3d60927682
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009409"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11282802"
 ---
 # Separação e isolamento de estado
 
