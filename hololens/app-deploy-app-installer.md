@@ -1,6 +1,6 @@
 ---
 title: Como fazer side load e instalar aplicativos por meio do Instalador de Aplicativos do HoloLens 2
-description: Carregar e instalar aplicativos por meio da interface do usuário
+description: Saiba como instalar e solucionar problemas de aplicativos com o instalador do aplicativo e a carga lateral e instalar aplicativos por meio da interface do usuário.
 keywords: gerenciamento de aplicativos, aplicativo, hololens, instalador de aplicativo
 author: evmill
 ms.author: v-evmill
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ab0c58d5a97d5dbaf83adf321d1f9fbc01b3ad03
-ms.sourcegitcommit: 37910c10f0f98aa9cbdc29124cd8f14ee0af3fbd
+ms.openlocfilehash: 89f48fab236fdaf58fb0bf8b29e5a3aacb3bdee3
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "11280650"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283732"
 ---
 # Instalar aplicativos no HoloLens 2 por meio do Instalador de Aplicativo
 
