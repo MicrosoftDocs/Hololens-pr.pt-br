@@ -1,6 +1,6 @@
 ---
-title: Guia de Implantação – HoloLens 2 conectado à nuvem com Assistência Remota - Visão geral
-description: Registrar dispositivos HoloLens em uma rede conectada à nuvem
+title: Visão geral do HoloLens 2 conectado à nuvem com Assistência Remota
+description: Saiba como registrar dispositivos do HoloLens 2 em uma rede conectada à nuvem usando a Assistência Remota do Dynamics 365.
 keywords: HoloLens, gerenciamento, conectado à nuvem, Assistência Remota, AAD, Azure AD, MDM, Gerenciamento de Dispositivo Móvel
 author: evmill
 ms.author: v-evmill
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: fe83333c99f8dbf23b211c9b5155db256dcd20b3
-ms.sourcegitcommit: 50e4d61a31b94d5007776064b4012e26cf9ecbbb
+ms.openlocfilehash: 835b4be101b665d2b86c2170a65c04697686e403
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "11271665"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283072"
 ---
 # Guia de Implantação – HoloLens 2 conectado à nuvem com Assistência Remota – Visão geral
 
