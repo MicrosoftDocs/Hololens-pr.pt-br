@@ -1,6 +1,6 @@
 ---
 title: Versão prévia do Insider para Microsoft HoloLens
-description: É simples começar a trabalhar com builds do Insider e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
+description: Saiba como começar a usar builds do Insider e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6df24d3a8640edeb9196834f940500aa51e85af7
-ms.sourcegitcommit: 50e4d61a31b94d5007776064b4012e26cf9ecbbb
+ms.openlocfilehash: 5936f721c1279dce45fa3e92e160f10d880de207
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "11271688"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283192"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -108,6 +108,15 @@ Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de 
 - Redefinir seu dispositivo removerá o novo Microsoft Edge
 - A visualização da lupa no teclado holográfico mostra conteúdo incorreto
 
+#### Canais do Microsoft Edge Insider
+
+A equipe do Microsoft Edge disponibiliza três canais de visualização para a comunidade do Edge Insider: Beta, Dev e Canary. Instalar um canal de visualização não desinstala a versão lançada do Microsoft Edge em seu HoloLens 2, e você pode instalar mais de uma ao mesmo tempo. 
+
+Visite a [home page do Microsoft Edge Insider](https://www.microsoftedgeinsider.com) para saber mais sobre a comunidade do Edge Insider. Para saber mais sobre os diferentes canais do Edge Insider e começar, visite a página de download do [Participante do Insider Edge.](https://www.microsoftedgeinsider.com/download)
+
+> [!NOTE]
+> Durante a visualização do Windows Insider para HoloLens 2, a versão do Microsoft Edge em seu dispositivo pode ser superior à disponível em alguns (ou todos) dos canais do Microsoft Edge Insider. Isso é para garantir que novos recursos e correções especificamente voltados para o navegador da Web no HoloLens 2 estão chegando aos participantes do Programa Windows Insider o mais rápido possível. Logo após o lançamento público da próxima atualização do Windows, os builds do canal do Microsoft Edge Insider ultrapassarão e se manterão à frente da versão do Microsoft Edge em seu HoloLens 2.
+
 ### Novo aplicativo Configurações
 
 Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O novo aplicativo Configurações inclui novos recursos e configurações expandidas para o HoloLens 2 nas seguintes áreas: Som, avaliação do Power &, Rede & Internet, Aplicativos, Contas, Facilidade de Acesso e muito mais.
@@ -162,7 +171,7 @@ Observe que esse recurso pode ser complicado de usar e ser mestre devido à natu
 > [!IMPORTANT]
 > Conectar um **microfone USB não o definirá automaticamente como o dispositivo de entrada.** Ao conectar um conjunto de fones de ouvido USB-C, os usuários observarão que o áudio do fone de ouvido será redirecionado automaticamente para os fones de ouvido, mas o sistema operacional holoLens prioriza a matriz de microfone interna acima de qualquer outro dispositivo de entrada. **Para usar um microfone USB-C, siga as etapas abaixo.**
 
-Os usuários agora podem selecionar microfones externos conectados usb-C usando **o painel de configurações** de som. Isso permite que os usuários usem seu próprio microfone conectado, mas USB em gravação e aplicativos. Microfones USB-C são fáceis de habilitar e usar.
+Os usuários podem selecionar microfones externos conectados usb-C usando **o painel de configurações** de som. Microfones USB-C podem ser usados para chamada, gravação, etc.
 
 Abra o **aplicativo Configurações** e selecione **Som do**  ->  **Sistema.**
 
@@ -173,7 +182,7 @@ Abra o **aplicativo Configurações** e selecione **Som do**  ->  **Sistema.**
 >
 > Em seguida, use o drop-down para definir o microfone externo como **Padrão** ou **Padrão de Comunicações.** Escolher **Padrão significa** que o microfone externo será usado em todos os lugares.
 >
-> Escolher **o Padrão** de Comunicações significa que o microfone externo será usado na Assistência Remota e em outros aplicativos de comunicação, mas o HoloLens Mic Array ainda pode ser usado para outras tarefas.
+> Escolher **o Padrão de** Comunicação significa que o microfone externo será usado na Assistência Remota e em outros aplicativos de comunicação, mas a matriz de microfone do HoloLens ainda pode ser usada para outras tarefas.
 
 ![Gerenciar dispositivos de som](images/usbc-mic-2.png)
 
