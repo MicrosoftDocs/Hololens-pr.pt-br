@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 89f48fab236fdaf58fb0bf8b29e5a3aacb3bdee3
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: 9e413963dbf34dd071fc9603487590065b967ee7
+ms.sourcegitcommit: af4e222a4f83ab82466a383099897986ddf6b8c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283732"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297286"
 ---
 # Instalar aplicativos no HoloLens 2 por meio do Instalador de Aplicativo
 
@@ -40,9 +40,10 @@ Agora você pode instalar aplicativos sem precisar habilitar o Modo de Desenvolv
 
 ### Para seus dispositivos:
 
- está atualmente disponível em builds do Windows Holographic 20H2 para dispositivos HoloLens 2. Certifique-se de que todos os dispositivos que usam esse método sejam [atualizados.](hololens-update-hololens.md)
+Este recurso está atualmente disponível em builds do Windows Holographic 20H2 para dispositivos HoloLens 2. Certifique-se de que todos os dispositivos que usam esse método sejam [atualizados.](hololens-update-hololens.md)
 
-### Para seus aplicativos: 
+### Para seus aplicativos:
+
 A Configuração da Solução do **** aplicativo deve ser **Mestre** ou Versão, pois o Instalador de Aplicativo usará dependências da loja. Veja mais sobre [como criar pacotes de aplicativos.](https://docs.microsoft.com/windows/msix/app-installer/create-appinstallerfile-vs)
 
 Os aplicativos instalados por meio desse método devem ser assinados digitalmente. Você precisará usar um certificado para assinar o aplicativo. Você pode obter um certificado da lista de CA confiáveis do [MS.](https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFT)Nesse caso, não será necessário tomar nenhuma ação extra. Ou você pode assinar seu próprio certificado, no entanto, esse certificado precisará ser emitido para o dispositivo.
