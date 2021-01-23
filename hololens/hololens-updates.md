@@ -1,6 +1,6 @@
 ---
 title: Gerenciar atualizações do HoloLens
-description: Os administradores podem usar o gerenciamento de dispositivo móvel para gerenciar as atualizações de dispositivos HoloLens.
+description: Saiba como os administradores podem usar o gerenciamento de dispositivos móveis para gerenciar atualizações em dispositivos HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -16,12 +16,12 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 3a2246296c5ab8aa86dfaa419ed02aa5a961dbfc
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: fa31ab20b149ab62fa59e334f6710b98f2e826ff
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163129"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11284052"
 ---
 # Gerenciar atualizações do HoloLens
 
