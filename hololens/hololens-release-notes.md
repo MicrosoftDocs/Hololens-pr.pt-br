@@ -1,6 +1,6 @@
 ---
 title: Notas de versão do HoloLens 2
-description: Saiba mais sobre as atualizações em cada nova versão do HoloLens 2.
+description: Mantenha-se atualizado com todas as atualizações em cada nova versão do HoloLens 2.
 author: scooley
 ms.author: scooley
 manager: laurawi
@@ -15,16 +15,16 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7c93f567921a634e5a75c274304819ec9e81b933
-ms.sourcegitcommit: e26aa9059a7d8e73914205e80a89ea9637926e74
+ms.openlocfilehash: 8dd5f4c50ebdab202d24d4a52d393b8bee086c7a
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "11269412"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11284092"
 ---
 # Notas de versão do HoloLens 2
 
-Para garantir que você tenha uma experiência produtiva com seus dispositivos HoloLens, continuaremos a lançar atualizações de recursos, bugs e segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização mais recente do HoloLens 2, você pode verificar se há atualizações e atualizar [manualmente](hololens-update-hololens.md#check-for-updates-and-manually-update) ou obter o FFU (Full Flash Update) para piscar seu dispositivo por meio do [Advanced Recovery Companion](hololens-recovery.md#clean-reflash-the-device), baixe-o aqui. [](https://aka.ms/hololens2download) O download é mantido atualizado e fornece o build mais recente disponível para o público em geral.
+Para garantir que você tenha uma experiência produtiva com seus dispositivos HoloLens, continuaremos a lançar atualizações de recursos, bugs e segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização mais recente do HoloLens 2, você pode verificar se há atualizações e atualizar [manualmente](hololens-update-hololens.md#check-for-updates-and-manually-update) ou obter o FFU (Full Flash Update) para piscar seu dispositivo por meio do [Advanced Recovery Companion](hololens-recovery.md#clean-reflash-the-device). O [download](https://aka.ms/hololens2download) é mantido atualizado e fornece o build mais recente disponível para o público em geral.
 
 Estamos animados em iniciar a versão de versões We will be flighting to the Dev Channel for the latest updates. Continuaremos com nossas [notas do HoloLens Insider](hololens-insider.md) à medida que adicionarmos mais recursos e atualizações às nossas versões do Windows Insider. Fique animado e pronto para misturar essas atualizações à sua realidade. 
 
@@ -191,16 +191,14 @@ Antes desta versão, os usuários tinham que iniciar a tela de provisionamento m
 
 Observação: se uma unidade USB for deixada conectada enquanto o dispositivo estiver sendo inicializado, o OOBE enumerará o dispositivo de armazenamento USB existente, bem como observará outros que estão conectados.
 
-Para obter mais informações sobre como aplicar pacotes de provisionamento durante a OOBE, continue lendo [aqui.](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup)
+Para obter mais informações sobre como aplicar pacotes de provisionamento durante a OOBE, visite a documentação de [provisionamento do HoloLens.](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup)
 
-Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#auto-launch-provisioning-from-usb)
+Informações adicionais [sobre o provisionamento](hololens-provisioning.md#auto-launch-provisioning-from-usb) de início automático de um USB podem ser encontradas na documentação de provisionamento do HoloLens.
 
 ### Confirmar automaticamente pacotes de provisionamento na OOBE
 - Processo automatizado permitindo menos interação do usuário, quando a página Pacote de Provisionamento é exibida, ela aplicará automaticamente todos os pacotes listados.
 
-Quando a tela principal de provisionamento aparece, o OOBE conta 10 segundos antes de começar automaticamente a aplicar todos os pacotes de provisionamento. Os usuários ainda podem confirmar ou cancelar dentro de 10 segundos depois de verificar os pacotes esperados.
-
-Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe)
+Quando a tela principal de provisionamento aparece, o OOBE conta 10 segundos antes de começar automaticamente a aplicar todos os pacotes de provisionamento. Os usuários ainda podem [confirmar ou cancelar](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) dentro de 10 segundos depois de verificar os pacotes esperados.
 
 ### Provisionamento automático sem usar a interface do usuário
 - Processos automáticos combinados para interações reduzidas do dispositivo para provisionamento. 
@@ -215,9 +213,7 @@ Combinando a iniciação automática do provisionamento de dispositivos USB e a 
 1. Quando o dispositivo HoloLens 2 é inicializado na configuração inicial pelo usuário, ele detecta automaticamente o pacote de provisionamento na unidade USB e inicia a página de provisionamento.
 1. Após 10 segundos, o dispositivo aplicará automaticamente o pacote de provisionamento. 
 
-Seu dispositivo agora está configurado e exibirá a tela Provisionamento bem-sucedido.
-
-Essas informações podem ser encontradas mais tarde [aqui.](hololens-provisioning.md#automatic-provisioning-without-using-ui)
+Seu dispositivo agora está configurado e [exibirá a tela Provisionamento bem-sucedido.](hololens-provisioning.md#automatic-provisioning-without-using-ui)
 
 ### Usando o Autopilot com Wi-Fi conexão
 - Removida a necessidade de adaptadores USB-C para ethernet reduzir as necessidades de hardware, habilitando o Autopilot para funcionar Wi-Fi dispositivos conectados.
@@ -275,7 +271,7 @@ Essas informações agora podem ser encontradas junto com o restante do Autopilo
 ### Acesso Global Atribuído – Modo de Quiosque
 - Gerenciamento de identidade reduzido para Quiosque, habilitando o novo método kiosk que aplica o modo de quiosque no nível do sistema.
 
-Esse novo recurso permite que um administrador de IT configure um dispositivo do HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com nenhuma identidade no sistema e se aplica a todos que entrarem no dispositivo. Leia sobre esse novo recurso em detalhes [aqui.](hololens-global-assigned-access-kiosk.md)
+Esse novo recurso permite que um administrador de IT configure um dispositivo do HoloLens 2 para o modo de quiosque de vários aplicativos, que é aplicável no nível do sistema, não tem afinidade com nenhuma identidade no sistema e se aplica a todos que entrarem no dispositivo. Leia sobre esse novo recurso em detalhes no quiosque de acesso atribuído [global do HoloLens.](hololens-global-assigned-access-kiosk.md)
 
 ### Início automático de um aplicativo no modo de quiosque de vários aplicativos 
 - Experiência focada na abertura automática de aplicativos, aumentando ainda mais as seleções de interface do usuário e aplicativo escolhidas para experiências do modo quiosque.
@@ -405,7 +401,7 @@ Devido aos comentários dos clientes, aumentamos o comprimento de gravação de 
 > - A duração máxima estimada de gravação é menor do que os 5 minutos padrão.
 > - O espaço em disco disponível é inferior a 20% do espaço total em disco.
 
-Essas informações podem ser encontradas novamente [aqui.](holographic-photos-and-videos.md#maximum-recording-length) 
+Você pode encontrar os requisitos completos em nossa [documentação de fotos e vídeos](holographic-photos-and-videos.md#maximum-recording-length) holográficos. 
 
 ### Melhorias e correções na atualização:
 - Agora, mais telas na tela OOBE estão no modo escuro.
