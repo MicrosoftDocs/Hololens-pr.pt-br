@@ -1,6 +1,6 @@
 ---
 title: Acesso Global Atribuído
-description: Guia de como usar o OMA-URI para quiosques de Acesso Global Atribuído
+description: Comece com nosso guia para usar OMA-URI para Quiosques de Acesso Atribuídos Globais com Intune e designer de configuração do Windows.
 author: evmill
 ms.author: v-evmill
 ms.date: 9/21/2020
@@ -13,12 +13,12 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f91b77be846b585de8d89c17e516923f97304d57
-ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
+ms.openlocfilehash: b86d88c7487043c6fcb057f03f353a57e44ef781
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "11253198"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283172"
 ---
 # Acesso Global Atribuído – Quiosque
 
