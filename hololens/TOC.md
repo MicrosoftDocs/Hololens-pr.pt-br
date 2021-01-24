@@ -13,6 +13,7 @@
 ### [Idiomas com suporte para HoloLens 2](hololens2-language-support.md)
 ### [Noções básicas sobre o HoloLens 2](hololens2-basic-usage.md)
 ### [Perguntas Frequentes da Edição de Desenvolvimento do HoloLens 2](hololens2-development-edition-faq.md)
+### [Gerenciar aplicativos personalizados para o HoloLens 2](hololens2-holographic-custom-apps.md)
 
 
 ## Introdução ao HoloLens (1ª geração)
@@ -24,6 +25,8 @@
 ### [Noções básicas sobre o HoloLens (1ª geração)](hololens1-basic-usage.md)
 ### [Usar o clicker do HoloLens (1ª gen)](hololens1-clicker.md)
 ### [Usar o Visualizador 3D no HoloLens (1ª geração)](holographic-3d-viewer-beta.md)
+### [Gerenciar aplicativos personalizados para o HoloLens](holographic-custom-apps.md)
+
 
 ## Navegar na interface do Windows Holographic
 ### [Usar o Menu Iniciar e página inicial da realidade misturada](holographic-home.md)
@@ -32,7 +35,6 @@
 ### [Criar fotos e vídeos de realidade misturada](holographic-photos-and-videos.md)
 ## Aplicativos holográficos
 ### [Localizar, instalar e desinstalar aplicativos](holographic-store-apps.md)
-### [Gerenciar aplicativos personalizados para o HoloLens](holographic-custom-apps.md)
 ## Ótica e posicionamento no espaço do holograma
 ### [Melhorar o conforto e a qualidade visual](hololens-calibration.md)
 ### [Mapear espaços físicos com o HoloLens](hololens-spaces.md) 

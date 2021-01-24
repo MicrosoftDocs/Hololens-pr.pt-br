@@ -1,6 +1,6 @@
 ---
 title: Perguntas frequentes sobre ajuste e conforto do HoloLens (1ª geração)
-description: Respostas às perguntas frequentes sobre como ajustar seu HoloLens (1ª geração).
+description: Mantenha-se atualizado com as respostas às perguntas mais frequentes sobre como encaixar seu dispositivo de realidade mista HoloLens (1ª geração).
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -13,12 +13,12 @@ audience: ITPro
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: d21d4485919b8e3230e61fc0e158a6635d4e2c37
-ms.sourcegitcommit: 7c057aeeaeebb4daffa2120491d4e897a31e8d0f
+ms.openlocfilehash: 8205675213faefd1b0907627c427c572d52a37c6
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10827553"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283992"
 ---
 # Perguntas frequentes sobre ajuste e conforto do HoloLens (1ª geração)
 

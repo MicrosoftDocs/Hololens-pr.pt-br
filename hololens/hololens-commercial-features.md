@@ -1,7 +1,6 @@
 ---
 title: Recursos comerciais
-description: O Microsoft HoloLens Commercial Suite inclui recursos que tornam mais fácil para as empresas gerenciarem dispositivos HoloLens. Os dispositivos HoloLens 2 são equipados com recursos comerciais por padrão.
-keywords: HoloLens, comercial, recursos, MDM, gerenciamento de dispositivo móvel, modo de quiosque
+description: Saiba mais sobre os recursos do Microsoft HoloLens Commercial Suite que tornam mais fácil para as empresas gerenciar dispositivos HoloLens.
 author: scooley
 ms.author: scooley
 ms.date: 08/26/2019
@@ -18,12 +17,13 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 51d50f863e379baffee4e44c44e3ab467b517359
-ms.sourcegitcommit: 96dcd015ad24169295690a8ed13ea1bf480e4b9e
+keywords: HoloLens, comercial, recursos, MDM, gerenciamento de dispositivo móvel, modo de quiosque
+ms.openlocfilehash: 5aef764b1d7937832e162ab219131d8c3d768e68
+ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "11253168"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11283442"
 ---
 # Recursos comerciais
 
