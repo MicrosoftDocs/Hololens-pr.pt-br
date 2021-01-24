@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: c2d79c9cfbca263a507388227304f9d0dcecd9d0
-ms.sourcegitcommit: f30add1d1eb07342e78a6baef87777c4d7123669
+ms.openlocfilehash: 7cc08396925368be5230a078de6fb4c7cd0a8b24
+ms.sourcegitcommit: 063aa10baa190429b7248f7f1384afba7975861e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297654"
+ms.locfileid: "11297761"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -49,7 +49,7 @@ Estamos animados em iniciar a versão de versões We will be flighting to the De
 
 O novo Microsoft Edge adota o projeto de software livre [Chromium](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) para criar melhor compatibilidade para clientes e menos fragmentação da Web para desenvolvedores da Web.
 
-Com essa visualização do Insider, o novo Microsoft Edge está disponível para clientes do HoloLens 2 pela primeira vez! Embora o novo Microsoft Edge eventualmente substitua o Microsoft Edge herdada no HoloLens 2, ambos os navegadores estão atualmente disponíveis para Participantes do Programa Insider. Compartilhe comentários e bugs com nossa equipe por meio do recurso **Enviar Comentários** no novo Microsoft Edge ou por meio do Hub [de Feedback.](hololens-feedback.md)
+Com essa visualização do Insider, o novo Microsoft Edge está disponível para clientes do HoloLens 2 pela primeira vez! Embora o novo Microsoft Edge eventualmente substitua o Microsoft Edge herdada no HoloLens 2, ambos os navegadores estão atualmente disponíveis para Insiders. Compartilhe comentários e bugs com nossa equipe por meio do recurso **Enviar Comentários** no novo Microsoft Edge ou por meio do Hub [de Feedback.](hololens-feedback.md)
 
 ![Captura de tela do Novo Microsoft Edge](images/new-edge-ui.png)
 
@@ -72,7 +72,7 @@ Aqui estão alguns recursos úteis para saber mais sobre como gerenciar configur
 - Documentação [completa do Microsoft Edge Enterprise](https://docs.microsoft.com/deployedge/)
 
 > [!IMPORTANT]
-> Devido ao volume de políticas de navegador suportadas pelo novo Microsoft Edge, nossa equipe não consegue garantir que cada nova política funcione no HoloLens 2. No entanto, testamos e confirmamos que o novo equivalente do Microsoft Edge a cada política herdada do Microsoft Edge anteriormente suportada no HoloLens 2 funciona como esperado. Consulte [a Versão Herdada](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-legacy-to-newedge) do Microsoft Edge para o mapeamento de políticas do Microsoft Edge para encontrar o novo equivalente do Microsoft Edge de cada política de navegador herdada do Microsoft Edge que você estava usando com o HoloLens 2.
+> Devido ao volume de políticas de navegador suportadas pelo novo Microsoft Edge, nossa equipe não consegue garantir que cada nova política funcione no HoloLens 2. No entanto, testamos e confirmamos que o novo equivalente do Microsoft Edge de cada política herdada do Microsoft Edge anteriormente suportada no HoloLens 2 funciona como esperado. Consulte [a Versão Herdada](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-legacy-to-newedge) do Microsoft Edge para o mapeamento de políticas do Microsoft Edge para encontrar o novo equivalente do Microsoft Edge de cada política de navegador herdada do Microsoft Edge que você estava usando com o HoloLens 2.
 >
 > Existem pelo menos duas novas políticas do Microsoft Edge que sabemos *que não funcionarão* com o HoloLens 2:
 > - EnterpriseModeSiteList
@@ -80,7 +80,7 @@ Aqui estão alguns recursos úteis para saber mais sobre como gerenciar configur
 
 #### O que esperar do novo Microsoft Edge no HoloLens 2
 
-Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de adaptador UWP permitindo que ele seja executado em dispositivos somente UWP como o HoloLens 2, alguns recursos podem não estar disponíveis imediatamente. Vamos dar suporte a novos cenários e recursos nos próximos meses, portanto, verifique esse espaço para obter informações atualizadas.
+Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de adaptador UWP permitindo que ele seja executado em dispositivos somente UWP como o HoloLens 2, alguns recursos podem não estar disponíveis imediatamente. Vamos dar suporte a novos cenários e recursos nos próximos meses, portanto, verifique este espaço para obter informações atualizadas.
 
 **Cenários e recursos esperados para funcionar:**
 - Experiência de primeira executar, entrar no perfil e sincronizar
@@ -97,7 +97,6 @@ Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de 
 **Cenários e recursos em breve:**
 - Extensão WebXR e Visualizador 360
 - Restauração de conteúdo para corrigir a janela ao navegar entre várias janelas colocadas em seu ambiente
-- Ingressar em uma chamada do Microsoft Teams por meio do navegador com vídeo, captura de realidade misturada ou compartilhamento de tela (participar de chamadas com áudio funciona bem)
 
 **Cenários e recursos que não devem funcionar:**
 - Som espacial de várias janelas com fluxos de áudio simultâneos
@@ -112,7 +111,7 @@ Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de 
 
 A equipe do Microsoft Edge disponibiliza três canais de visualização para a comunidade do Edge Insider: Beta, Dev e Canary. Instalar um canal de visualização não desinstala a versão lançada do Microsoft Edge em seu HoloLens 2, e você pode instalar mais de uma ao mesmo tempo. 
 
-Visite a [home page do Microsoft Edge Insider](https://www.microsoftedgeinsider.com) para saber mais sobre a comunidade do Edge Insider. Para saber mais sobre os diferentes canais do Edge Insider e começar, visite a página de download do [Participante do Insider Edge.](https://www.microsoftedgeinsider.com/download)
+Visite a [home page do Microsoft Edge Insider](https://www.microsoftedgeinsider.com) para saber mais sobre a comunidade do Edge Insider. Para saber mais sobre os diferentes canais do Edge Insider e começar, visite a página de download do [Edge Insider.](https://www.microsoftedgeinsider.com/download)
 
 Há alguns métodos disponíveis para instalar canais do Microsoft Edge Insider no HoloLens 2:
 
@@ -140,14 +139,14 @@ Há alguns métodos disponíveis para instalar canais do Microsoft Edge Insider 
 Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O novo aplicativo Configurações inclui novos recursos e configurações expandidas para o HoloLens 2 nas seguintes áreas: Som, avaliação do Power &, Rede & Internet, Aplicativos, Contas, Facilidade de Acesso e muito mais.
 
 > [!NOTE]
-> Como o novo aplicativo Configurações é diferente do aplicativo Configurações herdado, todas as janelas de configurações que você colocou anteriormente em seu ambiente serão removidas após a atualização.
+> Como o novo aplicativo Configurações é diferente do aplicativo Configurações herdado, todas as janelas de Configurações que você colocou anteriormente em seu ambiente serão removidas após a atualização.
 
 ![Home page do aplicativo Novas Configurações](images/new-settings-app.png)
 
 **Novos recursos e configurações**
 - Pesquisa de configurações: pesquise configurações da home page Configurações usando palavras-chave ou o nome da configuração
 - Som > sistema:
-  - Dispositivos de áudio de entrada e saída: escolha independentemente seus dispositivos de áudio de entrada e saída (por exemplo, ouça áudio via fones de ouvido Bluetooth ou use um microfone USB-C para entrada de áudio). Observação: não há suporte para microfones Bluetooth no HoloLens 2.
+  - Dispositivos de áudio de entrada e saída: escolha independentemente seus dispositivos de áudio de entrada e saída (por exemplo, ouvir áudio via fones de ouvido Bluetooth ou usar um microfone USB-C para entrada de áudio). Observação: não há suporte para microfones Bluetooth no HoloLens 2.
   - Volume do aplicativo: ajustar independentemente o volume de cada aplicativo
 - Sistema > energia & atividade: escolha quando o dispositivo deve entrar em atividade após um período de inatividade
 - Sistema > bateria: habilitar manualmente o modo de economia de bateria ou definir um limite de bateria no ponto em que o modo de economia de bateria é ativado automaticamente
@@ -164,7 +163,8 @@ Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O 
 - As janelas configurações colocadas anteriormente serão removidas (veja a observação acima)
 - A visita à página Notificações pode falhar no aplicativo Configurações (investigando)
 - No momento, a página Ethernet não aparece (a ser corrigida em breve)
-- O uso da bateria para o novo Microsoft Edge pode não ser preciso, devido à sua natureza como um aplicativo da área de trabalho Win32 com suporte por uma camada de adaptador UWP (nenhuma correção antecipada em breve)
+- Você não pode mais renomear seu dispositivo com o aplicativo Configurações (os administradores de TI podem usar pacotes de provisionamento ou MDM para renomear dispositivos)
+- O uso de bateria para o novo Microsoft Edge pode não ser preciso, devido à sua natureza como um aplicativo da área de trabalho Win32 suportado por uma camada de adaptador UWP (nenhuma correção antecipada em breve)
 
 ### Se picker de aplicativo padrão
 
@@ -180,7 +180,7 @@ O Aplicativo Web do Office foi adicionado à lista "Todos os aplicativos" no men
 
 ### Deslizar o dedo para digitar
 
-Alguns clientes acham mais rápido "digitar" em teclados virtuais ao girar a forma da palavra que pretendem digitar, e estamos visualizando esse recurso para o teclado holográfico. Você pode passar o dedo uma palavra por vez passando a ponta do dedo pelo plano do teclado holográfico, passando o dedo para a forma da palavra e, em seguida, retirando a ponta do dedo do plano do teclado. Você pode passar o dedo em palavras de acompanhamento sem precisar pressionar a barra de espaços removendo o dedo do teclado entre as palavras. Você vai saber que o recurso está funcionando se vir uma trilha de passar o dedo seguindo o movimento do dedo no teclado.
+Alguns clientes acham mais rápido "digitar" em teclados virtuais ao deslizar o mouse sobre a forma da palavra que pretendem digitar, e estamos visualizando esse recurso para o teclado holográfico. Você pode passar o dedo uma palavra por vez passando a ponta do dedo pelo plano do teclado holográfico, passando o dedo para a forma da palavra e, em seguida, retirando a ponta do dedo do plano do teclado. Você pode passar o dedo em palavras de acompanhamento sem precisar pressionar a barra de espaços removendo o dedo do teclado entre as palavras. Você vai saber que o recurso está funcionando se vir uma trilha de passar o dedo seguindo o movimento do dedo no teclado.
 
 Observe que esse recurso pode ser complicado de usar e ser mestre devido à natureza de um teclado holográfico em que você não sente resistência ao dedo (ao contrário de uma tela de telefone celular). Estamos avaliando esse recurso para lançamento público, portanto, seus comentários são importantes; se você achar o recurso útil ou se tiver comentários interessantes, diga-nos por meio do [Hub de Feedback.](hololens-feedback.md)
 
@@ -198,7 +198,7 @@ Abra o **aplicativo Configurações** e selecione **Som do**  ->  **Sistema.**
 > [!IMPORTANT]
 > Para usar microfones externos com **a**Assistência Remota, os usuários precisarão clicar no hiperlink "Gerenciar dispositivos de som".
 >
-> Em seguida, use o drop-down para definir o microfone externo como **Padrão** ou **Padrão de Comunicações.** Escolher **Padrão significa** que o microfone externo será usado em todos os lugares.
+> Em seguida, use o drop-down para definir o microfone externo como **Padrão** ou **Padrão de Comunicações.** Escolher **Padrão** significa que o microfone externo será usado em todos os lugares.
 >
 > Escolher **o Padrão de** Comunicação significa que o microfone externo será usado na Assistência Remota e em outros aplicativos de comunicação, mas a matriz de microfone do HoloLens ainda pode ser usada para outras tarefas.
 
@@ -216,7 +216,7 @@ Infelizmente, os microfones Bluetooth ainda não têm suporte no HoloLens 2.
 
 Esteja ciente de que alguns microfones USB-C relatam a si mesmos incorretamente como um microfone *e um* alto-falante. Esse é um problema com o microfone e não com o HoloLens. Ao conectar um desses microfones ao HoloLens, o som pode ser perdido. Felizmente, há uma correção simples.  
 
-Em **Configurações**de Som do Sistema , de definir explicitamente  ->  ****  ->  **** os alto-falantes integrados (Driver de áudio de **recurso analógico)** como o dispositivo **padrão.** O HoloLens deve se lembrar dessa configuração mesmo se o microfone for removido e reconectado mais tarde.
+Em **Configurações**de Som do Sistema , de definir explicitamente  ->  ****  ->  **** os alto-falantes integrados **(Driver de áudio** de recurso analógico) como o dispositivo **padrão.** O HoloLens deve se lembrar dessa configuração mesmo se o microfone for removido e reconectado mais tarde.
 
 ![Solução de problemas de microfones USB-C](images/usbc-mic-4.png)
 
@@ -235,7 +235,7 @@ Ao modificar um Quiosque para incluir os novos aplicativos, recomendamos adicion
 
 ### Alterações no comportamento do modo de quiosque para o tratamento de falhas
 
-Em versões mais antigas, se um dispositivo tivesse uma configuração de quiosque, que é uma combinação de acesso global atribuído e acesso atribuído ao membro do grupo AAD, se a determinação da associação de grupo do AAD falhasse, o usuário verá["](https://docs.microsoft.com/hololens/hololens-kiosk#kiosk-mode-behavior-changes-for-handling-of-failures)nada mostrado no menu Iniciar ".
+Em builds mais antigos, se um dispositivo tivesse uma configuração de quiosque, que é uma combinação de acesso global atribuído e acesso atribuído ao membro do grupo AAD, se a determinação da associação de grupo do AAD falhasse, o usuário verá["](https://docs.microsoft.com/hololens/hololens-kiosk#kiosk-mode-behavior-changes-for-handling-of-failures)nada mostrado no menu iniciar ".
 
 A partir do lançamento do Windows Insider, a experiência de quiosque será fallback para a configuração de quiosque global (se presente) em caso de falhas durante o modo de quiosque de grupo do AAD.
 
