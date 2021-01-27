@@ -11,12 +11,12 @@ metadata:
   ms.author: v-todmc
   ms.date: 5/22/2020
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 94adcd87aacdb1c7ca40a0142f5c5d5641505b2b
-  ms.sourcegitcommit: ea5fa6c970756025b77c00b4ea600d60ce033106
+  ms.openlocfilehash: 196162764a236ef2b4d7a6d1337b86066dde7469
+  ms.sourcegitcommit: 5b0f0b5930f138afc6cc0e0b9869c3239f1352b2
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/13/2021
-  ms.locfileid: "11268047"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "11301529"
 landingContent:
 - title: Visão geral do HoloLens
   linkLists:
@@ -150,5 +150,9 @@ landingContent:
       url: https://www.microsoft.com/hololens/buy
     - text: Suporte a Comunidades
       url: https://holodevelopersslack.azurewebsites.net/
-    - text: Contate o Suporte
+    - text: Suporte Técnico
       url: https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f
+    - text: Microsoft Store - Suporte do Office
+      url: https://support.microsoft.com/office/microsoft-store-109d8aed-d32f-4d6f-9c54-ff80871e8637
+    - text: Suporte para Consulta de Loja e Compra
+      url: https://support.microsoft.com/account-billing/contact-microsoft-store-support-4f615f2a-6bbd-fd69-6695-ae213d63eef0
