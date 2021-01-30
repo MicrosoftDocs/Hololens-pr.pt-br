@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: db8f7774bc3c5718a09a99d8d4137d2ed3271bc1
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: a339470e0c8be2b1cdf492bd14bad1ab724fdc3e
+ms.sourcegitcommit: c72a3c60d4105c77407e6d04c95fadd08f102775
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283032"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304964"
 ---
 # Hardware do HoloLens 2
 
@@ -29,8 +29,10 @@ O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jorn
 
 - **Visor**. Contém os sensores e telas do HoloLens. Você pode girar o visor para cima enquanto estiver utilizando o HoloLens.
 - **Headband**. Para colocar o HoloLens, use a roda de ajuste para expandir a headband. Com o HoloLens no lugar, aperte a roda de ajuste girando-a para a direita, até que a headband fique confortável.
-- **Botões de brilho**. Ao colocar o HoloLens, os botões de brilho ficam no lado esquerdo do dispositivo.
-- **Botões de volume**. Ao colocar o HoloLens, os botões de volume ficam no lado direito do dispositivo.
+- **Botões de brilho**. Ao usar o HoloLens, os botões de brilho ficam do lado esquerdo do visor.
+- **Botões de volume**. Ao usar o HoloLens, os botões de volume ficam no lado direito do visor.
+- **Botão ligar/desligar**. Ao usar o HoloLens, o botão liga/desliga está localizado no lado direito da tampa externa traseira.
+- **Porta USB-C**. Ao usar o HoloLens, a porta USB-C está localizada no lado direito da tampa externa traseira abaixo do botão Liga/Desliga.
 
 ## Na caixa
 
