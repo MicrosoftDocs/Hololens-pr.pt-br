@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8d17276adff49fcc7b6d2947539d17392a76eee5
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: 1ce1ec05e0eb3c17b6b79a8cdae009c5d917e21e
+ms.sourcegitcommit: b24acae8bdc56442ae0cb8290ab5e9464e6f564e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283852"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "11306650"
 ---
 # Perguntas Frequentes da Edição de Desenvolvimento do HoloLens 2
 
@@ -31,7 +31,7 @@ O HoloLens 2 Development Edition inclui um HoloLens 2, US$ 500 em créditos do A
 
 ### Qual é a diferença entre o HoloLens 2 e o HoloLens 2 Development Edition?
 
-Você só pode usar o HoloLens 2 Development Edition para criação interna e teste de aplicativos empresariais a serem usados em conexão com o HoloLens 2 (edição comercial) em uma configuração de produção. Como parte da compra da Edição de Desenvolvimento, a Microsoft pode, a seu exclusivo critério, fornecer determinados direitos identificados durante o processo de check-out, como o direito de resgatar determinados créditos de desconto ou acesso de avaliação a determinados serviços ou ferramentas da Microsoft ou de terceiros por um período limitado. [Saiba mais](hololens2-options.md?tabs=developeredition#1-learn-about-the-development-edition)
+Você só pode usar o HoloLens 2 Development Edition para criar e testar aplicativos corporativos internos a serem usados com o HoloLens 2 (edição comercial) em uma configuração de produção. Como parte da compra da Edição de Desenvolvimento, a Microsoft pode, a seu exclusivo critério, fornecer determinados direitos identificados durante o processo de check-out. Esses direitos incluem o direito de resgatar determinados créditos de desconto ou acesso de avaliação a determinados serviços ou ferramentas da Microsoft ou de terceiros por um período limitado. [Saiba mais](hololens2-options.md#learn-about-the-development-edition)
 
 ### Qualquer edição do HoloLens 2 pode ser usada para desenvolver?
 
@@ -77,7 +77,7 @@ O HoloLens 2 Development Edition é vendido exclusivamente na Microsoft Store.
 
 Todas as vendas são finais e não há reembolsos disponíveis no HoloLens 2 Development Edition.
 
-### O Developer Edition tem requisitos de hardware diferentes do HoloLens 2?
+### O Developer Edition tem requisitos de hardware diferentes que diferem do HoloLens 2?
 
 Não, esse dispositivo é o mesmo do ponto de vista dos requisitos de hardware. A Edição de Desenvolvimento tem permissão para ser implantada no auxílio do desenvolvimento e/ou teste de aplicativos em uma configuração comercial. 
 
@@ -117,7 +117,7 @@ Obter suporte [aqui.](https://support.serviceshub.microsoft.com/supportforbusine
 
 ### O que está incluído na minha avaliação do Unity?
 
-Uma avaliação de três meses do Unity Pro permite o acesso&#39;solução completa do Unity para profissionais criarem, operarem e monetizarem. A avaliação relacionada do Unity Pro não tem um prazo para resgatar.
+Uma avaliação de três meses do Unity Pro permite o acesso&#39;solução completa do Unity para profissionais criarem, operarem e monetizarem. A avaliação relacionada do Unity Pro não tem data limite para resgatar.
 
 Essa oferta é para novos usuários e não se aplica a assinaturas estabelecidas do Unity Pro. A avaliação do Unity Pro pode estar sujeita a termos adicionais que serão disponibilizados no resgate. Revise as condições [de termos &amp; aplicáveis e](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) a política de [privacidade.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
 
@@ -144,7 +144,7 @@ Para obter ajuda com dúvidas sobre a ID, a conta, as organizações e as assina
 
 ### O que está incluído na minha avaliação do Plug-in do Pixyz?
 
-Uma avaliação de três meses do Plug-in Pixyz que permite o acesso ao Pixyz para criar ativos prontos para uso com malhas de mosaico perfeitas, contagem de polígonos limitados e UV automática. A avaliação do plug-in Pixyz relacionada não tem data limite para resgatar.
+Uma avaliação de plug-in Pixyz de três meses que permite o acesso ao Pixyz para criar ativos prontos para uso com malhas de mosaico perfeitas, contagem limitada de polígonos e UV automática. A avaliação do plug-in Do Pixyz relacionada não tem data limite para resgatar.
 
 Essa oferta é para novos usuários e não se acumula em assinaturas estabelecidas do Pixyz. O plug-in do Pixyz pode estar sujeito a termos adicionais que serão feitos no resgate. Revise as condições [de termos &amp; aplicáveis e](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) a política de [privacidade.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
 
@@ -172,11 +172,11 @@ Para suporte específico ao Pixyz (após resgatar sua avaliação), visite [Pixy
 
 Para resgatar seus créditos de US$ 500 do Azure, resgate seu código promocional do Azure Pass e ative sua assinatura. [Saiba mais](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
 
-Revise o contrato de assinatura do Azure Pass [e](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [os detalhes da oferta.](https://azure.microsoft.com/en-us/offers/azure-pass/)
+Revise o contrato de assinatura do Azure Pass [e](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [ofereça detalhes.](https://azure.microsoft.com/en-us/offers/azure-pass/)
 
 ### Quando meu crédito do Azure de US$ 500 expira?
 
-Seu crédito de US$ 500 do Azure expirará 90 dias após a ativação do código da chave do Azure.
+O crédito do Azure de US$ 500 expirará 90 dias após a ativação do código de chave do Azure.
 
 ### O que posso fazer com meus créditos do Azure?
 
