@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a339470e0c8be2b1cdf492bd14bad1ab724fdc3e
-ms.sourcegitcommit: c72a3c60d4105c77407e6d04c95fadd08f102775
+ms.openlocfilehash: 8e0b5732c6dd2eba0a318a2b72694aacd404c68f
+ms.sourcegitcommit: a5b6e9fdc0fa61a93cb23a89348f5b49316e2748
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304964"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11306919"
 ---
 # Hardware do HoloLens 2
 
@@ -132,22 +132,23 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 
 ## Software pré-instalado
 
-- Sistema operacional Windows Holographic
-- Visualizador 3D
-- Calendário
-- Cortana
-- Guias do Dynamics 365
-- Assistência Remota do Dynamics 365
-- Hub de Feedback
-- Explorador de Arquivos
-- Mail
-- Microsoft Edge
-- Microsoft Store
-- Filmes e TV
-- OneDrive
-- Fotos
-- Configurações
-- Dicas
+|   |   |
+| - | - |
+| Sistema operacional Windows Holographic | Com o Windows Holographic, os usuários do Windows 10 poderão usar alguns de seus aplicativos e jogos em um ambiente de realidade misturada através do HoloLens 2.
+| Visualizador 3D | O [Visualizador 3D](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) permite que você veja facilmente modelos e animações 3D em tempo real.|
+| Cortana | A [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab), seu assistente de produtividade pessoal, ajuda você a ficar por dentro do que é importante e economizar tempo encontrando o que precisa.  |
+| Guias do Dynamics 365 |  Os [Guias do Dynamics 365](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) ajudarão os funcionários a aprender novas habilidades com mais rapidez com os dispositivos HoloLens. |
+| Dynamics 365 Remote Assist | A [Assistência Remota do Microsoft Dynamics 365](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) permite que os técnicos colaborem e resolvam problemas com colaboradores remotos usando o Microsoft Teams ou a Assistência Remota do Dynamics 365.  |
+| Hub de Feedback | O [Hub de Feedback](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) permite que você forneça comentários sobre o Windows e aplicativos ao compartilhar suas sugestões ou problemas.  |
+| Explorador de Arquivos | O Explorador de Arquivos fornece uma interface gráfica do usuário para acessar os sistemas de arquivos. |
+| Email e Calendário | Os aplicativos [Email e Calendário](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) ajudam você a se manter atualizado sobre seu email, gerenciar sua agenda e interagir com seus contatos. |  
+| Microsoft Edge | O Microsoft Edge oferece desempenho de alta qualidade com mais privacidade, mais produtividade e mais valor enquanto você navega. |
+| Microsoft Store | A [Microsoft Store](https://www.microsoft.com) é a sua primeira fonte para aplicativos e jogos que funcionam com o HoloLens.|
+| Filmes e TV | O [Filmes e TV](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) traz a você o entretenimento mais recente em um aplicativo simples, rápido e elegante. |
+| OneDrive | O [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) permite acessar e editar seus arquivos de todos os seus dispositivos e de qualquer lugar.  |
+| Fotos| O [Fotos](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) permite visualizar e editar suas fotos e vídeos, fazer filmes e criar álbuns.  |
+| Configurações | O aplicativo Configurações é onde você personaliza detalhadamente como o Windows Holographic funcionará.  |
+| Dicas | O [Dicas](https://www.microsoft.com/p/microsoft-tips/9wzdncrdtbjj?activetab=pivot:overviewtab) deixa que você faça coisas surpreendentes e menos conhecidas com o Windows Holographic. |
 
 ## Certificações do dispositivo
 
@@ -174,9 +175,9 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 |     Profundidade do Transportador Externo      |     172,01 mm          |     6,772 polegadas        |
 |     Peso do Transportador Externo    |     3,284 kg           |     7,240 lbs           |
 
-Observações:
-- Unidade: a caixa preta, no estilo de varejo, do HoloLens 2 está vencida.
-- Transportador Externo: a embalagem protetora de envio da Unidade.
+> [!NOTE]
+> - Unidade: a caixa preta, no estilo de varejo, do HoloLens 2 é vendida.
+> - Transportador Externo: a embalagem protetora de envio da Unidade.
 
 ## Localizar o número de série
 
@@ -186,16 +187,16 @@ O número de série para dispositivos do HoloLens 2 é impresso embaixo do visor
 1. Você pode localizar o número de série próximo à dobradiça. 
 
 
-<img src="images/serial-number-diagram-hl2.png" width="625" height="903" />
+<img src="images/serial-number-diagram-hl2.png" alt=Null width="625" height="903" />
 
 O número de série também pode ser localizado por um computador conectado:
 
 1. Conecte o dispositivo
 1. Navegue até **Esse computador** no explorador de arquivos
 1. Clique com o botão direito do mouse e selecione **Propriedades** do dispositivo do HoloLens
-1. Isso exibirá o número de série do dispositivo. Consulte a captura de tela abaixo.
+1. Isso exibirá o número da série do dispositivo, conforme mostrado na captura de tela abaixo.
 
-<img src="images/ResetRecovery2.png" width="400" height="600" />
+<img src="images/ResetRecovery2.png" alt=null line width="400" height="600" />
 
 ## Próximas etapas
 

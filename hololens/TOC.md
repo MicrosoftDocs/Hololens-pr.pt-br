@@ -12,8 +12,9 @@
 ### [Perguntas frequentes sobre a limpeza do HoloLens 2](hololens2-maintenance.md)
 ### [Idiomas com suporte para HoloLens 2](hololens2-language-support.md)
 ### [Noções básicas sobre o HoloLens 2](hololens2-basic-usage.md)
-### [Perguntas Frequentes da Edição de Desenvolvimento do HoloLens 2](hololens2-development-edition-faq.md)
-### [Gerenciar aplicativos personalizados para o HoloLens 2](hololens2-holographic-custom-apps.md)
+### [Perguntas frequentes sobre o HoloLens 2 Development Edition](hololens2-development-edition-faq.md)
+### [Perguntas frequentes sobre o HoloLens 2 Industrial Edition](hololens2-industrial-edition-faq.md)
+
 
 
 ## Introdução ao HoloLens (1ª geração)
@@ -35,7 +36,8 @@
 ### [Criar fotos e vídeos de realidade misturada](holographic-photos-and-videos.md)
 ## Aplicativos holográficos
 ### [Localizar, instalar e desinstalar aplicativos](holographic-store-apps.md)
-## Ótica e posicionamento no espaço do holograma
+### [Gerenciar aplicativos personalizados para o HoloLens 2](hololens2-holographic-custom-apps.md)
+## Holograma ótico e posicionamento no espaço
 ### [Melhorar o conforto e a qualidade visual](hololens-calibration.md)
 ### [Mapear espaços físicos com o HoloLens](hololens-spaces.md) 
 ## [Como atualizar o HoloLens](hololens-update-hololens.md)
