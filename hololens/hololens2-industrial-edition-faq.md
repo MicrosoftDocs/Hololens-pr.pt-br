@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2a7a9fe510c699571dc2e307f5def8c730097815
-ms.sourcegitcommit: b24acae8bdc56442ae0cb8290ab5e9464e6f564e
+ms.openlocfilehash: ece60949c998f0388bbd6bbcb235ae9f02340247
+ms.sourcegitcommit: 9a5e101fad8627042b552872d5de7320c09552ac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "11306680"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311739"
 ---
 # HoloLens 2 – Perguntas frequentes sobre o Industrial Edition
 
-![Industrial Edition usado em uma sala limpa](./images/industrial-edition.jpg)
+![Industrial Edition usado em uma sala limpa](./images/industrial-sku-with-remote-assist.png)
 
 ## HoloLens 2 Industrial Edition
 
@@ -92,7 +92,7 @@ O Industrial Edition tem o mesmo sistema operacional de todas as outras ediçõe
 
 ### Quais aplicativos podem ser executados no HoloLens 2 Industrial Edition?
 
-O HoloLens 2 Industrial Edition oferece suporte a aplicativos de terceiros e de primeiro participante, com uma seleção de aplicativos prontos na caixa para empresas. Os aplicativos da linha de empresas podem ser implantados em dispositivos que usam os diversos [métodos de implantação de aplicativos](https://docs.microsoft.com/hololens/app-deploy-overview).
+O HoloLens 2 Industrial Edition oferece suporte a aplicativos de terceiros e de primeiro participante, com uma seleção de aplicativos prontos na caixa para empresas. Os aplicativos de linha de negócios podem ser implantados em dispositivos que utilizam os vários [métodos de implantação de aplicativos](https://docs.microsoft.com/hololens/app-deploy-overview).
 
 ### Posso atualizar do HoloLens 2 para o HoloLens 2 Industrial Edition?
 
