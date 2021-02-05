@@ -15,12 +15,12 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ea6e4f32e804ee6c2f2f155da1f4290e1116bb74
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: c9016be7bba8f795e43339c2c93d3fe3b44d2c8c
+ms.sourcegitcommit: 1d44907cb7454ff96f1a9badb90db4cdc958e784
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283082"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313790"
 ---
 # Perguntas frequentes sobre a limpeza do HoloLens 2
 
@@ -29,9 +29,13 @@ ms.locfileid: "11283082"
 
 ## Quais são as instruções gerais de limpeza para dispositivos HoloLens 2?
 
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Use-and-Care/player]
+## Quais são as instruções gerais de limpeza para dispositivos HoloLens 2?
+<!-- <iframe src="https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Use-and-Care/player" width="960" height="540" allowFullScreen frameBorder="0" title="HoloLens 2 Use and Care - Microsoft Channel 9 Video"></iframe> -->
+
 **Para limpar o dispositivo**
 
-1. Remova qualquer cinza usando um pano de microfibra e sem lint para apagar suavemente a superfície do dispositivo.
+1. Remova qualquer coisa usando um pano de microfibra e sem lint para apagar suavemente a superfície do dispositivo.
 1. Melhore levemente o pano usando a máscara de isopropílico "70%" médica e, em seguida, use o pano panorramizado para limpar suavemente a superfície do dispositivo.
 
    ![Imagem que mostra como limpar o visor](images/hololens-cleaning-visor.png)
@@ -40,7 +44,7 @@ ms.locfileid: "11283082"
 
 **Para limpar o painel de navegação**
 
-1. Use a água e um pouco de água para limpar um pano e, em seguida, use o pano com pano para limpar o painel de navegação.
+1. Use a água e um rosto suave para limpar um pano e, em seguida, use os panos em forma de pano para limpar o painel de navegação.
 1. Deixe o painel de navegação seque completamente.
 
 ## Posso usar qualquer lente mais limpa para limpar o visor do HoloLens?
@@ -51,16 +55,16 @@ Não. As lentes limpas podem ser abrasivas para os riscos no visor. Para limpar 
 1. Limpe levemente um pano usando o isopropílico "70%" médicos e, em seguida, limpe suavemente o visor.
 1. Deixe o visor seque completamente.
 
-## Posso usar apagamentos insucipidores para limpar o dispositivo?
+## Posso usar apagamentos para limpar o dispositivo?
 
-Sim, se os apagadores não contêm nada. Você pode usar apagamentos que não são de limpeza para apagar suavemente [as superfícies do HoloLens.](#what-are-the-general-cleaning-instructions-for-hololens-2-devices)  
+Sim, se as limpezas não contêm algo. Você pode usar apagamentos que não são de limpeza para apagar suavemente [as superfícies do HoloLens.](#what-are-the-general-cleaning-instructions-for-hololens-2-devices)  
 
 > [!CAUTION]  
 > Evite usar apagamentos que contenham limpeza das superfícies do HoloLens. É aceitável usar limpezas inativas em situações críticas, quando nada mais está disponível. No entanto, o dano pode danificar o visor do HoloLens ou outras superfícies.
 
 ## Posso usá-lo para limpar o dispositivo?
 
-Sim. Você pode usar uma solução de "70%" isopropílico e água para limpar as superfícies de disco rígido do dispositivo, incluindo o visor. Limpe levemente o pano usando uma mistura de isopropílico e água e, em seguida, limpe suavemente a superfície do dispositivo
+Sim. Você pode usar uma solução de "70%" isopropílico e água para limpar as superfícies sólidas do dispositivo, incluindo o visor. Limpe levemente o pano usando uma mistura de isopropílico e água e, em seguida, limpe suavemente a superfície do dispositivo
 
 ## O painel de navegação é substituível?
 
@@ -77,12 +81,12 @@ Para limpar o painel de navegação, limpe-o usando um pano que se parece com o 
 UVC que usa UVC LED, que opera a 265nm em nível de intensidade de 0,5-0,6mW/cm 2 e não emite ozone, pode ser usado para desacionar <sup> </sup> o HoloLens2. Siga as especificações do fabricante sobre o tempo de manipulação e exposição.
 
 > [!CAUTION]  
-> Altos níveis de exposição UV-A e UV-B podem degradar a qualidade de exibição do dispositivo e danificar a imagem do visor. A exposição excessiva a uv-A e uv-B tem os seguintes efeitos, em ordem de duração e intensidade da exposição:
+> Altos níveis de exposição UV-A e UV-B podem prejudicar a qualidade de exibição do dispositivo e danificar a imagem do visor. A exposição excessiva à exposição uv-A e uv-B tem os seguintes efeitos, em ordem de duração e intensidade da exposição:
 >  
 > 1. O painel de navegação e os fechamentos do dispositivo ficam descolorados.
 > 1. Os defeitos aparecem na capa anti-refleção (AR) no visor e nas janelas do sensor.
 > 1. Defeitos aparecem nos materiais base do visor e nas janelas do sensor.
-> 1. O desempenho de exibição degrada.
+> 1. O desempenho da exibição degrada.
 
 ## O painel de fundo é substituível?
 
