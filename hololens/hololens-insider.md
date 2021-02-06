@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e36d25a31495b09e2e9f08f8ea5a8bf34fadafeb
-ms.sourcegitcommit: 12d96e5d0c733e733f6ff7da2f4efb8e0f96c27b
+ms.openlocfilehash: 3d91c9cf1378fd06d1982b69177638354b552c6f
+ms.sourcegitcommit: feccd0135ac567d1217a1ac78a36f03321554305
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "11311817"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11314002"
 ---
 # Versão prévia do Insider para Microsoft HoloLens
 
@@ -30,6 +30,11 @@ Bem-vindo às versões mais recentes do Insider Preview para HoloLens! É simple
 ## Notas de versão do Windows Insider
 
 Estamos animados em iniciar a versão de versões We will be flighting to the Dev Channel for the latest updates. Continuaremos a atualizar essa página à medida que adicionarmos mais recursos e atualizações às nossas versões do Windows Insider.  Fique animado e pronto para misturar essas atualizações à sua realidade.
+
+> [!IMPORTANT]
+> Se você estava usando anteriormente o aplicativo Configurações ou o aplicativo Microsoft Edge em um Quiosque, substituímos esses aplicativos por novos aplicativos que usam uma ID de aplicativo diferente. Recomendamos que você leia [a nova AUMIDs para novos aplicativos no modo quiosque abaixo.](#use-the-new-settings-and-edge-apps-in-kiosk-modes) Isso garantirá que você continue a ter o aplicativo Configurações em seu Quiosque ou incluirá o novo aplicativo Microsoft Edge.
+
+<br>
 
 | Nome do Recurso                                              | Descrição breve                                                                      | Disponível na com build |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------|
@@ -81,7 +86,7 @@ Aqui estão alguns recursos úteis para saber mais sobre como gerenciar configur
 
 #### O que esperar do novo Microsoft Edge no HoloLens 2
 
-Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de adaptador UWP permitindo que ele seja executado em dispositivos somente UWP como o HoloLens 2, alguns recursos podem não estar disponíveis imediatamente. Vamos dar suporte a novos cenários e recursos nos próximos meses, portanto, verifique esse espaço para obter informações atualizadas.
+Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de adaptador UWP permitindo que ele seja executado em dispositivos somente UWP como o HoloLens 2, alguns recursos podem não estar disponíveis imediatamente. Vamos dar suporte a novos cenários e recursos nos próximos meses, portanto, verifique este espaço para obter informações atualizadas.
 
 **Cenários e recursos esperados para funcionar:**
 - Experiência de primeira executar, entrar no perfil e sincronizar
@@ -112,25 +117,25 @@ Como o novo Microsoft Edge é um aplicativo Win32 nativo com uma nova camada de 
 
 A equipe do Microsoft Edge disponibiliza três canais de visualização para a comunidade do Edge Insider: Beta, Dev e Canary. Instalar um canal de visualização não desinstala a versão lançada do Microsoft Edge em seu HoloLens 2, e você pode instalar mais de uma ao mesmo tempo. 
 
-Visite a [home page do Microsoft Edge Insider](https://www.microsoftedgeinsider.com) para saber mais sobre a comunidade do Edge Insider. Para saber mais sobre os diferentes canais do Edge Insider e começar, visite a página de download do [Edge Insider.](https://www.microsoftedgeinsider.com/download)
+Visite a [home page do Microsoft Edge Insider](https://www.microsoftedgeinsider.com) para saber mais sobre a comunidade do Edge Insider. Para saber mais sobre os diferentes canais do Edge Insider e começar, visite a página de download do [Participante do Insider Edge.](https://www.microsoftedgeinsider.com/download)
 
 Há alguns métodos disponíveis para instalar canais do Microsoft Edge Insider no HoloLens 2:
 
 **Instalação direta no dispositivo (atualmente disponível apenas para dispositivos não-manageados)**
-  1. Em seu HoloLens 2, visite a [página de download do Edge Insider](https://www.microsoftedgeinsider.com/download)
-  1. Selecione o **botão Baixar para HoloLens 2** para o canal do Insider Edge que você deseja instalar
-  1. Iniciar o arquivo .msix baixado da fila de download do Edge ou da pasta "Downloads" do seu dispositivo (usando o Explorador de Arquivos)
-  1. [O instalador de aplicativo](app-deploy-app-installer.md) será lançado
-  1. Selecione o **botão** Instalar
-  1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, **** Dev ou Canary como uma entrada separada na lista Todos os aplicativos do menu Iniciar
+  1. Em seu HoloLens 2, visite a [página de download do Edge Insider.](https://www.microsoftedgeinsider.com/download)
+  1. Selecione o **botão Baixar para HoloLens 2** para o canal do Insider Edge que você deseja instalar.
+  1. Iniciar o arquivo .msix baixado da fila de download do Edge ou da pasta "Downloads" do dispositivo (usando o Explorador de Arquivos).
+  1. [O instalador de aplicativo](app-deploy-app-installer.md) será lançado.
+  1. Selecione o **botão** Instalar.
+  1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, **** Dev ou Canary como uma entrada separada na lista Todos os aplicativos do menu Iniciar.
 
-**Instalar via computador com o Windows Device Portal [(requer](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) que o modo de desenvolvedor seja habilitado no HoloLens 2)**
-  1. Em seu computador, visite a [página de download do Edge Insider](https://www.microsoftedgeinsider.com/download)
-  1. Selecione o **botão de seta para** baixo ao lado do botão "Baixar para Windows 10" para o canal do Insider Edge que você deseja instalar
-  1. Selecione **o HoloLens 2** no menu suspenso
-  1. Salve o arquivo .msix na pasta "Downloads" do computador (ou em outra pasta que você possa encontrar facilmente)
-  1. Usar [o Windows Device Portal](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) em seu computador para instalar o arquivo .msix baixado no HoloLens 2
-  1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, **** Dev ou Canary como uma entrada separada na lista Todos os aplicativos do menu Iniciar
+**Instalar via computador com o Windows Device Portal (requer que o modo [de](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) desenvolvedor seja habilitado no HoloLens 2)**
+  1. Em seu computador, visite a [página de download do Participante do Insider Edge.](https://www.microsoftedgeinsider.com/download)
+  1. Selecione o **botão de seta para** baixo ao lado do botão "Baixar para Windows 10" para o canal do Insider Edge que você deseja instalar.
+  1. Selecione **o HoloLens 2** no menu suspenso.
+  1. Salve o arquivo .msix na pasta "Downloads" do computador (ou em outra pasta que você possa encontrar facilmente).
+  1. Use [o Windows Device Portal](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) em seu computador para instalar o arquivo .msix baixado no HoloLens 2.
+  1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, **** Dev ou Canary como uma entrada separada na lista Todos os aplicativos do menu Iniciar.
 
 > [!NOTE]
 > Durante a visualização do Windows Insider para HoloLens 2, a versão do Microsoft Edge em seu dispositivo pode ser superior à disponível em alguns (ou todos) dos canais do Microsoft Edge Insider. Isso é para garantir que novos recursos e correções especificamente voltados para o navegador da Web no HoloLens 2 estão chegando aos participantes do Programa Windows Insider o mais rápido possível. Logo após o lançamento público da próxima atualização do Windows, os builds do canal do Microsoft Edge Insider ultrapassarão e se manterão à frente da versão do Microsoft Edge em seu HoloLens 2.
@@ -152,7 +157,7 @@ A extensão do Visualizador 360 é criada no WebXR e é instalada automaticament
 
 1. Na primeira vez que você tentar iniciar uma experiência WebXR em um domínio específico, o navegador solicitará consentimento para inserir uma exibição imersiva, selecione **Permitir**.
 1. Use [os gestos do HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame) para manipular a experiência.
-1. Se a experiência não tiver um **botão Sair,** use o gesto [de Iniciar](hololens2-basic-usage.md#start-gesture) para retornar para casa.
+1. Se a experiência não tiver um **botão Sair,** use o gesto [de Iniciar](hololens2-basic-usage.md#start-gesture) para voltar para casa.
 
 **Exemplos de WebXR recomendados**
 - Visualizador 360 (confira a próxima seção)
@@ -196,27 +201,29 @@ Com esta versão, lançaremos uma nova versão do aplicativo Configurações. O 
 ![Home page do aplicativo Novas Configurações](images/new-settings-app.png)
 
 **Novos recursos e configurações**
-- Pesquisa de configurações: pesquise configurações da home page Configurações usando palavras-chave ou o nome da configuração
+- Pesquisa de configurações: pesquise definições da home page Configurações usando palavras-chave ou o nome da configuração.
 - Som > sistema:
-  - Dispositivos de áudio de entrada e saída: escolha independentemente seus dispositivos de áudio de entrada e saída (por exemplo, ouvir áudio via fones de ouvido Bluetooth ou usar um microfone USB-C para entrada de áudio). Observação: não há suporte para microfones Bluetooth no HoloLens 2.
-  - Volume do aplicativo: ajustar independentemente o volume de cada aplicativo
-- Sistema > energia & atividade: escolha quando o dispositivo deve entrar em atividade após um período de inatividade
-- Sistema > bateria: habilitar manualmente o modo de economia de bateria ou definir um limite de bateria no ponto em que o modo de economia de bateria é ativado automaticamente
-- Dispositivos > USB: você pode desabilitar conexões USB por padrão
+  - Dispositivos de áudio de entrada e saída: escolha independentemente seus dispositivos de áudio de entrada e saída (por exemplo, ouça áudio via fones de ouvido Bluetooth ou use um microfone USB-C para entrada de áudio). 
+    > [!NOTE]
+    > Não há suporte para microfones Bluetooth no HoloLens 2.
+  - Volume do aplicativo: ajuste independentemente o volume de cada aplicativo.
+- Sistema > de energia &: escolha quando o dispositivo deve entrar em atividade após um período de inatividade.
+- Sistema > bateria: habilita manualmente o modo de economia de bateria ou de definida um limite de bateria no ponto em que o modo de economia de bateria é ativado automaticamente.
+- Dispositivos > USB: você pode desabilitar conexões USB por padrão.
 - Rede & Internet:
-  - Os adaptadores Ethernet USB-C agora aparecerão na Rede & Internet
-  - As configurações do adaptador Ethernet USB-C agora estão disponíveis, incluindo seu endereço IP
-  - Agora você pode habilitar o modo avião no HoloLens 2
+  - Os adaptadores Ethernet USB-C agora aparecerão na Rede & Internet.
+  - As configurações do adaptador Ethernet USB-C agora estão disponíveis, incluindo seu endereço IP.
+  - Agora você pode habilitar o modo avião no HoloLens 2.
 - Aplicativos: você pode redefinir os aplicativos padrão usados para tipos de arquivo e link. Consulte [o selador de aplicativo padrão](#default-app-picker) para obter mais informações.
 - Contas > outros usuários: os proprietários de dispositivos podem adicionar usuários, atualizar usuários padrão para proprietários de dispositivos, fazer downgrade de proprietários de dispositivos para usuários padrão e remover usuários.
-- Facilidade de Acesso: alterar o tamanho do texto e alguns efeitos visuais
+- Facilidade de Acesso: alterar o tamanho do texto e alguns efeitos visuais.
 
 **Problemas conhecidos**
-- As janelas configurações colocadas anteriormente serão removidas (veja a observação acima)
-- A visita à página Notificações pode falhar no aplicativo Configurações (investigando)
-- No momento, a página Ethernet não aparece (a ser corrigida em breve)
-- Você não pode mais renomear seu dispositivo com o aplicativo Configurações (os administradores de TI podem usar pacotes de provisionamento ou MDM para renomear dispositivos)
-- O uso da bateria para o novo Microsoft Edge pode não ser preciso, devido à sua natureza como um aplicativo da área de trabalho Win32 com suporte por uma camada de adaptador UWP (nenhuma correção antecipada em breve)
+- As janelas configurações colocadas anteriormente serão removidas (veja a observação acima).
+- A visita à página Notificações pode falhar no aplicativo Configurações (investigando).
+- No momento, a página Ethernet não aparece (a ser corrigida em breve).
+- Você não pode mais renomear seu dispositivo com o aplicativo Configurações (os administradores de TI podem usar pacotes de provisionamento ou MDM para renomear dispositivos).
+- O uso de bateria para o novo Microsoft Edge pode não ser preciso, devido à sua natureza como um aplicativo da área de trabalho Win32 suportado por uma camada de adaptador UWP (nenhuma correção antecipada em breve).
 
 ### Se picker de aplicativo padrão
 
@@ -228,18 +235,18 @@ Se você escolher "Sempre", mas posteriormente quiser alterar qual aplicativo ma
 
 ### Office Web App
 
-O Aplicativo Web do Office foi adicionado à lista "Todos os aplicativos" no menu Iniciar. Esse aplicativo Web também pode ser fixado em Iniciar ou desinstalado. Como este é um aplicativo Web, sua funcionalidade corresponde exatamente ao que você experimentaria https://www.office.com visitando. A funcionalidade do aplicativo Web do Office só estará disponível quando o HoloLens 2 tiver uma conexão de Internet ativa.
+O Aplicativo Web do Office foi adicionado à lista "Todos os aplicativos" no menu Iniciar. Esse aplicativo Web também pode ser fixado em Iniciar ou desinstalado. Como se trata de um aplicativo Web, sua funcionalidade corresponde exatamente ao que você experimentaria https://www.office.com visitando. A funcionalidade do aplicativo Web do Office só estará disponível quando o HoloLens 2 tiver uma conexão de Internet ativa.
 
 ### Deslizar o dedo para digitar
 
-Alguns clientes acham mais rápido "digitar" em teclados virtuais ao deslizar o mouse sobre a forma da palavra que pretendem digitar, e estamos visualizando esse recurso para o teclado holográfico. Você pode passar o dedo uma palavra por vez passando a ponta do dedo pelo plano do teclado holográfico, passando o dedo para a forma da palavra e, em seguida, retirando a ponta do dedo do plano do teclado. Você pode passar o dedo em palavras de acompanhamento sem precisar pressionar a barra de espaços removendo o dedo do teclado entre as palavras. Você vai saber que o recurso está funcionando se vir uma trilha de passar o dedo seguindo o movimento do dedo no teclado.
+Alguns clientes acham mais rápido "digitar" em teclados virtuais ao girar a forma da palavra que pretendem digitar, e estamos visualizando esse recurso para o teclado holográfico. Você pode passar o dedo uma palavra por vez passando a ponta do dedo pelo plano do teclado holográfico, passando o dedo pela forma da palavra e, em seguida, retirando a ponta do dedo do plano do teclado. Você pode passar o dedo em palavras de acompanhamento sem precisar pressionar a barra de espaços removendo o dedo do teclado entre as palavras. Você vai saber que o recurso está funcionando se vir uma trilha de passar o dedo seguindo o movimento do dedo no teclado.
 
 Observe que esse recurso pode ser complicado de usar e ser mestre devido à natureza de um teclado holográfico em que você não sente resistência ao dedo (ao contrário de uma tela de telefone celular). Estamos avaliando esse recurso para lançamento público, portanto, seus comentários são importantes; se você achar o recurso útil ou se tiver comentários interessantes, diga-nos por meio do [Hub de Feedback.](hololens-feedback.md)
 
 ### Suporte para microfone externo USB-C
 
 > [!IMPORTANT]
-> Conectar um **microfone USB não o definirá automaticamente como o dispositivo de entrada.** Ao conectar um conjunto de fones de ouvido USB-C, os usuários observarão que o áudio do fone de ouvido será redirecionado automaticamente para os fones de ouvido, mas o sistema operacional do HoloLens prioriza a matriz de microfone interna acima de qualquer outro dispositivo de entrada. **Para usar um microfone USB-C, siga as etapas abaixo.**
+> Conectar um **microfone USB não o definirá automaticamente como o dispositivo de entrada.** Ao conectar um conjunto de fones de ouvido USB-C, os usuários observarão que o áudio do fone de ouvido será redirecionado automaticamente para os fones de ouvido, mas o sistema operacional holoLens prioriza a matriz de microfone interna acima de qualquer outro dispositivo de entrada. **Para usar um microfone USB-C, siga as etapas abaixo.**
 
 Os usuários podem selecionar microfones externos conectados usb-C usando **o painel de configurações** de som. Microfones USB-C podem ser usados para chamada, gravação, etc.
 
@@ -248,11 +255,11 @@ Abra o **aplicativo Configurações** e selecione **Som do**  ->  **Sistema.**
 ![Definições de Som](images/usbc-mic-1.jpg)
 
 > [!IMPORTANT]
-> Para usar microfones externos **com**a Assistência Remota, os usuários precisarão clicar no hiperlink "Gerenciar dispositivos de som".
+> Para usar microfones externos com **a**Assistência Remota, os usuários precisarão clicar no hiperlink "Gerenciar dispositivos de som".
 >
-> Em seguida, use o drop-down para definir o microfone externo como **Padrão** ou **Padrão de Comunicações.** Escolher **Padrão** significa que o microfone externo será usado em todos os lugares.
+> Em seguida, use o drop-down para definir o microfone externo como **Padrão** ou **Padrão de Comunicações.** Escolher **Padrão significa** que o microfone externo será usado em todos os lugares.
 >
-> Escolher **o Padrão de** Comunicação significa que o microfone externo será usado na Assistência Remota e em outros aplicativos de comunicação, mas a matriz de microfone do HoloLens ainda pode ser usada para outras tarefas.
+> Escolher **o Padrão** de Comunicação significa que o microfone externo será usado na Assistência Remota e em outros aplicativos de comunicação, mas a matriz de microfone do HoloLens ainda pode ser usada para outras tarefas.
 
 ![Gerenciar dispositivos de som](images/usbc-mic-2.png)
 
@@ -274,7 +281,7 @@ Em **Configurações**de Som do Sistema , de definir explicitamente  ->  ****  -
 
 ### Usar os novos aplicativos configurações e borda nos modos de quiosque
 
-Ao incluir aplicativos em [Quiosques,](hololens-kiosk.md)um administrador de IT geralmente adiciona o aplicativo ao Quiosque, mas usando sua ID de modelo de usuário do aplicativo (AUMID). Como o aplicativo Configurações e o aplicativo Microsoft Edge são considerados novos aplicativos e diferentes, os Quiosques de aplicativos mais antigos que usam AUMIDs para esses aplicativos precisarão ser atualizados para usar a nova AUMID.
+Ao incluir aplicativos em [Quiosques,](hololens-kiosk.md)um administrador de IT geralmente adiciona o aplicativo ao Quiosque, mas usando sua ID de Modelo de Usuário de Aplicativo (AUMID). Como o aplicativo Configurações e o aplicativo Microsoft Edge são considerados novos aplicativos e diferentes, os Quiosques de aplicativos mais antigos que usam AUMIDs para esses aplicativos precisarão ser atualizados para usar a nova AUMID.
 
 Ao modificar um Quiosque para incluir os novos aplicativos, recomendamos adicionar a nova AUMID, bem como deixar a antiga. Isso criará uma transição fácil quando os usuários atualizarem o sistema operacional e não precisarão receber novas políticas para continuar usando o Quiosque conforme o esperado.
 
@@ -314,7 +321,7 @@ Agora, no aplicativo Configurações, um usuário pode configurar o comportament
 
 Em um dispositivo HoloLens **** 2, vá para Atualização de Configurações & Programa Windows Insider de Segurança e  >  ****  >  **** **selecione Começar.** Vincule a conta que você usou para se registrar como um Windows Insider.
 
-O Windows Insider agora está mudando para Canais. O **anel** Modo Rápido se tornará **** o Canal de **Desenvolvedor,** **** o anel Modo Lento se tornará o Canal **Beta**e o anel de Visualização de Versão se tornará o Canal de Visualização de **Versão.** Esta é a aparência desse mapeamento:
+O Windows Insider agora está mudando para Canais. O **anel Modo** Rápido se tornará **** o Canal de **Desenvolvedor,** **** o anel Modo Lento se tornará o Canal **Beta**e o anel de Visualização de Versão se tornará o Canal de Visualização de **Versão.** Esta é a aparência desse mapeamento:
 
 ![Explicação dos Canais do Windows Insider](images/WindowsInsiderChannels.png)
 
@@ -341,7 +348,7 @@ Para testar com um ffu assinado de voo, primeiro você precisa desbloquear seu d
 
     1. Baixe ffu em seu computador de [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
     
-    1. Instale o ARC (Advanced Recovery Companion) da Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8)
+    1. Instale o ARC (Advanced Recovery Companion) da Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
     
 1. No HoloLens - Desbloqueio da Versão de Pré-liberação: Abrir Atualização de Configurações ****& Programa Windows Insider de Segurança e, em  >  ****  >  **** seguida, inscreva-se e reinicie o dispositivo.
 
