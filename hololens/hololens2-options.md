@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df3fa8ba3fbf65fa0b59f2ba9a6ace2ea489308b
-ms.sourcegitcommit: c58747f312cf1fea2de146501ea2473e93bd8300
+ms.openlocfilehash: 2c1cc7fb2ec362fde96df5f0cea23aab132b62ef
+ms.sourcegitcommit: 76a99370ab841c06e533cc2f4a0c78c1fb7eac70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314256"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "11324764"
 ---
 # Visão geral do HoloLens 2
 
@@ -73,7 +73,8 @@ Usar seus dispositivos HoloLens 2 em um ambiente comercial pode ser uma ferramen
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XwOnHqiNAeU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Aqui está o que fazer a seguir com o HoloLens 2
-1. [Prepare o seu dispositivo para usar ](https://docs.microsoft.com/hololens/hololens2-setup) e depois [configure](https://docs.microsoft.com/hololens/hololens2-start).
+1. Assista a este vídeo sobre [ HoloLens 2 Use and Care ](https://docs.microsoft.com/hololens/hololens2-maintenance##HoloLens-2-Use-and-Care).
+1. [Prepare seu dispositivo para usar ](https://docs.microsoft.com/hololens/hololens2-setup) e depois [, configure ](https://docs.microsoft.com/hololens/hololens2-start)
 1. [Saiba como contornar o HoloLens 2](https://docs.microsoft.com/hololens/holographic-home).
 1. Quando estiver confortável, [tire algumas fotos ou vídeos de realidade mista ](https://docs.microsoft.com/hololens/holographic-photos-and-videos).
 1. Procure em todos os aplicativos [disponíveis para HoloLens 2 na loja de aplicativos da Microsoft](https://docs.microsoft.com/hololens/holographic-store-apps).
@@ -111,7 +112,7 @@ Além do dispositivo atualizado, o HoloLens 2 Edição Industrial oferece garant
 Análise as [Perguntas frequentes do HoloLens 2 Industrial Edition](hololens2-industrial-edition-faq.md).
 
 #### Limpeza e Manuseio do HoloLens 2
-O HoloLens 2 Edição Industrial pode ser limpo com uma solução de álcool isopropílico "70%" e água para limpar as superfícies duras do dispositivo, incluindo o visor, a almofada da sobrancelha e a tira de cabeça. Para obter mais informações, confira as [Perguntas frequentes de limpeza do HoloLens 2](https://docs.microsoft.com/hololens/hololens2-maintenance). 
+O HoloLens 2 Edição Industrial pode ser limpo com uma solução de álcool isopropílico "70%" e água para limpar as superfícies duras do dispositivo, incluindo o visor, a almofada da sobrancelha e a tira de cabeça. Para obter mais informações, confira as [Perguntas frequentes de limpeza do HoloLens 2](https://docs.microsoft.com/hololens/hololens2-maintenance).
 
 ### **Trimble XR10 com HoloLens 2**
 
