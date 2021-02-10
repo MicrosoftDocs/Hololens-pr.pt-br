@@ -64,9 +64,10 @@
 ### [Criptografia e proteção de dados](security-encryption-data-protection.md)
 ### [Segurança de rede](security-network-security.md)
 ### [Engenharia de segurança ](security-engineering.md)
-### Segurança do HoloLens (1ª geração)
+### Segurança do HoloLens (1ª geração) 
 #### [Perguntas Frequentes sobre Segurança do HoloLens (1ª geração)](hololens1-faq-security.md)
 #### [Criptografia BitLocker do HoloLens (1ª geração)](hololens1-encryption.md)
+### [Declaração de privacidade do HoloLens 2](hololens2-compliance.md)
 ## [Requisitos de licença](hololens-licenses-requirements.md)
 ## Ambiente
 ### [Considerações de ambiente HoloLens](hololens-environment-considerations.md)
