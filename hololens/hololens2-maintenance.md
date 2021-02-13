@@ -15,12 +15,12 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0d44a985d7f8a0ca7707e6471700320b832b0826
-ms.sourcegitcommit: 76a99370ab841c06e533cc2f4a0c78c1fb7eac70
+ms.openlocfilehash: a110f711d402432e727be6f342156e7dee733157
+ms.sourcegitcommit: 23ee06b659d7a51f3000d386c8f67cbf212d5aa4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "11324774"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11327375"
 ---
 # Perguntas frequentes sobre a limpeza do HoloLens 2
 
@@ -29,7 +29,7 @@ ms.locfileid: "11324774"
 
 ## Uso e cuidado do HoloLens 2
 
-> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Use-and-Care/player]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
 <!-- <iframe src="https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Use-and-Care/player" width="960" height="540" allowFullScreen frameBorder="0" title="HoloLens 2 Use and Care - Microsoft Channel 9 Video"></iframe> -->
 
@@ -58,14 +58,14 @@ Não. As lentes limpas podem ser abrasivas para os riscos no visor. Para limpar 
 
 ## Posso usar apagamentos insucipidores para limpar o dispositivo?
 
-Sim, se as limpezas não contêm algo. Você pode usar apagamentos que não são de limpeza para apagar suavemente [as superfícies do HoloLens.](#hololens-2-use-and-care)  
+Sim, se os apagadores não contêm nada. Você pode usar apagamentos que não são de limpeza para apagar suavemente [as superfícies do HoloLens.](#hololens-2-use-and-care)  
 
 > [!CAUTION]  
 > Evite usar apagamentos que contenham limpeza das superfícies do HoloLens. É aceitável usar limpezas inativas em situações críticas, quando nada mais está disponível. No entanto, o dano pode danificar o visor do HoloLens ou outras superfícies.
 
 ## Posso usá-lo para limpar o dispositivo?
 
-Sim. Você pode usar uma solução de "70%" isopropílico e água para limpar as superfícies de disco rígido do dispositivo, incluindo o visor. Limpe levemente o pano usando uma mistura de isopropílico e água e, em seguida, limpe suavemente a superfície do dispositivo
+Sim. Você pode usar uma solução de "70%" isopropílico e água para limpar as superfícies sólidas do dispositivo, incluindo o visor. Limpe levemente o pano usando uma mistura de isopropílico e água e, em seguida, limpe suavemente a superfície do dispositivo
 
 ## O painel de navegação é substituível?
 
@@ -82,12 +82,12 @@ Para limpar o painel de navegação, limpe-o usando um pano que se parece com o 
 UVC que usa UVC LED, que opera a 265nm em nível de intensidade de 0,5-0,6mW/cm 2 e não emite ozone, pode ser usado para desacionar <sup> </sup> o HoloLens2. Siga as especificações do fabricante sobre o tempo de manipulação e exposição.
 
 > [!CAUTION]  
-> Altos níveis de exposição UV-A e UV-B podem degradar a qualidade de exibição do dispositivo e danificar a imagem do visor. A exposição excessiva à exposição uv-A e uv-B tem os seguintes efeitos, em ordem de duração e intensidade da exposição:
+> Altos níveis de exposição UV-A e UV-B podem prejudicar a qualidade de exibição do dispositivo e danificar a imagem do visor. A exposição excessiva a uv-A e uv-B tem os seguintes efeitos, em ordem de duração e intensidade da exposição:
 >  
 > 1. O painel de navegação e os fechamentos do dispositivo ficam descolorados.
-> 1. Os defeitos aparecem na capa anti-refleção (AR) no visor e nas janelas do sensor.
+> 1. Defeitos aparecem na capa anti-refletra (AR) no visor e nas janelas do sensor.
 > 1. Defeitos aparecem nos materiais base do visor e nas janelas do sensor.
-> 1. O desempenho da exibição degrada.
+> 1. O desempenho de exibição degrada.
 
 ## O painel de fundo é substituível?
 
