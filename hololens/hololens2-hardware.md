@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8e0b5732c6dd2eba0a318a2b72694aacd404c68f
-ms.sourcegitcommit: a5b6e9fdc0fa61a93cb23a89348f5b49316e2748
+ms.openlocfilehash: 65d3ec2a8ecc7fc456f8e8d9d6820a5624da9e99
+ms.sourcegitcommit: 0d16c7dc4d18d550023da9f6b3cc942eb915a2c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "11306919"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328105"
 ---
 # Hardware do HoloLens 2
 
@@ -29,8 +29,8 @@ O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jorn
 
 - **Visor**. Contém os sensores e telas do HoloLens. Você pode girar o visor para cima enquanto estiver utilizando o HoloLens.
 - **Headband**. Para colocar o HoloLens, use a roda de ajuste para expandir a headband. Com o HoloLens no lugar, aperte a roda de ajuste girando-a para a direita, até que a headband fique confortável.
-- **Botões de brilho**. Ao usar o HoloLens, os botões de brilho ficam do lado esquerdo do visor.
-- **Botões de volume**. Ao usar o HoloLens, os botões de volume ficam no lado direito do visor.
+- **Botões de brilho**. Ao usar o HoloLens, os botões de brilho ficam no lado esquerdo do visor perto da têmpora.
+- **Botões de volume**. Ao usar o HoloLens, os botões de volume ficam do lado direito do visor perto da têmpora.
 - **Botão ligar/desligar**. Ao usar o HoloLens, o botão liga/desliga está localizado no lado direito da tampa externa traseira.
 - **Porta USB-C**. Ao usar o HoloLens, a porta USB-C está localizada no lado direito da tampa externa traseira abaixo do botão Liga/Desliga.
 
@@ -44,7 +44,7 @@ O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jorn
 
 ### Detalhes da Fonte de Alimentação
 
-A fonte de alimentação e o cabo USB que acompanham o dispositivo são o melhor mecanismo com suporte para o carregamento. A fonte de alimentação é um carregador de 18W.  Ele fornece 9V a 2A.
+A fonte de alimentação e o cabo USB que acompanham o dispositivo são o melhor mecanismo com suporte para o carregamento. A fonte de alimentação é um carregador de 18W.  Ela fornece 9V a 2A.
 
 A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o dispositivo está sendo executado.
 
@@ -74,14 +74,14 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 ![Sensores do HoloLens 2](images/hololens2-front-view.png)
 
 > [!NOTE]
-> Não cubra nenhum dos sensores destacados na imagem. As câmeras de rastreamento de Head têm um FOV muito amplo, nada deve estar ao redor delas além de não cobri-las.
+> Não cubra nenhum dos sensores que aparecem na imagem. As câmeras de rastreamento de Head têm um FOV muito amplo, nada deve estar ao redor delas além de não cobri-las.
 
 ### Áudio e fala
 
 |   |   |
 | - | - |
 | Matriz de microfones | 5 canais |
-| Alto-falantes | Som espacial interno |
+| Alto-falantes | Som espacial integrado |
 
 ### Computação e conectividade
 
@@ -167,7 +167,7 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 |      Medida               |      Medidas das unidades     |      Unidades imperiais     |
 |--------------------------------|-----------------------|-------------------------|
 |     Comprimento da Unidade                |     378,97 mm          |     14,920 polegadas       |
-|     Largura da Unidade                 |     247, 90 mm          |     9,760 polegadas        |
+|     Largura da Unidade                 |     247,90 mm          |     9,760 polegadas        |
 |     Profundidade da Unidade                 |     163,07 mm          |     6,420 polegadas        |
 |     Peso da Unidade                |     2,878 kg           |     6,344 lbs           |
 |     Comprimento do Transportador Externo     |     446,00 mm          |     17,559 polegadas       |
@@ -182,10 +182,10 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 ## Localizar o número de série
 
 O número de série para dispositivos do HoloLens 2 é impresso embaixo do visor.
-1. Levante o visor do dispositivo.
-1. Olhe próximo ao brow pad.
-1. Você pode localizar o número de série próximo à dobradiça. 
 
+1. Levante o visor do dispositivo.
+1. Olhe perto da almofada para a testa.
+1. Você pode localizar o número de série próximo à dobradiça.
 
 <img src="images/serial-number-diagram-hl2.png" alt=Null width="625" height="903" />
 
