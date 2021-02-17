@@ -8,28 +8,32 @@ ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 1/12/2021
+ms.date: 02/16/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7fa7fb4dbdb29b9f45ea7f06e09f40e745e147c9
-ms.sourcegitcommit: b46055bde70071ddaffb226e6f341a7a83253988
+ms.openlocfilehash: 7ab8eede6e48ed1a6cb4584188a80adbd832c169
+ms.sourcegitcommit: ab35169529776f0682eeb8fa448c9d9e8f598513
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11326003"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340550"
 ---
 # Notas de versão do HoloLens 2
 
-Para garantir que você tenha uma experiência produtiva com seus dispositivos HoloLens, continuaremos a lançar atualizações de recursos, bugs e segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização mais recente do HoloLens 2, você pode verificar se há atualizações e atualizar [manualmente](hololens-update-hololens.md#check-for-updates-and-manually-update) ou obter o FFU (Full Flash Update) para piscar seu dispositivo por meio do [Advanced Recovery Companion](hololens-recovery.md#clean-reflash-the-device). O [download](https://aka.ms/hololens2download) é mantido atualizado e fornece o build mais recente disponível para o público em geral.
-
-Estamos animados em iniciar a versão de versões We will be flighting to the Dev Channel for the latest updates. Continuaremos com nossas [notas do HoloLens Insider](hololens-insider.md) à medida que adicionarmos mais recursos e atualizações às nossas versões do Windows Insider. Fique animado e pronto para misturar essas atualizações à sua realidade. 
+Para garantir que você tenha uma experiência produtiva com seus dispositivos HoloLens, continuaremos a lançar atualizações de recursos, bugs e segurança. Nesta página, você pode ver as novidades do HoloLens a cada mês. Para obter a atualização mais recente do HoloLens 2, você pode verificar se há atualizações e atualizar [manualmente](hololens-update-hololens.md#check-for-updates-and-manually-update) ou obter o FFU (Full Flash Update) para piscar o dispositivo por meio do [Advanced Recovery Companion.](hololens-recovery.md#clean-reflash-the-device) O [download](https://aka.ms/hololens2download) é mantido atualizado e fornece o build mais recente disponível para o público em geral.
 
 >[!NOTE]
-> Para ler as notas de versão do Emulador do HoloLens, [visite o arquivo morto.](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive)
+> Estamos animados em iniciar a versão de versões We will be flighting to the Dev Channel for the latest updates. Continuaremos com nossas [**notas do HoloLens Insider**](hololens-insider.md) à medida que adicionarmos mais recursos e atualizações às nossas versões do Windows Insider. Fique animado e pronto para misturar essas atualizações à sua realidade.
+
+Confira as notas de versão relacionadas:
+
+- [Visite o arquivo morto do Emulador do HoloLens](https://docs.microsoft.com/windows/mixed-reality/hololens-emulator-archive)
+- [Assistência Remota do Dynamics 365](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
+- [Guias do Dynamics 365](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
 
 ## Windows Holographic, versão 20H2 - Atualização de fevereiro de 2021
 - Build 19041.1136
@@ -70,7 +74,7 @@ Um dispositivo é considerado "gerenciado" **se qualquer** um dos seguintes for 
 - Configurado com o [pacote de provisionamento](hololens-provisioning.md)
 - A [identidade do](hololens-identity.md) usuário é o Azure AD
 
-Agora você pode instalar aplicativos sem precisar habilitar o Modo de Desenvolvedor ou usar o Device Portal.  Basta baixar (por USB ou por meio do Edge) o Appx Bundle para seu dispositivo e navegar até o Pacote Appx no Explorador de Arquivos para ser solicitado a dar início à instalação.  Como alternativa, [inicie uma instalação a partir de uma página da Web.](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web)  Assim como os aplicativos instalados da Microsoft Store ou sideload usando o recurso de implantação [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) de aplicativo [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) LOB do MDM, os aplicativos precisam ser assinados digitalmente com a Ferramenta de Assinatura e o certificado usado para assinar deve ser confiável para o dispositivo HoloLens antes que o aplicativo possa ser implantado.
+Agora você pode instalar aplicativos sem precisar habilitar o Modo de Desenvolvedor ou usar o Device Portal.  Basta baixar (por USB ou por meio do Edge) o Appx Bundle para seu dispositivo e navegar até o Pacote Appx no Explorador de Arquivos para ser solicitado a dar início à instalação.  Como alternativa, [inicie uma instalação a partir de uma página da Web.](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web)  Assim como os aplicativos instalados da Microsoft Store ou sideload usando o recurso de implantação [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) do aplicativo [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) LOB do MDM, os aplicativos precisam ser assinados digitalmente com a Ferramenta de Assinatura e o certificado usado para assinar deve ser confiável para o dispositivo HoloLens antes que o aplicativo possa ser implantado.
 
 **Instruções de instalação do aplicativo.**
 
@@ -94,7 +98,7 @@ Leia sobre o processo completo de [instalação de aplicativos no HoloLens 2 com
 
 - O rastreamento de mãos agora mantém o rastreamento em muitos casos novos em que a mão anteriormente teria sido perdida.  Em alguns desses novos casos, apenas a posição da palma continua a ser atualizada com base na mão real do usuário, enquanto as outras conjuntas são inferidos com base em uma pose anterior.  Essa alteração ajuda a melhorar a consistência do rastreamento em movimentos como desespetivo, lançamento, lançamento e bate-cabeça.  Ele também ajuda em casos em que a mão está perto de uma superfície ou segurando um objeto.  Quando as junções de mão [](https://docs.microsoft.com/uwp/api/windows.perception.people.jointposeaccuracy?view=winrt-19041&preserve-view=true) estão sendo inferidos, o valor de precisão por conjunto será definido como "Aproximado" em vez de "Alto".
 - Correção de um problema em que a redefinição de PIN para contas do Azure AD mostrava um erro "Algo deu errado.
-- Os usuários devem ver muito menos falhas de OOBE pós-inicialização ao iniciar ET, Íris do aplicativo configurações, novo usuário ou notificação do sistema.
+- Os usuários devem ver muito menos falhas de OOBE pós-inicialização ao iniciar ET, Íris do aplicativo de configurações, novo usuário ou notificação do sistema.
 - Os usuários devem ter o fuso horário correto saindo da OOBE.
 
 ## Windows Holographic, versão 1903 – Atualização de dezembro de 2020
@@ -130,7 +134,7 @@ Esta versão mais recente é uma atualização mensal para a versão 2004, mas d
 | [Novas políticas de energia para o HoloLens 2](hololens-release-notes.md#new-power-policies-for-hololens-2)       | Políticas recém-suportadas para configurações de tempo de energia.  |
 | [Políticas de atualização](hololens-release-notes.md#newly-enabled-update-policies-for-hololens)        | Políticas recém-habilitadas permitindo o controle de atualizações.           |
 | [Visibilidade da página Configurações Habilitadas para o HoloLens 2](hololens-release-notes.md#enabled-settings-page-visibility-for-hololens-2)      | Política para escolher quais páginas são vistas no aplicativo Configurações.             |
-| [Modo de pesquisa](hololens-release-notes.md#research-mode) | Usando o modo pesquisa no HoloLens 2. |
+| [Modo de pesquisa](hololens-release-notes.md#research-mode) | Usando o modo Pesquisa no HoloLens 2. |
 | [Comprimento de gravação aumentado](hololens-release-notes.md#recording-length-increased) | As gravações MRC não são mais a 5 minutos. |
 | [Melhorias e correções na atualização](hololens-release-notes.md#improvements-and-fixes-in-the-update)                 | Correções adicionais na atualização.   |
 
@@ -159,13 +163,13 @@ Essas informações podem ser encontradas posteriormente com outras [informaçõ
 
 - Ferramentas aprimoradas de auditoria, diagnóstico e validação para segurança e conformidade de dispositivos por meio do novo Gerenciador de Certificados. Esse recurso permitirá que você implante, solucione problemas e valide seus certificados em escala em ambientes comerciais.
 
-No Windows Holographic versão 20H2, estamos adicionando um Gerenciador de Certificados no aplicativo Configurações do HoloLens 2. Vá para **Configurações > Atualizar & segurança > certificados.** Esse recurso fornece uma maneira simples e amigável de exibir, instalar e remover certificados em seu dispositivo. Com o novo Gerenciador de Certificados, os administradores e os usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e em conformidade. 
+No Windows Holographic versão 20H2, estamos adicionando um Gerenciador de Certificados no aplicativo Configurações do HoloLens 2. Vá para **Configurações > Atualizar & segurança > certificados**. Esse recurso fornece uma maneira simples e amigável de exibir, instalar e remover certificados em seu dispositivo. Com o novo Gerenciador de Certificados, os administradores e os usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e em conformidade. 
 
 -   **Auditoria:** Capacidade de validar se um certificado foi implantado corretamente ou para confirmar se ele foi removido adequadamente. 
--   **Diagnóstico:** Quando surgirem problemas, validar se os certificados apropriados existem no dispositivo economiza tempo e ajuda na solução de problemas. 
+-   **Diagnóstico:** Quando surgirem problemas, a validação de que os certificados apropriados existem no dispositivo economiza tempo e ajuda na solução de problemas. 
 -   **Validação:** Verificar se um certificado atende à finalidade pretendido e está funcional pode economizar tempo significativo, especialmente em ambientes comerciais antes de implantar certificados em maior escala.
 
-Para encontrar um certificado específico na lista rapidamente, há opções para classificar por nome, armazenar ou expirar data. Os usuários também podem pesquisar diretamente por um certificado. Para exibir propriedades de certificado individuais, selecione o certificado e clique em **Informações.** 
+Para encontrar um certificado específico na lista rapidamente, há opções para classificar por nome, armazenamento ou data de expiração. Os usuários também podem pesquisar diretamente por um certificado. Para exibir as propriedades individuais do certificado, selecione o certificado e clique em **Informações.** 
 
 A instalação do certificado atualmente dá suporte a arquivos .cer e .crt. Os proprietários de dispositivos podem instalar certificados no Computador Local e no Usuário Atual;  todos os outros usuários só podem instalar no Usuário Atual. Os usuários só podem remover certificados instalados diretamente da interface do usuário de Configurações. Se um certificado tiver sido instalado por outros meios, ele também deverá ser removido pelo mesmo mecanismo.
 
@@ -210,7 +214,7 @@ Para obter mais informações sobre como aplicar pacotes de provisionamento dura
 Informações adicionais [sobre o provisionamento](hololens-provisioning.md#auto-launch-provisioning-from-usb) de início automático de um USB podem ser encontradas na documentação de provisionamento do HoloLens.
 
 ### Confirmar automaticamente pacotes de provisionamento na OOBE
-- Processo automatizado permitindo menos interação do usuário, quando a página Pacote de Provisionamento é exibida, ela aplicará automaticamente todos os pacotes listados.
+- Processo automatizado que permite menos interação do usuário, quando a página Pacote de Provisionamento é exibida, ela aplicará automaticamente todos os pacotes listados.
 
 Quando a tela principal de provisionamento aparece, o OOBE conta 10 segundos antes de começar automaticamente a aplicar todos os pacotes de provisionamento. Os usuários ainda podem [confirmar ou cancelar](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) dentro de 10 segundos depois de verificar os pacotes esperados.
 
@@ -232,7 +236,7 @@ Seu dispositivo agora está configurado e [exibirá a tela Provisionamento bem-s
 ### Usando o Autopilot com Wi-Fi conexão
 - Removida a necessidade de adaptadores USB-C para ethernet reduzir as necessidades de hardware, habilitando o Autopilot para funcionar Wi-Fi dispositivos conectados.
 
-Agora, durante a OOBE, depois de conectar o HoloLens 2 com Wifi, o OOBE verificará se há um perfil do Autopilot para o dispositivo. Se uma for encontrada, ela será usada para concluir o restante do fluxo de inscrição e junção do AAD. Em outras palavras, usar ethernet para USB-C ou Wi-Fi para adaptador USB-C não é mais um requisito, no entanto, eles continuam a funcionar se fornecidos no início da OOBE. Saiba mais sobre [o Autopilot para dispositivos HoloLens 2.](hololens2-autopilot.md)
+Agora, durante a OOBE, depois de conectar o HoloLens 2 com Wi-Fi, o OOBE verificará se há um perfil do Piloto Automático para o dispositivo. Se uma for encontrada, ela será usada para concluir o restante do fluxo de inscrição e junção do AAD. Em outras palavras, usar ethernet para USB-C ou Wi-Fi para adaptador USB-C não é mais um requisito, no entanto, eles continuam a funcionar se fornecidos no início da OOBE. Saiba mais sobre [o Autopilot para dispositivos HoloLens 2.](hololens2-autopilot.md)
 
 ### CSP do Tenantlockdown e AutoPilot
 - Mantém os dispositivos no locatário da organização bloqueando-os para o locatário, mesmo através da reinicialização do dispositivo ou do reflash. Com mais segurança, desautorizando a criação da conta por meio do provisionamento. 
@@ -280,7 +284,7 @@ O OOBE aguardará indefinidamente o download do perfil do Autopilot e a caixa de
 
 ![Modo de exibição no dispositivo quando a política for imposta no dispositivo.](images/hololens-autopilot-lockdown.png)
 
-Essas informações agora podem ser encontradas junto com o restante do Autopilot em [Tenantlockdown CSP e Autopilot.](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot)
+Essas informações agora podem ser encontradas junto com o restante do Autopilot em [CSP Tenantlockdown e Autopilot.](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot)
 
 ### Acesso Global Atribuído – Modo de Quiosque
 - Gerenciamento de identidade reduzido para Quiosque, habilitando o novo método kiosk que aplica o modo de quiosque no nível do sistema.
@@ -302,7 +306,7 @@ O aplicativo é automaticamente lançado quando o usuário se insiciona.
 ### Alterações no comportamento do modo de quiosque para manipulação de falhas
 - Modo de Quiosque mais seguro eliminando os aplicativos disponíveis em falhas no modo de quiosque. 
 
-Anteriormente, ao encontrar falhas na aplicação do modo de quiosque, o HoloLens usava para exibir todos os aplicativos no menu Iniciar. Agora, no Windows Holographic versão 20H2 no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, como abaixo: 
+Anteriormente, ao encontrar falhas na aplicação do modo de quiosque, o HoloLens usava para exibir todos os aplicativos no menu Iniciar. Agora, no Windows Holographic versão 20H2, no caso de falhas, nenhum aplicativo será mostrado no menu Iniciar, como abaixo: 
 
 ![Imagem da aparência do modo de quiosque agora quando ele falha.](images/hololens-kiosk-failure-behavior.png )
 
@@ -325,7 +329,7 @@ Novas políticas de realidade misturada foram criadas para dispositivos HoloLens
 
 Essa política controla por quantos dias o cache de associação de grupo do Azure AD tem permissão para ser usado para configurações de Acesso Atribuído destinados a grupos do Azure AD para usuário associado. Depois que esse valor de política for definido para um valor maior do que 0, o cache será usado caso contrário, não.  
 
-Nome: AADGroupMembershipCacheValidityInDays Valor do URI: ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+Nome: AADGroupMembershipCacheValidityInDays Valor de URI: ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
 
 Min - 0 dias  
 Máx . 60 dias 
@@ -336,7 +340,7 @@ Etapas para usar essa política corretamente:
     1. O valor do URI deve ser inserido na caixa de texto OMA-URI como ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
     1. O valor pode estar entre mín/ máximo permitido.
 1. Registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
-1. Permitir que o usuário 1 do Azure AD entre quando a Internet estiver disponível, depois que o usuário entrar e a associação ao grupo do Azure AD for confirmada com êxito, o cache será criado. 
+1. Permitir que o usuário 1 do Azure AD entre quando a Internet estiver disponível, quando o usuário entrar e a associação ao grupo do Azure AD for confirmada com êxito, o cache será criado. 
 1. Agora, o usuário 1 do Azure AD pode deixar o HoloLens offline e usá-lo no modo de quiosque, desde que o valor da política permita um número X de dias. 
 1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do Azure AD N. O ponto chave aqui é que qualquer usuário do Azure AD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que ele é membro do grupo do Azure AD para o qual a configuração de Quiosque é direcionada. 
  
@@ -374,7 +378,7 @@ Essas políticas recém-adicionadas permitem que os administradores controlem es
 Essas duas novas polícias para DisplayOffTimeoutOnBattery e DisplayOffTimeoutPluggedIn estão sendo adicionadas às nossas restrições [comuns de dispositivo.](hololens-common-device-restrictions.md)
 
 > [!NOTE]
-> Para uma experiência consistente no HoloLens 2, certifique-se de que os valores para DisplayOffTimeoutOnBattery e StandbyTimeoutOnBattery sejam definidos como o mesmo valor. O mesmo se aplica a DisplayOffTimeoutPluggedIn e StandbyTimeoutPluggedIn. Consulte [Exibir, sleep e hibernar temporizadores ociosos](https://docs.microsoft.com/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers) para obter mais detalhes sobre o modo de espera moderno.
+> Para uma experiência consistente no HoloLens 2, certifique-se de que os valores de DisplayOffTimeoutOnBattery e StandbyTimeoutOnBattery sejam definidos como o mesmo valor. O mesmo se aplica a DisplayOffTimeoutPluggedIn e StandbyTimeoutPluggedIn. Consulte [Exibir, sleep e hibernar temporizadores ociosos](https://docs.microsoft.com/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers) para obter mais detalhes sobre o modo de espera moderno.
 
 ### Políticas de atualização recém-habilitadas para o HoloLens
 - Mais opções para quando as Atualizações são instaladas ou desabilitar o botão Pausar Atualizações para garantir atualizações.
@@ -385,7 +389,7 @@ Essas políticas de atualização agora estão habilitadas em dispositivos HoloL
 -   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
 -   [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)
 
-Detalhes completos sobre as políticas de atualização e como usá-las para dispositivos HoloLens podem ser lidos aqui em Gerenciar atualizações [do HoloLens.](hololens-updates.md)
+Detalhes completos sobre essas políticas de atualização e como usá-las para dispositivos HoloLens podem ser lidos aqui em Gerenciar atualizações [do HoloLens.](hololens-updates.md)
 
 ### Visibilidade da página Configurações Habilitadas para o HoloLens 2
 - Maior controle de interface do usuário no aplicativo Configurações, que pode ser confundido ao mostrar uma seleção limitada de páginas.
@@ -396,7 +400,7 @@ Agora, habilitamos uma política que permite aos administradores de IT impedir q
 
 Para saber quais configurações de página você pode personalizar no HoloLens 2, visite nossa página [de URIs de Configurações.](settings-uri-list.md) 
  
-![Captura de tela da modificação das horas ativas no aplicativo Configurações](images/hololens-page-visibility-list.jpg)
+![Captura de tela do horário ativo sendo modificado no aplicativo Configurações](images/hololens-page-visibility-list.jpg)
 
 ### Modo de pesquisa
 Enquanto estiver no Modo de Pesquisa, o HoloLens 2 se torna uma ferramenta poderosa para pesquisa de visão do computador. Em comparação com as edições anteriores, o Modo de Pesquisa para HoloLens 2 tem as seguintes vantagens:
@@ -418,12 +422,12 @@ Devido aos comentários dos clientes, aumentamos o comprimento de gravação de 
 Você pode encontrar os requisitos completos em nossa [documentação de fotos e vídeos](holographic-photos-and-videos.md#maximum-recording-length) holográficos. 
 
 ### Melhorias e correções na atualização:
-- Mais telas em OOBE agora estão no modo escuro.
+- Agora, mais telas na tela OOBE estão no modo escuro.
 - Saiba mais sobre o conteúdo que deve apontar para a Declaração de Privacidade online mais recente.
 - Resolvido um problema em que os usuários não podiam provisionar perfis VPN por meio de pacotes de provisionamento.
 - Problema de configuração de proxy corrigido para conexão VPN.
 - Política atualizada para desabilitar a enumeração de funções USB por meio do MDM para NCM para AllowUsbConnection.
-- Solucionado um problema que impedia que um dispositivo HoloLens aparecendo no Explorador de Arquivos sobre Protocolo de Transferência de Mídia (MTP) quando o dispositivo é definido como um [quiosque](hololens-kiosk.md)de aplicativo único. Observe que o MTP (e a conexão USB em geral) ainda podem ser desabilitados usando [a política AllowUSBConnection.](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+- Resolvido um problema que impedia que um dispositivo HoloLens aparecendo no Explorador de Arquivos sobre Protocolo de Transferência de Mídia (MTP) quando o dispositivo é definido como um [quiosque](hololens-kiosk.md)de aplicativo único. Observe que o MTP (e a conexão USB em geral) ainda podem ser desabilitados usando [a política AllowUSBConnection.](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 - Correção de um problema em que os ícones no menu Iniciar eram dimensionados corretamente no modo quiosque.
 - Corrigido um problema devido ao armazenamento em cache HTTP interferir no modo de quiosque direcionado para grupos do Azure AD.
 - Corrigido um problema em que os usuários não conseguiam usar o botão Emparelhar depois de habilitar o modo Desenvolvedor com pacotes de provisionamento, a menos que desabilita e reabilitaram o modo desenvolvedor.
@@ -453,7 +457,7 @@ Melhorias e correções na atualização:
 - Resolve um problema que impedia o Visual Studio de depurar um aplicativo quando SupportsMultipleInstances="true" está presente no appxmanifest.
 - Esta versão inclui a correção de detecção de proxy NCSI para resolver falha na detecção de Internet por proxy de rede. NCSI pode usar proxy de máquina e proxy por perfil para detecção de conectividade com a Internet. O proxy por usuário será suportado pelo NCSI na versão futura.
 - Na maioria dos dispositivos do Windows Mixed Reality, o vetor de direção para frente é paralelo ao chão quando a cabeça do usuário está em uma posição neutra olhando para frente. No entanto, as versões anteriores do HoloLens 2 alinharam o vetor para ser perpendicular aos painéis de exibição, que é inclinado para baixo alguns graus em relação à orientação ideal. Versões mais recentes do HoloLens 2 corrigiram isso para garantir a consistência semântica entre fatores forma.
-- Robustez aprimorada do rastreamento de mãos que resultará em menos perdas de rastreamento em cenários específicos.
+- Robustez aprimorada do controle de mãos que resultará em menos perdas de rastreamento em cenários específicos.
 - Esta versão contém uma correção para melhorar a qualidade do registro de data/hora de áudio que pode ter contribuído para problemas de captura de vídeo.
 
 ## Windows Holographic, versão 1903 - Atualização de setembro de 2020
@@ -462,7 +466,7 @@ Melhorias e correções na atualização:
 Melhorias e correções na atualização:
 
 - Na maioria dos dispositivos do Windows Mixed Reality, o vetor de direção para frente é paralelo ao chão quando a cabeça do usuário está em uma posição neutra olhando para frente. No entanto, as versões anteriores do HoloLens 2 alinharam o vetor para ser perpendicular aos painéis de exibição, que é inclinado para baixo alguns graus em relação à orientação ideal. Versões mais recentes do HoloLens 2 corrigiram isso para garantir a consistência semântica entre fatores forma.
-- Robustez aprimorada do controle de mãos que resultará em menos perdas de rastreamento em cenários específicos.
+- Robustez aprimorada do rastreamento de mãos que resultará em menos perdas de rastreamento em cenários específicos.
 
 ## Windows Holographic, versão 2004 - Atualização de agosto de 2020
 - Build 19041.1113
@@ -483,7 +487,7 @@ Esta atualização de qualidade mensal não contém alterações notáveis. Reco
 
 Melhorias e correções na atualização:
 
-- Agora, os desenvolvedores podem escolher entre habilger ou desabilitar o Device Portal para exigir uma conexão segura.
+- Os desenvolvedores agora podem escolher entre habilger ou desabilitar se o Device Portal exigir uma conexão segura.
 - Confiabilidade aprimorada para lançamentos de aplicativos após atualizações do sistema operacional.
 - Alterou o brilho da caixa de entrada padrão para 100%.
 - Resolvido um problema sobre o encaminhamento HTTPS para o Windows Device Portal no HoloLens 2.
@@ -512,12 +516,12 @@ Melhorias e correções na atualização:
 - Correção de um bug para melhorar a qualidade do áudio em cenários de captura de realidade misturada. Especificamente, essa correção deve eliminar falhas de áudio na gravação quando **o** menu Iniciar é exibido.
 - Melhoria da estabilidade do holograma em vídeos gravados.
 - Resolvemos um problema em que a captura de realidade misturada não podia gravar vídeo depois que o dispositivo era deixado em estado de espera por vários dias.
-- A API HolographicSpace.UserPresence geralmente é desabilitada para aplicativos Unity. Esse comportamento evita um problema que causava a pausa de alguns aplicativos quando o visor estava invertido, mesmo se a configuração "executar em segundo plano" estivesse habilitada. A API agora está habilitada para as versões Unity 2018.4.18 e posteriores e 2019.3.4 e posteriores.
-- Quando você acessa o Device Portal através de uma Wi-Fi, um navegador da Web pode impedir o acesso devido a um certificado inválido. O navegador pode relatar um erro como "ERR_SSL_PROTOCOL_ERROR", mesmo se o certificado do dispositivo fosse confiável anteriormente. Nesse caso, você não pode avançar para o Device Portal, pois não há opção para ignorar avisos de segurança. Essa atualização resolveu o problema. Se o certificado do dispositivo tiver sido baixado anteriormente e confiável em um computador para remover avisos de segurança do navegador, e o erro SSL ocorrer, o novo certificado terá que ser baixado e confiável para lidar com os avisos de segurança do navegador.
+- A API HolographicSpace.UserPresence geralmente é desabilitada para aplicativos Unity. Esse comportamento evita um problema que faz com que alguns aplicativos pausem quando o visor foi invertido, mesmo que a configuração "executar em segundo plano" tenha sido habilitada. A API agora está habilitada para as versões Unity 2018.4.18 e posteriores e 2019.3.4 e posteriores.
+- Quando você acessa o Device Portal através de uma Wi-Fi, um navegador da Web pode impedir o acesso devido a um certificado inválido. O navegador pode relatar um erro como "ERR_SSL_PROTOCOL_ERROR", mesmo que o certificado do dispositivo seja confiável anteriormente. Nesse caso, você não pode avançar para o Device Portal, pois não há opção para ignorar avisos de segurança. Essa atualização resolveu o problema. Se o certificado do dispositivo tiver sido baixado anteriormente e confiável em um computador para remover avisos de segurança do navegador, e o erro SSL ocorrer, o novo certificado terá que ser baixado e confiável para lidar com os avisos de segurança do navegador.
 - Habilitada a capacidade de criar um pacote de provisionamento de tempo de execução que pode instalar um aplicativo usando pacotes MSIX.
-- Adicionada uma **configuração**nos Hologramas do Sistema de Configurações que permite aos usuários remover automaticamente todos os hologramas da página de realidade misturada quando o dispositivo  >  ****  >  **** é desligado.
+- Adicionada uma configuração **nos**  >  ****  >  **Hologramas** do Sistema de Configurações que permite aos usuários remover automaticamente todos os hologramas da página de realidade misturada quando o dispositivo é desligado.
 - Corrigido um problema que causava aplicativos do HoloLens que alteram seu formato de pixel para renderizar preto no emulador do HoloLens.
-- Corrigido um bug que causava uma falha durante o logon da íris.
+- Correção de um bug que causava uma falha durante o logon da íris.
 - Corrigido um problema sobre downloads repetidos da loja para aplicativos já atuais.
 - Correção de um bug para impedir que aplicativos imersivos abriam o Microsoft Edge repetidamente.
 - Corrigido um problema com inicializações do aplicativo Fotos na inicialização inicial após a atualização da versão 1903.
@@ -542,19 +546,19 @@ Melhorias e correções na atualização:
 ## Windows Holographic, versão 2004  
 - Build - 19041.1103
 
-A atualização de software principal de maio de 2020 para o HoloLens 2, *Windows Holographic, versão 2004* inclui uma série de novos recursos interessantes, como suporte para o Windows Autopilot, modo escuro do aplicativo, suporte a Ethernet USB para hotspots 5G/LTE e muito mais. Para atualizar para a versão **** mais recente, abra o aplicativo Configurações, vá para Atualizar & Segurança e selecione o botão   Verificar **** **Atualizações.**   
+A atualização de software principal de maio de 2020 para o HoloLens 2, *Windows Holographic, versão 2004* inclui uma série de novos recursos interessantes, como suporte para o Windows Autopilot, modo escuro do aplicativo, suporte a Ethernet USB para hotspots 5G/LTE e muito mais. Para atualizar para a versão **** mais recente, abra o aplicativo Configurações, vá para Atualizar & Segurança e selecione o botão Verificar    **** **Atualizações.**   
 
 |             Recurso                              |          Descrição                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 |       Windows Autopilot                          |          Pré-configurar e configurar perfeitamente novos dispositivos para produção usando o Windows AutoPilot                 |
 |       Suporte para FIDO 2                             |          Suporte para chaves de segurança FIDO2 para habilitar a autenticação rápida e segura para dispositivos compartilhados            |
 |       Provisionamento aprimorado                      |          Aplicar perfeitamente um pacote de provisionamento de uma unidade USB ao seu HoloLens                              |
-|       Status de instalação do aplicativo                 |          Verificar o status de instalação no aplicativo Configurações para aplicativos foram por meio do HoloLens 2 via MDM               |
+|       Status de instalação do aplicativo                 |          Verifique o status de instalação no aplicativo Configurações para aplicativos que foram pressionados para o HoloLens 2 via MDM               |
 |       Provedores de serviços de configuração (CSPs)   |          Adicionados novos provedores de serviços de configuração para aprimorar os recursos de controle de administração                 |
 |       Suporte a USB 5G/LTE                       |          A funcionalidade Ethernet USB expandida habilita o suporte para 5G/LTE                                    |
 |       Modo de aplicativo escuro                              |          Modo de aplicativo escuro disponível para aplicativos que suportam os modos escuro e claro, melhorando a experiência de visualização        |
 |       Comandos de voz                             |          Suporte para comandos adicionais de voz do sistema para controlar as mãos livres do HoloLens                           |
-|       Melhorias no controle de mãos                 |          As melhorias no controle de mãos fazem com que os botões e as interações 2D slate mais precisas                        |
+|       Melhorias no controle de mãos                 |          As melhorias no controle de mãos fazem com que os botões e as interações 2D slate mais precisos                        |
 |       Melhorias e correções de qualidade                 |          Várias melhorias de desempenho e confiabilidade do sistema em toda a plataforma                            |
 
 ### Suporte para o Windows Autopilot
@@ -590,7 +594,7 @@ Para experimentar:
 1. Baixe a versão mais recente do Designer de Configuração do Windows da Windows Store para o computador.
 1. Selecione **Provisionamento de Dispositivos HoloLens**  >  **Provisionamento dispositivos HoloLens 2**.
 2. Crie seu perfil de configuração. Em seguida, copie todos os arquivos que foram criados para um dispositivo de armazenamento USB-C.
-3. Conecte o dispositivo USB-C a qualquer HoloLens recentemente piscado. Em seguida, **pressione os botões**de energia de volume para baixo para aplicar seu pacote de  +  **** provisionamento.
+3. Conecte o dispositivo USB-C a qualquer HoloLens piscado recentemente. Em seguida, **pressione os botões**de energia de volume para baixo para aplicar seu pacote de  +  **** provisionamento.
 
 ### Status de instalação do aplicativo de linha de negócios
 
@@ -598,7 +602,7 @@ A implantação e o gerenciamento de aplicativos de MDM para aplicativos de linh
 
 ### CSPs e políticas adicionais
 
-Um [provedor de serviços de configuração (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN) é uma interface para ler, definir, modificar ou excluir definições de configuração em um dispositivo. Nesta versão, adicionamos suporte para mais políticas para aumentar os administradores de controle sobre os dispositivos HoloLens implantados. Para ver a lista de CSPs suportados pelo HoloLens, consulte [CSP NetworkQoSPolicy.](https://docs.microsoft.com/windows/client-management/mdm/networkqospolicy-csp)
+Um [provedor de serviços de configuração (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference?redirectedfrom=MSDN) é uma interface para ler, definir, modificar ou excluir definições de configuração em um dispositivo. Nesta versão, adicionamos suporte para mais políticas para aumentar o controle que os administradores implantaram em dispositivos HoloLens. Para ver a lista de CSPs suportados pelo HoloLens, consulte [CSP NetworkQoSPolicy.](https://docs.microsoft.com/windows/client-management/mdm/networkqospolicy-csp)
 
 Novidade nesta versão:
 
@@ -624,13 +628,13 @@ O provedor de serviços de configuração NetworkQoSPolicy cria políticas de Qo
 
 ### Suporte de Ethernet USB expandida para dispositivos conectados 5G/LTE
 
-O suporte foi adicionado para habilitar determinados dispositivos de banda larga móvel, como telefones 5G/LTE e hotpots Wi-Fi, quando eles são conectados ao HoloLens 2 via USB. Esses dispositivos agora são exibidos nas **configurações de rede** como outra conexão Ethernet. (Não há suporte para dispositivos de banda larga móveis que exigem um driver externo.) Essa funcionalidade permite conexões de largura de banda alta quando Wi-Fi não está disponível e Wi-Fi o conexões não tem desempenho suficiente. Para saber mais sobre dispositivos USB compatíveis, consulte [Conectar-se a dispositivos Bluetooth e USB-C.](https://docs.microsoft.com/hololens/hololens-connect-devices)  
+O suporte foi adicionado para habilitar determinados dispositivos de banda larga móvel, como telefones 5G/LTE e hotspots Wi-Fi, quando eles estão conectados ao HoloLens 2 via USB. Esses dispositivos agora são exibidos nas **configurações de rede** como outra conexão Ethernet. (Não há suporte para dispositivos de banda larga móveis que exigem um driver externo.) Essa funcionalidade permite conexões de largura de banda alta quando Wi-Fi não está disponível e Wi-Fi o conexões não tem desempenho suficiente. Para saber mais sobre dispositivos USB compatíveis, consulte Conectar-se a [dispositivos Bluetooth e USB-C.](https://docs.microsoft.com/hololens/hololens-connect-devices)  
 
 ### Melhorias no controle de mãos
 
 Esta versão inclui várias melhorias de controle de mãos:
 
-- **Apontar apresenta estabilidade:** O sistema agora resistindo à inclinação do dedo indicador quando ele é omitido pela palma. Essa alteração melhora a precisão quando você pressiona botões, digita, rola o conteúdo e muito mais! 
+- **A posição apontando estabilidade:** O sistema agora resistindo à inclinação do dedo indicador quando ele é omitido pela palma. Essa alteração melhora a precisão quando você pressiona botões, digita, rola conteúdo e muito mais! 
 - **Toques de ar acidentais reduzidos:** Melhoramos a detecção do gesto de air tap. Agora há menos ativações acidentais em vários cenários comuns, como quando você solta as mãos em seus lados.
 - **Confiabilidade da opção do usuário:** O sistema agora é mais rápido e confiável na atualização do tamanho da mão quando você compartilha um dispositivo.
 - **Roubo de mão reduzido:** Melhoramos o tratamento dos casos em que há mais de duas mãos à vista dos sensores. Se várias pessoas trabalham juntas, agora há uma chance muito menor de que a mão controlada "pule" do usuário para a mão de outra pessoa na cena.
@@ -711,7 +715,7 @@ Esses aplicativos "nativos" suportam o modo escuro:
 
 **Melhorias e correções também na atualização:** 
 - Garante que as sobreposições de shell sejam incluídas em capturas de realidade misturada.
-- Os desenvolvedores do Unreal agora podem usar a página de exibição 3D no Device Portal para testar e depurar seus aplicativos.
+- Os desenvolvedores do Unreal agora podem usar a página De exibição 3D no Device Portal para testar e depurar seus aplicativos.
 - Melhoria da estabilidade do holograma na captura de realidade misturada quando o algoritmo *HolographicDepthReprojectionMethod DepthReprojection* é usado.
 - Correção do erro "Classe de API IStreamSocketListener do WinRT não registrada" em aplicativos ARM de 32 bits.
 
@@ -729,7 +733,7 @@ Melhorias e correções na atualização:
 
 Melhorias e correções na atualização:
 
-- Desabilitada temporariamente a API HolographicSpace.UserPresence para aplicativos Unity. Essa alteração evita um problema que faz com que alguns aplicativos pausem quando o visor foi invertido, mesmo que a configuração "executar em segundo plano" tenha sido habilitada.
+- Desabilitada temporariamente a API HolographicSpace.UserPresence para aplicativos Unity. Essa alteração evita um problema que causava a pausa de alguns aplicativos quando o visor estava invertido, mesmo se a configuração "executar em segundo plano" estivesse habilitada.
 - Corrigimos uma falha de HUP aleatória causada pelo rastreamento de mãos, em que o usuário notava que uma interface do usuário congelava e volta ao shell após vários segundos.
 - Rastreamento de mão aprimorado para que, quando você se desdoque com o dedo indicador, a parte superior do dedo tenha menos probabilidade de ficar incorretamente.
 - Confiabilidade aprimorada do rastreamento de cabeça, mapeamento espacial e outros tempos de execução.
