@@ -13,19 +13,19 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 1b4f95f43fc60dffa2ca75322466857a0a20a0a7
-ms.sourcegitcommit: 145bbabc390f626ba6633fa49423c38656cd2224
+ms.openlocfilehash: 728bf8547315be96f879ff94a1290c1e2b3e7bf8
+ms.sourcegitcommit: fbc8ddb17e31fea8667ece43a511592b86ac3947
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "11302265"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385487"
 ---
-# Conectar-se a dispositivos Bluetooth e USB-C
+# <a name="connect-to-bluetooth-and-usb-c-devices"></a>Conectar-se a dispositivos Bluetooth e USB-C
 
 > [!NOTE]
 > Microfones externos não podem ser usados. O HoloLens 2 usa a[Matriz do microfone](hololens2-hardware.md#audio-and-speech) interno.
 
-## Emparelhar dispositivos Bluetooth
+## <a name="pair-bluetooth-devices"></a>Emparelhar dispositivos Bluetooth
 
 O HoloLens 2 tem suporte para as seguintes classes de dispositivos Bluetooth:
 
@@ -37,12 +37,12 @@ O HoloLens 2 (1° gen) tem suporte para as seguintes classes de dispositivos Blu
 
 - Mouse
 - Teclado
-- Usar o clicador do HoloLens (1ª gen)
+- [Usar o clicador do HoloLens (1ª gen)](https://docs.microsoft.com/hololens/hololens1-clicker)
 
 > [!NOTE]
 > Outros tipos de dispositivos Bluetooth, como alto-falantes, fones de ouvido, smartphones e game pads, podem estar listados como disponíveis nas configurações do HoloLens. No entanto, esses dispositivos não têm suporte no HoloLens (1ª gen). Para saber mais, confira [Configurações do HoloLens lista dispositivos como disponíveis, mas os dispositivos não funcionam](hololens-FAQ.md#hololens-settings-lists-devices-as-available-but-the-devices-dont-work).
 
-### Emparelhar um teclado ou mouse Bluetooth
+### <a name="pair-a-bluetooth-keyboard-or-mouse"></a>Emparelhar um teclado ou mouse Bluetooth
 
 1. Ligue o teclado ou o mouse e torne-o localizável. Para saber como tornar o dispositivo localizável, procure por informações sobre o dispositivo (ou sua documentação) ou visite o site do fabricante.
 
@@ -50,23 +50,9 @@ O HoloLens 2 (1° gen) tem suporte para as seguintes classes de dispositivos Blu
 
 1. Selecione **Dispositivos**, e verifique se o Bluetooth está ativado.  
 
-1. Quando vir o nome do dispositivo, selecione **Emparelhar**e siga as instruções.
+1. Quando vir o nome do dispositivo, selecione **Emparelhar** e siga as instruções.
 
-### HoloLens (1º gen): Emparelhe o clicador
-
-1. Use o gesto de abrir a mão para ir para **Iniciar** e, em seguida, selecione **Configurações**.
-
-1. Selecione **Dispositivos**, e verifique se o Bluetooth está ativado.
-
-1. Use a ponta de uma caneta para pressionar e segurar o botão de emparelhamento do clicador até que o sinal luminoso de status do clicador piscar. Mantenha pressionado o botão até que a luz comece a piscar.  
-
-   O botão de emparelhamento fica na parte inferior do clicador, ao lado do loop Finger.
-
-   ![O botão de emparelhamento está ao lado do loop Finger](images/use-hololens-clicker-1.png)
-
-1. Na tela emparelhamento, marque **Emparelhamento** > **do Clicador**.
-
-## Bluetooth desabilitado
+## <a name="disable-bluetooth"></a>Bluetooth desabilitado
 
 Esse procedimento desativa os componentes RF do rádio Bluetooth e desabilita toda a funcionalidade Bluetooth no Microsoft HoloLens.
 
@@ -74,7 +60,7 @@ Esse procedimento desativa os componentes RF do rádio Bluetooth e desabilita to
 
 1. Mova o controle deslizante para **Bluetooth** para a posição **Desativada**.
 
-## HoloLens 2: conectar dispositivos USB-C
+## <a name="hololens-2-connect-usb-c-devices"></a>HoloLens 2: conectar dispositivos USB-C
 
 O HoloLens 2 tem suporte para as seguintes classes de dispositivos USB-C:
 
@@ -84,14 +70,12 @@ O HoloLens 2 tem suporte para as seguintes classes de dispositivos USB-C:
 - Fones de ouvido digital USB-C (incluindo os adaptadores de carregamento plus do headset)
 - Mouse com fio
 - Teclado com fio
-- Hubs PD de combinação (USB A, carregamento plus de PD)
+- Hubs PD combinados ( carregamento USB A + PD)
 
 > [!NOTE]
-> Alguns dispositivos móveis com conexões USB-C se apresentam ao HoloLens como adaptadores de Ethernet, portanto, podem ser usados em uma configuração de compartilhamento de Internet, começando com o Windows Holographic, versão 2004. Os modems USB LTE que exigem um driver separado e/ou aplicativo instalado para sua configuração não têm suporte.
+> Em resposta aos comentários do cliente, habilitamos o suporte limitado para conectividade celular diretamente ao HoloLens via USB-C. Confira [Conectar-se ao Celular e 5G](hololens-cellular.md) para obter mais informações.
 
-Em resposta a comentários de clientes, habilitamos um suporte limitado para conectividade de rede celular, que pode ser acessado diretamente no HoloLens via USB-C.  A conectividade de compartilhamento só funciona para dispositivos que oferecem suporte à implementação genérica do driver [RNDIS](https://docs.microsoft.com/windows-hardware/drivers/network/overview-of-remote-ndis--rndis-) do Microsoft e que não exigem nenhum driver ou instalação do aplicativo.  Esse dispositivo, quando conectado, será exibido automaticamente como uma nova conexão Ethernet na interface de usuário das configurações de rede do HoloLens 2. Consulte o fabricante do seu dispositivo para obter mais detalhes sobre o suporte ao driver genérico RNDIS do Microsoft.
-
-### Hubs USB-C
+### <a name="usb-c-hubs"></a>Hubs USB-C
 
 Alguns usuários podem precisar conectar vários dispositivos ao mesmo tempo. Para usuários que desejam uma prévia do recurso Insider e [usar um microfone USB-C](hololens-insider.md#usb-c-external-microphone-support) junto com outro dispositivo conectado, os hubs USB-C podem atender às necessidades do cliente. A Microsoft não testou esses dispositivos, nem podemos recomendar nenhuma marca específica.
 
@@ -100,7 +84,7 @@ Alguns usuários podem precisar conectar vários dispositivos ao mesmo tempo. Pa
 - Os dispositivos conectados não devem exigir a instalação de um driver.
 - O consumo total de energia de todos os dispositivos conectados deve ser inferior a 4,5 Watts.
 
-## Conectar a Miracast
+## <a name="connect-to-miracast"></a>Conectar a Miracast
 
 Para usar o Miracast, siga estas etapas:
 

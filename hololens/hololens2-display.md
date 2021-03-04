@@ -12,18 +12,18 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0001ff627b150a9ba79e76f8d995231186c46917
-ms.sourcegitcommit: 108b818130e2627bf08107f4e47ae159dd6ab1d2
+ms.openlocfilehash: 6cb646ec1104952b5ecfe42391c24465fd074771
+ms.sourcegitcommit: fbc8ddb17e31fea8667ece43a511592b86ac3947
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "11163009"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385597"
 ---
-# Visor do HoloLens 2
+# <a name="hololens-2-display"></a>Visor do HoloLens 2
 
 O visor do HoloLens 2 é uma combinação de guias de ondas e de projetores de luz. Os usuários olham através do guia de ondas, as lentes dentro do visor, ao colocar o headset. Os projetores de luz estão dentro do gabinete acima das sobrancelhas. O HoloLens 2 usa luz de laser para iluminar o visor.
 
-## Solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 Para o HoloLens 2, siga as etapas abaixo para garantir a melhor qualidade visual de hologramas apresentados em visores:
 
@@ -32,15 +32,15 @@ Para o HoloLens 2, siga as etapas abaixo para garantir a melhor qualidade visual
 * **Desloque o visor para baixo.** Tente mover o suporte da testa para baixo, o que fará com que o visor fique mais perto do seu nariz.
 * **Execute a calibragem dos olhos.** O visor usa a sua IPD (distância interpupilar) e o olhar para otimizar as imagens no visor. Se você não executar a calibragem dos olhos, a qualidade da imagem poderá ficar pior. Para executar a calibragem dos olhos, vá para **Configurações** > **Sistema** > **Calibragem** > **Executar calibragem dos olhos**.
 
-## Perguntas frequentes
+## <a name="faq"></a>Perguntas frequentes
 
-### O que são os padrões que costumam piscar nos cantos inferiores do visor?
+### <a name="what-are-the-patterns-that-occasionally-flash-in-the-bottom-corners-of-the-display"></a>O que são os padrões que costumam piscar nos cantos inferiores do visor?
 
 Às vezes, seu HoloLens 2 exibirá padrões diferentes nos cantos inferiores esquerdo e direito do visor. Os exemplos são mostrados abaixo (GIFs animados). Esse padrão faz parte da operação normal do dispositivo HoloLens 2 para calibrar o visor para uma experiência ideal.
 
 ![Padrão bifásico](./images/DAT-Biphase-Fiducial.gif) ![Padrão geográfico](./images/DAT-GEO-Fiducial.gif)
 
-### Por que não consigo tirar uma fotografia precisa do meu visor do HoloLens 2?
+### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>Por que não consigo tirar uma fotografia precisa do meu visor do HoloLens 2?
 
 O visor do HoloLens 2 foi projetado para ser visto pelo olho humano. O dispositivo tem um sistema de correção de cores ativo que se adapta aos olhos do usuário. Em comparação com o olho humano, as câmeras veem os ambientes de maneira diferente e, a seguir, estão alguns fatores que podem afetar qualquer inconsistência entre o que uma câmera captura e o que o usuário vê.
 
@@ -55,27 +55,27 @@ O visor do HoloLens 2 foi projetado para ser visto pelo olho humano. O dispositi
 
 Dito isso, ainda é possível para câmeras industriais especializadas capturarem imagens representativas do visor do HoloLens 2. Infelizmente, as câmeras de smartphones, as comuns e as profissionais não capturam imagens que correspondam ao que o usuário vê no HoloLens 2.
 
-### O que a calibragem dos olhos faz para exibir a qualidade da imagem?
+### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>O que a calibragem dos olhos faz para exibir a qualidade da imagem?
 
 O visor do HoloLens 2 corrige ativamente as cores das imagens com base na posição dos olhos do usuário. A [calibragem dos olhos](hololens-calibration.md) fornece duas entradas importantes: (1) a IPD (distância interpupilar) do usuário e (2) a direção que cada olho está olhando. Sem a calibração dos olhos, o sistema usa como padrão uma posição nominal dos olhos sem movimento ocular. A diferença entre correção de cor ativa e nenhuma correção, dependerá da própria fisiologia do usuário. Por exemplo, os usuários que têm a mesma IPD do padrão do sistema verão menos melhorias na correção de cores. Enquanto os usuários que têm uma IPD muito mais estreita ou mais ampla do que o padrão do sistema, verão mais alterações na imagem do visor.
 
 Observe, um novo recurso no [Windows Holographic versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) começará [ detectando automaticamente a posição do olho](hololens-calibration.md#auto-eye-position-support). 
 
-### Quais são as diferenças de exibição entre o HoloLens (1ª geração) e o HoloLens 2?
+### <a name="what-are-the-display-differences-between-hololens-1st-gen-and-hololens-2"></a>Quais são as diferenças de exibição entre o HoloLens (1ª geração) e o HoloLens 2?
 
 Entre as principais solicitações que os clientes fizeram à Microsoft após experimentarem o HoloLens 1 foram (1) aumentar o campo de visão e (2) aumentar o brilho. Os desenvolvimentos tecnológicos permitiram que a Microsoft produzisse guias de ondas que dobrassem a área do campo de visão e produzisse projetores de luz com um visor até três vezes mais brilhante. O hardware define a linha de base para um trio de compensações para a qualidade da imagem do visor: (1) campo de visão, (2) brilho e (3) uniformidade das cores. O avanço contínuo da tecnologia permite aperfeiçoamentos em todas as áreas sem sacrificar outra área. Provisoriamente, a tecnologia existente define os limites disponíveis para essas compensações.
 
-### Quais aperfeiçoamentos estão chegando para melhorar a qualidade de imagem do HoloLens 2?
+### <a name="what-improvements-are-coming-that-will-improve-hololens-2-image-quality"></a>Quais aperfeiçoamentos estão chegando para melhorar a qualidade de imagem do HoloLens 2?
 
 Embora haja várias investigações em andamento para melhorar a qualidade de imagem, espera-se que as seguintes áreas cheguem nas próximas atualizações:
 
 * **Posição dos olhos automática.** Esse recurso permitirá que os procedimentos de calibragem dos olhos ocorra em segundo plano. Os usuários não precisarão mais executar a calibragem dos olhos para que as correções ativas de cores funcionem. Em vez disso, ele só funcionará.
 * **Aperfeiçoamentos na calibragem de Cores.** Esta atualização foca nos valores das cores mais escuras (por exemplo, cinza escuro). No momento, as cores mais escuras adquirem um tom avermelhado. Esse problema também acontece quando todo o vídeo fica esmaecido, o visor inteiro fica com cores avermelhadas. Esse problema é resultado de atividade excessiva no canal da cor vermelha para essas cores mais escuras. Caracterizamos as curvas de iluminação a laser nessas cores mais escuras e estamos trabalhando para oferecer um procedimento de calibragem ao usuário. O resultado será mais precisão das cores em todo o espectro de brilho. Isso não alterará a aparência dos fundos brancos com brilho total. Continuamos aconselhando o uso de padrões de design no modo escuro nos aplicativos.
-* **Modo de Leitura.** É possível para os desenvolvedores de aplicativos trocar o campo de visão do visor para obter uma resolução angular maior. Os desenvolvedores de aplicativos podem substituir a matriz de projeção para que o conteúdo seja renderizado na resolução de desenho do visor. Esse recurso resulta em uma redução de 30% no campo de visão e em um aumento correspondente na resolução angular. O trabalho está em andamento para apresentar esse recurso ao Kit de Ferramentas de Realidade Misturada. Quando estiver disponível, o modo de leitura funcionará em qualquer sistema operacional do HoloLens 2; isso não dependerá de uma atualização do sistema operacional.
+* **Modo de Leitura.** É possível para os desenvolvedores de aplicativos trocar o campo de visão do visor para obter uma resolução angular maior. Os desenvolvedores de aplicativos podem substituir a matriz de projeção para que o conteúdo seja renderizado na resolução de desenho do visor. Esse recurso resulta em uma redução de 30% no campo de visão e em um aumento correspondente na resolução angular. O trabalho está em andamento para introduzir esse recurso ao [Kit de ferramentas da realidade mista](https://github.com/Microsoft/MixedRealityToolkit-Unity). Quando estiver disponível, o modo de leitura funcionará em qualquer sistema operacional do HoloLens 2; isso não dependerá de uma atualização do SO.
 
 As atualizações do sistema operacional são entregues automaticamente. Você também pode testar versões anteriores de aperfeiçoamentos de software por meio do programa Insider Preview.
 
-### Quais diretrizes estão disponíveis para os desenvolvedores aplicarem os princípios de design do modo escuro?
+### <a name="what-guidance-is-available-for-developers-to-apply-dark-mode-design-principles"></a>Quais diretrizes estão disponíveis para os desenvolvedores aplicarem os princípios de design do modo escuro?
 
 Os usuários terão uma melhor experiência se evitarem planos de fundo brancos. O modo escuro é um princípio de design usado por aplicativos para usar planos de fundo pretos ou de cores escuras. As configurações do sistema têm por padrão o modo escuro e podem ser ajustadas acessando **Configurações** > **Sistema** > **Cores**.
 
@@ -86,6 +86,6 @@ Os desenvolvedores são aconselhados a seguir as diretrizes de design do modo es
 
 Quando um holograma exigir um plano de fundo branco, mantenha o tamanho do holograma menor do que o campo de visão total do visor. Esse tamanho permite aos usuários colocar o holograma no centro do visor.
 
-### Como limpar o visor do HoloLens 2?
+### <a name="how-do-you-clean-a-hololens-2-display"></a>Como limpar o visor do HoloLens 2?
 
 Use um tecido de microfibra para limpar suavemente o visor. Para higienizar o visor, umedeça levemente um pano com álcool isopropílico 70% e, em seguida, limpe o visor. Leia as diretrizes completas em [Perguntas frequentes sobre limpeza do HoloLens 2](hololens2-maintenance.md).
