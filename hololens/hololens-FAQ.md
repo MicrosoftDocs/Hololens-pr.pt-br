@@ -18,20 +18,20 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 51058ddcba10a285b91d7fffedccf19d052d4e04
-ms.sourcegitcommit: f3e35e278f7841176982b411881f2791e9600e6a
+ms.openlocfilehash: 918ffe42ae23c6b7e0e91c6d365c80eee487660b
+ms.sourcegitcommit: 07ffe1bf2f45dcb2ba9d7fbe54b4773a0fb9d525
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "11388767"
+ms.locfileid: "11393855"
 ---
 # <a name="frequently-asked-questions-about-hololens-devices-and-holograms"></a>Perguntas frequentes sobre dispositivos e hologramas HoloLens
 
 Este artigo responde a algumas perguntas que você pode ter sobre como usar o HoloLens, incluindo como criar hologramas, trabalhar com espaços e muito mais.
 
-Sempre que houver problemas, verifique se o HoloLens está [carregado](https://support.microsoft.com/help/12627/hololens-charge-your-hololens). Tente [reiniciá-lo](hololens-restart-recover.md) para ver se isso corrige algo. E use o aplicativo Feedback para nos enviar informações sobre o problema. Você encontrará o aplicativo Feedback no [ menu**Iniciar**](holographic-home.md).
+Sempre que você tiver problemas, certifique-se de que o HoloLens [está carregado.](https://support.microsoft.com/help/12627/hololens-charge-your-hololens) Tente [reiniciá-lo](hololens-restart-recover.md) para ver se isso corrige algo. E use o aplicativo Feedback para nos enviar informações sobre o problema. Você encontrará o aplicativo Feedback no [ menu**Iniciar**](holographic-home.md).
 
-Para obter dicas sobre como usar o HoloLens, confira [Perguntas frequentes sobre ajuste e conforto do HoloLens (1ª geração)](hololens1-fit-comfort-faq.md).
+Para saber mais sobre como usar o HoloLens, consulte [HoloLens (1ª geração) fit e comfort com perguntas frequentes.](hololens1-fit-comfort-faq.md)
 
 Este artigo aborda as questões e problemas a seguir:
 <a id="list"></a>
@@ -210,7 +210,7 @@ Você pode emparelhar outros dispositivos Bluetooth HID e GATT com seu HoloLens.
 
 ## <a name="im-having-problems-using-the-hololens-clicker"></a>Estou com problemas ao usar o controle do HoloLens
 
-Use o [controle](hololens1-clicker.md) para selecionar, rolar, mover e redimensionar os hologramas. Aplicativos individuais podem suportar gestos adicionais do controle.
+Use o [controle](hololens1-clicker.md) para selecionar, rolar, mover e redimensionar os hologramas. Aplicativos individuais podem dar suporte a gestos de clique adicionais.
 
 Se estiver com problemas para usar o controle, verifique se ele está carregado e emparelhado com o seu HoloLens. Se a bateria estiver fraca, a luz indicadora piscará em âmbar. Para verificar se o controle está emparelhado, vá para **Configurações** > **Dispositivos** e veja se ele aparece lá. Para mais informações, confira [Parear o cotrole](hololens1-clicker.md).
 

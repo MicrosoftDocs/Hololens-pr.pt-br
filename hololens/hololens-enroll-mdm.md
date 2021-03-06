@@ -14,47 +14,47 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b9473f4e80f6438ef4c438711ac0de342c5327e1
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: 5613c69bda8bbf70722a050ac5ce4ebeab95d332
+ms.sourcegitcommit: 771e53feefbcc6bce18577515ad7d3f6a7f33840
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283182"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "11399379"
 ---
-# Registrar HoloLens em MDM
+# <a name="enroll-hololens-in-mdm"></a>Registrar HoloLens em MDM
 
-Você pode gerenciar vários dispositivos Microsoft HoloLens simultaneamente usando soluções como [o Microsoft Intune.](https://docs.microsoft.com/intune/windows-holographic-for-business) Você poderá gerenciar as configurações, selecionar aplicativos para instalar e definir as configurações de segurança adaptadas às necessidades da organização. Consulte [Gerenciar dispositivos que executam o Windows Holographic com o Microsoft Intune](https://docs.microsoft.com/intune/windows-holographic-for-business), os [provedores de serviço de configuração (CSPs) que têm suporte no Windows Holographic](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens) e as [políticas compatíveis com o Windows Holographic for Business](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies).
+Você pode gerenciar vários dispositivos Do Microsoft HoloLens simultaneamente usando soluções como [o Microsoft Intune](https://docs.microsoft.com/intune/windows-holographic-for-business). Você poderá gerenciar as configurações, selecionar aplicativos para instalar e definir as configurações de segurança adaptadas às necessidades da organização. Consulte [Gerenciar dispositivos que executam o Windows Holographic com o Microsoft Intune](https://docs.microsoft.com/intune/windows-holographic-for-business), os [provedores de serviço de configuração (CSPs) que têm suporte no Windows Holographic](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens) e as [políticas compatíveis com o Windows Holographic for Business](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies).
 
 > [!NOTE]
 > Gerenciamento de dispositivo móvel (MDM), incluindo a VPN, Bitlocker e recursos do modo de quiosque, só estão disponíveis quando você [faz upgrade para o Windows Holographic for Business](hololens1-upgrade-enterprise.md).
 
-## Requisitos
+## <a name="requirements"></a>Requisitos
 
- Sua organização precisará ter o Gerenciamento de Dispositivo Móvel (MDM) definido para gerenciar dispositivos HoloLens. O provedor MDM pode ser o Microsoft Intune ou um provedor de terceiros que use APIs MDM Microsoft.
+ Sua organização precisará ter o MDM (Gerenciamento de Dispositivo Móvel) definido para gerenciar dispositivos HoloLens. O provedor MDM pode ser o Microsoft Intune ou um provedor de terceiros que use APIs MDM Microsoft.
  
-## Diferentes maneiras de se inscrever
+## <a name="different-ways-to-enroll"></a>Maneiras diferentes de se inscrever
 
-Dependendo do tipo de identidade escolhido durante a OOBE ou pós-login, há diferentes métodos de registro. Para saber mais sobre cada tipo de Identidade no HoloLens, visite [esta página.](hololens-identity.md)
+Dependendo do tipo de identidade escolhida durante o OOBE ou pós-login, há diferentes métodos de registro. Para saber mais sobre cada tipo de Identidade no HoloLens, visite [esta página](hololens-identity.md).
 
-- Se a Identidade for o Azure AD, durante OOBE ou **Configurações**do Aplicativo Acesso ao Trabalho  ->  **ou botão**  ->  **Conectar Escola.**
-    - Para o Azure AD, o registro automático no MDM só ocorrerá se o Azure AD tiver sido configurado com URLs de registro.
-- Se a Identidade for o Azure AD e o dispositivo tiver sido previamente registrado no servidor MDM do Intune com um perfil de configuração específico atribuído a ele, o Azure AD-Join e o registro ocorrerão automaticamente durante o OOBE.
-    - Também chamado [de fluxo do Autopilot](hololens2-autopilot.md) Disponível [em builds 19041.1103+.](hololens-release-notes.md#windows-holographic-version-2004)
-- Se Identity for MSA, use **o botão Configurações do Acesso**ao Aplicativo trabalho ou ao  ->  **school**  ->  **connect.**
-    - Também chamado de fluxo Adicionar Conta De Trabalho (AWA).
-- Se Identity for Usuário **** Local, use Configurações de Acesso ao Aplicativo Trabalho ou  ->  **Registro**escolar somente no link de gerenciamento  ->  **de** dispositivo.
-    - Também chamado de fluxo de registro puro do MDM.
+- Se Identity for o Azure AD, durante o OOBE ou **Configurações do App**  ->  **Access Work ou o botão Conexão**  ->  **de** Escola.
+    - Para o Azure AD, o registro automático do MDM só ocorrerá se o Azure AD tiver sido configurado com URLs de registro.
+- Se Identity for o Azure AD e o dispositivo tiver sido pré-registrado no servidor MDM do Intune com um perfil de configuração específico atribuído a ele, o Azure AD-Join e o registro ocorrerá automaticamente durante o OOBE.
+    - Também chamado [de fluxo de piloto automático](hololens2-autopilot.md) Disponível em [19041.1103+ builds](hololens-release-notes.md#windows-holographic-version-2004).
+- Se Identity for MSA, em seguida, use **Configurações App**  ->  **Access Work ou Botão Conectar**  ->  **Escola.**
+    - Também chamado de fluxo Adicionar Conta de Trabalho (AWA).
+- Se Identity for Usuário Local, use **Configurações Trabalho**do Acesso ao Aplicativo ou Registro escolar  ->  ****  ->  somente no link**de gerenciamento de** dispositivos.
+    - Também chamado de fluxo de registro MDM puro.
 
-Depois que o dispositivo for inscrito no servidor MDM, o aplicativo Configurações agora refletirá que o dispositivo está inscrito no gerenciamento de dispositivos.
+Depois que o dispositivo estiver inscrito no servidor MDM, o aplicativo Configurações agora refletirá que o dispositivo está inscrito no gerenciamento de dispositivos.
 
-## Registro automático no MDM
+## <a name="auto-enrollment-in-mdm"></a>Registro automático no MDM
 
-Se sua organização usa o Azure Active Directory (Azure AD) e uma solução MDM que aceita um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT pode configurar o Azure AD para permitir automaticamente o registro no MDM depois que o usuário entrar com a conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Se sua organização usa o Azure Active Directory (Azure AD) e uma solução MDM que aceita um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT pode configurar o Azure AD para permitir automaticamente o registro do MDM depois que o usuário entrar com sua conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
 Quando o registro automático está habilitado, nenhum registro manual adicional é necessário. Quando o usuário entra usando uma conta do Azure AD, o dispositivo é registrado no MDM depois de concluir a experiência de primeira execução.
 
-Quando um dispositivo é ingressado no Azure AD, pode afetar quem considerou o [proprietário do dispositivo.](security-adminless-os.md#device-owner)
+Quando um dispositivo é Azure AD Ingressado, ele pode afetar quem considera o proprietário [do dispositivo](security-adminless-os.md#device-owner).
 
-## Desemrollar o HoloLens do Intune
+## <a name="unenroll-hololens-from-intune"></a>Unenroll HoloLens from Intune
 
-To learn more about unenrolling a device visit [this page](https://docs.microsoft.com/windows/client-management/mdm/disconnecting-from-mdm-unenrollment). 
+Embora o HoloLens 2 seja um dispositivo Windows 10, ele não pode ser simplesmente desemrollado do Intune. Se desejar desatar o HoloLens do Azure AD ou reapresentá-lo a um locatário diferente do Azure AD, você deve [redefinir/reajustar](https://docs.microsoft.com/hololens/hololens-recovery#reset-the-device) o dispositivo.
