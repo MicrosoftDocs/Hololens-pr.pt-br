@@ -14,12 +14,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 5613c69bda8bbf70722a050ac5ce4ebeab95d332
-ms.sourcegitcommit: 771e53feefbcc6bce18577515ad7d3f6a7f33840
+ms.openlocfilehash: 4042cce40bea2c3d52d6ffc5d2908f6fde7cf222
+ms.sourcegitcommit: 1f3ad5b099e72491f436d851738d2b6f3d4dff31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "11399379"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400671"
 ---
 # <a name="enroll-hololens-in-mdm"></a>Registrar HoloLens em MDM
 
@@ -34,12 +34,15 @@ Você pode gerenciar vários dispositivos Do Microsoft HoloLens simultaneamente 
  
 ## <a name="different-ways-to-enroll"></a>Maneiras diferentes de se inscrever
 
-Dependendo do tipo de identidade escolhida durante o OOBE ou pós-login, há diferentes métodos de registro. Para saber mais sobre cada tipo de Identidade no HoloLens, visite [esta página](hololens-identity.md).
+Dependendo do tipo de [identidade](hololens-identity.md) escolhida durante o OOBE ou pós-login, há diferentes métodos de registro.
 
 - Se Identity for o Azure AD, durante o OOBE ou **Configurações do App**  ->  **Access Work ou o botão Conexão**  ->  **de** Escola.
-    - Para o Azure AD, o registro automático do MDM só ocorrerá se o Azure AD tiver sido configurado com URLs de registro.
-- Se Identity for o Azure AD e o dispositivo tiver sido pré-registrado no servidor MDM do Intune com um perfil de configuração específico atribuído a ele, o Azure AD-Join e o registro ocorrerá automaticamente durante o OOBE.
+    - Para o Azure AD, o registro [automático do MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) só ocorrerá se o Azure AD tiver sido configurado com URLs de registro. 
+     
+- Se Identity for o Azure AD e o dispositivo tiver sido registrado anteriormente no servidor MDM do Intune com um perfil de configuração específico atribuído a ele, o Azure AD-Join e o registro [automático do MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) ocorrerão durante o OOBE.
     - Também chamado [de fluxo de piloto automático](hololens2-autopilot.md) Disponível em [19041.1103+ builds](hololens-release-notes.md#windows-holographic-version-2004).
+    
+
 - Se Identity for MSA, em seguida, use **Configurações App**  ->  **Access Work ou Botão Conectar**  ->  **Escola.**
     - Também chamado de fluxo Adicionar Conta de Trabalho (AWA).
 - Se Identity for Usuário Local, use **Configurações Trabalho**do Acesso ao Aplicativo ou Registro escolar  ->  ****  ->  somente no link**de gerenciamento de** dispositivos.
@@ -49,7 +52,7 @@ Depois que o dispositivo estiver inscrito no servidor MDM, o aplicativo Configur
 
 ## <a name="auto-enrollment-in-mdm"></a>Registro automático no MDM
 
-Se sua organização usa o Azure Active Directory (Azure AD) e uma solução MDM que aceita um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT pode configurar o Azure AD para permitir automaticamente o registro do MDM depois que o usuário entrar com sua conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Se a sua organização tem uma assinatura do [Azure Premium](https://azure.microsoft.com/overview/), está usando o Azure Active Directory (Azure AD) e uma solução MDM que aceita um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT pode configurar o Azure AD para permitir automaticamente o registro do MDM depois que o usuário entrar com sua conta do Azure AD. [Saiba como configurar o registro do Azure AD.](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
 Quando o registro automático está habilitado, nenhum registro manual adicional é necessário. Quando o usuário entra usando uma conta do Azure AD, o dispositivo é registrado no MDM depois de concluir a experiência de primeira execução.
 
