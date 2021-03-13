@@ -12,18 +12,18 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: feedb0093b8766de75079a61c286c99817ab18f9
-ms.sourcegitcommit: 1f3ad5b099e72491f436d851738d2b6f3d4dff31
+ms.openlocfilehash: e48e596f46aaad1b2fc79abd0fe60bd2f44bab6d
+ms.sourcegitcommit: fdae5b561d56d3d4e62da4db15f07bc10249398a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400691"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408411"
 ---
 # <a name="hololens-2-hardware"></a>Hardware do HoloLens 2
 
 ![Vista lateral do HoloLens 2](images/hololens2-breakdown.png)
 
-O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jornada de computação holográfica iniciada pelo HoloLens (1ª geração) para fornecer uma experiência mais confortável e envolvente com mais opções para colaboração na realidade misturada.
+O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jornada de computação holográfica iniciada pelo HoloLens (1ª geração) para fornecer uma experiência mais confortável e envolvente com mais opções para colaboração na realidade misturada. Uma conta de usuário é necessária para usar o HoloLens 2.
 
 ## <a name="hololens-components"></a>Componentes do HoloLens
 
@@ -165,9 +165,12 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 
 O Microsoft HoloLens 2 vem com uma [garantia](https://support.microsoft.com/topic/warranties-extended-service-plans-and-terms-conditions-for-your-device-eedf7a23-84a7-1a47-480b-0e10503eedf5) limitada padrão. 
 
-A compra está sujeita aos [Termos de Uso e Venda da Microsoft Store](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1). 
 
-Ao comprar o HoloLens 2, você concorda com o [contrato de licença de software](https://www.microsoft.com/Useterms/).
+A compra está sujeita aos [Termos de Uso e Venda da Microsoft Store](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1). Todas as vendas são finais. Nenhum reembolso.
+
+Ao comprar o HoloLens 2, você concorda com o contrato [de licença de software](https://www.microsoft.com/Useterms/).
+
+Não destinado para uso por crianças menores de 13 anos.
 
 ## <a name="package-dimensions"></a>Dimensões do Pacote
 
