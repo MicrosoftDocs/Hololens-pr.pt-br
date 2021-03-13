@@ -14,18 +14,18 @@ ms.custom:
 ms.topic: article
 ms.localizationpriority: high
 manager: jarrettr
-ms.openlocfilehash: 025ba8508eb930cdad6d502c381e5a07d9efc6e0
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: b5b9568bab5afebe4ac3e9d57645c18837c71cb6
+ms.sourcegitcommit: fdae5b561d56d3d4e62da4db15f07bc10249398a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11284082"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408421"
 ---
-# Reiniciar, redefinir ou recuperar o HoloLens 2
+# <a name="restart-reset-or-recover-hololens-2"></a>Reiniciar, redefinir ou recuperar o HoloLens 2
 
-## Carregar o dispositivo
+## <a name="charge-the-device"></a>Carregar o dispositivo
 
-Antes de começar qualquer procedimento de solução de problemas, certifique-se de que seu dispositivo tenha de 20 a 40% da capacidade da bateria, se possível. Use o carregador e os cabos USB tipo C que vêm com o dispositivo HoloLens 2. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A). Usando o carregador de parede fornecido, os dispositivos HoloLens 2 podem carregar a bateria completamente em menos de 65 minutos quando o dispositivo está em espera. Se esses acessórios não estiverem disponíveis, certifique-se de que o carregador que está disponível possa suportar pelo menos 15W de energia.
+Antes de começar qualquer procedimento de solução de problemas, certifique-se de que seu dispositivo tenha de 20% a 40% da capacidade da bateria, se possível. Use o [carregador e o cabo USB Type-C](https://www.microsoft.com/en-us/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5?rtc=1) que vêm com o dispositivo HoloLens 2. A fonte de alimentação e o cabo USB-C-to-C que acompanham o dispositivo são a melhor maneira de carregar seu HoloLens 2. O carregador fornece 18W de potência (9V a 2A). Usando o carregador de parede fornecido, os dispositivos HoloLens 2 podem carregar a bateria completamente em menos de 65 minutos quando o dispositivo está em espera. Se esses acessórios não estiverem disponíveis, certifique-se de que o carregador que está disponível possa suportar pelo menos 15W de energia.
 
 > [!NOTE]
 > Se possível, evite usar um computador para carregar o dispositivo por USB, pois é lento.
@@ -44,11 +44,11 @@ Se o dispositivo for reinicializado corretamente e em execução, há três mane
 
 Se o dispositivo não conseguir reiniciar até o menu Iniciar, observe a aparência do LED e a enumeração do dispositivo no PC host. Em seguida, siga o [guia de solução de problemas](https://docs.microsoft.com/hololens/hololens-troubleshooting). Caso o estado do dispositivo não se enquadrar em nenhum dos estados listados no guia de solução de problemas, execute o [procedimento de reinicialização forçada](hololens-recovery.md#hard-reset-procedure) com o dispositivo conectado à fonte de energia, não ao computador host. Aguarde pelo menos uma hora para o dispositivo ser carregado.
 
-## Redefina o dispositivo
+## <a name="reset-the-device"></a>Redefina o dispositivo
 
 Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositivo sem usar o software UI.
 
-### Procedimento padrão
+### <a name="standard-procedure"></a>Procedimento padrão
 
 1. Desconecte o cabo tipo-C para desconectar o dispositivo da fonte de alimentação ou do computador host.
 
@@ -60,7 +60,7 @@ Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositi
 
    ![Gerenciador de devive do HoloLens 2 MicrosoftHoloLensRecovery](images/MicrosoftHoloLens_DeviceManager.png)
 
-### Procedimento de redefinição de disco
+### <a name="hard-reset-procedure"></a>Procedimento de redefinição de disco
 
 Se o procedimento padrão de redefinição não funcionar, use o procedimento de redefinição forçada:
 
@@ -73,7 +73,7 @@ Se o procedimento padrão de redefinição não funcionar, use o procedimento de
 
    ![HoloLens 2 MicrosoftHoloLensRecovery device maanger 2](images/MicrosoftHoloLens_DeviceManager.png)
 
-## Limpar a flash do dispositivo
+## <a name="clean-reflash-the-device"></a>Limpar a flash do dispositivo
 
 Em situações extraordinárias, talvez seja necessário "limpar a flash" no HoloLens 2. Observe que não se espera que a limpeza-refluxo afete as seguintes questões:
 - [Exibir a uniformidade de cor](hololens2-display.md)
@@ -93,7 +93,7 @@ Antes de iniciar o procedimento de limpeza da flash, certifique-se de que o apli
 
 ![Captura de tela de reflash limpa do HoloLens 2](images/ARC1.png)
 
-### Procedimento normal
+### <a name="normal-procedure"></a>Procedimento normal
 
 1. Enquanto o dispositivo do HoloLens estiver em execução, conecte-o ao seu PC com Windows 10, em que você já havia aberto o aplicativo Advanced Recovery Companion.
  
@@ -103,7 +103,7 @@ Antes de iniciar o procedimento de limpeza da flash, certifique-se de que o apli
 
 3. Selecione o dispositivo do HoloLens 2 na interface do usuário do aplicativo Advanced Recovery Companion e siga as instruções para concluir a reflash.
 
-### Procedimento manual
+### <a name="manual-procedure"></a>Procedimento manual
 
 Se o HoloLens 2 não iniciar corretamente, talvez seja necessário colocar o dispositivo no Modo de recuperação:
 
@@ -123,7 +123,7 @@ Se o HoloLens 2 não iniciar corretamente, talvez seja necessário colocar o dis
 
 6. Selecione o dispositivo do HoloLens 2 na interface do usuário do aplicativo Advanced Recovery Companion e siga as instruções para concluir a reflash.
 
-## Baixando o ARC sem usar a app store
+## <a name="download-arc-without-using-the-app-store"></a>Baixando o ARC sem usar a app store
 
 Se um ambiente de TI impede o uso do aplicativo da Windows Store ou limita o acesso à loja, os administradores de TI podem disponibilizá-lo por meio de outros caminhos de implantação "offline".
 
@@ -135,8 +135,8 @@ Siga estas etapas para habilitar o caminho da implantação:
 1. Acesse a [Microsoft Store para Empresas](https://businessstore.microsoft.com) e entre usando uma identidade do Azure Active Directory.
 
 1. Vá para **Gerenciar – Configurações**. Ative **Mostrar aplicativos offline** em **Experiência de compra**.
-1. Vá para **comprar meu grupo**e procure por [ * *_Complemento Avançado de Recuperação_*_](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
-1. Altere o _ *Tipo de Licença** para **_offline_*_ e selecione _ *Manage**.
+1. Vá para **comprar para o meu grupo**e procure por [**_Complemento de Recuperação Avançada_**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
+1. Altere **o Tipo de Licença** para ** _offline_*_, e selecione _* Gerenciar**.
 1. Em **Baixe o pacote para uso offline**, selecione o segundo botão azul **Baixar**. Verifique se a extensão de arquivo é *.appxbundle*.
 
     - Nesse estágio, se o computador Desktop tiver acesso à Internet, clique duas vezes no pacote para instalar o aplicativo.
