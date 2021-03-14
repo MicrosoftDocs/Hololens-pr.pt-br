@@ -13,12 +13,12 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: fe365248332f8e78b15ab362f169b84e48dfe594
-ms.sourcegitcommit: 07ffe1bf2f45dcb2ba9d7fbe54b4773a0fb9d525
+ms.openlocfilehash: a577eace62040e2d48de5d3e4cc99ef108bd006c
+ms.sourcegitcommit: 04b7e789fe69615a60571b769e13a01a9d7aee70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393835"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "11407616"
 ---
 # <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Registro corporativo de dispositivos do HoloLens no endereço MAC, ambiente Wi-Fi restrito
 
@@ -36,7 +36,9 @@ Neste cenário, dois requisitos principais podem introduzir atrasos ou exigir in
 Os principais desafios com os requisitos acima são:
 
 1. No momento, o Endereço MAC só pode ser identificado no aplicativo Configurações no dispositivo ou no Intune após um registro bem-sucedido.
+
 2. Sem o endereço MAC, o dispositivo não pode se conectar à rede Wi-Fi para iniciar o registro.
+
 3. As soluções alternativas manuais para esses desafios exigem que um técnico interaja com o dispositivo.
 
 ## <a name="solutions"></a>Soluções
@@ -45,11 +47,11 @@ Há muitas maneiras de melhorar essa situação, dependendo da infraestrutura di
 
 | Solução | Benefícios | Requisitos |
 | --- | --- | --- |
-| Pacote de provisionamento com o adaptador Ethernet | Melhora a experiência do OOBE e permite uma experiência técnica mais rápida. | O adaptador e o técnico compatível com o Hub USB-C + Ethernet do HoloLens ainda precisarão interagir com o dispositivo para captura MAC e finalização OOBE |
-| Piloto automático com registro do Intune na Ethernet | Esta é uma conexão de etapa única e o registro do dispositivo no ambiente do cliente. A captura MAC pode ser concluída sem a necessidade de interagir com o dispositivo | Intune habilitado para o locatário AAD do cliente e um adaptador Ethernet USB-C compatível com o HoloLens |
-| Relatório automatizado de endereços MAC | Quando os dispositivos são registrados com o locatário do Intune, um script pode relatar o endereço MAC ao técnico. | Commandlets do Powershell do Intune |
+| Pacote de provisionamento com o adaptador Ethernet | Melhora a experiência do OOBE e permite uma experiência técnica mais rápida. | O Hub USB-C compatível com HoloLens + o adaptador técnico Ethernet ainda precisarão interagir com o dispositivo para a captura MAC e finalização do OOBE |
+| Piloto automático com Registro do Intune na Ethernet | Esta é uma conexão de etapa única e o registro do dispositivo no ambiente do cliente. A captura MAC pode ser concluída sem a necessidade de interagir com o dispositivo | Intune habilitado para o locatário AAD do cliente e um adaptador Ethernet USB-C compatível com o HoloLens |
+| Relatório automatizado de endereços MAC | Quando os dispositivos são registrados com o locatário do Intune, um script pode relatar o endereço MAC ao técnico. | Cmdlets do PowerShell do Intune |
 
-## <a name="provisioning-package-with-ethernet-adaptor"></a>Pacote de provisionamento com o adaptador Ethernet
+## <a name="provisioning-package-with-ethernet-adaptor"></a>Pacote de Provisionamento com o Adaptador Ethernet
 
 > [!NOTE] 
 > Se a rede com fio também estiver sujeita a restrições MAC, em seguida, o endereço MAC do adaptador USB-C Hub + Ethernet também precisará ser pré-aprovado. O cuidado deve ser tomado com esse adaptador, pois ele permitirá o acesso à rede de outros dispositivos.
@@ -57,10 +59,10 @@ Há muitas maneiras de melhorar essa situação, dependendo da infraestrutura di
 ### <a name="requirements"></a>Requisitos
 
 - Porta de rede com fio com acesso à rede do cliente
-- Hub USB-C Compatível do HoloLens com adaptador Ethernet – Qualquer adaptador que n&#39ão exige drivers ou instalação de aplicativos adicionais deve ser adequado.
+- Hub USB-C compatível do HoloLens com adaptador Ethernet – Qualquer adaptador que não exige drivers ou instalação de aplicativos adicionais deve ser adequado.
 - Pacote de provisionamento contendo:
   - Contendo certificados e informações de rede sem fio
-  - Opcionalmente, contendo informações de inscrição para a Organização&#39;s do Microsoft Azure Active Directory
+  - Opcionalmente, contendo informações de registro do Azure AD da organização
   - Contendo outras configurações de provisionamento necessárias
 
 ### <a name="process"></a>Processo
@@ -87,7 +89,7 @@ Se o dispositivo tiver um build do Sistema Operacional antes da [Atualização d
 
 ### <a name="benefits"></a>Benefícios
 
-Isso permitirá um &quot;toque único&quot; do dispositivo para aplicar o pacote de provisionamento correto e coletar o endereço MAC do dispositivo. [Os pacotes de provisionamento podem ser criados seguindo as orientações aqui.](https://docs.microsoft.com/hololens/hololens-provisioning)
+Isso permitirá um “Toque único” do dispositivo para aplicar o pacote de provisionamento correto e coletar o endereço MAC do dispositivo. [Os pacotes de provisionamento podem ser criados seguindo as orientações aqui.](https://docs.microsoft.com/hololens/hololens-provisioning)
 
 ## <a name="autopilot-with-intune-enrollment"></a>AutoPilot com Inscrição do Intune
 
@@ -104,39 +106,44 @@ Isso permitirá um &quot;toque único&quot; do dispositivo para aplicar o pacote
 
 Isso permitirá que um cliente com requisitos avançados de rede registre os dispositivos em uma abordagem adaptável e dimensionável
 
-Os pré-requisitos adicionais serão necessários, da seguinte maneira:
-1. [Habilitar o locatário da visualização AutoPilot](https://docs.microsoft.com/hololens/hololens2-autopilot)
-1. Crie as políticas do HoloLens para substituir o pacote de provisionamento no Intune.
+Os pré-requisitos adicionais serão necessários da seguinte maneira:
+1. [Habilitar o Locatário da visualização AutoPilot](https://docs.microsoft.com/hololens/hololens2-autopilot).
+1. Crie as políticas do HoloLens para substituir o Pacote de Provisionamento no Intune.
 1. Criar as políticas do Intune do HoloLens.
 1. Atribua os dispositivos ao grupo correto.
 
 ### <a name="process"></a>Processo
 
 1. Conecte o cabo ethernet ao adaptador e conecte o adaptador à porta USB-C no dispositivo HoloLens 2.
-2. Ligar o HoloLens.
-3. O dispositivo deve se conectar automaticamente à Internet durante o OOBE por meio do adaptador Ethernet. Ele deve detectar a configuração do Autopilot e registrar-se automaticamente no Azure AD e no Intune
-4. O dispositivo aplicará os Certificados Wi-Fi necessários e outras configurações conforme necessário por meio do Intune
-5. Quando concluído, o técnico pode carregar o Portal do Intune (Endpoint Manager) e fazer uma pesquisa na página de propriedades do dispositivo em **Início-> Dispositivos-> DeviceName -> Hardware**
-6. O endereço MAC WiFi ficará visível no Portal do Intune
 
-![Endereço MAC por meio do Intune](images/mac-address-intune.jpg)
+2. Ligar o HoloLens.
+
+3. O dispositivo deve se conectar automaticamente à Internet durante o OOBE por meio do adaptador Ethernet. Ele deve detectar a configuração do Autopilot e registrar-se automaticamente no Azure AD e no Intune.
+
+4. O Dispositivo aplicará os Certificados Wi-Fi necessários e outras configurações conforme necessário por meio do Intune.
+
+5. Quando concluído, o técnico pode carregar o Portal do Intune (Endpoint Manager) e fazer uma pesquisa na página de propriedades do dispositivo em **Início-> Dispositivos-> DeviceName -> Hardware**.
+
+6. O endereço MAC do Wi-Fi estará visível no Portal do Intune.
+
+   ![Endereço MAC por meio do Intune](images/mac-address-intune.jpg)
 
 7. O técnico adicionará esse endereço MAC como um dispositivo permitido.
 
 ### <a name="benefits"></a>Benefícios
 
-Isso permitirá que uma experiência de implantação &quot;Atalhada&quot; para o Técnico, com a capacidade de um dispositivo ser acessado no Microsoft Azure Active Directory e no Intune sem o técnico ter que usar o dispositivo ou interagir manualmente com o ambiente do HoloLens.
+Isso permitirá uma experiência de implantação "Preventiva" para o técnico, com o dispositivo podendo ir da caixa até o registro no Azure AD e no Intune sem que o técnico tenha que usar o dispositivo ou interagir manualmente com o ambiente do HoloLens.
 
 ## <a name="reporting-of-mac-addresses-to-the-technician"></a>Relatórios de endereços MAC para o técnico
 
 ### <a name="requirements"></a>Requisitos
 
-- Autorização do &quot; PowerShell do Graph do Intune &quot; em relação ao Locatário do cliente
-- Instalação do Windows PowerShell do Intune Graph na máquina de técnicos.
+- Autorização do “PowerShell do Intune Graph” em relação ao Locatário do cliente
+- Instalação do PowerShell do Intune Graph na máquina de técnicos.
 - [https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0)
-- Acesso de leitura para os elementos de &quot;Dispositivos gerenciados&quot; do Intune. (Operadora de suporte técnico ou acima, ou uma função personalizada)
+- Acesso de leitura para os elementos de “Dispositivos Gerenciados” do Intune. (Operadora de Suporte Técnico ou acima, ou uma função personalizada)
 
-No presente, não há uma maneira &quot;simples&quot; para acionar um comando de automação baseado na Enrolment de um novo dispositivo no Intune. Portanto, esse comando fornecerá ao técnico uma maneira simples de recuperar o endereço MAC sem precisar fazer logon no portal e recuperá-lo manualmente.
+No presente, não há uma maneira “simples” para acionar um comando de automação baseado na registro de um novo dispositivo no Intune. Portanto, esse comando fornecerá ao técnico uma maneira simples de recuperar o endereço MAC sem precisar fazer logon no portal e recuperá-lo manualmente.
 
 ```powershell
 Import-Module Microsoft.Graph.Intune
@@ -146,10 +153,10 @@ Connect-MSGraph
 Get-IntuneManagedDevice -Filter "model eq 'Hololens 2'" | where {$_.enrolledDateTime -gt (get-date).AddDays(-30)}  | select deviceName, wiFiMacAddress 
 ```
 
-Isso retornará o nome e o endereço MAC de todos os dispositivos do HoloLens que tiverem sido inscritos nos últimos 30 dias.
+Isso retornará o nome e o endereço MAC de todos os dispositivos do HoloLens que tiverem sido registrados nos últimos 30 dias.
 
 ![Endereço MAC por meio do PowerShell](images/mac-address-powershell.jpg)
 
 ### <a name="process"></a>Processo
 
-Depois que o Enrolment do Intune tiver sido concluído, o técnico executaria o script acima para recuperar o endereço MAC.
+Depois que o registro do Intune tiver sido concluído, o técnico executaria o script acima para recuperar o endereço MAC.
