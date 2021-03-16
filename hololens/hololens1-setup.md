@@ -6,24 +6,24 @@ ms.sitesec: library
 author: JesseMcCulloch
 ms.author: jemccull
 ms.topic: article
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 8/12/2019
 ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - Hololens (1st gen)
-ms.openlocfilehash: 0361af22fa6d84f636b841f6a311edcdace5a937
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
-ms.translationtype: HT
+ms.openlocfilehash: 30912fda53d5d8b9ea5e60f29eeb93ea29cca2d2
+ms.sourcegitcommit: 01c0b0a789e156a9d29aaf6f61e36dfd09b8c01a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283162"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11439077"
 ---
-# Preparar seu HoloLens (1ª geração) para uso
+# <a name="get-your-hololens-1st-gen-ready-to-use"></a>Preparar seu HoloLens (1ª geração) para uso
 
 Acompanhe para configurar um HoloLens (1ª geração) pela primeira vez.
 
-## Carregar seu HoloLens (1ª geração)
+## <a name="charge-your-hololens-1st-gen"></a>Carregar seu HoloLens (1ª geração)
 
 Para cobrar seu HoloLens, conecte a fonte de alimentação à porta de carregamento usando o cabo Micro USB incluído. Em seguida, conecte a fonte de alimentação a uma tomada elétrica. Quando o dispositivo estiver sendo carregado, o indicador de bateria se acenderá em um padrão de onda.
 
@@ -38,7 +38,7 @@ A fonte de alimentação e o cabo USB que acompanham o dispositivo são a melhor
 
 A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o dispositivo está sendo executado.
 
-## Ajustar
+## <a name="adjust-fit"></a>Ajustar
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/be3cb527-f2f1-4f85-b4f7-a34fbaba980d]
 
@@ -50,7 +50,7 @@ A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o d
 |4. Segure o dispositivo pelas laterais e coloque-o em sua cabeça. Certifique-se de que a headband esteja na parte superior da sua testa e aperte a roda de ajuste.|![Etapa quatro, colocar o dispositivo e ajustar a headband](./images/FitGuideStep4.png)|
 |5. Deslize o visor de volta e verifique o ajuste do dispositivo. A headband deve ficar na parte superior da testa, logo abaixo do contorno do couro cabeludo, com os alto-falantes acima de seus ouvidos. As lentes devem ficar centralizadas sobre os olhos.|![Etapa cinco, deslizar o visor novamente e verificar o ajuste](./images/FitGuideSetep5.png)|
 
-## Ligar o HoloLens
+## <a name="turn-on-your-hololens"></a>Ligar o HoloLens
 
 Use o botão de energia para ligar e desligar o HoloLens ou para colocá-lo no modo de espera.
 
@@ -63,25 +63,25 @@ Quando o HoloLens estiver desligado ou em modo de espera, ligue-o pressionando o
 > [!TIP]
 > Para reiniciar o HoloLens, diga "Hey Cortana, reboot the device" (Ei Cortana, reinicialize o dispositivo).
 
-### Colocar o HoloLens em modo de espera
+### <a name="put-hololens-in-standby"></a>Colocar o HoloLens em modo de espera
 
 Para colocar o HoloLens em modo de espera quando ele estiver ligado, pressione o botão de energia uma vez. Os indicadores de bateria piscam. Para despertá-lo do modo de espera, pressione o botão de energia novamente.
 
 O HoloLens entra automaticamente no modo de espera após três minutos de inatividade. Quando estiver no modo de espera, ele desligará automaticamente após quatro horas ou depois que o nível da bateria cair para 10%.
 
-### Desligar o HoloLens
+### <a name="shut-down-hololens"></a>Desligar o HoloLens
 
 Para desligar (desativar) o HoloLens, segure o botão de energia por quatro segundos. Os indicadores de bateria desligam um por um e o dispositivo é desligado.
 
 O HoloLens é desligado automaticamente quando o nível da bateria cai para 1%, mesmo que ele esteja conectado. Depois de recarregar a bateria para 3%, você poderá ligar o HoloLens novamente.
 
-## Ajustar volume e brilho
+## <a name="adjust-volume-and-brightness"></a>Ajustar volume e brilho
 
 Os botões de brilho e volume encontram-se na parte superior das laterais &mdash; o volume à direita e o brilho à esquerda.
 
 ![Imagem que mostra os botões do HoloLens](./images/hololens-buttons.jpg)
 
-## Luzes indicadoras do HoloLens
+## <a name="hololens-indicator-lights"></a>Luzes indicadoras do HoloLens
 
 ![Imagem que mostra as luzes indicadoras do HoloLens](./images/hololens-lights.png)
 
@@ -97,13 +97,13 @@ Não tem certeza sobre o significado das luzes indicadoras do HoloLens? Vamos aj
 |Todas acendem, então uma pisca rapidamente e depois todas desligam. |A bateria está criticamente baixa. O HoloLens precisa ser carregado. |
 |Todas rolam, então uma pisca e todas rolam novamente. |A bateria está criticamente baixa. O HoloLens está carregando. |
 
-## Segurança e conforto
+## <a name="safety-and-comfort"></a>Segurança e conforto
 
-### Uso em arredores seguros
+### <a name="use-in-safe-surroundings"></a>Uso em arredores seguros
 
 Use seu HoloLens em um espaço seguro sem obstruções e riscos de tropeços. Não o utilize quando precisar de um campo de visão claro e de toda sua atenção, como quando estiver operando um veículo ou realizando qualquer outra atividade potencialmente perigosa.
 
-### Sinta-se confortável
+### <a name="stay-comfortable"></a>Sinta-se confortável
 
 Não utilize o HoloLens por muito tempo em suas primeiras sessões e faça pausas. Se você sentir algum desconforto, pare e descanse até se sentir melhor. Isso pode incluir sentimentos temporários de náusea, vertigem, tontura, desorientação, dores de cabeça, fadiga, pressão nos olhos ou olhos secos.
 
