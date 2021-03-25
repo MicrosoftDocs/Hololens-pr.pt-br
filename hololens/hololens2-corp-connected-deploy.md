@@ -1,0 +1,117 @@
+---
+title: Guia de Implantação – HoloLens 2 conectado corporativo com Guias do Dynamics 365 - Implantar
+description: Saiba como configurar implantações de dispositivos HoloLens 2 em uma rede conectada corporativa com guias do Dynamics 365.
+keywords: HoloLens, gerenciamento, conectado corporativo, Guias do Dynamics 365, AAD, Azure AD, MDM, Gerenciamento de Dispositivo Móvel
+author: joyjaz
+ms.author: v-jjaswinski
+ms.reviewer: aboeger
+ms.date: 03/24/2021
+ms.prod: hololens
+ms.topic: article
+ms.sitesec: library
+ms.localizationpriority: medium
+audience: HoloLens
+manager: yannisle
+appliesto:
+- HoloLens 2
+ms.openlocfilehash: febf56f94a5cab623fd7ad08ae7abf7050224717
+ms.sourcegitcommit: d7c86ccad7be32f7223d4b801083798454fda740
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "11448503"
+---
+# <a name="deploy---corporate-connected-guide"></a><span data-ttu-id="c0a35-104">Implantar - Guia Conectado Corporativo</span><span class="sxs-lookup"><span data-stu-id="c0a35-104">Deploy - Corporate Connected Guide</span></span>
+
+<span data-ttu-id="c0a35-105">Uma parte importante de cada implantação é garantir que sua implantação seja configurada corretamente antes de testá-la por conta própria para garantir uma experiência suave para o usuário final.</span><span class="sxs-lookup"><span data-stu-id="c0a35-105">An important part of each deployment is ensuring that your deployment is properly set up before testing it yourself to ensure a smooth experience for the end user.</span></span>
+
+<span data-ttu-id="c0a35-106">Como estamos implantando o certificado Wi-Fi via MDM, precisamos configurar inicialmente o HoloLens e registrar dispositivos em uma rede aberta Wi-Fi ou em uma rede que não exige o certificado.</span><span class="sxs-lookup"><span data-stu-id="c0a35-106">Because we are deploying the Wi-Fi certificate via MDM, we'll need to initially set up HoloLens and enroll devices on an open Wi-Fi network, or a network that doesn't require the certificate.</span></span> <span data-ttu-id="c0a35-107">Depois que o HoloLens terminar o OOBE e o Enrolled, o dispositivo receberá o certificado de rede e o LOB configurados anteriormente e podemos validar que ambos foram recebidos pelo dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c0a35-107">Once the HoloLens has finished OOBE and Enrolled, the device will receive the network certificate and LOB configured previously and we'll be able to validate both were received by the device.</span></span>
+
+<span data-ttu-id="c0a35-108">Posteriormente, você poderá confirmar se pode autor e operar um Guia de teste.</span><span class="sxs-lookup"><span data-stu-id="c0a35-108">Afterwards, you'll be able confirm you can both author and operate a test Guide.</span></span>
+
+## <a name="enrollment-validation"></a><span data-ttu-id="c0a35-109">Validação de Registro</span><span class="sxs-lookup"><span data-stu-id="c0a35-109">Enrollment Validation</span></span>
+
+<span data-ttu-id="c0a35-110">Agora que tudo está configurado corretamente para o Registro do Azure AD e MDM, o restante agora deve ser um snap.</span><span class="sxs-lookup"><span data-stu-id="c0a35-110">Now that everything is properly configured for Azure AD and MDM Enrollment, the rest should now be a snap.</span></span> <span data-ttu-id="c0a35-111">Você precisará de uma conexão Wi-Fi e o dispositivo HoloLens e uma das contas de usuário do Azure AD configuradas anteriormente.</span><span class="sxs-lookup"><span data-stu-id="c0a35-111">You'll need a Wi-Fi connection and the HoloLens device, and one of the previously configured Azure AD user accounts.</span></span>
+
+<span data-ttu-id="c0a35-112">Se o dispositivo não estiver atualmente sentado em um estado de configurações de fábrica, agora seria um bom momento para [reaflar o dispositivo](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device).</span><span class="sxs-lookup"><span data-stu-id="c0a35-112">If your device isn't currently sitting in a factory settings state, now would be a good time to [reflash the device](https://docs.microsoft.com/hololens/hololens-recovery#clean-reflash-the-device).</span></span>
+
+1. <span data-ttu-id="c0a35-113">Depois que o dispositivo está em OOBE, você precisará começar a interagir e seguir os prompts.</span><span class="sxs-lookup"><span data-stu-id="c0a35-113">Once your device is in OOBE, you'll need to start interacting and following the prompts.</span></span>
+
+2. <span data-ttu-id="c0a35-114">Conecte-se a uma rede Wi-Fi aberta que não exige certificados para ingressar no Wi-Fi.</span><span class="sxs-lookup"><span data-stu-id="c0a35-114">Connect to an open Wi-Fi network that does not require certificates to join the Wi-Fi.</span></span> <span data-ttu-id="c0a35-115">Isso permitirá que o dispositivo baixe o certificado a ser usado no Wi-Fi da organização após a configuração inicial.</span><span class="sxs-lookup"><span data-stu-id="c0a35-115">This will allow the device to download the certificate to be used on the organization's Wi-Fi after initial setup.</span></span>
+
+3. <span data-ttu-id="c0a35-116">O prompt crítico será quando você for perguntado **Quem é o proprietário deste HoloLens?**</span><span class="sxs-lookup"><span data-stu-id="c0a35-116">The critical prompt will be when you are asked **Who owns this HoloLens?**</span></span> <span data-ttu-id="c0a35-117">Selecione **Meu trabalho ou escola possui e** insira suas credenciais de conta do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-117">Select **My work or school owns it** and enter your Azure AD account credentials.</span></span>
+
+4. <span data-ttu-id="c0a35-118">Quando o registro for bem-sucedido, você será solicitado a configurar um PIN.</span><span class="sxs-lookup"><span data-stu-id="c0a35-118">When enrollment is successful, you'll be prompted to set up a PIN.</span></span> <span data-ttu-id="c0a35-119">Esse PIN é exclusivo deste dispositivo para esse usuário.</span><span class="sxs-lookup"><span data-stu-id="c0a35-119">This PIN is unique to this device for this user.</span></span> <span data-ttu-id="c0a35-120">Você também será solicitado a fazer verificações de Íris, dados de voz e configurações de telemetria e, por fim, você poderá aprender como abrir o menu inicial e concluir o OOBE.</span><span class="sxs-lookup"><span data-stu-id="c0a35-120">You will also be prompted for Iris scans, voice data, and telemetry settings and finally, you'll be able to learn how to open the start menu and complete OOBE.</span></span>
+
+5. <span data-ttu-id="c0a35-121">Depois de chegar na Casa da Realidade Misturada, abra o menu Iniciar usando o gesto **Iniciar** que você acabou de aprender.</span><span class="sxs-lookup"><span data-stu-id="c0a35-121">Once you land in the Mixed Reality Home, open the Start menu using the **Start gesture** you just learned.</span></span>
+
+6. <span data-ttu-id="c0a35-122">Selecione o **aplicativo Configurações** e selecione **Sistema**.</span><span class="sxs-lookup"><span data-stu-id="c0a35-122">Select the **Settings** app and select **System**.</span></span> <span data-ttu-id="c0a35-123">A primeira informação que você verá é o nome do dispositivo, que para o dispositivo HoloLens 2 será HOLOLENS, seguido por uma cadeia de caracteres de &quot; &quot; seis caracteres.</span><span class="sxs-lookup"><span data-stu-id="c0a35-123">The first piece of information you'll see is your Device name, which for your HoloLens 2 device will be &quot;HOLOLENS-&quot; followed by a six character string.</span></span>
+
+7. <span data-ttu-id="c0a35-124">Anote esse nome.</span><span class="sxs-lookup"><span data-stu-id="c0a35-124">Take note of this name.</span></span>
+
+    ![Tela Configurações do HoloLens 2](./images/hololens2-settings-about.jpg)
+
+8. <span data-ttu-id="c0a35-126">Verifique se seu dispositivo foi ingressado com êxito no Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-126">Verify that your device is successfully joined to Azure AD.</span></span> <span data-ttu-id="c0a35-127">Há duas maneiras;</span><span class="sxs-lookup"><span data-stu-id="c0a35-127">There are two ways;</span></span>
+
+    1.  <span data-ttu-id="c0a35-128">O aplicativo Configurações.</span><span class="sxs-lookup"><span data-stu-id="c0a35-128">The Settings app.</span></span> <span data-ttu-id="c0a35-129">Em **Configurações,** selecione **Contas**  ->  **Acessar trabalho ou escola**.</span><span class="sxs-lookup"><span data-stu-id="c0a35-129">From **Settings** select **Accounts** -> **Access work or school**.</span></span> <span data-ttu-id="c0a35-130">Nesta tela, você pode verificar se está inscrito com êxito ao ver Conectado ao &quot; nameofAAD&#39;do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-130">From this screen, you can verify you are successfully enrolled by seeing &quot;Connected to nameofAAD&#39;s Azure AD.</span></span> <span data-ttu-id="c0a35-131">Conectado por *yourusername@nameofAAD.onmicrosoft.com*.</span><span class="sxs-lookup"><span data-stu-id="c0a35-131">Connected by *yourusername@nameofAAD.onmicrosoft.com*.</span></span> <span data-ttu-id="c0a35-132">Isso verificará se o dispositivo está ingressado na sua organização&#39;do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-132">This will verify your device is joined to your organization&#39;s Azure AD.</span></span>
+
+    1. <span data-ttu-id="c0a35-133">O [portal do Azure](https://portal.azure.com/#home).</span><span class="sxs-lookup"><span data-stu-id="c0a35-133">The [Azure portal](https://portal.azure.com/#home).</span></span> <span data-ttu-id="c0a35-134">Vá para **Dispositivos do Azure Active Directory**  ->  \*\*\*\*  ->  **Todos os dispositivos**e pesquise o nome do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="c0a35-134">Go to **Azure Active Directory** -> **Devices** -> **All devices**, and search the device name.</span></span> <span data-ttu-id="c0a35-135">Em Tipo de Ingresso, ele mostrará como sendo 'Azure AD Joined'.</span><span class="sxs-lookup"><span data-stu-id="c0a35-135">Under Join Type, it will show as being 'Azure AD Joined'.</span></span>
+        ![Verificar o tipo de junção no Azure AD](./images/hololens2-devices-all-devices.png)
+
+9. <span data-ttu-id="c0a35-137">Verifique se seu dispositivo está inscrito no MDM.</span><span class="sxs-lookup"><span data-stu-id="c0a35-137">Verify that your device is enrolled with MDM.</span></span> <span data-ttu-id="c0a35-138">Há duas maneiras;</span><span class="sxs-lookup"><span data-stu-id="c0a35-138">There are two ways;</span></span>
+
+    1. <span data-ttu-id="c0a35-139">Em **Configurações,** selecione **Contas**  ->  **Acessar trabalho ou escola.**</span><span class="sxs-lookup"><span data-stu-id="c0a35-139">From **Settings**, select **Accounts** -> **Access work or school**.</span></span> <span data-ttu-id="c0a35-140">Nesta tela, você pode verificar se está inscrito com êxito ao ver Conectado ao &quot; nameofAAD&#39;do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-140">From this screen, you can verify you are successfully enrolled by seeing &quot;Connected to nameofAAD&#39;s Azure AD.</span></span> <span data-ttu-id="c0a35-141">Conectado por *yourusername@nameofAAD.onmicrosoft.com*.</span><span class="sxs-lookup"><span data-stu-id="c0a35-141">Connected by *yourusername@nameofAAD.onmicrosoft.com*.</span></span> <span data-ttu-id="c0a35-142">Nesta conta de estudante ou trabalho do Access &quot; selecionando Conectado ao nomedoAAD&#39;do Azure AD.</span><span class="sxs-lookup"><span data-stu-id="c0a35-142">From this Access work or school account by selecting &quot;Connected to nameofAAD&#39;s Azure AD.</span></span> <span data-ttu-id="c0a35-143">Conectado por yourusername@nameofAAD.onmicrosoft.com &quot; e selecione o **botão Informações.**</span><span class="sxs-lookup"><span data-stu-id="c0a35-143">Connected by yourusername@nameofAAD.onmicrosoft.com&quot; and select the **Info** button.</span></span>
+
+    1. <span data-ttu-id="c0a35-144">[Centro de administração do Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home).</span><span class="sxs-lookup"><span data-stu-id="c0a35-144">[Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/#home).</span></span> <span data-ttu-id="c0a35-145">Faça logoff e selecione  **Dispositivos,**  **em seguida, Todos os dispositivos**.</span><span class="sxs-lookup"><span data-stu-id="c0a35-145">Log in and select  **Devices**  then  **All devices**.</span></span> <span data-ttu-id="c0a35-146">A partir daqui, você pode pesquisar seu dispositivo HoloLens&#39;nome.</span><span class="sxs-lookup"><span data-stu-id="c0a35-146">From here, you can search your HoloLens device&#39;s name.</span></span> <span data-ttu-id="c0a35-147">Você deve poder ver o HoloLens listado no Intune.</span><span class="sxs-lookup"><span data-stu-id="c0a35-147">You should be able to see your HoloLens listed on Intune.</span></span>
+
+        ![Verificar gerenciado pelo Intune no Azure AD](./images/hololens2-devices-all-devices2.png)
+
+
+## <a name="wi-fi-certificate-validation"></a><span data-ttu-id="c0a35-149">Wi-Fi certificado</span><span class="sxs-lookup"><span data-stu-id="c0a35-149">Wi-Fi certificate validation</span></span>
+
+<span data-ttu-id="c0a35-150">Até agora, o dispositivo já deve ter recebido o Wi-Fi certificado.</span><span class="sxs-lookup"><span data-stu-id="c0a35-150">By now, the device should have received the Wi-Fi certificate.</span></span> <span data-ttu-id="c0a35-151">A validação mais simples que você pode fazer é tentar se conectar à conexão Wi-Fi para a qual você&#39;recebeu o certificado.</span><span class="sxs-lookup"><span data-stu-id="c0a35-151">The simplest validation you can do is attempt to connect to the Wi-Fi connection for which you&#39;ve received the certificate.</span></span> <span data-ttu-id="c0a35-152">Abra o aplicativo **Configurações** e navegue até **Rede &amp; Wi-Fi**da Internet  ->  \*\*\*\* e selecione a conexão Wi-fi.</span><span class="sxs-lookup"><span data-stu-id="c0a35-152">Open up the **Settings** app and navigate to **Network &amp; Internet** -> **Wi-Fi** and select the Wi-fi connection.</span></span> <span data-ttu-id="c0a35-153">Depois de conectado, abra o aplicativo do Microsoft Edge e confirme se você pode navegar até um site.</span><span class="sxs-lookup"><span data-stu-id="c0a35-153">Once connected, open up the Microsoft Edge app and confirm you can navigate to a website.</span></span>
+
+<span data-ttu-id="c0a35-154">Para confirmar se você recebeu o certificado no dispositivo, você pode usar o [Gerenciador de Certificados](https://docs.microsoft.com/hololens/certificate-manager).</span><span class="sxs-lookup"><span data-stu-id="c0a35-154">To confirm that you have received the certificate on the device, you can use the [Certificate Manager](https://docs.microsoft.com/hololens/certificate-manager).</span></span>
+
+## <a name="validate-lob-app-install"></a><span data-ttu-id="c0a35-155">Validar a instalação do aplicativo LOB</span><span class="sxs-lookup"><span data-stu-id="c0a35-155">Validate LOB app install</span></span>
+
+<span data-ttu-id="c0a35-156">Para ver o andamento da instalação de um aplicativo gerenciado, você pode ver se o aplicativo está instalado ou verificar Configurações.</span><span class="sxs-lookup"><span data-stu-id="c0a35-156">To see a managed app's install progress, you either see if the app is installed or check Settings.</span></span> <span data-ttu-id="c0a35-157">Ao configurar um aplicativo LOB como uma instalação necessária para nosso grupo, depois de registrar o HoloLens com um usuário no grupo atribuído, o aplicativo será baixado automaticamente para o HoloLens.</span><span class="sxs-lookup"><span data-stu-id="c0a35-157">By configuring a LOB app as a required installation for our group, after enrolling the HoloLens with a user in the assigned group, the app will automatically download to the HoloLens.</span></span>
+
+<span data-ttu-id="c0a35-158">Abra o menu Iniciar e selecione **Todos os aplicativos**.</span><span class="sxs-lookup"><span data-stu-id="c0a35-158">Open the Start menu and select **All apps**.</span></span> <span data-ttu-id="c0a35-159">Dependendo do número de aplicativos que você \*\*\*\* tem, talvez seja necessário usar a página para cima ou **botões de** página para baixo.</span><span class="sxs-lookup"><span data-stu-id="c0a35-159">Depending on the number of apps you have, you may need to use the **page up** or **page down** buttons.</span></span>
+
+<span data-ttu-id="c0a35-160">Para validar a instalação do aplicativo no dispositivo, você pode fazer isso por meio de Configurações Contas acessar trabalho ou escola ; selecione a conta, em seguida, o botão Informações e role para baixo para ver configurações e aplicativos diferentes **aplicados**ao dispositivo a partir  ->  \*\*\*\*  ->  \*\*\*\* do MDM. \*\*\*\*</span><span class="sxs-lookup"><span data-stu-id="c0a35-160">To validate the installation of the app on device, you can do so via **Settings** -> **Accounts** -> **Access work or school**; select the account then the **Info** button, and scroll down to see different configurations and apps applied to the device from MDM.</span></span>
+
+<span data-ttu-id="c0a35-161">Para validar a instalação do Intune, navegue até o [portal de MEM](https://endpoint.microsoft.com/#home)Apps -> Página de status de instalação de todos os  ->  \*\*\*\* \*\*\*\*  -> aplicativos*TheNameOfYourApp*  ->  **Device.**</span><span class="sxs-lookup"><span data-stu-id="c0a35-161">To validate the install from Intune, navigate to the [MEM portal](https://endpoint.microsoft.com/#home) -> **Apps** -> All **apps** ->*TheNameOfYourApp* -> **Device install status** page.</span></span>
+
+<span data-ttu-id="c0a35-162">Confira mais: [Implantação de aplicativo do Intune para HoloLens](https://docs.microsoft.com/hololens/app-deploy-intune)</span><span class="sxs-lookup"><span data-stu-id="c0a35-162">See more: [Intune App Deployment for HoloLens](https://docs.microsoft.com/hololens/app-deploy-intune)</span></span>
+
+## <a name="validate-dynamics-365-guides"></a><span data-ttu-id="c0a35-163">Validar guias do Dynamics 365</span><span class="sxs-lookup"><span data-stu-id="c0a35-163">Validate Dynamics 365 Guides</span></span>
+
+<span data-ttu-id="c0a35-164">Há modos para o aplicativo Guias no HoloLens, criação e operação.</span><span class="sxs-lookup"><span data-stu-id="c0a35-164">There are modes for the Guides app on HoloLens, authoring and operating.</span></span> <span data-ttu-id="c0a35-165">Você precisará concluir a autoria de um guia antes de o operar.</span><span class="sxs-lookup"><span data-stu-id="c0a35-165">You'll need to finish authoring a guide before operating it.</span></span>
+
+### <a name="authoring-the-guide"></a><span data-ttu-id="c0a35-166">Autoria do Guia</span><span class="sxs-lookup"><span data-stu-id="c0a35-166">Authoring the Guide</span></span>
+
+<span data-ttu-id="c0a35-167">Não precisamos fazer muito por essa validação rápida.</span><span class="sxs-lookup"><span data-stu-id="c0a35-167">We don't need to do much for this quick validation.</span></span> <span data-ttu-id="c0a35-168">Basta selecionar o guia que você preparou no computador.</span><span class="sxs-lookup"><span data-stu-id="c0a35-168">Simply select the guide you prepared on your PC.</span></span> <span data-ttu-id="c0a35-169">Você precisará ancorar [o guia](https://docs.microsoft.comdynamics365/mixed-reality/guides/hololens-app-anchor), para uma validação rápida, você pode usar uma âncora holográfica.</span><span class="sxs-lookup"><span data-stu-id="c0a35-169">You'll need to [anchor the guide](https://docs.microsoft.comdynamics365/mixed-reality/guides/hololens-app-anchor), for a quick validation you can use a holographic anchor.</span></span> <span data-ttu-id="c0a35-170">Posteriormente, você deve [colocar suas etapas e modelos.](https://docs.microsoft.com/dynamics365/mixed-reality/guides/hololens-app-orientation)</span><span class="sxs-lookup"><span data-stu-id="c0a35-170">Afterwards, you should [place your steps and models](https://docs.microsoft.com/dynamics365/mixed-reality/guides/hololens-app-orientation).</span></span>
+
+>[!NOTE]
+> <span data-ttu-id="c0a35-171">Você precisará da **função Criação** para fazer logon no computador e no autor no HoloLens.</span><span class="sxs-lookup"><span data-stu-id="c0a35-171">You will need the **Authoring** role to login to the PC and author on the HoloLens.</span></span> <span data-ttu-id="c0a35-172">A função Operador é somente leitura e não tem acesso ao aplicativo do computador.</span><span class="sxs-lookup"><span data-stu-id="c0a35-172">The Operator role is read-only and has no access to the PC app.</span></span>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/poE7s7_zWDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### <a name="operating-the-guide"></a><span data-ttu-id="c0a35-173">Operando o Guia</span><span class="sxs-lookup"><span data-stu-id="c0a35-173">Operating the Guide</span></span>
+
+<span data-ttu-id="c0a35-174">Depois que seus hologramas estão no local, você pode testar o funcionamento do guia.</span><span class="sxs-lookup"><span data-stu-id="c0a35-174">Once your holograms are in place, you can test out operating your guide.</span></span> 
+- <span data-ttu-id="c0a35-175">Selecionar **Modo de operador**</span><span class="sxs-lookup"><span data-stu-id="c0a35-175">Select **Operator mode**</span></span>
+- <span data-ttu-id="c0a35-176">Clique nas etapas do guia.</span><span class="sxs-lookup"><span data-stu-id="c0a35-176">Click through the steps of your guide.</span></span>
+
+<span data-ttu-id="c0a35-177">Para obter orientações mais detalhadas sobre como operar um guia, confira estes recursos:</span><span class="sxs-lookup"><span data-stu-id="c0a35-177">For more in-depth guidance on how to operate a guide, check out these resources:</span></span>
+
+[<span data-ttu-id="c0a35-178">Visão geral da operação de um guia em Guias do Dynamics 365</span><span class="sxs-lookup"><span data-stu-id="c0a35-178">Overview of operating a guide in Dynamics 365 Guides</span></span>](https://docs.microsoft.com/dynamics365/mixed-reality/guides/operator-overview)
+
+[<span data-ttu-id="c0a35-179">Obter orientação com o cartão Step como operador em Guias do Dynamics 365</span><span class="sxs-lookup"><span data-stu-id="c0a35-179">Get oriented with the Step card as an operator in Dynamics 365 Guides</span></span>](https://docs.microsoft.com/dynamics365/mixed-reality/guides/operator-step-card-orientation)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9s41BKGHVL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## <a name="next-step"></a><span data-ttu-id="c0a35-180">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="c0a35-180">Next step</span></span> 
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="c0a35-181">Implantação conectada corporativa - Manter</span><span class="sxs-lookup"><span data-stu-id="c0a35-181">Corporate connected deployment - Maintain</span></span>](hololens2-corp-connected-maintain.md)
