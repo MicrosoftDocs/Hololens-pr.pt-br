@@ -53,7 +53,13 @@
 #### [Conectado à nuvem - Configurar](hololens2-cloud-connected-configure.md)
 #### [Conectado à nuvem-Implantar](hololens2-cloud-connected-deploy.md)
 #### [Conectado à nuvem-Manter](hololens2-cloud-connected-maintain.md)
-### [Implantando o HoloLens 2 para clientes externos com Assistência Remota](hololens2-deployment-guide.md)
+### [Implantar o HoloLens 2 para clientes externos com Assistência Remota](hololens2-deployment-guide.md)
+### Implantação do HoloLens 2 conectado à empresa com Guias do Dynamics 365
+#### [Conectado à empresa - Visão geral da Implantação](hololens2-corp-connected-overview.md)
+#### [Conectado à empresa - Preparar](hololens2-corp-connected-prepare.md)
+#### [Conectado à empresa - Configurar](hololens2-corp-connected-configure.md)
+#### [Conectado à empresa - Implantar](hololens2-corp-connected-deploy.md)
+#### [Conectado à empresa - Manter](hololens2-corp-connected-maintain.md)
 ### [Segurança Offline](hololens-common-scenarios-offline-secure.md)
 ## Segurança
 ### [Visão geral da segurança](security-overview.md)
