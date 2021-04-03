@@ -10,29 +10,32 @@ ms.localizationpriority: high
 ms.date: 9/15/2020
 ms.reviewer: v-evmill
 audience: ITPro
-manager: ''
+manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1bfac948b493c2e55207e45042d6b022c1818969
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: de9f2c4f136a26a5956ba8a8f3b9faba1e90ea66
+ms.sourcegitcommit: 86dba9e8a5e25f0bf29f4c0580970c25c44b7359
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283432"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470049"
 ---
-# Preparar os certificados e os perfis de rede para o HoloLens 2
+# <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>Preparar os certificados e os perfis de rede para o HoloLens 2
 
 A autenticação baseada em certificado é um requisito comum para os clientes que usam o HoloLens 2. Você pode exigir que os certificados acessem o Wi-Fi, se conectar a soluções VPN ou acessar recursos internos da sua organização.
 
-Como os dispositivos do HoloLens 2 geralmente são associados ao Azure Active Directory (Azure AD) e gerenciados pelo Intune ou outro provedor MDM, você precisará implantar esses certificados usando um SCEP (Protocolo de Registro de Certificado Simples) ou uma infraestrutura de certificado PKCS (Padrão de Criptografia por Chave Pública) integrada à sua solução MDM.
+Como os dispositivos do HoloLens 2 geralmente são associados ao Azure Active Directory (Azure AD) e gerenciados pelo Intune ou outro provedor MDM, você precisará implantar esses certificados usando um SCEP (Protocolo de Registro de Certificado Simples) ou uma infraestrutura de certificado PKCS (Padrão de Criptografia por Chave Pública) integrada à sua solução MDM. 
 
-## Requisitos de certificado
+>[!NOTE]
+> Se você não tem um fornecedor MDM, você ainda pode implantar certificados através de um [pacote de provisionamento](https://docs.microsoft.com/hololens/hololens-provisioning#steps-for-creating-provisioning-packages) no [Designer de Configuração do Windows](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) ou através do [Gerenciador de Certificados](https://docs.microsoft.com/hololens/certificate-manager) indo para **Configurações > Atualização e Segurança > Gerenciador de Certificados**.
+
+## <a name="certificate-requirements"></a>Requisitos de certificado
 Os certificados raiz são necessários para a implantação de certificados por meio de uma infraestrutura SCEP ou PKCS. Outros aplicativos e serviços em sua organização podem exigir que os certificados raiz sejam implantados em seus dispositivos do HoloLens 2 também. 
 
-## Requisitos de conectividade Wi-Fi
+## <a name="wi-fi-connectivity-requirements"></a>Requisitos de conectividade Wi-Fi
 Para permitir que um dispositivo seja fornecido automaticamente com a configuração de Wi-Fi necessária para sua rede corporativa, você precisará de um perfil de configuração de Wi-Fi. Você pode configurar o Intune ou outro provedor MDM para implantar esses perfis em seus dispositivos. Se a sua segurança de rede exigir que os dispositivos façam parte do domínio local, talvez você também precise avaliar a infraestrutura de rede Wi-Fi para verificar se é compatível com dispositivos do HoloLens 2 (os dispositivos do HoloLens 2 são ingressados somente no AD do Azure).
 
-## Implantar a infraestrutura de certificado
+## <a name="deploy-certificate-infrastructure"></a>Implantar a infraestrutura de certificado
 Se não houver nenhuma infraestrutura de SCEP ou PKCS já existente, você precisará preparar uma. Para oferecer suporte ao uso de certificados do SCEP ou PKCS para autenticação, o Intune requer o uso de um [conector de certificado](https://docs.microsoft.com/mem/intune/protect/certificate-connectors).
 
 > [!NOTE]
@@ -40,7 +43,7 @@ Se não houver nenhuma infraestrutura de SCEP ou PKCS já existente, você preci
 
 Para saber mais, confira [Configurar um perfil de certificado para seus dispositivos no Microsoft Intune.](https://docs.microsoft.com/intune/certificates-configure)
 
-## Implantar certificados e perfil Wi-Fi/VPN
+## <a name="deploy-certificates-and-wi-fivpn-profile"></a>Implantar certificados e perfil Wi-Fi/VPN
 Para implantar certificados e perfis, siga estas etapas:
 1.  Crie um perfil para cada um dos certificados Raiz e Intermediários (consulte [Criar perfis de certificado confiáveis](https://docs.microsoft.com/intune/protect/certificates-configure#create-trusted-certificate-profiles)). Cada um desses perfis deve ter uma descrição que inclui uma data de vencimento no formato DD/MM/AAAA. **Os perfis de certificado sem uma data de vencimento não serão implantados.**
 1.  Crie um perfil para cada certificado SCEP ou PKCS (consulte [Criar um perfil de certificado SCEP ou Criar um perfil de certificado PKCS](https://docs.microsoft.com/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) Cada um desses perfis deve ter uma descrição que inclui uma data de vencimento no formato DD/MM/AAAA. **Os perfis de certificado sem uma data de vencimento não serão implantados.**
@@ -57,7 +60,7 @@ Para implantar certificados e perfis, siga estas etapas:
 
 4.  Crie um perfil para cada VPN corporativa (consulte [Configurações de dispositivo do Windows 10 e Windows Holographic para adicionar conexões VPN usando o Intune](https://docs.microsoft.com/intune/vpn-settings-windows-10)).
 
-## Solução de problemas de certificados
+## <a name="troubleshooting-certificates"></a>Solução de problemas de certificados
 
 No caso de você precisar validar a implantação correta de um certificado, use o [Gerenciador de Certificados](certificate-manager.md) no dispositivo para verificar se ocertificado está presente.  
 
