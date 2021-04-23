@@ -54,9 +54,9 @@ Quer você seja um [profissional de TI](https://www.microsoft.com/hololens/apps)
 
 | HoloLens 2 Edição                  | Mercados com suporte               |
 |-------------------------------------------| ----------------------------------------| 
-| HoloLens 2 | EUA, Canadá, Alemanha, França, Reino Unido, Irlanda, China, Japão, Austrália, Itália, Nova Zelândia, Holanda, Suíça, Espanha, Áustria, Suécia, Finlândia, Noruega, Dinamarca, Bélgica, Portugal, Polônia, Cingapura, Hong Kong, Taiwan e Coréia do Sul |
-| HoloLens 2 com Assistência Remota | Austrália, Japão, Canadá, EUA, Áustria, Bélgica, Dinamarca, Finlândia, França, Alemanha, Itália, Holanda, Noruega, Espanha, Suécia, Suíça, Reino Unido e Irlanda <sup>1</sup> 
-| HoloLens 2 Edição Industrial *(no lançamento)* | EUA, Canadá, Alemanha, França, Reino Unido, Irlanda, China, Japão, Austrália, Itália, Nova Zelândia, Holanda, Suíça, Espanha, Áustria, Suécia, Finlândia, Noruega, Dinamarca, Bélgica, Portugal, Polônia, Cingapura, Hong Kong, Taiwan e Coréia do Sul |
+| HoloLens 2 | EUA, Canadá, Alemanha, França, Reino Unido, Irlanda, China, Japão, Austrália, Itália, Nova Zelândia, Países Baixos, Suíça, Espanha, Áustria, Suécia, Finlândia, Noruega, Dinamarca, Bélgica, Portugal, Polônia, Cingapura, RAE de Hong Kong, Taiwan e Coréia do Sul |
+| HoloLens 2 com Assistência Remota | Austrália, Japão, Canadá, EUA, Áustria, Bélgica, Dinamarca, Finlândia, França, Alemanha, Itália, Países Baixos, Noruega, Espanha, Suécia, Suíça, Reino Unido e Irlanda <sup>1</sup> 
+| HoloLens 2 Edição Industrial *(no lançamento)* | EUA, Canadá, Alemanha, França, Reino Unido, Irlanda, China, Japão, Austrália, Itália, Nova Zelândia, Países Baixos, Suíça, Espanha, Áustria, Suécia, Finlândia, Noruega, Dinamarca, Bélgica, Portugal, Polônia, Cingapura, RAE de Hong Kong, Taiwan e Coréia do Sul |
 | HoloLens 2 Development Edition | Canadá, Alemanha, França, Reino Unido, Irlanda, Japão, Austrália, Itália, Suíça e Nova Zelândia |
 - <sup>1</sup> Esta lista é dinâmica, volte para ver se há atualizações
 
