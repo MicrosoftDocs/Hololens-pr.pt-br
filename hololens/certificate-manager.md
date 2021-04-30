@@ -1,6 +1,6 @@
 ---
 title: Gerenciador de certificados
-description: Saiba como instalar, gerenciar e remover certificados manualmente em dispositivos de realidade misturada do HoloLens 2.
+description: Saiba como instalar, gerenciar e remover manualmente certificados em dispositivos de realidade misturados do HoloLens 2.
 author: evmill
 ms.author: v-evmill
 manager: yannisle
@@ -13,46 +13,46 @@ audience: ITPro
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 9d221321adcb8062206695e3e610d35dee14523e
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283682"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "108308074"
 ---
-# Gerenciador de certificados
+# <a name="certificate-manager"></a>Gerenciador de certificados
 
-- Ferramentas aprimoradas de auditoria, diagnóstico e validação para segurança e conformidade de dispositivos por meio do novo Gerenciador de Certificados. Esse recurso permitirá que você implante, solucione problemas e valide seus certificados em escala em ambientes comerciais.
+- Ferramentas de auditoria, diagnóstico e validação aprimoradas para segurança de dispositivo e conformidade por meio do novo Gerenciador de certificados. Essa funcionalidade permitirá que você implante, solucione problemas e valide seus certificados em escala em ambientes comerciais.
 
-No Windows Holographic, versão 20H2, estamos adicionando um Gerenciador de Certificados no aplicativo Configurações do HoloLens 2. Vá para **Configurações > Atualizar & segurança > certificados.** Esse recurso fornece uma maneira simples e amigável de exibir, instalar e remover certificados em seu dispositivo. Com o novo Gerenciador de Certificados, os administradores e os usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e em conformidade. 
+No Windows Holographic, versão 20H2, estamos adicionando um Gerenciador de certificados no aplicativo de configurações do HoloLens 2. Vá para **configurações > atualização & segurança > certificados**. Esse recurso fornece uma maneira simples e amigável de usuário para exibir, instalar e remover certificados em seu dispositivo. Com o novo Gerenciador de certificados, os administradores e os usuários agora têm ferramentas aprimoradas de auditoria, diagnóstico e validação para garantir que os dispositivos permaneçam seguros e em conformidade. 
 
--   **Auditoria:** Capacidade de validar se um certificado foi implantado corretamente ou para confirmar se ele foi removido adequadamente. 
--   **Diagnóstico:** Quando surgirem problemas, a validação de que os certificados apropriados existem no dispositivo economiza tempo e ajuda na solução de problemas. 
--   **Validação:** Verificar se um certificado atende à finalidade pretendido e está funcional pode economizar tempo significativo, especialmente em ambientes comerciais antes de implantar certificados em maior escala.
+-   **Auditoria:** Capacidade de validar que um certificado foi implantado corretamente ou de confirmar que foi removido adequadamente. 
+-   **Diagnóstico:** Quando surgem problemas, a validação de que os certificados apropriados existem no dispositivo economiza tempo e ajuda na solução de problemas. 
+-   **Validação:** Verificar se um certificado atende à finalidade desejada e está funcional, pode economizar tempo significativo, especialmente em ambientes comerciais antes de implantar certificados em maior escala.
 
-Para encontrar um certificado específico na lista rapidamente, há opções para classificar por nome, armazenar ou expirar data. Os usuários também podem pesquisar diretamente por um certificado. Para exibir propriedades de certificado individuais, selecione o certificado e clique em **Informações.** 
+Para localizar um certificado específico na lista rapidamente, há opções para classificar por nome, loja ou data de validade. Os usuários também podem procurar um certificado diretamente. Para exibir propriedades de certificado individuais, selecione o certificado e clique em **informações**. 
 
-A instalação do certificado atualmente dá suporte a arquivos .cer e .crt. Os proprietários de dispositivos podem instalar certificados no Computador Local e no Usuário Atual;  todos os outros usuários só podem instalar no Usuário Atual. Os usuários só podem remover certificados instalados diretamente da interface do usuário de Configurações. Se um certificado tiver sido instalado por outros meios, ele também deverá ser removido pelo mesmo mecanismo.
+A instalação do certificado atualmente dá suporte a arquivos. cer e. CRT. Os proprietários de dispositivo podem instalar certificados no computador local e no usuário atual;  todos os outros usuários só podem instalar no usuário atual. Os usuários só podem remover certificados instalados diretamente da interface do usuário de configurações. Se um certificado tiver sido instalado por outros meios, ele também deverá ser removido pelo mesmo mecanismo.
 
-## Para instalar um certificado: 
+## <a name="to-install-a-certificate"></a>Para instalar um certificado: 
 
-1.  Conecte seu HoloLens 2 a um computador.
-1.  Coloque o arquivo de certificado que você deseja instalar em um local no HoloLens 2.
-1.  Navegue **até Configurações do Aplicativo > Atualizar & segurança > certificados**e selecione Instalar um certificado.
-1.  Clique **em Importar Arquivo** e navegue até o local em que você salvou o certificado.
-1.  Selecione **Local do Armazenamento.**
-1.  Selecione **o Armazenamento de Certificados.**
+1.  Conecte seu HoloLens 2 a um PC.
+1.  Coloque o arquivo de certificado que você deseja instalar em um local no seu HoloLens 2.
+1.  Navegue até **configurações aplicativo > atualizar & segurança > certificados** e selecione instalar um certificado.
+1.  Clique em **Importar arquivo** e navegue até o local em que você salvou o certificado.
+1.  Selecione o **local do repositório**.
+1.  Selecione **repositório de certificados**.
 1.  Clique em **Instalar**.
 
-O certificado agora deve ser instalado no dispositivo.
+O certificado agora deve estar instalado no dispositivo.
 
-## Para remover um certificado: 
-1. Navegue **até Configurações do Aplicativo > Atualização e Segurança > Certificados.**
-1. Procure o certificado pelo nome na caixa de pesquisa.
+## <a name="to-remove-a-certificate"></a>Para remover um certificado: 
+1. Navegue até **configurações aplicativo > atualização e segurança > certificados**.
+1. Procure o certificado por nome na caixa de pesquisa.
 1. Selecione o certificado.
-1. Clique **em Remover**
-1. Selecione **Sim** quando solicitado a confirmação.
+1. Clique em **remover**
+1. Selecione **Sim** quando solicitada a confirmação.
 
 
-![Visualizador de certificados no aplicativo Configurações em Ceritifcates](images/certificate-viewer-device.jpg)
+![Visualizador de certificados no aplicativo de configurações em CERITIFCATES](images/certificate-viewer-device.jpg)
 
-![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado em Configurações.](images/certificate-device-install.jpg)
+![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado em configurações.](images/certificate-device-install.jpg)

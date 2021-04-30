@@ -1,6 +1,6 @@
 ---
 title: Instalar versões localizadas do HoloLens
-description: Aprenda a instalar as versões localizadas do HoloLens (1ª geração), incluindo as versões Chinesa e Japonesa.
+description: Saiba como instalar as versões localizadas do HoloLens (1ª gen), incluindo as versões em chinês e japonês.
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -14,31 +14,31 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 74eb003aafd23218b90988abe113d35f1fc3035a
-ms.sourcegitcommit: 01c0b0a789e156a9d29aaf6f61e36dfd09b8c01a
+ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11439007"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "108308282"
 ---
-# <a name="install-localized-versions-of-hololens-1st-gen"></a>Instalar versões localizadas do HoloLens (1ª geração)
+# <a name="install-localized-versions-of-hololens-1st-gen"></a>Instalar versões localizadas do HoloLens (1ª gen)
 
-Para mudar para a versão em chinês ou em japonês do HoloLens, você precisará usar a Windows Device Recovery Tool (WDRT) para baixar o build para o idioma em um computador e depois instalá-lo em seu HoloLens.
+Para alternar para a versão em chinês ou japonês do HoloLens, você precisará usar a ferramenta de recuperação de dispositivo do Windows (WDRT) para baixar a compilação para o idioma em um computador e, em seguida, instalá-lo em seu HoloLens.
 
 > [!IMPORTANT]
-> O uso da WDRT para instalar os builds em chinês ou japonês do HoloLens exclui os dados existentes, como arquivos pessoais e configurações, do seu HoloLens. 
+> Usar o WDRT para instalar as compilações em chinês ou japonês do HoloLens exclui os dados existentes, como arquivos pessoais e configurações, do seu HoloLens. 
 
-1. No computador, baixe e instale [a Windows Device Recovery Tool (WDRT).](https://support.microsoft.com/help/12379)
-1. Baixe o pacote para o idioma que você deseja para seu computador: [chinês simplificado](https://aka.ms/hololensdownload-ch) ou [japonês](https://aka.ms/hololensdownload-jp).
-1. Quando o download for concluído, selecione **Explorador de Arquivos** > **Downloads**. Clique com o botão direito do mouse na pasta compactada que você acabou de baixar e selecione **Extrair tudo** > **Extrair** para descompactar.
-1. Conecte o HoloLens ao computador usando o cabo micro USB com o qual ele foi enviado. (Mesmo que você esteja usando outros cabos para conectar o HoloLens, esse funciona melhor).
+1. Em seu computador, baixe e instale [a ferramenta de recuperação de dispositivo do Windows (WDRT)](https://support.microsoft.com/help/12379).
+1. Baixe o pacote para o idioma que você deseja para seu PC:  [chinês simplificado](https://aka.ms/hololensdownload-ch) ou [japonês](https://aka.ms/hololensdownload-jp).
+1. Quando o download for concluído, selecione o **Explorador de arquivos**  >  **downloads**. Clique com o botão direito do mouse na pasta compactada que você acabou de baixar e selecione **extrair toda**  >  a **extração** para descompactá-la.
+1. Conecte seu HoloLens ao seu PC usando o cabo micro USB fornecido com o. (Mesmo que você esteja usando outros cabos para conectar seu HoloLens, isso funciona melhor.)
 1. Depois que a ferramenta detectar automaticamente seu HoloLens, selecione o bloco Microsoft HoloLens.
-1. Na tela seguinte, escolha **Seleção manual de pacote** e escolha o arquivo de instalação que reside na pasta descompactada na etapa 4. (Procure um arquivo com a extensão ".ffu"). 
-1. Selecione **Instalar software** e siga as instruções. 
-1. Após a instalação do build, a instalação do HoloLens será iniciada automaticamente. Coloque o dispositivo e siga as instruções de instalação. 
+1. Na próxima tela, selecione **seleção de pacote manual**   e selecione o arquivo de instalação que reside na pasta que você descompactou na etapa 4. (Procure um arquivo que tenha a extensão ". FFU".) 
+1. Selecione **instalar software** e siga as instruções. 
+1. Depois que o Build é instalado, a instalação do HoloLens é iniciada automaticamente. Coloque no dispositivo e siga as instruções de instalação. 
 
-Ao concluir a instalação, acesse **Configurações** > **Atualização e Segurança** > **Programa Windows Insider** e verifique se você configurou para receber as versões prévias mais recentes do build. Assim como nas versões prévias dos builds em inglês, o Programa Windows Insider mantém as versões em chinês e japonês do HoloLens atualizadas com as versões prévias mais recentes do build.
+Quando terminar de configurar, vá para **configurações**  >  **atualização &**  >  **programa Windows Insider** de segurança e verifique se você está configurado para receber as versões prévias mais recentes. Como as compilações de visualização em inglês, o programa Windows Insider mantém as versões em chinês e japonês do HoloLens atualizadas com as mais recentes versões de visualização.
 
 > [!NOTE]
 >  
-> - Você não pode usar o aplicativo Configurações para alterar o idioma do sistema entre inglês, japonês e chinês. A atualização de um novo build é a única forma com suporte para a alteração do idioma do sistema do dispositivo.
-> - Embora você possa usar o teclado virtual Pinyin para inserir texto em chinês simplificado ou japonês, o uso de um teclado de hardware Bluetooth para digitar texto em chinês simplificado ou em japonês não tem suporte no momento.  No entanto, no HoloLens em chinês ou japonês, você pode continuar usando um teclado Bluetooth para digitar em inglês (para alternar um teclado de hardware para digitar em inglês, pressione a tecla ~).
+> - Você não pode usar o aplicativo configurações para alterar o idioma do sistema entre inglês, japonês e chinês. A atualização de uma nova compilação é a única maneira com suporte de alterar o idioma do sistema do dispositivo.
+> - Embora você possa usar o teclado pinyin na tela para inserir texto em chinês simplificado ou japonês, não há suporte para o uso de um teclado de hardware Bluetooth para digitar texto em chinês simplificado ou japonês no momento.  No entanto, no HoloLens chinês ou japonês, você pode continuar a usar um teclado Bluetooth para digitar em inglês (para alternar um teclado de hardware para digitar em inglês, pressione a tecla ~).

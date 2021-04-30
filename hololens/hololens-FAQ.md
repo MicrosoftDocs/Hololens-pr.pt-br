@@ -1,7 +1,7 @@
 ---
-title: Perguntas frequentes sobre dispositivos e hologramas HoloLens
-description: Você tem uma pergunta rápida sobre o HoloLens ou a interação com hologramas?  Este artigo fornece uma resposta rápida e mais recursos.
-keywords: hololens, perguntas frequentes, problemas conhecidos, ajuda
+title: Perguntas frequentes sobre os dispositivos e hologramas do HoloLens
+description: Você tem uma pergunta rápida sobre o HoloLens ou a interação com os hologramas?  Este artigo fornece uma resposta rápida e mais recursos.
+keywords: hololens, perguntas frequentes, problema conhecido, ajuda
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -18,281 +18,282 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 918ffe42ae23c6b7e0e91c6d365c80eee487660b
-ms.sourcegitcommit: 07ffe1bf2f45dcb2ba9d7fbe54b4773a0fb9d525
+ms.openlocfilehash: 660c3b4d3a35a7794de5e3e2fb18f2a4aba03c0e
+ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393855"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "108308057"
 ---
-# <a name="frequently-asked-questions-about-hololens-devices-and-holograms"></a>Perguntas frequentes sobre dispositivos e hologramas HoloLens
+# <a name="frequently-asked-questions-about-hololens-devices-and-holograms"></a>Perguntas frequentes sobre os dispositivos e hologramas do HoloLens
 
-Este artigo responde a algumas perguntas que você pode ter sobre como usar o HoloLens, incluindo como criar hologramas, trabalhar com espaços e muito mais.
+Este artigo responde a algumas perguntas que você pode ter sobre como usar o HoloLens, incluindo como posicionar hologramas, trabalhar com espaços e muito mais.
 
-Sempre que você tiver problemas, certifique-se de que o HoloLens [está carregado.](https://support.microsoft.com/help/12627/hololens-charge-your-hololens) Tente [reiniciá-lo](hololens-restart-recover.md) para ver se isso corrige algo. E use o aplicativo Feedback para nos enviar informações sobre o problema. Você encontrará o aplicativo Feedback no [ menu**Iniciar**](holographic-home.md).
+Sempre que tiver problemas, certifique-se de que o HoloLens é [cobrado](https://support.microsoft.com/help/12627/hololens-charge-your-hololens). Tente [reiniciá-lo](hololens-restart-recover.md) para ver se ele corrige coisas. E use o aplicativo de comentários para nos enviar informações sobre o problema. Você encontrará o aplicativo de comentários no [menu **Iniciar**](holographic-home.md).
 
-Para saber mais sobre como usar o HoloLens, consulte [HoloLens (1ª geração) fit e comfort com perguntas frequentes.](hololens1-fit-comfort-faq.md)
+Para obter dicas sobre como realizar o HoloLens, confira o [hololens (1ª gen) e as perguntas frequentes](hololens1-fit-comfort-faq.md).
 
-Este artigo aborda as questões e problemas a seguir:
-<a id="list"></a>
+Este artigo aborda as seguintes perguntas e problemas: <a id="list"></a>
 
 - [Meus hologramas não parecem corretos ou estão se movendo](#my-holograms-dont-look-right-or-are-moving-around)
-- [Vejo uma mensagem que diz "Encontrando seu espaço"](#i-see-a-message-that-says-finding-your-space)
+- [Vejo uma mensagem que diz "encontrando seu espaço"](#i-see-a-message-that-says-finding-your-space)
 - [Não estou vendo os hologramas que espero ver no meu espaço](#im-not-seeing-the-holograms-that-i-expect-to-see-in-my-space)
-- [Não é possível posicionar os hologramas no local desejado](#i-cant-place-holograms-where-i-want-to)
-- [Os hologramas desaparecem ou são inseridos em outros hologramas ou objetos](#holograms-disappear-or-are-encased-in-other-holograms-or-objects)
+- [Não posso posicionar hologramas onde desejo](#i-cant-place-holograms-where-i-want-to)
+- [Os hologramas desaparecem ou são encaixados em outros hologramas ou objetos](#holograms-disappear-or-are-encased-in-other-holograms-or-objects)
 - [Posso ver os hologramas que estão no outro lado de uma parede](#i-can-see-holograms-that-are-on-the-other-side-of-a-wall)
-- [Quando posiciono um holograma em uma parede, o holograma parece flutuar](#when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float)
-- [Os aplicativos aparecem muito próximos a mim quando tento movê-los](#apps-appear-too-close-to-me-when-im-trying-to-move-them)
-- [Estou com um erro de pouco espaço em disco](#im-getting-a-low-disk-space-error)
+- [Quando eu coloca um holograma em uma parede, o holograma parece flutuar](#when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float)
+- [Os aplicativos aparecem muito próximos de mim quando estou tentando movê-los](#apps-appear-too-close-to-me-when-im-trying-to-move-them)
+- [Estou recebendo um erro de pouco espaço em disco](#im-getting-a-low-disk-space-error)
 - [O HoloLens não responde aos meus gestos](#hololens-doesnt-respond-to-my-gestures)
 - [O HoloLens não responde à minha voz](#hololens-doesnt-respond-to-my-voice)
-- [Estou com problemas para emparelhar ou usar um dispositivo Bluetooth](#im-having-problems-pairing-or-using-a-bluetooth-device)
-- [As Configurações do HoloLens lista dispositivos como disponíveis, mas os dispositivos não funcionam](#hololens-settings-lists-devices-as-available-but-the-devices-dont-work)
-- [Estou com problemas ao usar o controle do HoloLens](#im-having-problems-using-the-hololens-clicker)
-- [Não consigo conectar ao Wi-Fi](#i-cant-connect-to-wi-fi)
-- [Meu HoloLens não está funcionando bem, não responde ou não inicia](#my-hololens-isnt-running-well-is-unresponsive-or-wont-start)
-- [Não consigo entrar em um dispositivo HoloLens porque ele foi configurado anteriormente para outra pessoa](#i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else)
+- [Estou tendo problemas para emparelhar ou usar um dispositivo Bluetooth](#im-having-problems-pairing-or-using-a-bluetooth-device)
+- [Configurações do HoloLens lista os dispositivos como disponíveis, mas os dispositivos não funcionam](#hololens-settings-lists-devices-as-available-but-the-devices-dont-work)
+- [Estou tendo problemas para usar o clicador de HoloLens](#im-having-problems-using-the-hololens-clicker)
+- [Não consigo me conectar ao Wi-Fi](#i-cant-connect-to-wi-fi)
+- [Meu HoloLens não está funcionando bem, não está respondendo ou não é iniciado](#my-hololens-isnt-running-well-is-unresponsive-or-wont-start)
+- [Não consigo entrar em um dispositivo de HoloLens porque ele foi configurado anteriormente para outra pessoa](#i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else)
 - [Perguntas sobre o gerenciamento de dispositivos HoloLens](#questions-about-managing-hololens-devices)
 - [Perguntas sobre a proteção de dispositivos HoloLens](#questions-about-securing-hololens-devices)
-- [Como faço para excluir todos os espaços?](#how-do-i-delete-all-spaces)
-- [Não consigo encontrar ou usar o teclado para digitar o emulador HoloLens 2](#i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator)
+- [Como fazer excluir todos os espaços?](#how-do-i-delete-all-spaces)
+- [Não consigo encontrar ou usar o teclado para digitar o emulador do HoloLens 2](#i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator)
 
 ## <a name="my-holograms-dont-look-right-or-are-moving-around"></a>Meus hologramas não parecem corretos ou estão se movendo
 
-Se seus hologramas não parecerem corretos (por exemplo, são instáveis ​​ou trêmulos, ou você vê manchas pretas em cima deles), tente uma destas correções:
+Se os hologramas não parecerem corretos (por exemplo, eles estão tremidos ou tremidoss, ou se você vir patches pretos sobre eles), tente uma destas correções:
 
-- [Limpe o visor do dispositivo](hololens1-hardware.md#care-and-cleaning) e verifique se nada está bloqueando os sensores.
-- Verifique se você está em uma sala bem iluminada e sem muita luz solar direta.
-- Tente andar por aí e contemplar o seu entorno, para que o HoloLens possa examiná-los mais completamente.
-- Se você tiver feito muitos hologramas, experimente remover alguns.
+- [Limpe o visor do dispositivo](hololens1-hardware.md#care-and-cleaning) e certifique-se de que nada esteja bloqueando os sensores.
+- Verifique se você está em uma sala bem iluminada que não tem muita luz de sol direta.
+- Tente percorrer e nuvens ao seu lugar para que o HoloLens possa examiná-los mais completamente.
+- Se você colocou muitos hologramas, tente remover alguns.
 
-Se você ainda estiver enfrentando problemas, tente executar o aplicativo de Calibragem. Esse aplicativo calibra seu HoloLens apenas para você ajudar a manter seus hologramas com a melhor aparência. Para fazer isso, vá para **Configurações** > **Sistema** > **Utilitários**. Em **Calibragem**, selecione **Abrir Calibragem**.
+Se você ainda tiver problemas, tente executar o aplicativo de calibragem. Esse aplicativo Calibra o seu HoloLens apenas para que você ajude a manter seus hologramas mais adequados. Para fazer isso, vá para **configurações**  >    >  **utilitários** do sistema. Em **calibragem**, selecione **abrir calibragem**.
 
 [Voltar à lista](#list)
 
-## <a name="i-see-a-message-that-says-finding-your-space"></a>Vejo uma mensagem que diz "Encontrando seu espaço"
+## <a name="i-see-a-message-that-says-finding-your-space"></a>Vejo uma mensagem que diz "encontrando seu espaço"
 
-Quando o HoloLens está aprendendo ou carregando um espaço, você pode ver uma breve mensagem que diz "Localizando seu espaço". Se essa mensagem for exibida por mais de alguns segundos, você verá outra mensagem no menu Iniciar que diz "Ainda procurando o seu espaço".
+Quando o HoloLens está aprendendo ou carregando um espaço, você pode ver uma breve mensagem que diz "encontrando seu espaço". Se essa mensagem for exibida por mais de alguns segundos, você verá outra mensagem no menu iniciar que diz "ainda procurando seu espaço".
 
-Essas mensagens significam que o HoloLens está com problemas para mapear o seu espaço. Quando isso acontece, você pode abrir aplicativos, mas não é possível posicionar o holograma no ambiente.
+Essas mensagens significam que o HoloLens está tendo problemas para mapear seu espaço. Quando isso acontece, você pode abrir aplicativos, mas não pode posicionar os hologramas em seu ambiente.
 
-Se você vir essas mensagens frequentemente, tente uma ou mais das seguintes correções:
+Se você vir essas mensagens com frequência, tente uma ou mais das seguintes correções:
 
-- Verifique se você está em uma sala bem iluminada e sem muita luz solar direta.
-- Verifique se o visor do seu dispositivo está limpo. [Saiba como limpar o visor](hololens1-hardware.md#care-and-cleaning).
-- Verifique se você possui um sinal Wi-Fi forte. Se você entrar em um novo ambiente sem Wi-Fi ou com um sinal Wi-Fi fraco, o HoloLens não conseguirá encontrar seu espaço. Verifique sua conexão Wi-Fi em **Configurações** > **Rede &amp; Internet** > **Wi-Fi**.
-- Tente mover mais devagar.
+- Verifique se você está em uma sala bem iluminada que não tem muita luz de sol direta.
+- Verifique se o visor do dispositivo está limpo. [Saiba como limpar o visor](hololens1-hardware.md#care-and-cleaning).
+- Verifique se você tem um sinal de Wi-Fi forte. Se você inserir um novo ambiente que não tem nenhum Wi-Fi ou um sinal de Wi-Fi fraco, o HoloLens não poderá encontrar seu espaço. Verifique a conexão do Wi-Fi acessando **configurações**  >  **rede &amp; Internet**  >  **Wi-Fi**.
+- Tente mover mais lentamente.
 
 [Voltar à lista](#list)
 
 ## <a name="im-not-seeing-the-holograms-that-i-expect-to-see-in-my-space"></a>Não estou vendo os hologramas que espero ver no meu espaço
 
-Se você não vir os hologramas que não criou ou se estiver vendo alguns que não espera, tente uma ou mais das seguintes correções:
+Se você não vir os hologramas que colocou, ou se estiver vendo alguns que não espera, tente uma ou mais das seguintes correções:
 
-- Acenda algumas luzes. O HoloLens funciona melhor em um espaço bem iluminado.
-- Remova os hologramas de que você não precisa em **Configurações** > **Sistema** > **Hologramas** > **Remover hologramas próximos**. Ou, se necessário, selecione **Remover todos os hologramas**.
+- Ative algumas luzes. O HoloLens funciona melhor em um espaço bem aceso.
+- Remova os hologramas que você não precisa, acessando **configurações**  >    >  **hologramas** do sistema  >  **remover hologramas próximos**. Ou, se necessário, selecione **remover todos os hologramas**.
 
   > [!NOTE]
-  > Se o layout ou a iluminação do seu espaço mudarem significativamente, seu dispositivo poderá ter problemas para identificar o espaço e mostrar seus hologramas.
+  > Se o layout ou a iluminação em seu espaço mudar significativamente, seu dispositivo poderá ter problemas para identificar seu espaço e mostrar os hologramas.
 
 [Voltar à lista](#list)
 
-## <a name="i-cant-place-holograms-where-i-want-to"></a>Não é possível posicionar os hologramas no local desejado
+## <a name="i-cant-place-holograms-where-i-want-to"></a>Não posso posicionar hologramas onde desejo
 
-Aqui estão algumas coisas a serem feitas se você estiver tendo problemas para posicionar hologramas:
+Aqui estão algumas coisas a serem experimentadas se você estiver tendo problemas para colocar os hologramas:
 
-- Fique entre um e três metros de onde você está tentando posicionar o holograma.
-- Não projete os hologramas em superfícies pretas ou refletoras.
-- Verifique se você está em uma sala bem iluminada e sem muita luz solar direta.
-- Caminhe pelos cômodos para que o HoloLens possa verificar novamente o ambiente. Para ver o que já foi verificado, feche e abra dedos indicador e polegar para revelar o gráfico da malha de mapeamento.
+- Entre um e três medidores de onde você está tentando posicionar o holograma.
+- Não coloque os hologramas em superfícies pretas ou reflexivas.
+- Verifique se você está em uma sala bem iluminada que não tem muita luz de sol direta.
+- Percorra as salas para que o HoloLens possa examinar novamente seu ambiente. Para ver o que já foi verificado, toque em ar para revelar o gráfico de malha de mapeamento.
 
 [Voltar à lista](#list)
 
-## <a name="holograms-disappear-or-are-encased-in-other-holograms-or-objects"></a>Os hologramas desaparecem ou são inseridos em outros hologramas ou objetos
+## <a name="holograms-disappear-or-are-encased-in-other-holograms-or-objects"></a>Os hologramas desaparecem ou são encaixados em outros hologramas ou objetos
 
-Se você ficar muito perto de um holograma, ele desaparecerá temporariamente &mdash;para restaurar o holograma, apenas afaste-se dele. Além disso, se você posicionou vários hologramas juntos, alguns podem desaparecer. Experimente remover alguns.
+Se você ficar muito próximo de um holograma, ele desaparecerá temporariamente &mdash; para restaurar o holograma, apenas se afastar dele. Além disso, se você colocou vários hologramas próximos juntos, alguns podem desaparecer. Tente remover alguns.
 
-Os hologramas também podem ser bloqueados ou ofuscados por outros hologramas ou por objetos como paredes. Se isso acontecer, tente uma das seguintes correções:
+Os hologramas também podem ser bloqueados ou encaixados por outros hologramas ou por objetos como paredes. Se isso acontecer, tente uma das seguintes correções:
 
-- Se o holograma estiver inserido em outro holograma, mova o holograma para outro local. Para fazer isso, selecione **Ajustar** e, em seguida, toque e segure para posicioná-lo.
-- Se o holograma estiver revestido uma parede, selecione **Ajustar** e, em seguida, caminhe em direção à parede até que o holograma apareça. Toque e segure e puxe o holograma para frente e para fora da parede.
-- Se você não conseguir mover o holograma usando gestos, use sua voz para removê-lo. Olhe para o holograma e diga "Remover". Em seguida, reabra o holograma e posicione-o em um novo local.
+- Se o holograma for encaixado em outro holograma, mova o holograma encaixado para outro local. Para fazer isso, selecione **ajustar**, em seguida, toque e segure para posicioná-lo.
+- Se o holograma for encaixado em uma parede, selecione **ajustar** e, em seguida, percorra a parede até que o holograma seja exibido. Toque e segure e, em seguida, puxe o holograma para frente e para fora da parede.
+- Se você não conseguir mover o holograma usando gestos, use sua voz para removê-lo. Olhar no holograma e, em seguida, diga "remover". Em seguida, reabra o holograma e coloque-o em um novo local.
 
 [Voltar à lista](#list)
 
 ## <a name="i-can-see-holograms-that-are-on-the-other-side-of-a-wall"></a>Posso ver os hologramas que estão no outro lado de uma parede
 
-Se você estiver muito perto de uma parede ou se o HoloLens ainda não tiver analisado a parede, você poderá ver os hologramas que estão na sala ao lado. Para escanear a parede, fique entre um e três metros da parede e olhe para ele.
+Se estiver muito perto de uma parede ou se o HoloLens ainda não tiver verificado a parede, você poderá ver os hologramas que estão na sala seguinte. Para digitalizar a parede, fique entre um e três medidores da parede e olhar-o.
 
-Um objeto preto ou refletor (por exemplo, um sofá preto ou uma geladeira de aço inoxidável) perto da parede pode causar problemas quando o HoloLens tenta escanear a parede. Se houver esse objeto, escaneie o outro lado da parede.
-
-[Voltar à lista](#list)
-
-## <a name="when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float"></a>Quando posiciono um holograma em uma parede, o holograma parece flutuar
-
-Um holograma posicionado em uma parede geralmente fica a uma polegada de distância da parede. Se ele parecer mais distante, tente uma ou mais das seguintes correções:
-
-- Quando você projeta um holograma em uma parede, fique entre um e três metros da parede e fique de frente para a parede.
-- Feche e abra dedos indicador e polegar na parede para revelar o gráfico da malha de mapeamento. Verifique se a malha se alinha com a parede. Caso contrário, remova o holograma, escaneie novamente a parede e tente novamente.
-- Se o problema persistir, execute o aplicativo de Calibragem. Você o encontrará em **Configurações** > **Sistema** > **Utilitários**.
+Um objeto preto ou reflexivo (por exemplo, um sofá negro ou um refrigerador de aço Stainless) perto da parede pode causar problemas quando o HoloLens tenta digitalizar a parede. Se houver um objeto desse tipo, digitalize o outro lado da parede.
 
 [Voltar à lista](#list)
 
-## <a name="apps-appear-too-close-to-me-when-im-trying-to-move-them"></a>Os aplicativos aparecem muito próximos a mim quando tento movê-los
+## <a name="when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float"></a>Quando eu coloca um holograma em uma parede, o holograma parece flutuar
 
-Experimente movimentar-se e olhar para a área em que você está colocando o aplicativo, de modo que o HoloLens examine a área de ângulos diferentes. [Limpar o seu dispositivo](hololens1-hardware.md#care-and-cleaning) também pode ajudar.
+Um holograma que você coloca em uma parede normalmente parece ser uma polegada ou muito longe da parede. Se parecer mais distante, tente uma ou mais das seguintes correções:
+
+- Quando você coloca um holograma em uma parede, ele se destaca entre um e três metros da parede e face a parede diretamente.
+- O ar toca na parede para revelar o gráfico de malha de mapeamento. Certifique-se de que a malha se alinhe com a parede. Se não estiver, remova o holograma, examine novamente a parede e tente novamente.
+- Se o problema persistir, execute o aplicativo de calibragem. Você o encontrará em **configurações**  >    >  **utilitários** do sistema.
 
 [Voltar à lista](#list)
 
-## <a name="im-getting-a-low-disk-space-error"></a>Estou com um erro de pouco espaço em disco
+## <a name="apps-appear-too-close-to-me-when-im-trying-to-move-them"></a>Os aplicativos aparecem muito próximos de mim quando estou tentando movê-los
 
-Libere espaço de armazenamento seguindo um ou mais destes procedimentos:
+Tente percorrer a área em que você está colocando o aplicativo para que o HoloLens examine a área de diferentes ângulos. [Limpar o visor do dispositivo](hololens1-hardware.md#care-and-cleaning) também pode ajudar.
 
-- Remova alguns dos hologramas que você criou ou remova alguns dados salvos nos aplicativos. [Como faço para encontrar meus dados?](holographic-data.md)
-- Exclua algumas imagens e vídeos no aplicativo Fotos.
-- Desinstale alguns aplicativos de seu HoloLens. Na lista **Todos os aplicativos**, toque e segure o aplicativo que você deseja desinstalar e, em seguida, selecione **Desinstalar**. (Desinstalar o aplicativo também exclui todos os dados que o aplicativo armazena no dispositivo.)
+[Voltar à lista](#list)
+
+## <a name="im-getting-a-low-disk-space-error"></a>Estou recebendo um erro de pouco espaço em disco
+
+Libere espaço de armazenamento fazendo um ou mais dos seguintes:
+
+- Remova alguns dos hologramas que você colocou ou remova alguns dados salvos de dentro de aplicativos. [Como fazer encontrar meus dados?](holographic-data.md)
+- Exclua algumas imagens e vídeos no aplicativo fotos.
+- Desinstale alguns aplicativos do seu HoloLens. Na lista **todos os aplicativos** , toque e mantenha o aplicativo que você deseja desinstalar e selecione **desinstalar**. (A desinstalação do aplicativo também exclui todos os dados que o aplicativo armazena no dispositivo.)
 
 [Voltar à lista](#list)
 
 ## <a name="hololens-doesnt-respond-to-my-gestures"></a>O HoloLens não responde aos meus gestos
 
-Para garantir que o HoloLens possa ver seus gestos, mantenha a mão no quadro do gesto. O quadro de gestos se estende alguns metros de cada lado. O HoloLens também pode ver melhor sua mão quando você a segura cerca de 18 polegadas na frente do seu corpo (embora não seja necessário ser preciso). Quando o HoloLens pode ver sua mão, o cursor muda de um ponto para um anel. Saiba mais sobre [usar gestos no HoloLens 2](hololens2-basic-usage.md) ou [usar gestos no HoloLens (1ª geração)](hololens1-basic-usage.md).
+Para garantir que o HoloLens possa ver seus gestos, mantenha sua mão no quadro do gesto. O quadro de gestos estende alguns pés em ambos os lados. O HoloLens também pode ver melhor sua mão quando você mantém cerca de 18 polegadas na frente do seu corpo (embora não precise ser preciso disso). Quando o HoloLens pode ver sua mão, o cursor muda de um ponto para um anel. Saiba mais sobre como [usar gestos no hololens 2](hololens2-basic-usage.md) ou [usando gestos no hololens (1ª gen)](hololens1-basic-usage.md).
 
 [Voltar à lista](#list)
 
 ## <a name="hololens-doesnt-respond-to-my-voice"></a>O HoloLens não responde à minha voz
 
-O HoloLens (1ª geração) e o HoloLens 2 possuem reconhecimento de fala interno e também é compatível com a Cortana (reconhecimento de fala online).
+O HoloLens (1º gen) e o HoloLens 2 têm reconhecimento de fala interno e também oferecem suporte à Cortana (reconhecimento de fala online).
 
-### <a name="built-in-voice-commands-do-not-work"></a>Os comandos de voz internos não funcionam
+### <a name="built-in-voice-commands-do-not-work"></a>Os comandos internos de voz não funcionam
 
-No HoloLens (1ª geração), o reconhecimento de fala interno não é configurável. Ele sempre está ativado. No HoloLens 2, você pode optar por habilitar o reconhecimento de fala e a Cortana durante a configuração do dispositivo.
+No HoloLens (1º gen), o reconhecimento de fala interno não é configurável. Ele está sempre ativado. No HoloLens 2, você pode escolher se deseja ativar o reconhecimento de fala e a Cortana durante a configuração do dispositivo.
 
-Se o seu HoloLens 2 não estiver respondendo à sua voz, certifique-se de que o Reconhecimento de fala esteja ativado. Vá para **Iniciar** > **Configurações** > **Privacidade** > **Controle por voz** e ative o **Reconhecimento de fala**.
+Se o seu HoloLens 2 não estiver respondendo à sua voz, verifique se o reconhecimento de fala está ativado. Acesse **Iniciar**  >  **configurações**  >    >  **fala** a privacidade e ative o **reconhecimento de fala**.
 
-### <a name="cortana-or-dictation-doesnt-work"></a>A Cortana ou o Ditado não funcionam
+### <a name="cortana-or-dictation-doesnt-work"></a>Cortana ou ditado não funciona
 
-Se a Cortana ou o Ditado não responderem à sua voz, verifique se o reconhecimento de fala online está habilitado. Vá para **Iniciar** > **Configurações** > **Privacidade** > **Controle por voz** e verifique as configurações do **Reconhecimento de fala online**. 
+Se o Cortana ou o ditado não responder à sua voz, verifique se o reconhecimento de fala online está ativado. Vá para **Iniciar**  >  **configurações**  >  **privacidade**  >  **fala** e verifique as configurações de **reconhecimento de fala online** . 
 
-Se a Cortana ainda não estiver respondendo, siga um destes procedimentos para verificar se a Cortana está ativada:
+Se a Cortana ainda não estiver respondendo, execute uma das ações a seguir para verificar se a Cortana em si está ativada:
 
-- Em **Todos os aplicativos**, selecione **Cortana** > **Menu** > **Caderno** > **Configurações** para fazer alterações.
-- No HoloLens 2, selecione o botão **Configurações de fala** ou diga "Configurações de fala".
+- Em **todos os aplicativos**, selecione **Cortana** > selecione o **menu**  >    >  **configurações** do bloco de anotações para fazer alterações.
+- No HoloLens 2, selecione o botão **configurações de fala** ou diga "configurações de fala".
 
-Para saber mais sobre o que você pode dizer, confira [Usar sua voz com o HoloLens](hololens-cortana.md).
-
-[Voltar à lista](#list)
-
-## <a name="im-having-problems-pairing-or-using-a-bluetooth-device"></a>Estou com problemas para emparelhar ou usar um dispositivo Bluetooth
-
-Se você estiver tendo problemas para [Emparelhar um dispositivo Bluetooth](hololens-connect-devices.md), tente o seguinte:
-
-- Vá para **Configurações** > **Dispositivos**, e verifique se o Bluetooth está ativado. Se estiver, desative-o e ative-o novamente.
-- Verifique se o dispositivo Bluetooth está totalmente carregado ou com baterias novas.
-- Se ainda não conseguir conectar, [Reinicie o HoloLens](hololens-recovery.md).
+Para saber mais sobre o que você pode dizer, consulte [usar sua voz com o HoloLens](hololens-cortana.md).
 
 [Voltar à lista](#list)
 
-## <a name="hololens-settings-lists-devices-as-available-but-the-devices-dont-work"></a>As Configurações do HoloLens lista dispositivos como disponíveis, mas os dispositivos não funcionam
+## <a name="im-having-problems-pairing-or-using-a-bluetooth-device"></a>Estou tendo problemas para emparelhar ou usar um dispositivo Bluetooth
 
-O HoloLens não é compatível com os perfis de áudio Bluetooth. Dispositivos de áudio Bluetooth, como alto-falantes e fones de ouvido, podem aparecer disponíveis nas configurações do HoloLens, mas não são suportados.
+Se você estiver tendo problemas [para emparelhar um dispositivo Bluetooth](hololens-connect-devices.md), tente o seguinte:
 
-Se estiver com problemas para usar um dispositivo Bluetooth, verifique se é um dispositivo compatível. Os dispositivos compatíveis incluem o seguinte:
-
-- Teclados Bluetooth QWERTY em inglês (você pode usá-los em qualquer lugar que utilize o teclado holográfico).
-- Mouse Bluetooth.
-- O [Controle do HoloLens](hololens1-clicker.md).
-
-Você pode emparelhar outros dispositivos Bluetooth HID e GATT com seu HoloLens. No entanto, pode ser necessário instalar aplicativos complementares correspondentes da Microsoft Store para realmente usar os dispositivos.
+- Vá para **configurações**  >  **dispositivos** e verifique se o Bluetooth está ativado. Se estiver, desative-o e ative-o novamente.
+- Certifique-se de que seu dispositivo Bluetooth seja totalmente cobrado ou que tenha baterias novas.
+- Se você ainda não conseguir se conectar, [reinicie o HoloLens](hololens-recovery.md).
 
 [Voltar à lista](#list)
 
-## <a name="im-having-problems-using-the-hololens-clicker"></a>Estou com problemas ao usar o controle do HoloLens
+## <a name="hololens-settings-lists-devices-as-available-but-the-devices-dont-work"></a>Configurações do HoloLens lista os dispositivos como disponíveis, mas os dispositivos não funcionam
 
-Use o [controle](hololens1-clicker.md) para selecionar, rolar, mover e redimensionar os hologramas. Aplicativos individuais podem dar suporte a gestos de clique adicionais.
+O HoloLens (1º gen) não oferece suporte a perfis de áudio Bluetooth. Dispositivos de áudio Bluetooth, como alto-falantes e headsets, podem aparecer como disponíveis nas configurações do HoloLens, mas não têm suporte.
 
-Se estiver com problemas para usar o controle, verifique se ele está carregado e emparelhado com o seu HoloLens. Se a bateria estiver fraca, a luz indicadora piscará em âmbar. Para verificar se o controle está emparelhado, vá para **Configurações** > **Dispositivos** e veja se ele aparece lá. Para mais informações, confira [Parear o cotrole](hololens1-clicker.md).
+O HoloLens 2 dá suporte ao perfil de áudio Bluetooth A2DP para reprodução de estéreo. O perfil de mãos livres de Bluetooth que habilita a captura de microfone de um periférico Bluetooth não tem suporte no HoloLens 2.
 
-Se o controle estiver carregado e emparelhado e você ainda estiver tendo problemas, redefina-o mantendo pressionado o botão principal e o botão de emparelhamento por 15 segundos. Em seguida, emparelhe o controle com seu HoloLens novamente.
+Se você tiver problemas ao usar um dispositivo Bluetooth, verifique se ele é um dispositivo com suporte. Os dispositivos com suporte incluem o seguinte:
 
-Se a redefinição do controle não ajudar, confira [Reiniciar ou recuperar o controle do HoloLens](hololens1-clicker.md#restart-or-recover-the-clicker).
+- Teclados Bluetooth de QWERTY de língua inglesa (você pode usá-los em qualquer lugar em que use o Holographic Keyboard).
+- Mouses Bluetooth.
+- O [clicador de HoloLens](hololens1-clicker.md).
 
-[Voltar à lista](#list)
-
-## <a name="i-cant-connect-to-wi-fi"></a>Não consigo conectar ao Wi-Fi
-
-Aqui estão algumas dicas para tentar se você não conseguir conectar o seu HoloLens a uma rede Wi-Fi:
-
-- Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar, em seguida, selecione **Configurações** > **Rede &amp; Internet** > **Wi-Fi**. Se o Wi-Fi estiver ativado, tente desligá-lo e ligá-lo novamente.
-- Aproxime-se do roteador ou ponto de acesso.
-- Reiniciar o seu roteador Wi-Fi e, em seguida, [Reinicie o HoloLens](hololens-recovery.md). Tente conectar novamente.
-- Se nada disso funcionar, verifique se o seu roteador está usando o firmware mais recente. Você pode encontrar essas informações no site do fabricante.
+Você pode emparelhar outros dispositivos Bluetooth HID e GATT junto com seu HoloLens. No entanto, talvez seja necessário instalar os aplicativos complementares correspondentes de Microsoft Store para realmente usar os dispositivos.
 
 [Voltar à lista](#list)
 
-## <a name="my-hololens-isnt-running-well-is-unresponsive-or-wont-start"></a>Meu HoloLens não está funcionando bem, não responde ou não inicia
+## <a name="im-having-problems-using-the-hololens-clicker"></a>Estou tendo problemas para usar o clicador de HoloLens
 
-Se o seu dispositivo não estiver funcionando corretamente, confira [Reiniciar, redefinir ou recuperar do HoloLens](hololens-recovery.md).
+Use o [clicador](hololens1-clicker.md) para selecionar, rolar, mover e redimensionar hologramas. Aplicativos individuais podem dar suporte a gestos de clique adicionais.
+
+Se você tiver problemas ao usar o clicer, certifique-se de que ele seja cobrado e emparelhado com o seu HoloLens. Se a bateria estiver baixa, a luz do indicador piscará em âmbar. Para verificar se o clico está emparelhado, acesse **configurações**  >  **dispositivos** e veja se ele aparece lá. Para obter mais informações, consulte [emparelhar o cliquedor](hololens1-clicker.md).
+
+Se o clicador for cobrado e emparelhado e você ainda tiver problemas, redefina-o mantendo o botão principal e o botão de emparelhamento por 15 segundos. Em seguida, emparelhe o clico com seu HoloLens novamente.
+
+Se a redefinição do clicador não ajudar, consulte [reiniciar ou recuperar o clicer do HoloLens](hololens1-clicker.md#restart-or-recover-the-clicker).
 
 [Voltar à lista](#list)
 
-## <a name="i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else"></a>Não consigo entrar em um dispositivo HoloLens porque ele foi configurado anteriormente para outra pessoa
+## <a name="i-cant-connect-to-wi-fi"></a>Não consigo me conectar ao Wi-Fi
 
-Se seu dispositivo foi configurado anteriormente para outra pessoa, seja para um cliente ou para um ex-funcionário, e você não tem a senha deles para desbloquear o dispositivo, siga um destes procedimentos:
+Aqui estão algumas coisas a serem experimentadas se você não puder conectar seu HoloLens a uma rede Wi-Fi:
 
-- Para um dispositivo registrado no MDM (gerenciamento de dispositivo móvel) do Intune, você pode usar o Intune para [limpar](https://docs.microsoft.com/intune/remote-actions/devices-wipe) remotamente o dispositivo. O dispositivo então pisca novamente.  
+- Verifique se Wi-Fi está ativado. Para verificar, use o gesto de início e, em seguida, selecione **configurações**  >  **rede &amp; Internet**  >  **Wi-Fi**. Se Wi-Fi estiver ativado, tente desligá-lo e depois novamente.
+- Aproxime-se do roteador ou do ponto de acesso.
+- Reinicie o roteador Wi-Fi e [reinicie o HoloLens](hololens-recovery.md). Tente se conectar novamente.
+- Se nenhuma dessas coisas funcionar, verifique se o roteador está usando o firmware mais recente. Você pode encontrar essas informações no site do fabricante.
+
+[Voltar à lista](#list)
+
+## <a name="my-hololens-isnt-running-well-is-unresponsive-or-wont-start"></a>Meu HoloLens não está funcionando bem, não está respondendo ou não é iniciado
+
+Se o dispositivo não estiver funcionando corretamente, consulte [reiniciar, redefinir ou recuperar o HoloLens](hololens-recovery.md).
+
+[Voltar à lista](#list)
+
+## <a name="i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else"></a>Não consigo entrar em um dispositivo de HoloLens porque ele foi configurado anteriormente para outra pessoa
+
+Se o dispositivo tiver sido configurado anteriormente para outra pessoa, seja para um cliente ou para um funcionário anterior e você não tiver sua senha para desbloquear o dispositivo, você poderá fazer o seguinte:
+
+- Para um dispositivo registrado no MDM (gerenciamento de dispositivo móvel) do Intune, você pode usar o Intune para [apagar](https://docs.microsoft.com/intune/remote-actions/devices-wipe) remotamente o dispositivo. O dispositivo então se repiscará novamente.  
    > [!IMPORTANT]  
-   > Ao limpar o dispositivo, deixe a opção **Reter estado de registro e conta de usuário** desmarcada.
-- Para um dispositivo que não seja MDM, você pode [colocar o dispositivo no **Modo Flash** e usar o Complemento de Recuperação Avançada](hololens-recovery.md#clean-reflash-the-device) para recuperar o dispositivo.
+   > Ao apagar o dispositivo, lembre-se de manter o **estado de registro e a conta de usuário** desmarcados.
+- Para um dispositivo não MDM, você pode [colocar o dispositivo no **modo flash** e usar o complemento de recuperação avançada](hololens-recovery.md#clean-reflash-the-device) para recuperar o dispositivo.
 
 [Voltar à lista](#list)
 
 ## <a name="questions-about-managing-hololens-devices"></a>Perguntas sobre o gerenciamento de dispositivos HoloLens
 
-### <a name="can-i-use-system-center-configuration-manager-sccm-to-manage-hololens-devices"></a>Posso usar o System Center Configuration Manager (SCCM) para gerenciar dispositivos HoloLens?
+### <a name="can-i-use-system-center-configuration-manager-sccm-to-manage-hololens-devices"></a>Posso usar System Center Configuration Manager (SCCM) para gerenciar dispositivos HoloLens?
 
-Não. Você deve usar um sistema MDM para gerenciar dispositivos do HoloLens.
+Não. Você precisa usar um sistema MDM para gerenciar dispositivos HoloLens.
 
-### <a name="can-i-use-active-directory-domain-services-ad-ds-to-manage-hololens-user-accounts"></a>Posso usar os Serviços de Domínio do Active Directory (AD DS) para gerenciar contas de usuário do HoloLens?
+### <a name="can-i-use-active-directory-domain-services-ad-ds-to-manage-hololens-user-accounts"></a>Posso usar Active Directory Domain Services (AD DS) para gerenciar contas de usuário do HoloLens?
 
-Não. Você precisa usar o Azure Active Directory (Azure AD) para gerenciar contas de usuário para dispositivos HoloLens.
+Não. Você precisa usar Azure Active Directory (AD do Azure) para gerenciar contas de usuário para dispositivos HoloLens.
 
-### <a name="is-hololens-capable-of-automated-data-capture-systems-adcs-auto-enrollment"></a>O HoloLens é compatível com o registro automático do Automated Data Capture Systems (ADCS)?
-
-Não.
-
-### <a name="can-hololens-participate-in-integrated-windows-authentication"></a>O HoloLens pode participar de uma Autenticação Integrada do Windows?
+### <a name="is-hololens-capable-of-automated-data-capture-systems-adcs-auto-enrollment"></a>O HoloLens é compatível com o registro automático de ADCS (sistemas de captura de dados automatizados)?
 
 Não.
 
-### <a name="does-hololens-support-branding"></a>O HoloLens tem suporte para identidade visual?
+### <a name="can-hololens-participate-in-integrated-windows-authentication"></a>O HoloLens pode participar da autenticação integrada do Windows?
 
-Não. No entanto, você pode solucionar esse problema usando uma das seguintes abordagens:
+Não.
 
-- Crie um aplicativo personalizado e, em seguida, [Habilite o Modo de quiosque](hololens-kiosk.md). O aplicativo personalizado pode ter identidade visual e pode iniciar outros aplicativos (como a Assistência Remota).  
-- Altere todas as imagens de perfil de usuário no Azure AD para o logotipo da sua empresa. No entanto, isso pode não ser útil para todos os cenários.
+### <a name="does-hololens-support-branding"></a>O HoloLens dá suporte à identidade visual?
 
-### <a name="what-logging-capabilities-do-hololens-1st-gen-and-hololens-2-offer"></a>Quais recursos de log o HoloLens (1ª geração) e HoloLens 2 oferecem?
+Não. No entanto, você pode contornar esse problema usando uma das seguintes abordagens:
 
-O registro em log fica limitado a rastreamentos que podem ser capturados em cenários de desenvolvimento ou solução de problemas ou de telemetria que os dispositivos enviam aos servidores da Microsoft.
+- Crie um aplicativo personalizado e, em seguida, [habilite o modo de quiosque](hololens-kiosk.md). O aplicativo personalizado pode ter identidade visual e pode iniciar outros aplicativos (como o auxílio remoto).  
+- Altere todas as imagens de perfil do usuário no Azure AD para o logotipo da sua empresa. No entanto, isso pode não ser desejável para todos os cenários.
+
+### <a name="what-logging-capabilities-do-hololens-1st-gen-and-hololens-2-offer"></a>Quais recursos de log do HoloLens (1ª gen) e do HoloLens 2 oferecem?
+
+O registro em log é limitado a rastreamentos que podem ser capturados em cenários de desenvolvimento ou solução de problemas, ou telemetria que os dispositivos enviam aos servidores da Microsoft.
 
 [Voltar à lista](#list)
 
 ## <a name="questions-about-securing-hololens-devices"></a>Perguntas sobre a proteção de dispositivos HoloLens
 
-Consulte nossas informações de segurança do [HoloLens 2.](security-overview.md)
-Para dispositivos HoloLens 1st Gen, revise [esta perguntas frequentes.](hololens1-faq-security.md)
+Consulte [nossas informações de segurança do HoloLens 2](security-overview.md).
+Para dispositivos do HoloLens 1º Gen, examine [estas perguntas frequentes](hololens1-faq-security.md).
 
 [Voltar à lista](#list)
 
-## <a name="how-do-i-delete-all-spaces"></a>Como faço para excluir todos os espaços?
+## <a name="how-do-i-delete-all-spaces"></a>Como fazer excluir todos os espaços?
 
 *Em breve*
 
 [Voltar à lista](#list)
 
-## <a name="i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator"></a>Não consigo encontrar ou usar o teclado para digitar o emulador HoloLens 2
+## <a name="i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator"></a>Não consigo encontrar ou usar o teclado para digitar o emulador do HoloLens 2
 
 *Em breve*
 

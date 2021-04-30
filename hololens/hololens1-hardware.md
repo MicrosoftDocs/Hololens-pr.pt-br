@@ -1,6 +1,6 @@
 ---
 title: Hardware do HoloLens (1ª gen)
-description: Saiba mais sobre os componentes que comem o Microsoft HoloLens (1ª geração), a evolução mais recente de um computador holográfico não ligado da Microsoft executando o Windows 10.
+description: Saiba mais sobre os componentes que compõem o Microsoft HoloLens (1º gen), a evolução mais recente de um computador Holographic da Microsoft que executa o Windows 10.
 ms.assetid: 527d494e-2ab6-46ca-bd5a-bfc6b43cc833
 ms.date: 09/16/2019
 keywords: hololens
@@ -14,29 +14,29 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: f2c1add9e30467f62833640ea212eb2fcd72ce13
-ms.sourcegitcommit: 04b7e789fe69615a60571b769e13a01a9d7aee70
+ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "11407606"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "108308258"
 ---
 # <a name="hololens-1st-gen-hardware"></a>Hardware do HoloLens (1ª gen)
 
-![Microsoft HoloLens (1ª geração)](images/see-through-400px.jpg)
+![Microsoft HoloLens (1ª gen)](images/see-through-400px.jpg)
 
-O Microsoft HoloLens (1ª geração) é o primeiro computador holográfico totalmente semthered do mundo. O HoloLens redefine a computação pessoal por meio de experiências holográficas para capacitar você de novas maneiras. O HoloLens mescla óticas de ponta e sensores para fornecer hologramas 3D fixados no mundo real ao seu redor.
+O Microsoft HoloLens (1º gen) é o primeiro computador Holographic totalmente desvinculado do mundo. O HoloLens redefine a computação pessoal por meio de experiências de Holographic para capacitar você de novas maneiras. O HoloLens combina óticas e sensores de ponta para fornecer hologramas 3D fixados ao mundo real em relação a você.
 
 ## <a name="hololens-components"></a>Componentes do HoloLens
 
 ![Imagem que mostra o conteúdo da caixa](images/hololens-box-contents.png)
 
-O HoloLens inclui os seguintes recursos:
+Seu HoloLens inclui os seguintes recursos:
 
-- **Visor**. Contém os sensores e telas do HoloLens. Você pode girar o visor para cima enquanto estiver usando o HoloLens.
-- **Headband**. Para colocar o HoloLens, use a roda de ajuste para expandir a headband. Com o HoloLens no local, aperte o volante de ajuste até que a faixa de cabeça seja confortável.
-- **Botões de brilho**. Quando você está usando o HoloLens, os botões de brilho ficam no lado esquerdo do dispositivo.
-- **Botões de volume**. Quando você está usando o HoloLens, os botões de volume ficam no lado direito do dispositivo.
-- **Dispositivos de armas**. Quando você pega, coloca ou tira o HoloLens, sempre segure ou segure-o pelos braços do dispositivo.
+- **Visor**. Contém os sensores e as exibições do HoloLens. Você pode girar o visor enquanto estiver aproveitando o HoloLens.
+- **Headband**. Para colocar o HoloLens em, use a roda de ajuste para expandir o headband. Com o HoloLens em vigor, aperte a roda de ajuste até que o headband seja confortável.
+- **Botões de brilho**. Quando você estiver desgastando o HoloLens, os botões de brilho estarão no lado esquerdo do dispositivo.
+- **Botões de volume**. Quando você estiver desgastando o HoloLens, os botões de volume estarão no lado direito do dispositivo.
+- **Braços do dispositivo**. Quando você pega, coloca ou tira seu HoloLens, sempre segure-o ou segure-o pelos braços do dispositivo.
 
 ## <a name="in-the-box"></a>Na caixa
 
@@ -44,98 +44,98 @@ O HoloLens inclui os seguintes recursos:
 
 A caixa HoloLens contém os seguintes itens:
 
-- **Protetores de nariz**. Selecione um protetor de nariz que se ajuste à forma do seu nariz e acomode seus óculos.
-- **Faixa sobre a cabeça**. Quando você estiver usando o HoloLens enquanto se move, use a faixa de sobrecarga para ajudar a manter o dispositivo no lugar. Além disso, se você estiver usando o HoloLens por longos períodos, usar a faixa de sobrecarga poderá tornar o dispositivo mais confortável de usar.
-- **Cabo Micro USB**. Use o cabo micro USB para conectar seu HoloLens à fonte de alimentação para carregamento ou use-o para conectar o HoloLens ao computador.
-- **Fonte de alimentação**. Conecta-se a uma tomada elétrica.
-- **Pano de microfibra**. Use o pano para limpar o visor do HoloLens.
+- **Pads do nariz**. Selecione um painel de nariz que se ajuste à forma do seu nariz e acomode seu Eyewear.
+- **Pulseira de sobrecarga**. Quando você estiver aproveitando o HoloLens enquanto se movimenta, use a pulseira de sobrecarga para ajudar a manter o dispositivo em vigor. Além disso, se você estiver utilizando o HoloLens por períodos extensos, usar a pulseira de sobrecarga poderá tornar o dispositivo mais confortável para o desgaste.
+- **Cabo micro USB**. Use o cabo micro USB para conectar seu HoloLens à fonte de alimentação para cobrança ou use-o para conectar seu HoloLens ao seu computador.
+- **Fonte de energia**. Conecta-se a uma tomada de energia.
+- **Tecido microfiber**. Use o pano para limpar seu visor de HoloLens.
 
 >[!TIP]
->O [clicker](hololens1-clicker.md) acompanha o HoloLens (1ª Geração), em uma caixa separada.
+>O [clicador](hololens1-clicker.md) é fornecido com o HoloLens (1º gen), em uma caixa separada.
 
-### <a name="power-supply-details"></a>Detalhes da Fonte de Alimentação
+### <a name="power-supply-details"></a>Detalhes da fonte de energia
 
-A fonte de alimentação e o cabo USB que acompanham o dispositivo são o melhor mecanismo com suporte para o carregamento. A fonte de alimentação é um carregador de 18W.  Fornece 9V a 2A.
+A fonte de alimentação e o cabo USB que acompanham o dispositivo são o melhor mecanismo com suporte para cobrança. A fonte de energia é um carregador 18W.  Ele fornece 9V a 2A.
 
-A taxa e a velocidade da carga podem variar de acordo com o ambiente no qual o dispositivo está sendo executado.
+A taxa de cobrança e a velocidade podem variar dependendo do ambiente no qual o dispositivo está sendo executado.
 
-Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o dispositivo está ligado, ele deve ser conectado, no mínimo, a um carregador de 15W.
+Para manter/avançar a porcentagem de carga da bateria interna enquanto o dispositivo está ligado, ele deve ser conectado no mínimo a um carregador 15W.
 
 ## <a name="device-specifications"></a>Especificações do dispositivo
 
-### <a name="display"></a>Vídeo
+### <a name="display"></a>Monitor
 
-![O HoloLens tem lentes holográficas de visão](images/displays-400px.jpg)
+![O HoloLens tem lentes de Holographic](images/displays-400px.jpg)
 
 |   |   |
 | - | - |
-| **Óptica** | Lentes holográficas transparentes (guias de onda) |
-| **Resolução holográfica** | 2 mecanismos de luz HD 16:9 que produzem pontos de luz totais de 2,3 M |
-| **Densidade holográfica** | \>2,5 mil raios (pontos de luz por radiano) |
-| **Renderização baseada no olhar** | Calibragem automática de distância de alunolar |
+| **Ótica** | Veja as lentes de Holographic (waveguides) |
+| **Resolução de Holographic** | 2 mecanismos de HD 16:9 produzem pontos de luz totais de 2,3 M |
+| **Densidade de Holographic** | \>2,5 k radiants (pontos leves por radianos) |
+| **Renderização baseada em olhos** | Calibragem de distância Pupillary automática |
 
 ### <a name="sensors"></a>Sensores
 
-![O HoloLens tem sensores para entender seu ambiente e ações do usuário](images/sensor-bar-400px.jpg)
+![O HoloLens tem sensores para entender seu ambiente e as ações do usuário](images/sensor-bar-400px.jpg)
 
-- 1 unidade de medida inercial (IMU)
-- 4 ambientes noções básicas sobre câmeras
-- 1 câmera de profundidade
-- 1 câmera de vídeo hd /foto de 2MP
+- 1 unidade de medida inércia (IMU)
+- 4 câmeras de compreensão do ambiente
+- câmera de 1 profundidade
+- 1 câmera de vídeo de foto/HD 2MP
 - Captura de realidade mista
 - 4 microfones
 - 1 sensor de luz ambiente
 
 ### <a name="input-output-and-connectivity"></a>Entrada, saída e conectividade
 
-- Alto-falantes internos
-- Tomada de áudio de 3,5 mm
+- Palestrantes internos
+- Conector de áudio 3.5 mm
 - Volume para cima/para baixo
 - Brilho para cima/para baixo
 - Botão Ligar/Desligar
 - LEDs de status da bateria
-- Wi-Fi 802.11ac
-- Micro USB 2.0
-- Bluetooth 4.1 LE
+- Wi-Fi 802.11 AC
+- Micro USB 2,0
+- Bluetooth 4,1 LE
 
-### <a name="power"></a>Potência
+### <a name="power"></a>Energia
 
-- Duração da bateria
-- 2 a 3 horas de uso ativo
+- Vida útil da bateria
+- 2-3 horas de uso ativo
 - Até 2 semanas de tempo de espera
-- Totalmente funcional durante o carregamento
-- Resfriado de forma passiva (sem ventiladores)
+- Totalmente funcional ao cobrar
+- Passivamente resfriada (sem ventiladores)
 
 ### <a name="processors"></a>Processadores
 
 ![A placa-mãe do Microsoft HoloLens](images/motherboard-400px.jpg)
 
-- Arquitetura de 32 bits intel com suporte ao TPM 2.0
-- Unidade de Processamento Holográfico da Microsoft personalizada (HPU 1.0)
+- Arquitetura Intel de 32 bits com suporte a TPM 2,0
+- Unidade de processamento Holographic da Microsoft criada de forma personalizada (HPU 1,0)
 
 ### <a name="memory"></a>Memória
 
 - Flash de 64 GB
 - 2 GB de RAM
 
-### <a name="fit"></a>Ajuste
+### <a name="fit"></a>Adequação
 
 |   |   |
 | - | - |
-| **Tamanho** | Tamanho único com faixa ajustável. Encaixa sobre óculos |
-| **Espessura** | 579 gramas |
+| **Dimensionamento** | Tamanho único com faixa ajustável. Ajusta-se em óculos |
+| **Weight** | 579 gramas |
 
 ## <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 Usando o seguinte para entender as ações do usuário:
 
-- Controle de mira
+- Acompanhamento de olhar
 - Entrada de gesto
-- Suporte a voz
+- Suporte de voz
 
 Usando o seguinte para entender o ambiente:
 
-- Som espacial
+- som espacial
 
 ## <a name="pre-installed-software"></a>Software pré-instalado
 
@@ -147,42 +147,42 @@ Usando o seguinte para entender o ambiente:
 - Configurações
 - Windows Feedback
 - Calibragem
-- Aprender gestos
+- Gestos de aprendizagem
 
-## <a name="device-certifications"></a>Certificações do dispositivo
+## <a name="device-certifications"></a>Certificações de dispositivo
 
 ### <a name="safety"></a>Segurança
 
-O HoloLens foi testado e encontrado em conformidade com os requisitos básicos de proteção de impacto do ANSI Z87.1, CSA Z94.3 e EN 166.
-- [Informações SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+O HoloLens foi testado e foi encontrado para estar em conformidade com os requisitos de proteção de impacto básico de ANSI Z 87.1, CSA Z 94.3 e EN 166.
+- [Informações de SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ## <a name="care-and-cleaning"></a>Cuidado e limpeza
 
-Manipule seu HoloLens com cuidado. Para levantar, carregar e ajustar o HoloLens, use os braços do dispositivo &mdash; e não a faixa de sobrecarga. Para manter o visor livre de poeira e impressões digitais e evitar tocar nele. A limpeza repetida pode danificar o visor, portanto, tente manter o dispositivo limpo.
+Manipule seu HoloLens com cuidado. Para levantar, transportar e ajustar seu HoloLens, use os braços do dispositivo, &mdash; não a tira de sobrecarga. Para manter o visor livre de poeira e impressões digitais e evitar tocá-lo. A limpeza repetida pode danificar o visor, portanto, tente manter a limpeza do dispositivo.
 
-Não use limpadores ou solventes no seu HoloLens e não o coloque embaixo d'água ou aplique a água diretamente a ele.
+Não use limpezas ou solvente em seu HoloLens e não a mescle em água ou aplique a água diretamente a ela.
 
-Para limpar o visor, remova qualquer pó usando um pincel de lente de cabeleira de camel ou cabrito ou um assoador de lentes no estilo de lâmpada. Umedeça levemente o pano de microfibra com um pouco de água destilada e então o utilize para limpar o visor com cuidado em um movimento circular.
+Para limpar o visor, remova qualquer poeira usando um pincel de lentes de cabelo Camel ou pastor ou uma lente no estilo de lâmpada Blower. Levemente moisten o pano microfiber com uma pequena quantidade de água ditornada, em seguida, use-o para apagar o visor com cuidado em um movimento circular.
 
-Para limpar o restante do dispositivo, incluindo a faixa de cabeça e os braços do dispositivo, use um pano sem lint umedecido com água e sabão suave. Deixe o HoloLens secar completamente antes de usá-lo novamente.
+Para limpar o restante do dispositivo, incluindo o headband e os braços do dispositivo, use um pano sem fiapos moistened com leve SOAP e água. Deixe que seu HoloLens seque completamente antes de usá-lo novamente.
 
 ![Imagem que mostra como limpar o visor](images/hololens-cleaning-visor.png)
 
-## <a name="finding-the-serial-number"></a>Localizar o número de série
+## <a name="finding-the-serial-number"></a>Encontrando o número de série
 
-O número de série para dispositivos HoloLens (1ª geração) é impresso sob a lente direita.
-1. Segure o dispositivo na sua frente como se fosse usá-lo na cabeça. Com o dispositivo voltado para frente e para cima.
-1. Com a lente ainda voltada para frente, vire o dispositivo de cabeça para baixo para que você veja o lado inferior.
-1. A lente direita agora estará à esquerda, impressa sob a lente na faixa é o número de série. 
+O número de série de dispositivos HoloLens (1º gen) é impresso abaixo da lente direita.
+1. Mantenha o dispositivo na frente de você, como se estivesse pretendendo-o na sua cabeça. Com o dispositivo voltado para frente e para a vertical.
+1. Com a lente ainda voltada para frente, vire o dispositivo de cabeça para baixo para que você veja o lado.
+1. As lentes certas agora estarão à esquerda, impressas sob a lente na faixa é o número de série. 
 
-O número de série também pode ser localizado por um computador conectado:
+O número de série também pode ser encontrado por meio de um PC conectado:
 
-1. Conecte o dispositivo
-1. Navegue até **Esse computador** no explorador de arquivos
-1. Clique com o botão direito do mouse e selecione **Propriedades** do dispositivo do HoloLens
-1. Isso exibirá o número de série do dispositivo. Consulte a captura de tela abaixo.
+1. Conectar o dispositivo
+1. Navegue até **este computador** no explorador de arquivos
+1. Clique com o botão direito e selecione **Propriedades** do dispositivo HoloLens
+1. Isso exibirá o número da série do dispositivo. Como esta captura de tela abaixo.
 
    <img src="images/hl1-serial-number.png" width="400" height="600" alt="Properties page in Windows 10 for HoloLens-3TNKV"/>
 
 > [!div class="nextstepaction"]
-> [Configurar e iniciar o HoloLens (1ª geração)](hololens1-setup.md)
+> [Configurar e iniciar seu HoloLens (1ª gen)](hololens1-setup.md)
