@@ -15,12 +15,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 86ef4328869c15517732eedf3dfb9e2a8252e713
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 178dff5d8a30fdd9c5012e2d14f5d4683d6cc23e
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308058"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397497"
 ---
 # <a name="create-mixed-reality-photos-and-videos"></a>Criar fotos e vídeos de realidade misturada
 
@@ -45,36 +45,36 @@ Para fazer uma foto rápida do modo de exibição atual, pressione os botões vo
 - [Locais de botão no HoloLens (1º gen)](hololens1-hardware.md#hololens-components)
 
 > [!NOTE]
-> Manter os botões **volume up** e **volume inoperante** por três segundos começará a gravar um vídeo em vez de tirar uma foto. Para interromper a gravação, toque nos botões **volume up** e **volume down** simultaneamente.
+> Manter o **volume para cima** e os botões de **volume** para baixo por três segundos iniciarão a gravação de um vídeo em vez de tirar uma foto. Para interromper a gravação, toque nos **botões volume para cima** e volume **para** baixo simultaneamente.
 
 ### <a name="voice-commands-to-take-photos"></a>Comandos de voz para tirar fotos
 
-No HoloLens 2, versão 2004 (e posterior), digamos: "tirar uma foto".
+No HoloLens 2, versão 2004 (e posterior), digamos: "Take a picture".
 
-No HoloLens (1º gen) ou no HoloLens 2, versão 1903, digamos: "Ei Cortana, tirar uma foto".
+No HoloLens (1ª geração) ou no HoloLens 2, versão 1903, digamos: "Hey Cortana, tirar uma foto".
 
-### <a name="start-menu-to-take-photos"></a>Menu Iniciar para tirar fotos
+### <a name="start-menu-to-take-photos"></a>menu Iniciar tirar fotos
 
-Use o gesto de início para ir até **Iniciar** e selecione o ícone de **câmera** .
+Use o gesto Iniciar para ir para **Iniciar** e, em seguida, selecione o **ícone Câmera.**
 
-Aponte sua cabeça para a direção do que você deseja capturar e toque em [ar](hololens2-basic-usage.md#touch-holograms-near-you) para tirar uma foto. Você pode continuar a tocar o ar e capturar fotos adicionais. Todas as fotos capturadas serão salvas em seu dispositivo.
+Aponte a cabeça na direção do que você deseja capturar e, em seguida, [toque no ar](hololens2-basic-usage.md#touch-holograms-near-you) para tirar uma foto. Você pode continuar a tocar no ar e capturar fotos adicionais. Todas as fotos que você capturar serão salvas em seu dispositivo.
 
-Use o gesto iniciar novamente para encerrar a captura de fotos.  
+Use o gesto Iniciar novamente para encerrar a captura de fotos.  
 
-## <a name="capture-a-mixed-reality-video"></a>Vídeo de captura de realidade misturada
+## <a name="capture-a-mixed-reality-video"></a>Capturar um vídeo de realidade misturada
 
-Há várias maneiras de registrar um vídeo de realidade misturada no HoloLens; Você pode usar botões de hardware, voz ou o menu iniciar.
+Há várias maneiras de gravar um vídeo de realidade misturada no HoloLens; você pode usar botões de hardware, voz ou o menu Iniciar.
 
 ### <a name="hardware-buttons-to-record-videos"></a>Botões de hardware para gravar vídeos
 
-A maneira mais rápida de gravar um vídeo é pressionar e manter os botões **volume up** e **volume down** simultaneamente até que uma contagem regressiva de três segundos comece. Para interromper a gravação, toque em ambos os botões simultaneamente.
+A maneira mais rápida de gravar um vídeo é pressionar e manter o **volume** para cima e os botões de **volume** para baixo simultaneamente até que uma contagem regressiva de três segundos seja iniciada. Para interromper a gravação, toque em ambos os botões simultaneamente.
 
 > [!NOTE]
-> Pressionar rapidamente os botões **aumentar** e **diminuir** o volume ao mesmo tempo vai tirar uma foto em vez de gravar um vídeo.
+> Pressionar rapidamente os **botões para cima** e para baixo do **volume** ao mesmo tempo tirará uma foto em vez de gravar um vídeo.
 
-### <a name="voice-to-record-videos"></a>Vídeo de voz para gravar vídeos
+### <a name="voice-to-record-videos"></a>Voz para gravar vídeos
 
-No HoloLens 2, versão 2004 (e posterior), digamos: "Iniciar gravação". Para interromper a gravação, diga "parar gravação".
+No HoloLens 2, versão 2004 (e posterior), digamos: "Iniciar gravação". Para interromper a gravação, diga "Stop recording".
 
 No HoloLens (1º gen) ou no HoloLens 2, versão 1903, digamos: "Ei Cortana, iniciar gravação". Para interromper a gravação, diga "Ei Cortana, parar gravação".
 
@@ -98,32 +98,32 @@ Você pode compartilhar o que vê no HoloLens com amigos e colegas em tempo real
 1. Implantando o aplicativo de [assistência remota do Microsoft Dynamics 365](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) , que permite aos operadores de front-line transmitir o que eles veem para um especialista remoto. O especialista remoto pode então orientar o trabalho de linha de frente verbalmente ou anotando em seu mundo.
 
 > [!NOTE]
-> O compartilhamento do que você vê por meio do portal de dispositivo do Windows ou do aplicativo Microsoft HoloLens Companion exige que seu HoloLens esteja no [modo de desenvolvedor](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal).
+> Compartilhar o que você vê por meio Portal de Dispositivos do Windows ou Microsoft HoloLens aplicativos que o HoloLens está no [modo de Desenvolvedor.](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal)
 
-### <a name="stream-video-with-miracast"></a>Transmitir vídeo com Miracast
+### <a name="stream-video-with-miracast"></a>Transmitir vídeo com o Miracast
 
-Use o gesto de início para ir até **Iniciar** e, em seguida, selecione o ícone **conectar** . No seletor que aparece, selecione o dispositivo ou adaptador habilitado para Miracast ao qual você deseja se conectar.
+Use o gesto Iniciar para ir para **Iniciar** e, em seguida, selecione o **ícone** Conectar. No seletor exibido, selecione o dispositivo ou adaptador habilitado para Miracast ao qual você deseja se conectar.
 
-Para interromper o compartilhamento, use o gesto de início e selecione o ícone **conectar** realçado. Como você estava transmitindo, nada será salvo em seu dispositivo.
+Para interromper o compartilhamento, use o gesto Iniciar e selecione o ícone **Conectar** realçada. Como você estava transmitindo, nada será salvo em seu dispositivo.
 
 > [!NOTE]
-> O suporte ao Miracast foi habilitado no HoloLens (1º gen) a partir da [atualização do Windows 10 de outubro de 2018](https://docs.microsoft.com/windows/mixed-reality/release-notes-october-2018).
+> O suporte ao Miracast foi habilitado no HoloLens (1ª geração) começando com o [Atualização de outubro de 2018 para o Windows 10](https://docs.microsoft.com/windows/mixed-reality/release-notes-october-2018).
 
-### <a name="real-time-video-with-windows-device-portal"></a>Vídeo em tempo real com o portal de dispositivos do Windows
+### <a name="real-time-video-with-windows-device-portal"></a>Vídeo em tempo real com Portal de Dispositivos do Windows
 
-Como o compartilhamento por meio do portal de dispositivo do Windows requer que o modo de desenvolvedor esteja habilitado no HoloLens, siga as instruções em nossa documentação do desenvolvedor para [Configurar o modo de desenvolvedor e navegar pelo portal de dispositivos Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal).
+Como o compartilhamento via Portal de Dispositivos do Windows requer que o modo de desenvolvedor seja habilitado no HoloLens, siga as instruções em nossa documentação do desenvolvedor para configurar o Modo de desenvolvedor e navegar [Portal de Dispositivos do Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal).
 
-### <a name="microsoft-hololens-companion-app"></a>Aplicativo Microsoft HoloLens Companion
+### <a name="microsoft-hololens-companion-app"></a>Microsoft HoloLens aplicativo de adoção
 
-Como o compartilhamento por meio do aplicativo Microsoft HoloLens Companion requer que o modo de desenvolvedor esteja habilitado no HoloLens, siga as instruções em nossa documentação do desenvolvedor para [Configurar o modo de desenvolvedor](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal). Em seguida, baixe o [aplicativo Microsoft HoloLens Companion](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) e siga as instruções no aplicativo para se conectar ao seu HoloLens.
+Como o compartilhamento por meio Microsoft HoloLens aplicativo de acompanhamento exige que o modo de desenvolvedor seja habilitado no HoloLens, siga as instruções em nossa documentação do desenvolvedor para [configurar o modo de desenvolvedor.](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal) Em seguida, baixe [o Microsoft HoloLens de aplicativos e](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) siga as instruções dentro do aplicativo para se conectar ao HoloLens.
 
-Depois que o aplicativo for configurado com seu HoloLens, selecione a opção de **transmissão ao vivo** no menu principal do aplicativo.
+Depois que o aplicativo for definido com o HoloLens, selecione a **opção Transmissão** ao vivo no menu principal do aplicativo.
 
-## <a name="view-your-mixed-reality-photos-and-videos"></a>Exibir fotos e vídeos da realidade misturada
+## <a name="view-your-mixed-reality-photos-and-videos"></a>Exibir suas fotos e vídeos de realidade misturada
 
-Fotos e vídeos de realidade misturada são salvos no "rolo de câmera" do dispositivo. Você pode procurar o conteúdo desta pasta em seu HoloLens com o aplicativo explorador de arquivos (navegue até imagens > imagem de fotos).
+Fotos e vídeos de realidade misturada são salvos no "Camera Roll" do dispositivo. Você pode procurar o conteúdo dessa pasta no HoloLens com o aplicativo Explorador de Arquivos (navegue até **Imagens > De rolagem da Câmera).**
 
-Você também pode exibir fotos e vídeos da realidade misturada no aplicativo fotos, que é pré-instalado no HoloLens. Para fixar uma foto em seu mundo, selecione-a no aplicativo fotos e escolha **posicionar no mundo misto**. Você pode mover a foto em todo o mundo depois que ela for colocada.
+Você também pode exibir suas fotos e vídeos de realidade misturada no aplicativo Fotos, que é pré-instalado no HoloLens. Para fixar uma foto em seu mundo, selecione-a no aplicativo Fotos e **escolha Colocar no mundo misto.** Você pode mover a foto ao redor do mundo depois que ela foi colocada.
 
 Para exibir e/ou salvar fotos e vídeos da realidade misturada em um PC conectado ao HoloLens, você pode usar o [portal do dispositivo Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture) ou o [Explorador de arquivos do seu PC via MTP](https://docs.microsoft.com/windows/mixed-reality/release-notes-april-2018#new-features-for-hololens).
 
@@ -145,28 +145,31 @@ Dicas:
 
 ## <a name="share-your-mixed-reality-photos-and-videos"></a>Compartilhe fotos e vídeos de realidade misturada
 
-Depois de capturar uma foto ou vídeo de realidade misturada, uma visualização será exibida. Selecione o ícone de **compartilhamento** acima da visualização para abrir o assistente de compartilhamento. A partir daí, você pode selecionar o ponto de extremidade para o qual deseja compartilhar foto ou vídeo.
+Antes do [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1), depois de capturar uma foto ou vídeo de realidade misturada, uma visualização será exibida. Selecione o ícone de **compartilhamento** acima da visualização para abrir o assistente de compartilhamento. A partir daí, você pode selecionar o ponto de extremidade para o qual deseja compartilhar foto ou vídeo.
 
-Você também pode compartilhar fotos e vídeos de realidade misturada do OneDrive, carregando automaticamente suas fotos e vídeos de realidade misturada. Abra o aplicativo OneDrive no HoloLens e entre com um [conta Microsoft](https://account.microsoft.com) pessoal, se ainda não tiver feito isso. Selecione o ícone de **configurações** e escolha **carregar câmera**. Ative o carregamento da câmera. Suas fotos e vídeos de realidade misturada agora serão carregados no OneDrive sempre que você iniciar o aplicativo no HoloLens.
+Com o Windows Holographic, versão 21H1, depois de capturar uma foto ou vídeo de realidade misturada, uma visualização será exibida. Selecione o ícone de **compartilhamento** acima da visualização para abrir o assistente de compartilhamento. A partir daí, você pode selecionar o ponto de extremidade (email, OneDrive, etc.) para o qual você gostaria de compartilhar essa foto ou vídeo. Você também pode habilitar seu HoloLens para compartilhar com dispositivos próximos indo para Configurações **-> System -> Experiências Compartilhadas**. Para obter mais detalhes, leia [Compartilhar coisas com dispositivos próximos no Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
+
+> [!TIP] 
+> Você também pode compartilhar fotos e vídeos de realidade misturada do OneDrive carregando automaticamente suas fotos e vídeos de realidade misturada. Abra o aplicativo OneDrive no HoloLens e entre com uma conta **[conta Microsoft](https://account.microsoft.com)** pessoal , caso ainda não tenha feito isso. Selecione o **ícone Configurações** e escolha **Carregar câmera**. Ativar o upload da câmera. Suas fotos e vídeos de realidade misturada agora serão carregados no OneDrive sempre que você iniciar o aplicativo no HoloLens.
 
 > [!NOTE]
-> Você só poderá habilitar o carregamento da câmera no OneDrive se tiver entrado no OneDrive com um conta Microsoft pessoal. Se você configurar o HoloLens com uma conta corporativa ou de estudante, poderá adicionar um conta Microsoft pessoal no aplicativo OneDrive para habilitar esse recurso.
+> Você só poderá habilitar o upload da câmera no OneDrive se estiver entrando no OneDrive com uma conta conta Microsoft. Se você configurar o HoloLens com uma conta de trabalho ou de estudante, poderá adicionar uma conta conta Microsoft pessoal no aplicativo OneDrive para habilitar esse recurso.
 
 ## <a name="limitations-of-mixed-reality-capture"></a>Limitações da captura de realidade misturada
 
-- Ao usar a captura de realidade misturada, a taxa de quadros do HoloLens será dividida em até 30 Hz.
-- A resolução de fotos e vídeos pode ser reduzida se a câmera de foto/vídeo já estiver em uso por outro aplicativo, enquanto a transmissão ao vivo ou quando os recursos do sistema estão baixos.
+- Ao usar a captura de realidade misturada, a taxa de quadros do HoloLens será reduzida pela metade para 30 Hz.
+- A resolução de fotos e vídeos poderá ser reduzida se a câmera de foto/vídeo já estiver em uso por outro aplicativo, durante a transmissão ao vivo ou quando os recursos do sistema estão baixos.
 
-### <a name="maximum-recording-length"></a>Tamanho máximo de gravação
+### <a name="maximum-recording-length"></a>Comprimento máximo de gravação
 
-Em dispositivos de HoloLens 2 antes da Holographic do Windows, os vídeos da versão 20H2 registrados no dispositivo eram limitados ao comprimento máximo de cinco minutos.
+Em dispositivos HoloLens 2 antes do Windows Holographic, versão 20H2, os vídeos gravados no dispositivo eram limitados ao comprimento máximo de cinco minutos.
 
-Devido aos comentários do cliente, aumentamos o tamanho da gravação de [capturas de realidade misturada](holographic-photos-and-videos.md). As capturas de realidade misturada não serão mais limitadas a 5 minutos por padrão, mas, em vez disso, calculará o tamanho máximo de gravação com base no espaço em disco disponível. O dispositivo irá estimar a duração máxima da gravação de vídeo com base no espaço em disco disponível até 80% do espaço total em disco.
+Devido aos comentários dos clientes, aumentamos o tamanho da gravação das [capturas de realidade misturada.](holographic-photos-and-videos.md) As capturas de realidade misturada não serão mais limitadas a 5 minutos por padrão, mas, em vez disso, calcularão o comprimento máximo da gravação com base no espaço em disco disponível. O dispositivo estima a duração máxima da gravação de vídeo com base no espaço em disco disponível até 80% do espaço total em disco.
 
 > [!NOTE]
-> O HoloLens usará o comprimento de gravação de vídeo padrão (5 minutos) se ocorrer uma das seguintes opções:
-> - A duração de gravação máxima estimada é menor do que o padrão de 5 minutos.
-> - O espaço em disco disponível é inferior a 20% do espaço total em disco.
+> O HoloLens usará o comprimento de gravação de vídeo padrão (5 minutos) se ocorrer um dos seguintes:
+> - A duração máxima estimada da gravação é menor do que o padrão de 5 minutos.
+> - O espaço em disco disponível é menor que 20% do espaço total em disco.
 
 ## <a name="default-file-format-and-resolution"></a>Resolução e formato de arquivo padrão
 

@@ -1,7 +1,7 @@
 ---
-title: Visão geral do HoloLens 2 conectado à nuvem com o auxílio remoto
-description: Saiba como registrar dispositivos do HoloLens 2 em uma rede conectada na nuvem usando o assistente remoto do Dynamics 365.
-keywords: HoloLens, gerenciamento, nuvem conectada, assistência remota, AAD, Azure AD, MDM, gerenciamento de dispositivo móvel
+title: Visão geral do HoloLens 2 conectado à nuvem com Assistência Remota
+description: Saiba como registrar dispositivos HoloLens 2 em uma rede conectada à nuvem usando o Dynamics 365 Remote Assist.
+keywords: HoloLens, gerenciamento, conectado à nuvem, Assistência Remota, AAD, Azure AD, MDM, Dispositivos móveis Gerenciamento de Dispositivos
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,34 +14,33 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 69b31657a7efaebd5b25b742023dc8767f9c5038
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 43fbcc3a841f6c3f15006f285188e55d22f10599
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308043"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397647"
 ---
-# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Guia de implantação – nuvem conectada no Cloud 2 com assistência remota – visão geral
+# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Guia de implantação – HoloLens 2 conectado à nuvem com Assistência Remota – Visão geral
 
-Este guia ajuda os profissionais de ti a planejar e implantar dispositivos Microsoft HoloLens 2 em sua organização com o objetivo geral de ter esses dispositivos na nuvem conectados à sua organização com o auxílio remoto do Dynamics 365 pronto para uso. Tenha em mente que isso servirá como um modelo para implantações de prova de conceito em sua organização em vários casos de uso de HoloLens 2.
+Este guia ajuda os profissionais de TI a planejar e implantar dispositivos Microsoft HoloLens 2 em sua organização com a meta geral de ter esses dispositivos conectados à nuvem à sua organização com o Dynamics 365 Remote Assist pronto para uso. Tenha em mente que isso servirá como um modelo para implantações de prova de conceito em sua organização em uma variedade de casos de uso do HoloLens 2.
 
-Durante o guia, abordaremos como registrar seus dispositivos em seu gerenciamento de dispositivo, aplicar licenças conforme necessário e validar que os usuários finais podem usar o assistência remota imediatamente após a configuração do dispositivo. Para fazer isso, veremos as importantes partes da infraestrutura necessária para a configuração e a execução – alcançando a implantação em escala com o HoloLens 2.
+Durante o guia, vamos abranger como registrar seus dispositivos no gerenciamento de dispositivos, aplicar licenças conforme necessário e validar se os usuários finais podem usar imediatamente a Assistência Remota na configuração do dispositivo. Para fazer isso, vamos falar sobre as partes importantes da infraestrutura necessárias para se configurar e executar – alcançando a implantação em escala com o HoloLens 2.
 
-![Faixa conectada na nuvem](./images/cloud-connected-hololens-large.png)
-
+[![Cenário conectado à nuvem ](./images/deployment-guides-revised-scenario-a.png)](./images/deployment-guides-revised-scenario-a.png#lightbox)
 ## <a name="in-this-guide"></a>Neste guia
 
-Este guia tem o objetivo específico de configurar o auxílio remoto em sua organização em seus dispositivos de HoloLens. Abordaremos o necessidades necessário para atingir essa meta. Para manter o foco nessa meta, certas preparações e configurações serão previamente selecionadas para otimizar essa implantação ou para reduzir os itens necessários para a configuração. Você será informado dessas opções e poderá personalizar sua implantação com base nas suas necessidades de negócios.
+Este guia tem a meta específica de configurar o Remote Assist em sua organização em seus dispositivos HoloLens. Vamos abranger as necessidades necessárias para atingir essa meta. Para manter o foco nessa meta, determinadas configurações e preparação serão pré-selecionadas para otimizar essa implantação ou reduzir os itens necessários para configurar. Você será informado dessas opções e poderá personalizar sua implantação com base em suas necessidades de negócios.
 
-Essa é uma configuração semelhante ao [cenário a: implantar em dispositivos do Cloud Connect](https://docs.microsoft.com/hololens/common-scenarios#scenario-a), que é uma boa opção para muitas implantações de prova de conceito, que incluirá:
+Essa é uma configuração semelhante ao Cenário [A:](https://docs.microsoft.com/hololens/common-scenarios#scenario-a)Implantar em dispositivos de conexão de nuvem, que é uma boa opção para muitas implantações de Prova de Conceito, que incluirão:
 
-- As redes Wi-Fi normalmente são totalmente abertas na Internet e nos serviços de nuvem
-- Ingresso no Azure AD com o registro automático do MDM--MDM (Intune) gerenciado
-- Os usuários entram com sua própria conta corporativa (Azure AD)
-  - Um ou vários usuários por dispositivo com suporte
+- Wi-Fi redes são normalmente totalmente abertas para os serviços de Internet e nuvem
+- Ingressar no Azure AD com Registro Automático do MDM – MDM (Intune) Gerenciado
+- Os usuários entrarão com sua própria conta corporativa (Azure AD)
+  - Usuários individuais ou múltiplos por dispositivo com suporte
 - Níveis variados de configurações de bloqueio de dispositivo são aplicadas com base em casos de uso específicos, de totalmente aberto para quiosque de aplicativo único
 
-![Cenário conectado à nuvem](./images/cloud-connected-guide-diagram.png)
+
 
 Nenhuma outra restrição ou configuração de dispositivo será aplicada neste guia, no entanto, recomendamos que você explore essas opções após a conclusão.
 
@@ -86,5 +85,5 @@ Manter:
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Implantação conectada na nuvem-preparar](hololens2-cloud-connected-prepare.md)
+> [Implantação conectada à nuvem – Preparar](hololens2-cloud-connected-prepare.md)
 

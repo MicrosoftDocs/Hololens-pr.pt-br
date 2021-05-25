@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 2d84658ef76ff2c5d8ef7dabe857892e7129a965
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: f8dcc8619715871db0aaba306dd19d252d73ac47
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308247"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397827"
 ---
 # <a name="manage-user-identity-and-sign-in-for-hololens"></a>Gerenciar a identidade e a entrada do usuário para o HoloLens
 
@@ -37,27 +37,27 @@ O HoloLens dá suporte a vários tipos de identidades de usuário. Você pode us
 | Tipo de identidade | Contas por dispositivo | Opções de autenticação |
 | --- | --- | --- |
 | [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) (requer Azure ad Premium) | 64 | <ul><li>Provedor de credenciais da Web do Azure</li><li>Azure Authenticator aplicativo</li><li>Biométrico (íris) &ndash; HoloLens 2 somente<sup>1</sup> </li><li>PIN &ndash; opcional para hololens (1º gen), necessário para o hololens 2</li><li>Senha</li></ul> |
-| [MSA (conta da Microsoft)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biométrico (íris) &ndash; somente HoloLens 2</li><li>PIN &ndash; opcional para hololens (1º gen), necessário para o hololens 2</li><li>Senha</li></ul> |
+| [Conta microsoft (MSA)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biometria (Iris) &ndash; Somente HoloLens 2</li><li>PIN &ndash; opcional para HoloLens (1ª geração), necessário para o HoloLens 2</li><li>Senha</li></ul> |
 | [Conta local](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts) | 1 | Senha |
 
 As contas conectadas à nuvem (Azure AD e MSA) oferecem mais recursos porque podem usar os serviços do Azure.  
 
 > [!NOTE]
-> 1-enquanto um dispositivo HoloLens 2 pode dar suporte a até 64 contas do Azure AD, somente 10 dessas contas podem se registrar na autenticação íris. Isso está alinhado com outras [Opções de autenticação biométrica para o Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer).
+> 1 - Embora um dispositivo HoloLens 2 possa dar suporte a até 64 contas do Azure AD, apenas 10 dessas contas podem ser inscritas na Autenticação Iris. Isso é alinhado com outras opções [de autenticação biométrica para Windows Hello para Empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer).
 
 ## <a name="setting-up-users"></a>Configurando usuários
 
-A maneira mais comum de configurar um novo usuário é durante a configuração inicial pelo usuário do HoloLens (OOBE). Durante a instalação, o HoloLens solicita que um usuário entre usando a conta que deseja usar no dispositivo. Essa conta pode ser um conta Microsoft de consumidor ou uma conta empresarial que foi configurada no Azure. Consulte Configurando seu [hololens (1º gen)](hololens1-start.md) ou [HoloLens 2](hololens2-start.md).
+A maneira mais comum de configurar um novo usuário é durante a experiência do HoloLens OOBE (pronto para uso). Durante a instalação, o HoloLens solicita que um usuário entre usando a conta que deseja usar no dispositivo. Essa conta pode ser um conta Microsoft ou uma conta corporativa que foi configurada no Azure. Consulte Configurando seu [HoloLens (1ª geração)](hololens1-start.md) ou [HoloLens 2](hololens2-start.md).
 
-Como o Windows em outros dispositivos, entrar durante a instalação cria um perfil de usuário no dispositivo. O perfil de usuário armazena aplicativos e dados. A mesma conta também fornece logon único para aplicativos como o Edge ou o Skype usando as APIs do Gerenciador de contas do Windows.  
+Assim como o Windows em outros dispositivos, entrar durante a instalação cria um perfil de usuário no dispositivo. O perfil do usuário armazena aplicativos e dados. A mesma conta também fornece logon único para aplicativos como o Edge ou o Skype usando as APIs do Gerenciador de Contas do Windows.  
 
-Se você usar uma conta corporativa ou organizacional para entrar no HoloLens, o HoloLens será registrado na infraestrutura de ti da organização. Esse registro permite que o administrador de ti configure o MDM (gerenciamento de dispositivo móvel) para enviar políticas de grupo ao seu HoloLens.
+Se você usar uma conta corporativa ou organizacional para entrar no HoloLens, o HoloLens se registrará na infraestrutura de TI da organização. Esse registro permite que o administrador de IT configure o MDM (Mobile Gerenciamento de Dispositivos) para enviar políticas de grupo para o HoloLens.
 
-Por padrão, como em outros dispositivos Windows 10, você precisará entrar novamente quando o HoloLens for reiniciado ou retomado do modo de espera. Você pode usar o aplicativo configurações para alterar esse comportamento ou o comportamento pode ser controlado pela diretiva de grupo.
+Por padrão, quanto a outros Windows 10, você terá que entrar novamente quando o HoloLens for reiniciado ou retomado do modo de espera. Você pode usar o aplicativo Configurações para alterar esse comportamento ou o comportamento pode ser controlado pela política de grupo.
 
 ### <a name="linked-accounts"></a>Contas vinculadas
 
-Como na versão da área de trabalho do Windows, você pode vincular credenciais de conta da Web adicionais à sua conta do HoloLens. Essa vinculação facilita o acesso a recursos entre os aplicativos (como a loja) ou a combinação de acesso a recursos pessoais e de trabalho. Depois de conectar uma conta ao dispositivo, você pode conceder permissão para usar o dispositivo para aplicativos para que você não precise entrar em cada aplicativo individualmente.
+Assim como na versão desktop do Windows, você pode vincular credenciais adicionais de conta da Web à sua conta do HoloLens. Essa vinculação facilita o acesso a recursos entre aplicativos (como a Store) ou combinar o acesso a recursos pessoais e de trabalho. Depois de conectar uma conta ao dispositivo, você pode conceder permissão para usar o dispositivo para aplicativos para que você não precise entrar em cada aplicativo individualmente.
 
 A vinculação de contas não separa os dados do usuário criados no dispositivo, como imagens ou downloads.  
 
@@ -72,17 +72,31 @@ Os dispositivos configurados com as contas do Azure AD não permitirão entrar n
 > [!NOTE]
 > O **HoloLens (1º gen)** começou a dar suporte a vários usuários do Azure ad na [atualização do Windows 10 de abril de 2018](https://docs.microsoft.com/windows/mixed-reality/release-notes-april-2018) como parte do [Windows Holographic for Business](hololens-upgrade-enterprise.md).
 
+### <a name="multiple-users-listed-on-sign-in-screen"></a>Vários usuários listados na tela de entrada
+
+Anteriormente, a tela de entrada mostrou apenas o usuário conectado mais recentemente, bem como um ponto de entrada de "outro usuário". Recebemos comentários dos clientes de que isso não é suficiente se vários usuários tiverem entrado no dispositivo. Eles ainda eram necessários para novo tipo de nome de usuário etc.
+
+Introduzido no [Windows Holographic, versão 21H1,](hololens-release-notes.md#windows-holographic-version-21h1)ao selecionar Outro usuário localizado à direita do campo de entrada do PIN, a tela Entrar exibirá vários usuários com já conectados ao dispositivo.  Isso permite que os usuários selecionem seu perfil de usuário e, em seguida, entre usando suas Windows Hello credenciais. Um novo usuário também pode ser adicionado ao dispositivo desta página Outros usuários por meio do **botão Adicionar conta.**
+
+Quando estiver no menu Outros usuários, o botão Outros usuários exibirá o último usuário conectado ao dispositivo. Selecione este botão para retornar à tela Entrar para esse usuário.
+
+![Padrão da tela de login](./images/multiusers1.jpg)
+
+<br>
+
+![Tela de login de outros usuários](./images/multiusers2.jpg)
+
 ## <a name="removing-users"></a>Removendo usuários
 
-Você pode remover um usuário do dispositivo acessando **configurações**  >  **contas**  >  **outras pessoas**. Essa ação também recupera espaço removendo todos os dados de aplicativo do usuário do dispositivo.  
+Você pode remover um usuário do dispositivo indo para Contas **de**  >  **Configurações**  >  **Outras pessoas**. Essa ação também recupera espaço removendo todos os dados do aplicativo desse usuário do dispositivo.  
 
-## <a name="using-single-sign-on-within-an-app"></a>Usando o logon único em um aplicativo
+## <a name="using-single-sign-on-within-an-app"></a>Usando o logom único dentro de um aplicativo
 
-Como desenvolvedor de aplicativos, você pode aproveitar as identidades vinculadas no HoloLens usando as [APIs do Gerenciador de contas do Windows](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core), assim como faria em outros dispositivos Windows. Alguns exemplos de código para essas APIs estão disponíveis no GitHub: [exemplo de gerenciamento de contas da Web](https://go.microsoft.com/fwlink/p/?LinkId=620621).
+Como desenvolvedor de aplicativos, você pode aproveitar as identidades vinculadas no HoloLens usando as APIs do Gerenciador de Contas do [Windows,](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)assim como faria em outros dispositivos Windows. Alguns exemplos de código para essas APIs estão disponíveis no GitHub: exemplo de gerenciamento [de conta Web.](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
-Qualquer interrupção de conta que possa ocorrer, como solicitação de consentimento do usuário para informações de conta, autenticação de dois fatores e assim por diante, deve ser tratada quando o aplicativo solicita um token de autenticação.
+Quaisquer interrupções de conta que possam ocorrer, como solicitar consentimento do usuário para informações de conta, autenticação de dois fatores e assim por diante, devem ser tratadas quando o aplicativo solicita um token de autenticação.
 
-Se seu aplicativo exigir um tipo de conta específico que não tenha sido vinculado anteriormente, seu aplicativo poderá solicitar que o sistema solicite ao usuário para adicionar um. Essa solicitação dispara o painel de configurações de conta para iniciar como um filho modal de seu aplicativo. Para aplicativos 2D, essa janela é renderizada diretamente sobre o centro do seu aplicativo. Para aplicativos do Unity, essa solicitação retira brevemente o usuário do seu aplicativo Holographic para renderizar a janela filho. Para obter informações sobre como personalizar os comandos e ações nesse painel, consulte [classe WebAccountCommand](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand).
+Se seu aplicativo exigir um tipo de conta específico que não tenha sido vinculado anteriormente, seu aplicativo poderá solicitar ao sistema que o usuário adicione um. Essa solicitação dispara o painel de configurações de conta para iniciar como um filho modal do seu aplicativo. Para aplicativos 2D, essa janela é renderiza diretamente sobre o centro do aplicativo. Para aplicativos unity, essa solicitação tira brevemente o usuário do seu aplicativo holográfico para renderizar a janela filho. Para obter informações sobre como personalizar os comandos e ações nesse painel, consulte [Classe WebAccountCommand](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand).
 
 ## <a name="enterprise-and-other-authentication"></a>Enterprise e outras autenticações
 
@@ -109,21 +123,21 @@ O Windows Hello para empresas (que dá suporte ao uso de um PIN para entrar) tem
 
 O HoloLens 2 dá suporte à autenticação de íris. A íris se baseia na tecnologia do Windows Hello e tem suporte para uso por contas Azure Active Directory e da Microsoft. A íris é implementada da mesma forma que outras tecnologias do Windows Hello e atinge a segurança de biometria longe de 1/100 mil.
 
-Consulte os [requisitos e as especificações biométricas do Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) para obter mais informações. Saiba mais sobre o [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello) e o [Windows Hello para empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). 
+Consulte os [requisitos e as especificações biométricas do Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) para obter mais informações. Saiba mais sobre [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello) e [Windows Hello para Empresas](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). 
 
-### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Como o tipo de conta afeta o comportamento de entrada?
+### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Como o tipo de conta afeta o comportamento de login?
 
-Se você aplicar políticas para entrar, a política sempre é respeitada. Se nenhuma política de entrada for aplicada, esses serão os comportamentos padrão para cada tipo de conta:
+Se você aplicar políticas para entrar, a política sempre é respeitada. Se nenhuma política de login for aplicada, estes são os comportamentos padrão para cada tipo de conta:
 
-- **Azure ad**: solicita autenticação por padrão e configurável por **configurações** para não solicitar mais autenticação.
-- **Conta Microsoft**: o comportamento de bloqueio é diferente permitindo o desbloqueio automático. no entanto, a autenticação de entrada ainda é necessária na reinicialização.
-- **Conta local**: sempre solicita autenticação na forma de uma senha, não configurável em **configurações**
+- **Azure AD**: solicita autenticação por padrão e configurável por **Configurações** para não solicitar mais autenticação.
+- **conta Microsoft**: o comportamento de bloqueio é diferente, permitindo o desbloqueio automático, no entanto, a autenticação de entrada ainda é necessária na reinicialização.
+- **Conta local:** sempre solicita autenticação na forma de uma senha, não configurável **em Configurações**
 
 > [!NOTE]
-> Atualmente, não há suporte para timers de inatividade, o que significa que a política **AllowIdleReturnWithoutPassword** só será respeitada quando o dispositivo entrar em espera.
+> Atualmente, não há suporte para temporizadores de inatividade, o que significa que a **política AllowIdleReturnWithoutPassword** só é respeitada quando o dispositivo entra em espera.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Leia muito mais sobre a proteção de identidade do usuário e a autenticação na [documentação de identidade e segurança do Windows 10](https://docs.microsoft.com/windows/security/identity-protection/).
+Leia muito mais sobre a proteção de identidade do usuário e a autenticação [na documentação Windows 10 segurança e identidade](https://docs.microsoft.com/windows/security/identity-protection/)do .
 
-Saiba mais sobre como configurar a infraestrutura de identidade híbrida de forma completa a [documentação de identidade híbrida do Azure](https://docs.microsoft.com/azure/active-directory/hybrid/).
+Saiba mais sobre como configurar a infraestrutura de identidade híbrida por completo na [documentação de identidade híbrida do Azure.](https://docs.microsoft.com/azure/active-directory/hybrid/)

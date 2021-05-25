@@ -1,8 +1,8 @@
 ---
 title: Reiniciar, redefinir ou recuperar o HoloLens 1
 ms.reviewer: Keep up to date on the basic and advanced instructions for rebooting or resetting your HoloLens mixed reality device.
-description: Como usar a ferramenta de recuperação de dispositivo do Windows para atualizar uma imagem para 1ª gen de HoloLens.
-keywords: instruções, reinicialização, redefinição, recuperação, redefinição de hardware, redefinição reversível, ciclo de energia, HoloLens, desligamento, wdrt, ferramenta de recuperação de dispositivo do Windows
+description: Como usar a Ferramenta de Recuperação de Dispositivos do Windows para piscar uma imagem para o HoloLens 1ª geração.
+keywords: how-to, reboot, reset, recover, hard reset, soft reset, power cycle, HoloLens, shut down, wdrt, windows device recovery tool
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -16,37 +16,37 @@ ms.localizationpriority: medium
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: f50a885f6cc82256d146d7f4914aca934e81c0c0
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: f855aa84a347edc85e5b9f02458721778eb2515a
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308111"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397687"
 ---
-# <a name="restart-reset-or-recover-hololens-1st-gen"></a>Reiniciar, redefinir ou recuperar o HoloLens (1ª gen)
+# <a name="restart-reset-or-recover-hololens-1st-gen"></a>Reiniciar, redefinir ou recuperar o HoloLens (1ª geração)
 
-Se você estiver enfrentando problemas com o seu HoloLens, convém tentar uma reinicialização ou redefinição, ou até mesmo refazer o reflash do dispositivo usando a recuperação do dispositivo. Este artigo orienta você pelas etapas de recuperação recomendadas na ordem.
+Se você estiver tendo problemas com o HoloLens, tente reiniciar ou redefinir ou até mesmo reflashar o dispositivo usando a recuperação do dispositivo. Este artigo orienta você pelas etapas de recuperação recomendadas na ordem.
 
-Se você pretende recuperar um HoloLens 2, consulte [recuperando um hololens 2](https://docs.microsoft.com/hololens/hololens-recovery), pois esse processo é diferente.
+Se você estiver procurando recuperar um HoloLens 2, confira Recuperando um [HoloLens 2,](https://docs.microsoft.com/hololens/hololens-recovery)pois esse processo é diferente.
 
 > [!NOTE]
-> Este artigo se concentra no dispositivo e software do HoloLens. Se os hologramas não parecem corretos, consulte Considerações sobre o **[ambiente do HoloLens](hololens-environment-considerations.md)** para obter informações sobre fatores que melhoram a qualidade do holograma.
+> Este artigo se concentra no dispositivo e no software do HoloLens. Se os hologramas não parecem corretos, confira Considerações de ambiente do **[HoloLens](hololens-environment-considerations.md)** para obter informações sobre fatores que melhoram a qualidade do holograma.
 
 ## <a name="restart"></a>Reiniciar
 
 ### <a name="do-a-safe-restart-by-using-cortana"></a>Fazer uma reinicialização segura usando a Cortana
 
-A maneira mais segura de reiniciar o HoloLens é usando a Cortana, que geralmente é a primeira coisa a ser tentada quando você enfrenta um problema com o HoloLens.
+A maneira mais segura de reiniciar o HoloLens é usando a Cortana, que geralmente é a primeira coisa a tentar quando você tem um problema com o HoloLens.
 
 > [!NOTE] 
 > A Cortana não está disponível em todos os dispositivos.
-> - A Cortana está disponível em todos os dispositivos de HoloLens (1º gen). 
-> - A Cortana está disponível em dispositivos de HoloLens 2 em builds anteriores ao holograpic do Windows, versão 2004 atualização.
+> - A Cortana está disponível em todos os dispositivos HoloLens (1ª geração). 
+> - A Cortana está disponível em dispositivos HoloLens 2 em builds anteriores à atualização do Windows Holograpic, versão 2004.
 
-1. Ative seu HoloLens.
-1. Verifique se um usuário está conectado e se o dispositivo não está aguardando uma senha para desbloqueá-lo.
-2. Diga "Ei Cortana, reboot" ou "Ei Cortana, reiniciar".
-3. O Cortana responderá e solicitará que você confirme. Aguarde a reprodução de um som após a pergunta e, em seguida, diga "Sim". O dispositivo será reiniciado.
+1. A ligar o HoloLens.
+1. Certifique-se de que um usuário está conectado e se o dispositivo não está aguardando uma senha desbloqueá-la.
+2. Diga "Hey Cortana, reinicializar" ou "Hey Cortana, reiniciar".
+3. A Cortana responderá e solicitará que você confirme. Aguarde a reprodução de um som após a pergunta e, em seguida, diga "Sim". O dispositivo será reiniciado.
 
 ### <a name="use-the-power-button-to-do-a-safe-restart"></a>Usar o botão de energia para fazer uma reinicialização segura
 
@@ -73,27 +73,27 @@ Se os métodos anteriores não reiniciaram o HoloLens, Force uma reinicializaç�
 > [!WARNING]
 > Esse é um método potencialmente prejudicial e só deve ser usado se os métodos citados anteriormente não funcionaram.
 
-1. Pressione e mantenha pressionado o botão de **energia** por pelo menos 10 segundos.
+1. Pressione e mantenha o **botão de** energia pressionado por pelo menos 10 segundos.
    - Não há problema em manter o botão por mais de 10 segundos.
    - É seguro ignorar qualquer atividade de LED.
-1. Solte o botão e aguarde 2-3 segundos.
-1. Pressione e segure o botão de **energia** por 1 segundo.
-1. Se você ainda tiver problemas, pressione o botão de **energia** por 4 segundos até que todos os indicadores de bateria apareçam e a tela pare de exibir os hologramas. Aguarde um minuto e pressione o botão de **energia** novamente para ligar o dispositivo.
+1. Solte o botão e aguarde de 2 a 3 segundos.
+1. Pressione e mantenha o **botão de** energia pressionado por 1 segundo.
+1. Se você ainda tiver  problemas, pressione o botão de energia por 4 segundos, até que todos os indicadores de bateria esmaeçam e a tela pare de exibir hologramas. Aguarde 1 minuto e pressione o botão **de** energia novamente para ativar o dispositivo.
 
-## <a name="reset-to-factory-settings"></a>Redefinir para as configurações de fábrica
+## <a name="reset-to-factory-settings"></a>Redefinir para configurações de fábrica
 
 > [!NOTE]
-> A bateria precisa de pelo menos um encargo de 40% para ser redefinido.
+> A bateria precisa de pelo menos uma carga de 40% para redefinir.
 
-Se o seu HoloLens ainda tiver um problema, tente redefini-lo para o estado de fábrica. Esta etapa mantém a versão do software Holographic do Windows que está instalada e retorna todo o resto às configurações de fábrica.
+Se o HoloLens ainda tiver um problema, tente redefini-lo para o estado de fábrica. Esta etapa mantém a versão do software Windows Holographic instalada nele e retorna todo o resto para as configurações de fábrica.
 
 >[!WARNING]
-> Se você redefinir seu dispositivo, todos os seus dados pessoais, aplicativos e configurações serão apagados, incluindo informações de redefinição do TPM. A redefinição instalará apenas a versão mais recente instalada do Windows Holographic. Você precisará refazer todas as etapas de inicialização (calibrar, conectar-se ao Wi-Fi, criar uma conta de usuário, baixar aplicativos e assim por diante).
+> Se você redefinir seu dispositivo, todos os seus dados pessoais, aplicativos e configurações serão apagados, incluindo informações de redefinição do TPM. A redefinição instalará apenas a versão mais recente instalada do Windows Holographic. Você terá que refazer todas as etapas de inicialização (calibrar, conectar-se ao Wi-Fi, criar uma conta de usuário, baixar aplicativos e assim por diante).
 
-1. Abra o aplicativo Configurações e, em seguida, selecione **Atualizar**  >  **recuperação**.
-1. Selecione a opção **Redefinir dispositivo** e leia a mensagem de confirmação.
-1. Confirme a redefinição. O dispositivo será reiniciado e exibirá um conjunto de engrenagens giratórias e uma barra de progresso.
-1. Aguarde cerca de 30 minutos para que esse processo seja concluído. Quando terminar, o dispositivo será reiniciado na experiência "pronta para uso".
+1. Abra o aplicativo Configurações e, em seguida, selecione **Atualizar**  >  **Recuperação.**
+1. Selecione a **opção Redefinir** dispositivo e leia a mensagem de confirmação.
+1. Confirme a redefinição. O dispositivo reiniciará e exibirá um conjunto de engrenagens giratórias e uma barra de progresso.
+1. Aguarde cerca de 30 minutos para que esse processo seja concluído. Quando terminar, o dispositivo será reiniciado para a experiência "pronta para uso".
 
 ## <a name="reinstall-the-operating-system"></a>Reinstalar o sistema operacional
 
@@ -121,8 +121,8 @@ Se o dispositivo não for detectado, siga estas etapas para colocá-lo no modo f
 
 1. Desconecte o dispositivo de qualquer fonte de energia.
 1. Se o dispositivo estiver ligado, mantenha o botão de **energia** pressionado até que ele seja completamente desligado.
-2. Mantenha o botão do **volume** pressionado e toque brevemente no botão de **energia** . O dispositivo deve iniciar e exibir apenas a luz do LED do meio.
-3. Conecte o dispositivo ao seu PC.
-4. Abra a ferramenta de recuperação de dispositivo do Windows.
-5. Selecione **meu dispositivo não foi detectado** e, em seguida, **HoloLens**. 
-6. Siga as instruções para recuperar o dispositivo.
+2. Mantenha o **botão de volume pressionado** e toque brevemente no botão **de** energia. O dispositivo deve iniciar e exibir apenas o LED do meio.
+3. Conecte o dispositivo ao computador.
+4. Abra a Ferramenta de Recuperação de Dispositivos do Windows.
+5. Selecione **Meu dispositivo não foi detectado e,** em seguida, **HoloLens.** 
+6. Siga as instruções para recuperar seu dispositivo.
