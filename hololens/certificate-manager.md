@@ -12,12 +12,12 @@ ms.date: 10/13/2020
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9d221321adcb8062206695e3e610d35dee14523e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: f9dcf98cbd200ac54cd786648fdfe286bff1aa00
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308074"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397447"
 ---
 # <a name="certificate-manager"></a>Gerenciador de certificados
 
@@ -36,23 +36,26 @@ A instalação do certificado atualmente dá suporte a arquivos. cer e. CRT. Os 
 ## <a name="to-install-a-certificate"></a>Para instalar um certificado: 
 
 1.  Conecte seu HoloLens 2 a um PC.
-1.  Coloque o arquivo de certificado que você deseja instalar em um local no seu HoloLens 2.
-1.  Navegue até **configurações aplicativo > atualizar & segurança > certificados** e selecione instalar um certificado.
-1.  Clique em **Importar arquivo** e navegue até o local em que você salvou o certificado.
-1.  Selecione o **local do repositório**.
-1.  Selecione **repositório de certificados**.
+1.  Coloque o arquivo de certificado que você deseja instalar em um local no HoloLens 2.
+1.  Navegue **até Configurações Aplicativo > Atualizar & Certificados**> Segurança e selecione Instalar um certificado.
+1.  Clique **em Importar Arquivo** e navegue até o local em que você salvou o certificado.
+1.  Selecione **Local do Armazenamento**.
+1.  Selecione **Armazenamento de Certificados**.
 1.  Clique em **Instalar**.
 
-O certificado agora deve estar instalado no dispositivo.
+O certificado agora deve ser instalado no dispositivo.
 
 ## <a name="to-remove-a-certificate"></a>Para remover um certificado: 
-1. Navegue até **configurações aplicativo > atualização e segurança > certificados**.
-1. Procure o certificado por nome na caixa de pesquisa.
+>[!WARNING]
+> Embora você possa exibir certificados implantados no MDM no Gerenciador de Certificados, não é possível desinstalá-los no Gerenciador de Certificados. Você deve desinstalá-los por meio do MDM.
+1. Navegue **até Configurações Aplicativo > Atualização e Segurança > Certificados**.
+1. Pesquise o certificado por nome na caixa de pesquisa.
 1. Selecione o certificado.
-1. Clique em **remover**
+1. Clique em **Remover**
 1. Selecione **Sim** quando solicitada a confirmação.
 
 
-![Visualizador de certificados no aplicativo de configurações em CERITIFCATES](images/certificate-viewer-device.jpg)
 
-![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado em configurações.](images/certificate-device-install.jpg)
+![Visualizador de certificados no aplicativo Configurações em Certificados](images/certificate-viewer-device.jpg)
+
+![Imagem mostrando como usar a interface do usuário do certificado para instalar um certificado em Configurações.](images/certificate-device-install.jpg)

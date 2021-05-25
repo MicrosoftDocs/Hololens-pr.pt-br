@@ -11,12 +11,14 @@ ms.localizationpriority: medium
 ms.date: 01/26/2019
 ms.reviewer: ''
 manager: laurawi
-ms.openlocfilehash: 268c3650b85e7e7f102618ccc5a94c25de54dcfe
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+appliesto:
+- HoloLens (1st gen)
+ms.openlocfilehash: 2929cbea826e0cc92a72550c7874995506b94257
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308034"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397277"
 ---
 # <a name="hololens-1st-gen-bitlocker-encryption"></a>Criptografia BitLocker do HoloLens (1ª gen)
 
@@ -59,13 +61,13 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
 1. No menu **Arquivo**, clique em **Salvar**. 
 
-1. Leia o aviso explicando que os arquivos de projeto podem conter informações confidenciais e clique em **OK**.
+1. Leia o aviso explicando que os arquivos de projeto podem conter informações confidenciais e clique em **OK.**
 
     > [!IMPORTANT]
-    > Ao criar um pacote de provisionamento, você pode incluir informações confidenciais nos arquivos de projeto e no arquivo de pacote de provisionamento (. ppkg). Embora você tenha a opção de criptografar o arquivo. ppkg, arquivos de projeto não são criptografados. Você deve armazenar os arquivos de projeto em um local seguro e excluir os arquivos de projeto quando não forem mais necessários.
+    > Ao criar um pacote de provisionamento, você pode incluir informações confidenciais nos arquivos de projeto e no arquivo de pacote de provisionamento (.ppkg). Embora você tenha a opção de criptografar o arquivo. ppkg, arquivos de projeto não são criptografados. Você deve armazenar os arquivos de projeto em um local seguro e excluir os arquivos de projeto quando não for mais necessário.
 
 1. No menu **Exportar**, clique em **Pacote de provisionamento**.
-1. Altere **proprietário** para **administrador de ti**, que definirá a precedência desse pacote de provisionamento superior ao provisionamento de pacotes aplicados a este dispositivo de outras fontes e, em seguida, selecione **Avançar**.
+1. Altere **Proprietário** para **Administrador** de IT, que definirá a precedência desse pacote de provisionamento maior do que os pacotes de provisionamento aplicados a este dispositivo de outras fontes e, em seguida, selecione **Próximo**.
 1. Defina um valor para **Versão do Pacote**.
 
     > [!TIP]
@@ -97,6 +99,6 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
 A criptografia é silenciosa no HoloLens. Para verificar o status de criptografia do dispositivo:
 
-- No HoloLens, vá para **configurações**  >  **sistema**  >  **sobre**. O **BitLocker** será **habilitado** se o dispositivo estiver criptografado. 
+- No HoloLens, vá para **Sistema de**  >  **Configurações**  >  **sobre**. **O BitLocker** **será habilitado** se o dispositivo estiver criptografado. 
 
-    ![Tela sobre mostrando BitLocker habilitado](images/about-encryption.png)
+    ![Sobre a tela mostrando o BitLocker habilitado](images/about-encryption.png)

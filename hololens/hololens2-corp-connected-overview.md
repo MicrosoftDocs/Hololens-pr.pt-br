@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 3041a31e6a4f8b51385fa02dfddc21d56993721d
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: ee6c24f65e5990f1e84a71d86b24dd782cf9f4cc
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308225"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397187"
 ---
 # <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>Guia de implantação-instalação corporativa do HoloLens 2 com guias do Dynamics 365-visão geral
 
@@ -38,7 +38,7 @@ A infraestrutura a seguir já deve estar em vigor:
     - Um ou mais aplicativos são implantados por meio do MDM.
 - Rede 
     - Certificados (SCEP ou PKCS)
-    - Configuração de proxy
+    - Configuração de Proxy
 - Os usuários entram com sua própria conta corporativa (Azure AD)
     - Há suporte para um ou vários usuários por dispositivo.
 - Níveis variados de configurações de bloqueio de dispositivo aplicadas com base em casos de uso específicos, de totalmente aberto para quiosque de aplicativo único.
@@ -46,33 +46,35 @@ A infraestrutura a seguir já deve estar em vigor:
 ## <a name="guides-licensing-and-requirements"></a>[Guia de licenciamento e requisitos](https://docs.microsoft.com/dynamics365/mixed-reality/guides/requirements#licensing-and-product-requirements)
 - Conta do AD do Azure
 - Dynamics 365 orienta aplicativos PC e HoloLens
-- Assinatura de guias do Dynamics 365
-    - Microsoft dataverso (incluído)
-    - Power apps (incluído)
+- Assinatura do Dynamics 365 Guides
+    - Microsoft Dataverse (incluído)
+    - Power Apps (incluído)
 - Power BI Desktop
 - Conectividade de rede
 
-![Diagrama de rede conectada Corp](./images/corpconnected-diagHL2-guides.png)
+[![Diagrama de rede conectada Corp, estágio 1 ](./images/deployment-guides-revised-scenario-b-01-1.png)](./images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
-## <a name="stages-of-deployment"></a>Estágios da implantação
+[![Diagrama de rede conectada Corp, estágio 2 ](./images/deployment-guides-revised-scenario-b-02-1.png)](./images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
+
+## <a name="in-this-guide-you-will"></a>Neste guia, você:
 ### <a name="prepare"></a>Preparar
 > [!div class="checklist"]
->- [Saiba mais sobre os conceitos básicos de infraestrutura para dispositivos do HoloLens 2.](hololens2-corp-connected-prepare.md#infrastructure-essentials)
->- [Saiba mais sobre o Azure AD e configure um se você não o tiver.](hololens2-corp-connected-prepare.md#azure-active-directory)
->- [Saiba mais sobre o gerenciamento de identidade e como configurar melhor as contas do Azure AD.](hololens2-corp-connected-prepare.md#identity-management)
->- [Saiba mais sobre o MDM e configure-o com o Intune se você ainda não tiver um pronto.](hololens2-corp-connected-prepare.md#mobile-device-management)
->- [Familiarize-se com Wi-Fi baseado em certificado.](hololens2-corp-connected-prepare.md#certificates)
->- [Familiarize-se com o proxy.](hololens2-corp-connected-prepare.md#proxy)
+>- [Saiba mais sobre os fundamentos de infraestrutura para dispositivos HoloLens 2.](hololens2-corp-connected-prepare.md#infrastructure-essentials)
+>- [Saiba mais sobre o Azure AD e configurar um se você não o tiver.](hololens2-corp-connected-prepare.md#azure-active-directory)
+>- [Saiba mais sobre o Gerenciamento de identidades e como configurar melhor as contas do Azure AD.](hololens2-corp-connected-prepare.md#identity-management)
+>- [Saiba mais sobre o MDM e configurar com o Intune se você ainda não tiver um pronto.](hololens2-corp-connected-prepare.md#mobile-device-management)
+>- [Familiarize-se com o Wi-Fi baseado em certificado.](hololens2-corp-connected-prepare.md#certificates)
+>- [Familiarize-se com o Proxy.](hololens2-corp-connected-prepare.md#proxy)
 >- [Entenda como você pode usar aplicativos de linha de negócios.](hololens2-corp-connected-prepare.md#line-of-business-apps)
->- [Saiba mais sobre como você pode usar guias para sua organização.](hololens2-corp-connected-prepare.md#guides-playbook)
+>- [Saiba mais sobre como você pode usar Guias para sua organização.](hololens2-corp-connected-prepare.md#guides-playbook)
 ### <a name="configure"></a>Configurar
 > [!div class="checklist"]
 >- [Como criar usuários e grupos.](hololens2-corp-connected-configure.md#azure-users-and-groups)
->- [Como configurar o registro automático.](hololens2-corp-connected-configure.md#auto-enrollment-on-hololens-2)
->- [Como configurar Wi-Fi certificados e perfis para conectividade Wi-Fi corporativa.](hololens2-corp-connected-configure.md#corporate-wi-fi-connectivity)
->- [Carregar e atribuir pacotes de aplicativos de linha de negócios (LOB).](hololens2-corp-connected-configure.md#app-deployment)
+>- [Como configurar o Registro Automático.](hololens2-corp-connected-configure.md#auto-enrollment-on-hololens-2)
+>- [Como configurar certificados Wi-Fi e perfis corporativos para conectividade Wi-Fi corporativa.](hololens2-corp-connected-configure.md#corporate-wi-fi-connectivity)
+>- [Carregar e atribuir pacotes de aplicativos lob (linha de negócios).](hololens2-corp-connected-configure.md#app-deployment)
 >- [Configurar guias do Dynamics 365.](hololens2-corp-connected-configure.md#setup-guides-application-licenses-dataverse-and-authoring)
->- [Como configurar o modo de quiosque (opcional).](hololens2-corp-connected-configure.md#optional-kiosk-mode)
+>- [Como configurar o Modo de Quiosque (opcional).](hololens2-corp-connected-configure.md#optional-kiosk-mode)
 >- [Como configurar o WDAC (opcional).](hololens2-corp-connected-configure.md#optional-wdac)
 ### <a name="deploy"></a>Implantar
 > [!div class="checklist"]
