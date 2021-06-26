@@ -1,5 +1,5 @@
 ---
-title: Atualizar o HoloLens
+title: Atualizar HoloLens 2
 description: Saiba como verificar seu número de Build do HoloLens, manter-se atualizado com as atualizações do dispositivo, ingressar no programa de pessoas e reverter atualizações.
 keywords: como fazer, atualizar, reverter, HoloLens, verificar compilação, número de Build
 ms.prod: hololens
@@ -13,16 +13,15 @@ audience: ITPro
 ms.reviewer: ''
 manager: jarrettr
 appliesto:
-- HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ef1721c60aca82d20e60636cbf4301de81c0177c
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: a27eb1d5eb32a6654f60aac98090cba1aab529d3
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308141"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924104"
 ---
-# <a name="update-hololens"></a>Atualizar o HoloLens
+# <a name="update-hololens-2"></a>Atualizar HoloLens 2
 
 O HoloLens usa Windows Update, assim como outros dispositivos Windows 10. Seu HoloLens baixará e instalará automaticamente as atualizações do sistema sempre que ele estiver conectado à energia e conectado à Internet, mesmo quando ela estiver em espera.
 
@@ -51,44 +50,32 @@ Enquanto o seu HoloLens está instalando a atualização, ele exibirá engrenage
 
 O HoloLens aplica uma atualização por vez.  Se o seu HoloLens for mais de uma versão por trás do mais recente, talvez seja necessário executar o processo de atualização várias vezes para atualizá-lo completamente.
 
-## <a name="go-back-to-a-previous-version---hololens-2"></a>Voltar para uma versão anterior – HoloLens 2
+## <a name="go-back-to-a-previous-version"></a>Voltar para uma versão anterior
 
-Em alguns casos, talvez você queira voltar para uma versão anterior do software do HoloLens. Você pode fazer isso usando o complemento de recuperação avançada para redefinir o HoloLens para a versão anterior.
+Em alguns casos, talvez você queira voltar para uma versão anterior do software do HoloLens. As etapas recomendadas são:
+
+1. Entre em contato com o suporte para ver se eles podem corrigir o problema.
+    1. Verifique se a telemetria **opcional** ou **completa** está habilitada-isso torna seu bug mais acionável e mais fácil para os engenheiros diagnosticarem.
+    1. Os [comentários de arquivo](hololens-feedback.md) são o mais descritivos possível. Anote o título ou use o recurso de compartilhamento para que você possa compartilhar seu bug com o suporte.
+    1. Contate o [suporte](https://aka.ms/hlsupport). Se o problema for um que precisa ser resolvido retornando a uma versão anterior, eles podem fornecer a você o FFU para atualizar seu dispositivo.
+
+1. Se isso não funcionar, [redefina ou repisque o seu HoloLens 2 com o complemento de recuperação avançada](hololens-recovery.md).
+    1. No seu computador, baixe o [complemento de recuperação avançada](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) do Microsoft Store.
+    1. Certifique-se de que você não tem telefones ou dispositivos Windows conectados ao seu PC.
+    1. Escolha qual versão você deseja atualizar:
+        1. Você pode baixar a [versão mais recente do HoloLens 2](https://aka.ms/hololens2download).
+        1. Você pode usar a compilação padrão que os hosts ARC. (Se você escolher essa opção, ignore a próxima etapa.)
+        1. Você pode usar um suporte de compilação fornecido com o.
+    1. Depois de concluir esses downloads, abra o **Explorador de arquivos**  >  **downloads**. Clique com o botão direito do mouse na pasta compactada que você acabou de baixar e selecione **extrair toda**  >  a **extração** para descompactá-la.
+    1. Conecte seu HoloLens ao seu PC usando um USB-a para um cabo USB-C. (Mesmo que você esteja usando outros cabos para conectar seu HoloLens, isso funciona melhor.)
+    1. O complemento de recuperação avançada detecta automaticamente seu HoloLens. Selecione o bloco **Microsoft HoloLens** .
+    1. Na próxima tela, selecione **seleção de pacote manual** e, em seguida, selecione o arquivo de instalação contido na pasta que você descompactou na etapa 4. (Procure um arquivo com a extensão. FFU.)
+    1. Selecione **instalar software** e siga as instruções.
 
 > [!NOTE]
 > Voltar para uma versão anterior exclui seus arquivos pessoais e configurações.
 
-Para voltar para uma versão anterior do HoloLens 2, siga estas etapas:
-
-1. Certifique-se de que você não tem telefones ou dispositivos Windows conectados ao seu PC.
-1. No seu computador, baixe o [complemento de recuperação avançada](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) do Microsoft Store.
-1. Baixe a [versão mais recente do HoloLens 2](https://aka.ms/hololens2download).
-1. Depois de concluir esses downloads, abra o **Explorador de arquivos**  >  **downloads**. Clique com o botão direito do mouse na pasta compactada que você acabou de baixar e selecione **extrair toda**  >  a **extração** para descompactá-la.
-1. Conecte seu HoloLens ao seu PC usando um USB-a para um cabo USB-C. (Mesmo que você esteja usando outros cabos para conectar seu HoloLens, isso funciona melhor.)
-1. O complemento de recuperação avançada detecta automaticamente seu HoloLens. Selecione o bloco **Microsoft HoloLens** .
-1. Na próxima tela, selecione **seleção de pacote manual** e, em seguida, selecione o arquivo de instalação contido na pasta que você descompactou na etapa 4. (Procure um arquivo com a extensão. FFU.)
-1. Selecione **instalar software** e siga as instruções.
-
-## <a name="go-back-to-a-previous-version---hololens-1st-gen"></a>Voltar para uma versão anterior – HoloLens (1ª gen)
-
-Em alguns casos, talvez você queira voltar para uma versão anterior do software do HoloLens. Você pode fazer isso usando a ferramenta de recuperação de dispositivo do Windows para redefinir o HoloLens para a versão anterior.
-
-> [!NOTE]
-> Voltar para uma versão anterior exclui seus arquivos pessoais e configurações.
-
-Para voltar para uma versão anterior do HoloLens 1, siga estas etapas:
-
-1. Certifique-se de que você não tem telefones ou dispositivos Windows conectados ao seu PC.
-1. Em seu computador, baixe a [ferramenta de recuperação de dispositivo do Windows (WDRT)](https://support.microsoft.com/help/12379).
-1. Baixe o [pacote de recuperação de atualização de aniversário do HoloLens](https://aka.ms/hololensrecovery).
-1. Quando o download for concluído, abra o **Explorador de arquivos**  >  **downloads**. Clique com o botão direito do mouse na pasta compactada que você acabou de baixar e selecione **extrair toda**  >  a **extração** para descompactá-la.
-1. Conecte seu HoloLens ao seu PC usando o cabo micro USB com o qual ele veio. (Mesmo que você esteja usando outros cabos para conectar seu HoloLens, isso funciona melhor.)
-1. O WDRT detectará automaticamente seu HoloLens. Selecione o bloco **Microsoft HoloLens** .
-1. Na próxima tela, selecione **seleção de pacote manual** e escolha o arquivo de instalação contido na pasta descompactada na etapa 4. (Procure um arquivo com a extensão. FFU.)
-1. Selecione **instalar software** e siga as instruções.
-
-> [!NOTE]
-> Se o WDRT não detectar seu HoloLens, tente reiniciar o computador. Se isso não funcionar, selecione **meu dispositivo não foi detectado**, selecione **Microsoft HoloLens** e siga as instruções.
+Além disso, se você quiser permanecer em sua versão atualmente instalada, também poderá [Pausar manualmente as atualizações](hololens-updates.md#pause-updates-via-device). Isso dará ao time da equipe de engenharia que o problema será corrigido.
 
 ## <a name="windows-insider-program-on-hololens"></a>Programa Windows Insider no HoloLens
 

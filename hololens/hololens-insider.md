@@ -1,6 +1,6 @@
 ---
 title: Versão prévia do Insider para Microsoft HoloLens
-description: Saiba como começar a usar o Insider compilações e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
+description: Saiba como começar a usar builds do Insider e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -16,45 +16,62 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8545b5f23dc81c194b68ea8b40feb83e525dfdf7
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: a4949ab68121cb772fdb8a62411ed70868a6ccb6
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110397817"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924359"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Versão prévia do Insider para Microsoft HoloLens
 
-Bem-vindo às compilações mais recentes do insider Preview para o HoloLens! É simples [começar](hololens-insider.md#start-receiving-insider-builds) e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
+Bem-vindo aos builds mais recentes do Insider Preview para HoloLens! É simples começar e [fornecer comentários](hololens-insider.md#start-receiving-insider-builds) valiosos para nossa próxima atualização principal do sistema operacional para o HoloLens.
 
-## <a name="windows-insider-release-notes"></a>Notas de versão do Windows Insider
+## <a name="windows-insider-release-notes"></a>notas Participante do Programa Windows Insider versão do Participante do Programa Windows Insider
 
-Estamos empolgados para começar a comprovar novos recursos para os insideres do Windows novamente. Novas compilações serão comprovadas para os canais de desenvolvimento e beta para as atualizações mais recentes. Continuaremos a atualizar esta página à medida que adicionamos mais recursos e atualizações para nossas compilações do Windows Insider. Fique empolgado e pronto para misturar essas atualizações em sua realidade. 
+Estamos empolgados em iniciar o voo de novos recursos para o Windows Insiders novamente. Novos builds serão disponibilizados para os Canais Dev e Beta para as atualizações mais recentes. Continuaremos a atualizar essa página à medida que adicionarmos mais recursos e atualizações às nossas Participante do Programa Windows Insider builds. Fique animado e pronto para misturar essas atualizações em sua realidade. 
 
-### <a name="onedrive-for-work-or-school-camera-roll-upload"></a>Carregamento de rolo de câmera do OneDrive for Work ou School
+### <a name="csp-changes-on-hololens"></a>Alterações do CSP no HoloLens
+ 
+- Introduzido no Participante do Programa Windows Insider build, 20348.1403
 
-*Introduzido na Build 20346,1402*
+#### <a name="devdetail-csp"></a>CSP DevDetail
 
-Adicionamos um novo recurso ao aplicativo de configurações do HoloLens 2, que permite aos clientes carregar automaticamente fotos e vídeos de realidade misturada das imagens do dispositivo > pasta de rolagem da câmera para a pasta do OneDrive for Work ou School correspondente. Esse recurso aborda uma [lacuna de recursos no aplicativo onedrive](holographic-photos-and-videos.md#share-your-mixed-reality-photos-and-videos) no HoloLens 2, que dá suporte apenas ao carregamento automático da câmera para o conta Microsoft pessoal de um cliente (e não a sua conta corporativa ou de estudante).
+O CSP de DevDetail agora também relata espaço de armazenamento livre no dispositivo HoloLens. Isso deve corresponder aproximadamente ao valor mostrado na página Armazenamento do Aplicativo de Configurações. A seguir está o nó específico que contém essas informações.
 
-**Como funciona**
+- ./DevDetail/Ext/Microsoft/FreeStorage (somente operação GET)
 
-- Visite **configurações > sistema > a câmera de realidade mista** para habilitar o "carregamento da câmera".
-- Ao definir esse recurso como a posição **on** , qualquer foto ou vídeo da realidade misturada capturada em seu dispositivo será automaticamente enfileirado para carregamento para as imagens > pasta de distribuição da câmera de sua conta do onedrive for Work ou School.
-    >[!NOTE]
-    >Fotos e vídeos capturados antes de habilitar esse recurso *não serão* enfileirados para carregamento e ainda precisarão ser carregados manualmente.
-- Uma mensagem de status na página Configurações exibirá o número de arquivos com carregamento pendente (ou leitura "o OneDrive está atualizado" quando todos os arquivos pendentes tiverem sido carregados).
-- Se estiver preocupado com a largura de banda ou se quiser fazer o upload de "pausa" por qualquer motivo, você poderá alternar o recurso para a posição **desativado** . Desabilitar temporariamente o recurso garante que a fila de upload continuará aumentando conforme você adicionar novos arquivos à pasta Roll da Câmera, mas os arquivos não serão carregados até que você reabilitar o recurso.
-- Os arquivos mais novos serão carregados primeiro (último a entrar, primeiro a sair).
-- Se sua conta do OneDrive tiver problemas (por exemplo, após **a** alteração da senha), um botão Corrigir agora será exibido na página Configurações.
-- Não há nenhum tamanho máximo de arquivo, mas observe que arquivos grandes levarão mais tempo para carregar (especialmente se a largura de banda de upload estiver restrita). Se você "pausar" ou desativar o upload enquanto um arquivo grande estiver sendo carregado, ele cancelará imediatamente o upload. O upload será reiniciado quando você reabilitar o recurso; você não perderá nenhum arquivo, mas o upload parcial será descartado.
+#### <a name="devicestatus-csp"></a>CSP DeviceStatus
 
-**Problemas conhecidos e advertências**
+O CSP do DeviceStatus agora também relata SSID e BSSID da rede Wifi com a qual o HoloLens está conectado ativamente. A seguir estão os nós específicos que contêm essas informações.
 
-- Essa configuração não tem limitação criada com base no uso de largura de banda atual. Se você precisar maximizar a largura de banda para outro cenário, desligue a configuração manualmente. O upload será pausado, mas o recurso continuará a monitorar os arquivos recém-adicionados ao Roll da Câmera. Reabilitar o upload quando estiver pronto para continuar.
-- Esse recurso deve ser habilitado para cada conta de usuário no dispositivo e só pode carregar ativamente arquivos para o usuário conectado no momento ao dispositivo.
-- Se você estiver fazendo fotos ou vídeos enquanto observa a contagem de upload na página Configurações em tempo real, observe que a contagem de arquivos pendentes pode não mudar até que o arquivo atual tenha concluído o carregamento.
-- O upload será pausado se o dispositivo ficar inodor ou estiver desligado. Para garantir que os uploads pendentes são concluídos, use ativamente o dispositivo até que a página Configurações leia "O OneDrive está atualizado" ou ajuste as configurações de sleep **do Power &.**
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/ mac address *of Wi-Fi adapter*/SSID
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/ mac address *of Wi-Fi adapter*/BSSID
+
+Exemplo de blob syncml (para fornecedores de MDM) para consultar NetworkIdentifiers
+
+```xml
+<SyncML>
+<SyncBody>
+    <Get>
+        <CmdID>$CmdID$</CmdID>
+        <Item>
+            <Target>
+            <LocURI>
+                ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers?list=StructData
+            </LocURI>
+            </Target>
+        </Item>
+    </Get>
+    <Final/>
+</SyncBody>
+</SyncML>
+```
+
+### <a name="fixes-and-improvements"></a>Correções e melhorias:
+
+- Corrigido um [problema conhecido para Portal de Dispositivos em que não havia nenhum prompt baixando arquivos bloqueados.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
+- Corrigido um problema conhecido para o Portal de Dispositivos com tempos de carregamento e [download de arquivos.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
 
 ## <a name="start-receiving-insider-builds"></a>Começar a receber builds do Insider
 > [!NOTE]
@@ -62,21 +79,21 @@ Adicionamos um novo recurso ao aplicativo de configurações do HoloLens 2, que 
 > - O comando de voz "Reinicializar dispositivo" funciona bem. 
 > - Você também pode escolher o botão reiniciar em Configurações/Programa Windows Insider.
 >
-> Tivemos um bug no back-end que você pode ter encontrado e isso o levará de volta ao controle.
+> Temos um bug no back-end que você pode ter encontrado e isso fará com que você volte ao caminho certo.
 
-Em um dispositivo de HoloLens 2, vá para **configurações**  >  **atualização &**  >  **programa Windows Insider** de segurança e selecione **introdução**. Vincule a conta que você usou para se registrar como um Windows Insider.
-O Windows Insider agora está migrando para os canais. O anel **rápido** se tornará o **canal de desenvolvimento**, o anel **lento** se tornará o **canal beta** e o anel de **versão prévia** se tornará o **canal versão prévia**. Esta é a aparência desse mapeamento: os ![ canais do Windows Insider explicações ](images/WindowsInsiderChannels.png) para obter mais informações, consulte [apresentando canais do Windows Insider](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) em Blogs do Windows.
-Em seguida, selecione **desenvolvimento ativo do Windows**, escolha se deseja receber as compilações do canal de **desenvolvimento** ou **beta** e examine os termos do programa.
-Selecione **confirmar > reiniciar agora** para concluir. Depois que o dispositivo for reinicializado, vá para **configurações > atualização & segurança > verificar se há atualizações** para obter a compilação mais recente.
-### <a name="update-error-0x80070490-work-around"></a>Erro de atualização 0x80070490 solução alternativa
-Se você encontrar um erro de atualização 0x80070490 ao atualizar no canal de desenvolvimento ou beta, tente a seguinte solução alternativa de curto prazo. Ele envolve mover seu canal Insider, selecionando a atualização e, em seguida, movendo o canal Insider de volta.
-#### <a name="stage-one---release-preview"></a>Estágio One-Release versão prévia
-1.  Configurações, atualização & segurança, programa Windows Insider, selecione **liberar canal de versão prévia**.
-2.  Configurações, atualização & segurança, Windows Update, **verificar se há atualizações**. Após a atualização, continue no estágio dois.
-#### <a name="stage-two---dev-channel"></a>Preparar canal de dois desenvolvedores
-1. Configurações, atualização & segurança, programa Windows Insider, selecionar **canal de desenvolvimento**.
-2. Configurações, atualização & segurança, Windows Update, **verificar se há atualizações**.
-## <a name="ffu-download-and-flash-directions"></a>Download do FFU e direções do flash
+Em um dispositivo HoloLens 2, vá para **Configurações** Atualizar  >  **& segurança**  >  **Programa Windows Insider** e **selecione Começar.** Vincule a conta usada para se registrar como um Participante do Programa Windows Insider.
+O Windows Insider agora está mudando para Canais. O **anel Rápido** se tornará o  Canal **deV,** o anel Lento  se tornará o Canal beta **e** o anel versão prévia de versão se tornará **o** Canal de Versão Prévia. Veja a aparência desse mapeamento: explicação Participante do Programa Windows Insider Canais para obter mais informações, consulte ![ ](images/WindowsInsiderChannels.png) Introdução Participante do Programa Windows Insider [canais](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) em blogs do Windows.
+Em seguida, selecione Desenvolvimento ativo do **Windows,** escolha se você gostaria de receber o Canal **de** Desenvolvimento **ou** Canal beta builds e revise os termos do programa.
+Selecione **Confirmar > Reiniciar Agora** para concluir. Depois que o dispositivo for reinicializado, vá para Configurações > Atualizar & **Segurança > Verificar** se há atualizações para obter o build mais recente.
+### <a name="update-error-0x80070490-work-around"></a>Erro de 0x80070490 para resolver o erro
+Se você encontrar um erro de atualização 0x80070490 ao atualizar no canal Dev ou Beta, tente a seguinte explicação de curto prazo. Isso envolve mover seu canal interno, pegar a atualização e, em seguida, mover seu canal insider de volta.
+#### <a name="stage-one---release-preview"></a>Estágio um – Versão Prévia
+1.  Configurações, Atualizar & Segurança, Programa Windows Insider, selecione **Versão** Prévia do Canal .
+2.  Configurações, Atualizar & Segurança, Windows Update, **Verificar se há atualizações.** Após a atualização, continue no Estágio dois.
+#### <a name="stage-two---dev-channel"></a>Estágio dois – Canal dev
+1. Configurações, Atualizar & Segurança, Programa Windows Insider, selecione **Canal deV**.
+2. Configurações, Atualizar & Segurança, Windows Update, **Verificar se há atualizações.**
+## <a name="ffu-download-and-flash-directions"></a>Instruções de download e flash do FFU
 Para testar com um voo assinado ffu, primeiro você precisa desbloquear seu dispositivo antes de piscar o voo com sinal ffu.
 1. No PC:
     1. Baixe o ffu no seu computador do [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
@@ -94,10 +111,10 @@ Você é bem-vindo e incentivado a tentar desenvolver seus aplicativos usando bu
 ## <a name="stop-receiving-insider-builds"></a>Parar de receber builds do Insider
 Se você não quiser mais receber builds insider do Windows Holographic, poderá optar quando o [](hololens-recovery.md) HoloLens estiver executando um build de produção ou recuperar seu dispositivo usando o Advanced Recovery Companion para recuperar seu dispositivo para uma versão não insider do Windows Holographic.
 > [!CAUTION]
-> Há um problema conhecido em que os usuários que não se registram no Insider Preview são builds depois de reinstalar manualmente um novo build de visualização experimentariam uma tela azul. Posteriormente, eles devem recuperar manualmente o dispositivo. Para obter detalhes completos sobre se você for afetado ou não, veja mais sobre esse [problema conhecido](https://docs.microsoft.com/hololens/hololens-known-issues?source=docs#blue-screen-is-shown-after-unenrolling-from-insider-preview-builds-on-a-device-reflashed-with-a-insider-build).
-Para verificar se o seu HoloLens está executando uma compilação de produção:
-1. Vá para **configurações > > do sistema** e localize o número da versão.
-1. [Consulte as notas de versão para obter os números de Build de produção](hololens-release-notes.md).
-Para recusar compilações internas:
-1. Em um HoloLens executando uma compilação de produção, vá para **configurações > atualização & segurança > programa Windows Insider** e selecione **parar compilações do insider**.
-1. Siga as instruções para recusar seu dispositivo.
+> Há um problema conhecido em que os usuários que não se registram no Insider Preview são builds depois de reinstalar manualmente um novo build de visualização experimentariam uma tela azul. Posteriormente, eles devem recuperar manualmente o dispositivo. Para obter detalhes completos sobre se você seria afetado ou não, veja mais sobre esse [problema conhecido.](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+Para verificar se o HoloLens está executando um build de produção:
+1. Vá para **Configurações > Sistema > Sobre** e encontre o número de build.
+1. [Consulte as notas de versão para números de build de produção](hololens-release-notes.md).
+Para não fazer builds do Insider:
+1. Em um HoloLens executando um build de produção, acesse Configurações > Atualizar & **Segurança > Programa Windows Insider** e selecione **Parar Builds do Insider**.
+1. Siga as instruções para ressutar seu dispositivo.
