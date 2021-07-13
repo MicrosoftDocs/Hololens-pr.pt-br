@@ -15,12 +15,12 @@ metadata:
   manager: yannisle
   appliesto:
   - HoloLens 2
-  ms.openlocfilehash: 97f3bbdfec85e64d2895dfb5482ee9dc692c5e4c
-  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.openlocfilehash: be152373fadb6f2b5778616bae0f9bff9356af3d
+  ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
   ms.translationtype: MT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 07/12/2021
-  ms.locfileid: "113637252"
+  ms.locfileid: "113639685"
 title: Perguntas frequentes sobre o HoloLens 2 Development Edition
 summary: ''
 sections:
@@ -93,15 +93,15 @@ sections:
   - question: >
       Onde posso saber mais sobre o HoloLens 2 Development Edition?
     answer: >
-      Visite a página HoloLens documentação do 2 Development Edition. [Saiba mais](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+      Visite a página HoloLens documentação do 2 Development Edition. [Saiba mais](hololens2-options.md?tabs=device)
   - question: >
       Onde posso saber mais sobre como desenvolver soluções de Realidade Misturada?
     answer: >
-      Visite a documentação Introdução ao desenvolvimento de Realidade Misturada. [Saiba mais](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unityhttps://docs.microsoft.com/en-us/windows/mixed-reality/develop/development?tabs=unity)
+      Visite a documentação Introdução ao desenvolvimento de Realidade Misturada. [Saiba mais](/windows/mixed-reality/develop/development?tabs=unity)
   - question: >
       Onde posso saber mais sobre como criar soluções de Realidade Misturada?
     answer: >
-      Visite a documentação introdução ao design de Realidade Misturada. [Saiba mais](https://docs.microsoft.com/windows/mixed-reality/design/design)
+      Visite a documentação introdução ao design de Realidade Misturada. [Saiba mais](/windows/mixed-reality/design/design)
   - question: >
       Onde posso obter suporte para o HoloLens Developer Edition?
     answer: >
@@ -130,7 +130,7 @@ sections:
       4. Insira o código do produto e selecione &#39;Resgatar um código do produto&#39;
 
 
-      Visite HoloLens documentação do Development Edition 2 para [saber mais](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+      Visite HoloLens documentação do Development Edition 2 para [saber mais](hololens2-options.md?tabs=device)
   - question: >
       Posso criar aplicativos com versões do Unity diferentes da licença PRO?
     answer: >
@@ -163,7 +163,7 @@ sections:
       4. Insira o código do produto e clique &#39;Resgatar um código do produto&#39;
 
 
-      Visite HoloLens documentação do Development Edition 2 para [saber mais](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+      Visite HoloLens documentação do Development Edition 2 para [saber mais](hololens2-options.md?tabs=device)
   - question: >
       Como fazer entre em contato com o suporte do Queyz?
     answer: >
@@ -190,4 +190,4 @@ sections:
       Com seus créditos do Azure, você pode começar a criar com o conjunto de serviços de nuvem em constante expansão da Microsoft&#39;s. os créditos do Azure incluídos no HoloLens 2 Development Edition são para permitir que os clientes obtenham uma introdução rápida à criação e ao teste de aplicativos de realidade misturada no Azure. Para obter detalhes completos sobre a criação no Azure, visite [recursos do Azure](https://azure.microsoft.com/en-us/resources/)
   - question: >
       Onde posso saber mais sobre os serviços de realidade misturada do Azure?
-    answer: A Microsoft oferece um conjunto de serviços de realidade misturada para permitir que os desenvolvedores criem e testem soluções de realidade mista. [Saiba mais](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)
+    answer: A Microsoft oferece um conjunto de serviços de realidade misturada para permitir que os desenvolvedores criem e testem soluções de realidade mista. [Saiba mais](/windows/mixed-reality/develop/mixed-reality-cloud-services)
