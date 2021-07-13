@@ -1,6 +1,6 @@
 ---
-title: Guia de implantação – o HoloLens conectado corporativo 2 com guias do Dynamics 365 – manter
-description: Saiba como manter dispositivos do HoloLens 2 em uma rede conectada corporativa com os guias do Dynamics 365.
+title: guia de implantação – corporativo conectado HoloLens 2 com guias do Dynamics 365 – manter
+description: saiba como manter dispositivos HoloLens 2 em uma rede conectada corporativa com os guias do Dynamics 365.
 keywords: HoloLens, gerenciamento, corporativo conectado, guias do Dynamics 365, AAD, Azure AD, MDM, gerenciamento de dispositivo móvel
 author: joyjaz
 ms.author: v-jjaswinski
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f231e65e17ab053e34e7174e1ed7ff6e7a0a56b8
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 0176e816f167499574607bc16c8fbd6bde757daf
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308138"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113636989"
 ---
 # <a name="maintain---corporate-connected-guide"></a>Manter-guia conectado corporativo
 
@@ -29,11 +29,11 @@ A Microsoft projetou o Windows Update para Empresas para fornecer aos administra
 
 Um método popular de gerenciamento de atualizações é fazer um adiamento de recursos de 30 dias. Isso permite que os administradores atualizem e visualizem novos recursos, ganhando conhecimento inicial e informando à sua mesa de suporte quaisquer novas alterações.
 
-Saiba como [gerenciar atualizações do HoloLens](https://docs.microsoft.com/hololens/hololens-updates), incluindo dias agendados, a hora agendada e a configuração de horas ativas no dispositivo, para que ele seja atualizado fora do horário de trabalho.
+saiba como [gerenciar atualizações de HoloLens](/hololens/hololens-updates), incluindo os dias agendados, a hora agendada e a configuração de horas ativas no dispositivo, para que ele seja atualizado fora do horário de trabalho.
 
 ## <a name="how-to-update-dynamics-365-guides-and-other-store-apps"></a>Como atualizar os guias do Dynamics 365 (e outros aplicativos da loja)
 
-Os guias do Dynamics 365 são um aplicativo In-Box e podem ser atualizados por meio do aplicativo Microsoft Store. Para todos os aplicativos que são baixados por meio do Microsoft Store, eles podem ser [atualizados por meio do](https://docs.microsoft.com/hololens/holographic-store-apps#update-apps) próprio aplicativo Microsoft Store manualmente.
+os guias do Dynamics 365 são um aplicativo In-Box e podem ser atualizados por meio do aplicativo Microsoft Store. para todos os aplicativos que são baixados por meio do Microsoft Store, eles podem ser [atualizados por meio do](/hololens/holographic-store-apps#update-apps) próprio aplicativo Microsoft Store manualmente.
 
 ## <a name="how-to-update-lob-apps"></a>Como atualizar aplicativos LOB
 
@@ -44,38 +44,38 @@ Os aplicativos LOB podem ser atualizados da mesma maneira que foram adicionados 
 3. Para o valor de &quot; Selecionar arquivo a ser atualizado &quot; , selecione o arquivo.
 4. Aqui, use o menu de contexto para abrir o explorador de arquivos e carregar a versão mais recente do aplicativo LOB. Certifique-se de incluir dependências conforme necessário.
 
-Veja mais: [implantação de aplicativo do Intune para o HoloLens](https://docs.microsoft.com/hololens/app-deploy-intune)
+Veja mais: [implantação de aplicativo do Intune para HoloLens](/hololens/app-deploy-intune)
 
 ## <a name="development-plan"></a>Plano de desenvolvimento
 
 Com seu dispositivo registrado com êxito, agora você está preparado para implantar mais aplicativos LOB em seus dispositivos. Durante o período deste guia, estamos usando um aplicativo de exemplo, mas é mais provável que você queira usar aplicativos personalizados criados para as necessidades da sua organização.
 
-Se você já tiver um aplicativo LOB, você estará pronto para [implantar seu aplicativo por meio do MDM](https://docs.microsoft.com/hololens/app-deploy-intune). Se você preferir um método diferente, examine a [visão geral da implantação do aplicativo para o HoloLens 2](https://docs.microsoft.com/hololens/app-deploy-overview) para saber mais métodos de implantação de seu aplicativo LOB em seus dispositivos.
+Se você já tiver um aplicativo LOB, você estará pronto para [implantar seu aplicativo por meio do MDM](/hololens/app-deploy-intune). se você preferir um método diferente, examine a [visão geral da implantação do aplicativo para HoloLens 2](/hololens/app-deploy-overview) para saber mais métodos de implantação de seu aplicativo LOB em seus dispositivos.
 
-Se você ainda tiver criado seu próprio aplicativo LOB ou ainda estiver no processo de criação, examine nossos documentos de desenvolvimento de realidade misturada para [começar a projetar e criar um protótipo](https://docs.microsoft.com/windows/mixed-reality/design/design) ou aprender os conceitos básicos para começar a [usar o desenvolvimento de realidade misturada.](https://docs.microsoft.com/windows/mixed-reality/discover/get-started-with-mr)
+Se você ainda tiver criado seu próprio aplicativo LOB ou ainda estiver no processo de criação, examine nossos documentos de desenvolvimento de realidade misturada para [começar a projetar e criar um protótipo](/windows/mixed-reality/design/design) ou aprender os conceitos básicos para começar a [usar o desenvolvimento de realidade misturada.](/windows/mixed-reality/discover/get-started-with-mr)
 
 ## <a name="support-plan"></a>Plano de suporte
 
-Um plano de suporte é uma excelente coisa a ter em vigor. Ter alguém, ou um grupo, treinado na solução de problemas do processo de registro em dispositivos HoloLens e também uso geral do dispositivo HoloLens em sua organização é útil. Para permitir que os usuários tenham a resolução mais rápida de seus problemas, sugerimos que o processo de escalonamento seja manipulado de maneira semelhante a esta ordem:
+Um plano de suporte é uma excelente coisa a ter em vigor. ter alguém, ou um grupo, treinado na solução de problemas do processo de registro em dispositivos HoloLens e também uso geral do dispositivo HoloLens em sua organização é útil. Para permitir que os usuários tenham a resolução mais rápida de seus problemas, sugerimos que o processo de escalonamento seja manipulado de maneira semelhante a esta ordem:
 
 1. Seu suporte técnico.
-2. Sua equipe de especialistas em HoloLens
-3. [Documentos](https://docs.microsoft.com/hololens/)  /  do HoloLens [Documentos de solução de problemas do HoloLens](https://docs.microsoft.com/hololens/hololens-troubleshooting)
+2. sua equipe de especialistas HoloLens
+3. [HoloLens Docs](/hololens/)  /  [HoloLens documentos de solução de problemas](/hololens/hololens-troubleshooting)
 4. [Contatar o suporte](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
 
 ## <a name="device-management"></a>Gerenciamento de Dispositivo
 
 Este guia falou sobre como configurar o MDM (gerenciamento de dispositivo móvel) e usá-lo para definir algumas configurações de dispositivo e aplicar configurações para permitir o acesso em termos de Wi-Fi certificados e proxy. No entanto, o MDM também pode ser usado para aplicar restrições de dispositivo por meio de CSPs e políticas.
 
-Em muitos casos, os dispositivos podem ter restrições de conectividade, como Bluetooth, VPN, USB ou até mesmo desativar o acesso à câmera ou ao microfone. Se alguma delas lhe interessa, recomendamos que você leia nossa página de [restrições comuns de dispositivo](https://docs.microsoft.com/hololens/hololens-common-device-restrictions).
+em muitos casos, os dispositivos podem ter restrições de conectividade, como Bluetooth, VPN, USB ou até mesmo desativar o acesso à câmera ou ao microfone. Se alguma delas lhe interessa, recomendamos que você leia nossa página de [restrições comuns de dispositivo](/hololens/hololens-common-device-restrictions).
 
 Há outras restrições de dispositivo mais complexas que você pode usar. Como:
 
-- Limitar as páginas que podem ser exibidas no aplicativo configurações usando o [SettingsPageVisibility](https://docs.microsoft.com/hololens/settings-uri-list), permitindo que os usuários acessem apenas as configurações que precisam ajustar, como alterar a conexão Wi-Fi.
-- Use o [modo de quiosque](https://docs.microsoft.com/hololens/hololens-kiosk) para limitar a interface do usuário apresentada aos usuários em um dispositivo. Você pode definir quiosques para mostrar um único aplicativo ou vários aplicativos com uma página inicial personalizada. Os quiosques também podem apresentar experiências diferentes a usuários diferentes.
-- [Controle de aplicativo do Windows (WDAC)](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac) para impedir que aplicativos ou processos específicos sejam iniciados inteiramente.
+- limitar as páginas que podem ser exibidas no aplicativo Configurações usando o [SettingsPageVisibility](/hololens/settings-uri-list), permitindo que os usuários acessem apenas as configurações que precisam ajustar, como alterar a conexão Wi-Fi.
+- Use o [modo de quiosque](/hololens/hololens-kiosk) para limitar a interface do usuário apresentada aos usuários em um dispositivo. Você pode definir quiosques para mostrar um único aplicativo ou vários aplicativos com uma página inicial personalizada. Os quiosques também podem apresentar experiências diferentes a usuários diferentes.
+- o [controle de aplicativo Windows (WDAC)](/hololens/windows-defender-application-control-wdac) para impedir que aplicativos ou processos específicos sejam iniciados inteiramente.
 
-Se você quiser saber mais sobre métodos adicionais de gerenciamento de dispositivos ou restrições de dispositivo, siga a próxima etapa e leia nossa [visão geral do gerenciamento de dispositivos](https://docs.microsoft.com/hololens/hololens-csp-policy-overview).
+Se você quiser saber mais sobre métodos adicionais de gerenciamento de dispositivos ou restrições de dispositivo, siga a próxima etapa e leia nossa [visão geral do gerenciamento de dispositivos](/hololens/hololens-csp-policy-overview).
 
 
 

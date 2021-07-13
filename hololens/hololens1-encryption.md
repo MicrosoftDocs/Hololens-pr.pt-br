@@ -1,6 +1,6 @@
 ---
-title: Criptografia BitLocker do HoloLens
-description: Saiba como habilitar a criptografia de dispositivo BitLocker para proteger arquivos armazenados em seus dispositivos de realidade misturada do HoloLens.
+title: HoloLens Criptografia do BitLocker
+description: saiba como habilitar a criptografia de dispositivo BitLocker para proteger arquivos armazenados em seus HoloLens dispositivos de realidade misturada.
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -13,26 +13,26 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 2929cbea826e0cc92a72550c7874995506b94257
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 37efab3ef3d68a9641320e144619008612f6efa2
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110397277"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635238"
 ---
-# <a name="hololens-1st-gen-bitlocker-encryption"></a>Criptografia BitLocker do HoloLens (1ª gen)
+# <a name="hololens-1st-gen-bitlocker-encryption"></a>Criptografia BitLocker do HoloLens (1ª geração)
 
-O HoloLens (1º gen) e o HoloLens 2 dão suporte à criptografia de dispositivo usando o BitLocker, no entanto, o BitLocker é sempre habilitado no HoloLens 2.
+HoloLens (1º gen) e HoloLens 2 dão suporte à criptografia de dispositivo usando o bitlocker, no entanto, o BitLocker sempre é habilitado no HoloLens 2.
 
-Este artigo o ajudará a habilitar e gerenciar o BitLocker no HoloLens (1ª gen).
+este artigo o ajudará a habilitar e gerenciar o BitLocker em HoloLens (1ª gen).
 
-No HoloLens (1º gen), você pode habilitar a criptografia de dispositivo do BitLocker manualmente ou usando o MDM (gerenciamento de dispositivo móvel). Siga estas instruções para habilitar a [criptografia de dispositivo BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) para proteger arquivos e informações armazenadas no HoloLens. A criptografia de dispositivo ajuda a proteger seus dados usando o método de criptografia AES-CBC 128, que é equivalente ao [método 3 do EncryptionMethodByDriveType](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) no provedor de serviços de configuração do BITLOCKER (CSP). A equipe que tem a chave de criptografia correta (como uma senha) pode descriptografá-la ou executar uma recuperação de dados.
+em HoloLens (1ª gen), você pode habilitar a criptografia de dispositivo do BitLocker manualmente ou usando o MDM (gerenciamento de dispositivo móvel). Siga estas instruções para habilitar a [criptografia de dispositivo BitLocker](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) para proteger arquivos e informações armazenadas no HoloLens. A criptografia de dispositivo ajuda a proteger seus dados usando o método de criptografia AES-CBC 128, que é equivalente ao [método 3 do EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) no provedor de serviços de configuração do BITLOCKER (CSP). A equipe que tem a chave de criptografia correta (como uma senha) pode descriptografá-la ou executar uma recuperação de dados.
 
 ## <a name="enable-device-encryption-using-mdm"></a>Habilitar a criptografia de dispositivo usando o MDM
 
-Você pode usar seu provedor de MDM (gerenciamento de dispositivo móvel) para aplicar uma política que requer criptografia de dispositivo. A política a ser usada é a [configuração de segurança/RequireDeviceEncryption](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) no CSP de política.
+Você pode usar seu provedor de MDM (gerenciamento de dispositivo móvel) para aplicar uma política que requer criptografia de dispositivo. A política a ser usada é a [configuração de segurança/RequireDeviceEncryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) no CSP de política.
 
-[Consulte as instruções para habilitar a criptografia de dispositivo usando Microsoft Intune.](https://docs.microsoft.com/intune/compliance-policy-create-windows#windows-holographic-for-business)
+[Consulte as instruções para habilitar a criptografia de dispositivo usando Microsoft Intune.](/intune/compliance-policy-create-windows#windows-holographic-for-business)
 
 Para outras ferramentas MDM, consulte a documentação do seu provedor MDM para obter instruções. Se o seu provedor de MDM exigir um URI personalizado para criptografia de dispositivo, use a seguinte configuração:
 
@@ -46,9 +46,9 @@ Para outras ferramentas MDM, consulte a documentação do seu provedor MDM para 
 
 Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Configuração do Windows que aplicam uma configuração especificada a um dispositivo. 
 
-### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition-and-enables-encryption"></a>Criar um pacote de provisionamento que atualiza o Windows Holographic Edition e habilita a criptografia
+### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition-and-enables-encryption"></a>criar um pacote de provisionamento que atualiza o Windows Holographic edition e habilita a criptografia
 
-1. [Crie um pacote de provisionamento para o HoloLens.](hololens-provisioning.md)
+1. [Crie um pacote de provisionamento para HoloLens.](hololens-provisioning.md)
 1. Vá para **configurações de tempo de execução**  >  **políticas**  >  **segurança** e selecione **RequireDeviceEncryption**.
 
     ![A configuração Exigir criptografia de dispositivo está definida como Sim](images/device-encryption.png)
@@ -61,13 +61,13 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
 1. No menu **Arquivo**, clique em **Salvar**. 
 
-1. Leia o aviso explicando que os arquivos de projeto podem conter informações confidenciais e clique em **OK.**
+1. Leia o aviso explicando que os arquivos de projeto podem conter informações confidenciais e clique em **OK**.
 
     > [!IMPORTANT]
-    > Ao criar um pacote de provisionamento, você pode incluir informações confidenciais nos arquivos de projeto e no arquivo de pacote de provisionamento (.ppkg). Embora você tenha a opção de criptografar o arquivo. ppkg, arquivos de projeto não são criptografados. Você deve armazenar os arquivos de projeto em um local seguro e excluir os arquivos de projeto quando não for mais necessário.
+    > Ao criar um pacote de provisionamento, você pode incluir informações confidenciais nos arquivos de projeto e no arquivo de pacote de provisionamento (. ppkg). Embora você tenha a opção de criptografar o arquivo. ppkg, arquivos de projeto não são criptografados. Você deve armazenar os arquivos de projeto em um local seguro e excluir os arquivos de projeto quando não forem mais necessários.
 
 1. No menu **Exportar**, clique em **Pacote de provisionamento**.
-1. Altere **Proprietário** para **Administrador** de IT, que definirá a precedência desse pacote de provisionamento maior do que os pacotes de provisionamento aplicados a este dispositivo de outras fontes e, em seguida, selecione **Próximo**.
+1. Altere **proprietário** para **administrador de ti**, que definirá a precedência desse pacote de provisionamento superior ao provisionamento de pacotes aplicados a este dispositivo de outras fontes e, em seguida, selecione **Avançar**.
 1. Defina um valor para **Versão do Pacote**.
 
     > [!TIP]
@@ -99,6 +99,6 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
 A criptografia é silenciosa no HoloLens. Para verificar o status de criptografia do dispositivo:
 
-- No HoloLens, vá para **Sistema de**  >  **Configurações**  >  **sobre**. **O BitLocker** **será habilitado** se o dispositivo estiver criptografado. 
+- no HoloLens, vá para **Configurações**  >  **sistema**  >  **sobre**. O **BitLocker** será **habilitado** se o dispositivo estiver criptografado. 
 
-    ![Sobre a tela mostrando o BitLocker habilitado](images/about-encryption.png)
+    ![Tela sobre mostrando BitLocker habilitado](images/about-encryption.png)

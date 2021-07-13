@@ -1,6 +1,6 @@
 ---
-title: Guia de implantação-instalação corporativa do HoloLens 2 com guias do Dynamics 365 – configurar
-description: Saiba como configurar as configurações para implantar dispositivos do HoloLens 2 em uma rede conectada corporativa com os guias do Dynamics 365.
+title: guia de implantação-corporativo conectado HoloLens 2 com guias do Dynamics 365 – configurar
+description: saiba como configurar as configurações para implantar dispositivos HoloLens 2 em uma rede conectada corporativa com os guias do Dynamics 365.
 keywords: HoloLens, gerenciamento, corporativo conectado, guias do Dynamics 365, AAD, Azure AD, MDM, gerenciamento de dispositivo móvel
 author: joyjaz
 ms.author: v-jjaswinski
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 939efc28a0c3255cc9a38af3cd8dd9aa8fc2ac98
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 9457acd2f53d0d3127d6c68d620b660f6e09866d
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308041"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637074"
 ---
 # <a name="configure---corporate-connected-guide"></a>Configurar-guia conectado corporativo
 
@@ -31,42 +31,42 @@ Podemos criar um único grupo de usuários especificamente para atribuir licenç
 
 Se você Don&#39;t já tem acesso a duas contas do Azure AD em um grupo de usuários, você pode usar; Aqui estão os guias de início rápido para:
 
-- [Como criar um usuário](https://docs.microsoft.com/mem/intune/fundamentals/quickstart-create-user)
-- [Como criar um grupo](https://docs.microsoft.com/mem/intune/fundamentals/quickstart-create-group)
-- [Adicionar usuários a um grupo](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – adicionar usuários criados para criar grupo
-- [Configurar o Azure ad para permitir que um grupo de usuários ingresse em dispositivos](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) – Verifique se o novo grupo de usuários tem permissão para registrar dispositivos no Azure AD
+- [Como criar um usuário](/mem/intune/fundamentals/quickstart-create-user)
+- [Como criar um grupo](/mem/intune/fundamentals/quickstart-create-group)
+- [Adicionar usuários a um grupo](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – adicionar usuários criados para criar grupo
+- [Configurar o Azure ad para permitir que um grupo de usuários ingresse em dispositivos](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) – Verifique se o novo grupo de usuários tem permissão para registrar dispositivos no Azure AD
 
-## <a name="auto-enrollment-on-hololens-2"></a>Registro automático no HoloLens 2
+## <a name="auto-enrollment-on-hololens-2"></a>registro automático no HoloLens 2
 
-Para ter uma experiência tranqüila e perfeita, configurar Azure Active Directory Join (AADJ) e o registro automático para o Intune para dispositivos do HoloLens 2 é a melhor opção. Isso permite que os usuários insiram suas credenciais de logon da organização durante o OOBE e se registrem automaticamente com o Azure AD e registrem o dispositivo no MDM.
+para ter uma experiência tranqüila e perfeita, configurar Azure Active Directory Join (AADJ) e o registro automático para o Intune para dispositivos HoloLens 2 é a melhor opção. Isso permite que os usuários insiram suas credenciais de logon da organização durante o OOBE e se registrem automaticamente com o Azure AD e registrem o dispositivo no MDM.
 
-Usando [o Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home), podemos selecionar serviços e navegar por algumas páginas até que possamos selecionar obter uma avaliação Premium. Você pode notar que há Azure Active Directory Premium 1 e 2-para o registro automático P1 é suficiente. Podemos selecionar o Intune e selecionar o escopo do usuário para registro automático e selecionar o grupo que foi criado anteriormente.
+usando [Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home), podemos selecionar serviços e navegar por algumas páginas até que possamos selecionar obter uma avaliação de Premium. você pode notar que há Azure Active Directory Premium 1 e 2-para o registro automático P1 é suficiente. Podemos selecionar o Intune e selecionar o escopo do usuário para registro automático e selecionar o grupo que foi criado anteriormente.
 
-Para obter detalhes completos e etapas, leia o guia sobre [como habilitar o registro automático para o Intune](https://docs.microsoft.com/mem/intune/enrollment/quickstart-setup-auto-enrollment).
+Para obter detalhes completos e etapas, leia o guia sobre [como habilitar o registro automático para o Intune](/mem/intune/enrollment/quickstart-setup-auto-enrollment).
 
 ## <a name="corporate-wi-fi-connectivity"></a>Conectividade de Wi-Fi corporativa
 
-As conexões corporativas Wi-Fi normalmente exigirão autenticação baseada em certificado para clientes que usam o HoloLens 2. Você precisará implantar esses certificados usando uma infraestrutura de certificado de protocolo SCEP (SCEP) ou padrão de criptografia de chave pública (PKCS) integrada à sua solução de MDM. Usar o Intune para implantar perfis de Wi-Fi, certificados e configurações de proxy cria uma experiência direta para os usuários finais.
+as conexões corporativas Wi-Fi normalmente exigirão autenticação baseada em certificado para clientes que usam HoloLens 2. Você precisará implantar esses certificados usando uma infraestrutura de certificado de protocolo SCEP (SCEP) ou padrão de criptografia de chave pública (PKCS) integrada à sua solução de MDM. Usar o Intune para implantar perfis de Wi-Fi, certificados e configurações de proxy cria uma experiência direta para os usuários finais.
  
 ### <a name="deploy-certificates-and-wi-fi-profiles"></a>Implantar certificados e perfis de Wi-Fi
 
-Para implantar certificados e perfis por meio do Microsoft Endpoint Manager, siga estas etapas:
+para implantar certificados e perfis por meio de Microsoft Endpoint Manager, siga estas etapas:
 
-1. Crie um perfil para cada um dos certificados raiz e intermediários (consulte [criar perfis de certificado confiável](https://docs.microsoft.com/intune/protect/certificates-configure#create-trusted-certificate-profiles)). Cada um desses perfis deve ter uma descrição que inclua uma data de validade no formato DD/MM/AAAA. 
+1. Crie um perfil para cada um dos certificados raiz e intermediários (consulte [criar perfis de certificado confiável](/intune/protect/certificates-configure#create-trusted-certificate-profiles)). Cada um desses perfis deve ter uma descrição que inclua uma data de validade no formato DD/MM/AAAA.
 
     > [!CAUTION]
     > Os **perfis de certificado sem uma data de expiração não serão implantados**.
 
-2.  Criar um perfil para cada certificado SCEP ou PKCS (consulte [criar um perfil de certificado SCEP ou criar um perfil de certificado PKCS](https://docs.microsoft.com/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) cada um desses perfis deve ter uma descrição que inclua uma data de expiração no formato dd/mm/aaaa. 
+2. Criar um perfil para cada certificado SCEP ou PKCS (consulte [criar um perfil de certificado SCEP ou criar um perfil de certificado PKCS](/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) cada um desses perfis deve ter uma descrição que inclua uma data de expiração no formato dd/mm/aaaa.
 
     > [!CAUTION]
     > **Os perfis de certificado sem uma data de expiração não serão implantados.**
 
     > [!Note]
-    > Como o HoloLens 2 é considerado para muitos para ser um dispositivo compartilhado, ou seja, vários usuários por dispositivo, é recomendável implantar certificados de dispositivo em vez de certificados de usuário para autenticação Wi-Fi sempre que possível.
+    > como o HoloLens 2 é considerado para muitos para ser um dispositivo compartilhado, ou seja, vários usuários por dispositivo, é recomendável implantar certificados de dispositivo em vez de certificados de usuário para autenticação Wi-Fi sempre que possível.
 
-3.  Crie um perfil para sua rede de Wi-Fi corporativa (consulte [configurações de Wi-Fi para dispositivos Windows 10 e posteriores](https://docs.microsoft.com/intune/wi-fi-settings-windows)). Em seu perfil de Wi-Fi, você pode optar por usar as configurações de proxy na sua organização.
- 
+3. crie um perfil para sua rede de Wi-Fi corporativa (consulte [configurações de Wi-Fi para Windows 10 e dispositivos posteriores](/intune/wi-fi-settings-windows)). Em seu perfil de Wi-Fi, você pode optar por usar as configurações de proxy na sua organização.
+
     Suas opções:
     - **Nenhum**: Nenhuma configuração de proxy está definida.
     - **Configurar manualmente**: insira o **Endereço IP do servidor proxy** e seu **Número de porta**.
@@ -78,36 +78,36 @@ Para implantar certificados e perfis por meio do Microsoft Endpoint Manager, sig
     > É recomendável que o perfil de Wi-Fi seja atribuído a grupos de dispositivos em vez de grupos de usuários sempre que possível.
      
     > [!Tip]
-    > Você também pode exportar um perfil de Wi-Fi de trabalho de um PC com Windows 10 em sua rede corporativa. Essa exportação cria um arquivo XML com todas as configurações atuais. Em seguida, importe esse arquivo para o Intune e use-o como o perfil de Wi-Fi para seus dispositivos de HoloLens 2. Confira [Exportar e importar configurações de Wi-Fi para dispositivos Windows](https://docs.microsoft.com/mem/intune/configuration/wi-fi-settings-import-windows-8-1).
+    > você também pode exportar um perfil de Wi-Fi de trabalho de um PC Windows 10 em sua rede corporativa. Essa exportação cria um arquivo XML com todas as configurações atuais. em seguida, importe esse arquivo para o Intune e use-o como o perfil de Wi-Fi para seus dispositivos HoloLens 2. Confira [Exportar e importar configurações de Wi-Fi para dispositivos Windows](/mem/intune/configuration/wi-fi-settings-import-windows-8-1).
 
-1.  [Atribua](https://docs.microsoft.com/mem/intune/configuration/device-profile-assign) os perfis de dispositivo ao grupo de dispositivos do HoloLens.
+1.  [atribua](/mem/intune/configuration/device-profile-assign) os perfis de dispositivo ao grupo de dispositivos HoloLens.
 
-2.  [Monitore](https://docs.microsoft.com/mem/intune/configuration/device-profile-monitor) os perfis de dispositivo no Intune.
+2.  [Monitore](/mem/intune/configuration/device-profile-monitor) os perfis de dispositivo no Intune.
 
-Se houver problemas com perfis de Wi-Fi, consulte [solucionar problemas de Wi-Fi perfis de configuração de dispositivo no Intune](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).
+Se houver problemas com perfis de Wi-Fi, consulte [solucionar problemas de Wi-Fi perfis de configuração de dispositivo no Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).
 
 ## <a name="troubleshooting-external-internet-access-when-corp-connected"></a>Solução de problemas de acesso externo à Internet quando Corp conectado
 Quando os serviços tentam não passar por um proxy definido, eles podem tentar se conectar por meio do firewall. Você pode adicionar uma lista de especificações de ponto de extremidade às suas regras de firewall para solucionar esses problemas.
 
-Se você estiver bloqueado em portas de firewall, habilite alguns [pontos de extremidade](https://docs.microsoft.com/hololens/hololens-offline) comuns para o HoloLens.
+Se você estiver bloqueado em portas de firewall, habilite alguns [pontos de extremidade](/hololens/hololens-offline) comuns para HoloLens.
 
-Você também pode habilitar as portas específicas de guias: [URLs acessíveis à Internet necessárias para a conectividade com o Microsoft Dynamics CRM Online](https://support.microsoft.com/help/2655102/internet-accessible-urls-required-for-connectivity-to-microsoft-dynami).
+Você também pode habilitar as portas específicas dos guias: [URLs acessíveis à Internet necessárias para conectividade com Microsoft Dynamics CRM Online](https://support.microsoft.com/help/2655102/internet-accessible-urls-required-for-connectivity-to-microsoft-dynami).
 
 ## <a name="app-deployment"></a>Implantação de aplicativos
 
 Implantar um aplicativo LOB via MDM é um método que é facilmente escalonável e pode ser implantado automaticamente em seus dispositivos após o registro em um grupo criado.
 
-Se você ainda estiver desenvolvendo seus aplicativos ou ainda não tiver um, poderá usar um aplicativo de exemplo do hub de exemplos do MRTK. Este aplicativo de exemplo está pronto para uso e não exigirá o uso do Unity ou do Visual Studio. [Baixe o aplicativo de exemplo MRTK exemplos](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App).
+Se você ainda estiver desenvolvendo seus aplicativos ou ainda não tiver um, poderá usar um aplicativo de exemplo do hub de exemplos do MRTK. Este aplicativo de exemplo está pronto para uso e não exigirá o uso de Unity ou Visual Studio. [Baixe o aplicativo de exemplo MRTK exemplos](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App).
 
-Se você preferir usar seu próprio aplicativo ou estiver interessado no desenvolvimento de aplicativos para realidade misturada, sinta-se à vontade para revisar nossa [documentação de desenvolvedor de realidade misturada](https://docs.microsoft.com/windows/mixed-reality/design/design).
+Se você preferir usar seu próprio aplicativo ou estiver interessado no desenvolvimento de aplicativos para realidade misturada, sinta-se à vontade para revisar nossa [documentação de desenvolvedor de realidade misturada](/windows/mixed-reality/design/design).
 
 > [!NOTE]
-> Os requisitos de sistema para dispositivos do HoloLens são baseados na arquitetura da compilação do aplicativo. Os dispositivos HoloLens 2 usam a arquitetura ARM. Ao criar seus aplicativos no Visual Studio, verifique se você selecionou a arquitetura correta para o dispositivo e inclui todas as dependências necessárias.
+> os requisitos de sistema para dispositivos HoloLens são baseados na arquitetura da compilação do aplicativo. HoloLens 2 dispositivos usam a arquitetura ARM. ao criar seus aplicativos no Visual Studio, verifique se você selecionou a arquitetura correta para o dispositivo e inclui todas as dependências necessárias.
 
 > [!IMPORTANT]
 > Ao implantar aplicativos LOB, é importante também carregar o certificado no Intune e atribuí-lo ao mesmo grupo que pretende usar o aplicativo ou ele não será instalado corretamente.
 
-### <a name="upload-and-assign-the-app"></a>Carregar e atribuir o aplicativo
+### <a name="upload-and-assign-the-app"></a>Upload e atribuir o aplicativo
 
 1. Navegue até o [centro de administração do mem](https://endpoint.microsoft.com/#home).
 
@@ -127,7 +127,7 @@ Se você preferir usar seu próprio aplicativo ou estiver interessado no desenvo
 
 9. Selecione **Criar**.
 
-Leia mais: [atribuir aplicativos a grupos no Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-deploy#assign-an-app)
+Leia mais: [atribuir aplicativos a grupos no Microsoft Intune](/mem/intune/apps/apps-deploy#assign-an-app)
 
 ## <a name="setup-guides-application-licenses-dataverse-and-authoring"></a>Guias de instalação: licenças de aplicativo, dataverso e criação
 
@@ -137,49 +137,49 @@ Para usar os guias do Dynamics 365, você precisará fazer alguma preparação. 
 
 Para que alguém use guias, será necessário usar uma conta do Azure AD, que configuramos anteriormente neste guia.
 
-Você também precisará atribuir a licença de guias do Dynamics 365 ao usuário que você criou. Você fará isso no centro de [Administração do Microsoft 365](https://admin.microsoft.com/AdminPortal/Home). Atribua também a licença à sua conta primária do Azure.
+Você também precisará atribuir a licença de guias do Dynamics 365 ao usuário que você criou. você fará isso na [Centro de administração do Microsoft 365](https://admin.microsoft.com/AdminPortal/Home). Atribua também a licença à sua conta primária do Azure.
 
-Siga [este breve guia](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one#assign-the-dynamics-365-guides-license-to-user-accounts) com imagens para obter instruções passo a passo sobre como aplicar licenças de aplicativo.
+Siga [este breve guia](/dynamics365/mixed-reality/guides/setup-step-one#assign-the-dynamics-365-guides-license-to-user-accounts) com imagens para obter instruções passo a passo sobre como aplicar licenças de aplicativo.
 
 ### <a name="set-up-the-dataverse"></a>Configurar o dataverso
 
-Para [configurar um ambiente de produção](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#set-up-a-production-environment-for-purchased-licenses-only) , você precisará atender a dois pré-requisitos. Você deve ter a função [**administrador**](https://docs.microsoft.com/power-platform/admin/database-security) do sistema  **e**  deve ter uma [**licença do Power apps**](https://docs.microsoft.com/power-platform/admin/signup-question-and-answer) (ou uma [**licença de guias do Dynamics 365**](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one) que inclui uma licença de aplicativos de energia). Se seguir este guia você criou o Azure AD, você atende aos requisitos de função para o administrador do sistema. Também atribuímos uma licença de guias na etapa anterior.
+Para [configurar um ambiente de produção](/dynamics365/mixed-reality/guides/setup-step-two#set-up-a-production-environment-for-purchased-licenses-only) , você precisará atender a dois pré-requisitos. você deve ter a função [**administrador**](/power-platform/admin/database-security) do sistema **e** deve ter uma [**licença Power Apps**](/power-platform/admin/signup-question-and-answer) (ou uma [**licença de guias do Dynamics 365**](/dynamics365/mixed-reality/guides/setup-step-one) que inclui uma licença Power Apps). Se seguir este guia você criou o Azure AD, você atende aos requisitos de função para o administrador do sistema. Também atribuímos uma licença de guias na etapa anterior.
 
-Neste guia para [criar um ambiente do Microsoft dataverso](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two):
+Neste guia para [criar um ambiente do Microsoft dataverso](/dynamics365/mixed-reality/guides/setup-step-two):
 
 1. Comece usando o [centro de administração do Power Platform](https://admin.powerplatform.microsoft.com/environments) e criando um novo ambiente.
 2. Ao criar o **novo ambiente**, para o **tipo** que você&#39;está selecionando **produção**.
 3. É importante que você alterne **para criar um banco de dados para este ambiente?**  opção como  **Sim**.
 4. Na caixa de diálogo  **Adicionar Banco de dados**  , defina a opção  **habilitar aplicativos Dynamics 365**  como  **Sim.**
 
-Você desejará aumentar o tamanho máximo do arquivo de itens em seu dataverso. Aumentar o tamanho máximo do arquivo permitirá que você carregue modelos 3D maiores ou arquivos de vídeo que serão usados posteriormente em seus guias. Siga um breve guia [para alterar o tamanho máximo do arquivo de carregamento](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size).
+Você deseja aumentar o tamanho máximo de arquivo de itens no seu dataverso. Aumentar o tamanho máximo do arquivo permitirá carregar modelos 3D maiores ou arquivos de vídeo que você usará posteriormente em seus guias. Siga um guia curto para [alterar o tamanho máximo do arquivo de upload.](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)
 
-Por fim, você precisará [instalar e configurar a solução](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution). No [centro de administração do Power Platform](https://admin.powerplatform.microsoft.com/environments), selecione **recursos** \& gt;  **Aplicativos do dynamics 365**, selecione **guias do Dynamics 365** na lista e, em seguida, selecione **instalar**.  
+Por fim, você precisará instalar [e configurar a solução](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution). No [Centro de administração do Power Platform](https://admin.powerplatform.microsoft.com/environments), selecione **Recursos** \& gt;  **Aplicativos do Dynamics 365,** selecione Guias do **Dynamics 365** na lista e, em seguida, **selecione Instalar**.  
 
-Você precisa [Adicionar uma função de segurança de guias](https://docs.microsoft.com/dynamics365/mixed-reality/guides/assign-role) antes de poder usar os aplicativos.
+Você precisa [adicionar uma função de segurança guias](/dynamics365/mixed-reality/guides/assign-role) antes de poder usar os aplicativos.
 
-### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Criar um guia de teste em seu computador por meio de criação
+### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Criar um guia de teste em seu computador por meio da criação
 
-Ao criar guias, você sempre iniciará em seu computador. Criando as etapas, selecionando modelos e como ancorar o guia. Isso será seguido colocando o conteúdo para seu guia posteriormente no modo de criação em seu dispositivo de HoloLens. Para os fins deste guia, sugerimos fazer um breve guia de teste com as etapas e os modelos mínimos.
+Ao criar Guias, você sempre iniciará em seu computador. Criando as etapas, selecionando modelos e como ancorar o guia. Isso será seguido pela colocação do conteúdo do guia posteriormente no modo de HoloLens dispositivo. Para os fins deste guia, sugerimos criar um guia de teste curto com etapas e modelos mínimos.
 
-Se você quiser começar a aprender sobre a criação de guias, comece aqui com a [visão geral de criação](https://docs.microsoft.com/dynamics365/mixed-reality/guides/authoring-overview). Ou, para obter uma visão geral de faixa rápida, Assista a este breve vídeo.
+Se você quiser começar a aprender sobre a adoção de Guias, comece aqui com a visão [geral de autor.](/dynamics365/mixed-reality/guides/authoring-overview) Ou para obter uma visão geral de controle rápido, assista a este breve vídeo.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EC24dMlAy90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="optional-kiosk-mode"></a>Opcional: modo de quiosque
 
-O modo de quiosque é um modo que permite que um administrador de ti configure a interface do usuário do menu Iniciar para mostrar apenas um único aplicativo ou seleção de aplicativos. Um quiosque também pode ser aplicado a usuários específicos, grupos ou no nível do dispositivo; e, em alguns casos, excluir determinados usuários do quiosque ainda permitindo o acesso ao menu iniciar normal.
+O modo de quiosque é um modo que permite que um administrador de IT configure a interface do usuário do menu Iniciar para mostrar apenas um único aplicativo ou seleção de aplicativos. Um quiosque também pode ser aplicado a usuários, grupos ou no nível do dispositivo específicos; e, em alguns casos, exclua determinados usuários do Quiosque ainda permitindo que eles acessem o menu iniciar normal.
 
-O modo de quiosque tem muitas variáveis diferentes, no escopo e nas configurações que podem ser definidas, bem como métodos de implantação do quiosque no HoloLens. Por causa de todas essas variáveis, o modo de quiosque está sendo deixado como _opcional_ para este guia e não será revisitado. Se você acreditar que tem uma necessidade comercial de restringir os aplicativos disponíveis aos usuários ou gostaria de saber mais, fique à vontade para saber como [Configurar o HoloLens como um quiosque](https://docs.microsoft.com/hololens/hololens-kiosk).
+O modo de quiosque tem muitas variáveis diferentes, tanto no escopo quanto nas configurações que podem ser definidas, bem como métodos de implantação do Quiosque no HoloLens. Devido a todas essas variáveis, o  modo de quiosque está sendo deixado como opcional para este guia e não será revisitado. Se você acredita que tem uma necessidade comercial de restringir aplicativos disponíveis aos usuários ou gostaria de saber mais, sinta-se à vontade para saber como configurar o HoloLens como um [quiosque](/hololens/hololens-kiosk).
 
 ## <a name="optional-wdac"></a>Opcional: WDAC
 
-O WDAC permite que um administrador de ti Configure seus dispositivos para bloquear a inicialização de aplicativos em dispositivos. Isso é diferente dos métodos de restrição de dispositivo, como o modo de quiosque, em que o usuário recebe uma interface de usuário que oculta os aplicativos no dispositivo, mas eles ainda podem ser iniciados. Embora o WDAC seja implementado, os aplicativos ainda estão visíveis na lista todos os aplicativos, mas o WDAC interrompe esses aplicativos e processos de poder ser iniciado pelo usuário do dispositivo.
+O WDAC permite que um administrador de IT configure seus dispositivos para bloquear o lançamento de aplicativos em dispositivos. Isso é diferente dos métodos de restrição de dispositivo, como o modo de quiosque, em que o usuário recebe uma interface do usuário que oculta os aplicativos no dispositivo, mas ainda pode ser lançado. Embora o WDAC seja implementado, os aplicativos ainda estão visíveis na lista Todos os Aplicativos, mas o WDAC impede que esses aplicativos e processos sejam lançados pelo usuário do dispositivo.
 
-Para obter mais informações, referência [use WDAC e Windows PowerShell para permitir ou bloquear aplicativos em dispositivos de HoloLens 2 com Microsoft Intune](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens).
+Para obter mais informações, consulte [Usar WDAC e Windows PowerShell para](/mem/intune/configuration/custom-profile-hololens)permitir ou bloquear aplicativos em HoloLens 2 dispositivos com Microsoft Intune .
 
-[Controle de aplicativos do Windows Defender – WDAC](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac)
+[WDAC (Controle de Aplicativos do Windows Defender)](/hololens/windows-defender-application-control-wdac)
 
 ## <a name="next-step"></a>Próxima etapa 
 > [!div class="nextstepaction"]
-> [Implantação conectada corporativa-implantação](hololens2-corp-connected-deploy.md)
+> [Implantação conectada corporativa – Implantar](hololens2-corp-connected-deploy.md)

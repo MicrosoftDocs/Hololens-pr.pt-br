@@ -1,7 +1,7 @@
 ---
 title: Microsoft Store para Empresas
-description: Saiba como trabalhar com os Microsoft Store para negócios para publicar seus aplicativos de realidade misturada em seus negócios.
-keywords: Microsoft Store para negócios, msfb, implantação de aplicativo, loja
+description: Saiba como trabalhar com o Microsoft Store para Empresas publicar seus aplicativos de realidade misturada em sua empresa.
+keywords: Microsoft Store para Empresas, msfb, implantação de aplicativo, loja
 author: evmill
 ms.author: v-evmill
 ms.date: 6/22/2020
@@ -11,30 +11,31 @@ ms.sitesec: library
 ms.localizationpriority: medium
 audience: HoloLens
 manager: yannisle
-ms.openlocfilehash: 52036b9e17fe6685bd05693b06e3120b4655c863
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: d7d5ad05dc675cf07afd075f4fb52d24cd4d3e15
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308079"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635527"
 ---
 # <a name="microsoft-store-for-business"></a>Microsoft Store para Empresas
 
-O Microsoft Store para negócios é projetado principalmente para responsáveis por decisões de ti e administradores em empresas ou organizações com uma maneira flexível de localizar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos em mercados selecionados para dispositivos com Windows 10 em volume. 
+O Microsoft Store para Empresas foi projetado principalmente para tomadores de decisões de IT e administradores em empresas ou organizações com uma maneira flexível de encontrar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos em mercados selecionados para Windows 10 dispositivos em volume. 
 
-Você pode gerenciar aplicativos Microsoft Store e aplicativos de linha de negócios privados em um único inventário e atribuir e reutilizar licenças conforme necessário. Você também pode escolher o melhor método de distribuição para sua organização: atribuir diretamente aplicativos a indivíduos e equipes, publicar aplicativos em páginas privadas no Microsoft Store ou conectar-se com soluções de gerenciamento para obter mais opções.
+Você pode gerenciar Microsoft Store aplicativos privados de linha de negócios em um inventário e atribuir e rea usar licenças conforme necessário. Você também pode escolher o melhor método de distribuição para sua organização: atribuir aplicativos diretamente a indivíduos e equipes, publicar aplicativos em páginas privadas no Microsoft Store ou conectar-se com soluções de gerenciamento para obter mais opções.
 
-Quando Microsoft Store for Business for usado por um usuário final, eles iniciarão o aplicativo Microsoft Store. Depois de iniciado, o usuário poderá selecionar a guia com o nome de sua organização. em seguida, eles serão apresentados com os aplicativos disponíveis para eles ou para esse dispositivo.
+Quando Microsoft Store para Empresas for usado por um usuário final, ele iniciará o Microsoft Store aplicativo. Depois de lançado, o usuário poderá selecionar a guia com o nome de suas organizações. Em seguida, ele será apresentado aos aplicativos disponíveis para ele ou para esse dispositivo.
 
 > [!Note] 
-> O Microsoft Store for Business não baixa automaticamente os aplicativos (push) para os dispositivos. No entanto, os aplicativos da Microsoft Store para empresas podem ser associados ao seu servidor de gerenciamento de dispositivo (MDM) para direcionar e sincronizar aplicativos com dispositivos.
+> Microsoft Store para Empresas baixa automaticamente aplicativos (push) para dispositivos. No entanto, os aplicativos Microsoft Store para Empresas podem ser associados ao servidor de MDM (gerenciamento de dispositivos) para direcionar e sincronizar aplicativos para dispositivos.
 
-Visite as páginas a seguir para saber mais sobre como usar o Microsoft Store para negócios:
-* [Níveis de permissões usadas para instalar aplicativos](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-holographic#app-store)
-* [Como adicionar um aplicativo à sua loja para empresas](https://docs.microsoft.com/mem/intune/apps/store-apps-windows)
-* [Como atribuir aplicativos a grupos de funcionários](https://docs.microsoft.com/mem/intune/apps/windows-store-for-business)
+Visite as páginas a seguir para saber mais sobre como usar o Microsoft Store para Empresas:
 
-Para associar seus Microsoft Store para negócios, visite [associar seu Microsoft Store para empresas com o Intune](https://docs.microsoft.com/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune).
+* [Níveis de permissões usadas para instalar aplicativos](/mem/intune/configuration/device-restrictions-windows-holographic#app-store)
+* [Como adicionar um aplicativo à Sua Store para Empresas](/mem/intune/apps/store-apps-windows)
+* [Como atribuir aplicativos a grupos de funcionários](/mem/intune/apps/windows-store-for-business)
 
-> [!Tip] 
-> Saiba mais sobre a [distribuição de aplicativos offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps) ao usar aplicativos como o Arc (complemento de recuperação avançada) e o WCD (Designer de configuração do Windows).
+Para associar seu Microsoft Store para Empresas, visite [Associar seu Microsoft Store para Empresas ao Intune.](/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune)
+
+> [!Tip]
+> Saiba mais sobre [como distribuir aplicativos offline](/microsoft-store/distribute-offline-apps) ao usar aplicativos como ARC (Advanced Recovery Companion) e Windows Configuration Designer (WCD).

@@ -1,7 +1,7 @@
 ---
-title: Visão geral do HoloLens 2 conectado à nuvem com Assistência Remota
-description: Saiba como registrar dispositivos HoloLens 2 em uma rede conectada à nuvem usando o Dynamics 365 Remote Assist.
-keywords: HoloLens, gerenciamento, conectado à nuvem, Assistência Remota, AAD, Azure AD, MDM, Dispositivos móveis Gerenciamento de Dispositivos
+title: Visão geral do Cloud Connected HoloLens 2 com Assistência Remota
+description: Saiba como registrar HoloLens 2 dispositivos em uma rede conectada à nuvem usando o Dynamics 365 Remote Assist.
+keywords: HoloLens, gerenciamento, nuvem conectada, Assistência Remota, AAD, Azure AD, MDM, Mobile Gerenciamento de Dispositivos
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,28 +14,27 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a44247b4afea747e4b75c974fcae344380909989
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 86d36275d5cf1296ca3e9fec90684a188a29f3f0
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112923526"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635119"
 ---
-# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Guia de implantação – HoloLens 2 conectado à nuvem com Assistência Remota – Visão geral
+# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Guia de implantação – Nuvem conectada HoloLens 2 com Assistência Remota – Visão geral
 
-Este guia ajudará os profissionais de TI a planejar e implantar Microsoft HoloLens 2 dispositivos com o Remote Assist em sua organização. Isso servirá como um modelo para implantações de prova de conceito em sua organização em uma variedade de casos de uso do HoloLens 2. A configuração é semelhante ao [Cenário A: Implantar em dispositivos de conexão de nuvem.](https://docs.microsoft.com/hololens/common-scenarios#scenario-a) 
+Este guia ajudará os profissionais de TI a planejar e implantar Microsoft HoloLens 2 dispositivos com Assistência Remota em sua organização. Isso servirá como um modelo para implantações de prova de conceito em sua organização em uma variedade de HoloLens dois casos de uso. A configuração é semelhante ao [Cenário A: Implantar em dispositivos de conexão de nuvem.](https://docs.microsoft.com/hololens/common-scenarios#scenario-a) 
 
-Durante o guia, vamos abranger como registrar seus dispositivos no gerenciamento de dispositivos, aplicar licenças conforme necessário e validar se os usuários finais podem usar imediatamente a Assistência Remota na instalação do dispositivo. Para fazer isso, vamos falar sobre as partes importantes da infraestrutura necessárias para se configurar e executar – alcançando a implantação em escala com o HoloLens 2. Nenhuma outra restrição de dispositivo ou configurações será aplicada neste guia, no entanto, incentivamos você a explorar essas opções após a conclusão.
+Durante o guia, vamos abranger como registrar seus dispositivos no gerenciamento de dispositivos, aplicar licenças conforme necessário e validar se os usuários finais podem usar imediatamente a Assistência Remota na instalação do dispositivo. Para fazer isso, vamos falar sobre as partes importantes da infraestrutura necessárias para ser configurada e em execução – alcançando a implantação em escala com HoloLens 2. Nenhuma outra restrição de dispositivo ou configurações será aplicada neste guia, no entanto, incentivamos você a explorar essas opções após a conclusão.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 A infraestrutura a seguir deve estar em uso para implantar o HoloLens 2. Caso não, a configuração do Azure e do Intune está incluída neste guia:
 
-- Wi-Fi
-    - As redes normalmente são abertas para os serviços de Internet e nuvem
-- Azure Active Directory (Azure AD) Ingressar no Registro Automático do MDM (assinatura do[Azure AD P1](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) necessária)
-- MDM (Intune) Gerenciado
-    - Um ou mais aplicativos são implantados por meio do MDM.
+Essa é uma configuração semelhante ao Cenário [A:](/hololens/common-scenarios#scenario-a)Implantar em dispositivos de conexão de nuvem, que é uma boa opção para muitas implantações de Prova de Conceito, que incluirão:
+
+- Wi-Fi redes são normalmente totalmente abertas para os serviços de Internet e nuvem
+- Ingressar no Azure AD com Registro Automático do MDM – MDM (Intune) Gerenciado
 - Os usuários entrarão com sua própria conta corporativa (Azure AD)
     - Há suporte para usuários individuais ou múltiplos por dispositivo.
 
@@ -44,7 +43,7 @@ A infraestrutura a seguir deve estar em uso para implantar o HoloLens 2. Caso n�
 
 ## <a name="learn-about-remote-assist"></a>Saiba mais sobre o Remote Assist
 
-O Remote Assist permite manutenção e reparo colaborativos, inspeção remota, bem como treinamento e compartilhamento de conhecimento. Conectando pessoas em diferentes funções e locais, um técnico que usa a Assistência Remota pode se conectar com um colaborador remoto no Microsoft Teams. Eles podem combinar vídeos, capturas de tela e anotações para resolver problemas em tempo real, mesmo quando&#39;estão no mesmo local. Os colaboradores remotos podem inserir imagens de referência, esquemas e outras informações úteis que o técnico&#39;espaço físico para que possam se referir ao esquema enquanto trabalham de cabeça para cima e mãos livres no HoloLens.
+O Remote Assist permite manutenção e reparo colaborativos, inspeção remota, bem como treinamento e compartilhamento de conhecimento. Conectando pessoas em diferentes funções e locais, um técnico que usa o Remote Assist pode se conectar com um colaborador remoto Microsoft Teams. Eles podem combinar vídeos, capturas de tela e anotações para resolver problemas em tempo real, mesmo quando&#39;estão no mesmo local. Os colaboradores remotos podem inserir imagens de referência, esquemas e outras informações úteis que o técnico&#39;tem no espaço físico para que possam se referir ao esquema enquanto trabalham de cabeça para cima e mãos livres em HoloLens.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -58,7 +57,7 @@ O Remote Assist permite manutenção e reparo colaborativos, inspeção remota, 
 - Licença do Remote Assist
 - Conectividade de rede
 
-#### <a name="microsoft-teams-user"></a>Usuário do Microsoft Teams
+#### <a name="microsoft-teams-user"></a>Microsoft Teams usuário
 
 - Microsoft Teams ou [Teams Freemium.](https://products.office.com/microsoft-teams/free)
 - Conectividade de rede
@@ -70,7 +69,7 @@ Se você planeja implementar esse cenário [entre locatários,](https://docs.mic
 Preparar:
 
 > [!div class="checklist"]
-> - [Saiba mais sobre os fundamentos de infraestrutura para dispositivos HoloLens 2.](hololens2-cloud-connected-prepare.md#infrastructure-essentials)
+> - [Saiba mais sobre os fundamentos de infraestrutura para HoloLens 2 dispositivos.](hololens2-cloud-connected-prepare.md#infrastructure-essentials)
 > - [Saiba mais sobre o Azure AD e configurar um se você&#39;o tiver.](hololens2-cloud-connected-prepare.md#azure-active-directory)
 > - [Saiba mais sobre o Gerenciamento de identidades e como configurar melhor as contas do Azure AD.](hololens2-cloud-connected-prepare.md#identity-management)
 > - [Saiba mais sobre o MDM e configurar com o Intune se&#39;ainda não tiver um pronto.](hololens2-cloud-connected-prepare.md#mobile-device-management)
@@ -87,7 +86,7 @@ Configurar:
 Implantar:
 
 > [!div class="checklist"]
-> - [Configurar o HoloLens 2 e validar o registro.](hololens2-cloud-connected-deploy.md#enrollment-validation)
+> - [Configurar seu HoloLens 2 e validar o registro.](hololens2-cloud-connected-deploy.md#enrollment-validation)
 > - [Valide se você pode fazer uma chamada de Assistência Remota.](hololens2-cloud-connected-deploy.md#remote-assist-call-validation)
 
 Manter:
