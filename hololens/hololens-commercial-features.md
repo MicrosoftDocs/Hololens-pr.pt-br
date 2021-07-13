@@ -18,14 +18,14 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 keywords: HoloLens, comercial, recursos, MDM, gerenciamento de dispositivo móvel, modo de quiosque
-ms.openlocfilehash: 5aef764b1d7937832e162ab219131d8c3d768e68
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: 3682a2633477d68f61dba8a674846857947a3d15
+ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11283442"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110397857"
 ---
-# Recursos comerciais
+# <a name="commercial-features"></a>Recursos comerciais
 
 O HoloLens inclui recursos que tornam mais fácil para as empresas gerenciarem os dispositivos HoloLens.
 
@@ -35,13 +35,13 @@ O HoloLens (1ª geração) veio com duas opções de licenciamento: a licença d
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
-## Principais recursos comerciais
+## <a name="key-commercial-features"></a>Principais recursos comerciais
 
 - **Modo de quiosque.** Você pode usar o HoloLens em experiências de demonstração usando o modo de quiosque, para limitar quais aplicativos podem ser executados.
 
   ![Usando o modo de quiosque, o HoloLens é iniciado diretamente no aplicativo de sua escolha.](images/201608-kioskmode-400px.png)
 
-- **Gerenciamento de Dispositivo Móvel (MDM) para HoloLens** Seu departamento de TI pode gerenciar vários dispositivos HoloLens simultaneamente usando soluções como o Microsoft Intune. Você pode gerenciar as configurações, selecionar aplicativos para instalar e definir as configurações de segurança adaptadas às necessidades da sua organização.
+- **MDM (Gerenciamento de Dispositivo Móvel) para HoloLens.** Seu departamento de TI pode gerenciar vários dispositivos HoloLens simultaneamente usando soluções como o Microsoft Intune. Você pode gerenciar as configurações, selecionar aplicativos para instalar e definir as configurações de segurança adaptadas às necessidades da sua organização.
 
   ![O Gerenciamento de Dispositivo Móvel no HoloLens fornece gerenciamento de dispositivos de nível empresarial em vários dispositivos.](images/201608-enterprisemanagement-400px.png)
 
@@ -50,34 +50,34 @@ O HoloLens (1ª geração) veio com duas opções de licenciamento: a licença d
 - **Acesso corporativo.** Qualquer pessoa em sua organização pode se conectar remotamente à rede corporativa por meio de uma rede virtual privada (VPN) em um HoloLens. O HoloLens também pode acessar redes Wi-Fi que exigem credenciais.
 - **Microsoft Store para Empresas.** Seu departamento de TI também pode configurar um repositório particular corporativo, contendo somente os aplicativos da empresa para uso específico do HoloLens. Distribua os softwares corporativos com segurança ao grupo selecionado de usuários corporativos.
 
-## Comparação de recursos entre edições
+## <a name="feature-comparison-between-editions"></a>Comparação de recursos entre edições
 
-|Recursos |HoloLens Development Edition |HoloLens Commercial Suite |HoloLens 2 |
+|Recursos |HoloLens (1ª geração) Development Edition |HoloLens (1ª geração) Commercial Suite |HoloLens 2 |
 |---|:---:|:---:|:---:|
-|Criptografia do Dispositivo (BitLocker) | |✔️ |✔️ |
-|VPN (Rede Virtual Privada) | |✔️ |✔️ |
+|Criptografia de Dispositivo (BitLocker) | |✔️ |✔️ |
+|VPN (Rede Privada Virtual) | |✔️ |✔️ |
 |[Modo de quiosque](hololens-kiosk.md) | |✔️ |✔️ |
 |**Gerenciamento e implantação** | | | |
-|Gerenciamento de Dispositivo Móvel (MDM) | |✔️ |✔️ |
+|Gerenciamento de Dispositivos Móveis (MDM) | |✔️ |✔️ |
 |Capacidade de bloquear o cancelamento de registro | |✔️ |✔️ |
 |Acesso Wi-Fi corporativo com base em certificado | |✔️ |✔️ |
 |Microsoft Store (Consumidor) |Consumidor |Filtrar usando MDM |Filtrar usando MDM |
 |[Portal Comercial da Store](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps) | |✔️ |✔️ |
 |**Segurança e identidade** | | | |
-|Entrar usando a conta do Azure Active Directory (Azure AD) |✔️ |✔️ |✔️ |
+|Entrar usando a conta do Azure AD (Azure Active Directory) |✔️ |✔️ |✔️ |
 |Entrar usando a conta Microsoft (MSA) |✔️ |✔️ |✔️ |
 |Credenciais da Próxima Geração com desbloqueio de PIN |✔️ |✔️ |✔️ |
 |[Inicialização segura](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-secure-boot) |✔️ |✔️ |✔️ |
 |**Manutenção e suporte** | | | |
 |Atualizações automáticas do sistema ao chegarem |✔️ |✔️ |✔️ |
-|[Windows Update para Empresas](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) | |✔️ |✔️ |
-|Canal de Manutenção em Longo Prazo (LTSC) | |✔️ |✔️ |
+|[Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) | |✔️ |✔️ |
+|LTSC (Canal de Manutenção em Longo Prazo) | |✔️ |✔️ |
 
-## Habilitar recursos comerciais
+## <a name="enabling-commercial-features"></a>Habilitar recursos comerciais
 
 O administrador de TI da sua organização pode configurar recursos comerciais, como Microsoft Store para Empresas, modo de quiosque e acesso Wi-Fi corporativo. A documentação do [Microsoft HoloLens](index.yml) fornece instruções passo a passo para registrar dispositivos e instalar aplicativos da Microsoft Store para Empresas.
 
-## Ver também
+## <a name="see-also"></a>Confira também
 
 - [Microsoft HoloLens](index.yml)
 - [Modo de quiosque](hololens-kiosk.md)
