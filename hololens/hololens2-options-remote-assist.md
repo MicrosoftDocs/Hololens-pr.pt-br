@@ -2,7 +2,7 @@
 title: Assistência Remota do HoloLens 2
 description: Saiba mais sobre o Remote Assist do HoloLens 2 e o que fazer após adquirir um.
 keywords: Opções de compra do HoloLens 2, opções do HoloLens, Remote Assist
-author: bogenera
+author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
 ms.date: 4/12/2021
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b10bdb55a5d9cb3c059cb85c29a0ed4f4cf7c7d7
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 540bdcaefafcc50cc38d5e9a67dea3b9cb596f05
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110398799"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639464"
 ---
 # <a name="hololens-2-with-remote-assist"></a>HoloLens 2 com Assistência Remota
 
@@ -37,10 +37,10 @@ Criamos um guia específico para ajudá-lo a implantar dispositivos HoloLens em 
 
 | Ponto de verificação  | Resultado                                |
 |-------------|----------------------------------------|
-| [Introdução](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/overview-hololens) | Introdução à Remote Assist.        |
-| [Licença](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Resgate a licença para o Remote Assist.      |
-| [Connect](https://docs.microsoft.com/hololens/hololens-network)     | Conecte seu(s) dispositivo(s) ao Wi-Fi.       |
-| [Registrar](https://docs.microsoft.com/hololens/hololens-enroll-mdm)      | Inscreva dispositivos com sua organização. |
+| [Introdução](/dynamics365/mixed-reality/remote-assist/overview-hololens) | Introdução à Remote Assist.        |
+| [Licença](/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Resgate a licença para o Remote Assist.      |
+| [Connect](/hololens/hololens-network)     | Conecte seu(s) dispositivo(s) ao Wi-Fi.       |
+| [Registrar](/hololens/hololens-enroll-mdm)      | Inscreva dispositivos com sua organização. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

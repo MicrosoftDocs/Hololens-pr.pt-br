@@ -2,7 +2,7 @@
 title: Trimble XR10 com o HoloLens 2
 description: Saiba mais sobre o Trimble XR10 com HoloLens 2 e o que fazer depois de obter o seu.
 keywords: Opções de compra do HoloLens 2, opções do HoloLens, Trimble XR10
-author: bogenera
+author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
 ms.date: 4/12/2021
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b52b675faa81a9d713f035fec8a533093a7a8580
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: cd3b122de155efeb59acb86bfc56264c3da4bd44
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110398809"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639447"
 ---
 # <a name="trimble-xr10-with-hololens-2"></a>Trimble XR10 com o HoloLens 2
 

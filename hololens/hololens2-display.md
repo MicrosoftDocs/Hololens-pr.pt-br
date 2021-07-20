@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 96bacd79d559bc0adcd42665c4a8b4af856b58b0
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 548f484043f2b1cb62ce0e0cfb6450a956d412b3
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112923611"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113636921"
 ---
 # <a name="hololens-2-display-troubleshooting"></a>Solução de problemas de exibição do HoloLens 2
 
@@ -122,8 +122,8 @@ Os usuários terão uma melhor experiência se evitarem planos de fundo brancos.
 
 Os desenvolvedores são aconselhados a seguir as diretrizes de design do modo escuro:
 
-* [Diretrizes de design do desenvolvedor para visores do HoloLens](https://docs.microsoft.com/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
-* [Tamanhos de fonte recomendados](https://docs.microsoft.com/windows/mixed-reality/typography#recommended-font-size)
+* [Diretrizes de design do desenvolvedor para visores do HoloLens](/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
+* [Tamanhos de fonte recomendados](/windows/mixed-reality/typography#recommended-font-size)
 
 Quando um holograma exigir um plano de fundo branco, mantenha o tamanho do holograma menor do que o campo de visão total do visor. Esse tamanho permite aos usuários colocar o holograma no centro do visor.
 

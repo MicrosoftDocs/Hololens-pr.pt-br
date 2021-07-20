@@ -19,12 +19,12 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: faa6bb2b095d69c3538063b1c042c5ce5e215d33
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 5ec26c64a971b8bfc9f8d1f9044e2e651a218816
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924070"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639991"
 ---
 # <a name="manage-hololens-updates"></a>Gerenciar atualizações do HoloLens
 
@@ -34,18 +34,18 @@ O HoloLens usa o Windows Update da mesma maneira que outros dispositivos do Wind
 
 ### <a name="managing-updates-by-using-windows-update-for-business"></a>Gerenciar atualizações usando o Windows Update para Empresas
 
-O Windows Holographic for Business pode usar o [Windows Update para Empresas](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) para gerenciar atualizações. Todos os dispositivos do HoloLens 2 podem usar o Windows Holographic for Business. Eles devem usar o Windows Holographic for Business Build 10.0.18362.1042 ou posterior. Se você tiver dispositivos HoloLens (1ª geração), precisará [atualizá-los para Windows Holographic for Business](hololens1-upgrade-enterprise.md) para gerenciar suas atualizações.
+O Windows Holographic for Business pode usar o [Windows Update para Empresas](/windows/deployment/update/waas-manage-updates-wufb) para gerenciar atualizações. Todos os dispositivos do HoloLens 2 podem usar o Windows Holographic for Business. Eles devem usar o Windows Holographic for Business Build 10.0.18362.1042 ou posterior. Se você tiver dispositivos HoloLens (1ª geração), precisará [atualizá-los para Windows Holographic for Business](hololens1-upgrade-enterprise.md) para gerenciar suas atualizações.
 
 O Windows Update para Empresas conecta dispositivos do HoloLens diretamente ao serviço do Windows Update. Usando o Windows Update para Empresas, você pode controlar vários aspectos do processo de atualização&mdash;ou seja, quais dispositivos recebem quais são as atualizações. Por exemplo, você pode distribuir as atualizações para um subconjunto de dispositivos para teste e, em seguida, distribuir as atualizações para os dispositivos restantes. Ou você pode definir diferentes agendamentos de atualização para diferentes tipos de atualizações.
 
 > [!NOTE]  
-> Para dispositivos HoloLens, você pode gerenciar automaticamente as atualizações de recursos (lançadas duas vezes por ano) e atualizações de qualidade (lançadas mensalmente ou conforme necessário, incluindo atualizações de importantes de segurança). Para obter mais informações sobre os tipos de atualização, confira [Tipos de atualizações gerenciadas pelo Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business).
+> Para dispositivos HoloLens, você pode gerenciar automaticamente as atualizações de recursos (lançadas duas vezes por ano) e atualizações de qualidade (lançadas mensalmente ou conforme necessário, incluindo atualizações de importantes de segurança). Para obter mais informações sobre os tipos de atualização, confira [Tipos de atualizações gerenciadas pelo Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business).
 
 Você pode configurar o Windows Update para Empresas para o HoloLens usando políticas em uma solução de Gerenciamento de Dispositivo Móvel (MDM), como o Microsoft Intune.
 
 ### <a name="managing-windows-update-for-business-by-using-microsoft-intune"></a>Definir as configurações do Windows Update para Empresas usando o Microsoft Intune
 
-Para conferir uma discussão detalhada sobre como usar o Intune para configurar o Windows Update para Empresas, confira [Gerenciar atualizações de software do Windows 10 no Intune](https://docs.microsoft.com/intune/protect/windows-update-for-business-configure). Para obter mais informações sobre a funcionalidade específica do Intune com a qual o HoloLens é compatível, confira [Funções de gerenciamento de atualizações do Intune com as quais o HoloLens é compatível](#intune-update-management-functions-that-hololens-supports).
+Para conferir uma discussão detalhada sobre como usar o Intune para configurar o Windows Update para Empresas, confira [Gerenciar atualizações de software do Windows 10 no Intune](/intune/protect/windows-update-for-business-configure). Para obter mais informações sobre a funcionalidade específica do Intune com a qual o HoloLens é compatível, confira [Funções de gerenciamento de atualizações do Intune com as quais o HoloLens é compatível](#intune-update-management-functions-that-hololens-supports).
 
 > [!IMPORTANT]  
 > O Intune apresenta dois tipos de política para gerenciar atualizações: *Grupo de atualização do Windows 10* e *atualização de recursos do Windows 10*. O tipo de política de atualização de recursos do Windows 10 está na versão preliminar pública no momento e não é compatível com o HoloLens.
@@ -56,41 +56,41 @@ Para conferir uma discussão detalhada sobre como usar o Intune para configurar 
 
 Esta seção descreve as políticas que você pode usar para gerenciar as atualizações do HoloLens 2 ou do HoloLens (1ª geração). Para obter mais informações sobre a funcionalidade que está disponível para o HoloLens 2, confira [Planejar e configurar distribuições de atualização para o HoloLens 2](#plan-and-configure-update-rollouts-for-hololens-2).
 
-O [Provedor de Soluções na Nuvem de Política – atualizações](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update) define as políticas que configuram o Windows Update para Empresas.
+O [Provedor de Soluções na Nuvem de Política – atualizações](/windows/client-management/mdm/policy-csp-update) define as políticas que configuram o Windows Update para Empresas.
 
 > [!NOTE]  
-> Para obter uma lista de CSPs (Provedores de Soluções na Nuvem) específicos da política compatíveis com edições específicas do HoloLens, confira [CSPs de política compatíveis com dispositivos HoloLens](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policy-csps-supported-by-hololens-devices).
+> Para obter uma lista de CSPs (Provedores de Soluções na Nuvem) específicos da política compatíveis com edições específicas do HoloLens, confira [CSPs de política compatíveis com dispositivos HoloLens](/windows/client-management/mdm/policy-configuration-service-provider#policy-csps-supported-by-hololens-devices).
 
 #### <a name="configure-automatic-checks-for-updates"></a>Configurar verificações automáticas para atualizações
 
-Você pode usar a política **Update/AllowAutoUpdate** para gerenciar o comportamento de atualização automática, como a verificação, o download e a instalação das atualizações. Para obter mais informações sobre as configurações disponíveis para essa política, confira [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate).
+Você pode usar a política **Update/AllowAutoUpdate** para gerenciar o comportamento de atualização automática, como a verificação, o download e a instalação das atualizações. Para obter mais informações sobre as configurações disponíveis para essa política, confira [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate).
 
 > [!NOTE]  
-> No Microsoft Intune, você pode usar o **Comportamento de atualização automática** para alterar essa política. Para obter mais informações, confira [Gerenciar as atualizações de software do Windows 10 no Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> No Microsoft Intune, você pode usar o **Comportamento de atualização automática** para alterar essa política. Para obter mais informações, confira [Gerenciar as atualizações de software do Windows 10 no Intune](/intune/windows-update-for-business-configure).
 
 #### <a name="configure-an-update-schedule"></a>Configurar um cronograma de atualização
 
 Para configurar como e quando as atualizações serão aplicadas, use as seguintes políticas:
 
-- [Update/ScheduledInstallDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstallday)  
+- [Update/ScheduledInstallDay](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallday)  
   - Valores: **0**–**7** (0 = todos os dias, 1 = domingo, 7 = sábado)
   - Valor padrão: **0** (todos os dias)
-- [Update/ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
+- [Update/ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
   - Valores: 0–23 (0 = meia-noite, 23 = 11 PM)
   - Valor padrão: 3 AM
 
 #### <a name="configure-active-hours"></a>Configurar o horário ativo
 A partir do [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2), um administrador de TI pode especificar o intervalo de horas ativas para dispositivos HoloLens 2.
 
-Horário ativo identifica o período de tempo em que você espera que o dispositivo esteja em uso. As reinicializações automáticas após uma atualização ocorrerão fora do horário ativo. O intervalo especificado será contado a partir da hora de início do horário ativo. Você pode usar o MDM, conforme descrito em [Configurando o horário ativo com o MDM](https://docs.microsoft.com/windows/deployment/update/waas-restart#configuring-active-hours-with-mdm). O MDM usa as configurações ActiveHoursStart/Update e Update/ActiveHoursEnd e Update/ActiveHoursMaxRange do CSP da Política para configurar o horário ativo.
+Horário ativo identifica o período de tempo em que você espera que o dispositivo esteja em uso. As reinicializações automáticas após uma atualização ocorrerão fora do horário ativo. O intervalo especificado será contado a partir da hora de início do horário ativo. Você pode usar o MDM, conforme descrito em [Configurando o horário ativo com o MDM](/windows/deployment/update/waas-restart#configuring-active-hours-with-mdm). O MDM usa as configurações ActiveHoursStart/Update e Update/ActiveHoursEnd e Update/ActiveHoursMaxRange do CSP da Política para configurar o horário ativo.
 
--   [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend): esse valor define a hora de término. Há um máximo de 12 horas a partir da hora de início.
+-   [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend): esse valor define a hora de término. Há um máximo de 12 horas a partir da hora de início.
     -   Os valores compatíveis são 0-23, em que 0 é 12 AM, 1 é 1 AM etc.
     -   O padrão é 17 (5 PM).
--   [Update/ActiveHoursMaxRange](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange): esse valor define o número máximo de horas ativas a partir da hora de início.
+-   [Update/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange): esse valor define o número máximo de horas ativas a partir da hora de início.
     -   Os valores compatíveis estão entre 8 e 18.
     -   O valor padrão é 18 (2 horas).
--   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart): esse valor define a hora de início. Há um máximo de 12 horas a partir da hora de término.
+-   [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart): esse valor define a hora de início. Há um máximo de 12 horas a partir da hora de término.
     -   Os valores compatíveis são 0-23, em que 0 é 12 AM, 1 é 1 AM etc.
     -   O valor padrão é 8 (8 AM).
 
@@ -98,9 +98,9 @@ Horário ativo identifica o período de tempo em que você espera que o disposit
 
 Você pode usar as seguintes políticas de atualização para configurar os dispositivos para obter atualizações do Windows Server Update Services (WSUS), em vez do Windows Update:
 
-- [Update/AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
-- [Update/RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
-- [Update/UpdateServiceUrl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+- [Update/AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+- [Update/RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+- [Update/UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
 ### <a name="plan-and-configure-update-rollouts-for-hololens-2"></a>Planejar e configurar as atualizações de atualização do HoloLens 2
 
@@ -140,7 +140,7 @@ Você pode configurar adiamentos diferentes para atualizações de recursos e at
 Se um usuário não tiver acesso ao MDM, poderá Pausar individualmente as atualizações por até 35 dias manualmente em um dispositivo HoloLens 2 na build [Windows Holographic, versão 2004](hololens-release-notes.md#windows-holographic-version-2004) ou posterior. Os usuários podem acessar essa configuração navegando até **Configurações > Atualização e Segurança > Opções avançadas**  rolando para baixo até **Pausar atualizações** e escolhendo a data até a qual as atualizações serão pausadas. Quando um usuário atingir o limite de pausa, o dispositivo precisa receber novas atualizações porque ele pode pausar novamente. 
 
 A partir do [Windows Holographic, versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2), essa função de atualização de pausa pode ser gerenciada para dispositivos HoloLens 2. 
-- [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess).
+- [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess).
     - 0 (padrão) = Habilitada
     - 1: desabilitado
 
@@ -148,7 +148,7 @@ A partir do [Windows Holographic, versão 20H2](hololens-release-notes.md#window
 
 Você pode usar as seguintes funções de gerenciamento de atualização do Intune para gerenciar as atualizações do HoloLens.
 
-- **Criar** e **Atribuir**: essas funções adicionam um anel de atualização do Windows 10 à lista de grupos de atualização. Para obter mais informações, confira [Criar e atribuir grupos de atualização](https://docs.microsoft.com/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings).
+- **Criar** e **Atribuir**: essas funções adicionam um anel de atualização do Windows 10 à lista de grupos de atualização. Para obter mais informações, confira [Criar e atribuir grupos de atualização](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings).
 
 - **Pausar**: se encontrar um problema ao implantar um recurso ou uma atualização de qualidade, você pode pausar a atualização por 35 dias (a partir de uma data especificada). Essa pausa impede que outros dispositivos instalem a atualização até que você resolva ou atenue o problema. Se você pausar uma atualização de recursos, as atualizações de qualidade ainda serão oferecidas aos dispositivos para garantir que eles permaneçam seguros. Quando um tipo de atualização é pausado, o painel Visão geral desse anel exibe os dias restantes até que o tipo de atualização seja retomado. Após o término do período especificado, a pausa automaticamente expirará e o processo será reiniciado.
 
@@ -162,26 +162,26 @@ Você pode usar as seguintes funções de gerenciamento de atualização do Intu
 
 ### <a name="delivery-optimization-preview"></a>Versão prévia de otimização de entrega
 
-O [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) habilitou uma versão prévia antecipada para configurações de otimização de entrega para reduzir o consumo de largura de banda para downloads de vários dispositivos HoloLens. Uma descrição mais completa dessa funcionalidade com a configuração de rede recomendada está disponível aqui: [Otimização de entrega para atualizações do Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization).
+O [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) habilitou uma versão prévia antecipada para configurações de otimização de entrega para reduzir o consumo de largura de banda para downloads de vários dispositivos HoloLens. Uma descrição mais completa dessa funcionalidade com a configuração de rede recomendada está disponível aqui: [Otimização de entrega para atualizações do Windows 10](/windows/deployment/update/waas-delivery-optimization).
 
-As seguintes configurações são habilitadas como parte da superfície de gerenciamento e [podem ser configuradas no Intune](https://docs.microsoft.com/mem/intune/configuration/delivery-optimization-settings):
+As seguintes configurações são habilitadas como parte da superfície de gerenciamento e [podem ser configuradas no Intune](/mem/intune/configuration/delivery-optimization-settings):
 
-- [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)
-- [DOCacheHostSource](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehostsource)
-- [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)
-- [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)
-- [DODownloadMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodownloadmode)
-- [DOMaxBackgroundDownloadBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxbackgrounddownloadbandwidth)
-- [DOMaxForegroundDownloadBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxforegrounddownloadbandwidth)
-- [DOPercentageMaxBackgroundBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxbackgroundbandwidth)
-- [DOPercentageMaxForegroundBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxforegroundbandwidth)
-- [DOSetHoursToLimitForegroundDownloadBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitforegrounddownloadbandwidth)
-- [DOSetHoursToLimitBackgroundDownloadBandwidth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitbackgrounddownloadbandwidth)
+- [DOCacheHost](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)
+- [DOCacheHostSource](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehostsource)
+- [DODelayCacheServerFallbackBackground](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)
+- [DODelayCacheServerFallbackForeground](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)
+- [DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodownloadmode)
+- [DOMaxBackgroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxbackgrounddownloadbandwidth)
+- [DOMaxForegroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxforegrounddownloadbandwidth)
+- [DOPercentageMaxBackgroundBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxbackgroundbandwidth)
+- [DOPercentageMaxForegroundBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxforegroundbandwidth)
+- [DOSetHoursToLimitForegroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitforegrounddownloadbandwidth)
+- [DOSetHoursToLimitBackgroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitbackgrounddownloadbandwidth)
 
 Algumas advertências sobre essa oferta de versão prévia:
 
 - O suporte do HoloLens é limitado nesta versão prévia apenas a atualizações do sistema operacional.
-- O Windows Holographic for Business permite apenas modos de download HTTP e downloads de um [ponto de extremidade do Cache Conectado da Microsoft](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache). Não há compatibilidade com modos de download ponto a ponto e atribuições de grupo em dispositivos HoloLens no momento.
+- O Windows Holographic for Business permite apenas modos de download HTTP e downloads de um [ponto de extremidade do Cache Conectado da Microsoft](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache). Não há compatibilidade com modos de download ponto a ponto e atribuições de grupo em dispositivos HoloLens no momento.
 - O HoloLens é compatível com a implantação ou a otimização de entrega para pontos de extremidade do Windows Server Update Services.
 - A solução de problemas exigirá o diagnóstico no servidor Cache Conectado ou a coleta de um rastreamento no HoloLens no HoloLens por meio do **Configurações** > **Atualização e Segurança** >  **Solução de problemas** >  **Windows Update**.
 
@@ -239,7 +239,7 @@ Se o WDRT não detectar o seu dispositivo HoloLens, tente reiniciar o computador
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Notas sobre a versão do HoloLens 2](https://docs.microsoft.com/hololens/hololens-release-notes)
-- [O que é o Windows Update para Empresas?](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)
-- [Atribuir dispositivos a canais de serviços para atualizações do Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-servicing-channels-windows-10-updates)
-- [Gerenciar atualizações de software do Windows 10 no Intune](https://docs.microsoft.com/mem/intune/protect/windows-update-for-business-configure)
+- [Notas sobre a versão do HoloLens 2](hololens-release-notes.md)
+- [O que é o Windows Update para Empresas?](/windows/deployment/update/waas-manage-updates-wufb)
+- [Atribuir dispositivos a canais de serviços para atualizações do Windows 10](/windows/deployment/update/waas-servicing-channels-windows-10-updates)
+- [Gerenciar atualizações de software do Windows 10 no Intune](/mem/intune/protect/windows-update-for-business-configure)

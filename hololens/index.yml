@@ -11,21 +11,23 @@ metadata:
   ms.author: v-jjaswinski
   ms.date: 05/24/2021
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 6c73b6fbad7a2968e1f75b361b2b8a015cb1769c
-  ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+  ms.openlocfilehash: a37ddd0867a0ea3dfa6f016e01728f2576663aaf
+  ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "112924308"
+  ms.lasthandoff: 07/12/2021
+  ms.locfileid: "113639413"
 landingContent:
 - title: Conheça o HoloLens 2
   linkLists:
   - linkListType: learn
     links:
-    - text: Sobre o hardware do HoloLens 2
-      url: hololens2-hardware.md
-    - text: Comparar as opções do HoloLens 2
+    - text: Funcionalidades e soluções do HoloLens 2
+      url: hololens-commercial-features.md
+    - text: Opções do HoloLens 2
       url: hololens2-options.md
+    - text: Hardware do HoloLens 2
+      url: hololens2-hardware.md
   - linkListType: overview
     links:
     - text: Somente dispositivo
@@ -101,22 +103,22 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: O que é Realidade Misturada?
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality
+      url: /windows/mixed-reality/mixed-reality
     - text: Comece a projetar e a criar protótipos
-      url: https://docs.microsoft.com/windows/mixed-reality/design
+      url: /windows/mixed-reality/design
     - text: Introdução ao desenvolvimento de Realidade Misturada
-      url: https://docs.microsoft.com/windows/mixed-reality/development?tabs=unity
+      url: /windows/mixed-reality/development?tabs=unity
     - text: Visão geral dos Serviços de Nuvem
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality-cloud-services#overview
+      url: /windows/mixed-reality/mixed-reality-cloud-services#overview
     - text: Microsoft Mesh (versão prévia)
-      url: https://docs.microsoft.com/mesh/overview
+      url: /mesh/overview
 - title: Mais serviços
   linkLists:
   - linkListType: reference
     links:
     - text: Documentos de Assistência Remota do Dynamics 365
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview
+      url: /dynamics365/mixed-reality/remote-assist/ra-overview
     - text: Dynamics 365 Guides
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
+      url: /dynamics365/mixed-reality/guides/
     - text: Realidade Misturada do Microsoft Dynamics 365
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+      url: /dynamics365/mixed-reality/

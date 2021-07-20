@@ -2,7 +2,7 @@
 title: HoloLens 2 Development Edition
 description: Saiba mais sobre o HoloLens 2 Development Edition e o que fazer depois de obter o seu.
 keywords: opções de compra do HoloLens 2, opções do HoloLens, Developer Edition
-author: bogenera
+author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
 ms.date: 4/12/2021
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6ecb881f694ca919f9c37a9d6094a708eafcb414
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 613f0a24d1d0d0740ebc448b2c92238a76350958
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924461"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639668"
 ---
 # <a name="hololens-2-development-edition"></a>HoloLens 2 Development Edition
 
@@ -61,7 +61,7 @@ Mais detalhes sobre como [Resgatar sua licença Doyz](https://www.pixyz-software
 
 ### <a name="azure"></a>Azure
 Aqui estão alguns [produtos comuns do Azure para Realidade Misturada](https://azure.microsoft.com/topic/mixed-reality/) para os quais você talvez queira resgatar seu crédito do Azure.
-Como resgatar créditos do Azure: para resgatar seus créditos de US$ 500 do Azure, resgate seu código promocional do Azure Pass e ative sua assinatura. [Saiba mais.](hololens2-development-edition-faq.md#how-can-i-redeem-my-500-azure-credit)
+Como resgatar créditos do Azure: para resgatar seus créditos de US$ 500 do Azure, resgate seu código promocional do Azure Pass e ative sua assinatura. [Saiba mais.](hololens2-development-edition-faq.yml#how-can-i-redeem-my--500-azure-credit-)
 
 - [Saiba como as Âncoras Espaciais do Azure podem ajudá-lo a criar aplicativos que mapeiam, compartilham e mantêm o conteúdo 3D](https://azure.microsoft.com/services/spatial-anchors/)
 - [Saiba como o Azure Remote Rendering pode renderizar conteúdo 3D interativo de alta qualidade e transmiti-lo para seus dispositivos em tempo real](https://azure.microsoft.com/services/remote-rendering/)
@@ -72,19 +72,19 @@ Escolha seu mecanismo, baixe suas ferramentas e tire o pó do teclado. Bem-vindo
 
 |     Ponto de verificação                              |     Resultado                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-|     [Comece a projetar e a criar protótipos](https://docs.microsoft.com/windows/mixed-reality/design/design)         |     Inicie sua aventura no projeto de aplicativos de Realidade Misturada em conceitos centrais, modelos de interação e elementos de experiência do usuário.     |
-|     [Iniciar a desenvolver para uma Realidade Misturada](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)    |     Escolha seu mecanismo, baixe suas ferramentas, adicione os principais blocos de construção e comece a construir hoje.                                  |
-|     [Explorar os Serviços de Nuvem do Azure](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Crie experiências envolventes atraentes com o Azure Remote Rendering e as Âncoras Espaciais do Azure.                                 |
+|     [Comece a projetar e a criar protótipos](/windows/mixed-reality/design/design)         |     Inicie sua aventura no projeto de aplicativos de Realidade Misturada em conceitos centrais, modelos de interação e elementos de experiência do usuário.     |
+|     [Iniciar a desenvolver para uma Realidade Misturada](/windows/mixed-reality/develop/development?tabs=unity)    |     Escolha seu mecanismo, baixe suas ferramentas, adicione os principais blocos de construção e comece a construir hoje.                                  |
+|     [Explorar os Serviços de Nuvem do Azure](/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Crie experiências envolventes atraentes com o Azure Remote Rendering e as Âncoras Espaciais do Azure.                                 |
 
 ## <a name="developer-edition-additional-resources"></a>Recursos adicionais do Developer Edition
 
-- [Perguntas frequentes sobre o HoloLens 2 Development Edition](hololens2-development-edition-faq.md)
-- [Instale as ferramentas para o desenvolvimento do HoloLens.](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
-- [Aprenda a desenvolver para o HoloLens 2 com Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2).
-- [Saiba mais sobre como combinar o MRTK com o Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/mrtk-getting-started).
+- [Perguntas frequentes sobre o HoloLens 2 Development Edition](hololens2-development-edition-faq.yml)
+- [Instale as ferramentas para o desenvolvimento do HoloLens.](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+- [Aprenda a desenvolver para o HoloLens 2 com Unity](/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2).
+- [Saiba mais sobre como combinar o MRTK com o Unity](/windows/mixed-reality/develop/unity/mrtk-getting-started).
 - [Saiba como implantar seus aplicativos integrados](app-deploy-overview.md).
-- [Explore todas as possibilidades de Realidade Misturada](https://docs.microsoft.com/windows/mixed-reality/).
-- [Saiba mais sobre como desenvolver para o HoloLens 2 com Unreal.](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
+- [Explore todas as possibilidades de Realidade Misturada](/windows/mixed-reality/).
+- [Saiba mais sobre como desenvolver para o HoloLens 2 com Unreal.](/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
 - [Entre em contato com seus colegas desenvolvedores em nosso Canal do Slack HoloDevelopers](https://holodevelopersslack.azurewebsites.net/).
 
 ## <a name="next-steps"></a>Próximas etapas

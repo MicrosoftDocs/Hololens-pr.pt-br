@@ -2,7 +2,7 @@
 title: HoloLens 2 Industrial Edition
 description: Saiba mais sobre o HoloLens 2 Industrial Edition e o que fazer depois de obter o seu.
 keywords: Opções de compra do HoloLens 2, opções do HoloLens, Industrial Edition
-author: bogenera
+author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
 ms.date: 4/12/2021
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df18c64487645ebe5381d853de7e32780c4fccad
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 686510fdda8bb09182d7e32188bb9eef9022828c
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110398800"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639566"
 ---
 # <a name="hololens-2-industrial-edition"></a>HoloLens 2 Industrial Edition
 
@@ -40,7 +40,7 @@ Confira as [Perguntas frequentes sobre o HoloLens 2 Industrial Edition](hololens
 
 ## <a name="cleaning-and-handling-hololens-2"></a>Limpeza e Manuseio do HoloLens 2
 
-O HoloLens 2 Industrial Edition pode ser limpo com uma solução de álcool isopropílico "70%" e água para limpar as superfícies duras do dispositivo, incluindo o visor, a almofada da sobrancelha e a tira de cabeça. Para obter mais informações, confira as [Perguntas frequentes sobre limpeza do HoloLens 2](https://docs.microsoft.com/hololens/hololens2-maintenance).
+O HoloLens 2 Industrial Edition pode ser limpo com uma solução de álcool isopropílico "70%" e água para limpar as superfícies duras do dispositivo, incluindo o visor, a almofada da sobrancelha e a tira de cabeça. Para obter mais informações, confira as [Perguntas frequentes sobre limpeza do HoloLens 2](/hololens/hololens2-maintenance).
 
 ## <a name="next-steps"></a>Próximas etapas
 

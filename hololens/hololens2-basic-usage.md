@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8acf5659739d58d24add3f299daeacab7132a086
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: d2804742fdcf9d6562fce0c693552d4a9241398f
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924580"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635204"
 ---
 # <a name="getting-around-hololens-2"></a>Conheça o HoloLens 2
 
@@ -111,7 +111,7 @@ Para **fechar** o menu Iniciar, faça o gesto de Iniciar quando o menu Iniciar e
 > Para que o gesto de Iniciar de uma mão funcione:
 >
 > 1. Você deve atualizar para a atualização de novembro de 2019 (build 18363.1039) ou posterior.
-> 1. Seus olhos devem ser calibrados no dispositivo para que o rastreamento ocular funcione corretamente. Se você não vir pontos orbitando em torno do ícone Iniciar quando olhar para ele, seus olhos não estarão [calibrados](https://docs.microsoft.com/hololens/hololens-calibration#calibrating-your-hololens-2) no dispositivo.
+> 1. Seus olhos devem ser calibrados no dispositivo para que o rastreamento ocular funcione corretamente. Se você não vir pontos orbitando em torno do ícone Iniciar quando olhar para ele, seus olhos não estarão [calibrados](/hololens/hololens-calibration#calibrating-your-hololens-2) no dispositivo.
 
 Você também pode executar o gesto de Iniciar com apenas uma mão. Para fazer isso, estenda sua mão com a palma voltada para você e olhe para o **ícone Iniciar** no seu pulso interno. **Enquanto mantém o olhar no ícone**, aperte seu polegar e o dedo indicador juntos.
 

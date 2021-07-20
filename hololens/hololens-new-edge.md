@@ -9,12 +9,12 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: aefb414deb68376ea45e792f21a929fac7cf3969
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 41978c626328903cf480a3315d56841f187bc123
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110398807"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640178"
 ---
 # <a name="introducing-the-new-microsoft-edge"></a>Apresentando o novo Microsoft Edge
 
@@ -42,13 +42,13 @@ O novo Microsoft Edge oferece aos administradores de TI um conjunto muito mais a
 
 Estes são alguns recursos úteis para saber mais sobre o gerenciamento de configurações de política para o novo Microsoft Edge:
 
-- [Definir configurações de política do Microsoft Edge com o Microsoft Intune](https://docs.microsoft.com/deployedge/configure-edge-with-intune)
-- [Mapeamento de políticas da Versão Prévia do Microsoft Edge para o Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
-- [Mapeamento de políticas do Google Chrome para o Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
-- [Documentação completa do Microsoft Edge Enterprise](https://docs.microsoft.com/deployedge/)
+- [Definir configurações de política do Microsoft Edge com o Microsoft Intune](/deployedge/configure-edge-with-intune)
+- [Mapeamento de políticas da Versão Prévia do Microsoft Edge para o Microsoft Edge](/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
+- [Mapeamento de políticas do Google Chrome para o Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
+- [Documentação completa do Microsoft Edge Enterprise](/deployedge/)
 
 > [!IMPORTANT]
-> Devido ao volume de políticas de navegador com suporte do novo Microsoft Edge, nossa equipe não pode garantir que todas as novas políticas funcionam no HoloLens 2. No entanto, testamos e confirmamos que cada política do novo Microsoft Edge equivalente a uma política do Microsoft Edge herdado que tinha suporte no HoloLens 2 anteriormente funciona conforme o esperado. Confira o [Mapeamento de políticas da Versão Prévia do Microsoft Edge para o Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policy-map-legacy-to-newedge) para encontrar o equivalente no novo Microsoft Edge de cada política de navegador do Microsoft Edge herdado que você estava usando com o HoloLens 2.
+> Devido ao volume de políticas de navegador com suporte do novo Microsoft Edge, nossa equipe não pode garantir que todas as novas políticas funcionam no HoloLens 2. No entanto, testamos e confirmamos que cada política do novo Microsoft Edge equivalente a uma política do Microsoft Edge herdado que tinha suporte no HoloLens 2 anteriormente funciona conforme o esperado. Confira o [Mapeamento de políticas da Versão Prévia do Microsoft Edge para o Microsoft Edge](/deployedge/microsoft-edge-policy-map-legacy-to-newedge) para encontrar o equivalente no novo Microsoft Edge de cada política de navegador do Microsoft Edge herdado que você estava usando com o HoloLens 2.
 >
 > Há pelo menos duas novas políticas do Microsoft Edge que sabemos que *não* funcionam com o HoloLens 2:
 > - EnterpriseModeSiteList
@@ -99,12 +99,12 @@ Há alguns métodos disponíveis para instalar os canais do Microsoft Edge Insid
   1. Selecione o botão **Instalar**.
   1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, Dev ou Canary como uma entrada separada na lista **Todos os aplicativos** do menu Iniciar.
 
-**Instalar via PC com o Portal de Dispositivos do Windows (requer que o [modo de desenvolvedor](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) esteja habilitado no HoloLens 2)**
+**Instalar via PC com o Portal de Dispositivos do Windows (requer que o [modo de desenvolvedor](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) esteja habilitado no HoloLens 2)**
   1. No PC, visite a [Página de download do Edge Insider](https://www.microsoftedgeinsider.com/download).
   1. Selecione o **botão de seta suspensa** ao lado do botão "Baixar para o Windows 10" para o canal do Edge Insider que deseja instalar.
   1. Selecione **HoloLens 2** no menu suspenso.
   1. Salve o arquivo .msix na pasta "Downloads" do PC (ou em outra pasta que você possa encontrar facilmente).
-  1. Use o [Portal de Dispositivos do Windows](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) no PC para instalar o arquivo .msix baixado no HoloLens 2.
+  1. Use o [Portal de Dispositivos do Windows](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) no PC para instalar o arquivo .msix baixado no HoloLens 2.
   1. Após a instalação bem-sucedida, você encontrará o Microsoft Edge Beta, Dev ou Canary como uma entrada separada na lista **Todos os aplicativos** do menu Iniciar.
 
 ## <a name="using-wdac-to-block-new-microsoft-edge"></a>Usando o WDAC para bloquear o novo Microsoft Edge
@@ -115,7 +115,7 @@ Para administradores de TI que desejam atualizar sua [política do WDAC](windows
 
 ## <a name="managing-endpoints-for-the-new-microsoft-edge"></a>Gerenciando pontos de extremidade para o novo Microsoft Edge
 
-Alguns ambientes podem ter restrições de rede a serem consideradas. Para garantir uma experiência tranquila com o novo Edge, [habilite esses pontos de extremidade da Microsoft.](https://docs.microsoft.com/deployedge/microsoft-edge-security-endpoints)
+Alguns ambientes podem ter restrições de rede a serem consideradas. Para garantir uma experiência tranquila com o novo Edge, [habilite esses pontos de extremidade da Microsoft.](/deployedge/microsoft-edge-security-endpoints)
 
 Leia mais sobre os [pontos de extremidade para o HoloLens](hololens-offline.md) no momento.
 
