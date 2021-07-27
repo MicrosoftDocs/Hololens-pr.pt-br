@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 9d9e521f3e337b3a48a60c19e52bfeb3186507af
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 25227184ec33b134215dbd1f42f7b920b26dc29c
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640348"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659583"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Configurar o HoloLens como um quiosque
 
@@ -72,7 +72,7 @@ A tabela a seguir lista os recursos nos diferentes modos de quiosque.
 | &nbsp; |Menu Iniciar |Menu Ações Rápidas |Câmera e vídeo |Miracast |Cortana |Comandos de voz integrados |
 | --- | --- | --- | --- | --- | --- | --- | 
 |Quiosque de aplicativo único |Desabilitado |Desabilitado |Desabilitado |Desabilitado   |Desabilitado |Habilitado<sup>1</sup> |
-|Quiosques de vários aplicativos |habilitado |Habilitado<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2, 3</sup>  |Habilitado<sup>1</sup> |
+|Quiosques de vários aplicativos |Habilitada |Habilitado<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2, 3</sup>  |Habilitado<sup>1</sup> |
 
 > <sup>1</sup> Comandos de voz relacionados a recursos desabilitados não funcionam.  
 > <sup>2</sup> Para obter mais informações sobre como configurar esses recursos, consulte [Selecionar aplicativos de quiosque](#plan-kiosk-apps).  
@@ -82,7 +82,7 @@ A tabela a seguir lista os recursos de suporte do usuário dos diferentes modos 
 
 | &nbsp; |Tipos de usuário com suporte | Entrar automaticamente | Vários níveis de acesso |
 | --- | --- | --- | --- |
-|Quiosque de aplicativo único |MSA (Conta de Serviço Gerenciado) no Azure Active Directory (Azure AD) ou conta local |Sim |Não |
+|Quiosque de aplicativo único | Conta microsoft (MSA) no Azure Active Directory (Azure AD) ou conta local |Sim |Não |
 |Quiosques de vários aplicativos |Conta do AD do Azure |Não |Sim |
 
 Para ver exemplos de como usar esses recursos, consulte a tabela a seguir.
@@ -166,7 +166,7 @@ Você pode selecionar um dos seguintes métodos para implantar configurações d
 
 - [Pacote de provisionamento](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk)
 
-- [Portal de Dispositivos do Windows](#use-the-windows-device-portal-to-set-up-a-single-app-kiosk)
+- [Windows Portal do dispositivo](#use-the-windows-device-portal-to-set-up-a-single-app-kiosk)
 
    > [!NOTE]  
    > Como esse método requer que o modo de desenvolvedor esteja habilitado no dispositivo, recomendamos que você o use somente para demonstrações.
@@ -175,8 +175,8 @@ A tabela a seguir lista os recursos e os benefícios de cada um dos métodos de 
 
 | &nbsp; |implantar usando Windows Portal do dispositivo |Implantar usando um pacote de provisionamento |Implantar usando o MDM |
 | --------------------------- | ------------- | -------------------- | ---- |
-|Implantar quiosques de aplicativo único   | Sim           | Sim                  | Yes  |
-|Implantar quiosques de vários aplicativos    | Não            | Sim                  | Yes  |
+|Implantar quiosques de aplicativo único   | Sim           | Sim                  | Sim  |
+|Implantar quiosques de vários aplicativos    | Não            | Sim                  | Sim  |
 |Implantar somente em dispositivos locais | Sim           | Sim                  | Não   |
 |Implantar usando o modo de desenvolvedor |Obrigatório       | Não obrigatório            | Não obrigatório   |
 |Implantar usando o Azure Active Directory (Azure AD)  | Não obrigatório            | Não obrigatório                   | Obrigatório  |
