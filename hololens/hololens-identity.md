@@ -18,25 +18,25 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 1081ed512183592e66e65f2e69323752b822f1c1
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: e2c5c98eb62f9e8ec19306b2cb460004eb8ae8dd
+ms.sourcegitcommit: 44d5fbee8aa0e2404137484edbeb4653437e79dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659175"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114991416"
 ---
 # <a name="manage-user-identity-and-sign-in-for-hololens"></a>Gerenciar identidade e credenciais do usuário para o HoloLens
 
 > [!NOTE]
 > Este artigo é uma referência técnica para profissionais de TI e fãs de tecnologia. Se você estiver procurando instruções HoloLens configuração, leia " Configurando seu[HoloLens (1ª geração)](hololens1-start.md)" ou " Configurando seu[HoloLens 2](hololens2-start.md)".
 
-Como outros Windows, o HoloLens sempre opera em um contexto de usuário. Sempre há uma identidade de usuário. HoloLens trata a identidade quase da mesma maneira que outros Windows 10 dispositivos. Este artigo é uma referência de profundidade para a identidade no HoloLens e se concentra em como HoloLens é diferente de outros Windows 10 dispositivos.
+Como outros Windows, o HoloLens sempre opera em um contexto de usuário. Sempre há uma identidade de usuário. HoloLens trata a identidade quase da mesma maneira que outros Windows dispositivos. Este artigo é uma referência de profundidade para a identidade no HoloLens e se concentra em como HoloLens é diferente de outros Windows dispositivos.
 
 HoloLens dá suporte a vários tipos de identidades de usuário. Você pode usar uma ou mais contas de usuário para entrar. Aqui está uma visão geral dos tipos de identidade e das opções de autenticação HoloLens:
 
 | Tipo de identidade | Contas por dispositivo | Opções de autenticação |
 | --- | --- | --- |
-| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Provedor de credenciais da Web do Azure</li><li>Aplicativo de Authenticator Azure</li><li>Biometria &ndash; (Íris) HoloLens 2 apenas<sup>2</sup> </li><li>PIN &ndash; opcional para HoloLens (1ª geração), necessário para HoloLens 2</li><li>Senha</li></ul> |
+| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Provedor de credenciais da Web do Azure</li><li>Aplicativo de Authenticator Azure</li><li>Biometria &ndash; (Íris) HoloLens 2 apenas<sup>2</sup> </li><li>Chave de segurança FIDO2</li><li>PIN &ndash; opcional para HoloLens (1ª geração), necessário para HoloLens 2</li><li>Senha</li></ul> |
 | [Conta microsoft (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biometria &ndash; (Íris) HoloLens somente 2</li><li>PIN &ndash; opcional para HoloLens (1ª geração), necessário para HoloLens 2</li><li>Senha</li></ul> |
 | [Conta local](/windows/security/identity-protection/access-control/local-accounts) | 1 | Senha |
 
@@ -49,11 +49,11 @@ As contas conectadas à nuvem (Azure AD e MSA) oferecem mais recursos porque pod
 
 ## <a name="setting-up-users"></a>Configurando usuários
 
-A maneira mais comum de configurar um novo usuário é durante a HoloLens OOBE (experiência de configuração). Durante a instalação, HoloLens solicita que um usuário entre usando a conta que deseja usar no dispositivo. Essa conta pode ser um conta Microsoft ou uma conta corporativa que foi configurada no Azure. Consulte Configurando seu [HoloLens (1ª geração)](hololens1-start.md) ou [HoloLens 2](hololens2-start.md).
-
-Como Windows em outros dispositivos, entrar durante a instalação cria um perfil de usuário no dispositivo. O perfil do usuário armazena aplicativos e dados. A mesma conta também fornece logon único para aplicativos, como o Edge ou o Microsoft Store, usando as APIs Windows Account Manager.  
+Há duas maneiras de configurar um novo usuário no HoloLens. A maneira mais comum é durante a HoloLens OOBE (experiência de uso único). Se estiver Azure Active Directory, [outros usuários poderão fazer logoff após](#setting-up-multi-user-support-azure-ad-only) o OOBE usando suas credenciais do Azure AD. HoloLens dispositivos que são inicialmente definidos com uma conta MSA ou local durante o OOBE não darão suporte a vários usuários. Consulte Configurando seu [HoloLens (1ª geração)](hololens1-start.md) ou [HoloLens 2](hololens2-start.md).
 
 Se você usar uma conta corporativa ou organizacional para entrar no HoloLens, HoloLens se registrará na infraestrutura de TI da organização. Esse registro permite que o administrador de IT configure o MDM (Mobile Gerenciamento de Dispositivos) para enviar políticas de grupo para seu HoloLens.
+
+Como Windows em outros dispositivos, entrar durante a instalação cria um perfil de usuário no dispositivo. O perfil do usuário armazena aplicativos e dados. A mesma conta também fornece logon único para aplicativos, como o Edge ou o Microsoft Store, usando as APIs Windows Account Manager. 
 
 Por padrão, quanto a Windows 10 dispositivos de Windows 10, você terá que entrar novamente quando HoloLens é reiniciado ou retomado do modo de espera. Você pode usar o Configurações aplicativo para alterar esse comportamento ou o comportamento pode ser controlado pela política de grupo.
 
@@ -65,7 +65,10 @@ A vinculação de contas não separa os dados de usuário criados no dispositivo
 
 ### <a name="setting-up-multi-user-support-azure-ad-only"></a>Configurando o suporte a vários usuários (somente no Azure AD)
 
-HoloLens dá suporte a vários usuários do mesmo locatário do Azure AD. Para usar esse recurso, você deve usar uma conta que pertence à sua organização para configurar o dispositivo. Posteriormente, outros usuários do mesmo locatário podem entrar no dispositivo na tela de entrada ou tocando no lado do usuário no painel Iniciar. Somente um usuário pode ser assinado por vez. Quando um usuário entrar, HoloLens o usuário anterior. O primeiro usuário no dispositivo é considerado o proprietário do dispositivo, exceto no caso do Azure AD Join, saiba mais sobre [os proprietários do dispositivo.](security-adminless-os.md#device-owner)
+HoloLens dá suporte a vários usuários do mesmo locatário do Azure AD. Para usar esse recurso, você deve usar uma conta que pertence à sua organização para configurar o dispositivo. Posteriormente, outros usuários do mesmo locatário podem entrar no dispositivo na tela de entrada ou tocando no lado do usuário no painel Iniciar. Somente um usuário pode ser assinado por vez. Quando um usuário entrar, HoloLens o usuário anterior. 
+
+>[!IMPORTANT]
+> O primeiro usuário no dispositivo é considerado o proprietário do dispositivo, exceto no caso do Azure AD Join, saiba mais sobre [os proprietários do dispositivo.](security-adminless-os.md#device-owner)
 
 Todos os usuários podem usar os aplicativos instalados no dispositivo. No entanto, cada usuário tem seus próprios dados e preferências de aplicativo. Remover um aplicativo do dispositivo o remove para todos os usuários.  
 
@@ -112,34 +115,49 @@ Uma maneira na qual o desenvolvimento para HoloLens é diferente do desenvolvime
 
 ### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>Há Windows Hello para Empresas com suporte HoloLens (1ª geração)?
 
-Windows Hello for Business (que dá suporte ao uso de um PIN para entrar) tem suporte para HoloLens (1ª geração). para permitir a entrada de PIN do Windows Hello for Business no HoloLens:
+Windows Hello for Business (que dá suporte ao uso de um PIN para entrar) tem suporte para HoloLens (1ª geração). Para permitir Windows Hello para empresas, entre no PIN HoloLens:
 
-1. o dispositivo de HoloLens deve ser [gerenciado pelo MDM](hololens-enroll-mdm.md).
-1. você deve habilitar a Windows Hello para empresas para o dispositivo. ([Consulte as instruções para Microsoft Intune.](/intune/windows-hello))
-1. em HoloLens, o usuário pode usar **Configurações**  >  **opções de entrada**  >  **adicionar pin** para configurar um pin.
-
-> [!NOTE]
-> os usuários que entram usando um conta Microsoft também podem configurar um pin nas opções de   >  **entrada** Configurações  >  **adicionar pin**. esse PIN é associado a [Windows Hello](https://support.microsoft.com/help/17215/windows-10-what-is-hello), em vez de [Windows Hello para negócios](/windows/security/identity-protection/hello-for-business/hello-overview).
-
-### <a name="how-is-iris-biometric-authentication-implemented-on-hololens-2"></a>como a autenticação biométrica da íris é implementada no HoloLens 2?
-
-HoloLens 2 dá suporte à autenticação de íris. a íris se baseia na tecnologia de Windows Hello e tem suporte para uso por contas Azure Active Directory e da Microsoft. a íris é implementada da mesma maneira que outras tecnologias de Windows Hello e atinge a segurança de biometria longe de 1/100 mil.
-
-consulte os [requisitos e especificações biométricas para Windows Hello](/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) para obter mais informações. saiba mais sobre [Windows Hello](/windows-hardware/design/device-experiences/windows-hello) e [Windows Hello para negócios](/windows/security/identity-protection/hello-for-business/hello-identity-verification). 
-
-### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Como o tipo de conta afeta o comportamento de entrada?
-
-Se você aplicar políticas para entrar, a política sempre é respeitada. Se nenhuma política de entrada for aplicada, esses serão os comportamentos padrão para cada tipo de conta:
-
-- **Azure AD**: solicita autenticação por padrão e pode ser configurada pelo **Configurações** para não solicitar mais autenticação.
-- **Conta Microsoft**: o comportamento de bloqueio é diferente permitindo o desbloqueio automático. no entanto, a autenticação de entrada ainda é necessária na reinicialização.
-- **conta Local**: sempre solicita autenticação na forma de uma senha, não configurável no **Configurações**
+1. O HoloLens dispositivo deve ser [gerenciado pelo MDM](hololens-enroll-mdm.md).
+1. Você deve habilitar Windows Hello para Empresas para o dispositivo. ([Consulte instruções para Microsoft Intune.](/intune/windows-hello))
+1. No HoloLens, o usuário pode usar Configurações opções de logon  >    >  **Adicionar PIN** para configurar um PIN.
 
 > [!NOTE]
-> Atualmente, não há suporte para timers de inatividade, o que significa que a política **AllowIdleReturnWithoutPassword** só será respeitada quando o dispositivo entrar em espera.
+> Os usuários que entrarem usando um conta Microsoft também podem configurar um PIN **Configurações** opções de login  >    >  **Adicionar PIN.** Esse PIN está associado ao [Windows Hello](https://support.microsoft.com/help/17215/windows-10-what-is-hello), em vez [Windows Hello para Empresas.](/windows/security/identity-protection/hello-for-business/hello-overview)
+
+### <a name="how-is-iris-biometric-authentication-implemented-on-hololens-2"></a>Como a autenticação biométrica iris é implementada HoloLens 2?
+
+HoloLens 2 dá suporte à autenticação Iris. O Iris é baseado na Windows Hello e tem suporte para uso por contas Azure Active Directory e Microsoft. O Iris é implementado da mesma maneira que outras tecnologias Windows Hello e atinge a segurança de biometria distante de [1/100 mil.](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#has-microsoft-set-any-device-requirements-for-windows-hello)
+
+Confira os [requisitos biométricos e as especificações Windows Hello](/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) para obter mais informações. Saiba mais sobre [Windows Hello](/windows-hardware/design/device-experiences/windows-hello) e [Windows Hello for Business.](/windows/security/identity-protection/hello-for-business/hello-identity-verification) 
+
+### <a name="where-is-iris-biometric-information-stored"></a>Onde as informações biométricas do Iris são armazenadas?
+
+As informações biométricas de íris são armazenadas localmente em cada HoloLens por [Windows Hello especificações .](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#where-is-windows-hello-data-stored) Ele não é compartilhado e é protegido por duas camadas de criptografia. Ele não está acessível a outros usuários, até mesmo a um administrador, porque não há nenhuma conta de administrador em um HoloLens.
+
+### <a name="do-i-have-to-use-iris-authentication"></a>Preciso usar a autenticação Iris?
+Não, você pode ignorar esta etapa durante a instalação. 
+
+![Configurar o Iris](./images/setup-iris.png)
+
+HoloLens 2 fornece muitas opções diferentes para autenticação, incluindo chaves de segurança FIDO2.
+
+### <a name="can-iris-information-be-removed-from-the-hololens"></a>As informações do Iris podem ser removidas do HoloLens?
+Sim, você pode removê-lo manualmente Configurações.
+
+
+### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Como o tipo de conta afeta o comportamento de login?
+
+Se você aplicar políticas para entrar, a política sempre é respeitada. Se nenhuma política de login for aplicada, estes são os comportamentos padrão para cada tipo de conta:
+
+- **Azure AD**: solicita autenticação por padrão e configurável por Configurações **para** não solicitar mais autenticação.
+- **conta Microsoft**: o comportamento de bloqueio é diferente, permitindo o desbloqueio automático, no entanto, a autenticação de entrada ainda é necessária na reinicialização.
+- **Conta local:** sempre solicita autenticação na forma de uma senha, não configurável em **Configurações**
+
+> [!NOTE]
+> Atualmente, não há suporte para temporizadores de inatividade, o que significa que a **política AllowIdleReturnWithoutPassword** só é respeitada quando o dispositivo entra em espera.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-leia muito mais sobre a proteção de identidade do usuário e a autenticação na [documentação Windows 10 segurança e identidade](/windows/security/identity-protection/).
+Leia muito mais sobre a proteção de identidade do usuário e a autenticação [na documentação Windows 10 segurança e identidade](/windows/security/identity-protection/)do .
 
-Saiba mais sobre como configurar a infraestrutura de identidade híbrida de forma completa a [documentação de identidade híbrida do Azure](/azure/active-directory/hybrid/).
+Saiba mais sobre como configurar a infraestrutura de identidade híbrida por completo na [documentação de identidade híbrida do Azure.](/azure/active-directory/hybrid/)
