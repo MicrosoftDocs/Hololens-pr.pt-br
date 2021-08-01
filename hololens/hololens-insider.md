@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 52503c0e1ff8c937211500203b91a30806cd317d
-ms.sourcegitcommit: 74f5b64c67026881c8ae46410f272b22862ff582
+ms.openlocfilehash: e8adb2f796299c99a9152a5b245e8bdd0b768f05
+ms.sourcegitcommit: 78e5f26014e55c13fee9c2b75a80810fd2e77877
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114696325"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009333"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Versão prévia do Insider para Microsoft HoloLens
 
@@ -39,7 +39,8 @@ Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders nova
 | [Exibir relatório de diagnóstico avançado em Configurações no HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Exibir logs de diagnóstico do MDM no dispositivo | Solução de problemas | 20348.1405 |
 | [Notificações de diagnóstico offline](#offline-diagnostics-notifications) | Comentários audiovisuais para coleta de log | Solução de problemas | 20348.1405 |
 | [Use somente aplicativos da loja privada somente para Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Configurar o aplicativo da loja para mostrar apenas aplicativos da organização | Administrador de TI | 20348.1408 |
-| [Correções e melhorias](hololens-insider.md#fixes-and-improvements) | Correções e melhorias para HoloLens. | Tudo | 20348.1408 |
+| [Melhorias baixas na coleta de log de armazenamento](#low-storage-log-collection-improvements) | Melhorias em cenários de coleta de log durante situações de baixo armazenamento. | Administrador de TI | 20348.1412 |
+| [Correções e melhorias](hololens-insider.md#fixes-and-improvements) | Correções e melhorias para HoloLens. | Tudo | 20348.1411 |
 
 ### <a name="csp-changes-for-reporting-hololens-details"></a>Alterações do CSP para relatórios HoloLens detalhes
 
@@ -130,13 +131,16 @@ A política RequirePrivateStoreOnly foi habilitada para HoloLens. Essa política
 
 Saiba mais sobre [ApplicationManagement/RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
 
+### <a name="low-storage-log-collection-improvements"></a>Melhorias baixas na coleta de log de armazenamento
+
+Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional **chamado** StorageDiagnostics.zipserá criado. O limite de armazenamento baixo é determinado automaticamente pelo Windows [de armazenamento.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
+
 ### <a name="fixes-and-improvements"></a>Correções e melhorias
 
 - Corrigido um [problema conhecido para Portal de Dispositivos em que não havia nenhum prompt baixando arquivos bloqueados.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
 - Corrigido um problema conhecido para o Portal de Dispositivos com tempos de carregamento e [download de arquivos.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
 - Aborda problemas relacionados ao relatório de propriedades de conformidade de HoloLens dispositivos; uma reinicialização pode ser necessária para que o relatório correto seja disparado em builds do Insider.  
 - Atualização da versão in-box do Remote Assist instalada em flashes novos.
-
 
 ## <a name="start-receiving-insider-builds"></a>Começar a receber builds do Insider
 
