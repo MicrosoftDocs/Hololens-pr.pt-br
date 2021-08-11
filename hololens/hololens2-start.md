@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6f50874c39d8bffa43ff94101c81dcffe3dc1b3c34c69e940ed503dc7bd8b4ba
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: a5c0e28eff9bb71135309ec5e484fc5b88f02d08
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659477"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113636487"
 ---
 # <a name="set-up-your-hololens-2"></a>Configurar seu HoloLens 2
 
@@ -39,44 +39,41 @@ Antes de começar, verifique se você tem:
 
 ## <a name="set-up-windows"></a>Configurar o Windows
 
-Na primeira vez que você iniciar o HoloLens 2, a primeira tarefa será configurar o Windows Holographic.  Ao iniciar o HoloLens, você ouvirá uma música e verá um logotipo da Microsoft.
+Na primeira vez que você iniciar o HoloLens 2, a primeira tarefa será configurar o Windows Holographic.  Ao iniciar o HoloLens, você ouvirá uma música e verá um logotipo do Windows.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGGk]
-
-<br/>
-<img src="images/01-magic-moment.png" width="500px" alt="First screen during first boot">
+![Primeira tela durante a primeira inicialização](images/01-magic-moment.png)
 
 Você verá um beija-flor voando.
 
-<img src="images/hummingbird-1.png" width="500px" alt="Hummingbird flying">
+![Beija-flor voando](images/hummingbird-1.png)
 
-Ele seguirá a sua mão.
+Siga-o com a sua mão.
 
-<img src="images/hummingbird-2.png" width="500px" alt="Hummingbird flying close up">
+![Close-up de beija-flor voando](images/hummingbird-2.png)
 
-Aparecerá um botão com o logotipo da Microsoft. Pressione o botão e o HoloLens 2 percorrerá as seguintes etapas:
+O HoloLens 2 percorrerá as seguintes etapas:
 
 1. Selecionar seu idioma.
 
-    <img src="images/04-language.png" width="500px" alt="Select language">
+    ![Selecionar idioma](images/04-language.png)
 
 1. Selecione sua região.
 
-    <img src="images/05-region.png" width="500px" alt="Select region">
+    ![Selecionar região](images/05-region.png)
 
 1. Calibrar o HoloLens aos seus olhos.  Se optar por ignorar a calibragem, você será avisado na próxima vez em que fizer logon. 
 
     1. Primeiro, você ajustará o visor.
     
-    <img src="images/06-et-corners.png" width="500px" alt="Calibration selection screen">
-    
+        ![Tela de seleção de calibragem](images/06-et-corners.png)
+
     2. Para calibrar, você olhará para um conjunto de alvos (chamados de joias). Não há problema se você piscar ou fechar os olhos durante a calibragem, mas tente não olhar fixamente para outros objetos no cômodo ou no espaço físico. O HoloLens usa esse processo para saber mais sobre a posição de seus olhos para que ele possa renderizar melhor seu mundo holográfico. 
 
-        <img src="images/07-adjust-eyes.png" width="500px" alt="Adjust for your eyes">
+        ![Ajustar para seus olhos](images/07-adjust-eyes.png)
 
         Após a calibragem, os hologramas serão exibidos corretamente mesmo que o visor mude de posição em sua cabeça. As informações de calibragem são armazenadas localmente no dispositivo e não são associadas a informações de conta. Para saber mais, confira [Dados de calibragem e segurança](hololens-calibration.md#calibration-data-and-security).
 
-        <img src="images/calibration-complete.png" width="500px" alt="Calibration is complete">
+        ![A calibragem foi concluída](images/calibration-complete.png)
 
 1. Conecte-se à Internet (selecione Wi-Fi ou sua conexão Ethernet).
 
@@ -115,10 +112,7 @@ Aparecerá um botão com o logotipo da Microsoft. Pressione o botão e o HoloLen
         
 1. Configure a conexão com a Íris selecionando **Avançar**. Você passará por uma experiência semelhante à de calibragem dos olhos. Selecione **Concluído** quando a varredura for concluída. Você também pode selecionar **Ignorar** para ignorar esta etapa.
     
-    <img src="images/setup-iris.png" width="500px" alt="Iris setup">
-
-    <img src="images/iris-setup-complete.png" width="500px" alt="Iris setup completion">
-
+    ![Configuração da íris](images/setup-iris.png) ![Conclusão da configuração da íris](images/iris-setup-complete.png) 
      
   
 1. Você vai configurar um PIN para fazer logon no dispositivo. Este PIN é específico do dispositivo. 
@@ -128,30 +122,26 @@ Aparecerá um botão com o logotipo da Microsoft. Pressione o botão e o HoloLen
     ![Configurar o PIN do Windows Hello](images/windows-hello-pin.png)
 
     ![Configuração do Windows Hello bem-sucedida](images/windows-hello-successful.png) 
-
     
 1. Selecione se deseja habilitar a fala no HoloLens 2.
 
-    <img src="images/22-do-more-with-voice.png" width="500px" alt="Enable Cortana">
+    ![Habilitar a Cortana](images/22-do-more-with-voice.png)
 
 1. Selecione se deseja habilitar a localização no HoloLens 2.
     
-    <img src="images/setup-location-services.png" width="500px" alt="Enable location services">
+    ![Habilitar serviços de localização](images/setup-location-services.png)
 
 1. Selecione o nível de telemetria. Se possível, habilite a telemetria opcional. Essas informações ajudam muito a equipe de engenharia do HoloLens.
 
-    <img src="images/24-telemetry.png" width="500px" alt="Telemetry level">
-
+     ![Nível de telemetria](images/24-telemetry.png)
 
 1. Saiba como usar o gesto de iniciar no HoloLens 2.
 
-    <img src="images/26-01-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 1">
+     ![Saiba como usar o gesto de iniciar, imagem 1](images/26-01-startmenu-learning.png)
 
-    <img src="images/26-02-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 2">
-    
-    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3Wxng]
-    
-    Parabéns!  A configuração está completa e você está pronto para usar o HoloLens!
+     ![Saiba como usar o gesto de iniciar, imagem 2](images/26-02-startmenu-learning.png)
+
+Parabéns!  A configuração está completa e você está pronto para usar o HoloLens!
 
 ## <a name="next-steps"></a>Próximas etapas
 

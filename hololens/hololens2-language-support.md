@@ -1,6 +1,6 @@
 ---
-title: Idiomas com suporte para o HoloLens 2
-description: Saiba mais sobre todos os idiomas que o HoloLens 2 dá suporte, alterando layouts de teclado e atualizando o idioma de exibição do Windows.
+title: Idiomas com suporte no HoloLens 2
+description: saiba mais sobre todos os idiomas HoloLens 2 dão suporte, alterando layouts de teclado e atualizando a Windows idioma de exibição.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -17,16 +17,16 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: dc3de0c95f17c821816bad278de5717bc24a2c29
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 32f4cce668b2f8a483dbef3f4b41a0ceb8267dcc202f2be9d32ecec4061d0c21
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308224"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659567"
 ---
-# <a name="supported-languages-for-hololens-2"></a>Idiomas com suporte para o HoloLens 2
+# <a name="supported-languages-for-hololens-2"></a>Idiomas com suporte no HoloLens 2
 
-O HoloLens 2 está localizado nos seguintes idiomas. Os recursos de localização incluem comandos de fala e ditado, layouts de teclado e reconhecimento de OCR em aplicativos.
+o HoloLens 2 está localizado nos seguintes idiomas. Os recursos de localização incluem comandos de fala e ditado, layouts de teclado e reconhecimento de OCR em aplicativos.
 
 - Chinês Simplificado (China)
 - Inglês (Austrália)
@@ -40,13 +40,13 @@ O HoloLens 2 está localizado nos seguintes idiomas. Os recursos de localizaçã
 - Japonês (Japão)
 - Espanhol (Espanha)
 
-O HoloLens 2 também dá suporte aos seguintes idiomas. No entanto, esse suporte não inclui comandos de fala ou recursos de ditado.
+o HoloLens 2 também oferece suporte aos seguintes idiomas. No entanto, esse suporte não inclui comandos de fala ou recursos de ditado.
 
 - Chinês tradicional (Taiwan e Hong Kong)
 - Holandês (Países Baixos)
 - Coreano (Coreia do Sul)
 
-Alguns recursos do HoloLens 2 usam o idioma de exibição do Windows. O idioma de exibição do Windows afeta as seguintes configurações para Windows e para aplicativos que dão suporte à localização:
+alguns recursos do HoloLens 2 usam o idioma de exibição do Windows. o idioma de exibição do Windows afeta as seguintes configurações para Windows e para aplicativos que dão suporte à localização:
 
 - O idioma de texto da interface do usuário.
 - A linguagem de fala.
@@ -54,29 +54,29 @@ Alguns recursos do HoloLens 2 usam o idioma de exibição do Windows. O idioma d
 
 ## <a name="change-the-language-or-keyboard-layout"></a>Alterar o idioma ou o layout do teclado
 
-O processo de instalação configura seu HoloLens para uma região e um idioma específicos. Você pode alterar essa configuração usando a seção **hora & idioma** das **configurações**.
+o processo de instalação configura seu HoloLens para uma região e um idioma específicos. você pode alterar essa configuração usando a seção **Time & language** de **Configurações**.
 
 > [!NOTE]  
-> Seu idioma de fala e ditado depende (e é o mesmo que) o idioma de exibição do Windows.
+> seu idioma de fala e ditado depende (e é o mesmo que) a Windows idioma de exibição.
 
-### <a name="to-change-the-windows-display-language"></a>Para alterar o idioma de exibição do Windows
+### <a name="to-change-the-windows-display-language"></a>para alterar o idioma de exibição do Windows
 
-1. Abra o menu **Iniciar** e selecione **configurações**  >  **hora e**  >  **idioma**.
-2. Selecione **idioma de exibição do Windows** e, em seguida, selecione um idioma.  
+1. abra o menu **iniciar** e selecione **Configurações**  >  **idioma de hora e idioma**  >  .
+2. selecione **Windows idioma de exibição** e, em seguida, selecione um idioma.  
 
 Se o idioma com suporte que você está procurando não estiver no menu, siga estas etapas:  
 
 1. Em **idiomas preferenciais**, selecione **Adicionar um idioma**.
 2. Localize e adicione o idioma.
-3. Selecione o menu **Windows display Language** novamente e, em seguida, selecione o idioma que você adicionou na etapa anterior.
+3. selecione o menu **Windows idioma de exibição** novamente e, em seguida, selecione o idioma que você adicionou na etapa anterior.
 
 ### <a name="to-change-the-keyboard-layout"></a>Para alterar o layout do teclado
 
-Para adicionar ou remover um layout de teclado, abra o menu **Iniciar** e, em seguida, selecione **configurações**  >  **hora &**  >  **teclado**.
+para adicionar ou remover um layout de teclado, abra o menu **iniciar** e, em seguida, selecione **Configurações**  >  **hora &**  >  **teclado**.
 
-Se o seu HoloLens tiver mais de um layout de teclado, use a chave de **layout** para alternar entre eles. A chave de **layout** está no canto inferior direito do teclado na tela.
+se seu HoloLens tiver mais de um layout de teclado, use a chave de **layout** para alternar entre eles. A chave de **layout** está no canto inferior direito do teclado na tela.
 
 > [!NOTE]  
-> O teclado na tela pode usar o IME (editor de método de entrada) para inserir caracteres em idiomas, como japonês. No entanto, o HoloLens não oferece suporte a teclados Bluetooth externos que usam o IME.
+> O teclado na tela pode usar o IME (editor de método de entrada) para inserir caracteres em idiomas, como japonês. no entanto, HoloLens não oferece suporte a teclados externos Bluetooth que usam o IME.
 >  
-> Ao usar o IME junto com o teclado virtual, você pode continuar usando um teclado Bluetooth para digitar em inglês. Para alternar entre teclados, pressione o botão de caractere til ( **~** ).
+> ao usar o IME junto com o teclado na tela, você pode continuar a usar um Bluetooth teclado para digitar em inglês. Para alternar entre teclados, pressione o botão de caractere til ( **~** ).
