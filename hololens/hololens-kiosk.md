@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 25227184ec33b134215dbd1f42f7b920b26dc29c
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: e7f1efa99cc16b1003bd7063817451013ed2ec2661dbdf02edcd89c7984d0980
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659583"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664012"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Configurar o HoloLens como um quiosque
 
@@ -98,65 +98,65 @@ Para obter informações gerais sobre como escolher aplicativos de quiosque, con
 
 Se você usar o Windows Portal de Dispositivos para configurar um quiosque de aplicativo único, selecione o aplicativo durante o processo de instalação.  
 
-Se você usar um sistema MDM (Mobile Gerenciamento de Dispositivos) ou um pacote de provisionamento para configurar o modo de quiosque, use o CSP (Provedor de Serviços de Configuração) [AssignedAccess para especificar aplicativos.](/windows/client-management/mdm/assignedaccess-csp) O CSP usa [AUMIDs (IDs de](/windows/configuration/find-the-application-user-model-id-of-an-installed-app) modelo de usuário de aplicativo) para identificar aplicativos. A tabela a seguir lista os AUMIDs de alguns aplicativos na caixa que você pode usar em um quiosque de vários aplicativos.
+Se você usar um sistema MDM (Mobile Gerenciamento de Dispositivos) ou um pacote de provisionamento para configurar o modo de quiosque, use o CSP (Provedor de Serviços de Configuração) [AssignedAccess para especificar aplicativos.](/windows/client-management/mdm/assignedaccess-csp) O CSP usa [AUMIDs (IDs de](/windows/configuration/find-the-application-user-model-id-of-an-installed-app) modelo de usuário de aplicativo) para identificar aplicativos. A tabela a seguir lista os AUMIDs de alguns aplicativos in-box que você pode usar em um quiosque de vários aplicativos.
 
 > [!IMPORTANT]
-> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário entra no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não interrompe um aplicativo "permitido" de abrir outro aplicativo que não é permitido. como não restringimos esse comportamento, os aplicativos ainda podem ser iniciados a partir do Edge, do explorador de arquivos e dos aplicativos Microsoft Store. se houver aplicativos específicos que você não deseja que sejam iniciados em um quiosque, use o [CSP do controle de aplicativo Windows Defender (WDAC)](/windows/client-management/mdm/applicationcontrol-csp) para criar políticas apropriadas. 
+> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário faz a entrada no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não impede que um aplicativo "permitido" seja aberto em outro aplicativo que não é permitido. Como não restringimos esse comportamento, os aplicativos ainda podem ser lançados no Edge, no Explorador de Arquivos e Microsoft Store aplicativos. Se houver aplicativos específicos que você não deseja que sejam lançados de um Quiosque, use o CSP do [WDAC (Controle](/windows/client-management/mdm/applicationcontrol-csp) de Aplicativo Windows Defender) para criar políticas apropriadas. 
 > 
-> Além disso, a página inicial da realidade misturada não pode ser definida como um aplicativo de quiosque.
+> Além disso, a Home da Realidade Misturada não pode ser definida como um aplicativo de quiosque.
 
 <a id="aumids"></a>
 
 |Nome do Aplicativo |AUMID |
 | --- | --- |
-|Visualizador 3D |Microsoft. Microsoft3DViewer \_ 8wekyb3d8bbwe \! Microsoft. Microsoft3DViewer |
-|Calendário |Microsoft. windowscommunicationsapps \_ 8wekyb3d8bbwe \! Microsoft. windowslive. Calendar |
+|Visualizador 3D |Microsoft.Microsoft3DViewer \_ 8wekyb3d8bbwe \! Microsoft.Microsoft3DViewer |
+|Calendar |microsoft.windowscommunicationsapps \_ 8wekyb3d8bbwe \! microsoft.windowslive.calendar |
 |Câmera<sup>1, 2</sup> |HoloCamera \_ cw5n1h2txyewy \! HoloCamera |
-|Cortana<sup>3</sup> |Aplicativo Microsoft. 549981C3F5F10 \_ 8wekyb3d8bbwe \! |
-|seletor de dispositivo na HoloLens (1ª gen) |HoloDevicesFlow \_ cw5n1h2txyewy \! HoloDevicesFlow |
-|seletor de dispositivos no HoloLens 2 |O. Windows. DevicesFlowHost \_ cw5n1h2txyewy \! Microsoft. Windows. DevicesFlowHost |
-|Dynamics 365 Guides |Microsoft. Dynamics365. guias \_ 8wekyb3d8bbwe \! MicrosoftGuides |
-|Dynamics 365 Remote Assist |Microsoft. MicrosoftRemoteAssist \_ 8wekyb3d8bbwe \! Microsoft. RemoteAssist |
-|Hub de comentários &nbsp; |Aplicativo Microsoft. WindowsFeedbackHub \_ 8wekyb3d8bbwe \! |
+|Cortana<sup>3</sup> |Aplicativo Microsoft.549981C3F5F10 \_ 8wekyb3d8bbwe \! |
+|Se picker de dispositivo HoloLens (1ª geração) |HoloDevicesFlow \_ cw5n1h2txyewy \! HoloDevicesFlow |
+|Se picker de dispositivo HoloLens 2 |Microsoft. Windows. DevicesFlowHost \_ cw5n1h2txyewy \! Microsoft.Windows. DispositivosFlowHost |
+|Dynamics 365 Guides |Microsoft.Dynamics365.Guides \_ 8wekyb3d8bbwe \! MicrosoftGuides |
+|Dynamics 365 Remote Assist |Microsoft.MicrosoftRemoteAssist \_ 8wekyb3d8bbwe \! Microsoft.RemoteAssist |
+|Hub de &nbsp; Comentários |Aplicativo Microsoft.WindowsFeedbackHub \_ 8wekyb3d8bbwe \! |
 |Explorador de Arquivos |c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy!App |
-|Email |microsoft.windowscommunicationsapps_8wekyb3d8bbwe! Microsoft. windowslive. mail |
-|Microsoft Edge antigo |Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge |
-|Novo Microsoft Edge |Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE |
+|Email |microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail |
+|Antigo Microsoft Edge |Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge |
+|Novos Microsoft Edge |Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE |
 |Microsoft Store |Microsoft.WindowsStore_8wekyb3d8bbwe!App |
 |Miracast<sup>4</sup> |&nbsp; |
-|Filmes e TV |Microsoft. ZuneVideo \_ 8wekyb3d8bbwe \! Microsoft. ZuneVideo |
-|OneDrive |aplicativo Microsoft. microsoftskydrive \_ 8wekyb3d8bbwe \! |
-|Fotos |O. Windows. \_Aplicativo 8wekyb3d8bbwe de fotos \! |
-|Configurações antigo |HolographicSystemSettings_cw5n1h2txyewy! Aplicação |
-|novo Configurações |BAEAEF15-9BAB-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! Aplicação |
-|Dicas |Microsoft. HoloLensTips \_ 8wekyb3d8bbwe \! HoloLensTips |
+|Filmes e TV |Microsoft.ZuneVideo \_ 8wekyb3d8bbwe \! Microsoft.ZuneVideo |
+|OneDrive |microsoft.microsoftskydrive \_ 8wekyb3d8bbwe \! App |
+|Fotos |Microsoft. Windows. Photos \_ 8wekyb3d8bbwe \! App |
+|Antigo Configurações |HolographicSystemSettings_cw5n1h2txyewy! App |
+|Novas Configurações |BAEAEF15-9BAB-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! App |
+|Dicas |Microsoft.HoloLensTips \_ 8wekyb3d8bbwe \! HoloLensTips |
 
-> <sup>1</sup> para habilitar a captura de foto ou de vídeo, você precisa habilitar o aplicativo de câmera como um aplicativo de quiosque.  
-> <sup>2</sup> quando você habilitar o aplicativo de câmera, esteja ciente das seguintes condições:
-> - O menu ações rápidas inclui os botões de foto e vídeo.  
-> - você também deve habilitar um aplicativo (como fotos, email ou OneDrive) que possa interagir com ou recuperar imagens.  
+> <sup>1</sup> Para habilitar a captura de fotos ou vídeos, você precisa habilitar o aplicativo Câmera como um aplicativo de quiosque.  
+> <sup>2</sup> Ao habilitar o aplicativo Câmera, esteja ciente das seguintes condições:
+> - O menu Ações Rápidas inclui os botões Foto e Vídeo.  
+> - Você também deve habilitar um aplicativo (como Fotos, Email ou OneDrive) que possa interagir ou recuperar imagens.  
 >  
-> <sup>3</sup> mesmo se você não habilitar Cortana como um aplicativo de quiosque, os comandos de voz internos serão habilitados. No entanto, os comandos relacionados a recursos desabilitados não têm nenhum efeito.  
-> <sup>4</sup> você não pode habilitar Miracast diretamente. Para habilitar Miracast como um aplicativo de quiosque, habilite o aplicativo de câmera e o aplicativo de seletor de dispositivo.
+> <sup>3</sup> Mesmo que você não habilita Cortana como um aplicativo de quiosque, os comandos de voz integrados são habilitados. No entanto, comandos relacionados a recursos desabilitados não têm nenhum efeito.  
+> <sup>4</sup> Você não pode habilitar Miracast diretamente. Para habilitar Miracast como um aplicativo de quiosque, habilita o aplicativo Câmera e o aplicativo Seletor de Dispositivos.
 
 ### <a name="plan-kiosk-profiles-for-users-or-groups"></a>Planejar perfis de quiosque para usuários ou grupos
 
-Ao criar o arquivo XML ou usar a interface do usuário do Intune para configurar um quiosque, você precisará considerar quem será o usuário do quiosque. Uma configuração de quiosque pode ser limitada a uma conta individual ou a grupos do Azure AD. 
+Ao criar o arquivo xml ou usar a interface do usuário do Intune para configurar um Quiosque, você precisará considerar quem será o usuário do Quiosque. Uma configuração de quiosque pode ser limitada a uma conta individual ou a grupos do Azure AD. 
 
-Normalmente, os quiosques são habilitados para um usuário ou grupo de usuários. No entanto, se você planeja escrever seu próprio quiosque XML, talvez queira considerar o acesso atribuído global, no qual o quiosque é aplicado no nível do dispositivo, independentemente da identidade. Se isso lhe agradar, [Leia mais sobre os quiosques de acesso atribuídos globalmente.](hololens-global-assigned-access-kiosk.md)
+Normalmente, os quiosques são habilitados para um usuário ou grupo de usuários. No entanto, se você planeja escrever seu próprio quiosque XML, considere o Acesso Atribuído Global, no qual o Quiosque é aplicado no nível do dispositivo, independentemente da Identidade. Se isso lhe apelar, [leia mais sobre Quiosques de Acesso Atribuído Global.](hololens-global-assigned-access-kiosk.md)
 
 #### <a name="if-you-are-creating-an-xml-file"></a>Se você estiver criando um arquivo XML:
--   Você cria vários perfis de quiosque e atribui cada um a diferentes usuários/grupos. Como um quiosque para seu grupo do Azure AD que tem muitos aplicativos e um visitante que tem um quiosque de vários aplicativos com um aplicativo singular.
--   Sua configuração de quiosque será chamada de **ID de perfil** e terá um GUID.
--   Você atribuirá esse perfil na seção Configurações especificando o tipo de usuário e usando o mesmo GUID para a ID de **DefaultProfile**.
-- um arquivo XML pode ser criado, mas ainda aplicado a um dispositivo via MDM, criando um perfil de configuração de dispositivo OMA URI personalizado e aplicando-o a HoloLens grupo de dispositivos usando o valor de URI:./Device/Vendor/MSFT/AssignedAccess/Configuration
+-   Você cria vários perfis de Quiosque e atribui cada um a diferentes usuários/grupos. Como um Quiosque para seu Grupo do Azure AD que tem muitos aplicativos e um Visitante que tem vários quiosques de aplicativo com um aplicativo singular.
+-   Sua configuração de quiosque será chamada de **ID do Perfil** e terá um GUID.
+-   Você atribuirá esse Perfil na seção de configurações especificando o tipo de usuário e usando o mesmo GUID para a **ID defaultProfile**.
+- Um arquivo XML pode ser criado, mas ainda aplicado a um dispositivo por meio do MDM criando um perfil de configuração de dispositivo OMA URI personalizado e aplicando-o a um grupo de dispositivos do HoloLens usando o valor de URI: ./Device/Vendor/MSFT/AssignedAccess/Configuration
 
-#### <a name="if-you-are-creating-a-kiosk-in-intune"></a>Se você estiver criando um quiosque no Intune.
--   Cada dispositivo pode receber apenas um único perfil de quiosque, caso contrário, ele criará um conflito e não receberá nenhuma configuração de quiosque. 
-    -   Outros tipos de perfis e políticas, como restrições de dispositivo que não estão relacionadas ao perfil de configuração do quiosque, não entram em conflito com o perfil de configuração do quiosque.
--   O quiosque será habilitado para todos os usuários que fazem parte do tipo de logon do usuário, isso será definido com um usuário ou grupo do Azure AD. 
--   Depois que a configuração do quiosque for definida e o **tipo de logon do usuário** (usuários que podem fazer logon no quiosque) e os aplicativos forem selecionados, a configuração do dispositivo ainda deverá ser atribuída a um grupo. Os grupos atribuídos determinam quais dispositivos recebem a configuração do dispositivo de quiosque, no entanto, não interage com se o quiosque estiver habilitado ou não. 
-    - Para obter uma discussão completa sobre os efeitos da atribuição de perfis de configuração no Intune, consulte [atribuir perfis de usuário e de dispositivo no Microsoft Intune](/intune/configuration/device-profile-assign).
+#### <a name="if-you-are-creating-a-kiosk-in-intune"></a>Se você estiver criando um Quiosque no Intune.
+-   Cada dispositivo pode receber apenas um único perfil de Quiosque, caso contrário, ele criará um conflito e não receberá nenhuma configuração de Quiosque. 
+    -   Outros tipos de perfis e políticas, como restrições de dispositivo que não estão relacionadas ao perfil de configuração de quiosque, não estão em conflito com o perfil de configuração de quiosque.
+-   O Quiosque será habilitado para todos os usuários que fazem parte do tipo de logon de usuário, isso será definido com um usuário ou grupo do Azure AD. 
+-   Depois que a configuração de Quiosque for definida e o Tipo de **logon** do usuário (usuários que podem fazer logon no Quiosque) e os Aplicativos forem selecionados, a Configuração do Dispositivo ainda deverá ser atribuída a um grupo. Os grupos atribuídos determinam quais dispositivos recebem a configuração do dispositivo de Quiosque, no entanto, não interage com se o Quiosque está habilitado ou não. 
+    - Para uma discussão completa sobre os efeitos da atribuição de perfis de configuração no Intune, consulte Atribuir perfis de usuário e dispositivo [no Microsoft Intune](/intune/configuration/device-profile-assign).
 
 ### <a name="select-a-deployment-method"></a>Selecionar um método de implantação
 
@@ -166,130 +166,130 @@ Você pode selecionar um dos seguintes métodos para implantar configurações d
 
 - [Pacote de provisionamento](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk)
 
-- [Windows Portal do dispositivo](#use-the-windows-device-portal-to-set-up-a-single-app-kiosk)
+- [Windows Portal de Dispositivos](#use-the-windows-device-portal-to-set-up-a-single-app-kiosk)
 
    > [!NOTE]  
-   > Como esse método requer que o modo de desenvolvedor esteja habilitado no dispositivo, recomendamos que você o use somente para demonstrações.
+   > Como esse método requer que o Modo de Desenvolvedor seja habilitado no dispositivo, recomendamos que você o use somente para demonstrações.
 
 A tabela a seguir lista os recursos e os benefícios de cada um dos métodos de implantação.
 
-| &nbsp; |implantar usando Windows Portal do dispositivo |Implantar usando um pacote de provisionamento |Implantar usando o MDM |
+| &nbsp; |Implantar usando Windows Portal de Dispositivos |Implantar usando um pacote de provisionamento |Implantar usando o MDM |
 | --------------------------- | ------------- | -------------------- | ---- |
-|Implantar quiosques de aplicativo único   | Sim           | Sim                  | Sim  |
-|Implantar quiosques de vários aplicativos    | Não            | Sim                  | Sim  |
+|Implantar quiosques de aplicativo único   | Sim           | Sim                  | Yes  |
+|Implantar quiosques de vários aplicativos    | Não            | Sim                  | Yes  |
 |Implantar somente em dispositivos locais | Sim           | Sim                  | Não   |
-|Implantar usando o modo de desenvolvedor |Obrigatório       | Não obrigatório            | Não obrigatório   |
-|Implantar usando o Azure Active Directory (Azure AD)  | Não obrigatório            | Não obrigatório                   | Obrigatório  |
+|Implantar usando o Modo de Desenvolvedor |Obrigatório       | Não é necessária            | Não é necessária   |
+|Implantar usando o Azure Active Directory (Azure AD)  | Não é necessária            | Não é necessária                   | Obrigatório  |
 |Implantar automaticamente      | Não            | Não                   | Sim  |
 |Velocidade de implantação            | Rápido       | Rápido                 | Lento |
 |Implantar em escala | Não recomendado    | Recomendadas        | Recomendadas |
 
-## <a name="use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk"></a>usar Microsoft Intune ou outro MDM para configurar um quiosque de aplicativo único ou de vários aplicativos
+## <a name="use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk"></a>Use Microsoft Intune ou outro MDM para configurar um quiosque de aplicativo único ou de vários aplicativos
 
-para configurar o modo de quiosque usando Microsoft Intune ou outro sistema MDM, siga estas etapas.
+Para configurar o modo de quiosque usando Microsoft Intune ou outro sistema MDM, siga estas etapas.
 
-1. [Prepare-se para registrar os dispositivos](#mdmenroll).
+1. [Prepare-se para registrar os dispositivos.](#mdmenroll)
 1. [Crie um perfil de configuração de quiosque](#mdmprofile).
 1. Configure o quiosque.
-   - [Defina as configurações para um quiosque de aplicativo único](#mdmconfigsingle).
-   - [Defina as configurações para um quiosque de vários aplicativos](#mdmconfigmulti).
-1. [Atribua o perfil de configuração do quiosque a um grupo](#mdmassign).
+   - [De acordo com as configurações de um quiosque de aplicativo único.](#mdmconfigsingle)
+   - [De acordo com as configurações de um quiosque de vários aplicativos.](#mdmconfigmulti)
+1. [Atribua o perfil de configuração de quiosque a um grupo](#mdmassign).
 1. Implante os dispositivos.
-   - [Implante um quiosque de aplicativo único](#mdmsingledeploy).
-   - [Implantar um quiosque de vários aplicativos](#mdmmultideploy).
+   - [Implante um quiosque de aplicativo único.](#mdmsingledeploy)
+   - [Implante um quiosque de vários aplicativos.](#mdmmultideploy)
 
-### <a name="mdm-step-1-ndash-prepare-to-enroll-the-devices"></a><a id="mdmenroll"></a>MDM, etapa 1 &ndash; preparar para registrar os dispositivos
+### <a name="mdm-step-1-ndash-prepare-to-enroll-the-devices"></a><a id="mdmenroll"></a>MDM, etapa 1 &ndash; Preparar para registrar os dispositivos
 
-você pode configurar o sistema MDM para registrar HoloLens dispositivos automaticamente quando o usuário entrar pela primeira vez ou fazer com que os usuários registrem dispositivos manualmente. Os dispositivos também precisam ser ingressados no domínio do Azure AD e atribuídos aos grupos apropriados.
+Você pode configurar seu sistema MDM para registrar HoloLens dispositivos automaticamente quando o usuário entrar pela primeira vez ou fazer com que os usuários inscrevam dispositivos manualmente. Os dispositivos também devem ser ingressados no domínio do Azure AD e atribuídos aos grupos apropriados.
 
-para obter mais informações sobre como registrar os dispositivos, consulte [registrar HoloLens nos](hololens-enroll-mdm.md) métodos de registro do MDM e [do Intune para dispositivos Windows](/mem/intune/enrollment/windows-enrollment-methods).
+Para obter mais informações sobre como registrar os dispositivos, consulte Registrar HoloLens no [MDM](hololens-enroll-mdm.md) e métodos de registro do [Intune para Windows dispositivos](/mem/intune/enrollment/windows-enrollment-methods).
 
-### <a name="mdm-step-2-ndash-create-a-kiosk-configuration-profile"></a><a id="mdmprofile"></a>MDM, etapa 2 &ndash; criar um perfil de configuração de quiosque
+### <a name="mdm-step-2-ndash-create-a-kiosk-configuration-profile"></a><a id="mdmprofile"></a>MDM, etapa 2 Criar &ndash; um perfil de configuração de quiosque
 
-1. Abra o portal [do Azure](https://portal.azure.com/) e entre em sua conta de administrador do Intune.
-1. selecione **Microsoft Intune**  >  **configuração do dispositivo perfis**  >  **criar perfil**.
+1. Abra o portal [do Azure](https://portal.azure.com/) e entre em sua conta Administrador do Intune conta.
+1. Selecione Microsoft Intune  >  **Configuração do dispositivo –**  >  **Perfis Criar perfil**.
 1. Insira um nome de perfil.
-1. selecione **plataforma**  >  **Windows 10 e posterior** e, em seguida, selecione **tipo de perfil**  > **restrições de dispositivo**.
-1. Selecione **Configurar**  >  **quiosque** e, em seguida, selecione uma das seguintes opções:
-   - Para criar um quiosque de aplicativo único, selecione **modo**  >  **de quiosque quiosque de aplicativo único**.
-   - Para criar um quiosque de vários aplicativos, selecione **modo**  >  **de quiosque quiosque de vários aplicativos**.
-1. Para iniciar a configuração do quiosque, selecione **Adicionar**.
+1. Selecione **Plataforma Windows 10** e posterior  >  **e,** em seguida, selecione Tipo de perfil   > **Restrições de dispositivo**.
+1. Selecione **Configurar**  >  **Quiosque** e, em seguida, selecione um dos seguintes:
+   - Para criar um quiosque de aplicativo único, selecione **Quiosque** modo de  >  **quiosque** de aplicativo único.
+   - Para criar um quiosque de vários aplicativos, selecione **Quiosque** de vários aplicativos do Modo  >  **de Quiosque.**
+1. Para começar a configurar o quiosque, selecione **Adicionar**.
 
 As próximas etapas diferem dependendo do tipo de quiosque que você deseja. Para obter mais informações, selecione uma das seguintes opções:  
 
 - [Quiosque de aplicativo único](#mdmconfigsingle)
 - [Quiosques de vários aplicativos](#mdmconfigmulti)
 
-para obter mais informações sobre como criar um perfil de configuração de quiosque, consulte [Windows 10 e Windows Holographic for Business configurações de dispositivo para executar como um quiosque dedicado usando o Intune](/intune/configuration/kiosk-settings).
+Para obter mais informações sobre como criar um perfil de configuração de quiosque, consulte configurações de Windows 10 e Windows Holographic for Business dispositivo para ser executado como um quiosque dedicado usando o [Intune](/intune/configuration/kiosk-settings).
 
-### <a name="mdm-step-3-single-app-ndash--configure-the-settings-for-a-single-app-kiosk"></a><a id="mdmconfigsingle"></a>MDM, etapa 3 (aplicativo único) &ndash;  definir as configurações para um quiosque de aplicativo único
+### <a name="mdm-step-3-single-app-ndash--configure-the-settings-for-a-single-app-kiosk"></a><a id="mdmconfigsingle"></a>MDM, etapa 3 (aplicativo único) Definir as &ndash;  configurações para um quiosque de aplicativo único
 
-Esta seção resume as configurações exigidas por um quiosque de aplicativo único. Para obter mais detalhes, consulte os seguintes artigos:
+Esta seção resume as configurações que um quiosque de aplicativo único requer. Para obter mais detalhes, consulte os seguintes artigos:
 
-- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [como configurar o modo de quiosque usando Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Para obter mais informações sobre as configurações disponíveis para quiosques de um único aplicativo no Intune, consulte [quiosques de aplicativo de tela inteira única](/intune/configuration/kiosk-settings-holographic#single-full-screen-app-kiosks)
-- Para outros serviços de MDM, consulte a documentação do provedor para obter instruções. Se você precisar usar uma configuração XML personalizada para configurar um quiosque em seu serviço MDM, [crie um arquivo XML que define a configuração do quiosque](#ppkioskconfig).
+- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [How to Configure Kiosk Mode Using Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
+- Para obter mais informações sobre as configurações disponíveis para quiosques de aplicativo único no Intune, consulte [Quiosques](/intune/configuration/kiosk-settings-holographic#single-full-screen-app-kiosks) de aplicativo de tela inteira única
+- Para outros serviços de MDM, confira a documentação do provedor para obter instruções. Se você tiver que usar uma configuração XML personalizada para configurar um quiosque em seu serviço MDM, crie um arquivo XML que defina a configuração de [quiosque](#ppkioskconfig).
 
-1. Selecione **tipo de logon de usuário**  >  **conta de usuário local** e, em seguida, insira o nome de usuário da conta local (dispositivo) ou da MSA (conta da Microsoft) que pode entrar no quiosque.
+1. Selecione **Tipo de logon** de usuário Conta de usuário local e insira o nome de usuário da conta local (dispositivo) ou da  >  MSA (Conta Microsoft) que pode entrar no quiosque.
    > [!NOTE]  
    > Não há suporte para tipos de conta de usuário de **logon automático** no Windows Holographic for Business.
-1. Selecione aplicativo  >  da **loja** de tipos de aplicativos e, em seguida, selecione um aplicativo na lista.
+1. Selecione **Tipo de aplicativo** Store  >  **app** e, em seguida, selecione um aplicativo na lista.
 
-A próxima etapa é [atribuir](#mdmassign) o perfil a um grupo.
+A próxima etapa é atribuir [o](#mdmassign) perfil a um grupo.
 
-### <a name="mdm-step-3-multi-app-ndash-configure-the-settings-for-a-multi-app-kiosk"></a><a id="mdmconfigmulti"></a>MDM, etapa 3 (vários aplicativos) &ndash; definir as configurações para um quiosque de vários aplicativos
+### <a name="mdm-step-3-multi-app-ndash-configure-the-settings-for-a-multi-app-kiosk"></a><a id="mdmconfigmulti"></a>MDM, etapa 3 (vários aplicativos) Definir as configurações para um &ndash; quiosque de vários aplicativos
 
 Esta seção resume as configurações que um quiosque de vários aplicativos requer. Para informações mais detalhadas, consulte os seguintes artigos:
 
-- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [como configurar o modo de quiosque usando Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Para obter mais informações sobre as configurações disponíveis para quiosques de vários aplicativos no Intune, consulte [quiosques de vários aplicativos](/mem/intune/configuration/kiosk-settings-holographic#multi-app-kiosks)
-- Para outros serviços de MDM, consulte a documentação do provedor para obter instruções. Se você precisar usar uma configuração XML personalizada para configurar um quiosque em seu serviço MDM, [crie um arquivo XML que define a configuração do quiosque](#ppkioskconfig). Se você usar um arquivo XML, certifique-se de incluir o [layout de início](#start-layout-for-hololens).  
-- Opcionalmente, você pode usar um layout de início personalizado com o Intune ou outros serviços de MDM. Para obter mais informações, consulte [iniciar o arquivo de layout para MDM (Intune e outros)](#start-layout-file-for-mdm-intune-and-others).
+- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [How to Configure Kiosk Mode Using Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
+- Para obter mais informações sobre as configurações disponíveis para quiosques de vários aplicativos no Intune, consulte [Quiosques](/mem/intune/configuration/kiosk-settings-holographic#multi-app-kiosks) de vários aplicativos
+- Para outros serviços de MDM, confira a documentação do provedor para obter instruções. Se você precisar usar uma configuração XML personalizada para configurar um quiosque no serviço MDM, crie um arquivo XML que defina a configuração de [quiosque](#ppkioskconfig). Se você usar um arquivo XML, inclua o [layout Iniciar](#start-layout-for-hololens).  
+- Opcionalmente, você pode usar um layout Inicial personalizado com o Intune ou outros serviços de MDM. Para obter mais informações, consulte [Iniciar arquivo de layout para MDM (Intune e outros)](#start-layout-file-for-mdm-intune-and-others).
 
-1. selecione **Windows 10 de destino em dispositivos de modo S**  >  .  
+1. Selecione **Destino Windows 10 em dispositivos no modo S**  >  **Não**.  
 >[!NOTE]  
 > Não há suporte para o modo S no Windows Holographic for Business.
 
-1. selecione **tipo de logon de usuário** usuário  >  ou grupo ou **tipo de logon de usuário****do Azure AD**  >  **HoloLens visitante** e, em seguida, adicione uma ou mais contas ou grupos de usuários.  
+1. Selecione **Tipo de logon de** usuário ou grupo do  >  **Azure AD** ou Tipo de **logon** de usuário HoloLens visitante e, em seguida, adicione um ou mais grupos de usuários  >  ou contas.  
 
-   Somente os usuários que pertencem aos grupos ou contas que você especificar no **tipo de logon do usuário** podem usar a experiência de quiosque.
+   Somente os usuários que pertencem aos grupos ou contas que você especificar em Tipo de **logon** de usuário podem usar a experiência de quiosque.
 
 1. Selecione um ou mais aplicativos usando as seguintes opções:
-   - Para adicionar um aplicativo de linha de negócios carregado, selecione **Adicionar aplicativo da loja** e, em seguida, selecione o aplicativo desejado.
-   - Para adicionar um aplicativo especificando seu AUMID, selecione **Adicionar por AUMID** e, em seguida, insira o AUMID do aplicativo. [Consulte a lista de AUMIDs disponíveis](#aumids)
+   - Para adicionar um aplicativo de linha de negócios carregado, selecione **Adicionar aplicativo da loja** e, em seguida, selecione o aplicativo que você deseja.
+   - Para adicionar um aplicativo especificando seu AUMID, selecione Adicionar por **AUMID** e insira o AUMID do aplicativo. [Consulte a lista de AUMIDs disponíveis](#aumids)
 
-A próxima etapa é [atribuir](#mdmassign) o perfil a um grupo.
+A próxima etapa é atribuir [o](#mdmassign) perfil a um grupo.
 
-### <a name="mdm-step-4-ndash-assign-the-kiosk-configuration-profile-to-a-group"></a><a id="mdmassign"></a>MDM, etapa 4 &ndash; atribuir o perfil de configuração de quiosque a um grupo
+### <a name="mdm-step-4-ndash-assign-the-kiosk-configuration-profile-to-a-group"></a><a id="mdmassign"></a>MDM, etapa 4 &ndash; Atribuir o perfil de configuração de quiosque a um grupo
 
-Use a página **atribuições** do perfil de configuração do quiosque para definir onde você deseja que a configuração do quiosque seja implantada. no caso mais simples, você atribui o perfil de configuração de quiosque a um grupo que conterá o dispositivo HoloLens quando o dispositivo for registrado no MDM.
+Use a **página Atribuições** do perfil de configuração de quiosque para definir onde você deseja que a configuração de quiosque seja implantada. No caso mais simples, você atribui o perfil de configuração de quiosque a um grupo que conterá o HoloLens quando o dispositivo for inscrito no MDM.
 
-### <a name="mdm-step-5-single-app-ndash-deploy-a-single-app-kiosk"></a><a id="mdmsingledeploy"></a>MDM, etapa 5 (aplicativo único) &ndash; implantar um quiosque de aplicativo único
+### <a name="mdm-step-5-single-app-ndash-deploy-a-single-app-kiosk"></a><a id="mdmsingledeploy"></a>MDM, etapa 5 (aplicativo único) &ndash; Implantar um quiosque de aplicativo único
 
-Ao usar um sistema MDM, você pode registrar o dispositivo no MDM durante o OOBE. Após a conclusão do OOBE, é fácil entrar no dispositivo.
+Ao usar um sistema MDM, você pode registrar o dispositivo no MDM durante o OOBE. Após a finalização do OOBE, é fácil entrar no dispositivo.
 
 Durante o OOBE, siga estas etapas:
 
-1. Entre usando a conta que você especificou no perfil de configuração do quiosque.
-1. Registre o dispositivo. Verifique se o dispositivo foi adicionado ao grupo ao qual o perfil de configuração do quiosque está atribuído.
-1. Aguarde até que o OOBE seja concluído, para o aplicativo da loja baixar e instalar e para as políticas a serem aplicadas. Em seguida, reinicie o dispositivo.
+1. Entre usando a conta especificada no perfil de configuração de quiosque.
+1. Registre o dispositivo. Certifique-se de que o dispositivo seja adicionado ao grupo ao que o perfil de configuração de quiosque está atribuído.
+1. Aguarde a finalização do OOBE, para que o aplicativo da loja baixe e instale e que as políticas sejam aplicadas. Em seguida, reinicie o dispositivo.
 
-Na próxima vez que você entrar no dispositivo, o aplicativo de quiosque deverá ser iniciado automaticamente.
+Na próxima vez que você entrar no dispositivo, o aplicativo de quiosque deverá iniciar automaticamente.
 
-Se você não vir sua configuração de quiosque neste momento, [Verifique o status da atribuição](/intune/configuration/device-profile-monitor).
+Se você não vir sua configuração de quiosque neste ponto, [verifique o status da atribuição](/intune/configuration/device-profile-monitor).
 
-### <a name="mdm-step-5-multi-app-ndash-deploy-a-multi-app-kiosk"></a><a id="mdmmultideploy"></a>MDM, etapa 5 (vários aplicativos) &ndash; implantar um quiosque de vários aplicativos
+### <a name="mdm-step-5-multi-app-ndash-deploy-a-multi-app-kiosk"></a><a id="mdmmultideploy"></a>MDM, etapa 5 (vários aplicativos) &ndash; Implantar um quiosque de vários aplicativos
 
-Ao usar um sistema MDM, você pode ingressar o dispositivo em seu locatário do Azure AD e registrar o dispositivo no MDM durante o OOBE. Se apropriado, forneça as informações de registro aos usuários para que eles o disponibilizem durante o processo OOBE.
+Ao usar um sistema MDM, você pode ingressar o dispositivo em seu locatário do Azure AD e registrar o dispositivo no MDM durante o OOBE. Se apropriado, forneça as informações de registro aos usuários para que eles as tenham disponíveis durante o processo OOBE.
 
 > [!NOTE]  
-> Se você tiver atribuído o perfil de configuração de quiosque a um grupo que contém usuários, verifique se uma dessas contas de usuário é a primeira conta para entrar no dispositivo.
+> Se você atribuiu o perfil de configuração de quiosque a um grupo que contém usuários, certifique-se de que uma dessas contas de usuário seja a primeira conta para entrar no dispositivo.
 
 Durante o OOBE, siga estas etapas:
 
-1. Entre usando a conta que pertence ao grupo de **tipos de logon do usuário** .
+1. Entre usando a conta que pertence ao grupo **Tipo de logon de** usuário.
 1. Registre o dispositivo.
-1. Aguarde todos os aplicativos que fazem parte do perfil de configuração do quiosque para baixar e instalar. Além disso, aguarde até que as políticas sejam aplicadas.  
+1. Aguarde até que todos os aplicativos que fazem parte do perfil de configuração de quiosque baixem e instalem. Além disso, aguarde até que as políticas sejam aplicadas.  
 1. Após a conclusão do OOBE, você pode instalar aplicativos adicionais da Microsoft Store ou do Sideload. [Aplicativos necessários](/mem/intune/apps/apps-deploy#assign-an-app) para o grupo que o dispositivo pertence a instalar automaticamente.
 1. Após a conclusão da instalação, reinicie o dispositivo.
 

@@ -13,12 +13,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 769cacc1803af9d9e9bf1079f8cd5671f194c3bc
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 6a09766a06fff912aae20dc07974b723d812bd370562a33297552dc0d2f7f12c
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639209"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664287"
 ---
 # <a name="common-device-restrictions"></a>Restrições comuns de dispositivo 
 

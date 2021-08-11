@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 88e7d0614cf95f32eaa0434724eddbcb5b8cf863
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 76513c2f2458119785b64d8cccac4e42c2957b5af966dfdb0c165ebeda12e069
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636972"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115660089"
 ---
 # <a name="prepare---corporate-connected-guide"></a>Preparar – Guia conectado corporativo
 ## <a name="infrastructure-essentials"></a>Infrastructure Essentials
@@ -28,7 +28,7 @@ Para cenários de implantação pessoal e corporativa, um sistema MDM (Mobile Ge
 > [!NOTE]
 > Embora o HoloLens 2 seja implantado e gerenciado como um dispositivo móvel, ele geralmente é usado como um dispositivo compartilhado entre muitos usuários.
 
-## <a name="azure-active-directory"></a>Active Directory do Azure
+## <a name="azure-active-directory"></a>Azure Active Directory
 O Azure AD é um serviço de diretório baseado em nuvem que fornece gerenciamento de identidade e acesso. As organizações que usam o Microsoft Office 365 ou o Intune já estão usando o Azure AD, que tem três edições: Gratuita, Premium P1 e Premium P2 (consulte [Azure Active Directory edições](https://azure.microsoft.com/documentation/articles/active-directory-editions)). Todas as edições são suportadas pelo registro de dispositivo do Azure AD, mas Premium P1 é necessário para habilitar o registro automático do MDM, que será usado neste guia posteriormente.
 > [!Important]
 > É essencial ter um Azure AD, pois HoloLens dispositivos não são compatíveis com a junção do AD local. Se você ainda não tiver um Azure AD definido, siga as instruções para começar e Criar um novo locatário [no Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).

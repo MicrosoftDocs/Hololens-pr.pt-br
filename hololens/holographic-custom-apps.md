@@ -1,10 +1,10 @@
 ---
-title: gerenciar aplicativos personalizados para HoloLens (1ª gen)
-description: saiba como instalar, desinstalar e carregar no lado os aplicativos holographic personalizados em dispositivos HoloLens usando o Portal do dispositivo e o Visual Studio.
+title: Gerenciar aplicativos personalizados para HoloLens (1ª geração)
+description: Saiba como instalar, desinstalar e carregar aplicativos holográficos personalizados em dispositivos HoloLens usando o Portal de Dispositivos e Visual Studio.
 ms.assetid: 6bd124c4-731c-4bcc-86c7-23f9b67ff616
 ms.date: 12/10/2020
 manager: v-miegge
-keywords: hololens, Sideload, carga lateral, carga lateral, armazenamento, UWP, aplicativo, instalação
+keywords: hololens, sideload, side load, side-load, store, uwp, app, install
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
@@ -16,38 +16,38 @@ ms.custom:
 - CSSTroubleshooting
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: a179032978e1fc062273a6754e3b0a1ad50a5211
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 7d564fd00567033060428d5b47b34ddf827dea2fdeeb8955c73bc22e4ba87164
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635901"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664937"
 ---
-# <a name="manage-custom-apps-for-hololens-1st-gen"></a>gerenciar aplicativos personalizados para HoloLens (1ª gen)
+# <a name="manage-custom-apps-for-hololens-1st-gen"></a>Gerenciar aplicativos personalizados para HoloLens (1ª geração)
 
-o HoloLens dá suporte a muitos aplicativos existentes do Microsoft Store, bem como a novos aplicativos criados especificamente para HoloLens. Este artigo se concentra em aplicativos Holographic personalizados.  
+HoloLens dá suporte a muitos aplicativos existentes do Microsoft Store, bem como novos aplicativos criados especificamente para HoloLens. Este artigo se concentra em aplicativos holográficos personalizados.  
 
-Para obter mais informações sobre aplicativos da loja, consulte [gerenciar aplicativos com a loja](holographic-store-apps.md).
+Para obter mais informações sobre aplicativos da loja, [consulte Gerenciar aplicativos com a loja](holographic-store-apps.md).
 
 > [!IMPORTANT]
-> as informações a seguir foram criadas para a HoloLens (1ª gen), também chamada de HoloLens developer Edition no momento. como esses aplicativos de sideload por meio do portal do dispositivo e a instalação de aplicativos via Visual Studio eram comuns. Para implantações corporativas, não recomendamos habilitar o modo de desenvolvedor, que ambos os métodos usam. Se você estiver interessado em um método de implantação de aplicativo seguro, examine nosso [Gerenciamento de aplicativo: visão geral](app-deploy-overview.md).
+> As informações a seguir foram criadas para o HoloLens (1ª geração), também chamada de HoloLens Developer Edition no momento. Assim, o sideload de aplicativos por meio do portal do dispositivo e a instalação de aplicativos por meio Visual Studio eram comuns. Para implantações corporativas, não recomendamos habilenciar o Modo de Desenvolvedor, que ambos os métodos usam. Se você estiver interessado em um método de implantação de aplicativo seguro, revise nosso Gerenciamento [de Aplicativos: Visão geral.](app-deploy-overview.md)
 >
-> se você estiver procurando um método de desenvolvedor de instalação de aplicativo para dispositivos HoloLens 2, consulte:
+> Se você estiver procurando qualquer método de desenvolvedor de instalação de aplicativo para HoloLens 2 dispositivos, consulte:
 >
-> - [Portal do dispositivo: instalando um aplicativo](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
-> - [usando Visual Studio para implantar e depurar aplicativos](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
+> - [Portal de Dispositivos: instalando um aplicativo](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
+> - [Usando Visual Studio para implantar e depurar aplicativos](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
 
 ## <a name="install-custom-apps"></a>Instalar aplicativos personalizados
 
-você pode instalar seus próprios aplicativos em HoloLens usando o Portal do dispositivo ou implantando os aplicativos do Visual Studio.
+Você pode instalar seus próprios aplicativos HoloLens usando o Portal de Dispositivos ou implantando os aplicativos do Visual Studio.
 
-### <a name="installing-an-application-package-with-the-device-portal"></a>Instalando um pacote de aplicativos com o portal do dispositivo
+### <a name="installing-an-application-package-with-the-device-portal"></a>Instalando um pacote de aplicativos com o Portal de Dispositivos
 
-1. Estabeleça uma conexão do [portal do dispositivo](/windows/mixed-reality/using-the-windows-device-portal) com o HoloLens de destino.
+1. Estabeleça uma [conexão Portal de Dispositivos](/windows/mixed-reality/using-the-windows-device-portal) para o destino HoloLens.
 
-1. No painel de navegação esquerdo, navegue até a página **aplicativos** .
+1. No painel de navegação esquerdo, navegue até a **página Aplicativos.**
 
-1. Em **pacote do aplicativo** , navegue até o arquivo. Appx que está associado ao seu aplicativo.
+1. Em **Pacote do Aplicativo,** navegue até o arquivo .appx associado ao seu aplicativo.
 
    > [!IMPORTANT]
    > Certifique-se de fazer referência a qualquer dependência associada e arquivos de certificado.
@@ -55,26 +55,26 @@ você pode instalar seus próprios aplicativos em HoloLens usando o Portal do di
 1. Selecione **Ir**.
 
    > [!div class="mx-imgBorder"]
-   > ![instalar formulário de aplicativo no Portal do dispositivo Windows no Microsoft HoloLens](images/deviceportal-appmanager.jpg)
+   > ![Instalar o formulário de aplicativo Windows Portal de Dispositivos no Microsoft HoloLens](images/deviceportal-appmanager.jpg)
 
-### <a name="deploying-from-microsoft-visual-studio-2015"></a>implantando do Microsoft Visual Studio 2015
+### <a name="deploying-from-microsoft-visual-studio-2015"></a>Implantação do Microsoft Visual Studio 2015
 
-1. abra a solução de Visual Studio do seu aplicativo (arquivo. sln).
+1. Abra a solução de Visual Studio aplicativo (arquivo .sln).
 
-1. Abra as **Propriedades** do projeto.
+1. Abra as Propriedades do **projeto.**
 
-1. Selecione a seguinte configuração de compilação: **mestre/x86/computador remoto**.
+1. Selecione a seguinte configuração de build: **Mestre/x86/Computador Remoto.**
 
-1. Quando você seleciona **computador remoto**:
-   - Verifique se o endereço aponta para o endereço IP Wi-Fi do seu HoloLens.
-   - Defina a autenticação como **Universal (protocolo não criptografado)**.
+1. Ao selecionar Computador **Remoto:**
+   - Certifique-se de que o endereço aponta para o Wi-Fi IP da sua HoloLens.
+   - Descriptografe **a autenticação como Universal (Protocolo Não Criptografado).**
    
 1. Compile sua solução.
 
-1. para implantar o aplicativo do seu PC de desenvolvimento em seu HoloLens, selecione **computador remoto**. se você já tiver uma compilação existente no HoloLens, selecione **sim** para instalar essa versão mais recente.  
+1. Para implantar o aplicativo do computador de desenvolvimento em seu HoloLens, selecione **Computador Remoto**. Se você já tiver um build existente no HoloLens, selecione **Sim** para instalar essa versão mais recente.  
 
-   ![implantação de máquina remota para aplicativos para Microsoft HoloLens no Visual Studio](images/vs2015-remotedeployment.jpg)  
+   ![Implantação de computador remoto para aplicativos Microsoft HoloLens em Visual Studio](images/vs2015-remotedeployment.jpg)  
    
-1. O aplicativo será instalado e iniciado automaticamente no seu HoloLens.
+1. O aplicativo será instalado e iniciará automaticamente em seu HoloLens.
 
-Depois de instalar um aplicativo, você o encontrará na lista **todos os aplicativos** (**Iniciar**  >  **todos os aplicativos**).
+Depois de instalar um aplicativo, você o encontrará na lista **de** Todos os apps (**Iniciar**  >  **Todos os apps**).

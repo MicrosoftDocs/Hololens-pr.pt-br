@@ -6,30 +6,30 @@ ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: segurança, hololens, rede, segurança de rede
+keywords: security, hololens, network, network security
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f1e5304408a9a9543eb0703ad7321725484eef01
-ms.sourcegitcommit: 72ff3174b34d2acaf72547b7d981c66aef8fa82f
+ms.openlocfilehash: 416a4f7b9e3cf2e52b79fb29f50424a9c573a18a
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11009419"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640484"
 ---
-# Segurança de rede
+# <a name="network-security"></a>Segurança de rede
 
-## Protocolos de rede
+## <a name="network-protocols"></a>Protocolos de rede
 
-O NetBIOS (Network Basic Input/Output System) desatualizado era amplamente usado muitas vezes no passado em cenários de LAN – para fornecer resolução de nome para um computador e pastas compartilhadas. No entanto, com o tempo, o NetBIOS provou ser suscetível a vários ataques, e sua relevância diminuída em favor de outros protocolos mais seguros. Para remover esse problema de vulnerabilidade, o HoloLens 2 eliminou o código relacionado a NetBIOS do sistema operacional.
+O desatualizado NetBIOS era amplamente usado muitas vezes no passado em cenários de LAN a fim de fornecer resolução de nomes para um computador e pastas compartilhadas. No entanto, com o tempo, o NetBIOS provou ser suscetível a vários ataques e a relevância dele diminuiu em relação a outros protocolos mais seguros. Para remover esse problema de vulnerabilidade, o HoloLens 2 eliminou o código relacionado ao NetBIOS do sistema operacional.
 
-Os protocolos TLS (Transport Layer Security) estão sempre em constante evolução. Para manter-se atualizada com as várias explorações de segurança que foram descobertas nesta área, a indústria de computação se evoluiu em versões mais recentes e mais eficazes. Devido ao tempo necessário para que todas as implantações de servidor adotem as novas versões do protocolo TLS, é possível implementar um mecanismo de fallback que permite que clientes e servidores em diferentes versões padrão do protocolo ainda possam se comunicar durante o período de transição.
+Os protocolos TLS estão em constante evolução. Para se manter atualizada com as várias explorações de segurança descobertas nessa área, a indústria de computação passou a usar versões mais recentes e mais efetivas. Devido ao tempo necessário para que todas as implantações de servidor adotem as novas versões do protocolo TLS, é possível implementar um mecanismo de fallback que permita que os clientes e os servidores em diferentes versões padrão do protocolo ainda possam se comunicar durante o período de transição.
 
-## Conectividade segura 
+## <a name="secure-connectivity"></a>Conectividade segura 
 
-O Windows Defender Firewall oferece funcionalidade fundamental para proteger a conectividade de dispositivos. Com o HoloLens 2, o firewall está sempre habilitado e não há maneiras de desabilitá-lo programaticamente ou por meio da interface do usuário.
+O Windows Defender Firewall oferece funcionalidade crítica para proteger a conectividade de dispositivos. Com o HoloLens 2, o firewall está sempre habilitado e não há maneiras de desabilitá-lo por programação ou pela interface do usuário.
 
-A privacidade de acesso remoto e conexão para clientes com dispositivo móvel pode ser garantida pela [plataforma de plug-in VPN UWP](https://docs.microsoft.com/uwp/api/Windows.Networking.Vpn?view=winrt-19041). Provedores de VPN de terceiros podem criar seus próprios plug-ins usando APIs do WinRT que vão rodar dentro da área restrita do AppContainer, eliminando a complexidade e os problemas geralmente associados com a escrita de drivers a nível de sistema.
+A privacidade do acesso remoto e da conexão para clientes móveis pode ser garantida pela [plataforma de plug-in de VPN do UWP](/uwp/api/Windows.Networking.Vpn?view=winrt-19041). Os provedores de VPN de terceiros podem criar plug-ins próprios usando as APIs do WinRT, que serão executadas na área restrita do AppContainer, eliminando a complexidade e os problemas geralmente associados à gravação de drivers no nível do sistema.

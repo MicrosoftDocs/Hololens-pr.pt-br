@@ -1,91 +1,91 @@
 ---
 title: Separação e isolamento de estado
-description: Saiba mais sobre separação de estado, isolamento, assinatura de código e aplicativos de proteção no dispositivo de realidade misturada do HoloLens 2.
+description: Saiba mais sobre separação de estado, isolamento, assinatura de código e aplicativos do Defender no dispositivo de realidade misturada do HoloLens 2.
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: segurança, hololens, separação de estado, separação e isolamento de estado, hololens 2, hololens2, segurança, visão geral de segurança, arquitetura de segurança, arquitetura, arquitetura do hololens 2
+keywords: security, hololens, State separation, State separation and isolation, hololens 2, hololens2 security, security overview, security architecture, architecture, hololens 2 architecture
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 60d6d7c0e281395957ce9158144a5f3d60927682
-ms.sourcegitcommit: d20057957aa05c025c9838119cc29264bc57b4bd
+ms.openlocfilehash: 18c30b4edd649c088f71e479a401c8b286ddfd592f57a5659c3c15b3ec9c854f
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11282802"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665362"
 ---
-# Separação e isolamento de estado
+# <a name="state-separation-and-isolation"></a>Separação e isolamento de estado
 
-A separação e o isolamento de estado protegem partes críticas do sistema operacional do Hololens 2, como aquelas necessárias para que o sistema operacional seja inicializado em um estado confiável. Com a tecnologia de isolamento, os aplicativos não confiáveis são movidos para um ambiente de área restrita isolada, para garantir que eles não afetarão a segurança do sistema.
+A separação e o isolamento de estado protegem partes críticas do sistema operacional do HoloLens 2 contra alterações, como aquelas necessárias para que o sistema operacional seja inicializado em um estado confiável. Com a tecnologia de isolamento, os aplicativos não confiáveis são movidos para um ambiente de área restrita isolada, para garantir que eles não afetarão a segurança do sistema.
 
-## Separação de estado
+## <a name="state-separation"></a>Separação de estado
 
-A separação de estado no HoloLens 2 melhora imensamente a segurança e a operacionalidade (atualização) e ajuda a proteger seus dados de aplicativo.  Separação de estado funciona da seguinte maneira:
-  * O sistema operacional principal é armazenado no volume do sistema operacional principal (um SO da Microsoft confiável ou verificado atualizando o sistema operacional).
-  * As partes do sistema operacional que podem ser alteradas no tempo de execução (como configurações e drivers para baixar), usam separação de estado adicional para particionar os dados e armazená-los em locais de armazenamento seguros e separados.
-  * Cada local de armazenamento seguro tem políticas de segurança distintas associadas a eles, oferecendo diversas vantagens de segurança, conforme detalhado na seção a seguir.
+A separação de estado no HoloLens 2 aprimora imensamente a segurança e a capacidade de manutenção (atualização) e ajuda a proteger seus dados de aplicativo.  A separação de estado funciona da seguinte maneira:
+  * O sistema operacional principal é armazenado no volume do sistema operacional principal (um SO confiável ou verificado da Microsoft que atualiza o sistema operacional).
+  * As partes do sistema operacional que podem ser alteradas em runtime (como drivers e configurações para download) usam a separação de estado adicional para particionar os dados e armazená-los em locais de armazenamento seguros e separados.
+  * Cada localização de armazenamento seguro tem políticas de segurança distintas associadas, oferecendo diversas vantagens de segurança, conforme detalhado na seção a seguir.
 
-## Benefícios da separação de estado
+## <a name="state-separation-benefits"></a>Benefícios da separação de estado
 
-  * Segurança: a separação de estado em destaque no HoloLens 2 melhora significativamente a integridade da plataforma, a resistência contra malware e a proteção de dados do usuário. Ao separar a parte inalterável do sistema operacional e torná-la somente para leitura ou com integridade protegida, a separação de estado torna extremamente difícil para o malware persistir na reinicialização a frio. 
-  * Atualizações: com o HoloLens 2, uma vez que o sistema operacional principal não é modificável e foi corretamente separado do restante dos dados no dispositivo, as atualizações são simples e confiáveis.  Além disso, a separação de estado cria os alicerces vitais para atualizações muito mais rápidas, o que permite que o sistema operacional seja substituído em uma única etapa (unidade atômica).
-  * Redefinição do dispositivo: a redefinição no HoloLens 2 limpa os dados gerados pelo usuário e os dados do aplicativo do usuário no dispositivo, incluindo locais de armazenamento internos e externos. Preserva os aplicativos do sistema operacional atual e os aplicativos essenciais de segurança, além dos aplicativos personalizados da Microsoft e do OEM (pré-instalado). Esses aplicativos pré-instalados podem ser reintegrados no dispositivo após a conclusão da redefinição.
+  * Segurança: a separação de estado apresentada no HoloLens 2 aprimora significativamente a integridade da plataforma, a resistência contra malware e a proteção de dados do usuário. Ao separar a parte inalterável do sistema operacional e torná-la somente leitura ou com integridade protegida, a separação de estado torna extremamente difícil para o malware persistir na reinicialização a frio. 
+  * Atualizações: com o HoloLens 2, como o sistema operacional principal não é modificável e foi corretamente separado do restante dos dados no dispositivo, as atualizações se tornam simples e confiáveis.  Além disso, a separação de estado cria os alicerces vitais para atualizações muito mais rápidas, o que permite que o sistema operacional seja substituído em uma só etapa (unidade atômica).
+  * Redefinição do dispositivo: a redefinição no HoloLens 2 limpa os dados gerados pelo usuário e os dados do aplicativo do usuário no dispositivo, incluindo locais de armazenamento internos e externos. Ela preserva os aplicativos do sistema operacional atual e os aplicativos críticos de segurança, além dos aplicativos personalizados da Microsoft e do OEM (pré-instalados). Esses aplicativos pré-instalados podem ser reidratados no dispositivo após a conclusão da redefinição
 
-### Etapas da separação de estado
+### <a name="state-separation-states"></a>Estados da separação de estado
 
-A separação de estado assegura que o sistema operacional só possa ser alterado pelos componentes de dispositivos confiáveis da Microsoft e que somente o estado de alto valor tenha permissão para persistir entre reinicializações; outro estado de sistema existe somente durante a sessão de inicialização e é descartado após a reinicialização. A separação de estado retorna rapidamente o dispositivo de volta para o estado original de fabricação. Os estados do Windows Holographic for Business podem ser divididos nestas categorias distintas:
+A separação de estado assegura que o sistema operacional só possa ser alterado por componentes de dispositivos confiáveis da Microsoft e que somente o estado de alto valor tenha permissão para ser persistido entre as reinicializações; outros estados do sistema só existem durante a sessão de inicialização e são descartados após a reinicialização. A separação de estado retorna rapidamente o dispositivo novamente para o estado de fábrica. Os estados do Windows Holographic for Business podem ser divididos nestas categorias distintas:
   * Sistema operacional principal – Estado inalterável
   * Dados do sistema operacional – Estado alterável 
   * Dados do usuário – Estado alterável
 
-Cada um desses estados operacionais do HoloLens 2 estão descritos na seção a seguir.
+Cada um desses estados operacionais do HoloLens 2 são descritos na seção a seguir.
 
-#### Sistema operacional principal
+#### <a name="core-operating-system"></a>Sistema operacional principal
 
-Um estado imutável é formado por arquivos executáveis e dados inalteráveis e só podem ser alterados pela Microsoft durante a instalação das atualizações. Durante tal atualização do sistema operacional principal, uma nova imagem contendo o mais recente estado de operação desejado será habilitada.
-O estado inalterável é marcado como somente leitura (ou é, caso contrário, com integridade protegida), evitando a persistência de qualquer malware com privilégios elevados. Os seguintes arquivos e dados executáveis estão protegidos no estado imutável:
+Um estado imutável é formado por arquivos executáveis e dados inalteráveis e que só podem ser alterados pela Microsoft durante a instalação das atualizações. Durante essa atualização do sistema operacional principal, uma nova imagem contendo o mais recente estado operacional desejado é habilitada.
+O estado inalterável é marcado como somente leitura (ou, de outro modo, tem a integridade protegida), evitando a persistência de qualquer malware com privilégios elevados. Os seguintes arquivos e dados executáveis estão protegidos no estado imutável:
   * Drivers originais do Windows Holographic
   * Binários do sistema operacional
   * Drivers originais do Windows
-  * Configurações estáticas do Windows Holographic armazenadas no hive do registro do Windows (HKLM)
-    * Exemplo: HKLM armazena as informações de configuração para os aplicativos instalados em um computador. Ele também armazena informações para detectar um hardware e os drivers correspondentes.
-Ao protegê-los no estado imutável (integridade e proteção de somente leitura), garantimos que o sistema operacional principal sempre Inicializa num estado confiável. Além disso, quando um dispositivo é redefinido, podemos garantir que o dispositivo inicializará apenas nos componentes que estão nesta seção imutável. 
+  * Configurações estáticas do Windows Holographic armazenadas no hive do Registro do Windows (HKLM)
+    * Exemplo: o HKLM armazena as informações de configuração dos aplicativos instalados em um computador. Ele também armazena informações para detectar um hardware e os drivers correspondentes.
+Ao protegê-los no estado imutável (com proteção de integridade e somente leitura), garantimos que o sistema operacional principal sempre seja inicializado em um estado confiável. Além disso, quando um dispositivo é redefinido, podemos garantir que o dispositivo será inicializado apenas nos componentes que estão nesta seção imutável. 
 
-#### Dados do sistema operacional 
+#### <a name="operating-system-data"></a>Dados do sistema operacional 
 
-É importante observar que os arquivos e os dados executáveis que são alteráveis no tempo de execução (e que não são críticos para a função do sistema operacional) poderão ser descartados e recriados quando os dados estiverem corrompidos ou comprometidos. O estado alterável de alto valor é necessário para persistir pelo sistema operacional ou é esperado que persista no desligamento do sistema operacional, e/ou entre reinicializações por cenários de dispositivos e de sistema operacional Windows com suporte. Exemplos de estado mutável de alto valor são:
-  * O administrador de TI configurou as configurações do dispositivo global, como exemplo: desabilitar o local para todos os usuários.
-  * Conexão de rede Wi-Fi e acesso a senhas lembradas nos dispositivos de dados e senhas de conexão associadas.
-  * Despejos de memória incluindo configurações e logs.
-  * Drivers baixados por demanda para dispositivos recém-descobertos.
-Um estado alterável de alto valor no HoloLens 2 fica no local de segurança de dados do sistema operacional como um arquivo salvo no disco ou em um registro hive persistente.
+É importante observar que os arquivos e os dados executáveis que são alteráveis em runtime (e que não são críticos para a função do sistema operacional) poderão ser descartados e recriados quando os dados estiverem corrompidos ou comprometidos. É necessário que o estado alterável de alto valor seja persistido pelo sistema operacional ou é esperado que ele seja persistido no desligamento do sistema operacional e/ou entre reinicializações por cenários de dispositivos e de sistema operacional Windows compatíveis. Entre os exemplos de estado mutável de alto valor estão:
+  * Configurações de dispositivo globais definidas pelo administrador de TI, como a desabilitação da localização para todos os usuários.
+  * Redes lembradas nos dispositivos de dados de acesso à conexão de rede Wi-Fi e senhas de conexão associadas.
+  * Despejos de memória, incluindo configurações e logs.
+  * Drivers baixados sob demanda para dispositivos recém-descobertos.
+Um estado alterável de alto valor no HoloLens 2 reside na localização de segurança de dados do sistema operacional como um arquivo salvo em disco ou em um hive do Registro persistente.
 
-#### Dados de usuários
+#### <a name="user-data"></a>Dados do usuário
 
-A última categoria de estado representa os dados do usuário produzidos ou persistidos por aplicativos UWP ou do sistema operacional. Todas as pastas de usuário conhecidas, como Downloads, Documentos, Vídeos, perfis de usuários e HKEY_CURRENT_USER hive, também são armazenadas neste local. Esses dados não podem ser extraídos sem credenciais adequadas; para saber mais sobre como seus dados estão protegidos, confira [Criptografia e Proteção de Dados](security-encryption-data-protection.md).
+A última categoria de estado representa os dados do usuário produzidos ou persistidos por aplicativos UWP ou do sistema operacional. Todas as pastas de usuário conhecidas, como Downloads, Documentos, Vídeos, perfis de usuários e o hive HKEY_CURRENT_USER, também são armazenadas nessa localização. Esses dados não podem ser extraídos sem as credenciais adequadas; para saber mais sobre como seus dados são protegidos, confira [Criptografia e proteção de dados](security-encryption-data-protection.md).
 
-##  Isolamento
+##  <a name="isolation"></a>Isolamento
 
-Para alcançar esse equilíbrio, o HoloLens 2 tem um sistema operacional principal que é usado para as principais funções, como inicialização, controle de hardware, logon, etc. Há apenas dois conjuntos de aplicativos em execução no sistema operacional principal — aplicativos pré-instalados e aplicativos UWP.
+Para alcançar esse equilíbrio, o HoloLens 2 tem um sistema operacional principal que é usado para as funções primárias, como inicialização, controle de hardware, logon etc. Há apenas dois conjuntos de aplicativos em execução no sistema operacional principal: aplicativos pré-instalados e aplicativos UWP.
 
-## Assinatura de código
+## <a name="code-signing"></a>Assinatura de código
 
-A assinatura de código digital permite a fundamentação que os executáveis e os scripts não foram modificados, já que eles foram assinados por uma fonte confiável, portanto fornecem autenticidade e integridade. As autoridades que o HoloLens 2 confia por padrão são a Microsoft e a Microsoft Store. Os administradores de TI podem adicionar novos certificados ao dispositivo por meio do [ClientCertificateInstall](https://docs.microsoft.com/windows/client-management/mdm/clientcertificateinstall-csp) e [RootCATrustedCertificates](https://docs.microsoft.com/windows/client-management/mdm/rootcacertificates-csp) CSPs. Eles também podem usar a [política de AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps) para confiar em sideload adicional ou [aplicativos de linha de negócios](https://docs.microsoft.com/intune/apps/lob-apps-windows). Os certificados residem no repositório de certificados do computador local, que é armazenado na HKLM/Root se estiverem usando "Dispositivo" ou em HKCU se estiverem usando "Usuário".
+A assinatura de código digital permite a comprovação de que os executáveis e os scripts não foram modificados, pois foram assinados por uma fonte confiável, fornecendo, portanto, autenticidade e integridade. As autoridades nas quais o HoloLens 2 confia por padrão são a Microsoft e a Microsoft Store. Os administradores de TI podem adicionar novos certificados ao dispositivo por meio dos CSPs [ClientCertificateInstall](/windows/client-management/mdm/clientcertificateinstall-csp) e [RootCATrustedCertificates](/windows/client-management/mdm/rootcacertificates-csp). Eles também podem usar a [política AllowAllTrustedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps) para confiar em aplicativos adicionais de sideload ou de [linha de negócios](/intune/apps/lob-apps-windows). Os certificados residem no repositório de certificados do computador local, que é armazenado em HKLM/Raiz se o “Dispositivo” estiver sendo usado ou em HKCU se o “Usuário” estiver sendo usado.
 
-## Proteções do Defender
-O HoloLens 2 usa os serviços Microsoft para conceder aos usuários um nível de segurança avançado:
+## <a name="defender-protections"></a>Proteções do Defender
+O HoloLens 2 usa serviços Microsoft para proporcionar aos usuários um nível de segurança avançado:
 
-* o [Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) é habilitado automaticamente no Windows Holographic pelo SO e protege contra phishing e malware e também contra o download de arquivos potencialmente mal intencionados, no Microsoft Edge. Ele não pode ser desativado pelo usuário, mas pode ser desabilitado por meio da política de regras.
+* O [Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) é habilitado automaticamente no Windows Holographic pelo sistema operacional e fornece proteção contra phishing e malware e contra o download de arquivos potencialmente mal-intencionados no Microsoft Edge. Ele não pode ser desativado pelo usuário, mas pode ser desabilitado por meio da política.
 
-* O [Defender Firewall](https://docs.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) bloqueia o tráfego de rede não autorizado de fluir de e para seu dispositivo. Ele está habilitado por padrão e não pode ser configurado pelo cliente por meio de uma política ou de ações locais. 
+* O [Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) bloqueia o fluxo de tráfego de rede não autorizado no dispositivo. Ele está habilitado por padrão e não pode ser configurado pelo cliente por meio de uma política ou de ações locais. 
 
-* [Controle de Aplicativo do Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview): O HoloLens 2 oferece suporte WDAC que permite que o administrador de TI fazer o push de políticas de controle de aplicativo para o dispositivo. Mais informações podem ser encontradas no [Uso de WDAC em dispositivos do HoloLens 2 com o MSFT Intune](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens). 
+* [Controle de Aplicativos do Windows Defender](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview): o HoloLens 2 dá suporte ao WDAC, que permite que o administrador de TI envie por push as políticas de controle de aplicativo para o dispositivo. Encontre mais informações em [Usar o WDAC em dispositivos HoloLens 2 com o MSFT Intune](/mem/intune/configuration/custom-profile-hololens). 
 
-Os administradores de TI podem gerenciar o comportamento do SmartScreen por meio do [AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) e o comportamento do navegador por meio [dessas políticas](https://docs.microsoft.com/windows/client-management/mdm/policy-csps-supported-by-hololens2). 
+Os administradores de TI podem gerenciar o comportamento do SmartScreen por meio de [AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) e o comportamento do navegador por meio [destas políticas](/windows/client-management/mdm/policy-csps-supported-by-hololens2). 
 

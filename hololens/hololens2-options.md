@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: dc5e6a731fb02adab9ef8223313cac52710b6272
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 32153fd6f7703347f4fe2f9ad41043fbeb9fab3f
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112923492"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640467"
 ---
 # <a name="compare-hololens-2-options"></a>Comparar as opções do HoloLens 2
 
@@ -31,17 +31,17 @@ Seja você um [profissional de TI](https://www.microsoft.com/hololens/apps) em b
 
 |                                                      | HoloLens 2 | HoloLens 2 com Assistência Remota | HoloLens 2 Industrial Edition | HoloLens 2 Industrial Edition com Assistência Remota | Trimble XR10 com o HoloLens 2 | HoloLens 2 Development Edition |
 |------------------------------------------------------|------------|-------------------------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|
-| Dispositivo HoloLens 2 (um dispositivo)                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
-| Dynamics 365 Remote Assist (uma estação)                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
-| Classificação de sala limpa ISO 14644-1 classe 5           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| Classe UL I, ambientes de Divisão 2, Grupos A, B, C e D DIVISIONLOC                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| Botão rígido integrado (em conformidade com PPE em mais de 40 países) |            |                               |                               |                                                  |               ✔️              |                                |
-| Saída de áudio de cancelamento de ruído                        |            |                               |                               |                                                  |               ✔️              |                                |
-| Direitos do desenvolvedor <sup>1</sup>                             |            |                               |                               |                                                  |                              |                ✔️               |
-| Programa de Substituição Rápida <sup>2</sup>                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| Direitos de uso comercial                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| [Garantia](hololens2-hardware.md#warranty-information)                                             |   1 ano   |             1 ano            |             2 anos            |                      2 anos                      |            1 ano <sup>3</sup>            |             1 ano             |
-| Limite de compra de dispositivos                                |    Nenhum    |              Nenhum             |              Nenhum             |                       Nenhum                       |             Nenhum             |       Um por transação      |
+| **Dispositivo HoloLens 2 (um dispositivo)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
+| **Dynamics 365 Remote Assist (uma estação)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
+| **Classificação de sala limpa ISO 14644-1 classe 5**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Classe UL I, ambientes de Divisão 2, Grupos A, B, C e D DIVISIONLOC**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| **Botão rígido integrado (em conformidade com PPE em mais de 40 países)** |            |                               |                               |                                                  |               ✔️              |                                |
+| **Saída de áudio de cancelamento de ruído**                        |            |                               |                               |                                                  |               ✔️              |                                |
+| **Direitos do desenvolvedor <sup>1</sup>**                             |            |                               |                               |                                                  |                              |                ✔️               |
+| **Programa de Substituição Rápida <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Direitos de uso comercial**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| [**Garantia**](hololens2-hardware.md#warranty-information)                                             |   1 ano   |             1 ano            |             2 anos            |                      2 anos                      |            1 ano <sup>3</sup>            |             1 ano             |
+| **Limite de compra de dispositivos**                                |    Nenhum    |              Nenhum             |              Nenhum             |                       Nenhum                       |             Nenhum             |       Um por transação      |
 
 - <sup>1</sup> – Inclui US$ 500 de crédito do Azure e testes de 3 meses para o Unity Pro e o Pixyz Plugin.
 - <sup>2</sup> – Receba um dispositivo de substituição no dia seguinte ou com remessa expressa (a mais rápida entre as opções disponíveis) antes que o dispositivo com defeito seja recebido pela Microsoft.
@@ -82,8 +82,8 @@ Explore estas soluções adicionais construídas para dispositivos de realidade 
 | [Dynamics 365 para HoloLens](https://www.microsoft.com//hololens/apps)          | Capacite funcionários e otimize as operações.                                                        |
 | [Dynamics 365 Remote Assist](https://dynamics.microsoft.com/mixed-reality/remote-assist/)          | Capacite os técnicos a colaborar com mais eficiência, trabalhando juntos em diferentes locais. |
 |   [Dynamics 365 Guides](https://dynamics.microsoft.com/mixed-reality/guides/)        | Melhore as necessidades efetivas de treinamento e aprenda o desempenho dos funcionários.                          |
-|  [Serviços de Nuvem do Azure para realidade misturada](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Saiba desenvolver uma solução usando os Serviços de Nuvem do Azure.                                       |
-|  [Comece a desenvolver para o HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)         | Crie uma solução de realidade misturada para atender às suas necessidades.                                                 |
+|  [Serviços de Nuvem do Azure para realidade misturada](/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Saiba desenvolver uma solução usando os Serviços de Nuvem do Azure.                                       |
+|  [Comece a desenvolver para o HoloLens 2](/windows/mixed-reality/develop/development?tabs=unity)         | Crie uma solução de realidade misturada para atender às suas necessidades.                                                 |
 
 ## <a name="next-steps"></a>Próximas etapas
 

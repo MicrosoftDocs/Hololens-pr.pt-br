@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 43162389eae82bc09135c62acd40d71048d14db1
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 8273813d85c3b2df2c1a551fb0322a867a5a9c64fdd05e9a85a2097b1590fb62
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639073"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664371"
 ---
 # <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>Como planejar a implantação do HoloLens 2 em um ambiente comercial
 

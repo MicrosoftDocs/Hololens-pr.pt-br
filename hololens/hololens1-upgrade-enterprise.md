@@ -12,12 +12,12 @@ ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: b5ae9b0d6859c0f916b5b906e2e9ec54cad6cbd9
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 7cf35a10a5f18dc0ccca876230b1677c6eca54ad116f0b2045fc1b269ac6c4b0
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635187"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115661893"
 ---
 # <a name="unlock-windows-holographic-for-business-features"></a>Desbloquear os recursos do Windows Holographic for Business
 

@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: be33eb5d06ee7d63f1f598792ff75605b0eb4424
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 7d8f2f8bf6aaaeb7f6f0ddbd339d428dad9335faeb99bfca48a19e68929921ed
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112923628"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663003"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>Reiniciar, redefinir ou recuperar o HoloLens 2
 
@@ -72,6 +72,7 @@ Se o procedimento padrão de redefinição não funcionar, use o procedimento de
 2. Mantenha os botões de **diminuir o volume** + **energia** pressionados por 15 segundos. O dispositivo será reinicializado automaticamente.
 
 4. Conecte o dispositivo ao computador host.
+
 
 5. Abra Gerenciador de Dispositivos (para Windows 10, pressione a tecla **Windows**, a tecla **X** e, em seguida, escolha **Gerenciador de Dispositivos**). Verifique se o dispositivo está identificado corretamente conforme *Microsoft HoloLens*, conforme mostrado na imagem a seguir:
 
@@ -133,7 +134,13 @@ Se o HoloLens 2 não iniciar corretamente ou se o Advanced Recovery Companion n�
 
 2. Verifique se o dispositivo está desbloqueado.
 
-3. Se o ARC não detectar seu dispositivo, verifique se você pode se conectar a ele por meio Explorador de Arquivos em seu computador. Se não for possível:
+1. Verifique se o dispositivo está conectado diretamente ao computador host, não a um hub.
+
+1. Se o dispositivo não estiver sendo exibido como um dispositivo de recuperação HoloLens/HoloLens em Drivers de Barramento Serial Universal, verifique:
+    1. **Portas**, como um dispositivo Qualcomm HS-USB
+    1.   **Outros dispositivos**, como um dispositivo QUSB_BULK: o computador host não tem os drivers necessários para detectar o HoloLens. Clique com o botão direito do mouse e selecione Atualizar Driver e pesquise drivers online ou [marque Atualizações Opcionais nas configurações do Windows Update](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/improving-the-update-discoverability-experience/ba-p/1585674). Depois que o driver for baixado, o ARC conseguirá detectá-lo.
+ 
+1. Se o ARC não detectar seu dispositivo, verifique se você pode se conectar a ele por meio Explorador de Arquivos em seu computador. Se não for possível:
 
     1.  É possível que seu dispositivo tenha políticas de USB que desabilitam essa conexão. Em caso afirmativo, tente o [Modo de flash manual](hololens-recovery.md#manual-procedure).
     2.  Se não houver nenhuma política, tente um cabo USB diferente.

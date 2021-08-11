@@ -1,6 +1,6 @@
 ---
-title: Visão geral – Gerenciamento de Aplicativos
-description: Começar com uma visão geral do gerenciamento de aplicativos de realidade misturada com gerenciamento de dispositivo móvel, Microsoft Store para empresas e pacotes de provisionamento.
+title: Visão geral – gerenciamento de aplicativos
+description: Comece com uma visão geral do gerenciamento de aplicativos de realidade misturada com gerenciamento de dispositivo móvel, Microsoft Store para empresas e pacotes de provisionamento.
 keywords: HoloLens, usuário, conta, aplicativo, gerenciamento de aplicativos,
 author: evmill
 ms.author: v-evmill
@@ -14,73 +14,73 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ca87f34718319d489b69ba33ad24731628d87fac
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 019700c7e35f31c234c9fe69870cae54b3364b631253c37a17d8eaa0fe3053bd
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635544"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665226"
 ---
-# <a name="app-management-overview"></a>Gerenciamento de Aplicativos: Visão geral
+# <a name="app-management-overview"></a>Gerenciamento de aplicativos: visão geral
 
-Você pode implantar aplicativos em quatro caminhos diferentes: **MDM (Mobile Gerenciamento de Dispositivos),** **Microsoft Store para Empresas**, **Microsoft Store** ou instalando-os por meio **do Provisionamento**.
+você pode implantar aplicativos em quatro caminhos diferentes: **MDM (gerenciamento de dispositivo móvel)**, **Microsoft Store para Empresas**, **Microsoft Store** ou instalando-os por meio de **provisionamento**.
 
 ## <a name="mobile-device-management-mdm"></a>Gerenciamento de Dispositivos Móveis (MDM)
 
-Uma solução de MDM permite que os tomadores de decisões e administradores de IT instalem (push) seus aplicativos de linha de negócios internamente ou comprem aplicativos por meio da loja para um grupo de usuários. HoloLens dispositivos funcionam melhor com o Microsoft Endpoint Manager (Intune) para gerenciamento [de aplicativos.](app-deploy-intune.md) O Intune também oferece aos usuários um controle mais fino sobre aplicativos gerenciados por IT por meio da Portal da Empresa baixável.
+Uma solução de MDM permite que os administradores e tomadores de decisões de ti instalem de forma privada (push) seus aplicativos internos de linha de negócios ou comprem aplicativos por meio da loja para um grupo de usuários. HoloLens dispositivos funcionam melhor com o Microsoft Endpoint Manager (Intune) para [gerenciamento de aplicativos](app-deploy-intune.md). o Intune também oferece aos usuários um controle mais refinado sobre aplicativos gerenciados por ti por meio da experiência Portal da Empresa baixável.
 
 > [!NOTE]
-> As instruções a seguir são para usuários que querem gerenciar seus aplicativos com o Intune. A Microsoft recomenda usar o Intune para gerenciamento de aplicativos e dispositivos.
+> As instruções a seguir são para os usuários que desejam gerenciar seus aplicativos com o Intune. A Microsoft recomenda usar o Intune para gerenciamento de aplicativos e dispositivos.
 
-O MDM (mobile Gerenciamento de Dispositivos) é aplicável a:
+O MDM (gerenciamento de dispositivo móvel) é aplicável para:
 
 * MDM implantado + Portal da Empresa
 * Aplicativos de linha de negócios (não públicos)
-* Instalação manual de aplicativos disponíveis por meio Portal da Empresa
-* Push do administrador por meio da política de MDM
-* Atualização automática por meio do MDM
+* instalação Manual de aplicativos disponíveis por meio do Portal da Empresa
+* Push de administrador por meio da política de MDM
+* Atualizar automaticamente por meio do MDM
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store para Empresas
 
-A [Microsoft Store para Empresas](app-deploy-store-business.md) fornece tomadores de decisões de IT e administradores em empresas para encontrar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos. Os administradores de gerenciar Microsoft Store aplicativos de linha de negócios privados em um inventário, além de atribuir e reutilizar licenças conforme necessário. Para obter mais informações, [visite Pré-requisitos para usar o Microsoft Store para Empresas](/microsoft-store/prerequisites-microsoft-store-for-business).
+o [Microsoft Store para Empresas](app-deploy-store-business.md) fornece aos tomadores de decisão de ti e administradores em empresas para localizar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos. os administradores de ti podem gerenciar aplicativos Microsoft Store e aplicativos de linha de negócios privados em um único inventário, além de atribuir e reutilizar licenças conforme necessário. para obter mais informações, visite [pré-requisitos para usar o Microsoft Store para Empresas](/microsoft-store/prerequisites-microsoft-store-for-business).
 
-O Microsoft Store para Empresas é aplicável a:
+o Microsoft Store para Empresas é aplicável para:
 
 * Aplicativos públicos ou de linha de negócios
-* Instalação automática de aplicativos necessários por meio da associação de MDM
-* O usuário baixa manualmente aplicativos
+* Instalação automática de aplicativos necessários por meio da Associação de MDM
+* O usuário baixa manualmente os aplicativos
 * Atualização automática
 
 ## <a name="microsoft-store-apps"></a>Aplicativos da Microsoft Store
 
-O Microsoft Store fornece tomadores de decisões de IT e administradores em empresas para encontrar, adquirir, gerenciar e distribuir aplicativos públicos.
+o Microsoft Store fornece aos tomadores de decisão de ti e administradores em empresas para localizar, adquirir, gerenciar e distribuir aplicativos públicos.
 
-Este Microsoft Store é aplicável a:
+esse Microsoft Store é aplicável para:
 
 * Somente aplicativos públicos
-* O usuário baixa manualmente aplicativos
-* Atualização automática se conectado à Internet
+* O usuário baixa manualmente os aplicativos
+* Atualização automática se estiver conectada à Internet
 
-Para obter mais informações, visite [Aplicativos da Holographic Store.](/hololens/holographic-store-apps)
+Para obter mais informações, visite [aplicativos da Holographic Store](/hololens/holographic-store-apps).
 
 ## <a name="install-via-provisioning-packages"></a>Instalar por meio de pacotes de provisionamento
 
-[Os pacotes de provisionamento](app-deploy-provisioning-package.md) permitem que você instale aplicativos personalizados ou de Linha de Negócios, permitindo que profissionais de TI e administradores instalem rapidamente aplicativos em um(s) dispositivo(s) local via USB. Essa instalação pode ser feita sem uma conexão com a Internet e com qualquer tipo de identidade.
+Os [pacotes de provisionamento](app-deploy-provisioning-package.md) permitem que você instale aplicativos personalizados ou de linha de negócios, permitindo que os profissionais de ti e os administradores instalem aplicativos rapidamente em um dispositivo local via USB. Essa instalação pode ser feita sem uma conexão com a Internet e para qualquer tipo de identidade.
 
-A instalação por meio de pacotes de provisionamento é aplicável a:
+A instalação por meio de pacotes de provisionamento é aplicável para:
 
-* Aplicativos de linha de negócios/autodepro desenvolvidos (não públicos)
+* Aplicativos de linha de negócios/desenvolvidos automaticamente (não públicos)
 * Aplicativos públicos (se o instalador offline estiver disponível)
-* Somente carregamento lateral USB
-* Nenhuma atualização automática (requer atualizações manuais por meio do Pacote de Provisionamento)
+* Somente carregamento USB
+* Nenhuma atualização automática (requer atualizações manuais por meio do pacote de provisionamento)
 
-## <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalar aplicativos no HoloLens 2 por meio Instalador de Aplicativo
+## <a name="install-apps-on-hololens-2-via-app-installer"></a>instalar aplicativos no HoloLens 2 por meio do instalador de aplicativo
 
-Usar o [Instalador de Aplicativo](app-deploy-app-installer.md) usuários pode ter uma experiência simples para instalar aplicativos em dispositivos locais ou compartilhar um aplicativo com outra pessoa que não está familiarizado com outros métodos de instalação de aplicativo no HoloLens. Isso pode ser feito sem a necessidade de habilitar o Modo de Desenvolvedor ou usar Portal de Dispositivos. Esse é um método simples de distribuir um aplicativo completamente criado. Independentemente de se você simplesmente deseja demonstração de seu aplicativo para outro usuário com um HoloLens ou se deseja implantar seu aplicativo, esse método funciona facilmente.
+Usar os usuários do [instalador do aplicativo](app-deploy-app-installer.md) pode ter uma experiência que seja simples para instalar aplicativos em dispositivos locais ou compartilhar um aplicativo com outra pessoa que não esteja familiarizado com outros métodos de instalação do aplicativo em HoloLens. Isso pode ser feito sem a necessidade de habilitar o modo de desenvolvedor nem usar o portal do dispositivo. Esse é um método simples de distribuir um aplicativo totalmente compilado. independentemente de se você simplesmente deseja demonstrar seu aplicativo para outro usuário com um HoloLens, ou você gostaria de implantar seu aplicativo, esse método funciona facilmente.
 
-A instalação por Instalador de Aplicativo é aplicável a:
+A instalação por meio do instalador do aplicativo é aplicável para:
 
-* Aplicativos de linha de negócios/autodepro desenvolvidos (não públicos)
-* Somente side-load
-* Não requer o modo de desenvolvedor ou o portal de dispositivos
-* Fácil para o usuário final instalar
+* Aplicativos de linha de negócios/auto desenvolvidos (não públicos)
+* Somente carregamento lateral
+* Não requer o modo de desenvolvedor ou o portal do dispositivo
+* Fácil de instalar o usuário final

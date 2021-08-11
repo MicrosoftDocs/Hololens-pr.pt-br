@@ -14,12 +14,12 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 keywords: calibragem, conforto, visuais, qualidade, ipd, HoloLens, Windows Mixed Reality, headsets VR
-ms.openlocfilehash: 62d83aa5c6032d15b26fbc7938859bdaf74151f4
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 5ba00d873b8a42c3397315a62492b14ab04ded367ccdd05af8be4f68c56627e2
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924138"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664631"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Aprimorar o conforto e a qualidade visual
 
@@ -60,7 +60,7 @@ Vários usuários podem compartilhar um dispositivo HoloLens 2, sem a necessidad
 
 ### <a name="manually-starting-the-calibration-process"></a>Iniciando o processo de calibragem manualmente
 
-1. Use o gesto de iniciar para abrir o menu [**Iniciar**](hololens2-basic-usage.md#start-gesture).
+1. Use o gesto de iniciar para abrir o [**menu Iniciar**](hololens2-basic-usage.md#start-gesture).
 1. Se o aplicativo Configurações não estiver fixado em a **Iniciar**, selecione **Todos os Aplicativos**.
 1. Selecione **Configurações** e escolha **Sistema** > **Calibragem** > **Calibragem Ocular** > **Executar calibragem ocular**.
 
@@ -92,7 +92,7 @@ Com a Posição Ocular Automática, a caixa de diálogo de prompt de Calibragem 
 1.  A caixa de diálogo de Prompt de Calibragem de Rastreamento Ocular fornece ao usuário detalhes sobre por que o rastreamento de olho é necessário.
 2.  Apresenta ao usuário um modo de recusar que seus olhos sejam calibrados.
 
-Se o usuário escolher iniciar a Calibragem de Rastreamento Ocular, o foco deverá retornar ao aplicativo original após a calibragem ser concluída. 
+Se o usuário escolher iniciar a Calibragem de Acompanhamento Ocular, o foco deverá retornar ao aplicativo original após a calibragem ser concluída. 
 
 ### <a name="calibration-data-and-security"></a>Segurança e dados de calibragem
 
@@ -109,8 +109,11 @@ Você também pode desabilitar o prompt de calibragem seguindo estas etapas:
 1. Selecione **Configurações** > **Sistema** > **Calibragem**.
 1. Desligue **Quando uma nova pessoa usar este HoloLens, pedir automaticamente para executar a calibragem ocular**.
 
-> [!IMPORTANT]
-> Essa configuração pode afetar de modo adverso a qualidade e o conforto da renderização de hologramas.  Quando você desligar essa configuração, os recursos que dependem do acompanhamento com os olhos (como a rolagem de texto) não funcionarão mais em aplicativos imersivos.
+   > [!IMPORTANT]
+   > Essa configuração pode afetar de modo adverso a qualidade e o conforto da renderização de hologramas.  Quando você desligar essa configuração, os recursos que dependem do acompanhamento com os olhos (como a rolagem de texto) não funcionarão mais em aplicativos imersivos.
+
+> [!NOTE]
+> A opção Configurações foi removida da versão 20H2 em diante do Windows Holographic, com o início do [suporte à Posição Automática dos Olhos](hololens-release-notes.md#auto-eye-position-support). O aviso de calibragem será exibido automaticamente somente se um usuário não calibrado estiver usando um aplicativo habilitado para acompanhamento de olho.
 
 ### <a name="hololens-2-eye-tracking-technology"></a>Tecnologia de acompanhamento ocular do HoloLens 2
 
@@ -140,9 +143,9 @@ Para usar o menu **Iniciar** para executar o aplicativo Calibragem, siga estas e
 1. Para exibir todos os aplicativos, selecione **+** .
 1. Selecione **Calibragem**.
 
-![Acessando o aplicativo de calibragem no shell](./images/calibration-shell.png)
+   ![Acessando o aplicativo de calibragem no shell](./images/calibration-shell.png)
 
-![O aplicativo de calibragem exibido como um cubo mágico depois de ser iniciado](./images/calibration-livecube-200px.png)
+   ![O aplicativo de calibragem exibido como um cubo mágico depois de ser iniciado](./images/calibration-livecube-200px.png)
 
 Para usar aplicativo Configurações para executar o aplicativo Calibragem, siga estas etapas:
 
@@ -151,7 +154,7 @@ Para usar aplicativo Configurações para executar o aplicativo Calibragem, siga
 1. Selecione **Configurações**.
 1. Selecione **Sistema** > **Utilitários** > **Abrir Calibragem**.
 
-![Iniciando o aplicativo de calibragem no aplicativo de configurações](./images/calibration-settings-500px.jpg)
+   ![Iniciando o aplicativo de calibragem no aplicativo de configurações](./images/calibration-settings-500px.jpg)
 
 ## <a name="immersive-headsets"></a>Headsets imersivos
 

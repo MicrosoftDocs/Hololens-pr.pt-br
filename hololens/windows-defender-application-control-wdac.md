@@ -12,12 +12,12 @@ ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a27a16913873c5245f734dbe084eb2b7ed007c20
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: ab05f1bbe1570d4966932d6f8ac857e5bd2d8a7d3a8f5b93aaba0335eda05b01
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639923"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665549"
 ---
 # <a name="windows-defender-application-control---wdac"></a>WDAC (Controle de Aplicativos do Windows Defender)
 
@@ -54,7 +54,7 @@ aqui está uma lista de aplicativos comumente usados e In-Box para dispositivos 
 |----------------------------|----------------------------------------------------|
 | Visualizador 3D                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
 | Instalador de Aplicativo              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup>1</sup>         |
-| Calendário                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
+| Calendar                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Câmera                     | HoloCamera_cw5n1h2txyewy                           |
 | Cortana                    | Microsoft.549981C3F5F10_8wekyb3d8bbwe              |
 | Dynamics 365 Guides        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
