@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df0cb555c8445ef4d8f8165996a33e0f8c1a38653b45514594f893e3c761f65a
-ms.sourcegitcommit: 9615ed824bdf3f1747ec346da6136704d8eed015
+ms.openlocfilehash: 86a763adb233b45242182d069a56692aeddc2e59
+ms.sourcegitcommit: 5cb3230e02e703584e50358cb0f0b5f33a51b169
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120364278"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121858577"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Versão prévia do Insider para Microsoft HoloLens
 
@@ -29,13 +29,15 @@ Bem-vindo às versões mais recentes do Insider Preview para HoloLens! É simple
 
 ## <a name="windows-insider-release-notes"></a>Windows Notas sobre a versão do Insider
 
-Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders novamente. Novos builds serão disponibilizados para os Canais Dev e Beta para as atualizações mais recentes. Continuaremos a atualizar esta página à medida que adicionarmos mais recursos e atualizações aos builds Windows Insider. Fique animado e pronto para misturar essas atualizações em sua realidade.
+Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders novamente. Novos builds serão disponibilizados para os Canais Dev e Beta para as atualizações mais recentes. Continuaremos a atualizar essa página à medida que adicionarmos mais recursos e atualizações aos builds Windows Insider. Fique animado e pronto para misturar essas atualizações em sua realidade.
 
 | Recurso                 | Descrição                | Usuário ou cenário | Build introduzido |
 |-------------------------|----------------------------|--------------|------------------|
 | [Alterações do CSP para relatórios HoloLens detalhes](#csp-changes-for-reporting-hololens-details) | Novos CSPs para consultar dados | Administradores de IT    | 20348.1403                 |
 | [Política de logon automático controlada pelo CSP](#auto-login-policy-controlled-by-csp) | Usado para fazer logoff em uma conta automaticamente | Administradores de IT | 20348.1405 |
+| [Detecção e notificações de reinicialização de atualização aprimoradas](#improved-update-restart-detection-and-notifications) | Novas UX e as novas regras habilitadas para atualizações. | Administradores de IT | 20348.1405 |
 | [Suporte a arquivos PFX para o Gerenciador de Certificados](#pfx-file-support-for-certificate-manager) | Adicionar certificados PFX por meio Configurações interface do usuário | Usuário Final | 20348.1405 |
+| [Smart Retry para atualizações de aplicativo](#smart-retry-for-app-updates) | Permite que os administradores de IT agendou as tentarem atualizar aplicativos. | Administradores de IT | 20348.1405 |
 | [Exibir relatório de diagnóstico avançado em Configurações no HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Exibir logs de diagnóstico do MDM no dispositivo | Solução de problemas | 20348.1405 |
 | [Notificações de diagnóstico offline](#offline-diagnostics-notifications) | Comentários audiovisuais para coleta de log | Solução de problemas | 20348.1405 |
 | [Use somente aplicativos da loja privada somente para Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Configurar o aplicativo da loja para mostrar apenas aplicativos da organização | Administrador de TI | 20348.1408 |
@@ -49,9 +51,9 @@ Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders nova
 
 Os CSPs a seguir foram atualizados com novas maneiras de relatar informações de seus HoloLens dispositivos.
 
-#### <a name="devdetail-csp---free-storage"></a>CSP de DevDetail – versão Armazenamento
+#### <a name="devdetail-csp---free-storage"></a>CSP de DevDetail – Armazenamento
 
-O CSP de DevDetail agora também relata espaço de armazenamento livre HoloLens dispositivo. Isso deve corresponder aproximadamente ao valor mostrado na Configurações do aplicativo Armazenamento aplicativo. A seguir está o nó específico que contém essas informações.
+O CSP de DevDetail agora também relata espaço de armazenamento livre HoloLens dispositivo. Isso deve corresponder aproximadamente ao valor mostrado na página Configurações app Armazenamento aplicativo. A seguir está o nó específico que contém essas informações.
 
 - ./DevDetail/Ext/Microsoft/FreeStorage (somente operação GET)
 
@@ -60,7 +62,7 @@ O CSP de DevDetail agora também relata espaço de armazenamento livre HoloLens 
 O CSP do DeviceStatus agora também relata SSID e BSSID Wi-Fi rede com a qual HoloLens está ativamente conectado. A seguir estão os nós específicos que contêm essas informações.
 
 - ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/mac address *of Wi-Fi adapter*/SSID
-- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/mac address *of Wi-Fi adapter*/BSSID
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/ mac address *of Wi-Fi adapter*/BSSID
 
 Exemplo de blob syncml (para fornecedores de MDM) para consultar NetworkIdentifiers
 
@@ -95,17 +97,38 @@ O OMA-URI do novo valor de cadeia `./Device/Vendor/MSFT/Policy/Config/MixedReali
 Em um dispositivo em que essa política está configurada, o usuário especificado na política precisará fazer logon pelo menos uma vez. As reinicializações subsequentes do dispositivo após o primeiro logon terão o usuário especificado conectado automaticamente. Há suporte apenas para um único usuário de logon automático. Depois de habilitado, o usuário conectado automaticamente não poderá fazer logoff manualmente. Para fazer logon como um usuário diferente, a política deve primeiro ser desabilitada.
 
 > [!NOTE]
-> - Alguns eventos, como as principais atualizações do sistema operacional, podem exigir que o usuário especificado entre no dispositivo novamente para retomar o comportamento de logon automático. 
+>
+> - Alguns eventos, como as principais atualizações do sistema operacional, podem exigir que o usuário especificado entre no dispositivo novamente para retomar o comportamento de logon automático.
 > - O logon automático só tem suporte para usuários do MSA e do AAD.
+
+### <a name="improved-update-restart-detection-and-notifications"></a>Detecção e notificações de reinicialização de atualização aprimoradas
+
+Entre as horas ativas e as políticas de tempo de instalação, é possível evitar a reinicialização HoloLens dispositivos quando eles estão em uso. No entanto, isso também atrasaria a adoção de atualizações se as reinicializações não ocorrem para concluir a instalação de uma atualização necessária. Agora adicionamos políticas para permitir que a IT imigr prazos e reinicializações necessárias e garantir que a instalação de uma atualização seja concluída em tempo hábil. Os usuários podem ser notificados antes da reinicialização ser iniciada e podem atrasar a reinicialização de acordo com a política de IT.
+
+As seguintes políticas de atualização foram adicionadas:
+
+- [Update/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+- [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
+- [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+- [Update/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+- [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+- [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
+- [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
+- [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
 
 ### <a name="pfx-file-support-for-certificate-manager"></a>Suporte a arquivos PFX para o Gerenciador de Certificados
 
 Introduzido no Windows Insider build 20348.1405. Adicionamos suporte ao Gerenciador de [Certificados](certificate-manager.md) para agora usar certificados .pfx. Quando os usuários navegam **Configurações** Atualizar & Certificados de Segurança e selecionam Instalar um certificado, a interface do usuário agora dá suporte ao arquivo de  >    >  certificado .pfx. 
 Os usuários podem importar o certificado .pfx, com chave privada, para o armazenamento do usuário ou do computador.
 
+### <a name="smart-retry-for-app-updates"></a>Smart Retry para atualizações de aplicativo
+
+Agora habilitada para HoloLens é uma nova política que permite aos administradores de IT definir uma data recorrente ou uma vez para reiniciar aplicativos cuja atualização falhou porque o aplicativo está sendo usado, permitindo que a atualização seja aplicada. Eles podem ser definidos com base em alguns gatilhos diferentes, como uma hora agendada ou uma login. Para saber mais sobre como usar essa política, veja [ApplicationManagement/ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures).
+
 ### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Exibir relatório de diagnóstico avançado em Configurações no HoloLens
 
-Para dispositivos gerenciados ao solucionar problemas de comportamento, confirmar que uma configuração de política esperada é aplicada é uma etapa importante. Anteriormente a esse novo recurso, isso precisava ser feito fora do dispositivo por meio do MDM ou próximo ao dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio de contas do **Configurações** Acesso ao trabalho ou à escola e selecionar Exportar seus logs de gerenciamento e exibidos em um computador  ->    >  próximo. 
+Para dispositivos gerenciados ao solucionar problemas de comportamento, confirmar que uma configuração de política esperada é aplicada é uma etapa importante. Anteriormente a esse novo recurso, isso precisava ser feito fora do dispositivo por meio do MDM ou próximo ao dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio do acesso de contas do **Configurações** Ao trabalho ou à escola e selecionar Exportar os logs de gerenciamento e exibidos em um computador  ->    >  próximo. 
 
 Agora, o Diagnóstico de MDM pode ser exibido no dispositivo usando o navegador Edge. Para exibir mais facilmente o relatório de Diagnóstico do MDM, navegue até a página Acessar trabalho ou escola e selecione **Exibir relatório de diagnóstico avançado**. Isso gerará e abrirá o relatório em uma nova janela do Edge.
 
@@ -119,7 +142,7 @@ Agora adicionados Windows builds do Insider, há duas formas de comentários aud
 ![Sistema para coletar logs.](./images/logcollection1.jpg)
 
 ![Toast quando a coleta de log for concluída.](./images/logcollection2.jpg)
- 
+
 Como os usuários geralmente usam o Diagnóstico Offline como um mecanismo de coleta de logs de fallback para quando não têm acesso a uma exibição, não é possível fazer logoff ou ainda estão no OOBE, também haverá uma indicação de áudio tocada quando os logs são coletados. Esse som será tocado além da notificação do sistema.
 
 Esse novo recurso será habilitado quando o dispositivo for atualizado e não precisará ser habilitado ou gerenciado. Em qualquer caso em que esse novo comentário não possa ser exibido ou ouvido, o Diagnóstico Offline ainda será gerado.
@@ -134,11 +157,11 @@ Saiba mais sobre [ApplicationManagement/RequirePrivateStoreOnly](http://windows/
 
 ### <a name="low-storage-log-collection-improvements"></a>Aprimoramentos de coleta de log de armazenamento baixo
 
-Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional **chamadoStorageDiagnostics.zip** será criado. O limite de armazenamento baixo é determinado automaticamente pelo Windows [de armazenamento.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
+Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional chamadoStorageDiagnostics.zip **será** criado. O limite de armazenamento baixo é determinado automaticamente pelo Windows [de armazenamento.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
 
 ### <a name="moving-platform-mode"></a>Movendo o modo de plataforma
 
-A partir **do insider build 20348.1411,** adicionamos suporte beta para acompanhamento em plataformas móveis de movimento baixo dinâmico no HoloLens 2. Depois de instalar o build e habilenciar o Modo de Plataforma móvel, você poderá usar o HoloLens 2 em ambientes anteriormente inacessíveis, como grandes navios e grandes navios. Atualmente, o recurso tem como alvo habilbilenciar apenas essas plataformas móveis específicas. Embora nada impeça você de tentar usar o recurso em outros ambientes, o recurso se concentra em adicionar suporte a esses ambientes primeiro.
+A partir **do Insider Build 20348.1411,** adicionamos suporte beta para acompanhamento em plataformas móveis de movimento baixo dinâmico no HoloLens 2. Depois de instalar o build e habilenciar o Modo de Plataforma móvel, você poderá usar o HoloLens 2 em ambientes anteriormente inacessíveis, como grandes navios e grandes navios. Atualmente, o recurso tem como alvo habilbilenciar apenas essas plataformas móveis específicas. Embora nada impeça você de tentar usar o recurso em outros ambientes, o recurso se concentra em adicionar suporte a esses ambientes primeiro.
 
 Para saber mais sobre o que tem suporte e como habilitar esse novo recurso, [visite a página da plataforma móvel.](hololens2-moving-platform.md)
 
@@ -154,12 +177,13 @@ Para saber mais sobre o que tem suporte e como habilitar esse novo recurso, [vis
 
 > [!NOTE]
 > Se você não tiver atualizado recentemente, reinicialize seu dispositivo para atualizar o estado e obter o build mais recente.
-> - O comando de voz "Reinicializar dispositivo" funciona bem. 
+>
+> - O comando de voz "Reinicializar dispositivo" funciona bem.
 > - Você também pode escolher o botão reiniciar Configurações/Windows Programa Insider.
 >
 > Temos um bug no back-end que você pode ter encontrado e isso fará com que você volte ao caminho certo.
 
-Em um HoloLens 2, vá para **Configurações** Atualizar &  >  **Segurança**  >  **Windows Programa Insider** e **selecione Começar.** Vincule a conta usada para se registrar como um Windows Insider.
+Em um HoloLens 2, vá para Configurações Atualizar &  >  **Segurança**  >  **Windows Programa Insider** e **selecione Começar.** Vincule a conta usada para se registrar como um Windows Insider.
 
 Windows insider agora está mudando para Canais. O **anel Rápido** se tornará o  Canal **deV,** o anel Lento  se tornará o Canal beta **e** o anel versão prévia de versão se tornará **o** Canal de Versão Prévia. Veja a aparência desse mapeamento:
 
@@ -169,19 +193,19 @@ Para obter mais informações, consulte [Introducing Windows Insider Channels](h
 Em seguida, selecione Desenvolvimento ativo **do Windows**, escolha se você gostaria de receber o Canal **de** Desenvolvimento **ou** Canal beta builds e revise os termos do programa.
 Selecione **Confirmar > Reiniciar Agora** para concluir. Depois que o dispositivo for reinicializado, vá para Atualizar Configurações > & **Segurança > Verificar** se há atualizações para obter o build mais recente.
 
-### <a name="update-error-0x80070490-work-around"></a>Erro de atualização 0x80070490 de trabalho
+### <a name="update-error-0x80070490-work-around"></a>Erro de 0x80070490 de atualização
 
 Se você encontrar um erro de atualização 0x80070490 ao atualizar no canal Dev ou Beta, tente a seguinte explicação de curto prazo. Isso envolve mover seu canal interno, pegar a atualização e, em seguida, mover seu canal insider de volta.
 
 #### <a name="stage-one---release-preview"></a>Estágio um – Versão Prévia
 
-1.  Configurações, Atualizar & Segurança, Windows Programa Insider, selecione Versão Prévia **do Canal**.
+1. Configurações, Atualizar & Segurança, Windows Programa Insider, selecione Versão Prévia **do Canal**.
 
-2.  Configurações, Atualizar & Segurança, Windows Atualização, **Verificar se há atualizações.** Após a atualização, continue no Estágio dois.
+2. Configurações, Atualizar & Segurança, Windows Atualização, **Verificar se há atualizações.** Após a atualização, continue no Estágio dois.
 
 #### <a name="stage-two---dev-channel"></a>Estágio dois – Canal dev
 
-1. Configurações, Atualizar & Segurança, Windows Programa Insider, selecione Canal **deV**.
+1. Configurações, Atualizar & Segurança, Windows Programa Insider, selecione **Canal deV**.
 
 2. Configurações, Atualizar & Segurança, Windows Atualização, **Verificar se há atualizações.**
 
@@ -191,9 +215,9 @@ Para testar com um voo assinado ffu, primeiro você precisa desbloquear seu disp
 
 1. No PC:
     1. Baixe o ffu no seu computador do [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
-    
+
     1. Instale o ARC (Advanced Recovery Companion) do Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
-    
+
 1. Na HoloLens – Desbloqueio de Voo: abra Configurações Atualização &  >  **Segurança**  >  **Windows Programa Insider,** em seguida, inscreva-se e reinicialize o dispositivo.
 
 1. Flash FFU – agora você pode piscar o FFU com assinatura de voo usando ARC.
@@ -224,6 +248,6 @@ Para verificar se o HoloLens está executando um build de produção:
 
 Para não fazer builds do Insider:
 
-1. Em um HoloLens executando um build de produção, vá para Configurações > Atualizar & **Segurança > Windows Programa Insider** e selecione **Parar builds do Insider**.
+1. Em um HoloLens executando um build de produção, vá para Atualizar Configurações > **& segurança > Windows Programa Insider** e selecione Parar **builds do Insider**.
 
 1. Siga as instruções para ressutar seu dispositivo.
