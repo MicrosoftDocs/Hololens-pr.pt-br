@@ -53,7 +53,7 @@
 #### [Configurar](hololens2-cloud-connected-configure.md)
 #### [Implantar](hololens2-cloud-connected-deploy.md)
 #### [Manter](hololens2-cloud-connected-maintain.md)
-#### [Guia de implantação do ambiente conectado à nuvem (clientes externos)](hololens2-deployment-guide.md)
+#### [Clientes externos](hololens2-deployment-guide.md)
 ### Guia de implantação de rede corporativa
 #### [Visão geral](hololens2-corp-connected-overview.md)
 #### [Preparar](hololens2-corp-connected-prepare.md)
