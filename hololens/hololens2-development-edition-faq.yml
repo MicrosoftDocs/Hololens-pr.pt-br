@@ -15,12 +15,12 @@ metadata:
   manager: yannisle
   appliesto:
   - HoloLens 2
-  ms.openlocfilehash: 92a7afe20808afa57282a1f073c326bbf9550d6b345cd27a236c59300f7dcbf9
-  ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+  ms.openlocfilehash: 85631d756285f4111016e39dc946733bb1e12d3c
+  ms.sourcegitcommit: 6b3b455f66a2b4d5b42f4674a5ff940a2a01c294
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "115659752"
+  ms.lasthandoff: 08/20/2021
+  ms.locfileid: "122610243"
 title: Perguntas frequentes sobre o HoloLens 2 Development Edition
 summary: ''
 sections:
@@ -41,7 +41,7 @@ sections:
   - question: >
       como e eu receberei meu $500 em créditos do Azure, a versão de avaliação de Pro do Unity de 3 meses e a avaliação do Plugin Pixyz de 3 meses?
     answer: >
-      Os créditos de desconto ou o acesso de avaliação serão enviados para o email usado na compra dentro de 2 dias úteis de remessa de produto.
+      os créditos de desconto ou o acesso de avaliação serão incluídos no seu HoloLens 2 Development Edition.
   - question: >
       posso "atualizar" meu dispositivo de HoloLens 2 (dispositivo somente) para a edição de HoloLens 2, a fim de obter os créditos de avaliação?
     answer: >
@@ -187,7 +187,7 @@ sections:
   - question: >
       O que posso fazer com meus créditos do Azure?
     answer: >
-      Com seus créditos do Azure, você pode começar a criar com a Microsoft&#39;conjunto cada vez maior de serviços de nuvem. Os créditos do Azure incluídos com o HoloLens 2 Development Edition são para permitir que os clientes sejam rapidamente iniciados a criar e testar aplicativos de realidade misturada no Azure. Para obter detalhes completos sobre como criar no Azure, visite [Recursos do Azure](https://azure.microsoft.com/en-us/resources/)
+      Com seus créditos do Azure, você pode começar a criar com a Microsoft&#39;de serviços de nuvem em constante expansão. Os créditos do Azure incluídos com o HoloLens 2 Development Edition são para permitir que os clientes sejam rapidamente iniciados a criar e testar aplicativos de realidade misturada no Azure. Para obter detalhes completos sobre como criar no Azure, visite [Recursos do Azure](https://azure.microsoft.com/en-us/resources/)
   - question: >
       Onde posso saber mais sobre os serviços de realidade misturada do Azure?
     answer: A Microsoft oferece um conjunto de serviços de realidade misturada para permitir que os desenvolvedores criem e testem soluções de realidade misturada. [Saiba mais](/windows/mixed-reality/develop/mixed-reality-cloud-services)
