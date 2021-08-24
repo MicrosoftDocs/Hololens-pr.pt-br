@@ -14,19 +14,19 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2c0e6e285b2eb86342450e8f05876e0cc3bccfe8
-ms.sourcegitcommit: 5cb3230e02e703584e50358cb0f0b5f33a51b169
+ms.openlocfilehash: 5104a489cebee56938cb1968f253e7e9447e2452
+ms.sourcegitcommit: 6b3b455f66a2b4d5b42f4674a5ff940a2a01c294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "121858644"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122610107"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Modo de plataforma móvel em plataformas móveis de movimento dinâmico baixo
 
 No **Insider build 20348.1411** adicionamos suporte beta para acompanhamento em plataformas móveis de movimento dinâmico baixo no HoloLens 2. Depois de instalar o build e habilitar o Modo de Plataforma Móvel, você poderá usar o HoloLens 2 em ambientes anteriormente inacessíveis, como grandes navios e embarcações marinhas. Atualmente, o recurso tem como alvo habilitar apenas essas plataformas móveis específicas. Embora nada impeça você de tentar usar o recurso em outros ambientes, ele se concentra em adicionar suporte a esses ambientes primeiro.
 
 > [!NOTE]
-> Atualmente, esse recurso só está disponível por meio do Programa Windows [Insider](hololens-insider.md).
+> Atualmente, esse recurso só está disponível por meio do Programa [Windows Insider](hololens-insider.md).
 
 Este artigo cobre:
 
@@ -54,14 +54,17 @@ Embora o Modo de Plataforma Móvel seja desenvolvido para lidar com casos de con
 
 - Os únicos ambientes com suporte para o MPM (Modo de Plataforma Móvel) são grandes navios com movimento de baixa dinâmica. Em outras palavras, muitos ambientes/situações comuns ainda **não** têm suporte devido ao movimento de alta frequência e altos níveis de aceleração e [sacudidas](https://en.wikipedia.org/wiki/Jerk_(physics)). Por exemplo: aviões, trens, carros, bicicletas, ônibus, pequenos barcos, elevadores etc.
 - Os hologramas podem oscilar um pouco quando o MPM está habilitado, especialmente quando estiver em água agitada.
-- Nada impede que os usuários tentem usar o MPM em ambientes sem suporte. No entanto, os usuários poderão experimentar efeitos colaterais indesejáveis se o dispositivo for capaz de manter o acompanhamento no espaço sem suporte. Por exemplo, com o MPM, os usuários podem achar que é possível usar em um elevador ao mudar de andar, sendo que isso era impossível anteriormente. Infelizmente, embora o MPM permita que o dispositivo mantenha o controle, ele não lida com o gerenciamento de mapa no momento. Portanto, os usuários descobrirão que a mudança de pisos em um elevador fará com que o dispositivo confunda os pisos superiores e inferiores afetando negativamente a qualidade do mapa.
+- Nada impede que os usuários tentem usar o MPM em ambientes sem suporte. No entanto, os usuários poderão experimentar efeitos colaterais indesejáveis se o dispositivo for capaz de manter o acompanhamento no espaço sem suporte. Por exemplo, com o MPM, os usuários podem achar que é possível usar em um elevador ao mudar de andar, sendo que isso era impossível anteriormente. Infelizmente, embora o MPM permita que o dispositivo mantenha o controle, ele não lida com o gerenciamento de mapa no momento. Os usuários descobrirão que a mudança de andares em um elevador fará com que o dispositivo confunda os andares superiores e inferiores afetando negativamente a qualidade do mapa.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 O suporte beta para o Modo de Plataforma Móvel tem apenas alguns pré-requisitos:
 
 1. Instale o build 20348.1411 ou mais recente [instalando a imagem do build mais recente do Insiders via ARC](hololens-insider.md#ffu-download-and-flash-directions) ou [registrando e atualizando seu dispositivo](hololens-insider.md#start-receiving-insider-builds).
-   - Observação: atualmente, esse build só está disponível no [Canal do Desenvolvedor do Insider](hololens-insider.md#start-receiving-insider-builds).
+
+   > [!NOTE]
+   > Atualmente, esse build só está disponível no [Canal do Desenvolvedor do Insider](hololens-insider.md#start-receiving-insider-builds).
+
 2. Habilite o [Modo de Desenvolvedor e o Portal de Dispositivos](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 
 ## <a name="enabling-moving-platform-mode"></a>Habilitando o Modo de Plataforma Móvel
@@ -69,16 +72,28 @@ O suporte beta para o Modo de Plataforma Móvel tem apenas alguns pré-requisito
 Para habilitar o modo de Plataforma Móvel, primeiro [habilite o Portal de Dispositivos](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
 
 1. Selecione a sanfona do **Sistema** no menu à esquerda
+
+   ![Primeira imagem](.\images\moving-platform-1w.png)
+
 2. Selecione a página **Modo de Plataforma Móvel** e marque a caixa de seleção **Modo de Plataforma Móvel**
 
-![Primeira imagem](.\images\moving-platform-1.png) ![Segunda imagem](.\images\moving-platform-2.png)
+    ![Segunda imagem](.\images\moving-platform-2z.png)
 
 3. Quando se deparar com um aviso, selecione **OK**
 
-![Terceira imagem](.\images\moving-platform-3.png)
+   ![Terceira imagem](.\images\moving-platform-3w.png)
 
 4. Reinicialize o dispositivo, o que pode ser feito por meio do menu **Power** do Portal de Dispositivos no canto superior direito ou emitindo o comando de voz &quot;Reinicializar o dispositivo&quot; e selecionando &quot;Sim&quot;.
 
-![Quarta imagem](.\images\moving-platform-4.png)
+   ![Quarta imagem](.\images\moving-platform-4z.png)
 
 Se você não conseguir ver a opção para aceitar o Modo de Plataforma Móvel no Portal de Dispositivos, isso provavelmente significa que você ainda não está no build adequado. Confira a seção [Pré-requisitos](#prerequisites).
+
+## <a name="reporting-issues"></a>Problemas de relatórios
+
+Conforme mencionado acima, esse é um recurso beta disponível somente no Modo de Desenvolvedor, o que significa que você pode ter problemas. Se isso acontecer, podemos investigar e aprimorar o produto.
+
+1. Relate o problema por meio do [Hub de Comentários](hololens-feedback.md) na categoria **Precisão, estabilidade e confiabilidade do holograma** e inclua:
+    1. Uma descrição do problema, inclusive o comportamento esperado e o comportamento vivenciado
+    1. Uma [captura de vídeo](holographic-photos-and-videos.md#capture-a-mixed-reality-video) da Realidade Misturada do problema
+2.  Abra um caso de suporte em [https://aka.ms/hlsupport](https://aka.ms/hlsupport) e compartilhe a URL do Hub de Comentários, para que possamos entrar em contato caso tenhamos perguntas de acompanhamento
