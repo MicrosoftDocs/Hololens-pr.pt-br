@@ -7,7 +7,7 @@ author: dansimp
 ms.author: dansimp
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/27/2020
+ms.date: 8/24/2021
 ms.custom:
 - CI 115262
 - CI 111456
@@ -17,535 +17,179 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e7f1efa99cc16b1003bd7063817451013ed2ec2661dbdf02edcd89c7984d0980
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: daab30a8ea5200ca145b6b0234b8bd060b8cec5f
+ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664012"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "122859044"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Configurar o HoloLens como um quiosque
 
-Você pode configurar um HoloLens para funcionar como um dispositivo de finalidade fixa, também chamado de *quiosque*, configurando o dispositivo para ser executado no modo de quiosque. O modo de quiosque limita os aplicativos (ou usuários) que estão disponíveis no dispositivo. O modo de quiosque é um recurso conveniente que você pode usar para dedicar um dispositivo HoloLens a aplicativos de negócios ou usar o dispositivo HoloLens em uma demonstração de aplicativo.
+## <a name="what-is-kiosk-mode"></a>O que é o modo quiosque?
 
-Este artigo fornece informações sobre aspectos da configuração de quiosque que são específicos para HoloLens dispositivos. Para obter informações gerais sobre os diferentes tipos de quiosques baseados em Windows e como configurá-los, consulte Configurar [quiosques](/windows/configuration/kiosk-methods)e sinais digitais em Windows desktop.  
+O modo de quiosque é um recurso em que você pode controlar quais aplicativos são mostrados no menu Iniciar quando um usuário faz a HoloLens. Há dois cenários com suporte:
 
-> [!IMPORTANT]  
-> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário faz a entrada no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não impede que um aplicativo "permitido" seja aberto em outro aplicativo que não é permitido. Para bloquear a abertura de aplicativos ou processos, use [Windows Defender CSP do WDAC (Application Control)](/windows/client-management/mdm/applicationcontrol-csp) para criar políticas apropriadas.
->
-> Saiba mais sobre o serviços Microsoft para dar aos usuários um nível avançado de segurança que HoloLens 2 usa, leia mais sobre separação e isolamento de estado – proteções do [Defender.](security-state-separation-isolation.md#defender-protections) Ou saiba como usar [o WDAC e Windows PowerShell para](/mem/intune/configuration/custom-profile-hololens)permitir ou bloquear aplicativos em HoloLens 2 dispositivos com Microsoft Intune .
+1. **Modo de quiosque de aplicativo único** – nenhum menu iniciar é exibido e um único aplicativo é lançado automaticamente quando o usuário se ins signa. <br> *O exemplo usa*: um dispositivo que executa apenas o aplicativo Dynamics 365 Guides.
+2. **Modo de quiosque** de vários aplicativos – menu Iniciar mostra apenas os aplicativos, que foram especificados na configuração de quiosque quando um usuário se ins signa. Um aplicativo pode ser escolhido para iniciar automaticamente, se desejado. <br> *O exemplo usa*: um dispositivo que mostra apenas o aplicativo store, o Hub de Comentários e Configurações aplicativo no menu Iniciar.
 
-Você pode usar o modo de quiosque em um único aplicativo ou em uma configuração de vários aplicativos e pode usar um dos três processos para configurar e implantar a configuração de quiosque.
+    <img alt="Multi app kiosk example" src=".\images\multi-app-kiosk.jpg" width="411" height="500" />
 
-> [!IMPORTANT]  
-> Excluir a configuração de vários aplicativos remove os perfis de bloqueio do usuário que o recurso de acesso atribuído criou. No entanto, ele não reverte todas as alterações de política. Para reverter essas políticas, você precisa redefinir o dispositivo para as configurações de fábrica.
-
-## <a name="plan-the-kiosk-deployment"></a>Planejar a implantação do quiosque
-
-Ao planejar seu Quiosque, você precisará ser capaz de responder às perguntas a seguir. Aqui estão algumas decisões a considerar ao ler esta página e algumas considerações para essas perguntas.
-1. **Who o quiosque e [quais](hololens-identity.md) tipos de conta eles usarão?** Essa é uma decisão que você provavelmente já fez e não deve ser ajustada para o seu Quiosque, mas afetará como o Quiosque é atribuído posteriormente.
-1. **Você precisa ter quiosques diferentes por usuário/grupo ou um Quiosque não habilitado para alguns?** Se sim, você vai querer criar seu Quiosque via XML. 
-1. **Quantos aplicativos estarão em seu Quiosque?** Se você tiver mais de um aplicativo, precisará de um Quiosque de vários aplicativos. 
-1. **Quais aplicativos estarão em seu Quiosque?** Use nossa lista de AUMIDs abaixo para adicionar In-Box aplicativos adicionais aos seus.
-1. **Como você planeja implantar seu Quiosque?** Se você estiver registrando o dispositivo no MDM, sugerimos usar o MDM para implantar seu Quiosque. Se você não estiver usando o MDM, a implantação com o Pacote de Provisionamento estará disponível.  
-
-### <a name="kiosk-mode-requirements"></a>Requisitos de modo de quiosque
-
-Você pode configurar qualquer dispositivo HoloLens 2 para usar o modo de quiosque.
-
-> [!IMPORTANT]
-> O modo de quiosque estará disponível somente se o dispositivo tiver Windows Holographic for Business. Todos HoloLens 2 dispositivos são Windows Holographic for Business e não há outras edições. Cada HoloLens 2 dispositivos é capaz de executar o modo de Quiosque de modo inoctivo.
->
-> HoloLens (1ª geração) precisam ser atualizados em termos de build do sistema operacional e edição do sistema operacional. Aqui estão mais informações sobre como atualizar um HoloLens (1ª geração) para [Windows Holographic for Business](hololens1-upgrade-enterprise.md) edição. Para atualizar um HoloLens (1ª geração) para usar o modo de quiosque, primeiro você deve certificar-se de que o dispositivo seja executado Windows 10, versão 1803 ou uma versão posterior. Se você tiver usado Windows Ferramenta de Recuperação de Dispositivo do Windows para recuperar seu dispositivo HoloLens (1ª geração) para seu build padrão ou se você tiver instalado as atualizações mais recentes, seu dispositivo estará pronto para configurar.
-
-> [!IMPORTANT]  
-> Para ajudar a proteger dispositivos que são executados no modo de quiosque, considere adicionar políticas de gerenciamento de dispositivos que desligam recursos como conectividade USB. Além disso, verifique as configurações do anel de atualização para garantir que as atualizações automáticas não ocorram durante o horário comercial.
-
-### <a name="decide-between-a-single-app-kiosk-or-a-multi-app-kiosk"></a>Decidir entre um quiosque de aplicativo único ou um quiosque de vários aplicativos
-
-Um quiosque de aplicativo único inicia o aplicativo especificado quando o usuário entra no dispositivo. O menu Iniciar está desabilitado, assim como Cortana. Um HoloLens 2 não responde ao [gesto](hololens2-basic-usage.md#start-gesture) Iniciar. Um HoloLens (1ª geração) não responde ao gesto [de bloom.](hololens1-basic-usage.md) Como apenas um aplicativo pode ser executado, o usuário não pode colocar outros aplicativos.
-
-Um quiosque de vários aplicativos exibe o menu Iniciar quando o usuário se ins conectado ao dispositivo. A configuração de quiosque determina quais aplicativos estão disponíveis no menu Iniciar. Você pode usar um quiosque de vários aplicativos para fornecer uma experiência fácil de entender para os usuários apresentando a eles apenas as coisas que eles precisam usar e removendo as coisas que eles não precisam usar.
+## <a name="description-of-kiosk-mode-experience-when-a-user-signs-in"></a>Descrição da experiência do modo de quiosque quando um usuário entrar
 
 A tabela a seguir lista os recursos nos diferentes modos de quiosque.
 
-| &nbsp; |Menu Iniciar |Menu Ações Rápidas |Câmera e vídeo |Miracast |Cortana |Comandos de voz integrados |
-| --- | --- | --- | --- | --- | --- | --- | 
-|Quiosque de aplicativo único |Desabilitado |Desabilitado |Desabilitado |Desabilitado   |Desabilitado |Habilitado<sup>1</sup> |
-|Quiosques de vários aplicativos |Habilitada |Habilitado<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2</sup> |Disponível<sup>2, 3</sup>  |Habilitado<sup>1</sup> |
+| &nbsp; |Menu Iniciar |Menu Ações Rápidas |Câmera e vídeo |Miracast |Cortana |Comandos de voz internos |
+| --- | --- | --- | --- | --- | --- | --- |
+|Quiosque de aplicativo único |Desabilitado |Desabilitado |Desabilitado |Desabilitado   |Desabilitado |Habilitado* |
+|Quiosques de vários aplicativos |habilitado |Habilitado*  |Disponível*  |Disponível* |Disponível*   |Habilitado*  |
 
-> <sup>1</sup> Comandos de voz relacionados a recursos desabilitados não funcionam.  
-> <sup>2</sup> Para obter mais informações sobre como configurar esses recursos, consulte [Selecionar aplicativos de quiosque](#plan-kiosk-apps).  
-> <sup>3</sup> Mesmo se Cortana estiver desabilitado, os comandos de voz integrados serão habilitados.
+Para obter mais informações sobre como habilitar recursos desabilitados ou como os comandos de voz interagem com recursos desabilitados e Cortana consulte [HoloLens AUMIDs para aplicativos](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids).
 
-A tabela a seguir lista os recursos de suporte do usuário dos diferentes modos de quiosque.
+## <a name="key-general-considerations-before-configuring-kiosk-mode"></a>Principais considerações gerais antes de configurar o modo de quiosque
 
-| &nbsp; |Tipos de usuário com suporte | Entrar automaticamente | Vários níveis de acesso |
+1. Determine o tipo de conta de usuário que entra no Hololens em seu ambiente – o HoloLens dá suporte a contas do AAD (Azure Active Directory), contas microsoft (MSA) e contas locais. Além disso, também há suporte para contas criadas temporariamente chamadas convidados/visitantes (somente para dispositivos de junção do AAD). Saiba mais em [Gerenciar a identidade do usuário e entrar no HoloLens](hololens-identity.md).
+2. Determinar os destinos da experiência de modo de quiosque – seja todos, um único usuário, determinados usuários ou usuários que são membros de grupos do AAD etc.
+3. Para o modo de quiosque de vários aplicativos, determine os aplicativos a mostrar no menu Iniciar. Para cada aplicativo, sua [AUMID (ID](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) do Modelo de Usuário do Aplicativo) será necessária.
+4. Determine se o modo de quiosque será aplicado ao HoloLens por meio de pacotes de provisionamento de runtime ou servidor MDM (mobile Gerenciamento de Dispositivos).
+
+## <a name="security-considerations"></a>Considerações de segurança
+
+O modo de quiosque não deve ser considerado como um método de segurança, mas como um meio de controlar a experiência de início na logon do usuário. Você pode combinar a experiência de modo de quiosque com as opções mencionadas abaixo se houver necessidades específicas relacionadas à segurança:
+
+- Quando Configurações aplicativo estiver configurado para ser mostrado no modo de quiosque e você quiser controlar quais páginas são mostradas no aplicativo Configurações, consulte Visibilidade de Configurações [página](settings-uri-list.md)
+- Quando você quiser controlar o acesso a determinados recursos de hardware, por exemplo, câmera, Bluetooth etc. para determinados aplicativos etc., consulte Políticas no CSP de Política com suporte do [HoloLens 2 – Windows Client Management](/windows/client-management/mdm/policies-in-policy-csp-supported-by-hololens2). Você pode revisar nossas [restrições comuns de dispositivo](hololens-common-device-restrictions.md) para ideias.
+- O modo de quiosque não bloqueia um aplicativo (configurado como parte da experiência de quiosque) de iniciar outros aplicativos. Quando você quiser bloquear completamente a iniciação de determinados aplicativos/processos no HoloLens, consulte Usar o controle de aplicativo Windows Defender em dispositivos HoloLens 2 no [Microsoft Intune – Azure](/mem/intune/configuration/custom-profile-hololens)
+
+## <a name="key-technical-considerations-for-kiosk-mode-for-hololens"></a>Principais considerações técnicas para o modo de quiosque para HoloLens
+
+Aplica-se somente se você estiver planejando usar pacotes de provisionamento de runtime ou criar configurações de quiosque manualmente por conta própria. A configuração do modo de quiosque usa uma estrutura hierárquica baseada em XML:
+
+- Um perfil de acesso atribuído define quais aplicativos são exibidos no menu Iniciar no modo de quiosque. Você pode definir vários perfis na mesma estrutura XML, que pode ser referenciada posteriormente.
+- Uma configuração de acesso atribuído faz referência a um perfil e usuários de destino desse perfil, por exemplo, um usuário específico, um grupo ou visitante do AAD etc. Você pode definir várias configurações na mesma estrutura XML dependendo da complexidade de seus cenários de uso (consulte a seção cenários com suporte abaixo).
+- Para saber mais, consulte [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
+
+## <a name="supported-scenarios-for-kiosk-mode-based-on-identity-type"></a>Cenários com suporte para o modo de quiosque com base no tipo de identidade
+
+> [!NOTE]
+> Use XML somente se não estiver usando a interface do usuário do Intune para criar a configuração de quiosque.
+
+### <a name="for-users-who-sign-in-as-either-local-account-or-msa"></a>Para usuários que se ins sign-in como conta local ou MSA
+
+| **Experiência de quiosque desejada** | **Configuração de quiosque recomendada** | **Maneiras de configurar**  | **Comentários** |
 | --- | --- | --- | --- |
-|Quiosque de aplicativo único | Conta microsoft (MSA) no Azure Active Directory (Azure AD) ou conta local |Sim |Não |
-|Quiosques de vários aplicativos |Conta do AD do Azure |Não |Sim |
-
-Para ver exemplos de como usar esses recursos, consulte a tabela a seguir.
-
-|Use um quiosque de aplicativo único para: |Use um quiosque de vários aplicativos para: |
-| --- | --- |
-|Um dispositivo que executa apenas um Guia do Dynamics 365 para novos funcionários. |Um dispositivo que executa Guias e Assistência Remota para uma variedade de funcionários. |
-|Um dispositivo que executa apenas um aplicativo personalizado. |Um dispositivo que funciona como um quiosque para a maioria dos usuários (executando apenas um aplicativo personalizado), mas funciona como um dispositivo padrão para um grupo específico de usuários. |
-
-### <a name="plan-kiosk-apps"></a>Planejar aplicativos de quiosque
-
-Para obter informações gerais sobre como escolher aplicativos de quiosque, consulte Diretrizes para escolher um aplicativo para acesso atribuído [(modo de quiosque).](/windows/configuration/guidelines-for-assigned-access-app)
-
-Se você usar o Windows Portal de Dispositivos para configurar um quiosque de aplicativo único, selecione o aplicativo durante o processo de instalação.  
-
-Se você usar um sistema MDM (Mobile Gerenciamento de Dispositivos) ou um pacote de provisionamento para configurar o modo de quiosque, use o CSP (Provedor de Serviços de Configuração) [AssignedAccess para especificar aplicativos.](/windows/client-management/mdm/assignedaccess-csp) O CSP usa [AUMIDs (IDs de](/windows/configuration/find-the-application-user-model-id-of-an-installed-app) modelo de usuário de aplicativo) para identificar aplicativos. A tabela a seguir lista os AUMIDs de alguns aplicativos in-box que você pode usar em um quiosque de vários aplicativos.
-
-> [!IMPORTANT]
-> O modo de quiosque determina quais aplicativos estão disponíveis quando um usuário faz a entrada no dispositivo. No entanto, o modo de quiosque não é um método de segurança. Ele não impede que um aplicativo "permitido" seja aberto em outro aplicativo que não é permitido. Como não restringimos esse comportamento, os aplicativos ainda podem ser lançados no Edge, no Explorador de Arquivos e Microsoft Store aplicativos. Se houver aplicativos específicos que você não deseja que sejam lançados de um Quiosque, use o CSP do [WDAC (Controle](/windows/client-management/mdm/applicationcontrol-csp) de Aplicativo Windows Defender) para criar políticas apropriadas. 
-> 
-> Além disso, a Home da Realidade Misturada não pode ser definida como um aplicativo de quiosque.
-
-<a id="aumids"></a>
+| Cada usuário que entra obtém a experiência de quiosque. | [Configurar o perfil de acesso atribuído global a vários aplicativos](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [builds 20H2 e mais novos](hololens-release-notes.md#windows-holographic-version-20h2) |
+| Usuário específico que entra obtém a experiência de quiosque.  | [Configure o perfil de acesso atribuído a um ou vários aplicativos (conforme necessário) especificando o nome de um usuário específico.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account) | [Confira as opções com suporte abaixo.](#steps-in-configuring-kiosk-mode-for-hololens) | Para o modo de quiosque de aplicativo único, somente a conta de usuário local ou a conta MSA tem suporte HoloLens. <br> Para o modo de quiosque de vários aplicativos, somente a conta do MSA ou a conta do AAD tem suporte HoloLens. |
 
-|Nome do Aplicativo |AUMID |
-| --- | --- |
-|Visualizador 3D |Microsoft.Microsoft3DViewer \_ 8wekyb3d8bbwe \! Microsoft.Microsoft3DViewer |
-|Calendar |microsoft.windowscommunicationsapps \_ 8wekyb3d8bbwe \! microsoft.windowslive.calendar |
-|Câmera<sup>1, 2</sup> |HoloCamera \_ cw5n1h2txyewy \! HoloCamera |
-|Cortana<sup>3</sup> |Aplicativo Microsoft.549981C3F5F10 \_ 8wekyb3d8bbwe \! |
-|Se picker de dispositivo HoloLens (1ª geração) |HoloDevicesFlow \_ cw5n1h2txyewy \! HoloDevicesFlow |
-|Se picker de dispositivo HoloLens 2 |Microsoft. Windows. DevicesFlowHost \_ cw5n1h2txyewy \! Microsoft.Windows. DispositivosFlowHost |
-|Dynamics 365 Guides |Microsoft.Dynamics365.Guides \_ 8wekyb3d8bbwe \! MicrosoftGuides |
-|Dynamics 365 Remote Assist |Microsoft.MicrosoftRemoteAssist \_ 8wekyb3d8bbwe \! Microsoft.RemoteAssist |
-|Hub de &nbsp; Comentários |Aplicativo Microsoft.WindowsFeedbackHub \_ 8wekyb3d8bbwe \! |
-|Explorador de Arquivos |c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy!App |
-|Email |microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail |
-|Antigo Microsoft Edge |Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge |
-|Novos Microsoft Edge |Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE |
-|Microsoft Store |Microsoft.WindowsStore_8wekyb3d8bbwe!App |
-|Miracast<sup>4</sup> |&nbsp; |
-|Filmes e TV |Microsoft.ZuneVideo \_ 8wekyb3d8bbwe \! Microsoft.ZuneVideo |
-|OneDrive |microsoft.microsoftskydrive \_ 8wekyb3d8bbwe \! App |
-|Fotos |Microsoft. Windows. Photos \_ 8wekyb3d8bbwe \! App |
-|Antigo Configurações |HolographicSystemSettings_cw5n1h2txyewy! App |
-|Novas Configurações |BAEAEF15-9BAB-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! App |
-|Dicas |Microsoft.HoloLensTips \_ 8wekyb3d8bbwe \! HoloLensTips |
+### <a name="for-users-who-sign-in-as-aad-account"></a>Para usuários que se ins sign-in como conta do AAD
 
-> <sup>1</sup> Para habilitar a captura de fotos ou vídeos, você precisa habilitar o aplicativo Câmera como um aplicativo de quiosque.  
-> <sup>2</sup> Ao habilitar o aplicativo Câmera, esteja ciente das seguintes condições:
-> - O menu Ações Rápidas inclui os botões Foto e Vídeo.  
-> - Você também deve habilitar um aplicativo (como Fotos, Email ou OneDrive) que possa interagir ou recuperar imagens.  
->  
-> <sup>3</sup> Mesmo que você não habilita Cortana como um aplicativo de quiosque, os comandos de voz integrados são habilitados. No entanto, comandos relacionados a recursos desabilitados não têm nenhum efeito.  
-> <sup>4</sup> Você não pode habilitar Miracast diretamente. Para habilitar Miracast como um aplicativo de quiosque, habilita o aplicativo Câmera e o aplicativo Seletor de Dispositivos.
+| **Experiência de quiosque desejada** | **Configuração de quiosque recomendada** | **Maneiras de configurar** | **Comentários** |
+| --- | --- | --- | --- |
+| Cada usuário que entra obtém a experiência de quiosque. | [Configurar o perfil de acesso atribuído global a vários aplicativos](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [builds 20H2 e mais novos](hololens-release-notes.md#windows-holographic-version-20h2) |
+| Cada usuário que entra obtém a experiência de quiosque, exceto determinados usuários. | [Configure o perfil de Acesso Atribuído Global de vários aplicativos excluindo determinados usuários (que devem ser proprietários do dispositivo).](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [builds 20H2 e mais novos](hololens-release-notes.md#windows-holographic-version-20h2) |
+| Cada usuário do AAD obtém uma experiência de quiosque separada específica para esse usuário. | [Configure a configuração de acesso atribuído para cada usuário especificando o nome da conta do AAD.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
+| Os usuários em diferentes grupos do AAD experimentam o modo de quiosque que é apenas para seu grupo. | [Configure a configuração de acesso atribuído para cada grupo do AAD desejado.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • Quando um usuário entra e HoloLens está conectado à Internet, se esse usuário for considerado um membro do grupo do AAD para o qual a configuração de quiosque existe, o usuário poderá experimentar o quiosque para esse grupo do AAD. <br> • Se não houver nenhuma Internet disponível quando o usuário entrar, o usuário terá HoloLens de [modo de falha.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Se a disponibilidade da Internet não for garantida quando o usuário entrar e o quiosque baseado em grupo do AAD precisar ser usado, considere usar [AADGroupMembershipCacheValidityInDayspolicy](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). |
+| Os usuários que precisam usar o HoloLens para fins temporários têm experiência de quiosque. | [Configurar a configuração de acesso atribuído para visitantes](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento em runtime – aplicativo único](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • A conta de usuário temporária é criada automaticamente HoloLens ao entrar e é removida quando o usuário temporário sai. <br> • Considere [habilenciar a política de logon automático do visitante.](#how-to-can-visitor-accounts-automatically-logon-into-kiosk-experience) |
 
-### <a name="plan-kiosk-profiles-for-users-or-groups"></a>Planejar perfis de quiosque para usuários ou grupos
+## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>Etapas na configuração do modo de quiosque para HoloLens
 
-Ao criar o arquivo xml ou usar a interface do usuário do Intune para configurar um Quiosque, você precisará considerar quem será o usuário do Quiosque. Uma configuração de quiosque pode ser limitada a uma conta individual ou a grupos do Azure AD. 
+As configurações de quiosque podem ser criadas e aplicadas das seguintes maneiras:
 
-Normalmente, os quiosques são habilitados para um usuário ou grupo de usuários. No entanto, se você planeja escrever seu próprio quiosque XML, considere o Acesso Atribuído Global, no qual o Quiosque é aplicado no nível do dispositivo, independentemente da Identidade. Se isso lhe apelar, [leia mais sobre Quiosques de Acesso Atribuído Global.](hololens-global-assigned-access-kiosk.md)
+1. Com a interface do usuário do servidor MDM, por exemplo, os modelos de quiosque do Intune ou as configurações de OMA-URI personalizadas, que são aplicadas remotamente ao HoloLens.
+2. Com pacotes de provisionamento de runtime, que são aplicados diretamente ao HoloLens.
 
-#### <a name="if-you-are-creating-an-xml-file"></a>Se você estiver criando um arquivo XML:
--   Você cria vários perfis de Quiosque e atribui cada um a diferentes usuários/grupos. Como um Quiosque para seu Grupo do Azure AD que tem muitos aplicativos e um Visitante que tem vários quiosques de aplicativo com um aplicativo singular.
--   Sua configuração de quiosque será chamada de **ID do Perfil** e terá um GUID.
--   Você atribuirá esse Perfil na seção de configurações especificando o tipo de usuário e usando o mesmo GUID para a **ID defaultProfile**.
-- Um arquivo XML pode ser criado, mas ainda aplicado a um dispositivo por meio do MDM criando um perfil de configuração de dispositivo OMA URI personalizado e aplicando-o a um grupo de dispositivos do HoloLens usando o valor de URI: ./Device/Vendor/MSFT/AssignedAccess/Configuration
+Aqui estão as seguintes maneiras de configurar, selecione a guia correspondente ao processo que você gostaria de usar.
 
-#### <a name="if-you-are-creating-a-kiosk-in-intune"></a>Se você estiver criando um Quiosque no Intune.
--   Cada dispositivo pode receber apenas um único perfil de Quiosque, caso contrário, ele criará um conflito e não receberá nenhuma configuração de Quiosque. 
-    -   Outros tipos de perfis e políticas, como restrições de dispositivo que não estão relacionadas ao perfil de configuração de quiosque, não estão em conflito com o perfil de configuração de quiosque.
--   O Quiosque será habilitado para todos os usuários que fazem parte do tipo de logon de usuário, isso será definido com um usuário ou grupo do Azure AD. 
--   Depois que a configuração de Quiosque for definida e o Tipo de **logon** do usuário (usuários que podem fazer logon no Quiosque) e os Aplicativos forem selecionados, a Configuração do Dispositivo ainda deverá ser atribuída a um grupo. Os grupos atribuídos determinam quais dispositivos recebem a configuração do dispositivo de Quiosque, no entanto, não interage com se o Quiosque está habilitado ou não. 
-    - Para uma discussão completa sobre os efeitos da atribuição de perfis de configuração no Intune, consulte Atribuir perfis de usuário e dispositivo [no Microsoft Intune](/intune/configuration/device-profile-assign).
+1. [Microsoft Intune de quiosque de aplicativo único](hololens-kiosk.md?tabs=uisak#steps-in-configuring-kiosk-mode-for-hololens)
+2. [Microsoft Intune quiosque de vários aplicativos](hololens-kiosk.md?tabs=uimak#steps-in-configuring-kiosk-mode-for-hololens)
+1. [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens)
+1. [Provisionamento em runtime – Vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)
+1. [Provisionamento em runtime – aplicativo único](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens)
 
-### <a name="select-a-deployment-method"></a>Selecionar um método de implantação
+[!INCLUDE[](includes/kiosk-configure-steps.md)]
 
-Você pode selecionar um dos seguintes métodos para implantar configurações de quiosque:
+## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
-- [Microsoft Intune ou outro serviço de MDM (gerenciamento de dispositivo móvel)](#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk)
+### <a name="how-to-can-visitor-accounts-automatically-logon-into-kiosk-experience"></a>Como as contas de visitante podem fazer logon automaticamente na experiência de quiosque?
 
-- [Pacote de provisionamento](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk)
+Em builds [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) e em diante:
 
-- [Windows Portal de Dispositivos](#use-the-windows-device-portal-to-set-up-a-single-app-kiosk)
+- As configurações AAD e Non-ADD são suportadas por contas de visitante que estão habilitadas para o logon automático para modos de quiosque.
 
-   > [!NOTE]  
-   > Como esse método requer que o Modo de Desenvolvedor seja habilitado no dispositivo, recomendamos que você o use somente para demonstrações.
+[!INCLUDE[](includes/kiosk-autologin.md)]
 
-A tabela a seguir lista os recursos e os benefícios de cada um dos métodos de implantação.
+### <a name="is-kiosk-experience-supported-on-hololens-1st-gen"></a>Há suporte para a experiência de quiosque no Hololens (1ª geração)?
 
-| &nbsp; |Implantar usando Windows Portal de Dispositivos |Implantar usando um pacote de provisionamento |Implantar usando o MDM |
-| --------------------------- | ------------- | -------------------- | ---- |
-|Implantar quiosques de aplicativo único   | Sim           | Sim                  | Yes  |
-|Implantar quiosques de vários aplicativos    | Não            | Sim                  | Yes  |
-|Implantar somente em dispositivos locais | Sim           | Sim                  | Não   |
-|Implantar usando o Modo de Desenvolvedor |Obrigatório       | Não é necessária            | Não é necessária   |
-|Implantar usando o Azure Active Directory (Azure AD)  | Não é necessária            | Não é necessária                   | Obrigatório  |
-|Implantar automaticamente      | Não            | Não                   | Sim  |
-|Velocidade de implantação            | Rápido       | Rápido                 | Lento |
-|Implantar em escala | Não recomendado    | Recomendadas        | Recomendadas |
+O modo de quiosque estará disponível somente se o dispositivo tiver Windows Holographic for Business. Todos HoloLens 2 dispositivos são Windows Holographic for Business e não há outras edições. Cada HoloLens 2 é capaz de executar o modo de quiosque de forma inoCável.
 
-## <a name="use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk"></a>Use Microsoft Intune ou outro MDM para configurar um quiosque de aplicativo único ou de vários aplicativos
+HoloLens (1ª geração) precisam ser atualizados em termos de build do sistema operacional e edição do sistema operacional. Aqui estão mais informações sobre como atualizar um HoloLens (1ª geração) para [Windows Holographic for Business](hololens1-upgrade-enterprise.md) edição. Para atualizar um dispositivo HoloLens (1ª geração) para usar o modo de quiosque, primeiro você deve garantir que o dispositivo seja executado Windows 10, versão 1803 ou uma versão posterior. Se você tiver usado a Ferramenta de Recuperação de Dispositivo Windows para recuperar seu dispositivo HoloLens (1ª geração) para seu build padrão ou se você tiver instalado as atualizações mais recentes, seu dispositivo estará pronto para configurar.
 
-Para configurar o modo de quiosque usando Microsoft Intune ou outro sistema MDM, siga estas etapas.
+### <a name="how-to-use-device-portal-to-configure-kiosk-in-non-production-environments"></a>Como usar o portal do dispositivo para configurar o quiosque em ambientes de não produção?
 
-1. [Prepare-se para registrar os dispositivos.](#mdmenroll)
-1. [Crie um perfil de configuração de quiosque](#mdmprofile).
-1. Configure o quiosque.
-   - [De acordo com as configurações de um quiosque de aplicativo único.](#mdmconfigsingle)
-   - [De acordo com as configurações de um quiosque de vários aplicativos.](#mdmconfigmulti)
-1. [Atribua o perfil de configuração de quiosque a um grupo](#mdmassign).
-1. Implante os dispositivos.
-   - [Implante um quiosque de aplicativo único.](#mdmsingledeploy)
-   - [Implante um quiosque de vários aplicativos.](#mdmmultideploy)
+Configurar o [dispositivo HoloLens para usar o Windows Portal de Dispositivos](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal). O Device Portal é um servidor Web no HoloLens ao qual você pode se conectar usando um navegador da Web em seu computador.
 
-### <a name="mdm-step-1-ndash-prepare-to-enroll-the-devices"></a><a id="mdmenroll"></a>MDM, etapa 1 &ndash; Preparar para registrar os dispositivos
+ > [!CAUTION]
+ > Ao configurar o HoloLens para usar o Portal de Dispositivos, você precisa habilitar o Modo de Desenvolvedor no dispositivo. O Modo de Desenvolvedor em um dispositivo que Windows Holographic for Business permite que você carregue aplicativos lado a lado. No entanto, essa configuração cria um risco de que um usuário possa instalar aplicativos que não foram certificados pelo Microsoft Store. Os administradores podem bloquear a capacidade de habilitar o Modo de Desenvolvedor usando a configuração **ApplicationManagement/AllowDeveloper Unlock** no [CSP de Política](/windows/client-management/mdm/policy-configuration-service-provider). [Saiba mais sobre o Modo de Desenvolvedor.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
 
-Você pode configurar seu sistema MDM para registrar HoloLens dispositivos automaticamente quando o usuário entrar pela primeira vez ou fazer com que os usuários inscrevam dispositivos manualmente. Os dispositivos também devem ser ingressados no domínio do Azure AD e atribuídos aos grupos apropriados.
+O Modo de Quiosque pode ser definido por meio da API REST do Portal de Dispositivos fazendo um POST para /api/holographic/kioskmode/settings com um parâmetro de cadeia de caracteres de consulta necessário ("kioskModeEnabled" com um valor "true" ou "false") e um parâmetro opcional ("startupApp" com um valor de um nome de pacote). Tenha em mente que o Portal de Dispositivos destina-se apenas a desenvolvedores e não deve ser habilitado em dispositivos que não são desenvolvedores. A API REST está sujeita a alterações em atualizações/versões futuras.
 
-Para obter mais informações sobre como registrar os dispositivos, consulte Registrar HoloLens no [MDM](hololens-enroll-mdm.md) e métodos de registro do [Intune para Windows dispositivos](/mem/intune/enrollment/windows-enrollment-methods).
+## <a name="troubleshooting"></a>Solução de problemas
 
-### <a name="mdm-step-2-ndash-create-a-kiosk-configuration-profile"></a><a id="mdmprofile"></a>MDM, etapa 2 Criar &ndash; um perfil de configuração de quiosque
+### <a name="issue---no-apps-are-shown-in-start-menu-in-kiosk-mode"></a>Problema – Nenhum aplicativo é mostrado no menu Iniciar no modo de quiosque?
 
-1. Abra o portal [do Azure](https://portal.azure.com/) e entre em sua conta Administrador do Intune conta.
-1. Selecione Microsoft Intune  >  **Configuração do dispositivo –**  >  **Perfis Criar perfil**.
-1. Insira um nome de perfil.
-1. Selecione **Plataforma Windows 10** e posterior  >  **e,** em seguida, selecione Tipo de perfil   > **Restrições de dispositivo**.
-1. Selecione **Configurar**  >  **Quiosque** e, em seguida, selecione um dos seguintes:
-   - Para criar um quiosque de aplicativo único, selecione **Quiosque** modo de  >  **quiosque** de aplicativo único.
-   - Para criar um quiosque de vários aplicativos, selecione **Quiosque** de vários aplicativos do Modo  >  **de Quiosque.**
-1. Para começar a configurar o quiosque, selecione **Adicionar**.
+**Sintomas**
 
-As próximas etapas diferem dependendo do tipo de quiosque que você deseja. Para obter mais informações, selecione uma das seguintes opções:  
+Ao encontrar falhas na aplicação do modo de quiosque, o seguinte comportamento será exibido:
 
-- [Quiosque de aplicativo único](#mdmconfigsingle)
-- [Quiosques de vários aplicativos](#mdmconfigmulti)
+- Antes de Windows Holographic, versão 20H2 – HoloLens mostrará todos os aplicativos no menu Iniciar.
+- Windows Holographic, versão 20H2 – se um dispositivo tiver uma configuração de quiosque, que é uma combinação de acesso atribuído global e acesso atribuído ao membro do grupo do AAD, se a determinação da associação ao grupo do AAD falhar, o usuário verá o menu "nada mostrado no início".
 
-Para obter mais informações sobre como criar um perfil de configuração de quiosque, consulte configurações de Windows 10 e Windows Holographic for Business dispositivo para ser executado como um quiosque dedicado usando o [Intune](/intune/configuration/kiosk-settings).
+    ![Imagem da aparência do modo de quiosque agora quando ele falha.](images/hololens-kiosk-failure-behavior.png )
 
-### <a name="mdm-step-3-single-app-ndash--configure-the-settings-for-a-single-app-kiosk"></a><a id="mdmconfigsingle"></a>MDM, etapa 3 (aplicativo único) Definir as &ndash;  configurações para um quiosque de aplicativo único
+- Começando com [Windows Holographic, versão 21H1,](hololens-release-notes.md#windows-holographic-version-21h1)o modo de quiosque procura Acesso Atribuído Global antes de mostrar um menu iniciar vazio. A experiência de quiosque voltará para uma configuração de quiosque global (se houver) se houver falhas durante o modo de quiosque do grupo do AAD.
 
-Esta seção resume as configurações que um quiosque de aplicativo único requer. Para obter mais detalhes, consulte os seguintes artigos:
+**Etapas para solucionar problemas**
 
-- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [How to Configure Kiosk Mode Using Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Para obter mais informações sobre as configurações disponíveis para quiosques de aplicativo único no Intune, consulte [Quiosques](/intune/configuration/kiosk-settings-holographic#single-full-screen-app-kiosks) de aplicativo de tela inteira única
-- Para outros serviços de MDM, confira a documentação do provedor para obter instruções. Se você tiver que usar uma configuração XML personalizada para configurar um quiosque em seu serviço MDM, crie um arquivo XML que defina a configuração de [quiosque](#ppkioskconfig).
+- Verifique se a AUMID do aplicativo foi especificada corretamente e se ela não contém versões. Consulte a [HoloLens AUMIDs para aplicativos](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) de caixa de entrada para ver exemplos.
+- Verifique se o aplicativo está instalado no dispositivo para esse usuário.
+- Se a configuração de quiosque for baseada em grupos do AAD, verifique se a conectividade com a Internet está presente quando o usuário do AAD entrar. Se desejado, configure [a política MixedReality/AADGroupMembershipCacheValidityInDays](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-aadgroupmembershipcachevalidityindays) para que isso também funcione sem a Internet.
 
-1. Selecione **Tipo de logon** de usuário Conta de usuário local e insira o nome de usuário da conta local (dispositivo) ou da  >  MSA (Conta Microsoft) que pode entrar no quiosque.
-   > [!NOTE]  
-   > Não há suporte para tipos de conta de usuário de **logon automático** no Windows Holographic for Business.
-1. Selecione **Tipo de aplicativo** Store  >  **app** e, em seguida, selecione um aplicativo na lista.
+### <a name="issue---building-a-package-with-kiosk-mode-failed"></a>Problema – Falha ao criar um pacote com o modo de quiosque
 
-A próxima etapa é atribuir [o](#mdmassign) perfil a um grupo.
+**Sintomas**
 
-### <a name="mdm-step-3-multi-app-ndash-configure-the-settings-for-a-multi-app-kiosk"></a><a id="mdmconfigmulti"></a>MDM, etapa 3 (vários aplicativos) Definir as configurações para um &ndash; quiosque de vários aplicativos
+Uma caixa de diálogo como abaixo é mostrada.
 
-Esta seção resume as configurações que um quiosque de vários aplicativos requer. Para informações mais detalhadas, consulte os seguintes artigos:
+<kbd>
+    <img alt="Kiosk failure to build" src="./images/kiosk-steps/kiosk-ppkg-failure.png"/>
+</kbd>
 
-- Para obter informações sobre como configurar um perfil de configuração de quiosque no Intune, consulte [How to Configure Kiosk Mode Using Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Para obter mais informações sobre as configurações disponíveis para quiosques de vários aplicativos no Intune, consulte [Quiosques](/mem/intune/configuration/kiosk-settings-holographic#multi-app-kiosks) de vários aplicativos
-- Para outros serviços de MDM, confira a documentação do provedor para obter instruções. Se você precisar usar uma configuração XML personalizada para configurar um quiosque no serviço MDM, crie um arquivo XML que defina a configuração de [quiosque](#ppkioskconfig). Se você usar um arquivo XML, inclua o [layout Iniciar](#start-layout-for-hololens).  
-- Opcionalmente, você pode usar um layout Inicial personalizado com o Intune ou outros serviços de MDM. Para obter mais informações, consulte [Iniciar arquivo de layout para MDM (Intune e outros)](#start-layout-file-for-mdm-intune-and-others).
+**Etapas para solucionar problemas**
 
-1. Selecione **Destino Windows 10 em dispositivos no modo S**  >  **Não**.  
->[!NOTE]  
-> Não há suporte para o modo S no Windows Holographic for Business.
-
-1. Selecione **Tipo de logon de** usuário ou grupo do  >  **Azure AD** ou Tipo de **logon** de usuário HoloLens visitante e, em seguida, adicione um ou mais grupos de usuários  >  ou contas.  
-
-   Somente os usuários que pertencem aos grupos ou contas que você especificar em Tipo de **logon** de usuário podem usar a experiência de quiosque.
-
-1. Selecione um ou mais aplicativos usando as seguintes opções:
-   - Para adicionar um aplicativo de linha de negócios carregado, selecione **Adicionar aplicativo da loja** e, em seguida, selecione o aplicativo que você deseja.
-   - Para adicionar um aplicativo especificando seu AUMID, selecione Adicionar por **AUMID** e insira o AUMID do aplicativo. [Consulte a lista de AUMIDs disponíveis](#aumids)
-
-A próxima etapa é atribuir [o](#mdmassign) perfil a um grupo.
-
-### <a name="mdm-step-4-ndash-assign-the-kiosk-configuration-profile-to-a-group"></a><a id="mdmassign"></a>MDM, etapa 4 &ndash; Atribuir o perfil de configuração de quiosque a um grupo
-
-Use a **página Atribuições** do perfil de configuração de quiosque para definir onde você deseja que a configuração de quiosque seja implantada. No caso mais simples, você atribui o perfil de configuração de quiosque a um grupo que conterá o HoloLens quando o dispositivo for inscrito no MDM.
-
-### <a name="mdm-step-5-single-app-ndash-deploy-a-single-app-kiosk"></a><a id="mdmsingledeploy"></a>MDM, etapa 5 (aplicativo único) &ndash; Implantar um quiosque de aplicativo único
-
-Ao usar um sistema MDM, você pode registrar o dispositivo no MDM durante o OOBE. Após a finalização do OOBE, é fácil entrar no dispositivo.
-
-Durante o OOBE, siga estas etapas:
-
-1. Entre usando a conta especificada no perfil de configuração de quiosque.
-1. Registre o dispositivo. Certifique-se de que o dispositivo seja adicionado ao grupo ao que o perfil de configuração de quiosque está atribuído.
-1. Aguarde a finalização do OOBE, para que o aplicativo da loja baixe e instale e que as políticas sejam aplicadas. Em seguida, reinicie o dispositivo.
-
-Na próxima vez que você entrar no dispositivo, o aplicativo de quiosque deverá iniciar automaticamente.
-
-Se você não vir sua configuração de quiosque neste ponto, [verifique o status da atribuição](/intune/configuration/device-profile-monitor).
-
-### <a name="mdm-step-5-multi-app-ndash-deploy-a-multi-app-kiosk"></a><a id="mdmmultideploy"></a>MDM, etapa 5 (vários aplicativos) &ndash; Implantar um quiosque de vários aplicativos
-
-Ao usar um sistema MDM, você pode ingressar o dispositivo em seu locatário do Azure AD e registrar o dispositivo no MDM durante o OOBE. Se apropriado, forneça as informações de registro aos usuários para que eles as tenham disponíveis durante o processo OOBE.
-
-> [!NOTE]  
-> Se você atribuiu o perfil de configuração de quiosque a um grupo que contém usuários, certifique-se de que uma dessas contas de usuário seja a primeira conta para entrar no dispositivo.
-
-Durante o OOBE, siga estas etapas:
-
-1. Entre usando a conta que pertence ao grupo **Tipo de logon de** usuário.
-1. Registre o dispositivo.
-1. Aguarde até que todos os aplicativos que fazem parte do perfil de configuração de quiosque baixem e instalem. Além disso, aguarde até que as políticas sejam aplicadas.  
-1. Após a conclusão do OOBE, você pode instalar aplicativos adicionais da Microsoft Store ou do Sideload. [Aplicativos necessários](/mem/intune/apps/apps-deploy#assign-an-app) para o grupo que o dispositivo pertence a instalar automaticamente.
-1. Após a conclusão da instalação, reinicie o dispositivo.
-
-Na próxima vez que você entrar no dispositivo usando uma conta que pertence ao **tipo de logon do usuário**, o aplicativo de quiosque deverá ser iniciado automaticamente.
-
-Se você não vir sua configuração de quiosque neste momento, [Verifique o status da atribuição](/intune/configuration/device-profile-monitor).
-
-## <a name="use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk"></a>Usar um pacote de provisionamento para configurar um quiosque de aplicativo único ou de vários aplicativos
-
-Para configurar o modo de quiosque usando um pacote de provisionamento, siga estas etapas.
-
-1. [Crie um arquivo XML que define a configuração do quiosque.](#ppkioskconfig), incluindo um [layout de início](#start-layout-for-hololens).
-2. [Adicione o arquivo XML a um pacote de provisionamento.](#ppconfigadd)
-3. [Aplique o pacote de provisionamento ao HoloLens.](#ppapply)
-
-### <a name="provisioning-package-step-1-ndash-create-a-kiosk-configuration-xml-file"></a><a id="ppkioskconfig"></a>Pacote de provisionamento, etapa 1 &ndash; criar um arquivo XML de configuração de quiosque
-
-siga [as instruções gerais para criar um arquivo XML de configuração de quiosque para Windows desktop](/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file), exceto para o seguinte:
-
-- não inclua aplicativos de Windows clássicos (Win32). HoloLens não dá suporte a esses aplicativos.
-- Use o [XML de layout inicial do espaço reservado](#start-layout-for-hololens) para HoloLens.
-- Opcional: adicionar acesso de convidado à configuração de quiosque
-
-#### <a name="optional-add-guest-access-to-the-kiosk-configuration"></a><a id="ppkioskguest"></a>Opcional: adicionar acesso de convidado à configuração de quiosque
-
-Na seção [ **configurações** do arquivo XML](/windows/configuration/lock-down-windows-10-to-specific-apps#configs), você pode configurar um grupo especial chamado **visitante** para permitir que os convidados usem o quiosque. Quando o quiosque é configurado para dar suporte ao grupo especial do **visitante** , uma opção "**convidado**" é adicionada à página de entrada. A conta de **convidado** não requer uma senha e todos os dados associados à conta são excluídos quando a conta se desconecta.
-
-Para habilitar a conta de **convidado** , adicione o seguinte trecho ao seu XML de configuração de quiosque:
-
-```xml
-<Configs>
-  <Config>  
-    <SpecialGroup Name="Visitor" />  
-    <DefaultProfile Id="enter a profile ID"/>  
-  </Config>  
-</Configs>  
-```
-#### <a name="enable-visitor-autologon"></a>Habilitar o logon automático do visitante
-
-em builds [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) e em diante:
-- As configurações do AAD e que não são de adição dão suporte a contas de visitantes que são habilitadas para logon automático para modos de quiosque.
-
-##### <a name="non-aad-configuration"></a>Configuração não AAD
-
-1. Crie um pacote de provisionamento que:
-    1. Define as configurações de tempo de execução/AssignedAccess para permitir contas de visitante.
-    1. Opcionalmente, registra o dispositivo no MDM (configurações de tempo de execução/local de trabalho/registros) para que possa ser gerenciado posteriormente.
-    1. Não criar uma conta local
-2. [Aplique o pacote de provisionamento](hololens-provisioning.md).
-
-##### <a name="aad-configuration"></a>Configuração do AAD
-
-Os dispositivos ingressados no AAD configurados para o modo de quiosque podem entrar em uma conta de visitante com um único toque de botão na tela de entrada. Depois de entrar na conta do visitante, o dispositivo não solicitará a entrada novamente até que o visitante seja explicitamente desconectado do menu iniciar ou o dispositivo seja reiniciado.
-
-O logon automático do visitante pode ser gerenciado por meio [de uma política de OMA-URI personalizada](/mem/intune/configuration/custom-settings-windows-10):
-
-- Valor do URI:./Device/Vendor/MSFT/MixedReality/VisitorAutoLogon
-
-
-| Política |Descrição |Configurações 
-| --------------------------- | ------------- | -------------------- |
-| MixedReality/VisitorAutoLogon | Permite que um visitante faça logon automaticamente em um quiosque. | 1 (Sim), 0 (não, padrão.) |
-
-#### <a name="placeholder-start-layout-for-hololens"></a><a id="start-layout-for-hololens"></a>Layout inicial do espaço reservado para HoloLens
-
-Se você usar um [pacote de provisionamento](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk) para configurar um quiosque de vários aplicativos, o procedimento exigirá um layout de início. A personalização do layout inicial não tem suporte no Windows Holographic for Business. Portanto, você precisará usar um layout de início de espaço reservado.
-
-> [!NOTE]  
-> como um quiosque de aplicativo único inicia o aplicativo de quiosque quando um usuário faz logon, ele não usa um menu Iniciar e não precisa ter um layout de início.
-
-> [!NOTE]  
-> Se você usar o [MDM](#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) para configurar um quiosque de vários aplicativos, você pode opcionalmente usar um layout de início. Para obter mais informações, consulte [espaço reservado para o arquivo de layout do MDM (Intune e outros)](#start-layout-file-for-mdm-intune-and-others).
-
-Para o layout de início, adicione a seguinte seção **StartLayout** ao arquivo XML de provisionamento de quiosque:
-
-```xml
-<!-- This section is required for parity with Desktop Assigned Access. It is not currently used on HoloLens -->
-            <StartLayout>
-                <![CDATA[<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
-                      <LayoutOptions StartTileGroupCellWidth="6" />
-                      <DefaultLayoutOverride>
-                        <StartLayoutCollection>
-                          <defaultlayout:StartLayout GroupCellWidth="6">
-                            <start:Group Name="">
-                              <start:Tile Size="2x2" Column="0" Row="0" AppUserModelID="placeholderpackagename_kzf8qxf38zg5c!App" />
-                            </start:Group>
-                          </defaultlayout:StartLayout>
-                        </StartLayoutCollection>
-                      </DefaultLayoutOverride>
-                    </LayoutModificationTemplate>
-                ]]>
-            </StartLayout>
-            <!-- This section is required for parity with Desktop Assigned Access. It is not currently used on HoloLens -->
-```
-
-#### <a name="placeholder-start-layout-file-for-mdm-intune-and-others"></a><a id="start-layout-file-for-mdm-intune-and-others"></a>Arquivo de layout de início do espaço reservado para MDM (Intune e outros)
-
-Salve o exemplo a seguir como um arquivo XML. você pode usar esse arquivo ao configurar o quiosque de vários aplicativos no Microsoft Intune (ou em outro serviço MDM que forneça um perfil de quiosque).
+1. Clique no hiper link mostrado como na caixa de diálogo acima.
+1. Abra ICD.log em um editor de texto e seu conteúdo deverá indicar o erro.
 
 > [!NOTE]
-> Se você precisar usar uma configuração personalizada e uma configuração XML completa para configurar um quiosque em seu serviço MDM, use as [instruções de layout de início para um pacote de provisionamento](#start-layout-for-hololens).
+> Se você tiver feito várias tentativas, verifique os carimbos de data/hora no log. Isso ajudará você a verificar apenas os problemas atuais.
 
-```xml
-<LayoutModificationTemplate
-    xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification"
-    xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout"
-    xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout"
-    Version="1">
-  <RequiredStartGroupsCollection>
-    <RequiredStartGroups>
-      <AppendGroup Name="">
-        <start:Tile Size="2x2" Column="0" Row="0" AppUserModelID="placeholderpackagename_kzf8qxf38zg5c!App" />
-      </AppendGroup>
-    </RequiredStartGroups>
-  </RequiredStartGroupsCollection>
- </LayoutModificationTemplate>
-```
+### <a name="issue--provisioning-package-built-successfully-but-failed-to-apply"></a>Problema – o pacote de provisionamento foi criado com êxito, mas não foi aplicado.
 
-### <a name="prov-package-step-2-ndash-add-the-kiosk-configuration-xml-file-to-a-provisioning-package"></a><a id="ppconfigadd"></a>Prov. pacote, etapa 2 &ndash; Adicionar o arquivo XML de configuração do quiosque a um pacote de provisionamento
+**Sintomas**
 
-1. abra [Windows Designer de configuração](https://www.microsoft.com/store/apps/9nblggh4tx22).
-1. Selecione **provisionamento avançado**, insira um nome para o seu projeto e, em seguida, selecione **Avançar**.
-1. selecione **Windows 10 Holographic** e, em seguida, selecione **avançar**.
-1. Selecione **Concluir**. O espaço de trabalho para seu pacote é aberto.
-1. Selecione **configurações de tempo de execução**  >  **AssignedAccess**  >  **MultiAppAssignedAccessSettings**.
-1. No painel central, selecione **procurar** para localizar e selecionar o arquivo XML de configuração de quiosque que você criou.
+O erro é mostrado ao aplicar o pacote de provisionamento no Hololens
 
-   ![Captura de tela do campo MultiAppAssignedAccessSettings no Designer de Configuração do Windows](./images/multiappassignedaccesssettings.png)
+**Etapas para solucionar problemas**
 
-1. **Opcional**. (Se você quiser aplicar o pacote de provisionamento após a configuração inicial do dispositivo e houver um usuário administrador já disponível no dispositivo de quiosque, ignore esta etapa.) Selecione **configurações de tempo de execução** &gt; **contas** &gt; **usuários** e, em seguida, crie uma conta de usuário. Forneça um nome de usuário e uma senha e, em seguida, selecione administradores do **UserGroup**  >  .  
-  
-     Usando essa conta, você pode exibir o status de provisionamento e os logs.  
-1. **Opcional**. (Se você já tiver uma conta que não seja de administrador no dispositivo de quiosque, ignore esta etapa.) Selecione **configurações de tempo de execução** &gt; **contas** &gt; **usuários** e, em seguida, crie uma conta de usuário local. Verifique se o nome de usuário é o mesmo para a conta que você especificar no XML de configuração. Selecione   >  **usuários padrão** do UserGroup.
-1. Selecione **arquivo**  >  **salvar**.
-1. Selecione **Exportar**  >  **pacote de provisionamento** e selecione **proprietário**  >  **administrador de ti**. Isso define a precedência desse pacote de provisionamento maior do que o provisionamento de pacotes que são aplicados a esse dispositivo de outras fontes.
-1. Selecione **Avançar**.
-1. Na página **segurança do pacote de provisionamento** , selecione uma opção de segurança.
-   > [!IMPORTANT]  
-   > Se você selecionar **Habilitar assinatura de pacote**, também precisará selecionar um certificado válido a ser usado para assinar o pacote. Para fazer isso, selecione **procurar** e selecione o certificado que você deseja usar para assinar o pacote.
-   
-   > [!CAUTION]  
-   > Não selecione **habilitar criptografia de pacote**. em dispositivos HoloLens, essa configuração faz com que o provisionamento falhe.
-1. Selecione **Avançar**.
-1. Especifique o local de saída onde você deseja que o pacote de provisionamento seja usado quando ele for compilado. Por padrão, o Designer de Configuração do Windows usa a pasta do projeto como o local de saída. Se você quiser alterar o local de saída, selecione **procurar**. Quando tiver terminado, selecione **Avançar**.
-1. Selecione **Compilar** para começar a criar o pacote. O pacote de provisionamento não leva muito tempo para compilar. A página de compilação exibe as informações do projeto e a barra de progresso indica o status da compilação.
+1. Navegue até a pasta em que Windows projeto do Designer de Configuração para o pacote de provisionamento de runtime.
+1. Abra ICD.log e verifique se não há erros no log durante a criação do pacote de provisionamento. Alguns erros não são exibidos durante o build, mas ainda são registrados em ICD.log
 
-### <a name="provisioning-package-step-3-ndash-apply-the-provisioning-package-to-hololens"></a><a id="ppapply"></a>Pacote de provisionamento, etapa 3 &ndash; aplicar o pacote de provisionamento para HoloLens
+### <a name="issue--multiple-app-assigned-access-to-aad-group-does-not-work"></a>Problema – o acesso atribuído a vários aplicativos ao grupo do AAD não funciona
 
-o artigo "configurar HoloLens usando um pacote de provisionamento" fornece instruções detalhadas para aplicar o pacote de provisionamento nas seguintes circunstâncias:
+**Sintomas**
 
-- inicialmente, você pode [aplicar um pacote de provisionamento para HoloLens durante a instalação](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup).
+Na entrada do usuário do AAD, o dispositivo não entra no modo de quiosque
 
-- você também pode [aplicar um pacote de provisionamento para HoloLens após a instalação](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
+**Etapas para solucionar problemas**
 
-## <a name="use-the-windows-device-portal-to-set-up-a-single-app-kiosk"></a>usar o Windows Portal do dispositivo para configurar um quiosque de aplicativo único
-
-para configurar o modo de quiosque usando o Windows Portal do dispositivo, siga estas etapas.
-
-1. [configure o dispositivo de HoloLens para usar o Portal do dispositivo Windows](https://developer.microsoft.com/windows/mixed-reality/using_the_windows_device_portal#setting_up_hololens_to_use_windows_device_portal). O Device Portal é um servidor Web no HoloLens ao qual você pode se conectar usando um navegador da Web em seu computador.
-
-    > [!CAUTION]
-    > ao configurar HoloLens para usar o Portal do dispositivo, você precisa habilitar o modo de desenvolvedor no dispositivo. o modo de desenvolvedor em um dispositivo que tem Windows Holographic for Business permite que você carregue aplicativos. No entanto, essa configuração cria um risco de que um usuário possa instalar aplicativos que não foram certificados pelo Microsoft Store. Os administradores podem bloquear a capacidade de habilitar o modo de desenvolvedor usando a configuração de **desbloqueio ApplicationManagement/AllowDeveloper** no [CSP de política](/windows/client-management/mdm/policy-configuration-service-provider). [Saiba mais sobre o modo de desenvolvedor.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
-    
-1. em um computador, conecte-se ao HoloLens usando [Wi-Fi](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#connecting_over_wi-fi) ou [USB](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#connecting_over_usb).
-
-1. Realize um dos seguintes procedimentos:
-   - se você estiver se conectando ao Portal do dispositivo Windows pela primeira vez, [crie um nome de usuário e uma senha](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#creating_a_username_and_password)
-   - Insira o nome de usuário e a senha que você configurou anteriormente.
-
-    > [!TIP]
-    > Se você vir um erro de certificado no navegador, siga [estas etapas para solução de problemas](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#security_certificate).
-
-1. no Portal do dispositivo Windows, selecione **modo de quiosque**.
-
-1. Selecione **habilitar modo de quiosque**, selecione um aplicativo para ser executado quando o dispositivo for iniciado e, em seguida, selecione **salvar**.
-
-    ![Modo de quiosque](images/kiosk.png)
-1. Reinicie HoloLens. Se você ainda tiver a página do portal do dispositivo aberta, poderá selecionar **reiniciar** na parte superior da página.
-
-> [!NOTE]
-> O modo de quiosque pode ser definido por meio da API REST do portal do dispositivo fazendo um POST para/API/Holographic/KioskMode/Settings com um parâmetro de cadeia de caracteres de consulta necessário ("kioskModeEnabled&quot; com um valor de &quot;true&quot; ou &quot;false") e um parâmetro opcional ("startupApp" com um valor de um nome de pacote). Tenha em mente que o portal do dispositivo destina-se apenas a desenvolvedores e não deve ser habilitado em dispositivos sem desenvolvedores. A API REST está sujeita a alterações em atualizações/versões futuras.
-
-## <a name="more-information"></a>Mais informações
-
-### <a name="watch-how-to-configure-a-kiosk-by-using-a-provisioning-package"></a>Assista a como configurar um quiosque usando um pacote de provisionamento.  
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/fa125d0f-77e4-4f64-b03e-d634a4926884?autoplay=false]
-
-### <a name="global-assigned-access--kiosk-mode"></a>Acesso atribuído global – modo de quiosque
-- Gerenciamento de identidades reduzido para quiosque, habilitando o novo método de quiosque que aplica o modo de quiosque no nível do sistema.
-
-esse novo recurso permite que um administrador de ti configure um dispositivo HoloLens 2 para o modo de quiosque de vários aplicativos que é aplicável no nível do sistema, não tem nenhuma afinidade com nenhuma identidade no sistema e se aplica a todos que se conectam ao dispositivo. consulte a documentação [HoloLens quiosque de acesso atribuído global](hololens-global-assigned-access-kiosk.md) para obter mais detalhes sobre esse novo recurso.
-
-### <a name="automatic-launch-of-an-application-in-multiple-app-kiosk-mode"></a>Inicialização automática de um aplicativo no modo de quiosque de vários aplicativos 
-- Experiência focada com a inicialização automática do aplicativo, aumentando ainda mais a interface do usuário e as seleções de aplicativo escolhidas para experiências de modo de quiosque.
-
-Aplica-se somente ao modo de quiosque de vários aplicativos e somente um aplicativo pode ser designado para iniciar automaticamente usando o atributo realçado abaixo na configuração de acesso atribuída. 
-
-O aplicativo é iniciado automaticamente quando o usuário entra. 
-
-```xml
-<AllowedApps>                     
-      <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
-</AllowedApps>
-```
-
-
-### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Alterações de comportamento do modo de quiosque para tratamento de falhas
-Após encontrar falhas na aplicação do modo de quiosque, o seguinte comportamento é exibido:
-
-- antes do Windows Holographic, a versão 20H2-HoloLens mostrará todos os aplicativos no menu Iniciar.
-- Windows Holographic, versão 20H2-se um dispositivo tiver uma configuração de quiosque que é uma combinação de acesso global atribuído e acesso atribuído ao membro do grupo do AAD, se determinar a associação de grupo do AAD falhar, o usuário verá o menu "nada mostrado no início".
-
-![Imagem do que o modo de quiosque agora parece quando ele falha.](images/hololens-kiosk-failure-behavior.png )
-
-
-- a partir do [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1), o modo de quiosque procura acesso Global atribuído antes de mostrar um menu iniciar vazio. A experiência de quiosque fará fallback para uma configuração de quiosque global (se houver) em caso de falhas durante o modo de quiosque do grupo do AAD.
-
-### <a name="cache-azure-ad-group-membership-for-offline-kiosk"></a>Armazenar em cache a associação de grupo do Azure AD para quiosque offline
-
-- Modo de quiosque mais seguro ao eliminar aplicativos disponíveis em falhas do modo de quiosque.
-- Os quiosques offline habilitados serão usados com grupos do Azure AD por até 60 dias.
-
-Essa política controla por quantos dias o cache de associação de grupo do Azure AD pode ser usado para configurações de acesso atribuídas direcionando grupos do Azure AD para o usuário conectado. Quando esse valor de política for definido como valor maior que 0 somente, o cache será usado de outra forma não.  
-
-Nome: AADGroupMembershipCacheValidityInDays URI value:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
-
-Min-0 dias  
-Máx.-60 dias 
-
-Etapas para usar esta política corretamente: 
-1. crie um perfil de configuração de dispositivo para o quiosque de destino de grupos do Azure AD e atribua-o a HoloLens dispositivo (s). 
-1. crie uma configuração de dispositivo personalizada com base em OMA URI que defina esse valor de política para o número de dias desejado (> 0) e atribua-o a HoloLens dispositivo (s). 
-    1. O valor do URI deve ser inserido na caixa de texto OMA-URI como./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
-    1. O valor pode estar entre min/max permitido.
-1. registrar dispositivos HoloLens e verificar se ambas as configurações são aplicadas ao dispositivo. 
-1. Permitir que o usuário 1 do Azure AD entre quando a Internet estiver disponível, quando o usuário entrar e a associação de grupo do Azure AD for confirmada com êxito, o cache será criado. 
-1. agora, o usuário 1 do Azure AD pode colocar HoloLens offline e usá-lo para o modo de quiosque, desde que o valor da política permita um número X de dias. 
-1. As etapas 4 e 5 podem ser repetidas para qualquer outro usuário do Azure AD. o ponto-chave aqui é que qualquer usuário do Azure AD deve entrar no dispositivo usando a Internet, portanto, pelo menos uma vez podemos determinar que eles são membros do grupo do Azure AD ao qual a configuração de quiosque é direcionada. 
- 
-> [!NOTE]
-> Até que a etapa 4 seja executada para um usuário do Azure AD passará por um comportamento de falha mencionado em ambientes "desconectados". 
-
-
-## <a name="xml-kiosk-code-samples-for-hololens"></a>Exemplos de código de quiosque XML para HoloLens
-
-### <a name="multiple-app-kiosk-mode-targeting-an-azure-ad-group"></a>Modo de quiosque de vários aplicativos direcionado a um grupo do Azure AD. 
-esse quiosque implanta um quiosque que, para usuários no grupo do Azure AD, terá um quiosque habilitado que inclui os 3 aplicativos: Configurações, assistência remota e Hub de comentários. Para modificar este exemplo a ser usado imediatamente, certifique-se de alterar o GUID realçado abaixo para corresponder a um grupo do Azure AD por conta própria. 
-
-
-:::code language="xml" source="samples/kiosk-sample-multi-aad-group.xml" highlight="20":::
-
-
-### <a name="multiple-app-kiosk-mode-targeting-azure-ad-account"></a>Vários modos de quiosque de aplicativo direcionados à conta do Azure AD.
-este quiosque implanta um quiosque para um único usuário, ele terá um quiosque habilitado que inclui os 3 aplicativos: Configurações, assistência remota e Hub de comentários. Para modificar este exemplo a ser usado imediatamente, certifique-se de alterar a conta realçada abaixo para corresponder a uma conta do Azure AD. 
-
-
-:::code language="xml" source="samples/kiosk-sample-multi-aad-account.xml" highlight="20":::
-
+- Confirme em XML de configuração de Acesso Atribuído que o GUID do grupo do AAD do qual o usuário associado é membro é usado e não o GUID do usuário do AAD.
+- Confirme que, no portal do Intune, o usuário do AAD é realmente mostrado como membro do grupo do AAD direcionado.
