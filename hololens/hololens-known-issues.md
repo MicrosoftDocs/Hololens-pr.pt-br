@@ -14,12 +14,12 @@ manager: jarrettr
 ms.prod: hololens
 appliesto:
 - HoloLens (1st Gen)
-ms.openlocfilehash: d2a8ae420a0c1d646625fe81b166e2daae07e44652b70f2e4a1b19ccba240cfb
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 5c942bae91c7684f2c2d36aca6ace6306b5fed54
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663952"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189283"
 ---
 # <a name="known-issues-for-hololens-1st-gen"></a>Problemas conhecidos para HoloLens (1ª geração)
 
@@ -38,7 +38,7 @@ Aqui está a lista atual de problemas conhecidos para HoloLens dispositivos. Ver
 ### <a name="unity"></a>Unity
 
 - Confira [Instalar as ferramentas](/windows/mixed-reality/install-the-tools) para a versão mais atualizada do Unity recomendada para HoloLens desenvolvimento.
-- Problemas conhecidos com o Unity HoloLens Technical Preview estão documentados [nos HoloLens fóruns do Unity.](https://forum.unity3d.com/threads/known-issues.394627/)
+- Problemas conhecidos com o Unity HoloLens Technical Preview estão documentados nos [fóruns HoloLens Unity.](https://forum.unity3d.com/threads/known-issues.394627/)
 
 ### <a name="windows-device-portal"></a>Portal de Dispositivos do Windows
 
@@ -50,7 +50,7 @@ Aqui está a lista atual de problemas conhecidos para HoloLens dispositivos. Ver
 
 ### <a name="onedrive-camera-upload"></a>OneDrive upload da câmera
 
-O OneDrive aplicativo para HoloLens não dá suporte ao carregamento automático de câmera para contas de trabalho ou de estudante.
+O OneDrive para HoloLens não dá suporte ao carregamento automático de câmera para contas de trabalho ou de estudante.
 
 Soluções alternativas:
 
@@ -65,7 +65,7 @@ Soluções alternativas:
 > [!NOTE]
 > Última Atualização: 8/8 às 17:11 – o Visual Studio lançou o VS 2019 versão 16.2, que inclui uma correção para esse problema. É recomendável atualizar para essa versão mais recente para evitar esse erro.
 
-Visual Studio o VS 2019 versão 16.2, que inclui uma correção para esse problema. É recomendável atualizar para essa versão mais recente para evitar esse erro.
+Visual Studio lançou o VS 2019 versão 16.2, que inclui uma correção para esse problema. É recomendável atualizar para essa versão mais recente para evitar esse erro.
 
 Causa raiz do problema: os usuários que usaram o Visual Studio 2015 ou as versões anteriores do Visual Studio 2017 para implantar e depurar aplicativos em seu HoloLens e, em seguida, usaram as versões mais recentes do Visual Studio 2017 ou Visual Studio 2019 com o mesmo HoloLens serão afetados. As versões mais Visual Studio implantam uma nova versão de um componente, mas os arquivos da versão mais antiga são deixados no dispositivo, fazendo com que a versão mais recente falhe.  Isso causa a seguinte mensagem de erro: DEP0100: Verifique se o dispositivo de destino tem o modo de desenvolvedor habilitado. Não foi possível obter uma licença de desenvolvedor \<ip\> no devido a erros 80004005.
 
@@ -92,9 +92,9 @@ Nossa equipe está trabalhando em uma correção no momento. Enquanto isso, voc�
     > [!NOTE]
     > Se você não tiver o 10.0.18362.0 instalado, use a versão mais recente que você tem.
 
-1. Clique com o botão direito do mouse no projeto no Gerenciador de Soluções e **selecione Adicionar**  >  **Item Existente**.
+1. Clique com o botão direito do mouse no projeto Gerenciador de Soluções selecione **Adicionar**  >  **Item Existente**.
 
-1. Navegue até C:\Arquivos de Programas (x86)\Windows Kits\10\bin\10.0.18362.0\x86 e altere o filtro para Todos os **Arquivos ( \* . \* )**. .
+1. Navegue até C:\Arquivos de Programas (x86)\Windows Kits\10\bin\10.0.18362.0\x86 e altere o filtro para Todos os **Arquivos ( \* . \* )**.
 
 1. Selecione SirepClient.dll e SshClient.dll e Selecione **Adicionar**.
 
@@ -123,13 +123,13 @@ Nossa equipe está trabalhando em uma correção no momento. Enquanto isso, voc�
 
 1. Abra uma Janela do Prompt de Comando e o cd para a pasta que contém o arquivo .exe compilado (por exemplo, C:\MyProjects\HoloLensDeploymentFix\bin\Debug).
 
-1. Execute o executável e forneça o endereço IP do dispositivo como um argumento de linha de comando. (Se conectado usando USB, você pode usar 127.0.0.1; caso contrário, use o endereço IP Wi-Fi do dispositivo.)  Por exemplo, "HoloLensDeploymentFix 127.0.0.1".
+1. Execute o executável e forneça o endereço IP do dispositivo como um argumento de linha de comando. (Se estiver conectado usando USB, você poderá usar 127.0.0.1; caso contrário, use o endereço IP Wi-Fi do dispositivo.)  Por exemplo, "HoloLensDeploymentFix 127.0.0.1".
 
 1. Depois que a ferramenta sair sem nenhuma mensagem (isso deve levar apenas alguns segundos), agora você poderá implantar e depurar do Visual Studio 2017 ou mais novo.  O uso contínuo da ferramenta não é necessário.
 
 Forneceremos mais atualizações à medida que elas se tornarem disponíveis.
 
-### <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas ao iniciar o Microsoft Store aplicativos no HoloLens
+### <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas ao iniciar Microsoft Store aplicativos no HoloLens
 
 > [!NOTE]
 > Última Atualização: 02/04 às 10h – Problema resolvido.
@@ -142,9 +142,9 @@ Você pode ter problemas ao tentar iniciar o Microsoft Store e aplicativos no Ho
 
 Se a etapa 2 for interrompida antes da conclusão, todos os aplicativos para os quais a estrutura mais nova não foi registrada falharão ao iniciar no menu Iniciar.  Acreditamos que qualquer aplicativo no HoloLens pode ser afetado por esse problema.
 
-Alguns usuários relataram que fechar aplicativos suspensos e iniciar outros aplicativos, como o Hub de Comentários, Visualizador 3D ou Fotos, resolve o problema para eles. No entanto, isso não funciona 100% do tempo.
+Alguns usuários relataram que fechar aplicativos suspensos e iniciar outros aplicativos, como o Hub de Comentários, Visualizador 3D ou Fotos, resolve o problema para eles– no entanto, isso não funciona 100% do tempo.
 
-Causamos raiz que esse problema não causava a atualização em si, mas um bug no sistema operacional que resultou na atualização da estrutura .NET Native está sendo tratada incorretamente. Temos o prazer de anunciar que identificamos uma correção e lançamos uma atualização (versão do sistema operacional 17763.380) que contém a correção.  
+Causamos a raiz que esse problema não causou a atualização em si, mas um bug no sistema operacional que resultou na atualização da estrutura .NET Native está sendo tratada incorretamente. Temos o prazer de anunciar que identificamos uma correção e lançamos uma atualização (versão do sistema operacional 17763.380) que contém a correção.  
 
 Para ver se o dispositivo pode fazer a atualização:
 
@@ -176,35 +176,35 @@ Se o dispositivo ainda não puder carregar aplicativos, você poderá fazer side
 
 1. Depois que você tiver a Windows Portal de Dispositivos, será necessário "carregar lado a lado" os dois arquivos baixados. Para fazer isso, você precisa ir para baixo na barra do lado esquerdo até chegar à seção **Aplicativos** e selecionar **Aplicativos**.
 
-1. Em seguida, você verá uma tela semelhante à mostrada abaixo.  Você deseja ir para a seção que diz **instalar aplicativo** e procurar onde você descompactou esses dois arquivos Appx. Você só pode fazer uma por vez, portanto, depois de selecionar a primeira, clique em "ir" na seção implantar. Em seguida, faça isso para o segundo arquivo APPX.
+1. Em seguida, você verá uma tela semelhante à abaixo.  Você deseja ir para a  seção que diz Instalar Aplicativo e navegar até o local em que desemcortou esses dois arquivos APPX. Você só pode fazer um de cada vez, portanto, depois de selecionar o primeiro, clique em "Ir" na seção Implantar. Em seguida, faça isso para o segundo arquivo APPX.
 
-   ![Windows Portal do dispositivo para instalar Side-Loaded aplicativo](images/20190322-DevicePortal.png)
+   ![Windows Portal de Dispositivos instalar o Side-Loaded aplicativo.](images/20190322-DevicePortal.png)
 
-1. Neste ponto, acreditamos que seus aplicativos devem começar a funcionar novamente e que você também pode chegar à loja.
+1. Neste ponto, acreditamos que seus aplicativos devem começar a funcionar novamente e que você também pode chegar à Store.
 
-1. Em alguns casos, é necessário executar a etapa adicional de iniciar o aplicativo do visualizador 3D antes que os aplicativos afetados sejam iniciados.
+1. Em alguns casos, é necessário executar a etapa adicional de iniciar o aplicativo Visualizador 3D antes que os aplicativos afetados sejam lançados.
 
-Agradecemos sua paciência, já que passamos pelo processo para resolver esse problema, e esperamos continuar trabalhando com nossa comunidade para criar experiências de realidade misturadas bem-sucedidas.
+Agradecemos sua saúde enquanto passamos pelo processo para resolver esse problema e estamos ansiosos para continuar trabalhando com nossa comunidade para criar experiências bem-sucedidas de Realidade Misturada.
 
 ### <a name="device-update"></a>Atualização do dispositivo
 
-- 30 segundos após uma nova atualização, o Shell pode desaparecer uma vez. Execute o gesto de **cair** para continuar a sessão.
+- 30 segundos após uma nova atualização, o shell pode desaparecer uma vez. Execute o gesto **de bloom** para retomar sua sessão.
 
 ### <a name="visual-studio"></a>Visual Studio
 
-- consulte [instalar as ferramentas](/windows/mixed-reality/install-the-tools) para obter a versão mais atualizada do Visual Studio recomendado para o desenvolvimento de HoloLens.
+- Confira [Instalar as ferramentas](/windows/mixed-reality/install-the-tools) para a versão mais atualizada do Visual Studio recomendada para HoloLens desenvolvimento.
 
-- ao implantar um aplicativo do Visual Studio ao seu HoloLens, você poderá ver o erro: **a operação solicitada não pode ser executada em um arquivo com uma seção mapeada pelo usuário aberta. (Exceção de HRESULT: 0x800704C8)**. Se isso acontecer, tente novamente e sua implantação geralmente terá sucesso.
+- Ao implantar um aplicativo do Visual Studio em seu HoloLens, você poderá ver o erro: A operação solicitada não pode ser executada em um arquivo com uma seção mapeada pelo usuário **aberta. (Exceção de HRESULT: 0x800704C8)**. Se isso acontecer, tente novamente e sua implantação geralmente terá êxito.
 
 ### <a name="api"></a>API
 
-- Se o aplicativo definir o [ponto de foco](/windows/mixed-reality/focus-point-in-unity) por trás do usuário ou o normal para a câmera. encaminhar, os hologramas não aparecerão em fotos ou vídeos de captura de realidade misturada. até que esse bug seja corrigido no Windows, se os aplicativos definirem ativamente o [ponto de foco](/windows/mixed-reality/focus-point-in-unity) , eles devem garantir que o plano normal esteja definido na frente da câmera oposta (por exemplo, normal =-camera. forward).
+- Se o aplicativo define o ponto [de](/windows/mixed-reality/focus-point-in-unity) foco por trás do usuário ou o normal para camera.forward, os hologramas não aparecerão em Captura de Realidade Misturada ou vídeos. Até que esse bug seja corrigido no Windows, [](/windows/mixed-reality/focus-point-in-unity) se os aplicativos definirem ativamente o ponto de foco, eles deverão garantir que o plano normal seja definido para frente da câmera oposta (por exemplo, normal = -camera.forward).
 
 ### <a name="xbox-wireless-controller"></a>Controle sem Fio Xbox
 
-- Os S do controlador sem fio do Xbox devem ser atualizados para que possa ser usado com HoloLens. Verifique se você está [atualizado](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) antes de tentar emparelhar seu controlador com um HoloLens.
+- O Controlador Sem Fio do Xbox S deve ser atualizado antes de poder ser usado com HoloLens. Verifique se você [está atualizado antes](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) de tentar emparelhar seu controlador com um HoloLens.
 
-- se você reinicializar o HoloLens enquanto o controlador sem fio do Xbox estiver conectado, o controlador não será reconectado automaticamente ao HoloLens. A luz do botão de guia piscará lentamente até que o controlador seja desligado após 3 minutos. Para reconectar o controlador imediatamente, desligue o controlador mantendo o botão guia até que a luz se apague. Quando você ligar o controlador novamente, ele se reconectará ao HoloLens.
+- Se você reinicializar o HoloLens enquanto o controlador sem fio Xbox estiver conectado, o controlador não se reconectará automaticamente ao HoloLens. A luz do botão Guia piscará lentamente até que o controlador seja desligado após 3 minutos. Para reconectar o controlador imediatamente, desconexe o controlador mantendo o botão Guia pressionado até que a luz seja desligada. Quando você ligar o controlador novamente, ele será reconectado ao HoloLens.
 
-- se o HoloLens entrar em espera enquanto o controlador sem fio do Xbox estiver conectado, qualquer entrada no controlador ativará o HoloLens. Você pode evitar isso desligando o controlador quando terminar de usá-lo.
+- Se o HoloLens entrar em espera enquanto o Controlador Sem Fio do Xbox estiver conectado, qualquer entrada no controlador ativasá o HoloLens. Você pode evitar isso ao desligar o controlador quando terminar de usá-lo.
 

@@ -16,12 +16,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 999e16f117e4f0838c4a0cb6d6bafcbbf72e1d5a
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: 9474774b47858003cc11363a5f325f589b0732ab
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122859027"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188994"
 ---
 # <a name="configure-hololens-by-using-a-provisioning-package"></a>configurar HoloLens usando um pacote de provisionamento
 
@@ -76,7 +76,7 @@ Use a ferramenta Designer de Configuração do Windows para criar um pacote de p
 
 2. selecione **provisionar dispositivos HoloLens**.
 
-   ![Opções iniciais do ICD](images/icd-create-options-1703.png)
+   ![Opções de início do ICD.](images/icd-create-options-1703.png)
 
 3. Nomeie seu projeto e selecione **concluir**.
 
@@ -154,7 +154,7 @@ Quando terminar, selecione **Criar**. Leva apenas alguns segundos. Quando o paco
 
 HoloLens 2 dispositivos no Windows Holographic, versão 2004 ou build [19041.1103](hololens-release-notes.md#windows-holographic-version-2004) ou posterior, podem usar uma unidade USB para aplicar um pacote de provisionamento. Basta copiar o arquivo .ppkg para a raiz da unidade USB. Os pacotes de provisionamento só serão aplicados se eles estão na raiz da unidade USB. Vários pacotes de provisionamento presentes serão aplicados sequencialmente.
 
-HoloLens 2 dispositivos no [Windows Holographic versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) ou posterior têm recursos mais novos para ajudar a simplificar e simplificar esse processo, tornando-o automático. Revise as seções a seguir:
+HoloLens 2 dispositivos [no Windows Holographic versão 20H2](hololens-release-notes.md#windows-holographic-version-20h2) ou posterior têm recursos mais novos para ajudar a simplificar e simplificar esse processo tornando-o automático. Revise as seções a seguir:
 
 - [Provisionamento de início automático de USB](hololens-provisioning.md#auto-launch-provisioning-from-usb)
 - [Confirmar automaticamente os pacotes de provisionamento no OOBE](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe)
@@ -202,7 +202,7 @@ Quando a tela principal de provisionamento aparecer, o OOBE contará 10 segundos
 
 Combinando o início automático do provisionamento de dispositivos USB e a confirmação automática de pacotes de provisionamento, um usuário pode provisionar HoloLens 2 dispositivos automaticamente sem usar a interface do usuário do dispositivo ou até mesmo usar o dispositivo. Você pode continuar a usar a mesma unidade USB e o mesmo pacote de provisionamento para vários dispositivos. Isso é útil para implantar vários dispositivos ao mesmo tempo na mesma área. 
 
-1. [Crie um pacote de provisionamento usando](hololens-provisioning.md) [Windows Designer de Configuração](https://www.microsoft.com/store/productId/9NBLGGH4TX22)do . 
+1. [Crie um pacote de provisionamento usando](hololens-provisioning.md) [o Windows Configuration Designer](https://www.microsoft.com/store/productId/9NBLGGH4TX22). 
 1. Copie o pacote para uma unidade de armazenamento USB.
 1. [Flash do HoloLens 2](hololens-insider.md#ffu-download-and-flash-directions) para [19041.1361 ou build mais novo.](https://aka.ms/hololens2previewdownload) 
 1. Quando [o Advanced Recovery Companion](https://www.microsoft.com/store/productId/9P74Z35SFRS8) concluir a exibição do dispositivo, desconectar o cabo USB-C. 
@@ -215,7 +215,7 @@ Seu dispositivo agora está configurado e exibirá a tela Provisionamento bem-su
 ## <a name="applyremove-a-provisioning-package-to-hololens-after-setup"></a>Aplicar/remover um pacote de provisionamento para HoloLens após a instalação
 
 > [!NOTE]
-> Essas etapas se aplicam a todos os HoloLens 2 dispositivos e dispositivos HoloLens (1ª geração) no Windows Holographic, versão 1809 e superior.
+> Essas etapas se aplicam a todos os HoloLens 2 dispositivos e HoloLens (1ª geração) no Windows Holographic, versão 1809 e superior.
 
 No computador, siga estas etapas:
 1. Crie um pacote de provisionamento conforme descrito em [Criar um pacote de provisionamento para](hololens-provisioning.md)HoloLens usando o assistente HoloLens .
@@ -224,7 +224,7 @@ No computador, siga estas etapas:
 
 Na sua HoloLens, siga estas etapas:
 1. Acesse **Configurações** > **Contas** > **Acessar conta corporativa ou de estudante**. 
-2. Em **Relacionados Configurações**, selecione Adicionar ou remover um pacote de **provisionamento**.
+2. Em **Relacionado Configurações**, selecione Adicionar ou remover um pacote de **provisionamento**.
 3. Na próxima página, selecione **Adicionar um pacote para** iniciar o seletor de arquivos e selecione o pacote de provisionamento. Se a pasta estiver vazia, selecione Este **Dispositivo** e selecione **Documentos**.
 
 Após a aplicação do pacote, ele aparece na lista **de Pacotes instalados.** Para exibir os detalhes do pacote ou remover o pacote do dispositivo, selecione o pacote listado.
@@ -235,7 +235,7 @@ Os pacotes de provisionamento usam CSPs (provedores de serviço de configuraçã
 
 No Designer de Configuração do Windows, quando você cria um pacote de provisionamento para o Windows Holographic, as configurações em **Personalizações disponíveis** se baseiam em [CSPs compatíveis no Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices). A tabela a seguir descreve as configurações que você deseja configurar para o HoloLens.
 
-![Configurações de tempo de execução comuns para o HoloLens](images/icd-settings.png)
+![Configurações comuns de runtime para HoloLens.](images/icd-settings.png)
 
 | Configuração | Descrição |
 | --- | --- |

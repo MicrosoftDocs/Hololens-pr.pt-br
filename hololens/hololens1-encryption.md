@@ -13,12 +13,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 4b07bb87b34ec966472bcbde000106590570fd7e7063ab503724884fa266bb34
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: d5cf7385dd0a53c6b17f79e16364e84ab6ec867d
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662662"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189929"
 ---
 # <a name="hololens-1st-gen-bitlocker-encryption"></a>Criptografia BitLocker do HoloLens (1ª geração)
 
@@ -51,7 +51,7 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 1. [Crie um pacote de provisionamento para HoloLens.](hololens-provisioning.md)
 1. Vá para **configurações de tempo de execução**  >  **políticas**  >  **segurança** e selecione **RequireDeviceEncryption**.
 
-    ![A configuração Exigir criptografia de dispositivo está definida como Sim](images/device-encryption.png)
+    ![Exigir configuração de criptografia de dispositivo configurada como Sim.](images/device-encryption.png)
 
 1. Localize o arquivo de licença XML que foi fornecido quando você comprou o pacote comercial.
 
@@ -78,7 +78,7 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
     Como alternativa, clique em Procurar para alterar o local de saída padrão.
 
-1. Clique em **Avançar**.
+1. Clique em **Próximo**.
 1. Clique em **Compilar** para começar a criar o pacote. As informações do projeto são exibidas na página de compilação, e a barra de progresso indica o status da compilação.
 1. Quando o processo for concluído, clique em **Concluir**.
 
@@ -101,4 +101,4 @@ A criptografia é silenciosa no HoloLens. Para verificar o status de criptografi
 
 - no HoloLens, vá para **Configurações**  >  **sistema**  >  **sobre**. O **BitLocker** será **habilitado** se o dispositivo estiver criptografado. 
 
-    ![Tela sobre mostrando BitLocker habilitado](images/about-encryption.png)
+    ![Tela sobre mostrando BitLocker habilitado.](images/about-encryption.png)

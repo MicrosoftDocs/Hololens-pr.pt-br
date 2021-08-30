@@ -1,5 +1,5 @@
 ---
-title: Como carregar e instalar aplicativos por meio HoloLens 2 Instalador de Aplicativo
+title: Como carregar e instalar aplicativos por meio do HoloLens 2 Instalador de Aplicativo
 description: Saiba como instalar e solucionar problemas de aplicativos com o instalador de aplicativo e o side load e instalar aplicativos por meio da interface do usuário.
 keywords: gerenciamento de aplicativos, aplicativo, hololens, instalador de aplicativo
 author: evmill
@@ -14,17 +14,17 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0b0de9039ce4d0c1eeab968b0f7c2f5eee8cdc34739391b6022b409325955350
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 071dfb3b211928c561fc84754dd7ed4d64886f61
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665260"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188909"
 ---
 # <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalar aplicativos no HoloLens 2 por meio Instalador de Aplicativo
 
 > [!NOTE]
-> Esse recurso foi disponibilizado no Windows [Holographic, versão 20H2 – Atualização de dezembro de 2020.](hololens-release-notes.md) Verifique se o dispositivo [está atualizado](hololens-update-hololens.md) para usar esse recurso.
+> Esse recurso foi disponibilizado no Windows [Holographic, versão 20H2 –](hololens-release-notes.md)Atualização de dezembro de 2020. Verifique se o dispositivo [está atualizado](hololens-update-hololens.md) para usar esse recurso.
 
 Adicionamos **uma nova funcionalidade (Instalador de Aplicativo)** para permitir que você instale aplicativos de forma mais direta em seus HoloLens 2. O recurso estará em **por padrão para dispositivos não planejados.** Para evitar interrupções nas empresas, o instalador de aplicativo não **estará disponível para dispositivos gerenciados** no momento.  
 
@@ -34,7 +34,7 @@ Um dispositivo será considerado "gerenciado" **se qualquer** um dos seguintes f
 - Configurado com o [pacote de provisionamento](hololens-provisioning.md)
 - A [Identidade do](hololens-identity.md) Usuário é o Azure AD
 
-Agora você pode instalar aplicativos sem a necessidade de habilitar o Modo de Desenvolvedor ou usar Portal de Dispositivos.  Baixe (por USB ou por Microsoft Edge) o Pacote Appx para seu dispositivo e navegue até o Pacote Appx no Explorador de Arquivos para ser solicitado a dar início à instalação.  Como alternativa, [inicie uma instalação de uma página da Web](/windows/msix/app-installer/installing-windows10-apps-web). Assim como os aplicativos instalados do Microsoft Store ou sideload usando a funcionalidade de implantação de Aplicativo [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) LOB do [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) MDM, os aplicativos precisam ser assinados digitalmente com a Ferramenta de Assinatura e o certificado usado para assinar deve ser confiável para o dispositivo HoloLens antes que o aplicativo possa ser implantado.
+Agora você pode instalar Aplicativos sem precisar habilitar o Modo de Desenvolvedor ou usar Portal de Dispositivos.  Baixe (por USB ou por Microsoft Edge) o Pacote Appx para seu dispositivo e navegue até o Pacote Appx no Explorador de Arquivos ser solicitado a dar início à instalação.  Como alternativa, [inicie uma instalação de uma página da Web](/windows/msix/app-installer/installing-windows10-apps-web). Assim como os aplicativos instalados do Microsoft Store ou sideload usando a funcionalidade de implantação de Aplicativo [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) LOB do [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) MDM, os aplicativos precisam ser assinados digitalmente com a Ferramenta de Assinatura e o certificado usado para assinar deve ser confiável para o dispositivo HoloLens antes que o aplicativo possa ser implantado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,14 +66,14 @@ Os aplicativos instalados por meio desse método devem ser assinados digitalment
 1. Verifique se o HoloLens 2 está ligado e se você está conectado.
 1. No computador, navegue até seu aplicativo personalizado e copie yourapp.appxbundle para yourdevicename\Internal Armazenamento\Downloads.
     Depois de concluir a cópia do arquivo, você poderá desconectar seu dispositivo e concluir a instalação mais tarde.
-1. Em seu HoloLens 2, abra o **Menu Iniciar,** **selecione** Todos os apps e inicie o **Explorador de Arquivos** aplicativo.
+1. No seu HoloLens 2, abra o **Menu** Iniciar, **selecione** Todos os apps e inicie o **Explorador de Arquivos** aplicativo.
 1. Navegue até a pasta Downloads. Talvez seja necessário que, no painel esquerdo do aplicativo, selecione Este dispositivo **primeiro** e, em seguida, navegue até Downloads.
 1. Selecione o arquivo yourapp.appxbundle.
 1. O Instalador de Aplicativo será lançado. Selecione o **botão** Instalar para instalar seu aplicativo.
 
 O aplicativo instalado será automaticamente lançado após a conclusão da instalação.
 
-![Instalando exemplos do MRTK por meio Instalador de Aplicativo](images/hololens-app-installer-picture.jpg)
+![Instalando exemplos do MRTK por meio Instalador de Aplicativo.](images/hololens-app-installer-picture.jpg)
 
 ### <a name="troubleshooting-installs"></a>Solução de problemas de instalação
 

@@ -13,12 +13,12 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 6e98918c89da7e74157d8fc003e6997f1e44b8538e9006a835707e85c5fd3307
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 98ec5795974fa242225bb1048ead41892d8296e4
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662693"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189946"
 ---
 # <a name="use-the-hololens-1st-gen-clicker"></a>Usar o clicker do HoloLens (1ª geração)
 
@@ -30,7 +30,7 @@ Use-o no lugar de gestos de mão para selecionar, rolar, mover e reorganizar apl
 
 O HoloLens (1ª geração) tem um loop de dedo para facilitar a espera e uma luz indicadora.
 
-![O HoloLens Clicker](images/use-hololens-clicker-1.png)
+![O HoloLens Clicker.](images/use-hololens-clicker-1.png)
 
 ### <a name="clicker-indicator-lights"></a>Luzes indicadoras do clicker
 
@@ -44,7 +44,7 @@ Veja o que significam as luzes no clique.
 
 ### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>Emparelhar o clique com seu HoloLens (1ª geração)
 
-1. Use o gesto de bloom para ir para **Iniciar** e, em seguida, **selecione Configurações**  >  **Dispositivos** e verifique se Bluetooth está.
+1. Use o gesto de bloom para ir para **Iniciar** e, em seguida, **selecione Configurações**  >  **Dispositivos** e verifique se Bluetooth está em.
 1. No clique, pressione e mantenha pressionado o botão de emparelhamento até que a luz de status pisque em branco.
 1. Na tela de emparelhamento, selecione **Par de**  >  **Cliques**.
 
@@ -58,7 +58,7 @@ Quando a bateria do clicker estiver baixa, o indicador de bateria piscará em am
 
 Para colocar o clique, deslize o loop sobre o anel ou o dedo médio para que a porta Micro USB seja voltada para o pulso. Desinforma o polegar no recuo.
 
-![Como manter o Clicker](images/use-hololens-clicker-2.png)
+![Como manter o Clicker.](images/use-hololens-clicker-2.png)
 
 ### <a name="clicker-gestures"></a>Gestos de clique
 
@@ -92,15 +92,15 @@ Aqui estão algumas coisas para tentar se o HoloLens clique não está responden
 
 Use a dica de uma caneta para pressionar e manter o botão de emparelhamento pressionado. Ao mesmo tempo, clique e segure o clique por 15 segundos. Se o clique já tiver sido emparelhado com seu HoloLens, ele permanecerá emparelhado depois que ele for reiniciado.
 
-Se o clique não ativar ou reiniciar, tente cobrar usando o botão de HoloLens. Se a bateria estiver muito baixa, poderá levar alguns minutos para que a luz indicadora branca seja a energia.
+Se o clique não ativar ou reiniciar, tente acarregá-lo usando a HoloLens. Se a bateria estiver muito baixa, poderá levar alguns minutos para que a luz indicadora branca seja a energia.
 
 ### <a name="re-pair-the-clicker"></a>Emparelhar o clicker de novo
 
-Selecione **Configurações**  >  **Dispositivos** e selecione o clique. Selecione **Remover**, aguarde alguns segundos e, em seguida, emparelhe o clique novamente.
+Selecione **Configurações**  >  **Dispositivos e** selecione o clique. Selecione **Remover**, aguarde alguns segundos e, em seguida, emparelhe o clique novamente.
 
 ### <a name="recover-the-clicker"></a>Recuperar o clicker
 
-Se reiniciar e emparelhar novamente o clique não corrigir o problema, a ferramenta Windows Recuperação de Dispositivo poderá ajudá-lo a recuperá-lo. O processo de recuperação pode levar algum tempo e instalará a versão mais recente do software do clicker. Para usar a ferramenta, você precisará de um computador executando Windows 10 ou posterior que tenha pelo menos 4 GB de espaço de armazenamento livre.
+Se reiniciar e emparelhar novamente o clique não corrigir o problema, a ferramenta Windows recuperação de dispositivo poderá ajudá-lo a recuperá-lo. O processo de recuperação pode levar algum tempo e instalará a versão mais recente do software do clicker. Para usar a ferramenta, você precisará de um computador executando Windows 10 ou posterior que tenha pelo menos 4 GB de espaço de armazenamento livre.
 
 Para recuperar o clicker:
 

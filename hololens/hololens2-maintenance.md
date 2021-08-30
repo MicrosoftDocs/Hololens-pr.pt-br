@@ -1,6 +1,6 @@
 ---
-title: Perguntas frequentes sobre limpeza do HoloLens 2
-description: Obtenha respostas atualizadas para todas as suas perguntas frequentes para limpar e manter seu dispositivo de HoloLens 2.
+title: Perguntas frequentes sobre a limpeza do HoloLens 2
+description: obtenha respostas atualizadas para todas as suas perguntas frequentes para limpar e manter seu dispositivo HoloLens 2.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 4/14/2020
@@ -15,19 +15,19 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a110f711d402432e727be6f342156e7dee733157
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 8b14ebd9639495d2b174678518b4562a2b3c85fa
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "108308095"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189436"
 ---
-# <a name="hololens-2-cleaning-faq"></a>Perguntas frequentes sobre limpeza do HoloLens 2
+# <a name="hololens-2-cleaning-faq"></a>Perguntas frequentes sobre a limpeza do HoloLens 2
 
 > [!IMPORTANT]  
 > A Microsoft não pode fazer uma determinação da eficácia de qualquer produto disinfectant em combate Pathogens, como COVID-19. Consulte as diretrizes da autoridade de saúde pública local sobre como ficar protegido contra possíveis infecções.  
 
-## <a name="hololens-2-use-and-care"></a>Uso e cuidado do HoloLens 2
+## <a name="hololens-2-use-and-care"></a>uso e cuidado com o HoloLens 2
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
@@ -37,7 +37,7 @@ ms.locfileid: "108308095"
 
 1. Remova qualquer poeira usando um pano de Microfiber seco e sem fiapos para apagar com cuidado a superfície do dispositivo.
 
-   ![Limpar enquanto mantém do painel de naveg](images/hl2-cleaning.png)
+   ![Limpe enquanto mantém o naveg pad.](images/hl2-cleaning.png)
 
 2. Levemente moisten o pano usando a "70%" de medicina médica e, em seguida, use o tecido moistened para apagar com cuidado a superfície do dispositivo.
 
@@ -48,7 +48,7 @@ ms.locfileid: "108308095"
 1. Use a água e leve, Antibiotic SOAP para moisten um pano e, em seguida, use o pano de moistened para apagar o painel de naveg.
 1. Deixe o naveg pad seco completamente.
 
-## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>Posso usar qualquer limpador de lentes para limpar o visor do HoloLens?
+## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>posso usar qualquer limpador de lentes para limpar o HoloLens visor?
 
 Não. Limpezas de lentes podem ser abrasivedas para as revestidos no visor. Para limpar o visor, siga estas etapas:  
 
@@ -58,10 +58,10 @@ Não. Limpezas de lentes podem ser abrasivedas para as revestidos no visor. Para
 
 ## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Posso usar os apagamentos desinfectados para limpar o dispositivo?
 
-Sim, se os apagamentos não contiverem Bleach. Você pode usar apagamentos que não são bleachs para [apagar com cuidado as superfícies do HoloLens](#hololens-2-use-and-care).  
+Sim, se os apagamentos não contiverem Bleach. você pode usar apagamentos que não são bleachs para [apagar com cuidado as superfícies de HoloLens](#hololens-2-use-and-care).  
 
 > [!CAUTION]  
-> Evite usar apagamentos que contenham Bleach para limpar as superfícies do HoloLens. É aceitável usar apagamentos Bleach em situações críticas, quando nada mais estiver disponível. No entanto, Bleach pode danificar o visor do HoloLens ou outras superfícies.
+> evite usar apagamentos desinfectados que contenham bleach para limpar as superfícies de HoloLens. É aceitável usar apagamentos Bleach em situações críticas, quando nada mais estiver disponível. no entanto, bleach pode danificar o visor HoloLens ou outras superfícies.
 
 ## <a name="can-i-use-alcohol-to-clean-the-device"></a>Posso usar álcool para limpar o dispositivo?
 
@@ -71,7 +71,7 @@ Sim. Você pode usar uma solução de "70%" isopropyl de álcool e água para li
 
 Sim. O naveg pad é anexado magneticamente ao dispositivo. Para desanexá-lo, puxe-o levemente para longe do headband. Para substituí-lo, encaixe-o novamente no lugar.
 
-![Remover ou substituir o naveg pad](images/hololens2-remove-browpad.png)
+![Remova ou substitua o naveg pad.](images/hololens2-remove-browpad.png)
 
 ## <a name="how-can-i-clean-the-brow-pad"></a>Como posso limpar o naveg pad?
 

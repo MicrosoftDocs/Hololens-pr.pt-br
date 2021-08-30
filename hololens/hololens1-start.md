@@ -11,12 +11,12 @@ manager: jarrettr
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 9e09ba1a022428b098392464e5cd2abf84911bd6a86d8e699036b8fc4f91470a
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 06b7142be471d0db3f45812654288a33425abd60
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661871"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189861"
 ---
 # <a name="set-up-your-hololens-1st-gen"></a>Configure seu HoloLens (1ª geração)
 
@@ -30,7 +30,7 @@ Antes de começar, verifique se você tem:
 
 **Uma Wi-Fi de dados.** Você precisará conectar seu HoloLens a uma rede Wi-Fi para defini-la. Na primeira vez que se conectar, você precisará de uma rede aberta ou protegida por senha que não exija navegar até um site ou usar certificados para se conectar. [Saiba mais sobre os sites que o HoloLens usa](hololens-offline.md).
 
-**Um conta Microsoft ou uma conta de trabalho**. Você também precisará usar uma conta conta Microsoft (ou uma conta de trabalho, se sua organização possui o dispositivo) para entrar HoloLens. Se não tiver uma conta Microsoft, acesse [account.microsoft.com](https://account.microsoft.com) e configure uma gratuitamente.
+**Um conta Microsoft ou uma conta de trabalho**. Você também precisará usar uma conta de conta Microsoft (ou uma conta de trabalho, se sua organização tiver o dispositivo) para entrar no HoloLens. Se não tiver uma conta Microsoft, acesse [account.microsoft.com](https://account.microsoft.com) e configure uma gratuitamente.
 
 **Um espaço seguro e bem iluminado em que não haja risco de tropeçar**. [Informações sobre integridade e segurança](https://go.microsoft.com/fwlink/p/?LinkId=746661).
 
@@ -38,12 +38,12 @@ Antes de começar, verifique se você tem:
 
 > [!NOTE]
 >  
-> - Na primeira vez que você usar seu HoloLens, [Cortana](hololens-cortana.md) já está em e pronto para orientá-lo (embora ela não possa responder às suas perguntas até depois de configurar seu dispositivo). Você pode desativar Cortana a qualquer momento Cortana configurações do aplicativo.
+> - Na primeira vez que você usar seu HoloLens, [Cortana](hololens-cortana.md) já estará pronta para orientá-lo (embora ela não possa responder às suas perguntas até depois de configurar seu dispositivo). Você pode desativar Cortana a qualquer momento Cortana configurações do aplicativo.
 > - Para alternar para a versão em chinês ou japonês do HoloLens, você precisará baixar o build para o idioma em um pc e, em seguida, instalá-lo em seu HoloLens. Para obter mais informações, [consulte Instalar versões localizadas do HoloLens (1ª geração)](hololens1-install-localized.md).
 
 ## <a name="start-your-hololens-and-set-up-windows"></a>Inicie o Hololens e Windows
 
-Na primeira vez que você iniciar o HoloLens, sua primeira tarefa será configurar o Windows Holographic em seu dispositivo.
+Na primeira vez que você iniciar o HoloLens, sua primeira tarefa será configurar Windows Holographic em seu dispositivo.
 
 1. Conexão para a Internet (HoloLens orienta você a selecionar Wi-Fi rede).
 
@@ -57,17 +57,17 @@ Na primeira vez que você iniciar o HoloLens, sua primeira tarefa será configur
         1. Insira as informações de sua conta Microsoft.
         1. Digite sua senha. Se a conta da Microsoft exigir uma [verificação em duas etapas (2FA)](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/), conclua o processo de verificação.
 
-1. O dispositivo define seu fuso horário com base nas informações obtidas da rede Wi-Fi dados.
+1. O dispositivo define seu fuso horário com base nas informações que ele obtém da Wi-Fi rede.
 
 ## <a name="calibration"></a>Calibragem
 
 Depois Cortana se apresentar, a próxima etapa de instalação será calibragem. Para a melhor HoloLens, você deve concluir o processo de calibragem durante a instalação.
 
-HoloLens (1ª geração) usa a distância entre seus colegas (IPD ou [distância interpupária)](https://en.wikipedia.org/wiki/Interpupillary_distance)para tornar os hologramas claros e fáceis de interagir. Se o IPD não estiver correto, os hologramas poderão parecer instável ou a uma distância incorreta.
+HoloLens (1ª geração) usa a distância entre seus alunos (IPD ou [distância interpupária)](https://en.wikipedia.org/wiki/Interpupillary_distance)para tornar os hologramas claros e fáceis de interagir. Se o IPD não estiver correto, os hologramas poderão parecer instável ou a uma distância incorreta.
 
 Durante a calibragem, HoloLens solicita que você alinhe o dedo com uma série de seis destinos por olho. HoloLens usa esse processo para definir o IPD correto para seus olhos. Se a calibragem precisar ser atualizada ou ajustada para um novo usuário, o novo usuário poderá executar o aplicativo De calibragem fora da instalação.
 
-![Tela de alinhamento de IPD com o dedo na segunda etapa](./images/ipd-finger-alignment-300px.jpg)
+![Tela de alinhamento de dedo IPD na segunda etapa.](./images/ipd-finger-alignment-300px.jpg)
 
 *Tela de alinhamento de IPD com o dedo na segunda etapa*
 

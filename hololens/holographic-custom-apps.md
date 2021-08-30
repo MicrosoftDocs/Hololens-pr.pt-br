@@ -16,12 +16,12 @@ ms.custom:
 - CSSTroubleshooting
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 7d564fd00567033060428d5b47b34ddf827dea2fdeeb8955c73bc22e4ba87164
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b6769c36f821ee3619ac9b62efd637ac561192bb
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664937"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188841"
 ---
 # <a name="manage-custom-apps-for-hololens-1st-gen"></a>Gerenciar aplicativos personalizados para HoloLens (1ª geração)
 
@@ -50,12 +50,12 @@ Você pode instalar seus próprios aplicativos HoloLens usando o Portal de Dispo
 1. Em **Pacote do Aplicativo,** navegue até o arquivo .appx associado ao seu aplicativo.
 
    > [!IMPORTANT]
-   > Certifique-se de fazer referência a qualquer dependência associada e arquivos de certificado.
+   > Certifique-se de fazer referência a qualquer dependência e arquivos de certificado associados.
 
 1. Selecione **Ir**.
 
    > [!div class="mx-imgBorder"]
-   > ![Instalar o formulário de aplicativo Windows Portal de Dispositivos no Microsoft HoloLens](images/deviceportal-appmanager.jpg)
+   > ![Instale o formulário do aplicativo Windows Portal de Dispositivos no Microsoft HoloLens.](images/deviceportal-appmanager.jpg)
 
 ### <a name="deploying-from-microsoft-visual-studio-2015"></a>Implantação do Microsoft Visual Studio 2015
 
@@ -73,7 +73,7 @@ Você pode instalar seus próprios aplicativos HoloLens usando o Portal de Dispo
 
 1. Para implantar o aplicativo do computador de desenvolvimento em seu HoloLens, selecione **Computador Remoto**. Se você já tiver um build existente no HoloLens, selecione **Sim** para instalar essa versão mais recente.  
 
-   ![Implantação de computador remoto para aplicativos Microsoft HoloLens em Visual Studio](images/vs2015-remotedeployment.jpg)  
+   ![Implantação de computador remoto para aplicativos Microsoft HoloLens em Visual Studio.](images/vs2015-remotedeployment.jpg)  
    
 1. O aplicativo será instalado e iniciará automaticamente em seu HoloLens.
 
