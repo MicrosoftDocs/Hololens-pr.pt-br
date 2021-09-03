@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f717a0323d1b141423fab52e49a38407ba617d02
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.openlocfilehash: e856ac74e959743e8d05ea6acf583700a6450373
+ms.sourcegitcommit: 37611ac0a4efaf69816a734e16b763c810655f1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189334"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123411337"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Configurar o HoloLens como um quiosque
 
@@ -78,16 +78,6 @@ Consulte [links de referência](hololens-kiosk-reference.md#kiosk-xml-code-sampl
 
 ### <a name="for-users-who-sign-in-as-either-local-account-or-msa"></a>Para usuários que se conectam como uma conta local ou MSA
 
-### <a name="prov-package-step-2-ndash-add-the-kiosk-configuration-xml-file-to-a-provisioning-package"></a><a id="ppconfigadd"></a>Prov. pacote, etapa 2 &ndash; Adicionar o arquivo XML de configuração do quiosque a um pacote de provisionamento
-
-1. abra [Windows Designer de configuração](https://www.microsoft.com/store/apps/9nblggh4tx22).
-1. Selecione **provisionamento avançado**, insira um nome para o seu projeto e, em seguida, selecione **Avançar**.
-1. selecione **Windows 10 Holographic** e, em seguida, selecione **avançar**.
-1. Selecione **Concluir**. O espaço de trabalho para seu pacote é aberto.
-1. Selecione **configurações de tempo de execução**  >  **AssignedAccess**  >  **MultiAppAssignedAccessSettings**.
-1. No painel central, selecione **procurar** para localizar e selecionar o arquivo XML de configuração de quiosque que você criou.
-
-   ![captura de tela do campo MultiAppAssignedAccessSettings no Designer de configuração Windows.](./images/multiappassignedaccesssettings.png)
 | **Experiência de quiosque desejada** | **Configuração de quiosque recomendada** | **Maneiras de configurar**  | **Comentários** |
 | --- | --- | --- | --- |
 | Todos os usuários que entraram têm experiência de quiosque. | [Configurar o perfil de acesso atribuído global de vários aplicativos](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [20H2 e compilações mais recentes](hololens-release-notes.md#windows-holographic-version-20h2) |
@@ -100,7 +90,7 @@ Consulte [links de referência](hololens-kiosk-reference.md#kiosk-xml-code-sampl
 | Todos os usuários que entraram têm experiência de quiosque. | [Configurar o perfil de acesso atribuído global de vários aplicativos](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [20H2 e compilações mais recentes](hololens-release-notes.md#windows-holographic-version-20h2) |
 | Cada usuário que entra no obtém experiência de quiosque, exceto determinados usuários. | [Configurar o perfil de acesso global atribuído a vários aplicativos, excluindo determinados usuários (que devem ser proprietários do dispositivo)](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners). | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | O acesso atribuído global requer [20H2 e compilações mais recentes](hololens-release-notes.md#windows-holographic-version-20h2) |
 | Cada usuário do AAD Obtém uma experiência de quiosque separada específica para esse usuário. | [Configure a configuração de acesso atribuída para cada usuário especificando seu nome de conta do AAD.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
-| Os usuários em diferentes grupos do AAD experimentam o modo de quiosque que é apenas para seu grupo. | [Configure a configuração de acesso atribuída para cada grupo do AAD desejado.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • quando um usuário entrar e HoloLens estiver conectado à Internet, se esse usuário for considerado membro do grupo do aad para o qual a configuração de quiosque existe, o usuário terá que experimentar o quiosque para esse grupo do aad. <br> • [se não houver internet disponível quando o usuário entrar, o usuário terá HoloLens comportamento do modo de falha.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Se a disponibilidade da Internet não for garantida quando o usuário entrar e o quiosque baseado em grupo do AAD precisar ser usado, [Considere o uso de AADGroupMembershipCacheValidityInDayspolicy](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). |
+| Os usuários em diferentes grupos do AAD experimentam o modo de quiosque que é apenas para seu grupo. | [Configure a configuração de acesso atribuída para cada grupo do AAD desejado.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-vários aplicativos](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • quando um usuário entrar e HoloLens estiver conectado à Internet, se esse usuário for considerado membro do grupo do aad para o qual a configuração de quiosque existe, o usuário terá que experimentar o quiosque para esse grupo do aad. <br> • [se não houver internet disponível quando o usuário entrar, o usuário terá HoloLens comportamento do modo de falha.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Se a disponibilidade da Internet não for garantida quando o usuário entrar e o quiosque baseado em grupo do AAD precisar ser usado, [Considere o uso de AADGroupMembershipCacheValidityInDayspolicy](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). <br> • Para uma experiência ideal com grupos do AAD durante a entrada, a recomendação é usar o [AADGroupMembershipCacheValidityInDayspolicy](/hololens/hololens-release-notes#cache-azure-ad-group-membership-for-offline-kiosk) |
 | os usuários que precisam usar HoloLens para fins temporários obtêm experiência de quiosque. | [Configurar a configuração de acesso atribuída para visitantes](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [Microsoft Intune modelo personalizado](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Provisionamento de tempo de execução-aplicativo único](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • a conta de usuário temporário é criada automaticamente pelo HoloLens na entrada e é removida quando o usuário temporário sai. <br> • Considere habilitar [a política de logon automático do visitante](#how-can-visitor-accounts-automatically-logon-to-kiosk-experience). |
 
 ## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>Etapas na configuração do modo de quiosque para HoloLens
