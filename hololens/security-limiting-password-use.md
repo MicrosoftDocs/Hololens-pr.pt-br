@@ -14,12 +14,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 074fffc8350dd6deb876a19320397674bcac3e46
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 24cd9b81d0d99afaa0479787b846b423310c6739
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639294"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190456"
 ---
 # <a name="limiting-password-use"></a>Limitando o uso de senha
 
@@ -52,7 +52,7 @@ Quando uma credencial do Windows Hello é criada, ela estabelece uma relação d
 
 Para obter mais informações, confira os seguintes infográficos:
 
-  ![Entrada do Windows Hello](images/security-hello-sign-in.png)
+  ![Entrada do Windows Hello.](images/security-hello-sign-in.png)
   
 No gráfico apresentado acima, observe que nonce significa “número uma vez” e é um número gerado aleatória ou semialeatoriamente. Depois que a credencial biométrica ou do PIN do Windows Hello é configurada, ela nunca deixa o dispositivo no qual está provisionada. Mesmo que o PIN do Windows Hello do usuário seja roubado, como por meio de um ataque de phishing, ele [é inútil sem o dispositivo físico do usuário](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password).
 
@@ -68,7 +68,7 @@ Depois que uma identidade for adicionada por meio de um aplicativo, com o consen
 
 Para obter mais informações sobre como implementar as APIs do Gerenciador de Contas da Web, acesse [Como implementar as APIs do Gerenciador de Contas da Web](/windows/uwp/security/web-account-manager).
 
-  ![API de Segurança](images/security-api-img.png)
+  ![API de Segurança.](images/security-api-img.png)
   
 Para os pacotes de aplicativos com requisitos de autenticação especializados, a estrutura do WAM (Gerenciador de Contas da Web) é extensível para provedores de identidade personalizados. Os usuários podem baixar o provedor de identidade personalizado, empacotado como um aplicativo UWP (Plataforma Universal do Windows) por meio da Microsoft Store, para habilitar o SSO em outros aplicativos integrados a esse provedor de identidade.
 
@@ -91,7 +91,7 @@ As duas opções oferecem a autenticação de dois fatores em uma só etapa, exi
 
 ### <a name="strong-authentication-with-fido2-security-key"></a>Autenticação forte com a chave de segurança FIDO2
 
-  ![Imagem do FIDO](images/security-fido2-whfb-smaller.png)
+  ![Imagem do FIDO.](images/security-fido2-whfb-smaller.png)
 
 1. O usuário conecta a chave de segurança FIDO2 ao HoloLens 2
 1. O Windows detecta a chave de segurança FIDO2

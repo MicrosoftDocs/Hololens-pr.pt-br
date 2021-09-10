@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 13f7000f608e6375efce201f1edd1627900ecdda2f86ddca8a174ac0b8e43ceb
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 77c061c53806e7410d73ecf3aaa20d74c217ea33
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658945"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190405"
 ---
 # <a name="get-your-hololens-2-ready-to-use"></a>Preparar seu HoloLens 2 para usar
 
@@ -42,7 +42,7 @@ Coloque o HoloLens 2 em sua cabeça. Se você usa óculos, não é necessário t
 
 Se necessário, estenda a headband girando a roda de ajuste e então solte a faixa sobre a cabeça.
 
-![Ajustes do HoloLens 2](images/hololens2-fit.png)
+![Ajustes do HoloLens 2.](images/hololens2-fit.png)
 
 ### <a name="attach-and-detach-the-overhead-strap"></a>Apertar e afrouxar a faixa sobre a cabeça
 
@@ -52,7 +52,7 @@ Para retirar a frente da faixa sobre a cabeça, afrouxe a faixa e deslize-a pelo
 
 Para retirar a parte de trás da faixa sobre a cabeça, pressione o botão abaixo de cada guia de conexão e puxe-a com cuidado. Para colocá-la novamente, empurre as guias de conexão de volta aos slots até encaixá-las.
 
-![anexar ou remover a faixa da cabeça do HoloLens 2](images/hololens2-headstrap.png)
+![anexar ou remover a faixa da cabeça do HoloLens 2.](images/hololens2-headstrap.png)
 
 ## <a name="turn-on-the-hololens-2"></a>Ligar o HoloLens 2
 

@@ -13,12 +13,12 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 454d79e8b719feb73d5a39280794dcd76f134952
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 92040019b093c5ef63d74f095dcb3809112ae7a0
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639226"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190422"
 ---
 # <a name="page-settings-visibility"></a>Visibilidade das Configurações da Página
 
@@ -74,7 +74,7 @@ Para obter detalhes completos sobre como criar e aplicar um pacote de provisiona
 
 Independentemente do método escolhido, o seu dispositivo agora deve receber as alterações, e os usuários verão o seguinte aplicativo de Configurações.
 
-![Captura de tela do horário ativo sendo modificado no aplicativo Configurações](images/hololens-page-visibility-list.jpg)
+![Captura de tela do horário ativo sendo modificado no aplicativo Configurações.](images/hololens-page-visibility-list.jpg)
 
 Para configurar as páginas do aplicativo Configurações para mostrar ou ocultar a sua própria seleção de páginas, confira as Configurações URIs disponíveis no HoloLens.
 

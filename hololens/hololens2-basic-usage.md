@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 452a032896d7b1959e706313d83f023588507c0882962cf689508edc63921bdb
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: cf3770dd55498dbe98abf88d002247646e4db9be
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661975"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189878"
 ---
 # <a name="getting-around-hololens-2"></a>Conheça o HoloLens 2
 
@@ -47,7 +47,7 @@ Assim que você aprender essas interações básicas, será muito fácil usar o 
 
 O HoloLens tem sensores que podem enxergar a alguns metros ao seu redor. Ao usar suas mãos, você precisará mantê-las dentro desse quadro ou o HoloLens não as verá. Entretanto, o quadro se move à medida que você se move.  
 
-![Imagem que mostra o quadro de rastreamento das mãos do HoloLens](./images/hololens-2-gesture-frame.png)
+![Imagem que mostra o quadro de rastreamento das mãos do HoloLens.](./images/hololens-2-gesture-frame.png)
 
 ## <a name="touch-holograms-near-you"></a>Tocar hologramas perto de você
 
@@ -74,7 +74,7 @@ Para escolher algo usando o **hand ray**, siga estas etapas:
 1. Aponte o dedo indicador para cima em direção ao teto.
 1. Para executar o **gesto de fechar e abrir dedos indicador e polegar**, aperte o polegar e o dedo indicador e solte-os rapidamente.
 
-   ![Animação de gesto de fechar e abrir dedos indicador e polegar](./images/hololens-air-tap.gif)
+   ![Animação de gesto de fechar e abrir dedos indicador e polegar.](./images/hololens-air-tap.gif)
 
 ### <a name="grab-using-air-tap-and-hold"></a>Pegar usando o gesto de fechar e abrir dedos indicador e polegar e manter
 
@@ -101,7 +101,7 @@ O gesto de iniciar abre o **menu Iniciar**.  Para executar o gesto de Iniciar, l
 > - Se você tiver problemas para ler o texto menor no menu Iniciar, dê um passo em sua direção depois que ele for aberto.
 > - Se a sua mão estiver ligeiramente fora da lateral do quadro, você ainda poderá exibir o menu Iniciar tocando no pulso interno, mesmo que não veja o ícone.
 
-![Imagem que mostra o ícone Iniciar e o gesto de Iniciar](./images/hololens-2-start-gesture.png)
+![Imagem que mostra o ícone Iniciar e o gesto de Iniciar.](./images/hololens-2-start-gesture.png)
 
 Para **fechar** o menu Iniciar, faça o gesto de Iniciar quando o menu Iniciar estiver aberto.  Você também pode olhar para o menu Iniciar e dizer "Close" (Fechar).
 
@@ -115,7 +115,7 @@ Para **fechar** o menu Iniciar, faça o gesto de Iniciar quando o menu Iniciar e
 
 Você também pode executar o gesto de Iniciar com apenas uma mão. Para fazer isso, estenda sua mão com a palma voltada para você e olhe para o **ícone Iniciar** no seu pulso interno. **Enquanto mantém o olhar no ícone**, aperte seu polegar e o dedo indicador juntos.
 
-![Imagem que mostra o ícone Iniciar e o gesto de iniciar de uma mão](./images/hololens-2-start-alternative.png)
+![Imagem que mostra o ícone Iniciar e o gesto de iniciar de uma mão.](./images/hololens-2-start-alternative.png)
 
 ## <a name="start-menu-mixed-reality-home-and-apps"></a>Menu Iniciar, página inicial da realidade misturada e aplicativos
 

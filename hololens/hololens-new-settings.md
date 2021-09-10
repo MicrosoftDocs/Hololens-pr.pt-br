@@ -9,12 +9,12 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: 4187ae99a25fc6dd3f407410da27568d4b2b6865934b0c615680f295ec7977be
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: bcde697b5887573826a3a1a61e8c3707b4d0337a
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663046"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189657"
 ---
 # <a name="new-settings-app"></a>Novo aplicativo Configurações
 
@@ -23,7 +23,7 @@ Com a [versão 21H1 do Windows Holographic](hololens-release-notes.md#windows-ho
 > [!NOTE]
 > Como o novo aplicativo Configurações é diferente do aplicativo Configurações herdado, as janelas de Configurações que você colocou em seu ambiente serão removidas após a atualização.
 
-![Home page do novo aplicativo Configurações](images/new-settings-app.png)
+![Home page do novo aplicativo Configurações.](images/new-settings-app.png)
 
 **Novos recursos e configurações**
 - Pesquisa de Configurações: pesquise por configurações na home page de Configurações usando palavras-chave ou o nome da configuração.

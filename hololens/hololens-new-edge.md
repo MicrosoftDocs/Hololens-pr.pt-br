@@ -9,16 +9,16 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: 35d3b38cd442198aec8aaabf46ff7d842c1bf599dbada68718c1d0fa548b2030
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 8ef73733b9fa4f422335977be860371b9570d549
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663154"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189691"
 ---
 # <a name="introducing-the-new-microsoft-edge"></a>Apresentando o novo Microsoft Edge
 
-![Animação do logotipo do Microsoft Edge herdado para o logotipo do novo Microsoft Edge](images/new-edge.gif)
+![Animação do logotipo do Microsoft Edge herdado para o logotipo do novo Microsoft Edge.](images/new-edge.gif)
 
 O novo Microsoft Edge [adota o projeto de software livre Chromium](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) para que haja uma melhor compatibilidade para os clientes e menos fragmentação da Web para os desenvolvedores Web.
 
@@ -27,11 +27,11 @@ Com o [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holo
 > [!IMPORTANT]
 > Esse novo Microsoft Edge substitui automaticamente o Microsoft Edge herdado, que [não tem mais suporte](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) em novas versões.
 
-![Captura de tela do novo Microsoft Edge](images/new-edge-ui.png)
+![Captura de tela do novo Microsoft Edge.](images/new-edge-ui.png)
 
 ## <a name="launching-the-new-microsoft-edge"></a>Iniciando o novo Microsoft Edge
 
-O novo Microsoft Edge ![O ícone do novo Microsoft Edge](images/new_edge_logo.png) (representado por um ícone de espiral azul e verde) está fixado no menu Iniciar e será iniciado automaticamente quando você ativar um link da Web.
+O novo Microsoft Edge ![O ícone do novo Microsoft Edge.](images/new_edge_logo.png) (representado por um ícone de espiral azul e verde) está fixado no menu Iniciar e será iniciado automaticamente quando você ativar um link da Web.
 
 > [!NOTE]
 > Quando você iniciar pela primeira vez o novo Microsoft Edge no HoloLens 2, suas configurações e dados serão importados do Microsoft Edge herdado.
@@ -139,7 +139,7 @@ A extensão do Visualizador 360 é baseada no WebXR e é instalada automaticamen
 1. Navegue até um site com suporte para o WebXR.
 1. Selecione o botão **Entrar na VR**. A localização e a representação visual do botão podem variar de acordo com o site, mas ele pode ser semelhante a:
 
-    ![Exemplo de botão Entrar na VR](images/75px-enter-vr.png)
+    ![Exemplo de botão Entrar na VR.](images/75px-enter-vr.png)
 
 1. Na primeira vez que você tentar iniciar uma experiência do WebXR em um domínio específico, o navegador solicitará consentimento para entrar em uma exibição imersiva; selecione **Permitir**.
 1. Use [gestos do HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame) para manipular a experiência.
@@ -156,7 +156,7 @@ A extensão do Visualizador 360 é baseada no WebXR e é instalada automaticamen
 1. Navegue até um vídeo com 360 graus no YouTube.
 1. No quadro de vídeo, selecione o botão de headset de realidade misturada:
 
-    ![Botão para ativar o Visualizador 360](images/enter-360-viewer.jpg)
+    ![Botão para ativar o Visualizador 360.](images/enter-360-viewer.jpg)
 
 1. Na primeira vez que você tentar iniciar uma experiência do Visualizador 360 em um domínio específico, o navegador solicitará consentimento para entrar em uma exibição imersiva. selecione **Permitir**.
 1. Com um gesto de [fechar e abrir dedos indicador e polegar](hololens2-basic-usage.md#select-using-air-tap), abra os controles de reprodução. Use gestos de [hand rays e fechar e abrir dedos indicador e polegar](hololens2-basic-usage.md#select-using-air-tap) para reproduzir/pausar, acelerar/voltar, ativar/desativar legendas ou parar a experiência (que sai da exibição imersiva). Os controles de reprodução desaparecem após alguns segundos de inatividade.

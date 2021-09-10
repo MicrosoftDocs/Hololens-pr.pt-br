@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a5c0e28eff9bb71135309ec5e484fc5b88f02d08
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 8f07ed42c873b62b3b4201c2756b55bbb29707d3
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636487"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189759"
 ---
 # <a name="set-up-your-hololens-2"></a>Configurar seu HoloLens 2
 
@@ -39,47 +39,50 @@ Antes de começar, verifique se você tem:
 
 ## <a name="set-up-windows"></a>Configurar o Windows
 
-Na primeira vez que você iniciar o HoloLens 2, a primeira tarefa será configurar o Windows Holographic.  Ao iniciar o HoloLens, você ouvirá uma música e verá um logotipo do Windows.
+Na primeira vez que você iniciar o HoloLens 2, a primeira tarefa será configurar o Windows Holographic.  Ao iniciar o HoloLens, você ouvirá uma música e verá um logotipo da Microsoft.
 
-![Primeira tela durante a primeira inicialização](images/01-magic-moment.png)
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGGk]
+
+<br/>
+<img src="images/01-magic-moment.png" width="500px" alt="First screen during first boot">
 
 Você verá um beija-flor voando.
 
-![Beija-flor voando](images/hummingbird-1.png)
+<img src="images/hummingbird-1.png" width="500px" alt="Hummingbird flying">
 
-Siga-o com a sua mão.
+Ele seguirá a sua mão.
 
-![Close-up de beija-flor voando](images/hummingbird-2.png)
+<img src="images/hummingbird-2.png" width="500px" alt="Hummingbird flying close up">
 
-O HoloLens 2 percorrerá as seguintes etapas:
+Aparecerá um botão com o logotipo da Microsoft. Pressione o botão e o HoloLens 2 percorrerá as seguintes etapas:
 
 1. Selecionar seu idioma.
 
-    ![Selecionar idioma](images/04-language.png)
+    <img src="images/04-language.png" width="500px" alt="Select language">
 
 1. Selecione sua região.
 
-    ![Selecionar região](images/05-region.png)
+    <img src="images/05-region.png" width="500px" alt="Select region">
 
 1. Calibrar o HoloLens aos seus olhos.  Se optar por ignorar a calibragem, você será avisado na próxima vez em que fizer logon. 
 
     1. Primeiro, você ajustará o visor.
     
-        ![Tela de seleção de calibragem](images/06-et-corners.png)
-
+    <img src="images/06-et-corners.png" width="500px" alt="Calibration selection screen">
+    
     2. Para calibrar, você olhará para um conjunto de alvos (chamados de joias). Não há problema se você piscar ou fechar os olhos durante a calibragem, mas tente não olhar fixamente para outros objetos no cômodo ou no espaço físico. O HoloLens usa esse processo para saber mais sobre a posição de seus olhos para que ele possa renderizar melhor seu mundo holográfico. 
 
-        ![Ajustar para seus olhos](images/07-adjust-eyes.png)
+        <img src="images/07-adjust-eyes.png" width="500px" alt="Adjust for your eyes">
 
         Após a calibragem, os hologramas serão exibidos corretamente mesmo que o visor mude de posição em sua cabeça. As informações de calibragem são armazenadas localmente no dispositivo e não são associadas a informações de conta. Para saber mais, confira [Dados de calibragem e segurança](hololens-calibration.md#calibration-data-and-security).
 
-        ![A calibragem foi concluída](images/calibration-complete.png)
+        <img src="images/calibration-complete.png" width="500px" alt="Calibration is complete">
 
 1. Conecte-se à Internet (selecione Wi-Fi ou sua conexão Ethernet).
 
      O HoloLens define o fuso horário automaticamente com base nas informações obtidas da rede Wi-Fi. Após a conclusão da configuração, você pode alterar o fuso horário usando o aplicativo Configurações.
 
-    ![Conectar ao Wi-Fi](images/11-network.png)
+    ![Conectar ao Wi-Fi.](images/11-network.png)
 
     > [!NOTE] 
     > Se você passar da etapa de Wi-Fi e posteriormente precisar alternar para uma rede diferente enquanto ainda estiver na configuração, pressione os botões **Diminuir volume** e **Ligar/Desligar** simultaneamente para retornar a esta etapa se estiver executando uma versão do SO de outubro de 2019 ou posterior. Para versões anteriores, talvez seja necessário [redefinir o dispositivo](hololens-recovery.md) ou reiniciá-lo em uma localização em que a rede Wi-Fi não esteja disponível para impedir a conexão automática.
@@ -88,15 +91,15 @@ O HoloLens 2 percorrerá as seguintes etapas:
 
 1. O HoloLens 2 pesquisará e aplicará um perfil do Autopilot, se houver. Nenhuma ação é necessária nesta tela.
  
-    ![Pesquisa de perfil do Autopilot](images/autopilot-profile-search.png) 
+    ![Pesquisa de perfil do Autopilot.](images/autopilot-profile-search.png) 
 
 1. Clique em **Aceitar** na tela de licenciamento.
 
-    ![Contrato de licença do Windows](images/windows-license-agreement.png)
+    ![Contrato de licença do Windows.](images/windows-license-agreement.png)
 
 1. Entre em sua conta de usuário. Você escolherá entre **O proprietário é meu trabalho ou escola** ou **É meu**.
 
-    ![Definir usuário](images/13-device-owner.png)
+    ![Definir usuário.](images/13-device-owner.png)
     - Ao escolher **O proprietário é meu trabalho ou escola**, você entra usando uma conta do Azure AD. Se a organização usar o Azure AD Premium e tiver configurado o registro de MDM automático, o HoloLens será registrado automaticamente no MDM. Se a organização não usar o Azure AD Premium, o registro de MDM automático não estará disponível. Nesse caso, você precisará [registrar manualmente o HoloLens no gerenciamento de dispositivos](hololens-enroll-mdm.md#different-ways-to-enroll).
 
         1. Insira as informações de conta de sua organização.
@@ -112,36 +115,43 @@ O HoloLens 2 percorrerá as seguintes etapas:
         
 1. Configure a conexão com a Íris selecionando **Avançar**. Você passará por uma experiência semelhante à de calibragem dos olhos. Selecione **Concluído** quando a varredura for concluída. Você também pode selecionar **Ignorar** para ignorar esta etapa.
     
-    ![Configuração da íris](images/setup-iris.png) ![Conclusão da configuração da íris](images/iris-setup-complete.png) 
+    <img src="images/setup-iris.png" width="500px" alt="Iris setup">
+
+    <img src="images/iris-setup-complete.png" width="500px" alt="Iris setup completion">
+
      
   
 1. Você vai configurar um PIN para fazer logon no dispositivo. Este PIN é específico do dispositivo. 
 
-    ![Configurar o Windows Hello](images/setup-windows-hello.png)
+    ![Configurar o Windows Hello.](images/setup-windows-hello.png)
 
-    ![Configurar o PIN do Windows Hello](images/windows-hello-pin.png)
+    ![Configurar o PIN do Windows Hello.](images/windows-hello-pin.png)
 
-    ![Configuração do Windows Hello bem-sucedida](images/windows-hello-successful.png) 
+    ![Configuração do Windows Hello bem-sucedida.](images/windows-hello-successful.png) 
+
     
 1. Selecione se deseja habilitar a fala no HoloLens 2.
 
-    ![Habilitar a Cortana](images/22-do-more-with-voice.png)
+    <img src="images/22-do-more-with-voice.png" width="500px" alt="Enable Cortana">
 
 1. Selecione se deseja habilitar a localização no HoloLens 2.
     
-    ![Habilitar serviços de localização](images/setup-location-services.png)
+    <img src="images/setup-location-services.png" width="500px" alt="Enable location services">
 
 1. Selecione o nível de telemetria. Se possível, habilite a telemetria opcional. Essas informações ajudam muito a equipe de engenharia do HoloLens.
 
-     ![Nível de telemetria](images/24-telemetry.png)
+    <img src="images/24-telemetry.png" width="500px" alt="Telemetry level">
+
 
 1. Saiba como usar o gesto de iniciar no HoloLens 2.
 
-     ![Saiba como usar o gesto de iniciar, imagem 1](images/26-01-startmenu-learning.png)
+    <img src="images/26-01-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 1">
 
-     ![Saiba como usar o gesto de iniciar, imagem 2](images/26-02-startmenu-learning.png)
-
-Parabéns!  A configuração está completa e você está pronto para usar o HoloLens!
+    <img src="images/26-02-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 2">
+    
+    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3Wxng]
+    
+    Parabéns!  A configuração está completa e você está pronto para usar o HoloLens!
 
 ## <a name="next-steps"></a>Próximas etapas
 

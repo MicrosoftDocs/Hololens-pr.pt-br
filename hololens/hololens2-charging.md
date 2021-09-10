@@ -12,12 +12,12 @@ ms.date: 05/14/2021
 manager: evmill
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b117542704968150639a47956a8142d7232fcc66d696feb61ec4fffdaa49df59
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b4692468942da88877370864eda2ce173cc499af
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660582"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189793"
 ---
 # <a name="hololens-2-battery-and-charging"></a>Bateria e carregamento do HoloLens 2
 
@@ -41,7 +41,7 @@ Se o dispositivo for reinicializado corretamente e em execução, há três mane
     - Se o nível da bateria estiver muito baixo e você tentar ligar o dispositivo, uma luz piscará rapidamente e apagará.
 - No computador host, abra o **Explorador de Arquivos** e procure seu dispositivo HoloLens 2 no lado esquerdo em **Este Computador**. Clique com o botão direito do mouse no dispositivo e escolha **Propriedades**. Uma caixa de diálogo mostrará o nível de carga da bateria.
 
-   ![Uma tela de propriedades do HoloLens 2 mostra o nível de mudança da bateria](images/ResetRecovery2.png)
+   ![Uma tela de propriedades do HoloLens 2 mostra o nível de mudança da bateria.](images/ResetRecovery2.png)
 
 ## <a name="alternative-charging-specifications"></a>Especificações de cobrança alternativas
 

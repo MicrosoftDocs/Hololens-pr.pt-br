@@ -1,9 +1,9 @@
 ---
 title: Funcionalidades e soluções do HoloLens 2
-description: Saiba mais sobre os recursos do Microsoft HoloLens comercial que facilitam o gerenciamento de dispositivos HoloLens para as empresas.
-author: joyjaz
-ms.author: v-jjaswinski
-ms.date: 06/28/2021
+description: Saiba mais sobre os recursos comerciais do Microsoft HoloLens usados por empresas para gerenciar dispositivos HoloLens.
+author: qianw211
+ms.author: v-qianwen
+ms.date: 9/1/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
@@ -17,20 +17,22 @@ manager: skerewa
 appliesto:
 - HoloLens 2
 keywords: HoloLens 2, commercial, features, mdm, mobile device management, kiosk mode, applications, identity, Bitlocker, iris, Windows Hello, Azure-powered, Autopilot, mixed reality, WDAC
-ms.openlocfilehash: 5a68c4199cba20bba9d3aaa5183819975ea7b3f4
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 0c47eedad0d5a23249c48356765b74e4dbeac33e
+ms.sourcegitcommit: 58b124ba1722b2dff31d93723dd269df0f8319c4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635799"
+ms.lasthandoff: 09/04/2021
+ms.locfileid: "123483172"
 ---
 # <a name="hololens-2-capabilities-and-solutions"></a>Funcionalidades e soluções do HoloLens 2
 
-## <a name="what-can-hololens-2-do-for-you"></a>O que o HoloLens 2 pode fazer por você?
+## <a name="why-hololens"></a>Por que o HoloLens?
 
-Colabore sem limites e tome decisões com precisão para aumentar a produtividade dos funcionários com os aplicativos de realidade misturada no HoloLens 2. Mantenha-se envolvido e alerta, com as mãos livres por mais tempo e com mais conforto usando os comandos de voz internos, o acompanhamento ocular e a ancoragem mundial para foco contínuo na conclusão segura de tarefas sem erros. Conecte-se com os colegas remotos em tempo real e trabalhe juntos com eles em uma ampla tela holográfica sobreposta no seu ambiente físico para resolver rapidamente os problemas no ponto de trabalho. Perceba o ROI imediatamente com um ecossistema robusto de aplicativos que têm o suporte da segurança, da confiabilidade e da escalabilidade da Microsoft.  
+Graças ao HoloLens 2 e aos aplicativos de Realidade Misturada, agora os trabalhadores podem colaborar sem limites, atuar com precisão e aumentar a produtividade.
 
-[!INCLUDE [solutions](includes/hlsolutions.md)]
+Colabore sem limites e tome decisões com precisão para aumentar a produtividade dos funcionários com os aplicativos de realidade misturada no HoloLens 2. Mantenha-se envolvido e alerta, com as mãos livres por mais tempo e com mais conforto usando os comandos de voz internos, o acompanhamento ocular e a ancoragem mundial para foco contínuo na conclusão segura de tarefas sem erros. Conecte-se com os colegas remotos em tempo real e trabalhe juntos com eles em uma ampla tela holográfica sobreposta no seu ambiente físico para resolver rapidamente os problemas no ponto de trabalho. Tenha retorno sobre o investimento imediatamente com um ecossistema robusto de aplicativos que têm o suporte da segurança, da confiabilidade e da escalabilidade da Microsoft.  
+
+Esperamos que este artigo inspire você a pensar em todas as maneiras como a MR (realidade misturada) pode beneficiar seus negócios.
 
 ## <a name="hololens-2-capabilities"></a>Funcionalidades do HoloLens 2
 
@@ -48,13 +50,78 @@ O que torna o HoloLens 2 tão eficiente?
 | Habilitado para o Azure | Transmita um conteúdo 3D de alta fidelidade que pode ser ancorado em uma localização e/ou um objeto que é mantido entre os usuários com os serviços de Realidade Misturada do Azure.
 | Captura de realidade mista | Documente uma experiência como uma foto ou um vídeo para compartilhar com outras pessoas em tempo real. |
 | Windows Hello for Business | A autenticação biométrica baseada em íris leva você de maneira rápida e segura para o fluxo de trabalho. |
-| Windows Autopilot | Configure e pré-configure serviços para o HoloLens 2 de modo que eles estejam prontos para uso em todos os locais de trabalho distribuídos. |
+| Windows Autopilot | Configure e pré-configure serviços para o HoloLens 2 de modo que eles estejam prontos para uso em locais de trabalho distribuídos. |
 | Atualizações de SO | Mantenha a segurança com as atualizações de manutenção mensais e aproveite as novas funcionalidades de produtividade e capacidade de gerenciamento em versões bianuais. |
 | Gerencie os dispositivos com facilidade | Gerencie vários dispositivos HoloLens 2 simultaneamente usando soluções como o Microsoft Intune, o VMware Workspace One, o MobileIron, entre outros. |
 | Opere em ambientes regulamentados | O HoloLens 2 tem um amplo portfólio de dispositivos que dá suporte a ambientes altamente regulamentados, incluindo ambientes designados como Classe ISO 5.0 e Classe UL I, Divisão 2. |
 
+[!INCLUDE [solutions](includes/hlsolutions.md)]
+
+## <a name="how-hololens-2-is-transforming-industries"></a>Como o HoloLens 2 está transformando setores
+
+:::row:::
+    :::column:::
+        [<img src="images/eaton.png" alt="Eaton Vehicle Group" width=350px>](https://customers.microsoft.com/en-us/story/1406696349549504197-eaton-vehicle-group-dynamics-365-mixed-reality)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="eatons-vehicle-group-uses-dynamics-365-mixed-reality-to-drive-savings-efficiencies"></a>[Grupo de Veículo da Eaton usa realidade misturada do Dynamics 365 para gerar economia e eficiência.](https://customers.microsoft.com/en-us/story/1406696349549504197-eaton-vehicle-group-dynamics-365-mixed-reality)
+        "Quando você descreve um problema, imagine que estamos falando em idiomas diferentes. Quando você explica algo, alguém do outro lado pode não entender exatamente o que está acontecendo, mas quando você mostra em tempo real com o HoloLens, as pessoas entendem." <br> - Alexandre M. Moraes: Gerente de Fábrica da Eaton.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+        [<img src="images/sheba.png" alt="Sheba Medical Center" width=350px>](https://customers.microsoft.com/en-us/story/1388628932382960935-sheba-health-provider-azure-en-israel)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="sheba-medical-center-uses-microsofts-hololens-for-ventilators-training"></a>[Sheba Medical Center usa o Microsoft HoloLens para treinamento em ventiladores.](https://customers.microsoft.com/en-us/story/1388628932382960935-sheba-health-provider-azure-en-israel)
+        HoloLens a serviço do treinamento médico em momentos de crise.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+        [<img src="images/zf-group.jpg" alt="ZF Group" width=350px>](https://customers.microsoft.com/en-us/story/1341470537472393895-zfgroup-gray-court-chapter-automotive-microsoft365)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="zf-builds-agile-facility-at-gray-court-with-microsoft-365-improves-operational-equipment-efficiency"></a>[ZF cria instalações ágeis em Gray Court com o Microsoft 365 e aumenta a eficiência do equipamento operacional.](https://customers.microsoft.com/en-us/story/1341470537472393895-zfgroup-gray-court-chapter-automotive-microsoft365)
+        Para o ZF Group, o Microsoft 365 ajuda os funcionários a compartilharem conhecimentos, solucionar problemas e se comunicarem em tempo real. 
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+        [<img src="images/tokyu.png" alt="Tokyu Construction" width=350px>](https://customers.microsoft.com/en-us/story/1333933369626897988-tokyu-construction-manufacturing-azure-holo-lens-2)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="tokyu-construction-improves-engineering-precision-and-increases-productivity-with-azure-remote-rendering-on-hololens-2"></a>[Tokyu Construction aumenta a precisão da engenharia e a produtividade com o Azure Remote Rendering no HoloLens 2.](https://customers.microsoft.com/en-us/story/1333933369626897988-tokyu-construction-manufacturing-azure-holo-lens-2)
+        A menos que você seja um engenheiro de arquitetura treinado, pode ser desafiador analisar um blueprint em 2D e visualizar qual será a aparência de um edifício em 3D. 
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+        [<img src="images/mda-hl2.jpg" alt="MDA" width=350px>](https://customers.microsoft.com/en-us/story/1377057233739728271-mda-manufacturing-hololens-canada)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="mda-takes-mixed-reality-into-orbit-with-hololens-2"></a>[MDA leva realidade misturada à órbita com o HoloLens 2.](https://customers.microsoft.com/en-us/story/1377057233739728271-mda-manufacturing-hololens-canada)
+        A MDA usa experiências imersivas de realidade misturada para ajudar os engenheiros a visualizar designs, acelerar problemas de diagnóstico e treinar astronautas e controladores terrestres.
+    :::column-end:::
+:::row-end:::
+<br>
+
+---
 
 ## <a name="managing-hololens-2-in-your-organization"></a>Como gerenciar o HoloLens 2 na sua organização
+
 O HoloLens 2 inclui recursos que facilitam o gerenciamento dos dispositivos HoloLens para as empresas. Alguns recursos estão incluídos no dispositivo, enquanto outros podem ser habilitados pelo [MDM (gerenciamento de dispositivo móvel)](hololens-mdm-configure.md) para o HoloLens ou por meio de [pacotes de provisionamento](hololens-provisioning.md) usando o [Designer de Configuração do Windows](app-deploy-provisioning-package.md#setup).
 
 | Eu quero… | Solução | Descrição |  

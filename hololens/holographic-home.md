@@ -13,12 +13,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: c510738595e234b30395aafa309d42bd33affb7889a3174f2e708ba1aac56626
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: f9a6f1692df05e5fd8faec3da07cc85f7c6a32c7
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664886"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189164"
 ---
 # <a name="use-the-start-menu-and-mixed-reality-home"></a>Usar o menu Iniciar e página inicial da realidade misturada
 
@@ -91,7 +91,7 @@ Se um aplicativo imersivo estiver em um estado ignorado e for necessário reinic
 
 Com o [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1), ao ativar um hiperlink ou abrir um tipo de arquivo com mais de um aplicativo instalado, que seja compatível, você verá uma nova janela aberta solicitando que você escolha qual aplicativo instalado deve lidar com o arquivo ou tipo de link. Nessa janela, você também pode optar por fazer com que o aplicativo escolhido manipule o tipo de arquivo ou link "Uma vez" ou "Sempre".
 
-![Janela do seletor de aplicativo](images/default-app-picker.png)
+![Janela do seletor de aplicativo.](images/default-app-picker.png)
 
 Se você escolher "Sempre", mas posteriormente quiser mudar qual aplicativo trata um determinado arquivo ou tipo de link, poderá redefinir os padrões salvos em **Configurações > Apps**. Role até a parte inferior da página e escolha o botão **Limpar** em "Aplicativos padrão para tipos de arquivo" e/ou "Aplicativos padrão para tipos de link". Ao contrário da configuração semelhante em computadores desktop, não é possível redefinir padrões de tipo de arquivo individuais.
 

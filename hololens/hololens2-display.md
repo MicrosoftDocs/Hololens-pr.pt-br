@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 3567c1f33f10240a9cacbf258669a0e3274f4c6bb3c90fc1317a57a3a415fc7f
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 38bab16d2d0d4ace5879f00c133d66b9974e4b2a
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659963"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190354"
 ---
 # <a name="hololens-2-display-troubleshooting"></a>Solução de problemas de exibição do HoloLens 2
 
@@ -46,7 +46,7 @@ Siga as etapas abaixo para garantir a melhor qualidade visual de hologramas apre
     > Se você estiver tendo problemas para ver a cena esmaecida em seu ambiente, poderá ajustar manualmente o nível de brilho do HoloLens 2 usando os botões de brilho no lado esquerdo do dispositivo.
 1. Escolha os botões de 1 a 6 para experimentar instantaneamente cada perfil de cor e encontre um que seja melhor para seus olhos (isso geralmente significa o perfil que ajuda a cena a parecer mais neutra, com o padrão de escala de cinza e os tons de pele com a aparência esperada.)
 
-    ![Exibir cena de calibragem de cores](images/color-cal-ui.png)
+    ![Exibir cena de calibragem de cores.](images/color-cal-ui.png)
     
 6. Quando estiver satisfeito com o perfil escolhido, escolha o botão **Salvar e Sair**
 1. Se você preferir não fazer alterações, escolha o botão **Cancelar e Sair**, e as alterações serão revertidas
@@ -79,7 +79,7 @@ Se você não estiver satisfeito com o perfil de cores personalizado salvo no Ho
 
 Às vezes, seu HoloLens 2 exibirá padrões diferentes nos cantos inferiores esquerdo e direito do visor. Os exemplos são mostrados abaixo (GIFs animados). Esse padrão faz parte da operação normal do dispositivo HoloLens 2 para calibrar o visor para uma experiência ideal.
 
-![Padrão bifásico](./images/DAT-Biphase-Fiducial.gif) ![Padrão geográfico](./images/DAT-GEO-Fiducial.gif)
+![Padrão bifásico.](./images/DAT-Biphase-Fiducial.gif) ![Padrão geográfico](./images/DAT-GEO-Fiducial.gif)
 
 ### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>Por que não consigo tirar uma fotografia precisa do meu visor do HoloLens 2?
 

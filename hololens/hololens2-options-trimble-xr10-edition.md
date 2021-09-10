@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7bf6896ee14b730e7c8f7f6c38e6a3c4279555429fb17f5b30a0c866123a3712
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b6c2c6c10232fb8f1817dddabebaf207e51d35d7
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658862"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190303"
 ---
 # <a name="trimble-xr10-with-hololens-2"></a>Trimble XR10 com o HoloLens 2
 
@@ -29,7 +29,7 @@ Desenvolvido especialmente para trabalhadores em ambientes sujos, barulhentos e 
 
 O Trimble XR10 com HoloLens 2 é o primeiro dispositivo criado com o Programa de Personalização Microsoft HoloLens. O dispositivo integra um HoloLens 2 em um capacete para produzir uma solução de realidade mista com foco em segurança.
 
-![SKU Trimble](./images/trimble-ed.png)
+![SKU do Trimble.](./images/trimble-ed.png)
 
 Saiba mais sobre o [Trimble XR10](https://fieldtech.trimble.com/en/product/trimble-xr10-with-hololens-2).
 

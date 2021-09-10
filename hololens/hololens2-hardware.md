@@ -12,16 +12,16 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 759ef671e9a831e23809d5974595ce5928433e3e50ddb26e25a7a74ebe2559a3
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: c1d83577400126903a80999c46ddaeabddaba029
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659990"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190371"
 ---
 # <a name="about-hololens-2"></a>Sobre o HoloLens 2
 
-![Vista lateral do HoloLens 2](images/hololens2-breakdown.png)
+![Vista lateral do HoloLens 2.](images/hololens2-breakdown.png)
 
 O Microsoft HoloLens 2 é um computador holográfico sem fio.  Ele refina a jornada de computação holográfica iniciada pelo HoloLens (1ª geração) para fornecer uma experiência mais confortável e envolvente com mais opções para colaboração na realidade misturada. O HoloLens 2 é executado no [SO Windows Holographic](hololens-release-notes.md), que tem o Windows 10 como inspiração e oferece aos usuários, administradores e desenvolvedores uma plataforma robusta, de bom desempenho e segura. 
 
@@ -75,7 +75,7 @@ Para manter/avançar o Percentual Interno de Carga da Bateria enquanto o disposi
 | **IMU (unidade de medida de inércia)** | Acelerômetro, giroscópio, magnetômetro |
 | **Câmera** | Imagens estáticas de 8 MP, vídeo de 1080p30 |
 
-![Sensores do HoloLens 2](images/hololens2-front-view.png)
+![Sensores do HoloLens 2.](images/hololens2-front-view.png)
 
 > [!NOTE]
 > Não cubra nenhum dos sensores que aparecem na imagem. As câmeras de rastreamento de cabeça têm um FOV muito amplo, nada deve estar ao redor delas, além de não cobri-las.
