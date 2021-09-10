@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a0717524cd1f762c92a5b821ae90acb8474dafd2
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.openlocfilehash: 81b3231827fce9a2ae2d5e3105800685fedb917b
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190388"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428691"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Modo de plataforma móvel em plataformas móveis de movimento dinâmico baixo
 
@@ -75,19 +75,19 @@ Para habilitar o modo de Plataforma Móvel, primeiro [habilite o Portal de Dispo
 
 1. Selecione a sanfona do **Sistema** no menu à esquerda
 
-   ![Primeira imagem.](.\images\moving-platform-1w.png)
+   ![Primeira imagem.](.\images\mpm-01.png)
 
 2. Selecione a página **Modo de Plataforma Móvel** e marque a caixa de seleção **Modo de Plataforma Móvel**
 
-    ![Segunda imagem.](.\images\moving-platform-2z.png)
+    ![Segunda imagem.](.\images\mpm-02.png)
 
 3. Quando se deparar com um aviso, selecione **OK**
 
-   ![Terceira imagem.](.\images\moving-platform-3w.png)
+   ![Terceira imagem.](.\images\mpm-03.png)
 
 4. Reinicialize o dispositivo, o que pode ser feito por meio do menu **Power** do Portal de Dispositivos no canto superior direito ou emitindo o comando de voz &quot;Reinicializar o dispositivo&quot; e selecionando &quot;Sim&quot;.
 
-   ![Quarta imagem.](.\images\moving-platform-4z.png)
+   ![Quarta imagem.](.\images\mpm-04.png)
 
 Se você não conseguir ver a opção para aceitar o Modo de Plataforma Móvel no Portal de Dispositivos, isso provavelmente significa que você ainda não está no build adequado. Confira a seção [Pré-requisitos](#prerequisites).
 

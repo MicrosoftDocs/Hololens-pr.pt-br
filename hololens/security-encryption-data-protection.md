@@ -14,11 +14,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: e156fc21bfd1541dd8718a7349e7ba82b45576be
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639362"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427536"
 ---
 # <a name="encryption-and-data-protection"></a>Criptografia e proteção de dados
 

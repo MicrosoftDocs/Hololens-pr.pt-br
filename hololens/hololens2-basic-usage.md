@@ -13,11 +13,11 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: cf3770dd55498dbe98abf88d002247646e4db9be
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189878"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427270"
 ---
 # <a name="getting-around-hololens-2"></a>Conheça o HoloLens 2
 

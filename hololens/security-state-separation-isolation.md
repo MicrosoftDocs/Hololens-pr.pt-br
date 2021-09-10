@@ -14,11 +14,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 0487ea49c706c753f4dfca7da7daa499d1715e9f
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639787"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428426"
 ---
 # <a name="state-separation-and-isolation"></a>Separação e isolamento de estado
 
