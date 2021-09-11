@@ -17,11 +17,11 @@ appliesto:
 - HoloLens 1 (1st gen)
 - HoloLens 2
 ms.openlocfilehash: b8bda049f0ef4610dcf0ca6fe81d89dd5a316e3e
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640033"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428829"
 ---
 # <a name="map-physical-spaces-with-hololens"></a>Mapear espaços físicos com o HoloLens
 

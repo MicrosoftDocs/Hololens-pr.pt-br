@@ -14,11 +14,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 1c043b721590e8245f694b3e4f6e5b6ce57f1ecf
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639345"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427586"
 ---
 # <a name="security-engineering"></a>Engenharia de segurança
 

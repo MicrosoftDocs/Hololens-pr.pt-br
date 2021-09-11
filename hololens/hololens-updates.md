@@ -20,11 +20,11 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 ms.openlocfilehash: 3afe3d2aecd64c2b4724f4805571cb3c46112875
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190031"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427930"
 ---
 # <a name="manage-hololens-updates"></a>Gerenciar atualizações do HoloLens
 
