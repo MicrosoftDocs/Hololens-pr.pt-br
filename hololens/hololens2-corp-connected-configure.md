@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2b855f5891dfa4ca695e4ae3b2a2e82510c5b626f08b434643169be239b48291
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 9457acd2f53d0d3127d6c68d620b660f6e09866d
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660177"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031985"
 ---
 # <a name="configure---corporate-connected-guide"></a>Configurar-guia conectado corporativo
 
@@ -102,7 +102,7 @@ Se você ainda estiver desenvolvendo seus aplicativos ou ainda não tiver um, po
 Se você preferir usar seu próprio aplicativo ou estiver interessado no desenvolvimento de aplicativos para realidade misturada, sinta-se à vontade para revisar nossa [documentação de desenvolvedor de realidade misturada](/windows/mixed-reality/design/design).
 
 > [!NOTE]
-> os requisitos de sistema para dispositivos HoloLens são baseados na arquitetura da compilação do aplicativo. HoloLens 2 dispositivos usam a arquitetura ARM. ao criar seus aplicativos no Visual Studio, verifique se você selecionou a arquitetura correta para o dispositivo e inclui todas as dependências necessárias.
+> Os requisitos do sistema para dispositivos HoloLens são baseados na arquitetura do build do aplicativo. HoloLens 2 dispositivos usam a arquitetura ARM. ao criar seus aplicativos no Visual Studio, verifique se você selecionou a arquitetura correta para o dispositivo e inclui todas as dependências necessárias.
 
 > [!IMPORTANT]
 > Ao implantar aplicativos LOB, é importante também carregar o certificado no Intune e atribuí-lo ao mesmo grupo que pretende usar o aplicativo ou ele não será instalado corretamente.
@@ -152,34 +152,34 @@ Neste guia para [criar um ambiente do Microsoft dataverso](/dynamics365/mixed-re
 3. É importante que você alterne **para criar um banco de dados para este ambiente?**  opção como  **Sim**.
 4. Na caixa de diálogo  **Adicionar Banco de dados**  , defina a opção  **habilitar aplicativos Dynamics 365**  como  **Sim.**
 
-Você desejará aumentar o tamanho máximo do arquivo de itens em seu dataverso. Aumentar o tamanho máximo do arquivo permitirá que você carregue modelos 3D maiores ou arquivos de vídeo que serão usados posteriormente em seus guias. Siga um breve guia [para alterar o tamanho máximo do arquivo de carregamento](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size).
+Você deseja aumentar o tamanho máximo de arquivo de itens no seu dataverso. Aumentar o tamanho máximo do arquivo permitirá carregar modelos 3D maiores ou arquivos de vídeo que você usará posteriormente em seus guias. Siga um guia curto para [alterar o tamanho máximo do arquivo de upload.](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)
 
-Por fim, você precisará [instalar e configurar a solução](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution). No [centro de administração do Power Platform](https://admin.powerplatform.microsoft.com/environments), selecione **recursos** \& gt;  **Aplicativos do dynamics 365**, selecione **guias do Dynamics 365** na lista e, em seguida, selecione **instalar**.  
+Por fim, você precisará instalar [e configurar a solução](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution). No [Centro de administração do Power Platform](https://admin.powerplatform.microsoft.com/environments), selecione **Recursos** \& gt;  **Aplicativos do Dynamics 365,** selecione Guias do **Dynamics 365** na lista e, em seguida, **selecione Instalar**.  
 
-Você precisa [Adicionar uma função de segurança de guias](/dynamics365/mixed-reality/guides/assign-role) antes de poder usar os aplicativos.
+Você precisa [adicionar uma função de segurança guias](/dynamics365/mixed-reality/guides/assign-role) antes de poder usar os aplicativos.
 
-### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Criar um guia de teste em seu computador por meio de criação
+### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Criar um guia de teste em seu computador por meio da criação
 
-Ao criar guias, você sempre iniciará em seu computador. Criando as etapas, selecionando modelos e como ancorar o guia. isso será seguido colocando o conteúdo para seu guia posteriormente no modo de criação em seu dispositivo de HoloLens. Para os fins deste guia, sugerimos fazer um breve guia de teste com as etapas e os modelos mínimos.
+Ao criar Guias, você sempre iniciará em seu computador. Criando as etapas, selecionando modelos e como ancorar o guia. Isso será seguido pela colocação do conteúdo do guia posteriormente no modo de HoloLens dispositivo. Para os fins deste guia, sugerimos criar um guia de teste curto com etapas e modelos mínimos.
 
-Se você quiser começar a aprender sobre a criação de guias, comece aqui com a [visão geral de criação](/dynamics365/mixed-reality/guides/authoring-overview). Ou, para obter uma visão geral de faixa rápida, Assista a este breve vídeo.
+Se você quiser começar a aprender sobre a adoção de Guias, comece aqui com a visão [geral de autor.](/dynamics365/mixed-reality/guides/authoring-overview) Ou para obter uma visão geral do fast track, assista a este breve vídeo.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EC24dMlAy90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="optional-kiosk-mode"></a>Opcional: modo de quiosque
 
-O modo de quiosque é um modo que permite que um administrador de ti configure a interface do usuário do menu Iniciar para mostrar apenas um único aplicativo ou seleção de aplicativos. Um quiosque também pode ser aplicado a usuários específicos, grupos ou no nível do dispositivo; e, em alguns casos, excluir determinados usuários do quiosque ainda permitindo o acesso ao menu iniciar normal.
+O modo de quiosque é um modo que permite que um administrador de IT configure a interface do usuário do menu Iniciar para mostrar apenas um único aplicativo ou seleção de aplicativos. Um quiosque também pode ser aplicado a usuários, grupos ou no nível do dispositivo específicos; e, em alguns casos, exclua determinados usuários do Quiosque ainda permitindo que eles acessem o menu iniciar normal.
 
-O modo de quiosque tem várias variáveis diferentes, no escopo e nas configurações que podem ser definidas, bem como métodos de implantação do quiosque no HoloLens. Por causa de todas essas variáveis, o modo de quiosque está sendo deixado como _opcional_ para este guia e não será revisitado. se você acreditar que tem uma necessidade comercial de restringir os aplicativos disponíveis aos usuários ou gostaria de saber mais, fique à vontade para saber como [configurar o HoloLens como um quiosque](/hololens/hololens-kiosk).
+O modo de quiosque tem muitas variáveis diferentes, tanto no escopo quanto nas configurações que podem ser definidas, bem como métodos de implantação do Quiosque no HoloLens. Devido a todas essas variáveis, o  modo de quiosque está sendo deixado como opcional para este guia e não será revisitado. Se você acredita que tem uma necessidade comercial de restringir aplicativos disponíveis aos usuários ou gostaria de saber mais, sinta-se à vontade para saber como configurar o HoloLens como um [quiosque](/hololens/hololens-kiosk).
 
 ## <a name="optional-wdac"></a>Opcional: WDAC
 
-O WDAC permite que um administrador de ti Configure seus dispositivos para bloquear a inicialização de aplicativos em dispositivos. Isso é diferente dos métodos de restrição de dispositivo, como o modo de quiosque, em que o usuário recebe uma interface de usuário que oculta os aplicativos no dispositivo, mas eles ainda podem ser iniciados. Embora o WDAC seja implementado, os aplicativos ainda estão visíveis na lista todos os aplicativos, mas o WDAC interrompe esses aplicativos e processos de poder ser iniciado pelo usuário do dispositivo.
+O WDAC permite que um administrador de IT configure seus dispositivos para bloquear o lançamento de aplicativos em dispositivos. Isso é diferente dos métodos de restrição de dispositivo, como o modo de quiosque, em que o usuário recebe uma interface do usuário que oculta os aplicativos no dispositivo, mas ainda pode ser lançado. Embora o WDAC seja implementado, os aplicativos ainda estão visíveis na lista Todos os Aplicativos, mas o WDAC impede que esses aplicativos e processos sejam lançados pelo usuário do dispositivo.
 
-para obter mais informações, referência [usa WDAC e Windows PowerShell para permitir ou bloquear aplicativos em HoloLens 2 dispositivos com Microsoft Intune](/mem/intune/configuration/custom-profile-hololens).
+Para obter mais informações, consulte [Usar WDAC e Windows PowerShell para](/mem/intune/configuration/custom-profile-hololens)permitir ou bloquear aplicativos em HoloLens 2 dispositivos com Microsoft Intune .
 
 [WDAC (Controle de Aplicativos do Windows Defender)](/hololens/windows-defender-application-control-wdac)
 
 ## <a name="next-step"></a>Próxima etapa 
 > [!div class="nextstepaction"]
-> [Implantação conectada corporativa-implantação](hololens2-corp-connected-deploy.md)
+> [Implantação conectada corporativa – Implantar](hololens2-corp-connected-deploy.md)

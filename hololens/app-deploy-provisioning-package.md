@@ -15,11 +15,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: d071f4326a35a9ea61e2069618da7107bb808f04
-ms.sourcegitcommit: f480d3cc8d549fa356e05df6ce15e9517f5b978a
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "123610982"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031928"
 ---
 # <a name="provisioning-package"></a>Pacote de provisionamento
 
@@ -33,7 +33,7 @@ Os pacotes de provisionamento podem ser usados para preparar e configurar dispos
 
 Os aplicativos instalados por meio de um pacote de provisionamento devem ser assinados por um certificado no armazenamento do computador local. Os pacotes de provisionamento só podem instalar certificados no armazenamento do dispositivo (computador local). Portanto, um aplicativo e um certificado podem ser instalados por meio do mesmo pacote de provisionamento. Se você estiver implantando seu certificado do MDM ou instalando por meio do [Gerenciador](certificate-manager.md)de Certificados, implante o certificado no armazenamento do computador local para assinar aplicativos instalados dessa maneira.
 
-Para saber as noções básicas da criação de um pacote de provisionamento para dispositivos HoloLens, visite [HoloLens Provisionamento.](/hololens/hololens-provisioning) Para implantar um aplicativo, você deve começar com o provisionamento avançado.
+Para saber as noções básicas da criação de um pacote de provisionamento para dispositivos HoloLens, visite [HoloLens Provisionamento](/hololens/hololens-provisioning). Para implantar um aplicativo, você deve começar com o provisionamento avançado.
 
 > [!NOTE]
 > HoloLens (1ª geração) tem suporte limitado para instalação de aplicativos (**UniversalAppInstall**) usando um pacote de provisionamento. HoloLens (1ª geração) só são compatíveis com a instalação de um aplicativo via PPKG somente durante o OOBE e somente com as instalações de contexto do usuário.

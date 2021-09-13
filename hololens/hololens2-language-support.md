@@ -17,12 +17,12 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 32f4cce668b2f8a483dbef3f4b41a0ceb8267dcc202f2be9d32ecec4061d0c21
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: dc3de0c95f17c821816bad278de5717bc24a2c29
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659567"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031963"
 ---
 # <a name="supported-languages-for-hololens-2"></a>Idiomas com suporte no HoloLens 2
 

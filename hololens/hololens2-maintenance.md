@@ -1,6 +1,6 @@
 ---
 title: Perguntas frequentes sobre a limpeza do HoloLens 2
-description: obtenha respostas atualizadas para todas as suas perguntas frequentes para limpar e manter seu dispositivo HoloLens 2.
+description: Obter respostas atualizadas para todas as suas perguntas frequentes para limpar e manter seu HoloLens 2.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 4/14/2020
@@ -15,19 +15,19 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8b14ebd9639495d2b174678518b4562a2b3c85fa
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.openlocfilehash: 286e90fab7be0c4132cfab15306cc57c52607ccf
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189436"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031962"
 ---
 # <a name="hololens-2-cleaning-faq"></a>Perguntas frequentes sobre a limpeza do HoloLens 2
 
 > [!IMPORTANT]  
-> A Microsoft não pode fazer uma determinação da eficácia de qualquer produto disinfectant em combate Pathogens, como COVID-19. Consulte as diretrizes da autoridade de saúde pública local sobre como ficar protegido contra possíveis infecções.  
+> A Microsoft não pode fazer uma determinação da eficácia de qualquer produto desinfetante determinado em combater contra os brutos, como a COVID-19. Consulte as diretrizes da sua autoridade de saúde pública local sobre como se manter seguro contra possíveis vírus.  
 
-## <a name="hololens-2-use-and-care"></a>uso e cuidado com o HoloLens 2
+## <a name="hololens-2-use-and-care"></a>HoloLens 2 Use and Care
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
@@ -35,60 +35,60 @@ ms.locfileid: "123189436"
 
 **Para limpar o dispositivo**
 
-1. Remova qualquer poeira usando um pano de Microfiber seco e sem fiapos para apagar com cuidado a superfície do dispositivo.
+1. Remova qualquer lixo usando uma microfibra sem lint e seta para apagar a superfície do dispositivo.
 
-   ![Limpe enquanto mantém o naveg pad.](images/hl2-cleaning.png)
+   ![Limpe enquanto mantém o painel de navegação.](images/hl2-cleaning.png)
 
-2. Levemente moisten o pano usando a "70%" de medicina médica e, em seguida, use o tecido moistened para apagar com cuidado a superfície do dispositivo.
+2. Melhore ligeiramente o tratamento usando o isopropílico "70%" médico e, em seguida, use a máscara limpa para apagar a superfície do dispositivo.
 
-3. Deixe o dispositivo secar completamente.
+3. Deixe o dispositivo seque completamente.
 
-**Para limpar o naveg pad**
+**Para limpar o painel de navegação**
 
-1. Use a água e leve, Antibiotic SOAP para moisten um pano e, em seguida, use o pano de moistened para apagar o painel de naveg.
-1. Deixe o naveg pad seco completamente.
+1. Use a água e um líquido de água e um líquido para limpar um rosto e, em seguida, use a comida limpa para apagar o painel de navegação.
+1. Deixe a janela de navegação seque completamente.
 
-## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>posso usar qualquer limpador de lentes para limpar o HoloLens visor?
+## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>Posso usar qualquer limpeza de lente para limpar a HoloLens visor?
 
-Não. Limpezas de lentes podem ser abrasivedas para as revestidos no visor. Para limpar o visor, siga estas etapas:  
+Não. Os produtos de limpeza de lente podem ser abrasivos para os riscos no visor. Para limpar o visor, siga estas etapas:  
 
-1. Remova qualquer poeira usando um pano seco sem fiapos microfiber para apagar com cuidado o visor.
-1. Levemente moisten um pano usando a "70%" de medicina médica e, em seguida, apague o visor com cuidado.
-1. Deixe o visor seco completamente.
+1. Remova qualquer lixo usando uma máscara de microfibra sem lint para apagar o visor.
+1. Amenização leve de uma pessoa usando o isopropílico "70%" médico e, em seguida, apaga o visor.
+1. Deixe o visor seque completamente.
 
-## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Posso usar os apagamentos desinfectados para limpar o dispositivo?
+## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Posso usar apagamentos de limpeza para limpar o dispositivo?
 
-Sim, se os apagamentos não contiverem Bleach. você pode usar apagamentos que não são bleachs para [apagar com cuidado as superfícies de HoloLens](#hololens-2-use-and-care).  
-
-> [!CAUTION]  
-> evite usar apagamentos desinfectados que contenham bleach para limpar as superfícies de HoloLens. É aceitável usar apagamentos Bleach em situações críticas, quando nada mais estiver disponível. no entanto, bleach pode danificar o visor HoloLens ou outras superfícies.
-
-## <a name="can-i-use-alcohol-to-clean-the-device"></a>Posso usar álcool para limpar o dispositivo?
-
-Sim. Você pode usar uma solução de "70%" isopropyl de álcool e água para limpar as superfícies rígidas do dispositivo, incluindo o visor. Levemente moisten o pano usando uma mistura de álcool e água isopropyl e, em seguida, apagar com cuidado a superfície do dispositivo
-
-## <a name="is-the-brow-pad-replaceable"></a>O naveg pad é substituível?
-
-Sim. O naveg pad é anexado magneticamente ao dispositivo. Para desanexá-lo, puxe-o levemente para longe do headband. Para substituí-lo, encaixe-o novamente no lugar.
-
-![Remova ou substitua o naveg pad.](images/hololens2-remove-browpad.png)
-
-## <a name="how-can-i-clean-the-brow-pad"></a>Como posso limpar o naveg pad?
-
-Para limpar o naveg pad, apague-o usando um pano moistened usando água e um leve Antibiotic SOAP. Deixe o naveg pad secar completamente antes de usá-lo novamente.
-
-## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Posso usar a luz Ultraviolet (UV) para limpar o dispositivo?
-
-UVC Irradiance usando UVC LED, que opera em 265nm no nível de intensidade de 0,5-0,6 mW/cm<sup>2</sup>e não emite ozônio, pode ser usado para limpar o HoloLens2. Siga as especificações do fabricante sobre o tempo de manuseio e exposição.
+Sim, se os apagadores não contêm a contenção. Você pode usar apagamentos que não são de limpeza para apagar [as superfícies HoloLens .](#hololens-2-use-and-care)  
 
 > [!CAUTION]  
-> Os altos níveis de exposição UV-A e UV-B podem degradar a qualidade de vídeo do dispositivo e danificar o revestimento do visor. A exposição de excesso para a UV-A e a radiação UV-B têm os seguintes efeitos, em ordem de duração e intensidade de exposição:
+> Evite usar apagamentos de limpeza que contenham cobertura para limpar as superfícies HoloLens limpeza. É aceitável usar apagadores de limpeza em situações críticas, quando não há mais nada disponível. No entanto, o dano pode danificar o HoloLens visor ou outras superfícies.
+
+## <a name="can-i-use-alcohol-to-clean-the-device"></a>Posso usar o alcoólico para limpar o dispositivo?
+
+Sim. Você pode usar uma solução de "70%" isopropílico e água para limpar as superfícies duras do dispositivo, incluindo o visor. Melhore ligeiramente a comida usando uma combinação de água e isopropílico e, em seguida, apaga a superfície do dispositivo
+
+## <a name="is-the-brow-pad-replaceable"></a>O painel de navegação é substituível?
+
+Sim. O painel de navegação é anexado magneticamente ao dispositivo. Para desagruá-lo, esvace-o para fora do faixa de cabeça. Para substituí-lo, encaixe-o novamente no lugar.
+
+![Remova ou substitua o painel de navegação.](images/hololens2-remove-browpad.png)
+
+## <a name="how-can-i-clean-the-brow-pad"></a>Como limpar o painel de navegação?
+
+Para limpar o painel de navegação, limpe-o usando um panorramado que é apagado usando água e um soap de água suave. Deixe o painel de navegação seque completamente antes de usá-lo novamente.
+
+## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Posso usar a luz (UV) para sanitizar o dispositivo?
+
+UVC que usa o LED UVC ou a luz UVC filtrada, que opera no nível de intensidade de 0,5-0,6 mW/cm2 e não emite ozone, pode ser usado para sanitizar HoloLens 2. Siga as especificações do fabricante sobre o tempo de manipulação e exposição.
+
+> [!CAUTION]  
+> Altos níveis de exposição UV-A e UV-B podem prejudicar a qualidade de exibição do dispositivo e danificar a cobertura do visor. A exposição excessiva à radiação UV-A e UV-B tem os seguintes efeitos, na ordem da duração e da intensidade da exposição:
 >  
-> 1. O painel de naveg e os fechamentos de dispositivo se tornam descoloridos.
-> 1. Os defeitos aparecem no revestimento anti-reflexivo (AR) no visor e nas janelas do sensor.
-> 1. Os defeitos aparecem nos materiais básicos do visor e nas janelas do sensor.
+> 1. O painel de navegação e os fechamentos do dispositivo ficam descolorido.
+> 1. Defeitos aparecem na capa anti-reflexiva (AR) no visor e nas janelas do sensor.
+> 1. Defeitos aparecem nos materiais base do visor e nas janelas do sensor.
 > 1. Exibir degradações de desempenho.
 
-## <a name="is-the-rear-pad-replaceable"></a>O painel traseiro é substituível?
+## <a name="is-the-rear-pad-replaceable"></a>O painel de fundo é substituível?
 
 Não.

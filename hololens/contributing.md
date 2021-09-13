@@ -7,11 +7,11 @@ ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
 ms.openlocfilehash: d511156d6940574deda7448a6f634c0004b8f053
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123188977"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031914"
 ---
 # <a name="contributing-to-the-hololens-documentation"></a>contribuindo para a documentação de HoloLens
 
@@ -81,9 +81,9 @@ Use o fluxo de trabalho a seguir para fazer atualizações em *um artigo existen
 
 ## <a name="renaming-or-deleting-an-existing-article"></a>Renomeando ou excluindo um artigo existente
 
-Se sua alteração for renomear ou excluir um artigo existente, certifique-se de adicionar um redirecionamento. Dessa forma, qualquer pessoa com um link para o artigo existente ainda será encerrada no lugar certo. Os redirecionamentos são gerenciados pelo .openpublishing.redirection.jsno arquivo na raiz do repositório.
+Se sua alteração for renomear ou excluir um artigo existente, certifique-se de adicionar um redirecionamento. Dessa forma, qualquer pessoa com um link para o artigo existente ainda será encerrada no lugar certo. Os redirecionamentos são gerenciados pelo arquivo. openpublishing. Redirecting. JSON na raiz do repositório.
 
-Para adicionar um redirecionamento para .openpublishing.redirection.jsem, adicione uma entrada à `redirections` matriz:
+Para adicionar um redirecionamento a. openpublishing. redirectment. JSON, adicione uma entrada à `redirections` matriz:
 
 ```json
 {
@@ -178,10 +178,10 @@ Você precisará carregar suas imagens na pasta "mixed-reality-docs/images" no r
 
 ## <a name="previewing-your-work"></a>Visualizando seu trabalho
 
-Durante a edição no GitHub por meio de  um navegador da Web, você pode selecionar a guia Visualização na parte superior da página para visualizar seu trabalho antes de se comprometer. 
+Durante a edição no GitHub por meio de um  navegador da Web, você pode selecionar a guia Visualização na parte superior da página para visualizar seu trabalho antes de se comprometer. 
 
 >[!NOTE]
->Visualizar as alterações no review.docs.microsoft.com está disponível apenas para os funcionários da Microsoft
+>Visualizar suas alterações no review.docs.microsoft.com está disponível apenas para funcionários da Microsoft
 
 Funcionários da Microsoft: quando suas contribuições foram mescladas no branch _padrão,_ mestre , você pode revisar o conteúdo antes que ele seja público em </hololens?branch=master>. Encontre seu artigo usando o tabela de conteúdo na coluna à esquerda.
 

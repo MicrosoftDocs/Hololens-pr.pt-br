@@ -14,11 +14,11 @@ ms.custom:
 - CSSTroubleshooting
 keywords: problemas, bug, solução de problemas, correção, ajuda, suporte, HoloLens, emulador
 ms.openlocfilehash: 6ac86acf85e8e4fc1b97473732ea358d3d612d12
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190014"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032019"
 ---
 # <a name="device-troubleshooting"></a>Solução de problemas de dispositivo
 
@@ -286,23 +286,23 @@ as informações sobre o emulador de HoloLens estão localizadas em nossa docume
 
 se Cortana não estiver respondendo aos seus comandos de voz, verifique se Cortana está ativado. na lista todos os aplicativos, selecione **Cortana**  >    >  **bloco de anotações** do Menu  >  **Configurações** para fazer alterações. Para saber mais sobre o que você pode dizer, consulte [usar sua voz com HoloLens](hololens-cortana.md).
 
-No HoloLens (1ª geração), o reconhecimento de fala integrado não é configurável. Ele está sempre ligado. No HoloLens 2, você pode optar por ativar o reconhecimento de fala e Cortana durante a instalação do dispositivo.
+Na HoloLens (1ª geração), o reconhecimento de fala integrado não é configurável. Ele está sempre ligado. No HoloLens 2, você pode optar por ativar o reconhecimento de fala e Cortana durante a instalação do dispositivo.
 
-Se o HoloLens 2 não estiver respondendo à sua voz, certifique-se de que o reconhecimento de fala está ligado. Vá para **Iniciar Configurações**  >    >  **de**  >  **Privacidade e** ativar o Reconhecimento **de Fala.**
+Se o HoloLens 2 não estiver respondendo à sua voz, certifique-se de que o reconhecimento de fala está ligado. Vá para **Iniciar Configurações**  >    >  **De**  >  **Privacidade e** ativar o Reconhecimento **de Fala.**
 
 [Voltar para a lista](#list)
 
 ## <a name="hand-input-isnt-working"></a>A entrada da mão não está funcionando
 
 Para garantir que HoloLens possa ver suas mãos, você precisa mantê-las no quadro de gestos.  A Página De Realidade Misturada fornece comentários que permitem saber quando suas mãos são rastreadas.  Os comentários são diferentes em diferentes versões do HoloLens:
-- Na HoloLens (1ª geração), o cursor de olhar muda de um ponto para um anel
+- No HoloLens (1ª geração), o cursor de olhar muda de um ponto para um anel
 - No HoloLens 2, um cursor de ponta do dedo aparece quando sua mão está perto de um slate e um raio de mão aparece quando os slates estão mais distantes
 
 Muitos aplicativos imersivos seguem padrões de entrada semelhantes à Home de Realidade Misturada.  Saiba mais sobre como usar a entrada manual [HoloLens (1ª geração)](hololens1-basic-usage.md#use-hololens-with-your-hands) [e HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
 
 Se você estiver usando óculos, observe que alguns tipos de óculos não funcionam com o acompanhamento de mão.  Um exemplo comum são as máscaras de borracha preta, que tendem a absorver a luz e não são escolhidas pela câmera de profundidade.  Se seu trabalho envolve óculos de borracha, recomendamos tentar uma cor mais clara, como azul ou cinza.  Outro exemplo são grandes óculos de escuro, que tendem a obscurecer a forma da sua mão. Recomendamos o uso de máscaras que sejam o mais adequado possível para melhores resultados.
 
-Se o visor tiver impressões digitais ou marcas de impressão digital, use a limpeza de microfibra que veio com a HoloLens para limpar o visor.
+Se o visor tiver impressões digitais ou impressões digitais, use a limpeza de microfibra que veio com a HoloLens para limpar a lente do visor.
 
 [Voltar para a lista](#list)
 
@@ -310,7 +310,7 @@ Se o visor tiver impressões digitais ou marcas de impressão digital, use a lim
 
 Aqui estão algumas ações que você pode tentar se não conseguir conectar seu HoloLens a uma rede Wi-Fi:
 
-- Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar e selecione **Configurações**  >  **Rede &amp;**  >  **Wi-Fi da Internet.** Se o Wi-Fi estiver ligado, tente desligá-lo e, em seguida, ligue novamente.
+- Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar e selecione **Configurações**  >  **Rede &amp;**  >  **Wi-Fi da** Internet. Se o Wi-Fi estiver ligado, tente desligá-lo e, em seguida, ligue novamente.
 - Aproxime-se do roteador ou do ponto de acesso.
 - Reinicie o roteador Wi-Fi e, em [seguida, reinicie HoloLens](hololens-recovery.md). Tente se conectar novamente.
 - Se nenhuma dessas ações funcionar, verifique se o roteador está usando o firmware mais recente. Você pode encontrar essas informações no site do fabricante.
@@ -322,7 +322,7 @@ Aqui estão algumas ações que você pode tentar se não conseguir conectar seu
 Se você estiver tendo problemas para [emparelhar um dispositivo Bluetooth ,](hololens-connect-devices.md)tente o seguinte:
 
 - Vá para **Configurações**  >  **Dispositivos** e certifique-se de que Bluetooth está ligado. Se estiver, desligue-o e ligue-o novamente.
-- Certifique-se de que Bluetooth dispositivo está totalmente carregado ou tem baterias novas.
+- Certifique-se de que Bluetooth dispositivo está totalmente carregado ou se tem baterias novas.
 - Se você ainda não conseguir se conectar, [reinicie o HoloLens](hololens-recovery.md).
 
 [Voltar para a lista](#list)
@@ -330,13 +330,13 @@ Se você estiver tendo problemas para [emparelhar um dispositivo Bluetooth ,](ho
 ## <a name="usb-c-microphone-isnt-working"></a>O microfone USB-C não está funcionando
 Esteja ciente de que alguns microfones USB-C relatam-se incorretamente como um microfone *e um* alto-falante. Esse é um problema com o microfone e não com HoloLens. Ao conectar um desses microfones ao HoloLens, o som pode ser perdido. Felizmente, há uma correção simples.  
 
-No **Configurações** system sound , de definir explicitamente os  ->    ->  alto-falantes integrados **(Driver de** Áudio de Recurso Análogo) como **o dispositivo padrão**. HoloLens deve se lembrar dessa configuração mesmo que o microfone seja removido e reconectado posteriormente.
+No **Configurações** Do Sistema , de definir explicitamente os  ->    ->  alto-falantes integrados **(Driver de** Áudio de Recurso Análogo) como **o dispositivo padrão**. HoloLens deve se lembrar dessa configuração mesmo que o microfone seja removido e reconectado posteriormente.
 
 ![Solução de problemas de microfones USB-C.](images/usbc-mic-4.png)
 
 ## <a name="devices-listed-as-available-in-settings-dont-work"></a>Os dispositivos listados como disponíveis Configurações não funcionam
 
-HoloLens (1ª geração) não dá suporte a Bluetooth de áudio. Bluetooth de áudio, como alto-falantes e headsets, podem aparecer como disponíveis nas HoloLens configurações, mas não têm suporte.
+HoloLens (1ª geração) não dá suporte a Bluetooth de áudio. Bluetooth de áudio, como alto-falantes e headsets, podem aparecer como disponíveis em HoloLens configurações, mas não têm suporte.
 
 HoloLens 2 dá suporte ao perfil Bluetooth áudio A2DP para reprodução estéreo. O Bluetooth de mãos livres que permite a captura de microfone de um periférico Bluetooth não tem suporte no HoloLens 2.
 
@@ -346,6 +346,6 @@ Se você estiver tendo problemas para usar um Bluetooth, certifique-se de que el
 - Bluetooth mouses.
 - O [HoloLens clique em](hololens1-clicker.md).
 
-Você pode emparelhar outros Bluetooth HID e GATT com seu HoloLens. No entanto, talvez seja preciso instalar aplicativos de parceiros correspondentes do Microsoft Store para realmente usar os dispositivos.
+Você pode emparelhar outros Bluetooth dispositivos HID e GATT com seu HoloLens. No entanto, talvez seja preciso instalar aplicativos de parceiros correspondentes Microsoft Store para realmente usar os dispositivos.
 
 [Voltar para a lista](#list)

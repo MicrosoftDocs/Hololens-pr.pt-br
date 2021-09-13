@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: d6eb706c50e97a81910180c70be1d9dbc52bc6603cbc77ad130c1dd3b6a9010e
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 4840535030cc81f222cb25357474f1c751426e91
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661816"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032002"
 ---
 # <a name="restart-reset-or-recover-hololens-1st-gen"></a>reiniciar, redefinir ou recuperar HoloLens (1ª Gen)
 
@@ -142,8 +142,8 @@ Se o dispositivo não for detectado, siga estas etapas para colocá-lo no modo f
 
 1. Desconecte o dispositivo de qualquer fonte de energia.
 1. Se o dispositivo estiver ligado, mantenha o botão de **energia** pressionado até que ele seja completamente desligado.
-2. Mantenha o **botão de volume pressionado** e toque brevemente no botão **de** energia. O dispositivo deve iniciar e exibir apenas o LED do meio.
-3. Conecte o dispositivo ao computador.
-4. Abra a ferramenta Windows recuperação de dispositivo.
-5. Selecione **Meu dispositivo não foi detectado e,** em **seguida, HoloLens**. 
-6. Siga as instruções para recuperar seu dispositivo.
+2. Mantenha o botão do **volume** pressionado e toque brevemente no botão de **energia** . O dispositivo deve iniciar e exibir apenas o LED do meio.
+3. Conecte o dispositivo ao seu PC.
+4. abra a ferramenta de recuperação de dispositivo Windows.
+5. Selecione **meu dispositivo não foi detectado** e, em seguida, **HoloLens**. 
+6. Siga as instruções para recuperar o dispositivo.

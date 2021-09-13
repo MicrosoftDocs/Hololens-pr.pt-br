@@ -1,6 +1,6 @@
 ---
 title: Desbloquear os recursos do Windows Holographic for Business
-description: Quando você atualiza para Windows Holographic for Business, HoloLens fornece recursos adicionais projetados para empresas.
+description: Quando você atualiza para Windows Holographic for Business, o HoloLens fornece recursos adicionais projetados para empresas.
 ms.prod: hololens
 ms.sitesec: library
 author: dansimp
@@ -13,11 +13,11 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: c6d1225dc6da1c039a34fc2782f23330ae40f280
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189181"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031998"
 ---
 # <a name="unlock-windows-holographic-for-business-features"></a>Desbloquear os recursos do Windows Holographic for Business
 
@@ -35,7 +35,7 @@ Ao comprar o Commercial Suite, você recebe uma licença que atualiza o Windows 
 
 A licença corporativa pode ser aplicada por qualquer provedor MDM que dê suporte ao [CSP (provedor de serviços de configuração) WindowsLicensing](https://msdn.microsoft.com/library/windows/hardware/dn904983.aspx). A versão mais recente da API Microsoft MDM dará suporte ao CSP WindowsLicensing.
 
-Para obter instruções passo a passo para atualizar o HoloLens usando o Microsoft Intune, consulte Atualizar dispositivos executando Windows [Holographic](/intune/holographic-upgrade)para Windows Holographic for Business .
+Para obter instruções passo a passo para atualizar o HoloLens usando o Microsoft Intune, consulte Atualizar dispositivos que executam Windows [Holographic](/intune/holographic-upgrade)para Windows Holographic for Business .
 
  Em outros provedores MDM, as etapas específicas para configurar e implantar a política podem variar.
 
@@ -85,14 +85,14 @@ Pacotes de provisionamento são arquivos criados pela ferramenta Designer de Con
 
 ### <a name="apply-the-provisioning-package-to-hololens"></a>Aplicar o pacote de provisionamento ao HoloLens
 
-1. Usando o cabo USB, conecte o dispositivo a um computador. Inicie o dispositivo, mas não continue após a página **de** ajuste da experiência de configuração inicial (a primeira página com a caixa azul). No pc, HoloLens aparece como um dispositivo no Explorador de Arquivos.
+1. Usando o cabo USB, conecte o dispositivo a um computador. Inicie o dispositivo, mas não continue após a página **de** ajuste da experiência de configuração inicial (a primeira página com a caixa azul). No computador, HoloLens aparece como um dispositivo no Explorador de Arquivos.
 
     > [!NOTE]
-    > Se o dispositivo HoloLens estiver executando o Windows 10, versão 1607 ou anterior, abra o Explorador de Arquivos pressionando brevemente e liberando os botões **Volume Down** e **Power** simultaneamente no dispositivo.
+    > Se o HoloLens estiver executando o Windows 10, versão 1607 ou anterior, abra o Explorador de Arquivos pressionando brevemente e liberando os botões **Volume Down** e **Power** simultaneamente no dispositivo.
 
 1. No Explorador de Arquivos, arraste e solte o pacote de provisionamento (.ppkg) no armazenamento do dispositivo.
 
-1. Enquanto HoloLens ainda estiver na  página de ajuste, pressione e solte rapidamente os botões **Volume Down** e **Power** simultaneamente novamente.
+1. Enquanto HoloLens ainda estiver na página **de** ajuste, pressione e solte os botões **Volume Down** e **Power** simultaneamente novamente.
 
 1. HoloLens pergunta se você confia no pacote e gostaria de aplicá-lo. Confirme que você confia no pacote.
 

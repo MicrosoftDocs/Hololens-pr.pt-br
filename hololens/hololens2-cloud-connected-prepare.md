@@ -1,7 +1,7 @@
 ---
 title: Guia de implantação – Implantação HoloLens 2 conectada à nuvem em escala com o Remote Assist – Preparar
 description: Saiba como se preparar para registrar dispositivos HoloLens em uma rede conectada à nuvem usando o Azure Active Directory e o gerenciamento de identidades.
-keywords: HoloLens, gerenciamento, nuvem conectada, Assistência Remota, AAD, Azure AD, MDM, Mobile Gerenciamento de Dispositivos
+keywords: HoloLens, gerenciamento, nuvem conectada, Assistência Remota, AAD, Azure AD, MDM, Dispositivo móvel Gerenciamento de Dispositivos
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f6c2e514024a171661b182a310145e26280e114a1cff65ef5b03b16feae8371a
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 21fffdc24f8682bc44779e1cebe8cd6eacb59619
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660165"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031986"
 ---
 # <a name="prepare---cloud-connected-guide"></a>Preparar – Guia conectado à nuvem
 
-Ao final deste artigo, você terá configurar o Azure AD, o MDM e entender mais sobre como usar as contas do Azure AD e os requisitos de rede. Esta seção do guia ajudará você e sua organização a se prepararem para implantar o HoloLens 2 na nuvem e usar o Dynamics 365 Remote Assist. Ele vai sobre a importância de cada parte de sua infraestrutura, bem como fornecer links para guias para ajudá-lo a configurar essas partes conforme necessário.
+Ao final deste artigo, você terá configurar o Azure AD, o MDM e entender mais sobre como usar as contas do Azure AD e os requisitos de rede. Esta seção do guia ajudará você e sua organização a se prepararem para implantar HoloLens 2 na nuvem e usar o Dynamics 365 Remote Assist. Ele vai sobre a importância de cada parte de sua infraestrutura, bem como fornecer links para guias para ajudá-lo a configurar essas partes conforme necessário.
 
 ## <a name="infrastructure-essentials"></a>Infrastructure Essentials
 
@@ -34,11 +34,11 @@ Para cenários de implantação pessoal e corporativa, um sistema MDM é a infra
 O Azure AD é um serviço de diretório baseado em nuvem que fornece gerenciamento de identidade e acesso. As organizações que usam o Microsoft Office 365 ou o Intune já estão usando o Azure AD, que tem três edições: Gratuita, Premium P1 e Premium P2 (consulte [Azure Active Directory edições](https://azure.microsoft.com/documentation/articles/active-directory-editions).) Todas as edições são suportadas pelo registro de dispositivo do Azure AD, mas Premium P1 é necessário para habilitar o registro automático do MDM, que será usado neste guia posteriormente.
 
 > [!IMPORTANT]
-> É essencial ter um Azure Active Directory, pois HoloLens dispositivos não são compatíveis com a junção do AD local. Se você ainda&#39;tiver uma Azure Active Directory configurada, acesse Criar um novo locatário [no Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+> É essencial ter um Azure Active Directory, pois HoloLens dispositivos não são compatíveis com a junção do AD local. Se você ainda&#39;tiver uma Azure Active Directory configurada, vá para Criar um novo locatário [no Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 
 ## <a name="identity-management"></a>Gerenciamento de Identidades
 
-Os funcionários podem usar apenas uma conta para inicializar um dispositivo,&#39;que sua organização controle qual conta está habilitada primeiro. A conta escolhida determinará quem controla o dispositivo e influencia seus recursos de gerenciamento.
+Os funcionários podem usar apenas uma conta para inicializar um dispositivo para&#39;que sua organização controle qual conta está habilitada primeiro. A conta escolhida determinará quem controla o dispositivo e influencia seus recursos de gerenciamento.
 
 Neste guia, optemos por que, para a [Identidade](/hololens/hololens-identity) usada, usaremos contas do Azure AD ou Azure Active Directory contas. Há vários benefícios para contas do Azure AD que queremos usar, como:
 
@@ -48,7 +48,7 @@ Neste guia, optemos por que, para a [Identidade](/hololens/hololens-identity) us
 
 ### <a name="mobile-device-management"></a>Gerenciamento do Dispositivo Móvel
 
-O Microsoft [Intune](/mem/intune/fundamentals/what-is-intune), parte do Enterprise Mobility + Security, é um sistema MDM baseado em nuvem que gerencia dispositivos conectados ao seu locatário. Assim como Office 365, o Intune usa o Azure AD para gerenciamento de identidades, portanto, os funcionários usam as mesmas credenciais para registrar dispositivos no Intune que eles usam para entrar no Office 365. O Intune também dá suporte a dispositivos que executem outros sistemas operacionais, como iOS e Android, para fornecer uma solução de MDM completa. Para os fins deste guia,&#39;nos concentraremos no uso do Intune para habilizar uma implantação de nuvem em escala com HoloLens 2.
+O Microsoft [Intune](/mem/intune/fundamentals/what-is-intune), parte do Enterprise Mobility + Security, é um sistema MDM baseado em nuvem que gerencia dispositivos conectados ao seu locatário. Assim como Office 365, o Intune usa o Azure AD para gerenciamento de identidades, portanto, os funcionários usam as mesmas credenciais para registrar dispositivos no Intune que usam para entrar no Office 365. O Intune também dá suporte a dispositivos que executem outros sistemas operacionais, como iOS e Android, para fornecer uma solução de MDM completa. Para os fins deste guia,&#39;nos concentraremos no uso do Intune para habilizar uma implantação de nuvem em escala com HoloLens 2.
 
 > [!IMPORTANT]
 > É essencial ter dispositivos móveis Gerenciamento de Dispositivos. Se você ainda&#39;já o tiver definido, siga este guia e [Começar a trabalhar com o Intune.](/mem/intune/fundamentals/free-trial-sign-up)
@@ -73,7 +73,7 @@ Mais informações:
 
 ### <a name="optional-connect-your-hololens-to-vpn"></a>Opcional: Conexão seu HoloLens para VPN
 
-Os dispositivos que estão sendo conectados a este guia se conectarão à rede por meio da rede externa e da rede de nuvem externa. Pode ser que para acessar os recursos da empresa&#39;você precisará conectar seus dispositivos por meio de VPN. Há várias maneiras diferentes de conectar seus dispositivos à VPN, em que o usuário final pode se conectar usando a interface do usuário do dispositivo ou os dispositivos podem ser gerenciados e receber o perfil VPN de um PPKG ou MDM. Como configurar a VPN não&#39;será abordado neste artigo, portanto&#39;, se você quiser saber mais sobre os diferentes protocolos VPN ou maneiras de gerenciar a VPN, visite estes guias para obter informações sobre o HoloLens [e VPN.](/hololens/hololens-network#vpn)
+Os dispositivos que estão sendo conectados a este guia se conectarão à rede por meio da rede externa e da rede de nuvem externa. Pode ser que para acessar os recursos da empresa&#39;você precisará conectar seus dispositivos via VPN. Há várias maneiras diferentes de conectar seus dispositivos à VPN, em que o usuário final pode se conectar usando a interface do usuário do dispositivo ou os dispositivos podem ser gerenciados e receber o perfil VPN de um PPKG ou MDM. Como configurar a VPN não&#39;será abordado neste artigo, portanto&#39;, se você quiser saber mais sobre os diferentes protocolos VPN ou maneiras de gerenciar a VPN, visite estes guias para obter informações sobre HoloLens [e VPN.](/hololens/hololens-network#vpn)
 
 ## <a name="next-step"></a>Próxima etapa
 

@@ -1,6 +1,6 @@
 ---
-title: Usar o HoloLens clique
-description: Este artigo descreve como usar o HoloLens clique, incluindo o emparelhamento, a cobrança e a recuperação do clicker.
+title: usar o HoloLens clicador
+description: este artigo descreve como usar o HoloLenser, incluindo o emparelhamento do cliquer, o carregamento e a recuperação.
 ms.assetid: 7d4a30fd-cf1d-4c9a-8eb1-1968ccecbe59
 ms.date: 09/16/2019
 manager: jarrettr
@@ -14,99 +14,99 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 98ec5795974fa242225bb1048ead41892d8296e4
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189946"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032017"
 ---
 # <a name="use-the-hololens-1st-gen-clicker"></a>Usar o clicker do HoloLens (1ª geração)
 
-O clicker foi projetado especificamente para HoloLens (1ª geração) e oferece outra maneira de interagir com hologramas. Ele vem com HoloLens (1ª geração), em uma caixa separada.
+o clicer foi projetado especificamente para HoloLens (1ª gen) e oferece a você outra maneira de interagir com os hologramas. ele vem com HoloLens (1ª gen), em uma caixa separada.
 
-Use-o no lugar de gestos de mão para selecionar, rolar, mover e reorganizar aplicativos.
+Use-o em vez de gestos de mão para selecionar, rolar, mover e redimensionar aplicativos.
 
-## <a name="clicker-hardware-and-pairing"></a>Emparelhamento e hardware do clicker
+## <a name="clicker-hardware-and-pairing"></a>Hardware e emparelhamento do clique
 
-O HoloLens (1ª geração) tem um loop de dedo para facilitar a espera e uma luz indicadora.
+o acessador de HoloLens (1ª gen) tem um loop de dedo para tornar mais fácil de manter e uma luz de indicador.
 
-![O HoloLens Clicker.](images/use-hololens-clicker-1.png)
+![o HoloLens clicador.](images/use-hololens-clicker-1.png)
 
-### <a name="clicker-indicator-lights"></a>Luzes indicadoras do clicker
+### <a name="clicker-indicator-lights"></a>Luzes do indicador do clique
 
-Veja o que significam as luzes no clique.
+Veja o que as luzes do clicador significam.
 
-- **Piscando em branco.** O clique está no modo de emparelhamento.
-- **Branco piscando rapidamente.** O emparelhamento foi bem-sucedido.
-- **Branco sólido.** O clique está carregando.
-- **Piscando em amarelo.** A bateria está baixa.
-- **Aminhado sólido.** O clique encontrou um erro e você precisará reiniciá-lo. Ao pressionar o botão de emparelhamento, clique e mantenha pressionado por 15 segundos.
+- **Branco piscando**. O clico está no modo de emparelhamento.
+- **Branco piscando rapidamente**. O emparelhamento foi bem-sucedido.
+- **Branco sólido**. O clicador está carregando.
+- **Âmbar piscando**. A bateria está baixa.
+- **Âmbar estável**. O clicador encontrou um erro e você precisará reiniciá-lo. Ao pressionar o botão de emparelhamento, clique e mantenha pressionado por 15 segundos.
 
-### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>Emparelhar o clique com seu HoloLens (1ª geração)
+### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>emparelhe o clico com seu HoloLens (1ª gen)
 
-1. Use o gesto de bloom para ir para **Iniciar** e, em seguida, **selecione Configurações**  >  **Dispositivos** e verifique se Bluetooth está em.
-1. No clique, pressione e mantenha pressionado o botão de emparelhamento até que a luz de status pisque em branco.
-1. Na tela de emparelhamento, selecione **Par de**  >  **Cliques**.
+1. Use o gesto de cair para ir até **iniciar**, selecione **Configurações**  >  **dispositivos** e verifique se Bluetooth está ativado.
+1. No clico, pressione e segure o botão de emparelhamento até que a luz de status pisque branca.
+1. Na tela de emparelhamento, selecione par de **clico**  >  .
 
-### <a name="charge-the-clicker"></a>Cobrar o clicker
+### <a name="charge-the-clicker"></a>Cobrar o cliquedor
 
-Quando a bateria do clicker estiver baixa, o indicador de bateria piscará em amarelo. Conecte o cabo Micro USB a uma fonte de alimentação USB para carregar o dispositivo.
+Quando a bateria do clicer estiver baixa, o indicador de bateria piscará em âmbar. Conecte o cabo micro USB a uma fonte de alimentação USB para cobrar o dispositivo.
 
-## <a name="use-the-clicker-with-hololens-1st-gen"></a>Usar o clicker com HoloLens (1ª geração)
+## <a name="use-the-clicker-with-hololens-1st-gen"></a>usar o clico com HoloLens (1ª gen)
 
-### <a name="hold-the-clicker"></a>Mantenha o botão de clique
+### <a name="hold-the-clicker"></a>Mantenha o botão do clique
 
-Para colocar o clique, deslize o loop sobre o anel ou o dedo médio para que a porta Micro USB seja voltada para o pulso. Desinforma o polegar no recuo.
+Para colocar no clicador, deslize o loop sobre o anel ou o dedo médio para que a porta micro USB se Oriente para o pulso. Apóie seu polegar no recuo.
 
-![Como manter o Clicker.](images/use-hololens-clicker-2.png)
+![Como manter o Clicer.](images/use-hololens-clicker-2.png)
 
 ### <a name="clicker-gestures"></a>Gestos de clique
 
-Gestos de clique são pequenas rotações de pulso, não os movimentos maiores usados para HoloLens gestos de mão. E HoloLens reconhece seus gestos e clica mesmo se o [](hololens1-basic-usage.md)clique estiver fora do quadro de gestos, para que você possa manter o clique na posição mais confortável para você.
+gestos de clique são pequenas rotações de pulsos, e não os movimentos maiores usados para gestos de HoloLens mão. e HoloLens reconhece seus gestos e cliques mesmo se o clicador estiver fora do [quadro de gesto](hololens1-basic-usage.md), para que você possa manter o clique na posição mais confortável para você.
 
-- **Selecione**. Para selecionar um holograma, botão ou outro elemento, aleia-o e clique nele.
+- **Selecione**. Para selecionar um holograma, um botão ou outro elemento, olhar-o e clique em.
 
-- **Clique e segure**. Clique e mantenha o polegar pressionado no botão para fazer algumas das mesmas coisas que você faria com toque e segurar, como mover ou ressarcar um holograma.
+- **Clique e mantenha pressionado**. Clique e mantenha seu polegar sobre o botão para fazer algumas das mesmas coisas que você faria com tocar e segurar, como mover ou redimensionar um holograma.
 
-- **Role**. Na barra de aplicativos, selecione **Ferramenta de Rolagem**. Clique e segure e, em seguida, gire o clique para cima, para baixo, para a esquerda ou para a direita. Para rolar mais rapidamente, mova a mão para mais longe do centro da ferramenta de rolagem.
+- **Role**. Na barra de aplicativos, selecione **ferramenta de rolagem**. Clique e mantenha pressionado, em seguida, gire o clique do mouse para cima, para baixo, para a esquerda ou para a direita. Para rolar mais rapidamente, mova-o para longe do centro da ferramenta de rolagem.
 
-- **Zoom**. Na barra de aplicativos, selecione **Ferramenta de Zoom.** Clique e segure e, em seguida, gire o clique para cima para ampliar ou reduzir para reduzir.
+- **Zoom**. Na barra de aplicativos, selecione **ferramenta de zoom**. Clique e mantenha pressionado, em seguida, gire o clique para cima para ampliar ou reduzir para reduzir.
 
 > [!TIP]
-> Para ampliar ou reduzir ao usar Microsoft Edge, afoba uma página e clique duas vezes.
+> para ampliar ou reduzir ao usar Microsoft Edge, olhar em uma página e clique duas vezes.
 
-## <a name="im-having-problems-using-the-hololens-clicker"></a>Estou tendo problemas ao usar o HoloLens clique
+## <a name="im-having-problems-using-the-hololens-clicker"></a>estou tendo problemas ao usar o HoloLens cliquedor
 
-Use o [clique para](hololens1-clicker.md) selecionar, rolar, mover e resize hologramas. Aplicativos individuais podem dar suporte a gestos de clique adicionais.
+Use o [clicador](hololens1-clicker.md) para selecionar, rolar, mover e redimensionar hologramas. Aplicativos individuais podem dar suporte a gestos de clique adicionais.
 
-Se você estiver tendo problemas para usar o clique, certifique-se de que ele seja cobrado e emparelhado com seu HoloLens. Se a bateria estiver baixa, a luz indicadora piscará em amarelo. Para verificar se o clique está emparelhado, vá para Configurações  >  **Dispositivos** e veja se ele aparece lá. Para obter mais informações, [consulte Emparelhar o clicador](hololens1-clicker.md).
+Se você tiver problemas ao usar o clicer, certifique-se de que ele seja cobrado e emparelhado com seu HoloLens. Se a bateria estiver baixa, a luz do indicador piscará em âmbar. para verificar se o clico está emparelhado, vá para **Configurações**  >  **dispositivos** e veja se ele aparece lá. Para obter mais informações, consulte [emparelhar o cliquedor](hololens1-clicker.md).
 
-Se o clique for cobrado e emparelhado e você ainda estiver tendo problemas, redefini-lo mantendo o botão principal pressionado e o botão de emparelhamento por 15 segundos. Em seguida, emparelhe o clique com seu HoloLens novamente.
+Se o clicador for cobrado e emparelhado e você ainda tiver problemas, redefina-o mantendo o botão principal e o botão de emparelhamento por 15 segundos. em seguida, emparelhe o clico com sua HoloLens novamente.
 
-Se a redefinição do clicker não ajudar, consulte Reiniciar ou recuperar o HoloLens [clique.](hololens1-clicker.md#restart-or-recover-the-clicker)
-## <a name="restart-or-recover-the-clicker"></a>Reiniciar ou recuperar o clicker
+se a redefinição do clicador não ajudar, consulte [reiniciar ou recuperar o HoloLens clique](hololens1-clicker.md#restart-or-recover-the-clicker).
+## <a name="restart-or-recover-the-clicker"></a>Reiniciar ou recuperar o clicador
 
-Aqui estão algumas coisas para tentar se o HoloLens clique não está respondendo ou não está funcionando bem.
+aqui estão algumas coisas a serem experimentadas se o HoloLens clicador não estiver respondendo ou não estiver funcionando bem.
 
-### <a name="restart-the-clicker"></a>Reiniciar o clicker
+### <a name="restart-the-clicker"></a>Reiniciar o clicador
 
-Use a dica de uma caneta para pressionar e manter o botão de emparelhamento pressionado. Ao mesmo tempo, clique e segure o clique por 15 segundos. Se o clique já tiver sido emparelhado com seu HoloLens, ele permanecerá emparelhado depois que ele for reiniciado.
+Use a ponta de uma caneta para pressionar e manter o botão de emparelhamento. Ao mesmo tempo, clique e mantenha o botão do clique pressionado por 15 segundos. se o clico já tiver sido emparelhado com seu HoloLens, ele permanecerá emparelhado após ser reiniciado.
 
-Se o clique não ativar ou reiniciar, tente acarregá-lo usando a HoloLens. Se a bateria estiver muito baixa, poderá levar alguns minutos para que a luz indicadora branca seja a energia.
+se o clico não ativar ou reiniciar, tente cobrar usando o HoloLens charger. Se a bateria for muito baixa, pode levar alguns minutos para que a luz do indicador branco seja ativada.
 
-### <a name="re-pair-the-clicker"></a>Emparelhar o clicker de novo
+### <a name="re-pair-the-clicker"></a>Emparelhar novamente o clicador
 
-Selecione **Configurações**  >  **Dispositivos e** selecione o clique. Selecione **Remover**, aguarde alguns segundos e, em seguida, emparelhe o clique novamente.
+selecione   >  **dispositivos** Configurações e selecione o cliquedor. Selecione **remover**, aguarde alguns segundos e, em seguida, emparelhe o clicador novamente.
 
-### <a name="recover-the-clicker"></a>Recuperar o clicker
+### <a name="recover-the-clicker"></a>Recuperar o clicador
 
-Se reiniciar e emparelhar novamente o clique não corrigir o problema, a ferramenta Windows recuperação de dispositivo poderá ajudá-lo a recuperá-lo. O processo de recuperação pode levar algum tempo e instalará a versão mais recente do software do clicker. Para usar a ferramenta, você precisará de um computador executando Windows 10 ou posterior que tenha pelo menos 4 GB de espaço de armazenamento livre.
+se a reinicialização e o reemparelhamento do clicador não corrigirem o problema, a ferramenta de recuperação de dispositivo Windows poderá ajudá-lo a recuperá-lo. O processo de recuperação pode levar algum tempo e instalará a versão mais recente do software do clique. para usar a ferramenta, você precisará de um computador executando o Windows 10 ou posterior que tenha pelo menos 4 GB de espaço livre de armazenamento.
 
-Para recuperar o clicker:
+Para recuperar o clicador:
 
-1. Baixe e instale a ferramenta [Windows recuperação de dispositivo em](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/) seu computador.
-1. Conexão o clique em seu computador usando o cabo Micro USB que veio com seu HoloLens.
-1. Execute a ferramenta Windows recuperação de dispositivo e siga as instruções.
+1. baixe e instale a [ferramenta de recuperação de dispositivo Windows](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/) em seu computador.
+1. Conexão o clico em seu computador usando o cabo Micro USB que acompanha o HoloLens.
+1. execute a ferramenta de recuperação de dispositivo Windows e siga as instruções.
 
-Se o clique não for detectado  automaticamente, selecione Meu dispositivo não foi detectado e siga as instruções para colocar seu dispositivo no modo de recuperação.
+Se o clicador não for detectado automaticamente, selecione **meu dispositivo não foi detectado** e siga as instruções para colocar seu dispositivo no modo de recuperação.
 

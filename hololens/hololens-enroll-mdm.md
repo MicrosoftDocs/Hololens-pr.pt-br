@@ -15,11 +15,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: a368c622c137374ea9cc544490d3492fa9d3f8c1
-ms.sourcegitcommit: 749d617f3f0ce3e6363ff6cd1a03f87b9280f418
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122979348"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031910"
 ---
 # <a name="enroll-hololens-in-mdm"></a>Registrar o HoloLens no MDM
 
@@ -68,4 +68,4 @@ Se o dispositivo tiver sido registrado a partir de uma conta MSA que adicionou u
 
 ## <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>verifique se o registro de MDM não está bloqueado para dispositivos Windows
 
-para que o registro tenha sucesso, você precisará garantir que seus HoloLens dispositivos possam ser registrados. como HoloLens é considerado um dispositivo de Windows, não será necessário nenhuma restrição de registro que possa bloquear sua implantação. [Examine esta lista de restrições](/mem/intune/enrollment/enrollment-restrictions-set) e verifique se você poderá registrar seus dispositivos.
+para que o registro tenha sucesso, você precisará garantir que seus HoloLens dispositivos possam ser registrados. Como o HoloLens é considerado um dispositivo do Windows, será necessário não haver restrições de registro que possam bloquear sua implantação. [Analise essa lista de restrições](/mem/intune/enrollment/enrollment-restrictions-set) e verifique se você poderá registrar seus dispositivos.

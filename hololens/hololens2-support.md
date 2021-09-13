@@ -1,30 +1,30 @@
 ---
-title: Saiba mais sobre as opções de suporte de realidade misturada
+title: Saiba mais sobre as opções de suporte à Realidade Misturada
 ms.author: rajhawar
 author: raunakjhawar
 ms.reviewer: asergaz
-description: Opções de suporte misturadas de realidade para clientes empresariais de pequeno a grande porte
+description: Opções de suporte de Realidade Misturada para clientes de pequeno a grande porte
 ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
 ms.openlocfilehash: 17aaf8627384098de240d2c2e79c1ed9b0d39165
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190439"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031954"
 ---
-# <a name="what-are-the-mixed-reality-support-and-help-options"></a>Quais são as opções de suporte e ajuda misturadas da realidade?
+# <a name="what-are-the-mixed-reality-support-and-help-options"></a>Quais são as opções de ajuda e suporte à Realidade Misturada?
 
-você está procurando ser desbloqueado ao desenvolver seu aplicativo ou ter um problema com seu HoloLens 2 ou Windows Mixed Reality Headset? Talvez você esteja usando um serviço de realidade mista do Azure e tenha uma pergunta técnica. 
+Você está procurando ser desbloqueado no desenvolvimento de seu aplicativo ou tem um problema com seu HoloLens 2 ou Windows Mixed Reality Headset? Talvez você esteja usando um serviço de realidade misturada do Azure e tenha uma pergunta técnica. 
 
-Aqui você encontrará as opções de suporte para as seguintes opções, garantindo que você se conecte ao lugar certo. Também abordaremos os recursos da Comunidade e as opções de conteúdo de autoatendimento para você explorar:
+Aqui, você encontrará as opções de suporte para as opções a seguir, garantindo que você se conecte ao lugar certo. Também abordamos os recursos da comunidade e as opções de conteúdo de autoatend pois você pode explorar:
 
-- [Community opções de ajuda para desenvolvedores](#community-help-options)
-- [obtenha ajuda com o uso e a configuração de seu dispositivo HoloLens 2](#help-with-technical-support-for-your-hololens-2)
-- [obtenha ajuda com a compra de um dispositivo HoloLens 2](#help-with-commercial-store-support-for-your-hololens-2)
-- [obter ajuda para programar um dispositivo HoloLens 2 ou um Headset de imersão](#help-with-technical-support-for-your-hololens-2) 
-- [Obtenha ajuda com os serviços de realidade misturada do Azure](#azure-mixed-reality-services-support)
+- [Community de ajuda para desenvolvedores](#community-help-options)
+- [Obter ajuda para usar e configurar seu dispositivo HoloLens 2](#help-with-technical-support-for-your-hololens-2)
+- [Obter ajuda com a compra de um dispositivo HoloLens 2](#help-with-commercial-store-support-for-your-hololens-2)
+- [Obter ajuda com a programação de um dispositivo HoloLens 2 ou um headset imersivo](#help-with-technical-support-for-your-hololens-2) 
+- [Obter ajuda com os serviços de realidade misturada do Azure](#azure-mixed-reality-services-support)
 
 ## <a name="community-help-options"></a>Community opções de ajuda
 
@@ -32,15 +32,15 @@ Aqui você encontrará as opções de suporte para as seguintes opções, garant
 <div class='icon is-large'>
     <img alt='Azure Q&A' src='/media/logos/logo_azure.svg'>
 </div><br/>
-para obter respostas rápidas e confiáveis sobre sua realidade mista do Azure e HoloLens duas perguntas de programação de engenheiros da microsoft, profissionais mais valiosos (MVPs) ou nossa comunidade de especialistas, entre em contato conosco no Microsoft Q&A, o destino preferencial da microsoft para o suporte da comunidade.
+Para obter respostas rápidas e confiáveis sobre suas perguntas de programação do Realidade Misturada do Azure e do HoloLens 2 de Engenheiros da Microsoft, MVPs (Profissionais Mais Valiosos) ou nossa comunidade especializada, entre em contato conosco no Microsoft Q&A, o destino preferencial da Microsoft para suporte à comunidade.
 
 Se não conseguir encontrar uma resposta para seu problema por meio da pesquisa, envie uma nova pergunta à seção de P e R da Microsoft. Use uma das seguintes tags ao formular a pergunta:
 
 - [Âncoras Espaciais do Azure](/answers/topics/azure-spatial-anchors.html)
 - [Azure Remote Rendering](/answers/topics/azure-remote-rendering.html)
 - [Âncoras de Objeto do Azure](/answers/topics/azure-object-anchors.html)
-- [HoloLens Çã](/answers/topics/hololens-development.html)
-- [Windows Produto](/answers/products/windows)
+- [HoloLens Programação](/answers/topics/hololens-development.html)
+- [Windows Produtos](/answers/products/windows)
 
 
 ### <a name="post-a-question-on-stack-overflow"></a>Postar uma pergunta no Stack Overflow
@@ -52,7 +52,7 @@ Para obter respostas para suas perguntas de desenvolvedor do maior ecossistema d
 
 Se você enviar uma nova pergunta para o Stack Overflow, use uma ou mais das seguintes tags ao criar a pergunta:
 
-- [HoloLens Çã](https://stackoverflow.com/questions/tagged/hololens)
+- [HoloLens Programação](https://stackoverflow.com/questions/tagged/hololens)
 - [Windows Mixed Reality](https://stackoverflow.com/questions/tagged/windows-mixed-reality)
 - [Âncoras Espaciais do Azure](https://stackoverflow.com/questions/tagged/azure-spatial-anchors)
 - [Azure Remote Rendering](https://stackoverflow.com/questions/tagged/azure-remote-rendering)
@@ -62,50 +62,50 @@ Se você enviar uma nova pergunta para o Stack Overflow, use uma ou mais das seg
 #### <a name="other-communities"></a>Outras comunidades:
 
 - [HoloDevelopers Slack](https://holodevelopersslack.azurewebsites.net/)
-- [Windows Mixed Reality Fones de ouvido reddit](https://www.reddit.com/r/WindowsMR/)
+- [Windows Mixed Reality Headsets Reddit](https://www.reddit.com/r/WindowsMR/)
 - [HoloLens Reddit](https://www.reddit.com/r/HoloLens/)
 
-## <a name="hololens-2-support"></a>suporte a HoloLens 2
+## <a name="hololens-2-support"></a>HoloLens 2
 
-### <a name="help-with-technical-support-for-your-hololens-2"></a>ajuda com o suporte técnico para seu HoloLens 2
+### <a name="help-with-technical-support-for-your-hololens-2"></a>Ajuda com suporte técnico para seu HoloLens 2
 
-- obtenha HoloLens a ajuda de programação 2 da comunidade na [Microsoft Q&A](#post-a-question-on-microsoft-qa)
-- Saiba mais sobre ajuda + suporte e integridade do serviço de seus [Serviços do Azure Mixed Reality](#azure-mixed-reality-services-support)
-- criar uma solicitação de suporte para a programação de fone de ouvido HoloLens 2 ou imersiva no [suporte do sr](https://aka.ms/mrsupport) 
-- criar uma solicitação de suporte para problemas de dispositivo HoloLens 2, incluindo hardware, uso & configuração em [suporte a dispositivo HoloLens 2](https://aka.ms/hlsupport) 
+- Obter HoloLens ajuda de programação 2 da comunidade em [Microsoft Q&A](#post-a-question-on-microsoft-qa)
+- Saiba mais sobre Ajuda + suporte e saúde do serviço de seus [serviços de realidade misturada do Azure](#azure-mixed-reality-services-support)
+- Criar uma solicitação de suporte para HoloLens 2 ou programação de headset imersivo no [suporte ao MR](https://aka.ms/mrsupport) 
+- Crie uma solicitação de suporte para HoloLens 2 problemas de dispositivo, incluindo hardware, & configuração de HoloLens [2 dispositivo](https://aka.ms/hlsupport) 
 
 
-### <a name="help-with-commercial-store-support-for-your-hololens-2"></a>ajuda com suporte de loja comercial para seu HoloLens 2
+### <a name="help-with-commercial-store-support-for-your-hololens-2"></a>Ajuda com o suporte da loja comercial para seu HoloLens 2
 
-- [comprar HoloLens 2](https://www.microsoft.com/hololens/buy) use esta opção para saber mais sobre preços e opções do HoloLens 2
-- Veja abaixo a lista de números de Business Desk para falar com nossos colegas de suporte da loja comercial se você precisar de ajuda por meio de suporte por telefone
-- para compras fora do Microsoft Store, consulte esta [lista de revendedores autorizados HoloLens 2](hololens2-purchase.md) e países em que HoloLens 2 está disponível.
+- [Comprar HoloLens 2](https://www.microsoft.com/hololens/buy) use essa opção para saber mais sobre HoloLens 2 preços e opções
+- Confira abaixo a lista de números de business desk para falar com nossos colegas de suporte da Loja Comercial se você precisar de ajuda por meio de suporte por telefone
+- Para compras fora do Microsoft Store, consulte esta lista de revendedores HoloLens [2 autorizados](hololens2-purchase.md) e países em que HoloLens 2 está disponível.
 
-### <a name="commercial-store-support-numbers"></a>Números de suporte da loja comercial
+### <a name="commercial-store-support-numbers"></a>Números de suporte da Loja Comercial
 >[!Note]
 >Use um dos números de telefone comercial de suporte comercial abaixo para ajudar a concluir sua compra. 
 
 >[!Note]
->Se você estiver chamando o suporte de um mercado que não está listado abaixo, direcione sua chamada para o número de Business Desk dos EUA.
+>Se você estiver chamando o suporte de um mercado que não está listado abaixo, direciona sua chamada para nosso número de business desk dos EUA.
 
-| Mercados | Número de Business Desk | Horário de funcionamento |
+| Mercados | Número do Business Desk | Horário de funcionamento |
 |-----------------|-------------------|-----------------------|
-| Reino Unido | + 44 800 026 0061 | Segunda a sexta-feira, 09AM às 18:00 |
-| Alemanha | + 49 08 05 98 00 03 | Segunda a sexta-feira, 09AM às 18:00 |
-| Suécia    | + 46 20 120 3222   | Segunda a sexta-feira, 09AM às 18:00 |
-| Suíça | + 41 800 662006 |    Segunda a sexta-feira, 09AM às 18:00 |
-| Bélgica | + 32 80058153 |  Segunda a sexta-feira, 09AM às 18:00 |
-| Países Baixos | + 31 8007482055 |    Segunda a sexta-feira, 09AM às 18:00 |
-| Áustria | + 43 800 943670 |    Segunda a sexta-feira, 09AM às 18:00 |
-| Dinamarca | + 45 80400184 |  Segunda a sexta-feira, 09AM às 18:00 |
-| Irlanda | + 353 1800 832 653 | Segunda a sexta-feira, 09AM às 18:00 |
-| Itália |   + 39 800598979 | Segunda a sexta-feira, 09AM às 18:00 |
-| Luxemburgo |  + 352 80040425 | Segunda a sexta-feira, 09AM às 18:00 |
-| Espanha |    + 34 800 598979 |   Segunda a sexta-feira, 09AM às 18:00 |
-| Noruega |  + 47 80062002 |  Segunda a sexta-feira, 09AM às 18:00 |
-| Finlândia | + 358 800526136 |    Segunda a sexta-feira, 09AM às 18:00 |
-| Portugal |    + 351 800600087 |    Segunda a sexta-feira, 09AM às 18:00 |
-| EUA |  866-425-4709 |  Segunda a sexta, 6h às 18:00, PST |
+| Reino Unido | +44 800 026 0061 | Seg a sexta-feira, das 9h às 18h |
+| Alemanha | +49 08 05 98 00 03 | Seg a sexta-feira, das 9h às 18h |
+| Suécia    | +46 20 120 3222   | Seg a sexta-feira, das 9h às 18h |
+| Suíça | +41 800 662006 |    Seg a sexta-feira, das 9h às 18h |
+| Bélgica | +32 80058153 |  Seg a sexta-feira, das 9h às 18h |
+| Países Baixos | +31 8007482055 |    Seg a sexta-feira, das 9h às 18h |
+| Áustria | +43 800 943670 |    Seg a sexta-feira, das 9h às 18h |
+| Dinamarca | +45 80400184 |  Seg a sexta-feira, das 9h às 18h |
+| Irlanda | +353 1800 832 653 | Seg a sexta-feira, das 9h às 18h |
+| Itália |   +39 800598979 | Seg a sexta-feira, das 9h às 18h |
+| Luxemburgo |  +352 80040425 | Seg a sexta-feira, das 9h às 18h |
+| Espanha |    +34 800 598979 |   Seg a sexta-feira, das 9h às 18h |
+| Noruega |  +47 80062002 |  Seg a sexta-feira, das 9h às 18h |
+| Finlândia | +358 800526136 |    Seg a sexta-feira, das 9h às 18h |
+| Portugal |    +351 800600087 |    Seg a sexta-feira, das 9h às 18h |
+| EUA |  866-425-4709 |  Seg a sexta-feira, das 6h às 18h, PST |
 | Canadá |  877-345-2661 |  Seg a sexta-feira, das 6h às 18h, PST |
 | China |   400-805-6783 |  Seg a sexta-feira, das 9h às 18h |
 | Japão |   0120-03-5241 |  Seg a sexta-feira, das 9h às 17h30 |
@@ -161,8 +161,8 @@ Para fornecer comentários, compartilhe uma ideia ou sugestões para os serviço
 
 ### <a name="faqs--troubleshooting"></a>Perguntas frequentes & solução de problemas
 
-- HoloLens 2, consulte a [página HoloLens solução de](../hololens/hololens-troubleshooting.md) problemas
+- HoloLens 2, consulte a página [HoloLens solução de](../hololens/hololens-troubleshooting.md) problemas
 - Windows Mixed Reality, consulte a página [de perguntas frequentes](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 - Azure Remote Rendering, consulte a página [de perguntas frequentes](/azure/remote-rendering/resources/troubleshoot)
 - Âncoras Espaciais do Azure, consulte a página [de perguntas frequentes](/azure/spatial-anchors/spatial-anchor-faq)
-- Âncoras de Objeto do Azure, consulte a [página de perguntas frequentes](/azure/object-anchors/faq)
+- Âncoras de Objeto do Azure, consulte a página [de perguntas frequentes](/azure/object-anchors/faq)

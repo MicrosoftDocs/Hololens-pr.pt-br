@@ -1,7 +1,7 @@
 ---
 title: Guia de implantação – Implantação HoloLens 2 conectada à nuvem em escala com o Remote Assist – Configurar
 description: Saiba como configurar configurações para registrar dispositivos HoloLens em uma rede conectada à nuvem em escala com o Remote Assist.
-keywords: HoloLens, gerenciamento, nuvem conectada, Assistência Remota, AAD, Azure AD, MDM, Mobile Gerenciamento de Dispositivos
+keywords: HoloLens, gerenciamento, nuvem conectada, Assistência Remota, AAD, Azure AD, MDM, Dispositivo móvel Gerenciamento de Dispositivos
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8e6999157c6f5a396812df26f748c771581b61d63709918abb2ae45063810ef8
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: eb96f1cdc799551297c0373268e8cc8f35c6bd06
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660553"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031990"
 ---
 # <a name="configure---cloud-connected-guide"></a>Configurar – Guia conectado à nuvem
 
@@ -40,7 +40,7 @@ Se você ainda&#39;tem acesso a duas contas do Azure AD em um grupo de usuários
 
 ## <a name="auto-enrollment-on-hololens-2"></a>Registro automático no HoloLens 2
 
-Para ter uma experiência suave e perfeita, configurar o AADJ (Azure Active Directory Join) e o Registro Automático para o Intune para HoloLens 2 dispositivos é a melhor opção. Isso permitirá que os usuários inscrevem suas credenciais de logoff da organização durante o OOBE e se registrem automaticamente no Azure AD e registrem o dispositivo no MDM.
+Para ter uma experiência suave e perfeita, configurar o AADJ (Azure Active Directory Join) e o Registro Automático para o Intune para dispositivos HoloLens 2 é a melhor opção. Isso permitirá que os usuários inscrevem suas credenciais de logoff da organização durante o OOBE e se registrem automaticamente no Azure AD e registrem o dispositivo no MDM.
 
 Usando o [Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home), podemos selecionar serviços e navegar por algumas páginas até que possamos selecionar Obter uma Premium avaliação. Você pode observar que há Azure Active Directory Premium 1 e 2, para o Registro Automático P1 é suficiente. Podemos selecionar o Intune, selecionar o escopo do usuário para registro automático e selecionar o grupo criado anteriormente.
 

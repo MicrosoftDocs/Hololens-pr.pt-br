@@ -1,6 +1,6 @@
 ---
 title: Como planejar a implantação do HoloLens 2 em um ambiente comercial
-description: Saiba mais sobre as principais necessidades de implantação e gerenciamento de HoloLens em ambientes corporativos, incluindo infraestrutura, azure Active Directory e gerenciamento de dispositivo móvel.
+description: saiba mais sobre as principais necessidades de implantação e gerenciamento de HoloLens em ambientes corporativos, incluindo infraestrutura, azure active directory e gerenciamento de dispositivo móvel.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -13,30 +13,30 @@ ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 8605d1a889fb9facdab0e9585a43a61880155952
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123188892"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126031915"
 ---
 # <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>Como planejar a implantação do HoloLens 2 em um ambiente comercial
 
 ## <a name="overview"></a>Visão geral
 
 > [!NOTE]
-> Esta visão geral destina-se a ajudar os profissionais de TI a entender as considerações para implantar e gerenciar Microsoft HoloLens 2 dispositivos em uma organização. Para usuários finais do dispositivo, consulte [Preparar HoloLens 2 para uso](hololens2-setup.md) para começar.
+> esta visão geral destina-se a ajudar os profissionais de ti a entender as considerações de implantação e gerenciamento de Microsoft HoloLens 2 dispositivos em uma organização. para usuários finais do dispositivo, consulte [obter seu HoloLens 2 pronto para usar](hololens2-setup.md) para começar.
 
-HoloLens 2 é executado em Windows 10 Holographic que fornece às organizações tecnologias robustas, flexíveis e de gerenciamento de aplicativos móveis. Windows 10 Holographic dá suporte ao gerenciamento de ciclo de vida do dispositivo de ponta a ponta para dar às empresas controle sobre seus dispositivos, dados e aplicativos. O HoloLens 2 pode ser facilmente incorporado às práticas de ciclo de vida padrão, desde o registro do dispositivo, a configuração e o gerenciamento de aplicativos até a manutenção e a baixa utilização de uma solução abrangente de gerenciamento de dispositivo móvel.
+o HoloLens 2 é executado em Windows 10 Holographic que fornece às organizações tecnologias de gerenciamento de aplicativo e de dispositivo móvel robustas, flexíveis e integradas. o Windows 10 Holographic dá suporte ao gerenciamento de ciclo de vida de dispositivos de ponta a ponta para oferecer às empresas o controle sobre seus dispositivos, dados e aplicativos. o HoloLens 2 pode ser facilmente incorporado às práticas de ciclo de vida padrão, do registro de dispositivos, da configuração e do gerenciamento de aplicativos até manutenção e desativação usando uma solução abrangente de gerenciamento de dispositivos móveis.
 
-As etapas e o vídeo a seguir podem ajudar a orientá-lo pelo processo de HoloLens adoção 2 em sua organização.
+as etapas e vídeos a seguir podem orientá-lo pelo processo de HoloLens 2 adoção em sua organização.
 
 | &nbsp; | &nbsp; |
 |--|--|
-| ![Etapa 1.](images/1green.png)| <br/> **[Cenários comuns de implantação:](hololens-requirements.md)** entenda os cenários de implantação e explore os componentes principais necessários para implantar HoloLens 2 dispositivos. |
-| ![Etapa 2.](images/2green.png)| <br/> **[Preparar:](#prepare)** familiarizar-se com os fundamentos de infraestrutura necessários para HoloLens 2. |
+| ![Etapa 1.](images/1green.png)| <br/> **[cenários comuns de implantação](hololens-requirements.md)**: compreenda os cenários de implantação e explore os componentes principais necessários para implantar HoloLens 2 dispositivos. |
+| ![Etapa 2.](images/2green.png)| <br/> **[Prepare](#prepare)**: familiarize-se com os princípios básicos de infra-estrutura necessários para o HoloLens 2. |
 | ![Etapa 3.](images/3green.png) | <br/> **[Configurar](#configure)**: saiba como configurar seus componentes essenciais para uma implantação baseada em nuvem. |
-| ![Etapa 4.](images/4green.png) | <br/> **[Implantar:](#deploy)** descubra como implantar seus dispositivos e distribuir seus aplicativos com segurança e eficiência. |
-| ![Etapa 5.](images/5green.png) | <br/> **[Manter:](#maintain)** descubra o que é necessário para manter corretamente o estado de seus dispositivos HoloLens 2 e garantir a conformidade com a política corporativa. |
+| ![Etapa 4.](images/4green.png) | <br/> **[Implantar](#deploy)**: Descubra como implantar seus dispositivos e distribua seus aplicativos de forma segura e eficiente. |
+| ![Etapa 5.](images/5green.png) | <br/> **[manter](#maintain)**: descubra o que é necessário para manter corretamente o estado de seus HoloLens 2 dispositivos e garantir a conformidade com a política corporativa. |
 
 <br/>
 
@@ -44,39 +44,39 @@ As etapas e o vídeo a seguir podem ajudar a orientá-lo pelo processo de HoloLe
 
 ## <a name="prepare"></a>Preparar
 
-Saiba mais sobre os serviços de infraestrutura essenciais necessários para dar suporte ao conjunto completo de HoloLens 2.
+saiba mais sobre os serviços de infraestrutura essenciais necessários para dar suporte ao conjunto completo de recursos de HoloLens 2.
 
 | Componente | Descrição |
 |-----------|------------|
-| [Azure AD](hololens-identity.md) | Fornece gerenciamento de identidade e acesso para o HoloLens 2  |
-| [Gerenciamento de dispositivo móvel](hololens-mdm-configure.md)| Gerencia HoloLens 2 dispositivos conectados ao seu locatário  |
+| [Azure AD](hololens-identity.md) | fornece gerenciamento de identidade e acesso para o HoloLens 2  |
+| [Gerenciamento de dispositivo móvel](hololens-mdm-configure.md)| gerencia HoloLens 2 dispositivos conectados ao seu locatário  |
 | [Rede Wi-Fi](hololens-commercial-infrastructure.md)| Wi-Fi está disponível e os dispositivos podem ser conectados à Internet  |
 
 ## <a name="configure"></a>Configurar
 
-Use o Intune e o Autopilot como soluções de baixo toque para registrar e configurar o HoloLens 2 para o locatário e o MDM do Azure AD da sua organização.
+Use o Intune e o autopilot como soluções de baixo toque para registrar e configurar o HoloLens 2 para o locatário do Azure AD da sua organização e MDM.
 
 | Componente | Descrição |
 |-----------|------------|
-| [Registro automático](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | Após o logon inicial, os dispositivos se registram automaticamente no Azure AD e se registram no MDM  |
-| [Licenças de aplicativo](hololens2-cloud-connected-configure.md#application-licenses)| Pode ser aplicado a usuários, grupos de usuários ou grupos de dispositivos  |
-| [Usuários e grupos do Azure](hololens2-cloud-connected-configure.md#azure-users-and-groups) | Ajuda a atribuir configurações e licenças para o HoloLens 2  |
+| [Registro automático](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | Após o logon inicial, os dispositivos são registrados automaticamente no Azure AD e são registrados no MDM  |
+| [Licenças de aplicativos](hololens2-cloud-connected-configure.md#application-licenses)| Pode ser aplicado a usuários, grupos de usuários ou grupos de dispositivos  |
+| [Usuários e grupos do Azure](hololens2-cloud-connected-configure.md#azure-users-and-groups) | ajuda a atribuir configurações e licenças para o HoloLens 2  |
 
 ## <a name="deploy"></a>Implantar
 
-Distribua seus HoloLens 2 dispositivos e valide sua configuração. 
+distribua seus dispositivos HoloLens 2 e valide sua configuração. 
 
 | Componente | Descrição |
 |-----------|------------|
-| [Validação de registro](hololens2-corp-connected-deploy.md#enrollment-validation) | Validar se o dispositivo tem o Azure AD ingressado Configurações portal do Azure |
-| [Validação do certificado](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Verifique as configurações e valide se elas foram distribuídas corretamente |
-| [Validar as instalados do aplicativo](hololens2-corp-connected-deploy.md#validate-lob-app-install) | Confirme se o aplicativo está presente e trabalhando em seu HoloLens 2 |
+| [Validação de registro](hololens2-corp-connected-deploy.md#enrollment-validation) | validar se o dispositivo tem o Azure AD ingressado no Configurações ou no Portal do Azure |
+| [Validação de certificado](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Verifique as configurações e valide se elas foram distribuídas corretamente |
+| [Validar instalações de aplicativos](hololens2-corp-connected-deploy.md#validate-lob-app-install) | confirme se o aplicativo está presente e funcionando no seu HoloLens 2 |
 
 ## <a name="maintain"></a>Manter
 
-Use Windows Update for Business juntamente com seu sistema MDM ou o Microsoft Store para manter sua frota de HoloLens 2 e aplicativos atualizados.
+Use Windows Update para negócios junto com seu sistema MDM ou o Microsoft Store para manter sua frota de HoloLens 2 e aplicativos atualizados.
 
 | Componente | Descrição |
 |-----------|------------|
-| [Atualização HoloLens 2](hololens-updates.md) | Configurar atualizações conforme necessário por meio Windows atualizações para empresas |
-| [Atualizar aplicativos](app-deploy-overview.md) | Configure por meio do sistema MDM ou do Microsoft Store
+| [atualizar HoloLens 2](hololens-updates.md) | configurar atualizações conforme necessário por meio do Windows updates for Business |
+| [Atualizar aplicativos](app-deploy-overview.md) | Configurar por meio do seu sistema MDM ou do Microsoft Store
