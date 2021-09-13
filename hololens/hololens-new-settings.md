@@ -10,11 +10,11 @@ ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
 ms.openlocfilehash: bcde697b5887573826a3a1a61e8c3707b4d0337a
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428981"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126034063"
 ---
 # <a name="new-settings-app"></a>Novo aplicativo Configurações
 

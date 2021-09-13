@@ -14,11 +14,11 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 00e99d3f67e9e4371da12612b9b01c3ce58e71bd
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428335"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033970"
 ---
 # <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>Como usar o Visualizador 3D beta no HoloLens (1ª geração)
 
