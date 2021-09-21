@@ -14,12 +14,12 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 keywords: calibragem, conforto, visuais, qualidade, ipd, HoloLens, Windows Mixed Reality, headsets VR
-ms.openlocfilehash: b3d917c71ac7441aeaf8dcbc25748ee07b9fbfa3
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: cdeef216cbf6d1fb165737ae194071c60b31146a
+ms.sourcegitcommit: 20ea1ed37772655504ccb11a7e185ed19d85f336
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033974"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127833549"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Aprimorar o conforto e a qualidade visual
 
@@ -38,7 +38,6 @@ O HoloLens 2 solicita que o usuário calibre o dispositivo nas seguintes circuns
 - O processo de calibragem não teve sucesso na última vez que o usuário usou o dispositivo
 - O usuário excluiu os perfis de calibragem
 - O dispositivo é retirado e colocado de volta e qualquer uma das circunstâncias acima se aplica 
-
 
 ![Prompt de calibragem para ajuste ocular.](./images/07-et-adjust-for-your-eyes.png)
 
@@ -87,7 +86,7 @@ Para experiências que requerem dados do olhar fixo ou posicionamento preciso do
 
 #### <a name="deferred-calibration-prompt"></a>Prompt de Calibragem Adiado
 
-Com a Posição Ocular Automática, a caixa de diálogo de prompt de Calibragem de Rastreamento Ocular é adiada até que um aplicativo solicite dados Olhar. Isso garante que não haja nenhum prompt para o usuário quando o aplicativo ativo não requerer olhar. Se o aplicativo exigir dados fixos e o usuário atual não estiver calibrado, será apresentado ao usuário um prompt de calibragem. Esse comportamento pode ser usado para exibir o prompt de calibragem de rastreamento ocular em um momento adequado para a experiência. Esse método é recomendado pelos seguintes motivos
+Com a Posição Ocular Automática, a caixa de diálogo de prompt de Calibragem de Rastreamento Ocular é adiada até que um aplicativo solicite dados Olhar. Isso garante que não haja nenhum prompt para o usuário quando o aplicativo ativo não requerer olhar. Se o aplicativo exigir dados fixos e o usuário atual não estiver calibrado, será apresentado ao usuário um prompt de calibragem. Esse comportamento pode ser usado para exibir um prompt de calibragem de rastreamento ocular em um momento adequado para a experiência. Esse método é recomendado pelos seguintes motivos:
 
 1.  A caixa de diálogo de Prompt de Calibragem de Rastreamento Ocular fornece ao usuário detalhes sobre por que o rastreamento de olho é necessário.
 2.  Apresenta ao usuário um modo de recusar que seus olhos sejam calibrados.
@@ -104,16 +103,23 @@ As informações de calibragem sempre podem ser excluídas do dispositivo em **C
 
 ### <a name="disable-calibration"></a>Desabilitar a calibragem
 
-Você também pode desabilitar o prompt de calibragem seguindo estas etapas:
+#### <a name="eye-calibration-behavior-on-hololens-2-builds-20h2-and-newer"></a>Comportamento da calibragem ocular no HoloLens 2 build 20H2 e mais recentes
+
+Com o início do [suporte à Posição Automática dos Olhos](hololens-release-notes.md#auto-eye-position-support), da versão 20H2 em diante do Windows Holographic, você não precisa desabilitar a calibragem. O prompt de calibragem aparece automaticamente apenas se você estiver usando um aplicativo habilitado para rastreamento ocular.
+
+#### <a name="disabling-eye-calibration-on-hololens-2-older-builds"></a>Como desabilitar a calibragem ocular em builds mais antigos do HoloLens 2
+
+Você pode inverter um switch de Configurações no headset para desabilitar a calibragem, mas o estado do switch pode não ser fácil de determinar. Ele foi removido e substituído pelo [Suporte Automático de Posição Ocular](hololens-release-notes.md#auto-eye-position-support), o que adia a calibragem enquanto fornece a correção de cores e o posicionamento do holograma.
+
+#### <a name="disabling-eye-calibration-on-hololens-1st-gen"></a>Como desabilitar a calibragem ocular no HoloLens (1ª geração)
+
+Para a [calibragem do HoloLens (1ª geração)](#calibrating-your-hololens-1st-gen), você pode desabilitar o prompt de calibragem ocular seguindo estas etapas:
 
 1. Selecione **Configurações** > **Sistema** > **Calibragem**.
 1. Desligue **Quando uma nova pessoa usar este HoloLens, pedir automaticamente para executar a calibragem ocular**.
 
    > [!IMPORTANT]
    > Essa configuração pode afetar de modo adverso a qualidade e o conforto da renderização de hologramas.  Quando você desligar essa configuração, os recursos que dependem do acompanhamento com os olhos (como a rolagem de texto) não funcionarão mais em aplicativos imersivos.
-
-> [!NOTE]
-> A opção Configurações foi removida da versão 20H2 em diante do Windows Holographic, com o início do [suporte à Posição Automática dos Olhos](hololens-release-notes.md#auto-eye-position-support). O aviso de calibragem será exibido automaticamente somente se um usuário não calibrado estiver usando um aplicativo habilitado para acompanhamento de olho.
 
 ### <a name="hololens-2-eye-tracking-technology"></a>Tecnologia de acompanhamento ocular do HoloLens 2
 
