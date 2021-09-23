@@ -4,23 +4,23 @@ description: saiba como trabalhar com os Microsoft Store para Empresas para publ
 keywords: Microsoft Store para Empresas, msfb, implantação de aplicativo, loja
 author: evmill
 ms.author: v-evmill
-ms.date: 6/22/2020
+ms.date: 9/22/2021
 ms.prod: hololens
 ms.topic: article
 ms.sitesec: library
 ms.localizationpriority: medium
 audience: HoloLens
 manager: yannisle
-ms.openlocfilehash: d7d5ad05dc675cf07afd075f4fb52d24cd4d3e15
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: b60795d7a5a4f9fab980ee16a23250faa6025bb5
+ms.sourcegitcommit: ab86b31357004726d8a28ebae76123728adc8e59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126031924"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128306141"
 ---
 # <a name="microsoft-store-for-business"></a>Microsoft Store para Empresas
 
-o Microsoft Store para Empresas é projetado principalmente para responsáveis por decisões de ti e administradores em empresas ou organizações com uma maneira flexível de localizar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos em select markets para Windows 10 dispositivos em volume. 
+o [Microsoft Store para Empresas](/microsoft-store/microsoft-store-for-business-overview) é projetado principalmente para responsáveis por decisões de ti e administradores em empresas ou organizações com uma maneira flexível de localizar, adquirir, gerenciar e distribuir aplicativos gratuitos e pagos em select markets para Windows 10 dispositivos em volume. 
 
 você pode gerenciar aplicativos Microsoft Store e aplicativos de linha de negócios privados em um único inventário e atribuir e reutilizar licenças conforme necessário. você também pode escolher o melhor método de distribuição para sua organização: atribuir diretamente aplicativos a indivíduos e equipes, publicar aplicativos em páginas privadas no Microsoft Store ou conectar-se com soluções de gerenciamento para obter mais opções.
 

@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: bdfdcda8cc890691f6112e7798d402ca9e7f4c6d
-ms.sourcegitcommit: 6c8406bbcc79c1f624736cc68e1aaeab70436902
+ms.openlocfilehash: 22d635fd3fc32b8aedc36bcb19d900128cdcb718
+ms.sourcegitcommit: ab86b31357004726d8a28ebae76123728adc8e59
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "127904303"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128306158"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Versão prévia do Insider para Microsoft HoloLens
 
@@ -31,7 +31,7 @@ Bem-vindo às versões mais recentes do Insider Preview para HoloLens! É simple
 
 Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders novamente. Novos builds serão disponibilizados para os Canais Dev e Beta para as atualizações mais recentes. Continuaremos a atualizar essa página à medida que adicionarmos mais recursos e atualizações aos builds Windows Insider. Fique animado e pronto para misturar essas atualizações em sua realidade.
 
-Trata-se da solução de problemas aprimorada e relatórios de dispositivos, alguns bugs corrigidos no modo de quiosque e o visualizador de certificados, a superfície de capacidade de gerenciamento expandida e a maior confiabilidade da atualização. Um novo recurso principal dessa atualização de recurso que chega ao HoloLens é nosso Modo de Plataforma Móvel. Confira todos os novos recursos excelentes para HoloLens 2!
+Trata-se da solução de problemas aprimorada e relatórios de dispositivos, alguns bugs corrigidos no modo de quiosque e o visualizador de certificados, a superfície de capacidade de gerenciamento expandida e a maior confiabilidade da atualização. Um novo recurso de destaque dessa atualização de recurso que chega HoloLens nosso Modo de Plataforma Móvel. Confira todos os novos recursos excelentes para HoloLens 2!
 
 | Recurso                 | Descrição                | Usuário ou cenário | Build introduzido |
 |-------------------------|----------------------------|--------------|------------------|
@@ -53,9 +53,9 @@ Trata-se da solução de problemas aprimorada e relatórios de dispositivos, alg
 ✔️ se você quiser definir uma única conta do Azure AD para fazer logon automaticamente, [configure esse novo CSP.](#auto-login-policy-controlled-by-csp) <br>
 ✔️ se você quiser configurar seus aplicativos para tentar atualizar automaticamente após a falha na atualização, de configurar esse novo CSP para [a nova tentativa inteligente.](#smart-retry-for-app-updates) <br>
 ✔️ se você quiser ter mais controle sobre as atualizações do sistema operacional, confira estas políticas [de atualização habilitadas recentemente.](#improved-update-restart-detection-and-notifications) <br>
-✔️ se você precisar disponibilizar os aplicativos da sua organização na loja da empresa por meio do Microsoft Store, mas quiser permitir apenas o acesso aos aplicativos da sua organização e não ao armazenamento completo, de acordo com essa [política.](#use-only-private-store-apps-for-microsoft-store) <br>
-✔️ se você quiser saber o espaço de armazenamento gratuito, SSID ou BSSID de seus dispositivos HoloLens, confira esses [CSPs](#csp-changes-for-reporting-hololens-details)de relatório. <br>
-✔️ se você quiser usar o WDAC para bloquear a iniciação de aplicativos ou processos, mas também precisar usar seus próprios aplicativos de linha de negócios, agora você pode permitir o LOB em sua política [WDAC](#use-wdac-and-lob-apps).
+✔️ se você precisar disponibilizar os aplicativos da sua organização na loja da empresa por meio do Microsoft Store, mas quiser permitir apenas o acesso aos aplicativos da sua organização e não ao armazenamento [completo,](#use-only-private-store-apps-for-microsoft-store)de acordo com essa política. <br>
+✔️ se você quiser saber o espaço de armazenamento gratuito, SSID ou BSSID de seus dispositivos HoloLens, confira esses [CSPs de relatório.](#csp-changes-for-reporting-hololens-details) <br>
+✔️ se você quiser usar o WDAC para bloquear a iniciação de aplicativos ou processos, mas também precisar usar seus próprios aplicativos de linha de negócios, agora você pode permitir o LOB em sua política [WDAC.](#use-wdac-and-lob-apps)
 
 ### <a name="moving-platform-mode"></a>Movendo o modo de plataforma
 
@@ -71,7 +71,7 @@ Para saber mais sobre o que tem suporte e como habilitar esse novo recurso, visi
 
 ### <a name="pfx-file-support-for-certificate-manager"></a>Suporte a arquivos PFX para o Gerenciador de Certificados
 
-Introduzido no Windows Insider build 20348.1405. Adicionamos suporte ao Gerenciador de [Certificados](certificate-manager.md) para agora usar certificados .pfx. Quando os usuários navegam **Configurações** Atualizar & Certificados de Segurança e selecionam Instalar um certificado, a interface do usuário agora dá suporte ao arquivo de certificado  >    >  .pfx. 
+Introduzido no Windows Insider build 20348.1405. Adicionamos suporte ao Gerenciador de [Certificados](certificate-manager.md) para agora usar certificados .pfx. Quando os usuários navegam **para Configurações** Atualizar & certificados de segurança e selecionam Instalar um certificado, a interface do usuário agora dá suporte ao arquivo de certificado  >    >  .pfx. 
 Os usuários podem importar o certificado .pfx, com chave privada, para o armazenamento do usuário ou do computador.
 
 #### <a name="overview-to-try-out-pfx-files-in-certificate-manager"></a>Visão geral para experimentar arquivos PFX no Gerenciador de Certificados
@@ -82,7 +82,7 @@ Os usuários podem importar o certificado .pfx, com chave privada, para o armaze
 
 ### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Exibir relatório de diagnóstico avançado em Configurações no HoloLens
 
-Para dispositivos gerenciados ao solucionar problemas de comportamento, confirmar que uma configuração de política esperada é aplicada é uma etapa importante. Anteriormente a esse novo recurso, a exibição de essas informações precisava ser feita fora do dispositivo por meio do MDM ou próximo ao dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio do acesso de contas do **Configurações** ao trabalho ou à escola e selecione Exportar seus logs de gerenciamento e exibidos em um  ->    >  computador próximo. 
+Para dispositivos gerenciados ao solucionar problemas de comportamento, confirmar que uma configuração de política esperada é aplicada é uma etapa importante. Anteriormente a esse novo recurso, a exibição de essas informações precisava ser feita fora do dispositivo por meio do MDM ou próximo ao dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio do acesso de contas do **Configurações** Acesso ao trabalho ou à escola e selecione Exportar seus logs de gerenciamento e exibidos em um  ->    >  computador próximo. 
 
 Agora, o Diagnóstico de MDM pode ser exibido no dispositivo usando o navegador Edge. Para exibir mais facilmente o relatório de Diagnóstico do MDM, navegue até a página Acessar trabalho ou escola e selecione **Exibir relatório de diagnóstico avançado**. Isso gerará e abrirá o relatório em uma nova janela do Edge.
 
@@ -225,7 +225,7 @@ agora habilitado para HoloLens é uma nova política que permite que os administ
 
 ### <a name="use-only-private-store-apps-for-microsoft-store"></a>Usar somente aplicativos de repositório particular para Microsoft Store
 
-A política RequirePrivateStoreOnly foi habilitada para HoloLens. essa política permite que o aplicativo Microsoft Store seja configurado para mostrar apenas o repositório privado configurado para sua organização. Limitando o acesso apenas aos aplicativos que você disponibilizou.
+A política RequirePrivateStoreOnly foi habilitada para HoloLens. essa política permite que o aplicativo Microsoft Store seja configurado para mostrar apenas o repositório privado configurado para sua organização por meio de [Microsoft Store para Empresas](/microsoft-store/microsoft-store-for-business-overview). Limitando o acesso apenas aos aplicativos que você disponibilizou.
 
 Saiba mais sobre o [ApplicationManagement/RequirePrivateStoreOnly](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly).
 
