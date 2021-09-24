@@ -1,6 +1,6 @@
 ---
 title: Versão prévia do Insider para Microsoft HoloLens
-description: Saiba como começar a usar builds do Insider e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para HoloLens.
+description: Saiba como começar a usar o Insider compilações e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -16,135 +16,135 @@ ms.reviewer: ''
 manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 22d635fd3fc32b8aedc36bcb19d900128cdcb718
-ms.sourcegitcommit: ab86b31357004726d8a28ebae76123728adc8e59
+ms.openlocfilehash: 68485fd0ad7f050748a412da3d57eb8f59e9a685
+ms.sourcegitcommit: d09556a101663ef5dfff865d4753e64a41032b78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2021
-ms.locfileid: "128306158"
+ms.locfileid: "128346737"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Versão prévia do Insider para Microsoft HoloLens
 
-Bem-vindo às versões mais recentes do Insider Preview para HoloLens! É simples começar e [fornecer comentários](hololens-insider.md#start-receiving-insider-builds) valiosos para nossa próxima atualização principal do sistema operacional para HoloLens.
+Bem-vindo às compilações mais recentes do insider Preview para HoloLens! É simples [começar](hololens-insider.md#start-receiving-insider-builds) e fornecer comentários valiosos para nossa próxima atualização principal do sistema operacional para HoloLens.
 
-## <a name="windows-insider-release-notes"></a>Windows Notas sobre a versão do Insider
+## <a name="windows-insider-release-notes"></a>Windows Notas de versão do insider
 
-Estamos empolgados em iniciar o voo de novos recursos para Windows Insiders novamente. Novos builds serão disponibilizados para os Canais Dev e Beta para as atualizações mais recentes. Continuaremos a atualizar essa página à medida que adicionarmos mais recursos e atualizações aos builds Windows Insider. Fique animado e pronto para misturar essas atualizações em sua realidade.
+estamos empolgados para começar a comprovar novos recursos para Windows insiders novamente. Novas compilações serão comprovadas para os canais de desenvolvimento e beta para as atualizações mais recentes. continuaremos a atualizar esta página à medida que adicionamos mais recursos e atualizações às nossas compilações do Windows insider. Fique empolgado e pronto para misturar essas atualizações em sua realidade.
 
-Trata-se da solução de problemas aprimorada e relatórios de dispositivos, alguns bugs corrigidos no modo de quiosque e o visualizador de certificados, a superfície de capacidade de gerenciamento expandida e a maior confiabilidade da atualização. Um novo recurso de destaque dessa atualização de recurso que chega HoloLens nosso Modo de Plataforma Móvel. Confira todos os novos recursos excelentes para HoloLens 2!
+Este é o respeito dos relatórios aprimorados de solução de problemas e de dispositivo, alguns bugs fixos no modo de quiosque e o Visualizador de certificado, a superfície de gerenciabilidade expandida e a maior confiabilidade de atualização. um novo recurso principal desta atualização de recurso em HoloLens é nosso modo de plataforma móvel. confira todos os novos recursos incríveis para HoloLens 2!
 
-| Recurso                 | Descrição                | Usuário ou cenário | Build introduzido |
+| Recurso                 | Descrição                | Usuário ou cenário | Compilação introduzida |
 |-------------------------|----------------------------|--------------|------------------|
-| [Movendo o modo de plataforma](#moving-platform-mode) | Apresenta o Modo de Plataforma Móvel beta, que, quando configurado, permite o uso de HoloLens 2 em grandes recipientes de animais que apresentam movimento de baixa dinâmica. | Tudo | 20348.1411 |
-| [Suporte a arquivos PFX para o Gerenciador de Certificados](#pfx-file-support-for-certificate-manager) | Adicionar certificados PFX por meio Configurações interface do usuário | Usuário Final | 20348.1405 |
-| [Exibir relatório de diagnóstico avançado em Configurações no HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Exibir logs de diagnóstico do MDM no dispositivo | Solução de problemas | 20348.1405 |
-| [Notificações de diagnóstico offline](#offline-diagnostics-notifications) | Comentários audiovisuais para coleta de log | Solução de problemas | 20348.1405 |
-| [Aprimoramentos de coleta de log de armazenamento baixo](#low-storage-log-collection-improvements) | Melhorias em cenários de coleta de log durante situações de baixo armazenamento. | Solução de problemas | 20348.1412 |
-| [Alterações do CSP para relatórios HoloLens detalhes](#csp-changes-for-reporting-hololens-details) | Novos CSPs para consultar dados | Administradores de IT    | 20348.1403                 |
-| [Política de logon automático controlada pelo CSP](#auto-login-policy-controlled-by-csp) | Usado para fazer logoff em uma conta automaticamente | Administradores de IT | 20348.1405 |
-| [Detecção e notificações de reinicialização de atualização aprimoradas](#improved-update-restart-detection-and-notifications) | Novas políticas habilitadas e UX para atualizações. | Administradores de IT | 20348.1405 |
-| [Smart Retry para atualizações de aplicativo](#smart-retry-for-app-updates) | Permite que os administradores de IT agendou as tentarem atualizar aplicativos. | Administradores de IT | 20348.1405 |
-| [Use somente aplicativos da loja privada somente para Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Configurar o aplicativo da loja para mostrar apenas aplicativos da organização | Administrador de TI | 20348.1408 |
-| [Usar aplicativos WDAC e LOB](#use-wdac-and-lob-apps) | Permite que os administradores de IT usem seus próprios aplicativos e ainda usem o WDAC para bloquear outros aplicativos. | Administradores de IT | 20348.1405 |
-| [Correções e melhorias](#fixes-and-improvements) | Correções e melhorias para HoloLens. | Tudo | 20348.1411 |
+| [Modo de plataforma móvel](#moving-platform-mode) | o apresenta a versão beta do modo de plataforma em movimento, que, quando configurada, permite o uso de HoloLens 2 em grandes embarcações de náuticos com baixa interrupções. | Tudo | 20348,1411 |
+| [Suporte a arquivos PFX para o Gerenciador de certificados](#pfx-file-support-for-certificate-manager) | adicionar certificados PFX por meio da interface do usuário do Configurações | Usuário Final | 20348,1405 |
+| [exibir relatório de diagnóstico avançado no Configurações no HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Exibir logs de diagnóstico do MDM no dispositivo | Solução de problemas | 20348,1405 |
+| [Notificações de diagnóstico offline](#offline-diagnostics-notifications) | Audiovisual comentários para coleta de log | Solução de problemas | 20348,1405 |
+| [Melhorias de coleta de log de armazenamento baixo](#low-storage-log-collection-improvements) | Melhorias em cenários de coleta de log durante situações de armazenamento baixo. | Solução de problemas | 20348,1412 |
+| [alterações do CSP para relatórios HoloLens detalhes](#csp-changes-for-reporting-hololens-details) | Novos CSPs para a consulta de dados | Administradores de ti    | 20348,1403                 |
+| [Política de logon automático controlada pelo CSP](#auto-login-policy-controlled-by-csp) | Usado para fazer logon em uma conta automaticamente | Administradores de ti | 20348,1405 |
+| [Detecção e notificações de reinício de atualização aprimoradas](#improved-update-restart-detection-and-notifications) | Novas políticas habilitadas e UX para atualizações. | Administradores de ti | 20348,1405 |
+| [Repetição inteligente para atualizações de aplicativo](#smart-retry-for-app-updates) | Permite aos administradores de ti agendarem tentativas para atualizar aplicativos novamente. | Administradores de ti | 20348,1405 |
+| [Usar somente aplicativos de repositório privado somente para Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Configurar o aplicativo da loja para mostrar somente os aplicativos da organização | Administrador de TI | 20348,1408 |
+| [Usar aplicativos WDAC e LOB](#use-wdac-and-lob-apps) | Permite que os administradores de ti usem seus próprios aplicativos e ainda usem o WDAC para bloquear outros aplicativos. | Administradores de ti | 20348,1405 |
+| [Correções e aprimoramentos](#fixes-and-improvements) | Correções e aprimoramentos para HoloLens. | Tudo | 20348,1411 |
 
-### <a name="it-admin-insider-feature-checklist"></a>Lista de verificação de recursos do Insider do Administrador de IT
+### <a name="it-admin-insider-feature-checklist"></a>Lista de verificação de recursos do IT Admin Insider
 
-✔️ se você quiser definir uma única conta do Azure AD para fazer logon automaticamente, [configure esse novo CSP.](#auto-login-policy-controlled-by-csp) <br>
-✔️ se você quiser configurar seus aplicativos para tentar atualizar automaticamente após a falha na atualização, de configurar esse novo CSP para [a nova tentativa inteligente.](#smart-retry-for-app-updates) <br>
-✔️ se você quiser ter mais controle sobre as atualizações do sistema operacional, confira estas políticas [de atualização habilitadas recentemente.](#improved-update-restart-detection-and-notifications) <br>
-✔️ se você precisar disponibilizar os aplicativos da sua organização na loja da empresa por meio do Microsoft Store, mas quiser permitir apenas o acesso aos aplicativos da sua organização e não ao armazenamento [completo,](#use-only-private-store-apps-for-microsoft-store)de acordo com essa política. <br>
-✔️ se você quiser saber o espaço de armazenamento gratuito, SSID ou BSSID de seus dispositivos HoloLens, confira esses [CSPs de relatório.](#csp-changes-for-reporting-hololens-details) <br>
-✔️ se você quiser usar o WDAC para bloquear a iniciação de aplicativos ou processos, mas também precisar usar seus próprios aplicativos de linha de negócios, agora você pode permitir o LOB em sua política [WDAC.](#use-wdac-and-lob-apps)
+✔️ Se você quiser definir uma única conta do Azure AD para fazer logon automaticamente, [Configure esse novo CSP.](#auto-login-policy-controlled-by-csp) <br>
+✔️ Se você quiser configurar seus aplicativos para tentarem atualizar automaticamente após a falha de atualização, [defina esse novo CSP para repetição inteligente.](#smart-retry-for-app-updates) <br>
+✔️ Se você quiser ter mais controle sobre as atualizações do sistema operacional, Confira essas [políticas de atualização habilitadas recentemente](#improved-update-restart-detection-and-notifications). <br>
+✔️ se você precisar tornar os aplicativos da sua organização disponíveis na loja da empresa por meio do Microsoft Store, mas deseja permitir o acesso somente aos aplicativos da sua organização e não ao armazenamento completo, [defina essa política](#use-only-private-store-apps-for-microsoft-store). <br>
+✔️ se você quiser saber o espaço de armazenamento livre, o SSID ou o BSSID de seus dispositivos HoloLens confira esses [CSPs de relatório](#csp-changes-for-reporting-hololens-details). <br>
+✔️ Se você quiser usar o WDAC para bloquear a inicialização de aplicativos ou processos, mas também precisar usar sua própria linha de aplicativos bushiness, agora você pode [permitir o LOB em sua política WDAC](#use-wdac-and-lob-apps).
 
-### <a name="moving-platform-mode"></a>Movendo o modo de plataforma
+### <a name="moving-platform-mode"></a>Modo de plataforma móvel
 
-A partir **do Insider Build 20348.1411,** adicionamos suporte beta para acompanhamento em plataformas móveis de movimento baixo dinâmico no HoloLens 2. Depois de instalar o build e habilenciar o Modo de Plataforma Móvel, você poderá usar o HoloLens 2 em ambientes anteriormente inacessíveis, como grandes navios e grandes navios. Atualmente, o recurso tem como alvo habilitar apenas essas plataformas móveis específicas. Embora nada impeça você de tentar usar o recurso em outros ambientes, ele se concentra em adicionar suporte a esses ambientes primeiro.
+a partir do **build insider 20348,1411** , adicionamos suporte beta para acompanhamento de plataformas de movimentação de movimentos dinâmicos no HoloLens 2. depois de instalar a compilação e habilitar o modo de movimentação de plataforma, você poderá usar seu HoloLens 2 em ambientes anteriormente inacessíveis, como grandes lançamentos e embarcações náuticoss grandes. Atualmente, o recurso tem como alvo habilitar apenas essas plataformas móveis específicas. Embora nada impeça você de tentar usar o recurso em outros ambientes, ele se concentra em adicionar suporte a esses ambientes primeiro.
 
-Para saber mais sobre o que tem suporte e como habilitar esse novo recurso, visite a [página da plataforma móvel](hololens2-moving-platform.md).
+Para saber mais sobre o que é suportado e como habilitar esse novo recurso, [visite a página de plataforma móvel](hololens2-moving-platform.md).
 
 #### <a name="overview-to-try-out-moving-platform-mode"></a>Visão geral para experimentar a movimentação do modo de plataforma
 
-1. [Habilita o modo de desenvolvedor e o portal do dispositivo.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
-1. [Habilita a movimentação do modo de plataforma por meio do Portal do dispositivo.](hololens2-moving-platform.md#enabling-moving-platform-mode)
-1. Leve seu dispositivo para sua plataforma móvel grande e observe como os hologramas estão estáveis.
+1. [Habilite o modo de desenvolvedor e o portal do dispositivo](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+1. [Habilite a movimentação do modo de plataforma por meio do portal do dispositivo](hololens2-moving-platform.md#enabling-moving-platform-mode).
+1. Leve seu dispositivo para sua plataforma de movimentação grande e observe como os hologramas são estáveis.
 
-### <a name="pfx-file-support-for-certificate-manager"></a>Suporte a arquivos PFX para o Gerenciador de Certificados
+### <a name="pfx-file-support-for-certificate-manager"></a>Suporte a arquivos PFX para o Gerenciador de certificados
 
-Introduzido no Windows Insider build 20348.1405. Adicionamos suporte ao Gerenciador de [Certificados](certificate-manager.md) para agora usar certificados .pfx. Quando os usuários navegam **para Configurações** Atualizar & certificados de segurança e selecionam Instalar um certificado, a interface do usuário agora dá suporte ao arquivo de certificado  >    >  .pfx. 
-Os usuários podem importar o certificado .pfx, com chave privada, para o armazenamento do usuário ou do computador.
+introduzido no Windows insider build 20348,1405. Adicionamos suporte ao Gerenciador de [certificados](certificate-manager.md) para agora usar certificados. pfx. quando os usuários navegam para **Configurações**  >  **atualização &**  >  **certificados** de segurança e selecionam **instalar um certificado** , a interface do usuário agora dá suporte ao arquivo de certificado. pfx.
+Os usuários podem importar o certificado. pfx, com a chave privada, para o repositório de usuários ou para o repositório de computadores.
 
-#### <a name="overview-to-try-out-pfx-files-in-certificate-manager"></a>Visão geral para experimentar arquivos PFX no Gerenciador de Certificados
+#### <a name="overview-to-try-out-pfx-files-in-certificate-manager"></a>Visão geral para experimentar arquivos PFX no Gerenciador de certificados
 
 1. Prepare o arquivo PFX.
-1. Copie o arquivo para seu dispositivo por meio de um cabo USB-C.
-1. Abra o Configurações aplicativo e navegue até o Gerenciador [de Certificados](certificate-manager.md) e aplique o certificado.
+1. Copie o arquivo para o dispositivo por meio de um cabo USB-C.
+1. abra o aplicativo Configurações e navegue até o [gerenciador de certificados](certificate-manager.md) e aplique o certificado.
 
-### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Exibir relatório de diagnóstico avançado em Configurações no HoloLens
+### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>exibir relatório de diagnóstico avançado no Configurações no HoloLens
 
-Para dispositivos gerenciados ao solucionar problemas de comportamento, confirmar que uma configuração de política esperada é aplicada é uma etapa importante. Anteriormente a esse novo recurso, a exibição de essas informações precisava ser feita fora do dispositivo por meio do MDM ou próximo ao dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio do acesso de contas do **Configurações** Acesso ao trabalho ou à escola e selecione Exportar seus logs de gerenciamento e exibidos em um  ->    >  computador próximo. 
+Para dispositivos gerenciados ao solucionar problemas de comportamento, a confirmação de que uma configuração de política esperada é aplicada é uma etapa importante. anteriormente para esse novo recurso, a exibição dessas informações teve que ser feita fora do dispositivo por meio do MDM ou perto do dispositivo depois de exportar os logs de diagnóstico do mdm coletados por meio de **Configurações**  ->  **contas**  >  **acessarem trabalho ou escola** e selecione **exportar os logs de gerenciamento** e exibidos em um PC próximo.
 
-Agora, o Diagnóstico de MDM pode ser exibido no dispositivo usando o navegador Edge. Para exibir mais facilmente o relatório de Diagnóstico do MDM, navegue até a página Acessar trabalho ou escola e selecione **Exibir relatório de diagnóstico avançado**. Isso gerará e abrirá o relatório em uma nova janela do Edge.
+Agora, o diagnóstico de MDM pode ser exibido no dispositivo usando o navegador Edge. Para exibir mais facilmente o relatório de diagnóstico do MDM, navegue até a página acessar o trabalho ou a escola e selecione **Exibir relatório de diagnóstico avançado**. Isso irá gerar e abrir o relatório em uma nova janela de borda.
 
-![Exibir relatório de diagnóstico avançado no Configurações aplicativo.](./images/view-advanced-diagnostic-report.jpg)
+![exiba o relatório de diagnóstico avançado no aplicativo Configurações.](./images/view-advanced-diagnostic-report.jpg)
 
 #### <a name="overview-to-try-out-the-advanced-diagnostic-report"></a>Visão geral para experimentar o relatório de diagnóstico avançado
 
 1. Abra o aplicativo Configurações.
-1. Navegue até a página contas e clique no link novo **exportar seus logs de gerenciamento**.
-1. Exiba informações avançadas sobre as configurações do seu dispositivo.
+1. Navegue até a página Contas e clique no novo link **Exportar seus logs de gerenciamento.**
+1. Exibir informações avançadas sobre as configurações do dispositivo.
 
 ### <a name="offline-diagnostics-notifications"></a>Notificações de diagnóstico offline
 
-Esta é uma atualização para um recurso existente chamado [diagnóstico offline](hololens-diagnostic-logs.md#offline-diagnostics). Anteriormente, não havia nenhum indicador claro para os usuários que eles dispararam a coleta de diagnóstico ou que ele tivesse sido concluído.
-agora adicionados às compilações do Windows insider, há duas formas de comentários de audiovisual para o diagnóstico Offline. A primeira vez que as notificações de notificação são exibidas para ambos quando a coleta é iniciada e concluída. Eles serão exibidos quando o usuário estiver conectado e tiver visuais.
+Esta é uma atualização para um recurso existente chamado [Diagnóstico Offline.](hololens-diagnostic-logs.md#offline-diagnostics) Anteriormente, não havia nenhum indicador claro para os usuários de que eles dispararam a coleta de diagnóstico ou que ela havia sido concluída.
+Agora adicionados Windows builds do Insider, há duas formas de comentários audiovisuais para o Diagnóstico Offline. O primeiro que está sendo notificação é exibido para quando a coleta é iniciada e concluída. Eles serão exibidos quando o usuário estiver conectado e tiver visuais.
 
-![Notificação para coleta de logs.](./images/logcollection1.jpg)
+![Sistema para coletar logs.](./images/logcollection1.jpg)
 
-![Notificação quando a coleta de log for concluída.](./images/logcollection2.jpg)
+![Toast quando a coleta de log for concluída.](./images/logcollection2.jpg)
 
-Como os usuários geralmente usam o diagnóstico offline como um mecanismo de coleta de logs de fallback para quando eles não têm acesso a uma exibição, não podem fazer logon ou ainda estão no OOBE, também haverá uma indicação de áudio quando os logs forem coletados. Esse som será reproduzido além da notificação do sistema.
+Como os usuários geralmente usam o Diagnóstico Offline como um mecanismo de coleta de logs de fallback para quando não têm acesso a uma exibição, não é possível fazer logoff ou ainda estão no OOBE, também haverá uma indicação de áudio tocada quando os logs são coletados. Esse som será tocado além da notificação do sistema.
 
-Esse novo recurso será habilitado quando o dispositivo for atualizado e não precisar ser habilitado ou gerenciado. Em qualquer evento que esse novo comentário não possa ser exibido ou ouvido, os diagnósticos offline ainda serão gerados.
+Esse novo recurso será habilitado quando o dispositivo for atualizado e não precisará ser habilitado ou gerenciado. Em qualquer caso em que esse novo comentário não possa ser exibido ou ouvido, o Diagnóstico Offline ainda será gerado.
 
-Esperamos que essa adição mais recente de comentários audiovisual seja mais fácil de coletar dados de diagnóstico e ser capaz de solucionar os problemas com mais rapidez.
+Esperamos que com essa adição mais nova de comentários audiovisuais seja mais fácil coletar dados de diagnóstico e, mais rapidamente, ser capaz de solucionar seus problemas.
 
 #### <a name="overview-to-try-out-the-diagnostics-notifications"></a>Visão geral para experimentar as notificações de diagnóstico
 
-1. Desbloqueie o dispositivo e o desgaste.
-1. Pressione a combinação de botões de **energia** e de **volume** para coletar [diagnósticos offline](hololens-diagnostic-logs.md#offline-diagnostics).
-1. Exiba as notificações do sistema e ouça as indicações de áudio para quando o dispositivo iniciar e concluir a coleta de logs.
+1. Desbloqueie seu dispositivo e use-o.
+1. Pressione a **combinação de** botões **Ligar e Volume down** para coletar o [Diagnóstico Offline.](hololens-diagnostic-logs.md#offline-diagnostics)
+1. Exibir as notificações do sistema e ouvir sinais de áudio para quando o dispositivo é iniciado e termina a coleta de logs.
 
-### <a name="low-storage-log-collection-improvements"></a>Melhorias de coleta de log de armazenamento baixo
+### <a name="low-storage-log-collection-improvements"></a>Aprimoramentos de coleta de log de armazenamento baixo
 
-Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional chamado **StorageDiagnostics.zip** será criado. o limite de armazenamento baixo é determinado automaticamente pelo [sensor de armazenamento](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)Windows.
+Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional chamadoStorageDiagnostics.zip **será** criado. O limite de armazenamento baixo é determinado automaticamente pelo Windows [de armazenamento.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
 
-#### <a name="overview-to-try-out-the-low-storage-improvements"></a>Visão geral para experimentar as melhorias de armazenamento baixo
+#### <a name="overview-to-try-out-the-low-storage-improvements"></a>Visão geral para experimentar as melhorias de armazenamento baixas
 
-1. Preencha o espaço de armazenamento do seu dispositivo.
-1. Pressione a combinação de botões de **energia** e de **volume** para coletar [diagnósticos offline](hololens-diagnostic-logs.md#offline-diagnostics).
-1. Observe que há um novo arquivo na coleção de logs armazenados na pasta documentos do seu HoloLens.
+1. Preencha o espaço de armazenamento do dispositivo.
+1. Pressione a **combinação de** botões **Ligar e Volume down** para coletar o [Diagnóstico Offline.](hololens-diagnostic-logs.md#offline-diagnostics)
+1. Observe que há um novo arquivo na coleção de logs armazenados na pasta Documentos do seu HoloLens.
 
-### <a name="csp-changes-for-reporting-hololens-details"></a>alterações do CSP para relatórios HoloLens detalhes
+### <a name="csp-changes-for-reporting-hololens-details"></a>Alterações do CSP para relatórios HoloLens detalhes
 
-- introduzido na compilação do Windows insider, 20348,1403
+- Introduzido no Windows Insider Build, 20348.1403
 
-os seguintes CSPs foram atualizados com novas maneiras de relatar informações de seus dispositivos HoloLens.
+Os CSPs a seguir foram atualizados com novas maneiras de relatar informações de seus HoloLens dispositivos.
 
-#### <a name="devdetail-csp---free-storage"></a>CSP DevDetail – gratuito Armazenamento
+#### <a name="devdetail-csp---free-storage"></a>CSP de DevDetail – Armazenamento
 
-o CSP DevDetail agora também relata o espaço de armazenamento livre no dispositivo HoloLens. isso deve corresponder aproximadamente ao valor mostrado na página Armazenamento do aplicativo Configurações. A seguir está o nó específico que contém essas informações.
+O CSP de DevDetail agora também relata espaço de armazenamento livre HoloLens dispositivo. Isso deve corresponder aproximadamente ao valor mostrado na página Configurações aplicativo Armazenamento aplicativo. A seguir está o nó específico que contém essas informações.
 
 - ./DevDetail/Ext/Microsoft/FreeStorage (somente operação GET)
 
-#### <a name="devicestatus-csp---ssid-and-bssid"></a>CSP DeviceStatus-SSID e BSSID
+#### <a name="devicestatus-csp---ssid-and-bssid"></a>CSP do DeviceStatus – SSID e BSSID
 
-o CSP DeviceStatus agora também relata SSID e BSSID da rede Wi-Fi com a qual o HoloLens está conectado ativamente. A seguir estão os nós específicos que contêm essas informações.
+O CSP do DeviceStatus agora também relata SSID e BSSID Wi-Fi rede com a qual HoloLens está ativamente conectado. A seguir estão os nós específicos que contêm essas informações.
 
-- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*endereço MAC do adaptador de Wi-Fi*/SSID
-- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*endereço MAC do adaptador de Wi-Fi*/BSSID
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*mac address of Wi-Fi adapter*/SSID
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/mac address *of Wi-Fi adapter*/BSSID
 
-Exemplo de blob de SyncML (para fornecedores de MDM) para consultar NetworkIdentifiers
+Exemplo de blob syncml (para fornecedores de MDM) para consultar NetworkIdentifiers
 
 ```xml
 <SyncML>
@@ -166,74 +166,74 @@ Exemplo de blob de SyncML (para fornecedores de MDM) para consultar NetworkIdent
 
 ### <a name="auto-login-policy-controlled-by-csp"></a>Política de logon automático controlada pelo CSP
 
-Essa nova política AutoLogonUser controla se um usuário será conectado automaticamente. Alguns clientes desejam configurar dispositivos vinculados a uma identidade, mas não querem nenhuma experiência de entrada. Imagine selecionando um dispositivo e usando a assistência remota imediatamente. ou ter um benefício de poder distribuir rapidamente HoloLens dispositivos e habilitar seus usuários finais a agilizar o logon.
+Essa nova política AutoLogonUser controla se um usuário será conectado automaticamente. Alguns clientes querem configurar dispositivos que estão vinculados a uma identidade, mas não querem nenhuma experiência de entrada. Imagine pegar um dispositivo e usar a assistência remota imediatamente. Ou ter um benefício de poder distribuir rapidamente HoloLens dispositivos e permitir que os usuários finais agilizarem o logon.
 
 Quando a política é definida como um valor não vazio, ela especifica o endereço de email do usuário de logon automático. O usuário especificado deve fazer logon no dispositivo pelo menos uma vez para habilitar o logon automático.
 
-O OMA-URI do novo valor de cadeia de caracteres de política `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
+O OMA-URI do novo valor de cadeia `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser` de caracteres de política
 
-- O usuário com o mesmo endereço de email terá logon automático habilitado.
+- O usuário com o mesmo endereço de email terá o logon automático habilitado.
 
-Em um dispositivo em que essa política está configurada, o usuário especificado na política precisará fazer logon pelo menos uma vez. Reinicializações subsequentes do dispositivo após o primeiro logon terão o usuário especificado conectado automaticamente. Há suporte apenas para um único usuário de logon automático. Uma vez habilitado, o usuário conectado automaticamente não poderá fazer logoff manualmente. Para fazer logon como um usuário diferente, a política deve primeiro ser desabilitada.
+Em um dispositivo em que essa política está configurada, o usuário especificado na política precisará fazer logon pelo menos uma vez. As reinicializações subsequentes do dispositivo após o primeiro logon terão o usuário especificado conectado automaticamente. Há suporte apenas para um único usuário de logon automático. Depois de habilitado, o usuário conectado automaticamente não poderá fazer logoff manualmente. Para fazer logon como um usuário diferente, a política deve primeiro ser desabilitada.
 
 > [!NOTE]
 >
-> - Alguns eventos, como as principais atualizações do sistema operacional, podem exigir que o usuário especificado faça logon no dispositivo novamente para retomar o comportamento de logon automático.
+> - Alguns eventos, como as principais atualizações do sistema operacional, podem exigir que o usuário especificado entre no dispositivo novamente para retomar o comportamento de logon automático.
 > - O logon automático só tem suporte para usuários do MSA e do AAD.
 
 #### <a name="overview-to-try-auto-logon-csp"></a>Visão geral para experimentar o CSP de logon automático
 
-1. Configure o novo CSP para um usuário desejado [usando uma política personalizada](/mem/intune/configuration/custom-settings-windows-10) : `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
-1. Aplique o CSP ao dispositivo por meio do [pacote de provisionamento](hololens-provisioning.md) ou do [MDM](hololens-mdm-configure.md).
-1. Entrar na conta especificada.
+1. Configure o novo CSP para um usuário desejado [usando uma política personalizada:](/mem/intune/configuration/custom-settings-windows-10)`./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
+1. Aplique o CSP ao dispositivo por meio [do pacote de provisionamento ou](hololens-provisioning.md) do [MDM.](hololens-mdm-configure.md)
+1. Entre na conta especificada.
 1. Reinicie o dispositivo e observe que o usuário está conectado automaticamente.
 
-### <a name="improved-update-restart-detection-and-notifications"></a>Detecção e notificações de reinício de atualização aprimoradas
+### <a name="improved-update-restart-detection-and-notifications"></a>Detecção e notificações de reinicialização de atualização aprimoradas
 
-entre horas ativas e políticas de tempo de instalação, é possível evitar a reinicialização de dispositivos HoloLens quando eles estão em uso. No entanto, ele também atrasaria a adoção de atualizações se as reinicializações não ocorrerem para concluir a instalação de uma atualização necessária. Agora adicionamos políticas para permitir que ele imponha prazos e reinicializações necessárias e verifique se a instalação de uma atualização foi concluída em tempo hábil. Os usuários podem ser notificados antes da reinicialização que está sendo iniciada e podem atrasar a reinicialização de acordo com a política de ti.
+Entre as horas ativas e as políticas de tempo de instalação, é possível evitar a reinicialização HoloLens dispositivos quando eles estão em uso. No entanto, isso também atrasaria a adoção de atualizações se as reinicializações não ocorrem para concluir a instalação de uma atualização necessária. Agora adicionamos políticas para permitir que a IT imigr prazos e reinicializações necessárias e garantir que a instalação de uma atualização seja concluída em tempo hábil. Os usuários podem ser notificados antes da reinicialização ser iniciada e podem atrasar a reinicialização de acordo com a política de IT.
 
 As seguintes políticas de atualização foram adicionadas:
 
-- [Atualizar/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+- [Update/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
 - [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
-- [Atualizar/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
-- [Atualizar/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
-- [Atualizar/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
-- [Atualizar/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+- [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
+- [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+- [Update/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+- [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 - [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
 - [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
-- [Atualizar/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+- [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
 
 #### <a name="overview-to-try-new-update-notifications"></a>Visão geral para experimentar novas notificações de atualização
 
-1. Configure um dos novos CSPs de atualização por meio do [pacote de provisionamento](hololens-provisioning.md) ou do [MDM](hololens-mdm-configure.md) (consulte a lista de links acima e escolha um).
+1. Configure um dos novos CSPs de atualização por [meio do pacote de provisionamento](hololens-provisioning.md) ou do [MDM](hololens-mdm-configure.md) (consulte a lista de links acima e escolha um).
 1. Use o dispositivo durante o horário agendado.
-1. Observe que o usuário é notificado sobre a atualização e a necessidade de reiniciar o dispositivo \* .
+1. Observe que o usuário é notificado sobre a atualização e a necessidade de reiniciar o \* dispositivo.
 
-\* Seus resultados podem variar com base nas políticas de atualização usadas.
+\* Os resultados podem variar com base nas políticas de atualização usadas.
 
-### <a name="smart-retry-for-app-updates"></a>Repetição inteligente para atualizações de aplicativo
+### <a name="smart-retry-for-app-updates"></a>Smart Retry para atualizações de aplicativo
 
-agora habilitado para HoloLens é uma nova política que permite que os administradores de ti definam uma data recorrente ou uma hora para reiniciar os aplicativos cuja atualização falhou porque o aplicativo está sendo usado, permitindo que a atualização seja aplicada. Eles podem ser definidos com base em alguns gatilhos diferentes, como um horário agendado ou entrada. Para saber mais sobre como usar essa exibição de política, [ApplicationManagement/ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures).
+Agora habilitada para HoloLens é uma nova política que permite aos administradores de IT definir uma data recorrente ou uma vez para reiniciar aplicativos cuja atualização falhou porque o aplicativo está sendo usado, permitindo que a atualização seja aplicada. Eles podem ser definidos com base em alguns gatilhos diferentes, como uma hora agendada ou uma login. Para saber mais sobre como usar essa exibição de política [ApplicationManagement/ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures).
 
-#### <a name="overview-to-try-smart-retry-for-app-updates"></a>Visão geral para experimentar a repetição inteligente para atualizações de aplicativo
+#### <a name="overview-to-try-smart-retry-for-app-updates"></a>Visão geral para experimentar o Smart Retry para atualizações de aplicativo
 
-1. Configure o novo recurso de repetição inteligente.
-1. Em um dispositivo que ainda não recebeu seu aplicativo e está configurado corretamente para, faça logon em um ambiente online.
-1. Faça com que o dispositivo não possa baixar o aplicativo por meio de desativá-lo ou desconectá-lo.
-1. Seu dispositivo está ligado e conectado à Internet durante o tempo disparado para tentar o download novamente.
+1. Configure o novo recurso de nova tentativa inteligente.
+1. Em um dispositivo que ainda não recebeu seu aplicativo e está configurado corretamente, faça logoff em um ambiente online.
+1. Torne o dispositivo incapaz de baixar o aplicativo por meio de desconectá-lo ou desconectá-lo.
+1. Faça com que seu dispositivo esteja ligado e conectado à Internet durante o tempo disparado para repetir o download.
 
-### <a name="use-only-private-store-apps-for-microsoft-store"></a>Usar somente aplicativos de repositório particular para Microsoft Store
+### <a name="use-only-private-store-apps-for-microsoft-store"></a>Usar somente aplicativos da loja privada para Microsoft Store
 
-A política RequirePrivateStoreOnly foi habilitada para HoloLens. essa política permite que o aplicativo Microsoft Store seja configurado para mostrar apenas o repositório privado configurado para sua organização por meio de [Microsoft Store para Empresas](/microsoft-store/microsoft-store-for-business-overview). Limitando o acesso apenas aos aplicativos que você disponibilizou.
+A política RequirePrivateStoreOnly foi habilitada para HoloLens. Essa política permite que o Microsoft Store aplicativo seja configurado para mostrar apenas o armazenamento privado configurado para sua organização por meio [Microsoft Store para Empresas](/microsoft-store/microsoft-store-for-business-overview). Limitando o acesso somente aos aplicativos que você disponibiliza.
 
-Saiba mais sobre o [ApplicationManagement/RequirePrivateStoreOnly](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly).
+Saiba mais sobre [ApplicationManagement/RequirePrivateStoreOnly.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
 
-#### <a name="overview-to-try-only-private-store-apps"></a>Visão geral para tentar somente aplicativos de repositório particular
+#### <a name="overview-to-try-only-private-store-apps"></a>Visão geral para experimentar apenas aplicativos da loja privada
 
-1. Configure a nova política para seus dispositivos por meio do [MDM](hololens-mdm-configure.md).
-1. Faça logon em um dispositivo que tenha a política.
-1. abra o aplicativo Microsoft Store e observe que você só pode ver os aplicativos da sua organização.
+1. Configure a nova política para seus dispositivos por meio [do MDM](hololens-mdm-configure.md).
+1. Faça logoff em um dispositivo que tenha a política.
+1. Abra o Microsoft Store aplicativo e observe que você só pode ver os aplicativos da sua organização.
 
 ### <a name="use-wdac-and-lob-apps"></a>Usar aplicativos WDAC e LOB
 
@@ -248,14 +248,20 @@ Agora você pode usar o WDAC para impedir que aplicativos ou processos sejam ini
 
 ### <a name="fixes-and-improvements"></a>Correções e aprimoramentos
 
+#### <a name="for-developers"></a>Para desenvolvedores
+
 - Correção de um [problema conhecido para o portal do dispositivo em que não havia prompt para baixar arquivos bloqueados](hololens-troubleshooting.md#downloading-locked-files-doesnt-error).
 - Correção de um [problema conhecido para o portal do dispositivo com tempo limite de upload e download de arquivos](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out).
-- resolve problemas relacionados a propriedades de conformidade de relatórios de dispositivos HoloLens; uma reinicialização pode ser necessária para que o relatório correto seja disparado em compilações internas.  
+- O processamento de gamepad para aplicativos 2D foi desabilitado em compilações internas. Ao removê-lo, os aplicativos agora estão livres para usar as APIs do gamepad diretamente e ter acesso a todo o conjunto de controles e podem ser desenvolvidos em mente para fazer mais. Os desenvolvedores devem usar as APIs do gamepad para consumir a entrada do gamepad. Aqui está um exemplo para a [classe gamepad (Windows. Gaming. Input)-Windows aplicativos UWP](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true).
 - habilitada uma [API de acesso atribuída](/uwp/api/windows.system.userprofile.assignedaccesssettings?view=winrt-20348&preserve-view=true) para que os aplicativos agora possam determinar se um HoloLens está sendo executado em um modo de quiosque para o usuário conectado ao HoloLens.
+
+#### <a name="for-enterprise"></a>Para Enterprise
+
+- resolve problemas relacionados a propriedades de conformidade de relatórios de dispositivos HoloLens; uma reinicialização pode ser necessária para que o relatório correto seja disparado em compilações internas.  
 - Atualização da versão na caixa de assistência remota instalada em flashes atualizados.
-- O processamento de gamepad para aplicativos 2D foi desabilitado em compilações internas. Removendo-o, agora os aplicativos estão livres para usar as APIs do gamepad diretamente e ter acesso a todo o conjunto de controles e fazer o que quiserem. Os desenvolvedores devem usar as APIs do gamepad para consumir a entrada do gamepad. Aqui está um exemplo para a [classe gamepad (Windows. Gaming. Input)-Windows aplicativos UWP](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true).
 - Correção de um problema em que, após a primeira entrada do usuário, o OOBE estava sendo encerrado em cenários em que as configurações de quiosque baseadas em grupos do AAD estavam sendo usadas.
 - Correção de um problema ao exibir notificações de atualização e prompts de diálogo para reinicialização do dispositivo.
+- corrigido um problema em que, após a reinicialização do dispositivo, os controladores Xbox e outros periféricos Bluetooth LE necessários seriam emparelhados novamente para se conectar.
 
 ## <a name="start-receiving-insider-builds"></a>Comece a receber compilações do insider
 
