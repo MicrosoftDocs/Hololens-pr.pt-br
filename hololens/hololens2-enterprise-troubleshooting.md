@@ -1,8 +1,8 @@
 ---
 title: Implementação de HoloLens 2 e solução de problemas de dispositivo gerenciado
 description: Solução de problemas de dispositivos HoloLens 2 em um ambiente corporativo
-author: JoyJaz
-ms.author: v-jjaswinski
+author: beelia
+ms.author: v-beehanson
 ms.date: 6/22/2021
 ms.topic: article
 keywords: Solucionar problemas
@@ -12,14 +12,14 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9f3950de51e4bfa2a76431a2a070d87aa81ed443
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 2e997514be5d067ce5e9bd7f3611b464d19a6fad
+ms.sourcegitcommit: b9cd7ed5edb98249c609b547b90587863ea1cb9e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126034015"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129364600"
 ---
-# <a name="troubleshooting-implementation-and-managed-devices"></a>Solução de problemas de implementação e dispositivos gerenciados 
+# <a name="troubleshooting-implementation-and-managed-devices"></a>Solução de problemas de implementação e dispositivos gerenciados
 
 Este artigo descreve como resolver vários problemas ou responder a perguntas sobre a implementação e o gerenciamento do HoloLens 2.
 
@@ -38,13 +38,13 @@ Este artigo descreve como resolver vários problemas ou responder a perguntas so
 
 ## <a name="eap-troubleshooting"></a>Solução de problemas de EAP
 1. Verifique se o perfil do Wi-Fi tem as configurações corretas:
-    - O tipo EAP está configurado corretamente, tipos EAP comuns: EAP-TLS (13), EAP-TTLS (21) e PEAP (25).
-    - O nome Wi-Fi SSID está correto e corresponde à cadeia de caracteres hexadecimal.
-    - Para EAP-TLS, TrustedRootCA contém o hash SHA-1 do Certificado de Autoridade de Certificação raiz confiável do servidor. No computador Windows, o comando "certutil.exe -dump cert_file_name" mostrará a string de hash SHA-1 de um certificado.
+    - Configure o tipo de EAP corretamente. Os tipos comuns de EAP são EAP-TLS (13), EAP-TTLS (21) e PEAP (25).
+    - Verifique o nome do SSID do Wi-Fi e veja se ele corresponde à cadeia de caracteres HEXA.
+    - Certifique-se de que, para o EAP-TLS, o TrustedRootCA contém o hash SHA-1 do Certificado de Autoridade de Certificação raiz confiável do servidor. No computador Windows, o comando "certutil.exe -dump cert_file_name" mostrará a cadeia de caracteres do hash SHA-1 do certificado.
 2. Colete a captura de pacotes de rede no Ponto de Acesso ou nos logs do servidor AAA para descobrir onde a sessão EAP falha.
-    - Se a identidade EAP fornecida pelo HoloLens não for esperada, verifique se a identidade foi provisionada corretamente por meio do perfil Wi-Fi ou do certificado do cliente.
-    - Se o servidor rejeitar o certificado de cliente do HoloLens, verifique se o certificado de cliente necessário foi provisionado no dispositivo.
-    - Se o HoloLens rejeitar o certificado do servidor, verifique se o certificado de Autoridade de Certificação raiz do servidor foi provisionado no HoloLens.
+    - Se a identidade de EAP fornecida pelo HoloLens não for a esperada, verifique se ela foi provisionada corretamente por meio do perfil Wi-Fi ou do certificado do cliente.
+    - Se o servidor rejeitar o certificado de cliente do HoloLens, verifique se o certificado necessário foi provisionado no dispositivo.
+    - Se o HoloLens rejeitar o certificado do servidor, verifique se o Certificado de Autoridade de Certificação raiz do servidor foi provisionado no HoloLens.
 3. Se o perfil da empresa for provisionado pelo pacote de provisionamento do Wi-Fi, considere a aplicação do pacote de provisionamento em um computador com o Windows 10. Se também falhar no computador com Windows 10, siga o guia de solução de problemas de autenticação 802.1X do cliente Windows.
 4. Envie-nos comentários por meio do Hub de Comentários.
 
@@ -54,12 +54,12 @@ Este artigo descreve como resolver vários problemas ou responder a perguntas so
 
 Aqui estão algumas ações que você pode tentar se não conseguir conectar seu HoloLens a uma rede Wi-Fi:
 
-1. Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar e escolha Configurações > Rede e Internet > Wi-Fi. Se o Wi-Fi estiver ligado, tente desligá-lo e, em seguida, ligue novamente.
+1. Verifique se o Wi-Fi está ativado. Para isso, use o gesto Iniciar e escolha Configurações > Rede e Internet > Wi-Fi. Se o Wi-Fi estiver ligado, tente desligá-lo e ligá-lo novamente em seguida.
 2. Aproxime-se do roteador ou do ponto de acesso.
 3. Reinicie o roteador Wi-Fi e, em seguida, reinicie o HoloLens. Tente se conectar novamente.
 4. Se nenhuma dessas ações funcionar, verifique se o roteador está usando o firmware mais recente. Você pode encontrar essas informações no site do fabricante.
 
-Quando você entra em uma conta corporativa ou organizacional no dispositivo, ele também pode aplicar a política de Gerenciamento de Dispositivo Móvel (MDM), se a política for configurada pelo administrador de TI.
+Quando você entra em uma conta corporativa ou organizacional no dispositivo, ele também pode aplicar a política de Gerenciamento de Dispositivo Móvel (MDM), caso ela tenha sido configurada pelo administrador de TI.
 
 [Voltar para a lista](#list)
 
@@ -78,53 +78,53 @@ O Fiddler é um proxy de depuração da Web usado para solucionar problemas de H
 
 1. No computador, [instale](https://docs.telerik.com/fiddler-everywhere/get-started/installation-procedure) e inicie o Fiddler.  
 1. No computador, configure o Fiddler para permitir a conexão de computadores remotos.
-    1. Acesse Configurações do Fiddler -> Conexões
-    1. Anote a porta de escuta do Fiddler (o padrão é 8866)
-    1. Marque a opção Permitir a conexão de computadores remotos
-    1. Clique em Salvar
+    1. Acesse Configurações do Fiddler -> Conexões.
+    1. Anote a porta de escuta do Fiddler (o padrão é 8866).
+    1. Marque a opção Permitir a conexão de computadores remotos.
+    1. Clique em Salvar.
 3. No HoloLens 2, configure o Fiddler como o servidor proxy<sup>1</sup>:
-    1. Abra o menu Iniciar e selecione Configurações
-    1. Escolha Rede e Internet e, depois, Proxy no menu à esquerda
-    1. Role a página para baixo até Configuração de proxy manual e alterne a opção Usar um servidor proxy para Ativado
-    1. Insira o endereço IP do computador em que o Fiddler está instalado
-    1. Insira o número da porta indicado acima (o padrão é 8866)
-    1. Clique em Salvar
+    1. Abra o menu Iniciar e selecione Configurações.
+    1. Selecione Rede e Internet e, depois, Proxy no menu à esquerda.
+    1. Role para baixo até Configuração de proxy manual e alterne Usar um servidor proxy para Ativado.
+    1. Insira o endereço IP do computador em que o Fiddler está instalado.
+    1. Insira o número da porta anotado anteriormente (o padrão é 8866).
+    1. Clique em Salvar.
 
 <sup>1</sup> Para builds 20279.1006 e superior (Participantes do Programa Windows Insider e a versão futura), use as seguintes etapas para configurar o proxy:
-1. Abra o menu Iniciar e acesse a página Propriedades da rede Wi-Fi 
-1. Role até Proxy
-1. Altere para Configuração manual
-1. Insira o endereço IP do computador em que o Fiddler está instalado
-1. Insira o número da porta indicado acima. (O padrão é 8866)
-1. Clique em Aplicar
+1. Abra o menu Iniciar e vá para a página de Propriedades da rede Wi-Fi. 
+1. Role até Proxy.
+1. Altere para Configuração manual.
+1. Insira o endereço IP do computador em que o Fiddler está instalado.
+1. Insira o número da porta anotado anteriormente (o padrão é 8866).
+1. Clique em Aplicar.
     
 #### <a name="decrypt-https-traffic-from-hololens-2"></a>Descriptografar o tráfego HTTPS por meio do HoloLens 2
 
 1. No computador, exporte o certificado do Fiddler.
-    1. Acesse Configurações do Fiddler -> HTTPS e expanda Configurações Avançadas
-    2. Clique em Exportar certificado do Fiddler. Ele será salvo na área de trabalho
-    3. Mova o certificado para a pasta Downloads no HoloLens 2
+    1. Acesse Configurações do Fiddler -> HTTPS e expanda as Configurações Avançadas.
+    2. Clique em Exportar certificado do Fiddler. Ele será salvo na sua área de trabalho.
+    3. Mova o certificado para a pasta Downloads no HoloLens 2.
 
 2.  No HoloLens 2, importe o certificado do Fiddler.
-    1. Acesse Configurações -> Atualização e Segurança -> Certificados
-    2. Clique em Instalar Certificado, procure a pasta Downloads e selecione o certificado do Fiddler
-    3. Altere a localização do armazenamento para o computador local
-    4. Altere o repositório de certificados para a raiz
-    5. Selecione Instalar
-    6. Confirme se o certificado é exibido na lista de certificados. Caso contrário, repita as etapas acima
+    1. Acesse Configurações -> Atualização e Segurança -> Certificados.
+    2. Clique em Instalar Certificado, procure a pasta Downloads e selecione o certificado do Fiddler.
+    3. Altere o Local do Repositório para Computador Local.
+    4. Altere o Repositório de Certificados para raiz.
+    5. Clique em Instalar.
+    6. Confirme se o certificado é exibido na lista de certificados. Caso contrário, repita essas etapas.
 
 #### <a name="inspect-https-sessions"></a>Inspecione as sessões HTTP(S)
 
-No computador, o Fiddler mostrará as sessões ativas do HTTP(S) do HoloLens 2. O painel Inspetores do Fiddler pode mostrar a solicitação/a resposta HTTP(S) em diferentes exibições. Por exemplo, a exibição “Bruto” mostra a solicitação bruta ou a resposta em texto sem formatação. 
+No computador, o Fiddler mostrará as sessões ativas do HTTP(S) do HoloLens 2. O painel Inspetores no Fiddler mostra a solicitação/resposta HTTP(S) em diferentes modos de exibição. Por exemplo, o modo de exibição “Bruto” mostra a solicitação ou resposta bruta em um texto sem formatação. 
 
 ### <a name="configure-wireshark-to-capture-network-traffic"></a>Configurar o Wireshark para capturar o tráfego de rede
-O Wireshark é um analisador de protocolo de rede usado para inspecionar o tráfego TCP/UDP entre seus dispositivos HoloLens 2. Isso facilita a identificação de qual tráfego está atravessando a rede para o HoloLens 2, a quantidade, a frequência, a latência entre determinados saltos etc.
+O Wireshark é um analisador de protocolo de rede usado para inspecionar o tráfego TCP/UDP entre seus dispositivos HoloLens 2. Ele permite identificar com facilidade qual tráfego está atravessando a rede para seu HoloLens 2 – a quantidade, a frequência, a latência entre determinados saltos e assim por diante.
 
 #### <a name="prerequisites"></a>Pré-requisitos:
-- O computador precisa ter acesso à Internet e dar suporte ao compartilhamento de Internet Wi-Fi
+- O computador precisa ter acesso à Internet e suporte ao compartilhamento de Internet Wi-Fi.
 
 #### <a name="install-and-configure-wireshark"></a>Instalar e configurar o Wireshark
-1. No computador, instale o [Wireshark](https://www.wireshark.org/#download) 
+1. No computador, instale o [Wireshark](https://www.wireshark.org/#download).
 1. No computador, habilite o hotspot móvel para compartilhar sua conexão com a Internet por meio do Wi-Fi.
 1. No computador, inicie o Wireshark e capture o tráfego por meio da interface do hotspot móvel. 
 1. No HoloLens 2, altere a rede Wi-Fi para o hotspot móvel do computador. O tráfego IP do HoloLens 2 será exibido no Wireshark.
@@ -157,7 +157,7 @@ O dispositivo afetado pode ter sido excluído do locatário do Azure Active Dire
 - Um administrador ou usuário excluiu o dispositivo no portal do Azure ou usando o PowerShell.
 - O dispositivo foi removido do locatário do Azure Active Directory devido à inatividade. Para um ambiente gerenciado com eficiência, normalmente recomendamos que os administradores de TI removam dispositivos antigos e inativos de seu locatário do [Azure Active Directory](/azure/active-directory/devices/manage-stale-devices).
 
-Quando um dispositivo afetado tentar entrar em contato com o locatário do Azure Active Directory novamente depois que ele tiver sido excluído, ele não será autenticado com o Azure Active Directory. Esse efeito geralmente é invisível para o usuário do dispositivo, pois o logon armazenado em cache via PIN continuará permitindo que o usuário logon.
+Se um dispositivo afetado tentar entrar em contato com o locatário do Azure Active Directory novamente após ter sido excluído, ele não conseguirá mais fazer a autenticação com o Azure Active Directory. Esse efeito geralmente é invisível para o usuário do dispositivo, pois o logon armazenado em cache via PIN continuará permitindo que o usuário logon.
 
 ### <a name="mitigation"></a>Atenuação
 Atualmente, não há como adicionar um dispositivo HoloLens excluído de volta ao Azure Active Directory. Os dispositivos afetados precisarão ser limpos novamente seguindo as instruções sobre [como fazer reflash no seu dispositivo](hololens-recovery.md#clean-reflash-the-device).
@@ -166,7 +166,7 @@ Atualmente, não há como adicionar um dispositivo HoloLens excluído de volta a
 
 ## <a name="autopilot-troubleshooting"></a>Solução de problemas do Autopilot
 
-Os artigos a seguir podem ser um recurso útil para obter mais informações e solucionar problemas do Autopilot. No entanto, esteja ciente de que esses artigos são baseados no Windows 10 Desktop e nem todas as informações são aplicadas ao HoloLens:
+Os artigos a seguir podem ser um recurso útil para você aprender mais informações e solucionar problemas do Autopilot. No entanto, esses artigos são baseados no Windows 10 Desktop e nem todas as informações podem ser aplicadas ao HoloLens:
 
 - [Windows Autopilot: problemas conhecidos](/mem/autopilot/known-issues)
 - [Solucionar problemas de registro de dispositivo Windows no Microsoft Intune](/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
@@ -194,7 +194,7 @@ Não.
 
 ### <a name="does-hololens-support-branding"></a>O HoloLens permite identidade visual?
 
-Não. No entanto, você pode contornar esse problema usando uma das seguintes abordagens:
+Não. No entanto, você pode contornar esse problema tentando uma das seguintes abordagens:
 
 - Crie um aplicativo personalizado e, em seguida, [habilite o modo de quiosque](hololens-kiosk.md). O aplicativo personalizado pode ter identidade visual e pode iniciar outros aplicativos (como o Remote Assist).  
 - Mude todas as imagens de perfil do usuário no Azure Active Directory para o logotipo da sua empresa. No entanto, isso pode não ser desejável para todos os cenários.
