@@ -2,24 +2,24 @@
 title: Noções básicas sobre o HoloLens (1ª geração)
 description: comece com um breve tour da interface HoloLens (1ª gen), recursos de acompanhamento à mão e uso de aplicativos holographic.
 ms.assetid: 064f7eb0-190e-4643-abeb-ed3b09312042
-ms.date: 9/16/2019
-ms.reviewer: jarrettr
-manager: jarrettr
+ms.date: 8/9/2021
+ms.reviewer: sean-kerawala
+manager: sean-kerawala
 keywords: hololens
 ms.prod: hololens
 ms.sitesec: library
-author: v-miegge
-ms.author: v-miegge
+author: qianw211
+ms.author: v-qianwen
 ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 70ee881eb0c2ffaade173b31e5168371d042bbb2
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 3723a30499c0237f19d85b48109b40ca643c6bdb
+ms.sourcegitcommit: be1393d24a98381e37bd1f56183c1f381f87cbd4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032018"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129600739"
 ---
 # <a name="getting-around-hololens-1st-gen"></a>Noções básicas sobre o HoloLens (1ª geração)
 
@@ -57,7 +57,7 @@ Para abrir o menu **Iniciar** :
 
 ### <a name="select-holograms-with-gaze-and-air-tap"></a>Selecionar hologramas com olhar e toque de ar
 
-Para selecionar um aplicativo ou outro holograma, toque no ar ao olhar diretamente o holograma que você está selecionando. Para fazer isso, execute estas etapas:
+Para selecionar um aplicativo ou outro holograma, toque no ar ao olhar diretamente o holograma que você está selecionando. Siga estas etapas:
 
 1. Olhar no holograma que você deseja selecionar.
 1. Aponte o dedo indicador para cima em direção ao teto.
@@ -119,25 +119,54 @@ Olhar no aplicativo e toque e segure as duas mãos para selecioná-lo. Gire o ap
 
 Olhar no conteúdo da janela do aplicativo. Toque e segure e, em seguida, mova o lado um pouco para cima ou para baixo para rolar o conteúdo.
 
-## <a name="meet-the-hololens-1st-gen-clicker"></a>conheça o acessador do HoloLens (1ª gen)
+## <a name="share-your-hololens-with-multiple-people"></a>compartilhar seus HoloLens com várias pessoas
 
-o acessador [HoloLens (1ª Gen)](hololens1-clicker.md) oferece a você outra maneira de interagir com os hologramas. [emparelhe-](hololens-connect-devices.md) o com seu HoloLens e, em seguida, use-o junto com seu olhar para selecionar, rolar e muito mais.
+é comum compartilhar um HoloLens com muitas pessoas ou fazer com que muitas pessoas compartilhem um conjunto de dispositivos HoloLens.  
+
+### <a name="share-with-multiple-people-each-using-their-own-account"></a>Compartilhar com várias pessoas, cada uma usando sua própria conta
+
+**pré-requisito**: HoloLens (1ª gen) deve ser [atualizado para Windows Holographic for Business](hololens-upgrade-enterprise.md).
+
+quando eles usam suas próprias contas do Azure Active Directory (AD do Azure), vários usuários podem manter suas próprias configurações de usuário e dados de usuário no dispositivo.
+
+para garantir que várias pessoas possam usar suas próprias contas em seu HoloLens, siga estas etapas:
+
+1. Quando você configurar o dispositivo, selecione **meu trabalho ou escola que o possui** e entre usando uma conta do Azure AD.
+1. depois de concluir a instalação, verifique se as configurações da conta (contas de **Configurações**  >  ) incluem **outros usuários**.
+
+para usar HoloLens, cada usuário deve seguir estas etapas:
+
+1. Se outro usuário estiver usando o dispositivo, pressione o botão de energia uma vez para ir para o modo de espera. Em seguida, pressione o botão de energia novamente para retornar à tela de bloqueio.
+
+1. Use suas credenciais de conta do Azure AD para entrar no dispositivo. se for a primeira vez que você usou o dispositivo, você precisará [calibrar](hololens-calibration.md) os HoloLens para seus próprios olhos.
+
+para ver uma lista dos usuários do dispositivo ou remover um usuário do dispositivo, acesse **Configurações**  >  **contas**  >  **outros usuários**.
+
+### <a name="share-with-multiple-people-all-using-the-same-account"></a>Compartilhar com várias pessoas, tudo usando a mesma conta
+
+Vários usuários também podem compartilhar um HoloLens ao usar uma única conta de usuário.
+
+Os usuários que compartilham uma mesma conta precisarão recalibrar o HoloLens no **Configurações**.  Leia mais sobre [calibragem](hololens-calibration.md).
+
+## <a name="meet-the-hololens-1st-gen-clicker"></a>Atender ao HoloLens (1ª geração) Clicker
+
+O [HoloLens (1ª geração)](hololens1-clicker.md) oferece outra maneira de interagir com hologramas. [Emparelhe-o](hololens-connect-devices.md) com HoloLens e, em seguida, use-o junto com o seu olhar para selecionar, rolar e muito mais.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Parabéns! você está pronto para usar o HoloLens (1ª gen).
+Parabéns! você está pronto para usar HoloLens (1ª geração).
 
-agora você pode configurar seu HoloLens (1ª gen) para atender às suas necessidades específicas.
+Agora você pode configurar seu HoloLens (1ª geração) para atender às suas necessidades específicas.
 
-[Conexão dispositivos bluetooth, como mouse e teclado](hololens-connect-devices.md)
+[Conexão bluetooth como mouse e teclado](hololens-connect-devices.md)
 
-[Saiba mais sobre voz e Cortana](hololens-cortana.md)
+[Saiba mais sobre Voz e Cortana](hololens-cortana.md)
 
 ### <a name="help-i-dont-see-my-holograms"></a>Ajuda! Não vejo meus hologramas
 
-se você não vir os hologramas que você colocou ao usar HoloLens, aqui estão algumas coisas a serem experimentadas:
+Se você não vir hologramas que colocou ao usar HoloLens, aqui estão algumas coisas a tentar:
 
-- Certifique-se de que você está olhando para a área certa &mdash; , os hologramas permanecem onde você os deixou!
-- Verifique se você está em uma sala bem iluminada sem muita luz solar direta.
-- Esperado. Quando HoloLens tem problemas para reconhecer seu espaço, os hologramas colocados anteriormente podem levar até um minuto para reaparecer.
+- Certifique-se de que você está procurando na área direita lembre-se &mdash; de que os hologramas permanecem onde você os deixou!
+- Certifique-se de que você está em uma sala bem luminada sem muito s meio direto.
+- Esperar. Quando HoloLens tem problemas para reconhecer seu espaço, os hologramas colocados anteriormente podem levar até um minuto para reaparecer.
 - Se o problema persistir, talvez você queira limpar seus dados de armazenamento Hologramas no Configurações System Hologramas e, em seguida, colocar hologramas em uma casa de  >    >  realidade misturada novamente.
