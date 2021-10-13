@@ -3,7 +3,7 @@ title: Coletar e usar informações de diagnóstico de dispositivos HoloLens
 description: Saiba como coletar, usar e reter informações de diagnóstico de HoloLens dispositivos.
 author: Teresa-Motiv
 ms.author: v-tea
-ms.date: 10/15/2020
+ms.date: 9/12/2021
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e977d0d42831760749bb5c6c469d2482e2ca72e7
-ms.sourcegitcommit: 20ea1ed37772655504ccb11a7e185ed19d85f336
+ms.openlocfilehash: 4f62a70430d78087157b3adcdf76af53183db708
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127833515"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924411"
 ---
 # <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>Coletar e usar informações de diagnóstico de dispositivos HoloLens
 
@@ -35,7 +35,7 @@ HoloLens usuários e administradores podem escolher entre quatro métodos difere
 - Diagnóstico offline
 
 > [!IMPORTANT]  
-> Os logs de diagnóstico do dispositivo contêm PII (informações de identificação pessoal), como sobre quais processos ou aplicativos o usuário inicia durante operações típicas. Quando vários usuários compartilham um dispositivo HoloLens (por exemplo, os usuários entra no mesmo dispositivo usando contas do Azure AD (Microsoft Azure Active Directory) diferentes), os logs de diagnóstico podem conter informações de PII que se aplica a vários usuários. Para obter mais informações, consulte [Política de privacidade da Microsoft.](https://privacy.microsoft.com/privacystatement)
+> Os logs de diagnóstico do dispositivo contêm PII (informações de identificação pessoal), como sobre quais processos ou aplicativos o usuário inicia durante operações típicas. Quando vários usuários compartilham um dispositivo HoloLens (por exemplo, os usuários entra no mesmo dispositivo usando contas do Azure AD (Microsoft Azure Active Directory) diferentes), os logs de diagnóstico podem conter informações de PII que se apliquem a vários usuários. Para obter mais informações, consulte [Política de privacidade da Microsoft.](https://privacy.microsoft.com/privacystatement)
 
 A tabela a seguir compara diferentes métodos de coleção. Os nomes de método se vinculam a informações mais detalhadas nas seções que seguem a tabela.
 
@@ -53,10 +53,10 @@ A tabela a seguir compara diferentes métodos de coleção. Os nomes de método 
 Um HoloLens usuário pode usar o aplicativo da área de trabalho do Hub de Comentários da Microsoft para enviar informações de diagnóstico para Suporte da Microsoft. Para obter detalhes e instruções completas, consulte [Nos comentários](hololens-feedback.md).  
 
 > [!NOTE]  
-> **Usuários comerciais ou corporativos:** Se você usar o aplicativo Hub de Comentários para relatar um problema relacionado ao MDM, ao provisionamento ou a qualquer outro aspecto de gerenciamento de dispositivo, altere a categoria de aplicativo para **Enterprise de** dispositivo de  >  gerenciamento.
+> **Usuários comerciais ou corporativos:** Se você usar o aplicativo Hub de Comentários para relatar um problema relacionado ao MDM, ao provisionamento ou a qualquer outro aspecto de gerenciamento de dispositivo, altere a categoria de aplicativo para **Enterprise de** Dispositivo de Gerenciamento  >  .
 
 >[!IMPORTANT]
-> Para fornecer os melhores dados possíveis para corrigir problemas, é altamente recomendável definir a telemetria do dispositivo como **Opcional.** Você pode definir esse valor durante o OOBE (Out-of-Box-Experience) ou usando o **Configurações** aplicativo. Para fazer isso usando o Configurações, selecione Iniciar > Configurações > Privacidade > Diagnóstico **do Aplicativo > Em**.
+> Para fornecer os melhores dados possíveis para corrigir problemas, é altamente recomendável definir a telemetria do dispositivo como **Opcional.** Você pode definir esse valor durante a OOBE (Experiência Desatoda) ou usando o **Configurações** aplicativo. Para fazer isso usando o Configurações, selecione Iniciar > Configurações > Privacidade > Diagnóstico **do Aplicativo > Em**.
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -83,7 +83,7 @@ Um HoloLens usuário pode usar o **aplicativo Configurações** no dispositivo p
 1. Abra o aplicativo Configurações e selecione Atualizar & **solução de** problemas  >  **de** segurança.
 1. Selecione a área apropriada e selecione **Iniciar**.
 1. Reproduza o problema.
-1. Depois de reproduzir o problema, retorne ao Configurações e, em seguida, selecione **Parar**.
+1. Depois de reproduzir o problema, retorne ao Configurações e selecione **Parar**.
 
 Um usuário também pode configurar o comportamento do Diagnóstico de Fallback do **Configurações** aplicativo. Navegue **até Privacidade -> solução de** problemas para definir essa configuração.
 > [!NOTE]
@@ -92,7 +92,7 @@ Um usuário também pode configurar o comportamento do Diagnóstico de Fallback 
 ### <a name="os-update-troubleshooter"></a>Solução de problemas de atualização do sistema operacional
 
 Em builds [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) e em diante:
-- Além das soluções de problemas anteriores no aplicativo Configurações, uma nova solução de problemas foi adicionada com a adição do novo aplicativo Configurações para atualizações do sistema operacional. Navegue até Configurações -> Atualização **& Segurança -> Solução** de Problemas -> Windows Atualizar e selecione **Iniciar**. Isso permite que você colete rastreamentos ao reproduzir seu problema com atualizações do sistema operacional para ajudar melhor na solução de problemas com sua TI ou suporte.
+- Além das soluções de problemas anteriores no aplicativo Configurações, uma nova solução de problemas foi adicionada com a adição do novo aplicativo Configurações para atualizações do sistema operacional. Navegue até Configurações -> Atualização **& Segurança -> Solução** de Problemas -> Windows Atualizar e selecione **Iniciar**. Isso permite coletar rastreamentos ao reproduzir seu problema com atualizações do sistema operacional para ajudar melhor na solução de problemas com sua TI ou suporte.
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -107,7 +107,7 @@ As informações de diagnóstico são armazenadas no dispositivo. Se o dispositi
 > Este computador \\ \<*HoloLens device name*> \\ interno Armazenamento rastreamento \\ de documentos \\ \<*ddmmyyhhmmss*> .etl
 
 > [!NOTE]  
-> Nesse nome e caminho do arquivo, representa o nome do dispositivo HoloLens e representa a data e a hora \<*HoloLens device name*> em que o arquivo foi \<*ddmmyyhhmmss*> criado.
+> Nesse nome e caminho do arquivo, representa o nome do dispositivo HoloLens e representa a data e a hora em que \<*HoloLens device name*> \<*ddmmyyhhmmss*> o arquivo foi criado.
 
 As informações de diagnóstico permanecem nesses locais até que o usuário as exclua.
 
@@ -176,5 +176,38 @@ Siga estas etapas para coletar diagnósticos:
 
 7.  Copie os arquivos ZIP de diagnóstico e compartilhe-os com a equipe de suporte da Microsoft.
 
-    > [!NOTE]
-    > Alguns dos arquivos ZIP de diagnóstico podem conter PII.
+> [!NOTE]
+> Alguns dos arquivos ZIP de diagnóstico podem conter PII.
+
+### <a name="offline-diagnostics-notifications"></a>Notificações de diagnóstico offline
+
+- introduzido no [Windows Holographic, versão 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Esta é uma atualização para um recurso existente chamado [diagnóstico offline](hololens-diagnostic-logs.md#offline-diagnostics). Anteriormente, não havia nenhum indicador claro para os usuários que eles dispararam a coleta de diagnóstico ou que ele tivesse sido concluído.
+agora adicionados às compilações do Windows insider, há duas formas de comentários de audiovisual para o diagnóstico Offline. A primeira vez que as notificações de notificação são exibidas para ambos quando a coleta é iniciada e concluída. Eles serão exibidos quando o usuário estiver conectado e tiver visuais.
+
+![Notificação para coleta de logs.](./images/logcollection1.jpg)
+
+![Notificação quando a coleta de log for concluída.](./images/logcollection2.jpg)
+
+Como os usuários geralmente usam o diagnóstico offline como um mecanismo de coleta de logs de fallback para quando eles não têm acesso a uma exibição, não podem fazer logon ou ainda estão no OOBE, também haverá uma indicação de áudio quando os logs forem coletados. Esse som será reproduzido além da notificação do sistema.
+
+Esse novo recurso será habilitado quando o dispositivo for atualizado e não precisar ser habilitado ou gerenciado. Em qualquer evento que esse novo comentário não possa ser exibido ou ouvido, os diagnósticos offline ainda serão gerados.
+
+Esperamos que essa adição mais recente de comentários audiovisual seja mais fácil de coletar dados de diagnóstico e ser capaz de solucionar os problemas com mais rapidez.
+
+### <a name="low-storage-log-collection-improvements"></a>Melhorias de coleta de log de armazenamento baixo
+
+- introduzido no [Windows Holographic, versão 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Em cenários em que um dispositivo parece estar com pouco espaço em disco quando os logs de diagnóstico são coletados, um relatório adicional chamado **StorageDiagnostics.zip** será criado. o limite de armazenamento baixo é determinado automaticamente pelo [sensor de armazenamento](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)Windows.
+
+## <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>exibir relatório de diagnóstico avançado no Configurações no HoloLens
+
+- introduzido no [Windows Holographic, versão 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Para dispositivos gerenciados ao solucionar problemas de comportamento, a confirmação de que uma configuração de política esperada é aplicada é uma etapa importante. antes desse novo recurso, isso tinha que ser feito fora do dispositivo via MDM ou perto do dispositivo depois de exportar os logs de diagnóstico do MDM coletados por meio de **Configurações**  ->  **contas**  >  **acessarem o trabalho ou a escola** e selecionamos **exportar os logs de gerenciamento** e exibidos em um PC próximo.
+
+Agora, o diagnóstico de MDM pode ser exibido no dispositivo usando o navegador Edge. Para exibir mais facilmente o relatório de diagnóstico do MDM, navegue até a página acessar o trabalho ou a escola e selecione **Exibir relatório de diagnóstico avançado**. Isso irá gerar e abrir o relatório em uma nova janela de borda.
+
+![exiba o relatório de diagnóstico avançado no aplicativo Configurações.](./images/view-advanced-diagnostic-report.jpg)
