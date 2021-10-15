@@ -14,12 +14,12 @@ manager: ranjibb
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b6206f7121d1ba78908d96f71c5c809ec97b06d5
-ms.sourcegitcommit: 6c8406bbcc79c1f624736cc68e1aaeab70436902
+ms.openlocfilehash: fa114633afe70a11a180c67fedbd40eb423ece99
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "127904337"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034171"
 ---
 # <a name="enroll-hololens-in-mdm"></a>Registrar o HoloLens no MDM
 
@@ -43,16 +43,16 @@ Dependendo do tipo de [identidade](hololens-identity.md) escolhido durante o OOB
     - Também chamado [de fluxo do Autopilot](hololens2-autopilot.md) Disponível [em builds 19041.1103+.](hololens-release-notes.md#windows-holographic-version-2004)
 
 
-- Se Identity for MSA, use o **Configurações De** Acesso ao Aplicativo  ->  **ou o Conexão**  ->   School.
+- Se Identity for MSA, use o **Configurações De** Acesso ao Aplicativo  ->  **ou o botão Conexão** De  ->   estudante.
     - Também chamado de fluxo adicionar conta de trabalho (AWA).
-- Se a Identidade for Usuário Local, use **o Configurações** De Acesso ao Aplicativo ou Registro de Estudante  ->    ->  somente no link **de gerenciamento de** dispositivos.
+- Se a Identidade for Usuário Local, use o **Configurações** De Acesso ao Aplicativo ou Registro de Estudante  ->    ->  **somente no** link de gerenciamento de dispositivos.
     - Também chamado de fluxo de registro de MDM puro.
 
 Depois que o dispositivo for inscrito no servidor MDM, o Configurações aplicativo agora refletirá que o dispositivo está inscrito no gerenciamento de dispositivos.
 
 ## <a name="auto-enrollment-in-mdm"></a>Registro automático no MDM
 
-Se sua organização tiver uma assinatura do [Azure Premium](https://azure.microsoft.com/overview/), estiver usando o Azure Active Directory (Azure AD) e uma solução de MDM que aceite um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT poderá configurar o Azure AD para permitir automaticamente o registro do MDM depois que o usuário entrar com sua conta do Azure AD. [Saiba como configurar o registro do Azure AD.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Se sua organização tiver uma assinatura do [Azure Premium](https://azure.microsoft.com/overview/), estiver usando o Azure Active Directory (Azure AD) e uma solução de MDM que aceite um token do Azure AD para autenticação (atualmente, com suporte apenas no Microsoft Intune e no AirWatch), o administrador de IT poderá configurar o Azure AD para permitir automaticamente o registro de MDM depois que o usuário entrar com o Azure AD Conta. [Saiba como configurar o registro do Azure AD.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
 Quando o registro automático está habilitado, nenhum registro manual extra é necessário. Quando o usuário entra usando uma conta do Azure AD, o dispositivo é registrado no MDM depois de concluir a experiência de primeira execução.
 
@@ -62,15 +62,15 @@ Quando um dispositivo é ingressado no Azure AD, ele pode afetar quem considerou
 
 Dependendo do método de registro, o registro do dispositivo pode não estar disponível.
 
-Se o dispositivo tiver sido inscrito com uma conta do Azure AD ou o Autopilot, ele não poderá ser anuado do Intune. Se você quiser desa HoloLens do Azure AD ou reapresentá-lo a um locatário diferente do Azure AD, você deverá [redefinir/reajustar](hololens-recovery.md#reset-the-device) o dispositivo.
+Se o dispositivo tiver sido inscrito com uma conta do Azure AD ou o Autopilot, ele não poderá ser anuado do Intune. Se você quiser desajosar o HoloLens do Azure AD ou reapresentá-lo a um locatário diferente do Azure AD, você deverá [redefinir/reajustar](hololens-recovery.md#restart-the-device) o dispositivo.
 
-Se o dispositivo tiver sido inscrito de uma conta MSA que adicionou uma conta de trabalho ou de uma conta Local que se registrou somente no gerenciamento de dispositivos, você poderá descreviar o registro do dispositivo. Abra o menu Iniciar e, em seguida, **selecione Configurações** Trabalho do Acesso ao Aplicativo ou o botão  ->    ->  *Desconectar Sua Conta*  ->  **de** Conta.
+Se o dispositivo tiver sido inscrito de uma conta MSA que adicionou uma conta de trabalho ou de uma conta Local que se registrou somente no gerenciamento de dispositivos, você poderá descreviar o registro do dispositivo. Abra o menu Iniciar e selecione o **botão** Configurações Trabalho do Acesso ao Aplicativo ou  ->  **Escola** Sua  ->  *Conta Desconectar.*  ->  
 
 ## <a name="enrollment-troubleshooting"></a>Solução de problemas de registro
 
 ### <a name="ensure-valid-license-is-assigned-to-the-user"></a>Verifique se a licença válida está atribuída ao usuário
 
-Consulte Solucionar [problemas Windows](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors) registro de dispositivo no Microsoft Intune seções a seguir, ou seja, Verificar restrições de tipo de dispositivo e Atribuir uma licença [válida ao usuário.](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#assign-a-valid-license-to-the-user) [](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#check-device-type-restrictions)
+Consulte Solucionar [problemas Windows](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors) registro de dispositivo no Microsoft Intune seções a [](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#check-device-type-restrictions) seguir, ou seja, Verificar restrições de tipo de dispositivo e Atribuir uma licença [válida ao usuário.](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#assign-a-valid-license-to-the-user)
 
 ### <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>Verifique se o registro de MDM não está bloqueado para Windows dispositivos
 

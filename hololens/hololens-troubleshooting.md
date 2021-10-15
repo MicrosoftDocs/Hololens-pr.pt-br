@@ -1,6 +1,6 @@
 ---
 title: HoloLens Solução de problemas de dispositivo
-description: mantenha-se atualizado sobre as soluções mais comuns para HoloLens problemas de dispositivo e técnicas de solução de problemas.
+description: Mantenha-se atualizado sobre as soluções mais comuns para HoloLens de dispositivo e técnicas de solução de problemas.
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2021
@@ -13,16 +13,16 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 keywords: problemas, bug, solução de problemas, correção, ajuda, suporte, HoloLens, emulador
-ms.openlocfilehash: 247cf9d34da723e587f6796178ad9a917b93ac08
-ms.sourcegitcommit: 39accbc8e35728969c500da052035af4fd317a65
+ms.openlocfilehash: 5c79e119352146ac249ef02ab888141391c9cea1
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129964557"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034188"
 ---
 # <a name="device-troubleshooting"></a>Solução de problemas de dispositivo
 
-este artigo descreve como resolver vários problemas comuns de HoloLens.
+Este artigo descreve como resolver vários problemas HoloLens comuns.
 
 >[!IMPORTANT]
 > Antes de começar qualquer procedimento de solução de problemas, certifique-se de que seu dispositivo tenha de **20% a 40%** da capacidade da bateria, se possível. As [luzes indicadoras de bateria](hololens2-setup.md#lights-that-indicate-the-battery-level) localizadas sob o botão de energia são uma maneira rápida de verificar a capacidade da bateria sem fazer logon no dispositivo.
@@ -30,48 +30,48 @@ este artigo descreve como resolver vários problemas comuns de HoloLens.
 <a id="list"></a>
 
 **Problemas conhecidos**
-- [Toda vez que a potência vai para 18%, o dispositivo é encerrado repentinamente automaticamente](#every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically)
+- [Sempre que a energia chega a 18%, o dispositivo é desligado automaticamente de repente](#every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically)
 - [OneDrive O aplicativo UWP não funciona para usuários do Azure AD](#onedrive-uwp-app-doesnt-work-for-azure-ad-users)
-- [Por que vejo 0x80180014 durante o piloto automático?](#why-do-i-see-0x80180014-during-autopilot)
+- [Por que vejo o 0x80180014 durante o Autopilot?](#why-do-i-see-0x80180014-during-autopilot)
 - [Microsoft Store código de erro 0x80131500](#microsoft-store-error-code-0x80131500)
 - [Microsoft Edge falha ao iniciar o microfone](#microsoft-edge-fails-to-start-the-microphone)
-- [**Fixo** -o vídeo da assistência remota é congelado após 20 minutos](#remote-assist-video-freezes-after-20-minutes)
-- [Logon automático solicita o logon](#auto-login-asks-for-log-in)
-- [falha ao iniciar o Microsoft Edge](#microsoft-edge-fails-to-launch)
-- [O teclado não muda para caracteres especiais](#keyboard-doesnt-switch-to-special-characters)
-- [**Corrigido** – o download de arquivos bloqueados não mostra erro](#downloading-locked-files-doesnt-error)
-- [Tempo limite de carregamento/download do arquivo do portal do dispositivo **fixo**](#device-portal-file-uploaddownload-times-out)
-- [Tela azul após o cancelamento do registro do insider preview em um dispositivo atualizado com uma compilação Insider](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+- [**Corrigido** – O vídeo do Remote Assist congela após 20 minutos](#remote-assist-video-freezes-after-20-minutes)
+- [O logon automático solicita logon](#auto-login-asks-for-log-in)
+- [Microsoft Edge falha ao iniciar](#microsoft-edge-fails-to-launch)
+- [O teclado não alterna para caracteres especiais](#keyboard-doesnt-switch-to-special-characters)
+- [**Corrigido** – Baixar arquivos bloqueados não mostra o erro](#downloading-locked-files-doesnt-error)
+- [**Corrigido** – o Portal de Dispositivos de download/upload de arquivo de saída](#device-portal-file-uploaddownload-times-out)
+- [Tela azul após o unenrolling da versão prévia do Insider em um dispositivo com um build do Insider](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
 - [OneDrive não carrega imagens automaticamente](#onedrive-doesnt-automatically-upload-pictures)
 
 **Geral**
-- [HoloLens não está respondendo ou não será iniciado](#hololens-is-unresponsive-or-wont-start)
-- [Erro de "pouco espaço em disco"](#low-disk-space-error)
+- [HoloLens está sem resposta ou não iniciará](#hololens-is-unresponsive-or-wont-start)
+- [Erro "Espaço em Disco Baixo"](#low-disk-space-error)
 - [Falha na calibragem](#calibration-fails)
-- [não é possível entrar porque o meu HoloLens foi configurado anteriormente para outra pessoa](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
+- [Não é possível entrar porque minha HoloLens foi configurada anteriormente para outra pessoa](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
 - [O Unity não está funcionando](#unity-isnt-working)
-- [Windows O portal do dispositivo não está funcionando corretamente](#windows-device-portal-isnt-working-correctly)
-- [o Emulator de HoloLens não está funcionando](#the-hololens-emulator-isnt-working)
+- [Windows Portal de Dispositivos está funcionando corretamente](#windows-device-portal-isnt-working-correctly)
+- [O HoloLens Emulator não está funcionando](#the-hololens-emulator-isnt-working)
 
 **Entrada**
 - [Os comandos de voz não estão funcionando](#voice-commands-arent-working)
-- [A entrada manual não está funcionando](#hand-input-isnt-working)
+- [A entrada da mão não está funcionando](#hand-input-isnt-working)
 
 **Conectividade**
-- [Não é possível conectar-se ao Wi-Fi](#cant-connect-to-wi-fi)
+- [Não é possível se conectar ao Wi-Fi](#cant-connect-to-wi-fi)
 
 **Dispositivos externos** 
 - [Bluetooth dispositivos não estão emparelhando](#bluetooth-devices-arent-pairing)
 - [O microfone USB-C não está funcionando](#usb-c-microphone-isnt-working)
-- [os dispositivos listados como disponíveis no Configurações não funcionam](#devices-listed-as-available-in-settings-dont-work)
+- [Os dispositivos listados como disponíveis Configurações não funcionam](#devices-listed-as-available-in-settings-dont-work)
 
-## <a name="every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically"></a>Toda vez que a potência vai para 18%, o dispositivo é encerrado repentinamente automaticamente
+## <a name="every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically"></a>Sempre que a energia chega a 18%, o dispositivo é desligado automaticamente de repente
 
-Há uma questão conhecida conhecida em que quando o dispositivo atinge 18% da bateria, ele será desligado inesperadamente. Esse é um problema de software, não um problema de hardware ou bateria; portanto, não troque os dispositivos por isso. Se você não tiver certeza se o problema corresponde a esse bug, por favor:
+Há um problema conhecido em que quando o dispositivo atinge 18% da bateria, ele será desligado inesperadamente. Esse é um problema de software, não um problema de hardware ou bateria, portanto, não troque dispositivos por isso. Se você não tiver certeza se o problema corresponde a esse bug, por favor:
 
-1. Garantir que os diagnósticos opcionais estejam habilitados em seus dispositivos
+1. Verifique se os diagnósticos opcionais estão habilitados em seus dispositivos
 1. Reproduzir o problema
-1. Enviar um problema de [Hub de comentários](hololens-feedback.md)
+1. Enviar um problema [do Hub de Comentários](hololens-feedback.md)
 1. Compartilhar a URL do problema de comentários
 1. [Entre em contato com o suporte](https://aka.ms/hololenssupport)
 
@@ -79,74 +79,74 @@ Há uma questão conhecida conhecida em que quando o dispositivo atinge 18% da b
 
 ## <a name="onedrive-uwp-app-doesnt-work-for-azure-ad-users"></a>OneDrive O aplicativo UWP não funciona para usuários do Azure AD
 
-se você usar OneDrive para negócios usando sua conta do Azure AD, você poderá ter encontrado um erro ao entrar em sua caixa de entrada OneDrive aplicativo. não ser capaz de entrar no OneDrive aplicativo não afeta os carregamentos automáticos de imagens e vídeos capturados pelo aplicativo de câmera. seus arquivos ainda podem ser salvos e acessados a partir do OneDrive for Business armazenamento em nuvem. as equipes de OneDrive e HoloLens estão trabalhando no problema.
+Se você usar o OneDrive For Business usando sua conta do Azure AD, poderá ter encontrado um erro ao entrar no aplicativo OneDrive caixa de entrada. Não conseguir entrar no aplicativo OneDrive não afeta os uploads automáticos de imagens e vídeos capturados pelo aplicativo Câmera. Seus arquivos ainda podem ser salvos e acessados do armazenamento OneDrive for Business nuvem. As OneDrive e HoloLens equipes estão trabalhando no problema.
 
 ### <a name="workarounds"></a>Soluções Alternativas
 
-pré-requisito: os clientes podem usar Microsoft Edge e o so do dispositivo é atualizado para um Windows Holographic, 21H1 build ou mais recente.
+Pré-requisito: os clientes podem usar Microsoft Edge e o sistema operacional do dispositivo é atualizado para um Windows Holographic, build 21H1 ou mais recente.
 
 Se você estiver enfrentando esse problema, tente um dos seguintes:
 
-- os usuários podem acessar diretamente o OneDrive For Business de Microsoft Edge e interagir com seus arquivos no navegador.
-- os usuários podem instalar o aplicativo OneDrive PWA no HoloLens baixando-o do Microsoft Edge. Isso permitirá que os usuários exibam e gerenciem arquivos no dispositivo novamente. leia e siga estas [instruções para instalar o aplicativo OneDrive PWA no seu HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
+- Os usuários podem acessar diretamente OneDrive For Business do Microsoft Edge e interagir com seus arquivos no site do navegador.
+- Os usuários podem instalar o OneDrive PWA para HoloLens baixando-o do Microsoft Edge. Isso permitirá que os usuários vejam e gerenciem arquivos no dispositivo novamente. Leia e siga estas [instruções para instalar o aplicativo OneDrive PWA em seu HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
 
 [Voltar para a lista](#list)
 
-## <a name="why-do-i-see-0x80180014-during-autopilot"></a>Por que vejo 0x80180014 durante o piloto automático?
+## <a name="why-do-i-see-0x80180014-during-autopilot"></a>Por que vejo o 0x80180014 durante o Autopilot?
 
-esse erro normalmente é encontrado durante a redefinição do dispositivo e o reuso de fluxos em que um dispositivo HoloLens passou por meio do piloto automático pelo menos uma vez. para resolver esse problema, [exclua o dispositivo de Microsoft Intune](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) e redefina-o novamente para concluir o fluxo do autopilot.
+Normalmente, esse erro é encontrado durante a redefinição e rea utilização de fluxos de dispositivo em que um HoloLens passou pelo Autopilot pelo menos uma vez. Para resolver esse problema, exclua o dispositivo do Microsoft Intune e [redefini-lo](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) novamente para concluir o fluxo do Autopilot.
 
-Para obter mais informações, consulte [as etapas de solução de problemas na página do piloto automático.](hololens2-autopilot.md#why-do-i-see-0x80180014-during-autopilot)
+Para obter mais informações, consulte as [etapas de solução de problemas na página do autopilot.](hololens2-autopilot.md#why-do-i-see-0x80180014-during-autopilot)
 
 ## <a name="microsoft-store-error-code-0x80131500"></a>Microsoft Store código de erro 0x80131500
 
-alguns usuários podem experimentar o Microsoft Store funcionar não conforme o esperado e ver o código de erro 0x80131500. esse é um problema causado pela região definida no HoloLens não estar disponível no aplicativo Microsoft Store no HoloLens. Se você encontrar o código de erro 0x80131500, para solucionar o problema:
+Alguns usuários podem experimentar o Microsoft Store funcionando não conforme o esperado e ver o código de erro 0x80131500. Esse é um problema causado pela região definida no HoloLens não estar disponível no aplicativo Microsoft Store no HoloLens. Se você encontrar código de erro 0x80131500, para solução alternativa, por favor:
 
-1. defina Configurações > hora & idioma > região > país ou região, para um dos seguintes:
+1. De Configurações > tempo & idioma > região > país ou região, para um dos seguintes:
     - Estados Unidos, Japão, China, Alemanha, Canadá, Reino Unido, Irlanda, França, Austrália, Nova Zelândia.
-1. Reinicie o aplicativo da loja.
-1. Para que o dispositivo inteiro reflita a alteração, será necessário reiniciar o dispositivo.
+1. Reinicie o aplicativo store.
+1. Para que todo o dispositivo reflita a alteração, o dispositivo precisará ser reiniciado.
 
-a equipe de HoloLens está trabalhando para adicionar suporte para mais regiões.
+A HoloLens de dados está trabalhando para adicionar suporte para mais regiões.
 
-veja aqui os [países para comprar HoloLens 2.](hololens2-purchase.md)
+Consulte aqui [para os países comprarem HoloLens 2.](hololens2-purchase.md)
 
 ## <a name="microsoft-edge-fails-to-start-the-microphone"></a>Microsoft Edge falha ao iniciar o microfone
 
-quando os usuários que usam o Microsoft Edge o microfone pode falhar ao iniciar, portanto não podem ser usados para interagir com o Edge no HoloLens. esse problema conhecido está relacionado à versão do aplicativo Microsoft Edge, não repare seu dispositivo para uma versão anterior, pois isso não corrigirá esse problema.
+Quando os usuários Microsoft Edge o microfone pode falhar ao iniciar, portanto, não pode ser usado para interagir com o Edge no HoloLens. Esse problema conhecido está relacionado à versão do aplicativo Microsoft Edge, não reflash seu dispositivo para uma versão anterior, pois isso não corrigirá esse problema.
 
 ### <a name="who-is-affected"></a>Who é afetado?
 
-usuários que têm Microsoft Edge versão 93, 94 ou 95.
-você pode verificar qual versão do Microsoft Edge você tem usando o aplicativo Microsoft Store e, em seguida, selecione o botão "ver mais" representado pelo **...** em seguida, selecione **Downloads e atualizações**.
+Usuários que têm Microsoft Edge versão 93, 94 ou 95.
+Você pode verificar qual versão do Microsoft Edge tem usando o aplicativo Microsoft Store e, em seguida, selecionar o botão "Ver mais" representado pelo **...** e, em seguida, selecionar Downloads e **atualizações**.
 
-### <a name="work-around"></a>Solução alternativa
+### <a name="work-around"></a>Resolver o caso
 
-a correção atual está na versão 96, que está disponível para os usuários que se registraram no Microsoft Edge insiders. isso é diferente de registrar seu dispositivo como um Windows insider. Leia estas instruções para obter detalhes sobre [como se registrar no programa Insider do Edge.](hololens-new-edge.md#microsoft-edge-insider-channels)
+A correção atual está na versão 96, que está disponível para usuários que se registraram no Microsoft Edge Insiders. Isso é diferente de registrar seu dispositivo como um Windows Insider. Leia estas instruções para obter detalhes [sobre como se registrar no programa insider do Edge.](hololens-new-edge.md#microsoft-edge-insider-channels)
 
-## <a name="remote-assist-video-freezes-after-20-minutes"></a>O vídeo da assistência remota congela após 20 minutos
-
-> [!NOTE]
-> Há uma versão mais recente do auxílio remoto que tem uma correção para esse problema. [Atualize o auxílio remoto](holographic-store-apps.md#update-apps) para a versão mais recente para evitar esse problema.
+## <a name="remote-assist-video-freezes-after-20-minutes"></a>O vídeo do Remote Assist congela após 20 minutos
 
 > [!NOTE]
-> devido a essa gravidade do problema conhecido, fizemos temporariamente uma pausa na disponibilidade de Windows Holographic, versão 21H1. A compilação 21H1 agora está disponível novamente, portanto, os dispositivos podem ser novamente atualizados para a compilação de 21H1 mais recente.
+> Há uma versão mais recente do Remote Assist que tem uma correção para esse problema. Atualize [o Remote Assist](holographic-store-apps.md#update-apps) para a versão mais recente para evitar esse problema.
 
-na última versão do [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1), alguns usuários da assistência remota experimentaram o congelamento do vídeo durante chamadas de 20 minutos. Esse é um **problema conhecido**.
+> [!NOTE]
+> Devido à severidade desse problema conhecido, pausamos temporariamente a disponibilidade do Windows Holographic, versão 21H1. O build 21H1 agora está disponível novamente, portanto, os dispositivos podem ser atualizados novamente para o build 21H1 mais recente.
+
+Na versão mais recente do [Windows Holographic, versão 21H1,](hololens-release-notes.md#windows-holographic-version-21h1)alguns usuários do Remote Assist experimentaram o congelamento de vídeo durante chamadas por mais de 20 minutos. Esse é um **problema conhecido.**
 
 ### <a name="workarounds"></a>Soluções Alternativas
 
-Se não for possível atualizar o auxílio remoto para uma compilação mais nova, tente a seguinte solução alternativa.
+Se você não conseguir atualizar o Remote Assist para um build mais recente, tente a seguinte explicação.
 
-#### <a name="restart-in-between-calls"></a>Reinicializar entre chamadas
+#### <a name="restart-in-between-calls"></a>Reiniciar entre chamadas
 
-Se suas chamadas estiverem passando por um período de 20 minutos e você estiver enfrentando esse problema, tente reinicializar o dispositivo. A reinicialização do dispositivo entre as chamadas de assistência remota atualizará o dispositivo e o colocará em um bom estado.
+Se suas chamadas estão passando por um período de 20 minutos e você estiver enfrentando esse problema, tente reinicializar seu dispositivo. Reinicializar o dispositivo entre chamadas de Assistência Remota atualizará seu dispositivo e o colocará novamente em um bom estado.
 
-para reiniciar rapidamente um dispositivo no [Windows Holographic, versão 21H1](hololens-release-notes.md#windows-holographic-version-21h1) abra o menu iniciar e selecione o ícone usuário e, em seguida, selecione **reiniciar**.
+Para reiniciar rapidamente um dispositivo no [Windows Holographic, versão 21H1,](hololens-release-notes.md#windows-holographic-version-21h1) abra o menu Iniciar e selecione o ícone de usuário e, em seguida, **selecione Reiniciar**.
 
 [Voltar para a lista](#list)
 
-## <a name="auto-login-asks-for-log-in"></a>Logon automático solicita o logon
+## <a name="auto-login-asks-for-log-in"></a>O logon automático solicita logon
 
 Um HoloLens 2 pode ser configurado para fazer logon automaticamente por meio de opções de entrada de contas do **Configurações**  ->    ->    -> e, em Obrigatório, definir o valor como **Nunca**. Alguns usuários podem precisar fazer logoff no dispositivo novamente ao atualizar um dispositivo com uma atualização substancialmente grande, como uma atualização de recurso. Esse é um **problema conhecido.**
 
@@ -163,7 +163,7 @@ Isso não deve ocorrer durante:
 Trabalhar em torno de métodos:
 
 - Métodos de login, como PIN, Senha, Íris, Autenticação da Web ou chaves FIDO2.
-- Se o PIN do dispositivo não puder ser lembrado e outros métodos de autenticação não estão disponíveis, um usuário poderá usar o modo [de reflashing manual](hololens-recovery.md#manual-procedure).
+- Se o PIN do dispositivo não puder ser lembrado e outros métodos de autenticação não estão disponíveis, um usuário poderá usar o modo [de reflashing manual](hololens-recovery.md#manual-flashing-mode-procedure).
 
 [Voltar para a lista](#list)
 
@@ -172,7 +172,7 @@ Trabalhar em torno de métodos:
 > [!NOTE]
 > Esse problema foi criado originalmente com a versão de envio Microsoft Edge em mente. Esse problema pode ser resolvido na [nova Microsoft Edge](hololens-new-edge.md). Se não estiver, faça comentários.
 
-Alguns clientes relataram um problema em que Microsoft Edge falha ao iniciar. Para esses clientes, o problema persiste por meio da reinicialização e não é resolvido com Windows ou atualizações de aplicativo. Se você estiver enfrentando esse problema e tiver confirmado que o [Windows](hololens-updates.md#manually-check-for-updates)está atualizado, arquiva um bug do aplicativo Hub de [Comentários](hololens-feedback.md) com a seguinte categoria e sub-categoria: Instalar e atualizar o > Baixando, instalando e configurando a atualização Windows.
+Alguns clientes relataram um problema em que Microsoft Edge falha ao iniciar. Para esses clientes, o problema persiste por meio da reinicialização e não é resolvido com Windows ou atualizações de aplicativo. Se você estiver enfrentando esse problema e tiver confirmado que o [Windows](hololens-updates.md#manually-check-for-updates)está atualizado, arquiva um bug do aplicativo Hub de [Comentários](hololens-feedback.md) com a seguinte categoria e sub-categoria: Instalar e atualizar o > Baixando, instalando e configurando o Windows Update.
 
 Não há soluções alternativas conhecidas, pois não foi possível raizizar o problema até o momento. Arquivar um bug por meio do Hub de Comentários ajudará nossa investigação! Esse é um **problema conhecido.**
 
@@ -180,7 +180,7 @@ Não há soluções alternativas conhecidas, pois não foi possível raizizar o 
 
 ## <a name="keyboard-doesnt-switch-to-special-characters"></a>O teclado não alterna para caracteres especiais
 
-Há um problema durante o OOBE, em que quando o usuário escolheu uma conta de trabalho ou de estudante e está inserindo sua senha, tentar alternar para os caracteres especiais no teclado tocando no botão &123 não muda para caracteres especiais. Esse é um **problema conhecido.**
+Há um problema durante o OOBE, em que uma vez que o usuário escolheu uma conta de trabalho ou de estudante e está inserindo sua senha, tentar alternar para os caracteres especiais no teclado tocando no botão &123 não muda para caracteres especiais. Esse é um **problema conhecido.**
 
 Work-arounds:
 
@@ -213,7 +213,7 @@ Alguns clientes descobriram que, ao tentar carregar ou baixar arquivos, a opera�
 
 ### <a name="workaround"></a>Solução alternativa
 
-Essa solução alternativa, que se aplica igualmente Wi-Fi e UsbNcm, é desabilitar a opção "obrigatório" em "Conexão SSL". Para fazer isso, navegue até Portal de Dispositivos, **Sistema** e selecione a **página Preferências.** Na seção **Segurança do** Dispositivo, localize Conexão **SSL** e desmarque para desabilitar **Obrigatório.**
+Essa solução alternativa, que se aplica igualmente a Wi-Fi e UsbNcm, é desabilitar a opção "obrigatório" em "Conexão SSL". Para fazer isso, navegue até Portal de Dispositivos, **Sistema** e selecione a **página Preferências.** Na seção **Segurança do** Dispositivo, localize Conexão **SSL** e desmarque para desabilitar **Obrigatório.**
 
 Em seguida, o usuário deve ir para http://, não https:// (endereço IP) e recursos como upload e download de arquivo funcionarão.
 
@@ -227,7 +227,7 @@ Isso não afeta:
 
 - Usuários que não estão inscritos no Windows Insider
 - Insiders:
-    - Se um dispositivo tiver sido inscrito desde que os builds do Insider eram da versão 18362.x
+    - Se um dispositivo foi inscrito desde que os builds do Insider eram da versão 18362.x
     - Se eles piscaram um build 19041.x assinado pelo Insider e permanecem inscritos no programa Insider
 
 Work-around:
@@ -251,7 +251,7 @@ O OneDrive aplicativo para HoloLens não dá suporte ao carregamento automático
 
 Soluções alternativas:
 
-- Se for viável para sua empresa, há suporte para o carregamento automático de câmera em contas da Microsoft do consumidor. Você pode entrar no seu conta Microsoft além de sua conta de trabalho ou de estudante (o aplicativo OneDrive dá suporte à dupla login). No seu perfil conta Microsoft no OneDrive você pode habilitar o upload automático de rolagem da câmera em segundo plano.
+- Se for viável para sua empresa, há suporte para o carregamento automático de câmera em contas da Microsoft do consumidor. Você pode entrar no seu conta Microsoft além de sua conta de trabalho ou de estudante (o OneDrive aplicativo dá suporte à dupla login). No seu perfil conta Microsoft no OneDrive você pode habilitar o upload automático de rolagem da câmera em segundo plano.
 
 - Se você não puder usar com segurança uma conta de conta Microsoft para carregar suas fotos automaticamente, poderá carregar manualmente fotos em sua conta de trabalho ou de estudante do OneDrive aplicativo. Para fazer isso, certifique-se de que você está entrando em sua conta de trabalho ou de estudante no OneDrive aplicativo. Selecione o **+** botão e escolha **Upload**. Encontre as fotos ou vídeos que você deseja carregar navegando até **Imagens > Camera Roll**. Selecione as fotos ou vídeos que você deseja carregar e, em seguida, selecione o **botão** Abrir.
 
@@ -262,7 +262,7 @@ Soluções alternativas:
 Se o HoloLens não for iniciar:
 
 - Se os LEDs ao lado do botão de energia não piscarem ou apenas um LED piscar brevemente, talvez seja necessário cobrar o [HoloLens.](hololens2-charging.md#charging-the-device)
-- Se os LEDs se acenderem quando você pressionar o botão de energia, mas você não conseguir ver nada nas exibições, faça uma [redefinição de](hololens-recovery.md#hard-reset-procedure)disco rígido do dispositivo .
+- Se os LEDs se acenderem quando você pressionar o botão de energia, mas você não conseguir ver nada nas exibições, faça uma [redefinição de](hololens-recovery.md#hard-restart-procedure)disco rígido do dispositivo .
 
 Se o HoloLens ficar congelado ou sem resposta:
 
@@ -276,7 +276,7 @@ Se essas etapas não funcionarem, você poderá tentar recuperar seu dispositivo
 
 Você precisará liberar algum espaço de armazenamento fazendo um ou mais dos seguintes:
 
-- Exclua alguns espaços nãoutilados. Vá para **Configurações** System Spaces , selecione um espaço que você não precisa mais  >    >  e, em seguida, selecione **Remover**.
+- Exclua alguns espaços nãoutilados. Vá para **Configurações** System Spaces , selecione um espaço que você não precisa mais e, em  >    >  seguida, selecione **Remover**.
 - Remova alguns dos hologramas que você colocou.
 - Exclua algumas imagens e vídeos do aplicativo Fotos.
 - Desinstale alguns aplicativos do HoloLens. Na lista **Todos os apps,** toque e mantenha o aplicativo que você deseja desinstalar e, em seguida, selecione **Desinstalar**.
@@ -292,7 +292,7 @@ Alguns possíveis motivos para a falha de calibragem incluem:
 - Ficando confuso e não seguindo os destinos de calibragem
 - Visor do dispositivo sujo ou com rascunho ou visor do dispositivo não posicionado corretamente
 - Óculos sujos ou com rascunho
-- Determinados tipos de lentes de contato e óculos (lentes de contato coloridas, algumas lentes de contato tóricas, óculos de bloqueio de IR, alguns óculos de alta receita, óculos escuros ou semelhantes)
+- Determinados tipos de lentes de contato e óculos (lentes de contato coloridas, algumas lentes de contato tóricas, óculos de bloqueio de IR, alguns óculos de alta receita, óculos de sol ou semelhantes)
 - Mais pronunciada adeção e algumas extensões de cíoa
 - Quadros de óculos grandes ou de óculos se eles estão bloqueando o dispositivo de ver seus olhos
 - Determinadas coisas de olho, condições de olho ou olho, como olhos estreitos, malhas longas, amblyopia, nystagmus, alguns casos de LASIK ou outras óculos de olho
@@ -307,9 +307,9 @@ Se a calibragem não for bem-sucedida, tente:
 
 Se você seguiu todas as diretrizes e a calibragem ainda está falhando, desabilite o prompt de calibragem Configurações. Além disso, nos avise fazendo comentários no [Hub de Comentários.](hololens-feedback.md)
 
-Confira também informações relacionadas para a solução de problemas de cor [ou brilho da imagem.](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right)
+Consulte também informações relacionadas para a solução de problemas de cor [ou brilho da imagem.](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right)
 
-A configuração de IPD não é aplicável HoloLens 2, pois as posições dos olhos são computadas pelo sistema. 
+A configuração de IPD não é aplicável HoloLens 2, pois as posições de olho são computadas pelo sistema. 
 
 [Voltar para a lista](#list)
 
@@ -327,13 +327,13 @@ Você pode [colocar o dispositivo no Modo de Flash **e** usar o Avançado Recove
 
 [Voltar para a lista](#list)
 
-## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Portal de Dispositivos está funcionando corretamente
+## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Portal de Dispositivos não está funcionando corretamente
 
 - O recurso De visualização ao vivo na captura de Realidade Misturada pode exibir vários segundos de latência.
 
 - Na página Entrada Virtual, os controles Gesto e Rolagem na seção Gestos Virtuais não são funcionais. Usá-los não terá nenhum efeito. O teclado virtual na página de entrada virtual funciona corretamente.
 
-- Depois de habilitar o Modo de Desenvolvedor Configurações, pode levar alguns segundos antes que a opção para ativar o Portal de Dispositivos seja habilitada.
+- Depois de habilitar o Modo de Desenvolvedor Configurações, pode levar alguns segundos antes que a opção ative a Portal de Dispositivos está habilitada.
 
 [Voltar para a lista](#list)
 
@@ -343,18 +343,18 @@ Informações sobre o HoloLens emulador estão localizadas em nossa documentaç�
 
 
 - Nem todos os aplicativos no Microsoft Store são compatíveis com o emulador. Por exemplo, Conker e Fragmentos Não são reproduzíveis no emulador.
-- Você não pode usar a webcam do computador no Emulator.
+- Não é possível usar a webcam do computador no Emulator.
 - O recurso Live Preview do Windows Portal de Dispositivos não funciona com o emulador. Você ainda pode capturar vídeos e imagens de Realidade Misturada.
 
 [Voltar para a lista](#list)
 
 ## <a name="voice-commands-arent-working"></a>Os comandos de voz não estão funcionando
 
-Se Cortana estiver respondendo aos comandos de voz, certifique-se de Cortana está ligado. Na lista Todos os apps, selecione **Cortana**  >    >  **Menu Notebook Configurações** para fazer  >   alterações. Para saber mais sobre o que você pode dizer, [consulte Usar sua voz com HoloLens](hololens-cortana.md).
+Se Cortana estiver respondendo aos comandos de voz, certifique-se de Cortana está ligado. Na lista Todos os apps, selecione **Cortana**  >    >  **Menu Notebook**  >  **Configurações** para fazer alterações. Para saber mais sobre o que você pode dizer, [consulte Usar sua voz com HoloLens](hololens-cortana.md).
 
 No HoloLens (1ª geração), o reconhecimento de fala integrado não é configurável. Ele está sempre ligado. No HoloLens 2, você pode optar por ativar o reconhecimento de fala e Cortana durante a instalação do dispositivo.
 
-Se o HoloLens 2 não estiver respondendo à sua voz, certifique-se de que o reconhecimento de fala está ligado. Vá para **Iniciar Configurações**  >    >  **De**  >  **Privacidade e** a ligue o **Reconhecimento de Fala.**
+Se o HoloLens 2 não estiver respondendo à sua voz, certifique-se de que o reconhecimento de fala está ligado. Vá para **Iniciar Configurações**  >    >  **De**  >  **Privacidade e** ativar o Reconhecimento **de Fala.**
 
 [Voltar para a lista](#list)
 
@@ -369,7 +369,7 @@ Muitos aplicativos imersivos seguem padrões de entrada semelhantes à Home de R
 
 Se você estiver usando óculos, observe que alguns tipos de óculos não funcionam com o acompanhamento de mão.  Um exemplo comum são as máscaras de borracha preta, que tendem a absorver a luz e não são escolhidas pela câmera de profundidade.  Se seu trabalho envolve óculos de borracha, recomendamos tentar uma cor mais clara, como azul ou cinza.  Outro exemplo são grandes óculos de escuro, que tendem a obscurecer a forma da sua mão. Recomendamos o uso de máscaras que sejam o mais adequado possível para melhores resultados.
 
-Se o visor tiver impressões digitais ou impressões digitais, use a limpeza de microfibra que veio com a HoloLens para limpar a luz do visor.
+Se o visor tiver impressões digitais ou impressões digitais, use a limpeza de microfibra que veio com a HoloLens para limpar a lente do visor.
 
 [Voltar para a lista](#list)
 
@@ -377,7 +377,7 @@ Se o visor tiver impressões digitais ou impressões digitais, use a limpeza de 
 
 Aqui estão algumas ações que você pode tentar se não conseguir conectar seu HoloLens a uma rede Wi-Fi:
 
-- Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar e, em seguida, **selecione Configurações**  >  **Rede &amp;**  >  **Wi-Fi da Internet.** Se o Wi-Fi estiver ligado, tente desligá-lo e, em seguida, ligue novamente.
+- Verifique se o Wi-Fi está ligado. Para verificar, use o gesto Iniciar e, em seguida, **selecione Configurações**  >  **Rede &amp;**  >  **Wi-Fi da Internet**. Se o Wi-Fi estiver ligado, tente desligá-lo e, em seguida, ligue novamente.
 - Aproxime-se do roteador ou do ponto de acesso.
 - Reinicie o roteador Wi-Fi e, em [seguida, reinicie HoloLens](hololens-recovery.md). Tente se conectar novamente.
 - Se nenhuma dessas ações funcionar, verifique se o roteador está usando o firmware mais recente. Você pode encontrar essas informações no site do fabricante.
@@ -398,22 +398,22 @@ Se você estiver tendo problemas para [emparelhar um dispositivo Bluetooth ,](ho
 
 Esteja ciente de que alguns microfones USB-C relatam-se incorretamente como um microfone *e um* alto-falante. Esse é um problema com o microfone e não com HoloLens. Ao conectar um desses microfones ao HoloLens, o som pode ser perdido. Felizmente, há uma correção simples.  
 
-No **Configurações** do sistema, de definido explicitamente os  ->    ->  alto-falantes integrados **(Driver de** Áudio de Recurso Análogo) como **o dispositivo padrão**. HoloLens deve se lembrar dessa configuração mesmo se o microfone for removido e reconectado posteriormente.
+No **Configurações** system sound , de definir explicitamente os  ->    ->  alto-falantes integrados **(Driver de** Áudio de Recurso Análogo) como **o dispositivo padrão**. HoloLens deve se lembrar dessa configuração mesmo que o microfone seja removido e reconectado posteriormente.
 
 ![Solução de problemas de microfones USB-C.](images/usbc-mic-4.png)
 
 ## <a name="devices-listed-as-available-in-settings-dont-work"></a>Os dispositivos listados como disponíveis Configurações não funcionam
 
-HoloLens (1ª geração) não dá suporte a Bluetooth de áudio. Bluetooth de áudio, como alto-falantes e headsets, podem aparecer como disponíveis em HoloLens configurações, mas não têm suporte.
+HoloLens (1º gen) não oferece suporte a perfis de áudio Bluetooth. Bluetooth dispositivos de áudio, como alto-falantes e headsets, podem aparecer como disponíveis nas configurações de HoloLens, mas não têm suporte.
 
-HoloLens 2 dá suporte à Bluetooth de áudio A2DP para reprodução estéreo. O Bluetooth de mãos livres que permite a captura de microfone de um periférico Bluetooth não tem suporte no HoloLens 2.
+o HoloLens 2 dá suporte ao perfil de áudio Bluetooth A2DP para reprodução de estéreo. o perfil Bluetooth hands Free que habilita a captura de microfone de um periférico de Bluetooth não tem suporte no HoloLens 2.
 
-Se você estiver tendo problemas para usar um Bluetooth, certifique-se de que ele seja um dispositivo com suporte. Os dispositivos com suporte incluem o seguinte:
+se você tiver problemas ao usar um dispositivo Bluetooth, verifique se ele é um dispositivo com suporte. Os dispositivos com suporte incluem o seguinte:
 
-- Teclados QWERTY Bluetooth idioma inglês (você pode usá-lo em qualquer lugar em que use o teclado holográfico).
-- Bluetooth mouses.
-- O [HoloLens clique em](hololens1-clicker.md).
+- os teclados de Bluetooth de QWERTY de idioma inglês (você pode usá-los em qualquer lugar que use o holographic keyboard).
+- Bluetoothndo o mouse.
+- o [HoloLens clicador](hololens1-clicker.md).
 
-Você pode emparelhar outros Bluetooth dispositivos HID e GATT com seus HoloLens. No entanto, talvez seja preciso instalar aplicativos de parceiros correspondentes do Microsoft Store para realmente usar os dispositivos.
+você pode emparelhar outros dispositivos Bluetooth HID e GATT junto com seu HoloLens. no entanto, talvez seja necessário instalar os aplicativos complementares correspondentes de Microsoft Store para realmente usar os dispositivos.
 
 [Voltar para a lista](#list)

@@ -5,21 +5,21 @@ keywords: como fazer, atualizar, reverter, HoloLens, verificar compilação, nú
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
-ms.author: v-qianwen
+ms.author: v-beehanson
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 9/3/2021
+ms.date: 10/11/2021
 audience: ITPro
 ms.reviewer: ''
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f39fc2c6c0aaf16f304f38216a424c3811eb439d
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 49036135ba13a93d2e8be97a7f3a95d50785c5c5
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032020"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034256"
 ---
 # <a name="update-hololens-2"></a>atualizar HoloLens 2
 
@@ -35,7 +35,7 @@ com o serviço Windows Update, você controlará vários aspectos do processo de
 
 ## <a name="types-of-updates"></a>Tipos de atualizações
 
-por HoloLens, você pode gerenciar automaticamente dois tipos de atualizações. 
+por HoloLens, você pode gerenciar automaticamente dois tipos de atualizações.
 
 - Atualizações de recursos: lançadas duas vezes por ano.
 - Atualizações de qualidade: incluem atualizações de segurança críticas. Eles são liberados mensalmente ou conforme necessário.
@@ -46,9 +46,9 @@ Use o **Update** / **AllowAutoUpdate** para gerenciar a verificação, o downloa
 
 Você também pode definir um agendamento de atualização. Ele pode estar em um dia específico ou todos os dias, em um determinado momento. Por exemplo, às 17:00 ou fora do horário ativo.
 
-Por fim, algumas palavras sobre como planejar sua estratégia de atualização. Damos suporte a adiamentos de atualização. Portanto, você pode decidir por quanto tempo esperar depois que a Microsoft lançar uma atualização para instalar essa atualização nos dispositivos.
+Por fim, algumas palavras sobre como planejar sua estratégia de atualização. Damos suporte a adiamentos de atualização, para que você possa decidir por quanto tempo esperar depois que a Microsoft lançar uma atualização para instalar essa atualização nos dispositivos.
 
-Às vezes, uma empresa gosta de experimentar todos os novos recursos para garantir que tudo funcione e esteja familiarizado com as novas atualizações para que sua equipe de suporte esteja preparada. Depois de confirmar que tudo está certo, eles distribuem as atualizações para toda a empresa. Ao associar subconjuntos de seus dispositivos a diferentes políticas de adiamento, conhecidas como anéis de atualização, você pode coordenar uma estratégia de distribuição de atualização para sua organização.
+Às vezes, uma empresa gosta de experimentar todos os novos recursos para ter certeza de que tudo funciona e está familiarizado com as novas atualizações para que sua equipe de suporte seja preparada. Depois de confirmar que tudo está certo, eles distribuem as atualizações para toda a empresa. Ao associar subconjuntos de seus dispositivos a diferentes políticas de adiamento, conhecidas como anéis de atualização, você pode coordenar uma estratégia de distribuição de atualização para sua organização.
 
 ## <a name="hololens-update-tools"></a>ferramentas de atualização do HoloLens
 
@@ -83,21 +83,10 @@ em alguns casos, talvez você queira voltar para uma versão anterior do softwar
 
 1. Entre em contato com o suporte para ver se eles podem corrigir o problema.
     1. Verifique se a telemetria **opcional** ou **completa** está habilitada-isso torna seu bug mais acionável e mais fácil para os engenheiros diagnosticarem.
-    1. Os [comentários de arquivo](hololens-feedback.md) são o mais descritivos possível. Anote o título ou use o recurso de compartilhamento para que você possa compartilhar seu bug com o suporte.
+    1. Nos [comentários do arquivo](hololens-feedback.md) , seja o mais descritivo possível. Anote o título ou use o recurso de compartilhamento para que você possa compartilhar seu bug com o suporte.
     1. Contate o [suporte](https://aka.ms/hlsupport). Se o problema for um que precisa ser resolvido retornando a uma versão anterior, eles podem fornecer a você o FFU para atualizar seu dispositivo.
 
-1. se isso não funcionar, [redefina ou refaça o reflash do HoloLens 2 com o complemento de recuperação avançada](hololens-recovery.md).
-    1. No seu computador, baixe o [complemento de recuperação avançada](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) do Microsoft Store.
-    1. certifique-se de que você não tem telefones ou dispositivos Windows conectados ao seu PC.
-    1. Escolha qual versão você deseja atualizar:
-        1. você pode baixar a [versão mais recente do HoloLens 2](https://aka.ms/hololens2download).
-        1. Você pode usar a compilação padrão que os hosts ARC. (Se você escolher essa opção, ignore a próxima etapa.)
-        1. Você pode usar um suporte de compilação fornecido com o.
-    1. Depois de concluir esses downloads, abra o **Explorador de arquivos**  >  **downloads**. Clique com o botão direito do mouse na pasta compactada que você baixou e selecione **extrair tudo**  >  **extrair** para descompactá-la.
-    1. Conexão seu HoloLens ao seu PC usando um usb-a para cabo usb-C. (mesmo que você esteja usando outros cabos para conectar seu HoloLens, isso funciona melhor.)
-    1. O complemento de recuperação avançada detecta automaticamente seu HoloLens. Escolha o bloco **Microsoft HoloLens**.
-    1. Na próxima tela, selecione **seleção de pacote manual** e, em seguida, selecione o arquivo de instalação contido na pasta que você descompactou na etapa 4. (Procure um arquivo com a `.ffu` extensão.)
-    1. Selecione **instalar software** e siga as instruções.
+1. se isso não funcionar, atualize novamente [o HoloLens 2 com o complemento de recuperação avançada](hololens-recovery.md#clean-reflash-the-device).
 
 > [!NOTE]
 > Voltar para uma versão anterior exclui seus arquivos pessoais e configurações.
