@@ -117,7 +117,7 @@
 ## [Notas sobre a versão do HoloLens 2](hololens-release-notes.md)
 ## [Versão prévia do Insider para Microsoft HoloLens](hololens-insider.md)
 ## [Idiomas com suporte](hololens2-language-support.md)
-## [Desenvolver com o Microsoft Mesh (Versão Prévia)](/mesh/overview)
+## [Saiba mais sobre o Microsoft Mesh (versão prévia)](/mesh/overview)
 ## HoloLens (1ª geração)
 ### Uso pela primeira vez
 #### [Sobre o HoloLens (1ª geração)](hololens1-hardware.md)
