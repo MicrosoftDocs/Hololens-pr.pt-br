@@ -108,7 +108,7 @@
 ## [Exibição](hololens2-display.md)
 ## [Implementação e dispositivos gerenciados](hololens2-enterprise-troubleshooting.md#)
 ## [Habilitar logs de diagnóstico](hololens-diagnostic-logs.md)
-## [Redefinir o HoloLens 2](hololens-recovery.md)
+## [Reiniciar, redefinir ou recuperar o HoloLens 2](hololens-recovery.md)
 
 # Recursos
 ## [Onde comprar o HoloLens 2](hololens2-purchase.md)
@@ -131,7 +131,7 @@
 #### [Gerenciar aplicativos personalizados para o HoloLens](holographic-custom-apps.md)
 #### [Instalar a versão localizada do HoloLens (1ª geração)](hololens1-install-localized.md)
 #### [Desbloquear os recursos do Windows Holographic for Business](hololens1-upgrade-enterprise.md)
-#### [Redefinir o HoloLens (1ª geração)](hololens1-recovery.md)
+#### [Reiniciar, redefinir ou recuperar o HoloLens (1ª geração) ](hololens1-recovery.md)
 ### Segurança do HoloLens (1ª geração)
 #### [Perguntas Frequentes sobre Segurança do HoloLens (1ª geração)](hololens1-faq-security.yml)
 #### [Criptografia BitLocker do HoloLens (1ª geração)](hololens1-encryption.md)
