@@ -8,7 +8,7 @@ ms.author: v-tea
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 10/13/2020
+ms.date: 10/12/2021
 ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
@@ -19,12 +19,12 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 3afe3d2aecd64c2b4724f4805571cb3c46112875
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 854e867238de6c87732970fba75abdc8e1fb2c64
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126034028"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924343"
 ---
 # <a name="manage-hololens-updates"></a>Gerenciar atualizações do HoloLens
 
@@ -101,6 +101,24 @@ Você pode usar as seguintes políticas de atualização para configurar os disp
 - [Update/AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 - [Update/RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 - [Update/UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+
+#### <a name="improved-update-restart-detection-and-notifications"></a>Aprimoramento da detecção e das notificações de reinicialização de atualização
+
+- Introduzido no [Windows Holographic, versão 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Entre as horas ativas e as políticas de tempo de instalação, é possível evitar a reinicialização dos dispositivos HoloLens quando eles estão em uso. No entanto, isso atrasaria a adoção de atualizações se as reinicializações não ocorressem para concluir a instalação de uma atualização necessária. Agora adicionamos políticas para permitir que a equipe de TI imponha datas limites e reinicializações necessárias e garanta que a instalação de uma atualização seja concluída em tempo hábil. Os usuários podem ser notificados antes do início da reinicialização e atrasá-la de acordo com a política de TI.
+
+As seguintes políticas de atualização foram adicionadas:
+
+- [Update/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+- [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
+- [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+- [Update/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+- [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+- [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
+- [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
+- [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
 
 ### <a name="plan-and-configure-update-rollouts-for-hololens-2"></a>Planejar e configurar as atualizações de atualização do HoloLens 2
 

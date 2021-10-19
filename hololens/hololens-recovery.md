@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e9aad32891bb093cbce18671b76549788b19afcb
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 0efcfd0adf9bd380007e5ed4f905cb130b76d4b8
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126034058"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034207"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>Reiniciar, redefinir ou recuperar o HoloLens 2
 
@@ -45,13 +45,19 @@ Se o dispositivo for reinicializado corretamente e em execução, há três mane
 
    ![Uma tela de propriedades do HoloLens 2 mostra o nível de mudança da bateria.](images/ResetRecovery2.png)
 
-Se o dispositivo não conseguir reiniciar pelo menu Iniciar, observe a aparência do LED e a enumeração do dispositivo no PC host. Em seguida, siga o [guia de solução de problemas](hololens-troubleshooting.md). Caso o estado do dispositivo não se enquadrar em nenhum dos estados listados no guia de solução de problemas, execute o [reinicialização forçada](hololens-recovery.md#hard-reset-procedure) com o dispositivo conectado à fonte de energia, não ao computador host. Aguarde pelo menos uma hora para o dispositivo ser carregado.
+Se o dispositivo não conseguir reiniciar pelo menu Iniciar, observe a aparência do LED e a enumeração do dispositivo no PC host. Em seguida, siga o [guia de solução de problemas](hololens-troubleshooting.md). Caso o estado do dispositivo não se enquadrar em nenhum dos estados listados no guia de solução de problemas, execute o [reinicialização forçada](hololens-recovery.md#hard-restart-procedure) com o dispositivo conectado à fonte de energia, não ao computador host. Aguarde pelo menos uma hora para o dispositivo ser carregado.
 
-## <a name="reset-the-device"></a>Redefinir o dispositivo
+> [!NOTE]
+> Vamos começar definindo termos.\
+> "Reiniciar" simplesmente significa desligar e ligar o dispositivo.\
+> "Redefinir" significa restaurar o dispositivo para os padrões por meio da interface do usuário de Configurações para reinstalar a imagem atual.\
+> "Reinstalar imagem" significa que o dispositivo está conectado com um computador, e uma nova imagem (diferente, opcionalmente) deve ser instalada.
 
-Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositivo sem usar o software UI.
+## <a name="restart-the-device"></a>Reinicie o dispositivo
 
-### <a name="standard-procedure"></a>Procedimento padrão
+Em determinadas circunstâncias, pode ser necessário reiniciar o dispositivo manualmente sem usar a interface do usuário do software. Isso pode ajudar a resolver um problema encontrado sem precisar redefinir o dispositivo nem reinstalar uma imagem nele.
+
+### <a name="standard-restart-procedure"></a>Procedimento de reinicialização padrão
 
 1. Desconecte o cabo tipo-C para desconectar o dispositivo da fonte de alimentação ou do computador host.
 
@@ -63,7 +69,7 @@ Sob certas circunstâncias, você pode ter que reiniciar manualmente o dispositi
 
    ![Gerenciador de dispositivos do HoloLens 2 MicrosoftHoloLensRecovery.](images/MicrosoftHoloLens_DeviceManager.png)
 
-### <a name="hard-reset-procedure"></a>Procedimento de redefinição de disco
+### <a name="hard-restart-procedure"></a>Procedimento de reinicialização forçada
 
 Se o procedimento padrão de redefinição não funcionar, use o procedimento de redefinição forçada:
 
@@ -92,13 +98,13 @@ Há duas maneiras de limpar a reflash do dispositivo. Para ambos, você deve pri
 >[!WARNING]
 >Se você limpar a flash do seu dispositivo, todos os seus dados pessoais, aplicativos e configurações serão apagados, incluindo informações de redefinição de TPM.
 
-Por padrão, o Advanced Recovery Companion está configurado para baixar o build da versão de recurso mais recente. Para saber mais sobre a versão de recurso mais recente, confira as [notas sobre a versão do HoloLens 2](hololens-release-notes.md). Para obter o pacote de FFU (Atualização Flash Completa) mais recente do HoloLens 2 para reinstalar a imagem do dispositivo por meio do Advanced Recovery Companion, baixe a imagem mensal do HoloLens 2 mais recente: [https://aka.ms/hololens2download](https://aka.ms/hololens2download). Esta versão é geralmente a versão mais recente disponível.
+Por padrão, o Advanced Recovery Companion é definido para baixar o build de versão de recurso mais recente. Para saber mais sobre a última versão de recurso, confira as [Notas sobre a versão do HoloLens 2](hololens-release-notes.md). Para obter o pacote de FFU (Atualização Flash Completa) mais recente do HoloLens 2 para reinstalar a imagem do dispositivo por meio do Advanced Recovery Companion, baixe a imagem mensal do HoloLens 2 mais recente: [https://aka.ms/hololens2download](https://aka.ms/hololens2download). Esta versão é geralmente a versão mais recente disponível.
 
 Antes de iniciar o procedimento de limpeza da flash, o aplicativo deve está instalado e em execução no PC com Windows 10 e pronto para detectar o dispositivo. O HoloLens também deve estar carregado em um mínimo de 40%.
 
 ![Captura de tela da reinstalação de imagem limpa do HoloLens 2.](images/ARC1.png)
 
-### <a name="normal-procedure"></a>Procedimento normal
+### <a name="normal-flashing-procedure"></a>Procedimento normal de instalação de imagem
 
 1. Enquanto o dispositivo do HoloLens estiver em execução, conecte-o ao seu PC com Windows 10, em que você já havia aberto o aplicativo Advanced Recovery Companion.
 
@@ -108,7 +114,7 @@ Antes de iniciar o procedimento de limpeza da flash, o aplicativo deve está ins
 
 1. Escolha o dispositivo do HoloLens 2 na interface do usuário do aplicativo Advanced Recovery Companion e siga as instruções para concluir a reflash.
 
-### <a name="manual-procedure"></a>Procedimento manual
+### <a name="manual-flashing-mode-procedure"></a>Procedimento manual do modo de instalação de imagem
 
 Talvez seja necessário colocar o dispositivo no modo de recuperação se:
 
@@ -146,7 +152,7 @@ Talvez seja necessário colocar o dispositivo no modo de recuperação se:
 
 1. Se o ARC não detectar seu dispositivo, verifique se você pode se conectar a ele por meio Explorador de Arquivos em seu computador. Se não for possível:
 
-    1. É possível que seu dispositivo tenha políticas de USB que desabilitam essa conexão. Em caso afirmativo, tente o [Modo de flash manual](hololens-recovery.md#manual-procedure).
+    1. É possível que seu dispositivo tenha políticas de USB que desabilitam essa conexão. Em caso afirmativo, tente o [Modo de flash manual](hololens-recovery.md#manual-flashing-mode-procedure).
     2. Se não houver nenhuma política, tente um cabo USB diferente.
 
 1. Verifique se o dispositivo não exibe um [padrão de LED 1-3-5](hololens2-setup.md#lights-to-indicate-problems).
