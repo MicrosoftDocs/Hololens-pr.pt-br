@@ -1,13 +1,13 @@
 ---
-title: Reiniciar, redefinir ou recuperar o HoloLens
+title: Reiniciar, redefinir ou recuperar o HoloLens 2
 ms.reviewer: Follow along with our basic and advanced instructions for rebooting or resetting your HoloLens 2 device.
 description: Como usar o Advanced Recovery Companion para instalar imagem no HoloLens 2.
 keywords: como fazer, reinicializar, redefinir, recuperar, reinicializar disco, redefinição rápida, ciclo de energia, HoloLens, desligar, arco, advanced recovery companion
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
-ms.author: mazeller
-ms.date: 08/30/2021
+ms.author: v-beehanson
+ms.date: 10/15/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0efcfd0adf9bd380007e5ed4f905cb130b76d4b8
-ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
+ms.openlocfilehash: 9f8969d018059a3b38d2b3001f8bc983b72d58c7
+ms.sourcegitcommit: f105a770814ccd61e88b650448902a03c95b7a3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130034207"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151659"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>Reiniciar, redefinir ou recuperar o HoloLens 2
 
@@ -45,7 +45,7 @@ Se o dispositivo for reinicializado corretamente e em execução, há três mane
 
    ![Uma tela de propriedades do HoloLens 2 mostra o nível de mudança da bateria.](images/ResetRecovery2.png)
 
-Se o dispositivo não conseguir reiniciar pelo menu Iniciar, observe a aparência do LED e a enumeração do dispositivo no PC host. Em seguida, siga o [guia de solução de problemas](hololens-troubleshooting.md). Caso o estado do dispositivo não se enquadrar em nenhum dos estados listados no guia de solução de problemas, execute o [reinicialização forçada](hololens-recovery.md#hard-restart-procedure) com o dispositivo conectado à fonte de energia, não ao computador host. Aguarde pelo menos uma hora para o dispositivo ser carregado.
+Se o dispositivo não conseguir reiniciar pelo menu Iniciar, observe a aparência do LED e a enumeração do dispositivo no PC host. Em seguida, siga o [guia de solução de problemas](hololens-troubleshooting.md). Caso o estado do dispositivo não se enquadre em nenhum dos estados listados no guia de solução de problemas, execute o [procedimento de reinicialização forçada](hololens-recovery.md#hard-restart-procedure) com o dispositivo conectado à fonte de energia e não ao computador host. Aguarde pelo menos uma hora para o dispositivo ser carregado.
 
 > [!NOTE]
 > Vamos começar definindo termos.\
@@ -67,11 +67,11 @@ Em determinadas circunstâncias, pode ser necessário reiniciar o dispositivo ma
 
 4. Conecte o dispositivo ao computador host e, em seguida, abra o Gerenciador de Dispositivos. (Para o Windows 10, pressione a tecla **Windows** e, em seguida, a tecla **X** e escolha **Gerenciador de Dispositivos**.) Verifique se o dispositivo é identificado corretamente como *Microsoft HoloLens* conforme mostrado na imagem a seguir:
 
-   ![Gerenciador de dispositivos do HoloLens 2 MicrosoftHoloLensRecovery.](images/MicrosoftHoloLens_DeviceManager.png)
+   ![Gerenciador de dispositivos do MicrosoftHoloLensRecovery do HoloLens 2.](images/MicrosoftHoloLens_DeviceManager.png)
 
 ### <a name="hard-restart-procedure"></a>Procedimento de reinicialização forçada
 
-Se o procedimento padrão de redefinição não funcionar, use o procedimento de redefinição forçada:
+Se o procedimento de reinicialização padrão não funcionar, use o procedimento de reinicialização forçada:
 
 1. Desconecte o cabo tipo-C para desconectar o dispositivo da fonte de alimentação ou do computador host.
 
@@ -81,7 +81,15 @@ Se o procedimento padrão de redefinição não funcionar, use o procedimento de
 
 1. Abra Gerenciador de Dispositivos (para Windows 10, pressione a tecla **Windows**, a tecla **X** e, em seguida, escolha **Gerenciador de Dispositivos**). Verifique se o dispositivo está identificado corretamente conforme *Microsoft HoloLens*, conforme mostrado na imagem a seguir:
 
-   ![Gerenciador de dispositivos 2 MicrosoftHoloLensRecovery do HoloLens 2.](images/MicrosoftHoloLens_DeviceManager.png)
+   ![Gerenciador de dispositivos 2 do MicrosoftHoloLensRecovery do HoloLens 2.](images/MicrosoftHoloLens_DeviceManager.png)
+
+## <a name="reset-the-device"></a>Redefinir o dispositivo
+
+Você pode reiniciar seu dispositivo diretamente do headset. Selecione **Configurações** e, em seguida, **Atualização & Segurança > Reinicialização & recuperação > Reiniciar este dispositivo**.
+
+   ![Reinicialização do headset do HoloLens.](images/headset-reset-recovery.png)
+
+Quando você reiniciar dessa forma, todas as contas de usuário serão removidas e todos os dados serão apagados.
 
 ## <a name="clean-reflash-the-device"></a>Limpeza da reflash do dispositivo
 

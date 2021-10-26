@@ -13,12 +13,12 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 62eedd0c05bb23f11a4e17a97b4ab5441a2931cf
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: c7c15cc0630f11d1687db19f2e6b28b8347dd4c3
+ms.sourcegitcommit: f105a770814ccd61e88b650448902a03c95b7a3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033980"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151680"
 ---
 # <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>Preparar os certificados e os perfis de rede para o HoloLens 2
 
@@ -27,7 +27,7 @@ A autenticação baseada em certificado é um requisito comum para clientes que 
 Como os dispositivos HoloLens 2 geralmente são adicionados ao Azure AD (Azure Active Directory) e gerenciados pelo Intune ou por outro provedor de MDM, você precisará implantar esses certificados usando uma infraestrutura de certificado de protocolo SCEP ou PKCS (Padrão de Criptografia por Chave Pública) integrada à sua solução de MDM. 
 
 >[!NOTE]
-> Se não tiver um provedor de MDM, você ainda poderá implantar certificados por meio de um [pacote de provisionamento](hololens-provisioning.md#steps-for-creating-provisioning-packages) no [Designer de Configuração do Windows](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) ou por meio do [Gerenciador de Certificados](certificate-manager.md) acessando **Configurações > Atualização e Segurança > Gerenciador de Certificados**.
+> Se não tiver um provedor de MDM, você ainda poderá implantar certificados por meio de um [pacote de provisionamento](hololens-provisioning.md#create-the-provisioning-package) no [Designer de Configuração do Windows](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) ou por meio do [Gerenciador de Certificados](certificate-manager.md) acessando **Configurações > Atualização e Segurança > Gerenciador de Certificados**.
 
 ## <a name="certificate-requirements"></a>Requisitos de certificado
 Certificados raiz são necessários para a implantação de certificados por meio de uma infraestrutura de SCEP ou PKCS. Outros aplicativos e serviços em sua organização também podem exigir que certificados raiz sejam implantados em seus dispositivos HoloLens 2. 
